@@ -40,28 +40,36 @@
 
 /// THE DEFINITIONSRELATED TO SPI /////////////////////////////////////////////////////////////////
 
-typedef struct spiDev_t{
-    pin_t       clk, mosi, miso, cs;
-    flag_t      conf;
-    uint32_t    freq;
-    void*       txdPtr, *rxdPtr;
-    size_t      rxdSize, txdSize;
-    volatile size_t rxdByteInd;
-    volatile size_t txdByteInd;
-    volatile uint8_t rxdBitInd;
-    volatile uint8_t txdBitInd;
+/// @brief SPI device descriptor
+typedef struct spiDev_t {
+    pin_t       clk;        ///< Clock pin
+    pin_t       mosi;       ///< MOSI pin
+    pin_t       miso;       ///< MISO pin
+    pin_t       cs;         ///< Chip select pin
+    flag_t      conf;       ///< Configuration flags (mode, CPOL, CPHA)
+    uint32_t    freq;       ///< Frequency in Hz
+    void*       txdPtr;     ///< Pointer to TX buffer
+    void*       rxdPtr;     ///< Pointer to RX buffer
+    size_t      rxdSize;    ///< RX buffer size in bytes
+    size_t      rxdByteInd; ///< Current RX byte index
+    size_t      txdSize;    ///< TX buffer size in bytes
+    size_t      txdByteInd; ///< Current TX byte index
+    uint8_t     rxdBitInd;  ///< RX bit index within current byte
+    uint8_t     txdBitInd;  ///< TX bit index within current byte
     portMUX_TYPE mutex;
 } spiDev_t;
 
-enum SPI_DEVICE{
-    SPI_MASTER = 0,
-    SPI_SLAVE = 1
+/// @brief SPI device role
+enum SPI_DEVICE {
+    SPI_MASTER = 0, ///< Master mode
+    SPI_SLAVE  = 1  ///< Slave mode
 };
 
-enum SPI_CONFIG{
-    SPI_MODE = 0,       /// MASTER or SLAVE
-    SPI_CPOL = 1,       /// Clock pol
-    SPI_CPHA = 2,       /// Clock phase
+/// @brief SPI configuration parameters
+enum SPI_CONFIG {
+    SPI_MODE = 0,   ///< Master or Slave mode
+    SPI_CPOL = 1,   ///< Clock polarity
+    SPI_CPHA = 2    ///< Clock phase
 };
 
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
@@ -71,100 +79,34 @@ enum SPI_CONFIG{
 /// @param size  Number of bytes in the array
 /// @param newLSB The bit (0 or 1) to put in the least significant bit of the last byte
 /// @return Default return status
-static inline def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB) {
-    if(__is_null(arr)){
-        __spiErr("[shiftLeft] arr = %p is invalid!", arr);
-        return ERR;
-    }
-    if(__isnot_positive(size)){
-        __spiErr("[shiftLeft] size = %d is invalid!", size);
-        return ERR;
-    }
-    uint8_t carry = 0;
-    for (size_t i = 0; i < size; i++) {
-        uint8_t next_carry = (arr[i] & 0x80) ? 1 : 0;
-        arr[i] = (uint8_t)((arr[i] << 1) | carry);
-        carry = next_carry;
-    }
-    arr[size - 1] = (uint8_t)((arr[size - 1] & 0xFE) | (newLSB & 0x01));
-}
+ def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB);
 
 /// @brief Shift the entire byte array right by 1 bit, insert newMSB at the very front.
 /// @param arr    Pointer to the byte array
 /// @param size   Number of bytes in the array
 /// @param newMSB The bit (0 or 1) to put in the most significant bit of the first byte
 /// @return Default return status
-static inline def shiftArrayRight(uint8_t * arr, size_t size, uint8_t newMSB) {
-    if (__is_null(arr)) {
-        __spiErr("[shiftRight] arr = %p is invalid!", arr);
-        return ERR;
-    }
-    if (__isnot_positive(size)) {
-        __spiErr("[shiftRight] size = %d is invalid!", size);
-        return ERR;
-    }
-
-    uint8_t carry = 0;
-    for (size_t i = size; i-- > 0;) {  // iterate backwards
-        uint8_t next_carry = (arr[i] & 0x01) ? 1 : 0;
-        arr[i] = (uint8_t)((arr[i] >> 1) | (carry << 7));
-        carry = next_carry;
-    }
-
-    // set MSB of first byte
-    arr[0] = (uint8_t)((arr[0] & 0x7F) | ((newMSB & 0x01) << 7));
-
-    return OKE;
-}
+def shiftArrayRight(uint8_t * arr, size_t size, uint8_t newMSB);
 
 /// @brief Shift the entire byte array left by 1 byte, insert newByte at the last position.
 /// @param arr     Pointer to the byte array
 /// @param size    Number of bytes in the array
 /// @param newByte The new byte to insert at the end
 /// @return Default return status
-static inline def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte) {
-    if (__is_null(arr)) {
-        __spiErr("[shifByteLeft] arr = %p is invalid!", arr);
-        return ERR;
-    }
-    if (__isnot_positive(size)) {
-        __spiErr("[shifByteLeft] size = %d is invalid!", size);
-        return ERR;
-    }
-
-    for (size_t i = 0; i < size - 1; i++) {
-        arr[i] = arr[i + 1];
-    }
-    arr[size - 1] = newByte;
-
-    return OKE;
-}
+def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte);
 
 /// @brief Shift the entire byte array right by 1 byte, insert newByte at the front.
 /// @param arr     Pointer to the byte array
 /// @param size    Number of bytes in the array
 /// @param newByte The new byte to insert at the beginning
 /// @return Default return status
-static inline def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
-    if (__is_null(arr)) {
-        __spiErr("[shiftByteRight] arr = %p is invalid!", arr);
-        return ERR;
-    }
-    if (__isnot_positive(size)) {
-        __spiErr("[shiftByteRight] size = %d is invalid!", size);
-        return ERR;
-    }
-
-    for (size_t i = size; i-- > 1;) {
-        arr[i] = arr[i - 1];
-    }
-    arr[0] = newByte;
-
-    return OKE;
-}
-
+def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte);
 
 /// MAIN FUNCTIONS ////////////////////////////////////////////////////////////////////////////////
+
+void IRAM_ATTR spiHandleCLKIsr(void* pv);
+void IRAM_ATTR spiHandleCSIsr(void* pv);
+
 
 /// @brief Create new spiDev_t
 /// @param pDev the pointer point to the pointer that point the place which will store spiDev_t
@@ -172,7 +114,7 @@ static inline def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
 def createSPIDevice(spiDev_t ** pDev);
 
 /// @brief Config a spi device
-/// @param Dev A pointer to the place which is storing the spiDev_t
+/// @param dev A pointer to the place which is storing the spiDev_t
 /// @param CLK CLK pin, set -1 if unused!
 /// @param MOSI MOSI pin, set -1 if unused!
 /// @param MISO MISO pin, set -1 if unused!
@@ -180,9 +122,33 @@ def createSPIDevice(spiDev_t ** pDev);
 /// @param freq Set the frequency of CLK
 /// @param config Set MODE, CPOL, CPHA bit.
 /// @return Default return status
-/// @note Config flag: MSB<[31]-[30]-...-[2:CPHA]-[1:CPOL]-[0:MODE]>LSB
-def configSPIDevice(spiDev_t * Dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,uint32_t freq, flag_t config);
+/// @note - Config flag: MSB<[31]-[30]-...-[2:CPHA]-[1:CPOL]-[0:MODE]>LSB
+/// @note - In slave mode, txdPtr, txdSize, rxdPtr, rxdSize have to be set before any transaction!
+def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,uint32_t freq, flag_t config);
 
+/// @brief Startup (init gpio, ...) base on the config of spiDev
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @return Default return status
+int startupSPIDevice(spiDev_t * dev);
+
+/// @brief Set SPI transmit buffer
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @param txdPtr The pointer to transmit buffer
+/// @param size Size of the transmit buffer (in byte)
+/// @return Default return status
+def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size);
+
+/// @brief Set SPI receive buffer
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @param rxdPtr The pointer to receive buffer
+/// @param size Size of the receive buffer (in byte)
+/// @return Default return status
+int setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
+
+/// @brief Start the spi transaction (Master only)
+/// @param dev Pointer to spiDev_t
+/// @return <=0 if error occured; >0 # of received bytes
+def startTransaction(spiDev_t * dev);
 
 
 #endif

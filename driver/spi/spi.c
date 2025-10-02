@@ -1,5 +1,104 @@
 #include "spi.h"
 
+/// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
+
+/// @brief Shift the entire byte array left by 1 bit, insert newLSB at the very end.
+/// @param arr   Pointer to the byte array
+/// @param size  Number of bytes in the array
+/// @param newLSB The bit (0 or 1) to put in the least significant bit of the last byte
+/// @return Default return status
+ def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB) {
+    if(__is_null(arr)){
+        __spiErr("[shiftLeft] arr = %p is invalid!", arr);
+        return ERR;
+    }
+    if(__isnot_positive(size)){
+        __spiErr("[shiftLeft] size = %d is invalid!", size);
+        return ERR;
+    }
+    uint8_t carry = 0;
+    for (size_t i = 0; i < size; i++) {
+        uint8_t next_carry = (arr[i] & 0x80) ? 1 : 0;
+        arr[i] = (uint8_t)((arr[i] << 1) | carry);
+        carry = next_carry;
+    }
+    arr[size - 1] = (uint8_t)((arr[size - 1] & 0xFE) | (newLSB & 0x01));
+}
+
+/// @brief Shift the entire byte array right by 1 bit, insert newMSB at the very front.
+/// @param arr    Pointer to the byte array
+/// @param size   Number of bytes in the array
+/// @param newMSB The bit (0 or 1) to put in the most significant bit of the first byte
+/// @return Default return status
+ def shiftArrayRight(uint8_t * arr, size_t size, uint8_t newMSB) {
+    if (__is_null(arr)) {
+        __spiErr("[shiftRight] arr = %p is invalid!", arr);
+        return ERR;
+    }
+    if (__isnot_positive(size)) {
+        __spiErr("[shiftRight] size = %d is invalid!", size);
+        return ERR;
+    }
+
+    uint8_t carry = 0;
+    for (size_t i = size; i-- > 0;) {  // iterate backwards
+        uint8_t next_carry = (arr[i] & 0x01) ? 1 : 0;
+        arr[i] = (uint8_t)((arr[i] >> 1) | (carry << 7));
+        carry = next_carry;
+    }
+
+    // set MSB of first byte
+    arr[0] = (uint8_t)((arr[0] & 0x7F) | ((newMSB & 0x01) << 7));
+
+    return OKE;
+}
+
+/// @brief Shift the entire byte array left by 1 byte, insert newByte at the last position.
+/// @param arr     Pointer to the byte array
+/// @param size    Number of bytes in the array
+/// @param newByte The new byte to insert at the end
+/// @return Default return status
+ def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte) {
+    if (__is_null(arr)) {
+        __spiErr("[shifByteLeft] arr = %p is invalid!", arr);
+        return ERR;
+    }
+    if (__isnot_positive(size)) {
+        __spiErr("[shifByteLeft] size = %d is invalid!", size);
+        return ERR;
+    }
+
+    for (size_t i = 0; i < size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    arr[size - 1] = newByte;
+
+    return OKE;
+}
+
+/// @brief Shift the entire byte array right by 1 byte, insert newByte at the front.
+/// @param arr     Pointer to the byte array
+/// @param size    Number of bytes in the array
+/// @param newByte The new byte to insert at the beginning
+/// @return Default return status
+ def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
+    if (__is_null(arr)) {
+        __spiErr("[shiftByteRight] arr = %p is invalid!", arr);
+        return ERR;
+    }
+    if (__isnot_positive(size)) {
+        __spiErr("[shiftByteRight] size = %d is invalid!", size);
+        return ERR;
+    }
+
+    for (size_t i = size; i-- > 1;) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = newByte;
+
+    return OKE;
+}
+
 /// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
 
 void IRAM_ATTR spiHandleCLKIsr(void* pv) {
@@ -99,9 +198,6 @@ void IRAM_ATTR spiHandleCSIsr(void* pv) {
 
 /// SPI ///////////////////////////////////////////////////////////////////////////////////////////
 
-/// @brief Create new spiDev_t
-/// @param pDev the pointer point to the pointer that point the place which will store spiDev_t
-/// @return Default return status
 def createSPIDevice(spiDev_t ** pDev){
     __spiEntry("createSPIDevice(spiDev_t ** pDev)");
 
@@ -126,17 +222,6 @@ def createSPIDevice(spiDev_t ** pDev){
     return OKE;
 }
 
-/// @brief Config a spi device
-/// @param dev A pointer to the place which is storing the spiDev_t
-/// @param CLK CLK pin, set -1 if unused!
-/// @param MOSI MOSI pin, set -1 if unused!
-/// @param MISO MISO pin, set -1 if unused!
-/// @param CS CS pin, set -1 if unused!
-/// @param freq Set the frequency of CLK
-/// @param config Set MODE, CPOL, CPHA bit.
-/// @return Default return status
-/// @note - Config flag: MSB<[31]-[30]-...-[2:CPHA]-[1:CPOL]-[0:MODE]>LSB
-/// @note - In slave mode, txdPtr, txdSize, rxdPtr, rxdSize have to be set before any transaction!
 def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,uint32_t freq, flag_t config){
     __spiEntry("configSPIDevice(dev: %p, CLK: %d, MOSI: %d, MISO: %d, CS: %d, freq: %d, config: 0x%04x)", 
                 dev, CLK, MOSI, MISO, CS, freq, config);
@@ -172,9 +257,6 @@ def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,u
     return OKE;
 }
 
-/// @brief Startup (init gpio, ...) base on the config of spiDev
-/// @param dev A pointer to the place which is storing the spiDev_t
-/// @return Default return status
 int startupSPIDevice(spiDev_t * dev){
     __spiEntry("startupSPIDevice(%p)", dev);
 
@@ -267,11 +349,6 @@ int startupSPIDevice(spiDev_t * dev){
     return OKE;
 }
 
-/// @brief Set SPI transmit buffer
-/// @param dev A pointer to the place which is storing the spiDev_t
-/// @param txdPtr The pointer to transmit buffer
-/// @param size Size of the transmit buffer (in byte)
-/// @return Default return status
 def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     __spiEntry("setTransmitBuffer(%p, %p, %d)", dev,txdPtr,size);
 
@@ -311,12 +388,7 @@ def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     return ERR_NULL;
 }
 
-/// @brief Set SPI receive buffer
-/// @param dev A pointer to the place which is storing the spiDev_t
-/// @param rxdPtr The pointer to receive buffer
-/// @param size Size of the receive buffer (in byte)
-/// @return Default return status
-int setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
+def setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
     __spiEntry("setReceiveBuffer(%p, %p, %d)", dev, rxdPtr, size);
 
     if(__is_null(dev)){
@@ -354,10 +426,10 @@ int setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
     return ERR_NULL;
 }
 
-/// @brief Start the spi transaction (Master only)
-/// @param dev Pointer to spiDev_t
-/// @return <=0 nếu lỗi; >0 là số byte đã nhận
-def startTransaction(spiDev_t * dev){
+/// @brief Start an SPI transaction (master mode only)
+/// @param dev Pointer to SPI device configuration (spiDev_t)
+/// @return Number of received bytes (>0) or error code (<=0)
+def startTransaction(spiDev_t * dev) {
     __spiEntry("startTransaction(%p)", dev);
 
     /// Null check
@@ -388,7 +460,7 @@ def startTransaction(spiDev_t * dev){
 
     portENTER_CRITICAL(&(dev->mutex));
 
-    /// Clear RX buffer nếu có
+    /// Clear RX buffer if provided
     if (__isnot_null(dev->rxdPtr) && __is_positive(dev->rxdSize)) {
         memset(dev->rxdPtr, 0, dev->rxdSize);
     }
@@ -403,11 +475,10 @@ def startTransaction(spiDev_t * dev){
     dev->rxdBitInd  = 0;
 
     /// Reset CLK to idle state depending on CPOL
-    if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW) {
+    if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
         GPIO.out_w1tc = __mask32(dev->clk); /// idle LOW
-    } else {
+    else
         GPIO.out_w1ts = __mask32(dev->clk); /// idle HIGH
-    }
 
     /// Pull CS down to start transmission
     if (__isnot_negative(dev->cs)) GPIO.out_w1tc = __mask32(dev->cs);
@@ -418,26 +489,27 @@ def startTransaction(spiDev_t * dev){
 
         while (dev->txdBitInd < 8) {
             if (__hasFlagBitSet(dev->conf, SPI_CPHA) == LOW) {
-                /// --- CPHA = 0: chuẩn bị data trước cạnh đầu, sample tại cạnh đầu ---
+                /// CPHA = 0: prepare data before first edge, sample at first edge
 
-                /// Xuất MOSI
+                /// Drive MOSI
                 if (*currByte & (0x80 >> dev->txdBitInd))
                     GPIO.out_w1ts = __mask32(dev->mosi);
                 else
                     GPIO.out_w1tc = __mask32(dev->mosi);
 
-                /// Cạnh đầu (sample MISO)
+                /// First edge (sample MISO)
                 if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
                     GPIO.out_w1ts = __mask32(dev->clk);
                 else
                     GPIO.out_w1tc = __mask32(dev->clk);
 
-                /// Lấy mẫu từ MISO
+                /// Sample MISO
                 if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
                     rxBuf[dev->rxdByteInd] <<= 1;
                     rxBuf[dev->rxdByteInd] |= boolCast(GPIO.in & __mask32(dev->miso));
                     dev->rxdBitInd++;
                     if (dev->rxdBitInd == 8) {
+                        __spiLog1("RX byte[%d]=0x%02X", dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
                         dev->rxdBitInd = 0;
                         dev->rxdByteInd++;
                     }
@@ -445,7 +517,7 @@ def startTransaction(spiDev_t * dev){
 
                 esp_rom_delay_us(500000 / dev->freq);
 
-                /// Cạnh thứ hai (trả về idle)
+                /// Second edge -> idle
                 if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
                     GPIO.out_w1tc = __mask32(dev->clk);
                 else
@@ -454,15 +526,15 @@ def startTransaction(spiDev_t * dev){
                 esp_rom_delay_us(500000 / dev->freq);
 
             } else {
-                /// --- CPHA = 1: sample tại cạnh thứ 2 ---
+                /// CPHA = 1: sample at second edge
 
-                /// Cạnh đầu
+                /// First edge
                 if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
                     GPIO.out_w1ts = __mask32(dev->clk);
                 else
                     GPIO.out_w1tc = __mask32(dev->clk);
 
-                /// Xuất MOSI
+                /// Drive MOSI
                 if (*currByte & (0x80 >> dev->txdBitInd))
                     GPIO.out_w1ts = __mask32(dev->mosi);
                 else
@@ -470,17 +542,19 @@ def startTransaction(spiDev_t * dev){
 
                 esp_rom_delay_us(500000 / dev->freq);
 
-                /// Cạnh thứ hai (sample)
+                /// Second edge (sample)
                 if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
                     GPIO.out_w1tc = __mask32(dev->clk);
                 else
                     GPIO.out_w1ts = __mask32(dev->clk);
 
+                /// Sample MISO
                 if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
                     rxBuf[dev->rxdByteInd] <<= 1;
                     rxBuf[dev->rxdByteInd] |= boolCast(GPIO.in & __mask32(dev->miso));
                     dev->rxdBitInd++;
                     if (dev->rxdBitInd == 8) {
+                        __spiLog1("RX byte[%d]=0x%02X", dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
                         dev->rxdBitInd = 0;
                         dev->rxdByteInd++;
                     }
@@ -492,18 +566,20 @@ def startTransaction(spiDev_t * dev){
             dev->txdBitInd++;
         }
 
-        /// Chuyển sang byte tiếp theo
+        /// TX byte done
+        __spiLog1("TX byte[%d]=0x%02X", dev->txdByteInd, *currByte);
+
         dev->txdBitInd = 0;
         dev->txdByteInd++;
     }
 
-    /// Reset CLK về idle
+    /// Reset CLK to idle
     if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
         GPIO.out_w1tc = __mask32(dev->clk);
     else
         GPIO.out_w1ts = __mask32(dev->clk);
 
-    /// CS lên để kết thúc truyền
+    /// Pull CS up to stop transmission
     if (__isnot_negative(dev->cs)) GPIO.out_w1ts = __mask32(dev->cs);
 
     portEXIT_CRITICAL(&(dev->mutex));
