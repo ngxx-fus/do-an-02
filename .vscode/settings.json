@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "charconv": "cpp",
+        "cstdint": "cpp",
+        "do-an-02.h": "c",
+        "stdio.h": "c",
+        "esplogwrapper.h": "c",
+        "espgpiowrapper.h": "c",
+        "esp_timer.h": "c",
+        "i2c.h": "c",
+        "esprtoswrapper.h": "c",
+        "pinconfig.h": "c",
+        "generalheaders.h": "c",
+        "stdint.h": "c",
+        "general.h": "c",
+        "flag.h": "c",
+        "stdarg.h": "c",
+        "gpio_reg.h": "c",
+        "return.h": "c"
+    }
+}
