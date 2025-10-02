@@ -46,6 +46,11 @@ typedef struct spiDev_t{
     uint32_t    freq;
     void*       txdPtr, *rxdPtr;
     size_t      rxdSize, txdSize;
+    volatile size_t rxdByteInd;
+    volatile size_t txdByteInd;
+    volatile uint8_t rxdBitInd;
+    volatile uint8_t txdBitInd;
+    portMUX_TYPE mutex;
 } spiDev_t;
 
 enum SPI_DEVICE{
