@@ -16,6 +16,8 @@
         "flag.h": "c",
         "stdarg.h": "c",
         "gpio_reg.h": "c",
-        "return.h": "c"
+        "return.h": "c",
+        "cmath": "c",
+        "complex": "c"
     }
 }

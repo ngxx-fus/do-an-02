@@ -38,4 +38,10 @@ typedef int16_t pin_t;
 
 #endif 
 
+enum PIN_STATE {
+    UNUSED = -1,
+    INVALID = -2,
+    NOT_FOUND = -3
+};
+
 #endif /* __PIN_CONFIG_H__ */
