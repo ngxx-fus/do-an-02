@@ -18,6 +18,10 @@
         "gpio_reg.h": "c",
         "return.h": "c",
         "cmath": "c",
-        "complex": "c"
+        "complex": "c",
+        "chrono": "c",
+        "text_encoding": "c",
+        "typeindex": "c",
+        "typeinfo": "c"
     }
 }

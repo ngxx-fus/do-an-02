@@ -40,6 +40,18 @@
 
 /// THE DEFINITIONS RELATED TO I2C ////////////////////////////////////////////////////////////////
 
+#define __I2C_ASSERT_PIN_OK(pin, name)                   \
+    do {                                                 \
+        if(__isnot_positive(pin)){                       \
+            __i2cErr("[I2C] %s = %d is invalid",        \
+                     name, pin);                         \
+            esp_restart();                               \
+            __builtin_unreachable();                     \
+        }                                                \
+    } while(0)
+
+#define __i2cDelay(us) esp_rom_delay_us(us)
+
 typedef struct i2cDev_t{
     uint8_t     addr;       ///< Slave mode
     pin_t       scl;        ///< Clock pin
@@ -78,7 +90,119 @@ enum I2C_SPEED_MODE {
 
 /// HELPER/INLINE FUNC ////////////////////////////////////////////////////////////////////////////
 
+/// @brief Get I2C bus frequency of a given device.
+/// @param dev Pointer to I2C device.
+/// @return Frequency in Hz.
+/// @note Will reset system if frequency is invalid.
+static inline uint32_t __i2cFreq(i2cDev_t * dev){
+    __I2C_ASSERT_PIN_OK(dev->freq, STR(freq));
+    return dev->freq;
+}
 
+/// @brief Get the SCL (clock) pin of a given I2C device.
+/// @param dev Pointer to I2C device.
+/// @return Pin number for SCL.
+/// @note Will reset system if pin is invalid.
+static inline pin_t __i2cSCL(i2cDev_t * dev){
+    __I2C_ASSERT_PIN_OK(dev->sda, STR(dev->sda));
+    return dev->scl;
+}
+
+/// @brief Get the SDA (data) pin of a given I2C device.
+/// @param dev Pointer to I2C device.
+/// @return Pin number for SDA.
+/// @note Will reset system if pin is invalid.
+static inline pin_t __i2cSDA(i2cDev_t * dev){
+    __I2C_ASSERT_PIN_OK(dev->scl, STR(dev->scl));
+    return dev->sda;
+}
+
+/// @brief Set logic level for SDA line of an I2C device.
+/// @param dev Pointer to I2C device.
+/// @param level Logic level (0 = low, 1 = high).
+/// @note Will reset system if SDA pin is invalid.
+static inline void __i2cSetSDA(i2cDev_t * dev, def level){
+    __I2C_ASSERT_PIN_OK(dev->sda, STR(dev->sda));
+    if(level)
+        GPIO.out_w1ts = __mask32(dev->sda);
+    else
+        GPIO.out_w1tc = __mask32(dev->sda);
+}
+
+/// @brief Set logic level for SCL line of an I2C device.
+/// @param dev Pointer to I2C device.
+/// @param level Logic level (0 = low, 1 = high).
+/// @note Will reset system if SCL pin is invalid.
+static inline void __i2cSetSCL(i2cDev_t * dev, def level){
+    __I2C_ASSERT_PIN_OK(dev->scl, STR(dev->scl));
+    if(level)
+        GPIO.out_w1ts = __mask32(dev->scl);
+    else
+        GPIO.out_w1tc = __mask32(dev->scl);
+}
+
+/// @brief Read the current logic level of SDA line.
+/// @param dev Pointer to I2C device.
+/// @return Current logic level of SDA (0 or 1).
+/// @note Will reset system if SDA pin is invalid.
+static inline def __i2cGetSDA(i2cDev_t * dev){
+    __I2C_ASSERT_PIN_OK(dev->sda, STR(dev->sda));
+    return boolCast(GPIO.in & __mask32(dev->sda));
+}
+
+/// @brief Read the current logic level of SCL line.
+/// @param dev Pointer to I2C device.
+/// @return Current logic level of SCL (0 or 1).
+/// @note Will reset system if SCL pin is invalid.
+static inline def __i2cGetSCL(i2cDev_t * dev){
+    __I2C_ASSERT_PIN_OK(dev->scl, STR(dev->scl));
+    return boolCast(GPIO.in & __mask32(dev->scl));
+}
+
+
+static inline void startCondition(i2cDev_t * dev){
+
+    __i2cDelay(250000/(__i2cFreq(dev)));
+
+    /// Release both SCL, SDA line
+    __i2cSetSCL(dev, HIGH);
+    __i2cSetSDA(dev, HIGH);
+
+    /// Wait for both SCL and SDA are stable (a half of SCL period)
+    __i2cDelay(500000/(__i2cFreq(dev)));
+
+    /// Make start condition (SDA down to LOW when SCL is HIGH)
+    __i2cSetSDA(dev, LOW);
+
+    /// Wait for a quarter of SCL period
+    __i2cDelay(250000/(__i2cFreq(dev)));
+    
+    /// Pull SCL down for 1st clock pulse
+    __i2cSetSCL(dev, LOW);
+    
+}
+
+static inline void stopCondition(i2cDev_t * dev){
+
+    __i2cDelay(250000/(__i2cFreq(dev)));
+
+    /// Make sure both SCL, SDA line are LOW 
+    __i2cSetSCL(dev, LOW);
+    __i2cSetSDA(dev, LOW);
+
+    /// Wait for both SCL and SDA are stable (a half of SCL period)
+    __i2cDelay(500000/(__i2cFreq(dev)));
+
+    /// Pull SCL up to HIGH for stop condition
+    __i2cSetSCL(dev, HIGH);
+    
+    /// Wait for a quarter of SCL period
+    __i2cDelay(250000/(__i2cFreq(dev)));
+    
+    /// Make stop condition (SDA is pulled up to HIGH when SCL is HIGH)
+    __i2cSetSDA(dev, HIGH);
+
+}
 
 /// MAIN FUNC /////////////////////////////////////////////////////////////////////////////////////
 

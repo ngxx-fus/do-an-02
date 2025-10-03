@@ -15,7 +15,7 @@
 #include "soc/gpio_struct.h"    /// direct register access: GPIO register structure
 #include "soc/gpio_reg.h"       /// GPIO register addresses and bit fields
 
-typedef void IRAM_ATTR (isrFunc_t)(void *pv);
+// typedef void IRAM_ATTR (isrFunc_t)(void *pv);
 
 void setupISR(){
     static int8_t isSetup = 0;
@@ -46,10 +46,10 @@ void gpioSetInput(uint64_t gpioPinMask){
     gpio_config(&inPin);
 }
 
-void gpioSetISR(pin_t pin, isrFunc_t *isr){
-    setupISR();
-    gpio_isr_handler_add(pin, isr, (void*) pin);
-}
+// void gpioSetISR(pin_t pin, isrFunc_t *isr){
+//     setupISR();
+//     gpio_isr_handler_add(pin, isr, (void*) pin);
+// }
 
 void gpioSetState(pin_t pin, level_t level){
     if (level)

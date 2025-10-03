@@ -55,6 +55,7 @@
 /// Convert x to string using # in macro!
 #define STR(x)  #x
 
+/// Convert x to 1 (true) or 0 (false)
 #define boolCast(x) (((x) != 0) ? (0x1) : (0x0))
 
 #endif
