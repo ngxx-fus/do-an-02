@@ -134,7 +134,7 @@ int startupI2CDevice(i2cDev_t * dev){
     return OKE;
 }
 
-def setTransmitBuffer(i2cDev_t * dev, void * txPtr, size_t size){
+def i2cSetTransmitBuffer(i2cDev_t * dev, void * txPtr, size_t size){
     __i2cEntry("setTransmitBuffer(%p, %p, %d)", dev,txPtr,size);
 
     if(__is_null(dev)){
@@ -173,7 +173,7 @@ def setTransmitBuffer(i2cDev_t * dev, void * txPtr, size_t size){
     return ERR_NULL;
 }
 
-def setReceiveBuffer(i2cDev_t * dev, void * rxPtr, size_t size){
+def i2cSetReceiveBuffer(i2cDev_t * dev, void * rxPtr, size_t size){
     __i2cEntry("setReceiveBuffer(%p, %p, %d)", dev, rxPtr, size);
 
     if(__is_null(dev)){
@@ -211,185 +211,156 @@ def setReceiveBuffer(i2cDev_t * dev, void * rxPtr, size_t size){
     return ERR_NULL;
 }
 
+def i2cSendByte(i2cDev_t * dev, uint8_t addr7, uint8_t rw, uint8_t byte, flag_t extConf){
+    __I2C_ASSERT_DEV_OK1(STR(i2cSendByte), dev, STR(dev));
 
+    if(extConf & __mask32(I2C_EN_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex)); 
 
-// void i2c_config_headers(I2CCommunication* i2c){
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0)
-//         i2ccom_log("[>>>] i2c_config_headers(%p)", i2c);
-//     #endif
+    /// Make start condition 
+    if(extConf & __mask32(I2C_EN_START_CONDI)) i2cStartCondition(dev);
+    /// Send address frame
+    i2cSendAddressFrame(dev, addr7, rw);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendByte] Got NACK after send address frame!");
+        goto i2cSendByte_ReturnERR;
+    }
+    /// Send byte high
+    i2cSendDataFrame(dev, byte);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendByte] Got NACK after send byte high!");
+        goto i2cSendByte_ReturnERR;
+    }
 
-//     gpio_config_t sda_header_config = {
-//         .intr_type      = GPIO_INTR_DISABLE,
-//         .mode           = GPIO_MODE_OUTPUT_OD,
-//         .pin_bit_mask   = (1ULL << __SDA(i2c)),
-//         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-//         .pull_up_en     = GPIO_PULLUP_ENABLE
-//     };
-//     gpio_config(&sda_header_config);
+    if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+    if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+    return OKE;
 
-//     gpio_config_t scl_header_config = {
-//         .intr_type      = GPIO_INTR_DISABLE,
-//         .mode           = GPIO_MODE_OUTPUT_OD,
-//         .pin_bit_mask   = (1ULL << __SCL(i2c)),
-//         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-//         .pull_up_en     = GPIO_PULLUP_ENABLE
-//     };
-//     gpio_config(&scl_header_config);
-//     i2cSetSCL(i2c, 1);
-//     i2cSetSDA(i2c, 1);
-//     i2c_com_delay(__t2);
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0)
-//         i2ccom_log("[<<<] i2c_config_headers()");
-//     #endif
-// }
+    i2cSendByte_ReturnERR:
+        if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+        if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+        return ERR;
+}
 
-// I2CCommunication* createNewI2CCommunication(uint8_t SDA, uint8_t SCL) {
-//     I2CCommunication* i2c = malloc(sizeof(I2CCommunication));
-//     if (!i2c) return NULL;
-    
-//     i2c->sda = SDA;
-//     i2c->scl = SCL;
-//     portMUX_TYPE mutex = portMUX_INITIALIZER_UNLOCKED;
-//     i2c->mutex = mutex;
-//     i2c_config_headers(i2c);
-//     return i2c;
-// }
+def i2cSendDoubleByte(i2cDev_t * dev, uint8_t addr7, uint8_t rw, uint8_t byteHigh, uint8_t byteLow, flag_t extConf){
+    __I2C_ASSERT_DEV_OK1(STR(i2cSendDoubleByte), dev, STR(dev));
 
-// void deleteI2CCommunication(I2CCommunication* i2cComAddr){
-//     if(i2cComAddr) free(i2cComAddr);
-// }
+    if(extConf & __mask32(I2C_EN_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex)); 
 
-// uint8_t i2c_send_byte(I2CCommunication* i2c, uint8_t address_7bit, uint8_t data){
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
-//         i2ccom_log("[>>>] i2c_send_byte()");
-//     #endif
-//     taskENTER_CRITICAL(&__MUTEX(i2c));
-//     uint8_t res;
-//     i2c_start_condition(i2c);
-//     i2c_send_address_frame(i2c, address_7bit, 0);
-//     if( i2c_get_response(i2c) ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return -1;
-//     }
-//     i2c_send_data_frame(i2c, data);
-//     res = i2c_get_response(i2c);
-//     i2c_stop_condition(i2c);
-//     taskEXIT_CRITICAL(&__MUTEX(i2c));
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
-//         i2ccom_log("[<<<] i2c_send_byte()");
-//     #endif
-//     return res;
-// }
+    /// Make start condition 
+    if(extConf & __mask32(I2C_EN_START_CONDI)) i2cStartCondition(dev);
+    /// Send address frame
+    i2cSendAddressFrame(dev, addr7, rw);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendDoubleByte] Got NACK after send address frame!");
+        goto i2cSendDoubleByte_ReturnERR;
+    }
+    /// Send byte high
+    i2cSendDataFrame(dev, byteHigh);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendDoubleByte] Got NACK after send byte high!");
+        goto i2cSendDoubleByte_ReturnERR;
+    }
+    /// Send byte low
+    i2cSendDataFrame(dev, byteLow);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendDoubleByte] Got NACK after send byte low!");
+        goto i2cSendDoubleByte_ReturnERR;
+    }
 
-// uint8_t i2c_send_word(I2CCommunication* i2c, uint8_t address_7bit, uint8_t byte_h, uint8_t byte_l){
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
-//         i2ccom_log("[>>>] i2c_send_word()");
-//     #endif
-//     taskENTER_CRITICAL(&__MUTEX(i2c));
-//     uint8_t res;
-//     i2c_start_condition(i2c);
-//     i2c_send_address_frame(i2c, address_7bit, 0);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return -1;
-//     }
-//     i2c_com_delay(__t1);
-//     i2c_send_data_frame(i2c, byte_h);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return 0;
-//     }
-//     i2c_com_delay(__t1);
-//     i2c_send_data_frame(i2c, byte_l);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return 1;
-//     }
-//     i2c_stop_condition(i2c);
-//     taskEXIT_CRITICAL(&__MUTEX(i2c));
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x1)
-//         i2ccom_log("[<<<] i2c_send_word()");
-//     #endif
-//     return res;
-// }
+    if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+    if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+    return OKE;
 
-// uint8_t i2c_send_byte_array(I2CCommunication* i2c, uint8_t address_7bit, uint8_t data[], uint32_t array_size){
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
-//         i2ccom_log("[>>>] i2c_send_byte_array()");
-//     #endif
-//     taskENTER_CRITICAL(&__MUTEX(i2c));
-//     uint8_t res;
-//     i2c_start_condition(i2c);
-//     i2c_send_address_frame(i2c, address_7bit, 0);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return -1;
-//     }
-//     for(uint8_t i = 0; i < array_size; ++i){
-//         i2c_com_delay(__t1);
-//         i2c_send_data_frame(i2c, data[i]);
-//         res = i2c_get_response(i2c);
-//         if( res ){
-//             i2c_stop_condition(i2c);
-//             taskEXIT_CRITICAL(&__MUTEX(i2c));
-//             return i;
-//         }
-//     }
-//     i2c_stop_condition(i2c);
-//     taskEXIT_CRITICAL(&__MUTEX(i2c));
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
-//         i2ccom_log("[<<<] i2c_send_byte_array()");
-//     #endif
-//     return res;
-// }
+    i2cSendDoubleByte_ReturnERR:
+        if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+        if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+        return ERR;
+}
 
-// uint8_t i2c_send_byte_array_w_ctl_byte(I2CCommunication* i2c, uint8_t address_7bit, uint8_t ctl_byte, uint8_t data[], uint32_t array_size){
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
-//         i2ccom_log("[>>>] i2c_send_byte_array_w_ctl_byte()");
-//     #endif
-    
-//     taskENTER_CRITICAL(&__MUTEX(i2c));
-//     uint8_t res;
-//     i2c_start_condition(i2c);
-//     i2c_send_address_frame(i2c, address_7bit, 0);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return -1;
-//     }
-//     i2c_com_delay(__t1);
-//     i2c_send_data_frame(i2c, ctl_byte);
-//     res = i2c_get_response(i2c);
-//     if( res ){
-//         i2c_stop_condition(i2c);
-//         taskEXIT_CRITICAL(&__MUTEX(i2c));
-//         return -1;
-//     }
-//     for(uint32_t i = 0; i < array_size; ++i){
-//         i2c_com_delay(__t1);
-//         i2c_send_data_frame(i2c, data[i]);
-//         res = i2c_get_response(i2c);
-//         if( res ){
-//             i2c_stop_condition(i2c);
-//             taskEXIT_CRITICAL(&__MUTEX(i2c));
-//             return i;
-//         }
-//     }
-//     i2c_stop_condition(i2c);
-//     taskEXIT_CRITICAL(&__MUTEX(i2c));
+def i2cSendBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf){
+    __I2C_ASSERT_DEV_OK1(STR(i2cSendBuffer), dev, STR(dev));
 
-//     #if defined(I2CCOM_LOG) && (I2CCOM_LOG_LEVEL > 0x0)
-//         i2ccom_log("[<<<] i2c_send_byte_array_w_ctl_byte()");
-//     #endif
-//     return res;
-// }
+    if(extConf & __mask32(I2C_EN_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex)); 
+
+    /// Make start condition 
+    if(extConf & __mask32(I2C_EN_START_CONDI)) i2cStartCondition(dev);
+    /// Send address frame
+    i2cSendAddressFrame(dev, addr7, rw);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendDoubleByte] Got NACK after send address frame!");
+        goto i2cSendBuffer_ReturnERR;
+    }
+
+    REP(i, dev->txIndByte, dev->txSize){
+        /// Send byte[i]
+        i2cSendDataFrame(dev, ((char*)(dev->txPtr))[i]);
+        /// Get and process returned bit
+        if(i2cGetReturnBit(dev) == I2C_NACK) {
+            __i2cErr("[i2cSendDoubleByte] Got NACK after send byte[%d] in buffer!", i);
+            goto i2cSendBuffer_ReturnERR;
+        }
+    }
+
+    if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+    if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+    return OKE;
+
+    i2cSendBuffer_ReturnERR:
+        if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+        if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+        return ERR;
+}
+
+def i2cReceiveBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf){
+    __I2C_ASSERT_DEV_OK1(STR(i2cSendBuffer), dev, STR(dev));
+
+    if(extConf & __mask32(I2C_EN_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex)); 
+    /// Make start condition 
+    if(extConf & __mask32(I2C_EN_START_CONDI)) i2cStartCondition(dev);
+    /// Send address frame
+    i2cSendAddressFrame(dev, addr7, rw);
+    /// Get and process returned bit
+    if(i2cGetReturnBit(dev) == I2C_NACK) {
+        __i2cErr("[i2cSendDoubleByte] Got NACK after send address frame!");
+        goto i2cReceiveBuffer_ReturnERR;
+    }
+
+    def receivedByte = 0;
+
+    REP(i, dev->txIndByte, dev->txSize){
+        receivedByte = i2cReceiveByte(dev);
+        if(receivedByte < 0){
+            __err("[i2cReceiveBuffer] The i2cReceiveByte has returned [%d]", receivedByte);
+            __i2cSetSDA(dev, I2C_NACK);
+            /// Mono SCL pulse (9th pulse)
+            __i2cDelay(500000/__i2cFreq(dev));
+            __i2cSetSCL(dev, HIGH);
+            __i2cDelay(500000/__i2cFreq(dev));
+            __i2cSetSCL(dev, LOW);
+            goto i2cReceiveBuffer_ReturnERR;
+        }else{
+            ((uint8_t*)(dev->txPtr))[(dev->rxIndByte)++] = receivedByte;
+            __i2cSetSDA(dev, I2C_ACK);
+            /// Mono SCL pulse (9th pulse)
+            __i2cDelay(500000/__i2cFreq(dev));
+            __i2cSetSCL(dev, HIGH);
+            __i2cDelay(500000/__i2cFreq(dev));
+            __i2cSetSCL(dev, LOW);
+        }
+    }
+
+    if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+    if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+    return OKE;
+
+    i2cReceiveBuffer_ReturnERR:
+        if(extConf & __mask32(I2C_EN_STOP_CONDI)) i2cStopCondition(dev);
+        if(extConf & __mask32(I2C_EN_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+        return ERR;
+}

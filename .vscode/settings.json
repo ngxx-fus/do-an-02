@@ -22,6 +22,10 @@
         "chrono": "c",
         "text_encoding": "c",
         "typeindex": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "limits": "cpp",
+        "i2clog.h": "c",
+        "gpio_struct.h": "c",
+        "generalconfig.h": "c"
     }
 }

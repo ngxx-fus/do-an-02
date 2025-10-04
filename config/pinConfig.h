@@ -12,15 +12,15 @@ typedef int16_t pin_t;
 
 #if ESP32_DEVICE_MODE == SENDER
 
-    #define PIN0    ((pin_t)0)
-    #define PIN1    ((pin_t)0)
-    #define PIN2    ((pin_t)0)
-    #define PIN3    ((pin_t)0)
+    #define PIN0    ((pin_t)4)
+    #define PIN1    ((pin_t)16)
+    #define PIN2    ((pin_t)5)
+    #define PIN3    ((pin_t)17)
 
-    #define BTN0    ((pin_t)0)
+    #define BTN0    ((pin_t)14)
 
-    #define OLED_SCL ((pin_t)0)
-    #define OLED_SDA ((pin_t)0)
+    #define OLED_SCL ((pin_t)22)
+    #define OLED_SDA ((pin_t)21)
 
 #endif 
 
