@@ -1,3 +1,15 @@
+/// @file general.h
+
+/// @brief Common system-wide header providing core includes and helper dependencies.
+/// This header centralizes standard C library includes and project-wide helper headers.
+/// It is intended to be included by most modules (e.g., I2C, SPI, OLED) to ensure
+/// consistent access to core types, logging, GPIO, and RTOS wrappers.
+
+/// @note This file should be included **before** any hardware driver headers to ensure all 
+/// shared types and macros are available.
+
+/// @author Ngxx-Fus
+
 #ifndef __GENERAL_HEADER_H__
 #define __GENERAL_HEADER_H__
 

@@ -30,7 +30,7 @@ enum I2C_DEVICE {
 enum I2C_CONFIG_ORDER {
     I2C_SPEED_0 = 0,
     I2C_SPEED_1 = 1,
-    I2C_MODE    = 2,
+    I2C_MODE    = 2,        /// Set 1 to determine this is MASTER or SLAVE
 };
 
 /// @brief I2C configuration parameters
@@ -54,12 +54,12 @@ enum I2C_RETURN_BIT {
 
 /// @brief I2C RETURN BIT
 enum I2C_EXTENT_CONFIG_BIT_ORDER {
-    I2C_EN_START_CONDI         = 0,        ///< Set 1 to enable start condition
-    I2C_EN_STOP_CONDI          = 1,        ///< Set 1 to enable stop condition, 0 to keep the transaction
-    I2C_EN_ENTRY_CRITICAL_SEC  = 2,
-    I2C_EN_EXIT_CRITICAL_SEC   = 3,
-    I2C_RESET_TX_INDEX         = 4,        ///< Set 1 to reset transmit buffer index
-    I2C_RESET_RX_INDEX         = 5,        ///< Set 1 to reset receive bufferindex
+    I2C_DIS_START_CONDI         = 0,        ///< Set 1 to disable start condition
+    I2C_DIS_STOP_CONDI          = 1,        ///< Set 1 to disable stop condition, 0 to keep the transaction
+    I2C_DIS_ENTRY_CRITICAL_SEC  = 2,        ///< Set 1 to disable entry critical section 
+    I2C_DIS_EXIT_CRITICAL_SEC   = 3,        ///< Set 1 to disable exit critical section
+    I2C_RESET_TX_INDEX         = 4,        ///< Set 1 to reset transmit buffer index before transmit
+    I2C_RESET_RX_INDEX         = 5,        ///< Set 1 to reset receive buffer index before transmit
 };
 
 #endif 

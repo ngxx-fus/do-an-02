@@ -17,49 +17,49 @@
 
 // typedef void IRAM_ATTR (isrFunc_t)(void *pv);
 
-void setupISR(){
-    static int8_t isSetup = 0;
-    if(isSetup > 0) return ; 
-    isSetup = 1;
-    gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-}
+// static void setupISR(){
+//     static int8_t isSetup = 0;
+//     if(isSetup > 0) return ; 
+//     isSetup = 1;
+//     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+// }
 
-void gpioSetOutpin(uint64_t gpioPinMask){
-    gpio_config_t outPin = {
-        .intr_type = GPIO_INTR_DISABLE,
-        .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = gpioPinMask,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-    };
-    gpio_config(&outPin);
-}
+// static void gpioSetOutpin(uint64_t gpioPinMask){
+//     gpio_config_t outPin = {
+//         .intr_type = GPIO_INTR_DISABLE,
+//         .mode = GPIO_MODE_OUTPUT,
+//         .pin_bit_mask = gpioPinMask,
+//         .pull_down_en = GPIO_PULLDOWN_DISABLE,
+//         .pull_up_en = GPIO_PULLUP_DISABLE,
+//     };
+//     gpio_config(&outPin);
+// }
 
-void gpioSetInput(uint64_t gpioPinMask){
-    gpio_config_t inPin = {
-        .intr_type      = GPIO_INTR_POSEDGE,
-        .mode           = GPIO_MODE_INPUT,
-        .pin_bit_mask   = gpioPinMask,
-        .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en     = GPIO_PULLUP_DISABLE
-    };
-    gpio_config(&inPin);
-}
+// static void gpioSetInput(uint64_t gpioPinMask){
+//     gpio_config_t inPin = {
+//         .intr_type      = GPIO_INTR_POSEDGE,
+//         .mode           = GPIO_MODE_INPUT,
+//         .pin_bit_mask   = gpioPinMask,
+//         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
+//         .pull_up_en     = GPIO_PULLUP_DISABLE
+//     };
+//     gpio_config(&inPin);
+// }
 
 // void gpioSetISR(pin_t pin, isrFunc_t *isr){
 //     setupISR();
 //     gpio_isr_handler_add(pin, isr, (void*) pin);
 // }
 
-void gpioSetState(pin_t pin, level_t level){
-    if (level)
-        GPIO.out_w1ts = (1 << pin);
-    else
-        GPIO.out_w1tc = (1 << pin);
-}
+// static void gpioSetState(pin_t pin, level_t level){
+//     if (level)
+//         GPIO.out_w1ts = (1 << pin);
+//     else
+//         GPIO.out_w1tc = (1 << pin);
+// }
 
-def gpioGetState(pin_t pin){
-    return (GPIO.out & __mask32(pin)) ? 0x1 : 0x0;
-}
+// static def gpioGetState(pin_t pin){
+//     return (GPIO.out & __mask32(pin)) ? 0x1 : 0x0;
+// }
 
 #endif 

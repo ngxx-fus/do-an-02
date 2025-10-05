@@ -8,7 +8,7 @@
 #include <stdarg.h>     /// for variadic arguments (va_list, va_start, va_end)
 
 /// Type of a GPIO
-typedef int16_t pin_t;
+typedef int8_t pin_t;
 
 #if ESP32_DEVICE_MODE == SENDER
 
@@ -19,8 +19,8 @@ typedef int16_t pin_t;
 
     #define BTN0    ((pin_t)14)
 
-    #define OLED_SCL ((pin_t)22)
     #define OLED_SDA ((pin_t)21)
+    #define OLED_SCL ((pin_t)22)
 
 #endif 
 

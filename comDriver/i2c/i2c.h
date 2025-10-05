@@ -19,11 +19,15 @@
 
 /// @brief Handle SCL interrupt in slave mode
 /// @param pv Pointer to i2cDev_t
-void IRAM_ATTR i2cHandleSCLIsr(void* pv);
+static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+
+}
 
 /// @brief Handle SDA interrupt in slave mode
 /// @param pv Pointer to i2cDev_t
-void IRAM_ATTR i2cHandleSDAIsr(void* pv);
+static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+
+}
 
 /// @brief Create a new I2C device instance
 /// @param pDev Pointer to pointer of i2cDev_t (will store created device)
@@ -35,14 +39,14 @@ def createI2CDevice(i2cDev_t ** pDev);
 /// @param addr Address of this device (for slave mode)
 /// @param scl Pin number for SCL
 /// @param sda Pin number for SDA
-/// @param config Configuration flags
+/// @param config Configuration flags. See I2C_CONFIG_ORDER enum.
 /// @return Default return status
 def configI2CDevice(i2cDev_t * dev, uint8_t addr, pin_t scl, pin_t sda, flag_t config);
 
 /// @brief Startup the I2C device (initialize GPIO and configs)
 /// @param dev Pointer to i2cDev_t
 /// @return Default return status
-int startupI2CDevice(i2cDev_t * dev);
+def startupI2CDevice(i2cDev_t * dev);
 
 /// @brief Set transmit buffer for I2C
 /// @param dev Pointer to i2cDev_t
@@ -93,6 +97,10 @@ def i2cSendBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf);
 /// @return Default return status
 def i2cReceiveBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf);
 
+/// @brief Deinitialize and free an I2C device.
+/// @param dev Pointer to the I2C device structure.
+/// @return OKE on success, ERR_NULL if dev is NULL.
+def destroyI2CDevice(i2cDev_t * dev);
 
 #endif 
 

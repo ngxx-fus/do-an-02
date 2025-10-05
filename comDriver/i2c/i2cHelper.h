@@ -40,7 +40,7 @@
 /// @param pinName  String name of the pin variable.
 #define __I2C_ASSERT_PIN_OK(funcName, pinValue, pinName)    \
     do {                                                    \
-        if(__isnot_positive(pinName)){                      \
+        if(__isnot_positive(pinValue)){                     \
             __i2cErr("[%s] %s = %d is invalid",             \
                      funcName, pinName, pinValue);          \
             esp_restart();                                  \
@@ -58,7 +58,7 @@
 /// @note Will reset system if frequency is invalid.
 static inline  __attribute__((always_inline)) 
 uint32_t __i2cFreq(i2cDev_t * dev){
-    __I2C_ASSERT_PIN_OK(STR(__i2cFreq), dev->freq, STR(freq));
+    __I2C_ASSERT_PIN_OK("__i2cFreq", dev->freq, STR(freq));
     return dev->freq;
 }
 
@@ -114,7 +114,7 @@ void __i2cSetSCL(i2cDev_t * dev, def level){
 /// @note Will reset system if SDA pin is invalid.
 static inline def  __attribute__((always_inline)) 
 __i2cGetSDA(i2cDev_t * dev){
-    __I2C_ASSERT_PIN_OK(STR(__i2cGetSDA), dev->sda, STR(dev->sda));
+    // __I2C_ASSERT_PIN_OK(STR(__i2cGetSDA), dev->sda, STR(dev->sda));
     return boolCast(GPIO.in & __mask32(dev->sda));
 }
 
@@ -192,16 +192,17 @@ void i2cSendAddressFrame(i2cDev_t * dev, uint8_t addr7, uint8_t rw){
         /// SLAVE MODE
         addressFrame = (addr7 << 1) | 1U;
     }
-
+    // __i2cLog1("addressFrame = 0x%04x", addressFrame);
     /// Start sending 8 bit of address frame from MSB to LSB
     for(uint8_t mask = 0x80; mask; mask  >>= 1){
         
         /// Export bit data to SDA
         __i2cSetSDA(dev, boolCast(mask & addressFrame));
-
         /// Make mono pulse of SCL
-        __i2cSetSCL(dev, HIGH);     __i2cDelay(500000/__i2cFreq(dev));
-        __i2cSetSCL(dev, LOW);      __i2cDelay(500000/__i2cFreq(dev));
+        __i2cDelay(500000/__i2cFreq(dev));
+        __i2cSetSCL(dev, HIGH);
+        __i2cDelay(500000/__i2cFreq(dev)); 
+        __i2cSetSCL(dev, LOW);      
     }
 }
 
@@ -212,6 +213,7 @@ static inline  __attribute__((always_inline))
 void i2cSendDataFrame(i2cDev_t * dev, uint8_t byte){
 
     uint32_t dataFrame = byte; /// <-- small fix: should assign from input byte
+    // __i2cLog1("dataFrame = 0x%04x", dataFrame);
 
     /// Start sending 8 bit of data frame from MSB to LSB
     for(uint32_t mask = 0x80; mask; mask  >>= 1){
@@ -235,7 +237,17 @@ def i2cGetReturnBit(i2cDev_t * dev){
     /// Release SDA line
     __i2cSetSDA(dev, HIGH);
 
-    return __i2cGetSDA(dev);
+    /// Make raising edge
+    __i2cSetSCL(dev, LOW);
+    __i2cDelay(500000/__i2cFreq(dev));
+
+    __i2cSetSCL(dev, HIGH);
+    __i2cDelay(500000/__i2cFreq(dev));
+    def ret = __i2cGetSDA(dev);
+
+    __i2cSetSCL(dev, LOW);
+
+    return ret;
 }
 
 /// @brief Reset I2C transmit buffer index (bit/byte) to zero.

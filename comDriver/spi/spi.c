@@ -7,7 +7,7 @@
 /// @param size  Number of bytes in the array
 /// @param newLSB The bit (0 or 1) to put in the least significant bit of the last byte
 /// @return Default return status
- def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB) {
+def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB) {
     if(__is_null(arr)){
         __spiErr("[shiftLeft] arr = %p is invalid!", arr);
         return ERR;
@@ -23,6 +23,7 @@
         carry = next_carry;
     }
     arr[size - 1] = (uint8_t)((arr[size - 1] & 0xFE) | (newLSB & 0x01));
+    return OKE;
 }
 
 /// @brief Shift the entire byte array right by 1 bit, insert newMSB at the very front.
@@ -98,103 +99,6 @@
 
     return OKE;
 }
-
-/// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
-
-void IRAM_ATTR spiHandleCLKIsr(void* pv) {
-    spiDev_t *dev = (spiDev_t*) pv;
-
-    uint8_t *txBuf = (uint8_t*)dev->txdPtr;
-    uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
-
-    if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
-        /// CPHA = 0
-        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
-            /// Rising edge: sample MOSI
-            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
-                rxBuf[dev->rxdByteInd] <<= 1;
-                rxBuf[dev->rxdByteInd] |= bit;
-                dev->rxdBitInd++;
-
-                if (dev->rxdBitInd >= 8) {
-                    dev->rxdBitInd = 0;
-                    dev->rxdByteInd++;
-                }
-            }
-        } else {
-            /// Falling edge: export MISO
-            if (txBuf && dev->txdByteInd < dev->txdSize) {
-                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
-                if (outBit)
-                    GPIO.out_w1ts = __mask32(dev->miso);
-                else
-                    GPIO.out_w1tc = __mask32(dev->miso);
-
-                dev->txdBitInd++;
-                if (dev->txdBitInd >= 8) {
-                    dev->txdBitInd = 0;
-                    dev->txdByteInd++;
-                }
-            }
-        }
-    } else {
-        /// CPHA = 1
-        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
-            /// Rising edge: export MISO
-            if (txBuf && dev->txdByteInd < dev->txdSize) {
-                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
-                if (outBit)
-                    GPIO.out_w1ts = __mask32(dev->miso);
-                else
-                    GPIO.out_w1tc = __mask32(dev->miso);
-
-                dev->txdBitInd++;
-                if (dev->txdBitInd >= 8) {
-                    dev->txdBitInd = 0;
-                    dev->txdByteInd++;
-                }
-            }
-        } else {
-            /// Falling edge: sample MOSI
-            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
-                rxBuf[dev->rxdByteInd] <<= 1;
-                rxBuf[dev->rxdByteInd] |= bit;
-                dev->rxdBitInd++;
-
-                if (dev->rxdBitInd >= 8) {
-                    dev->rxdBitInd = 0;
-                    dev->rxdByteInd++;
-                }
-            }
-        }
-    }
-}
-
-void IRAM_ATTR spiHandleCSIsr(void* pv) {
-    spiDev_t *dev = (spiDev_t*) pv;
-
-    if (__is_positive(GPIO.in & __mask32(dev->cs))) {
-        /// CS rising edge (ngắt giao dịch)
-
-        gpio_intr_disable(dev->clk);
-
-        /// Reset TX index
-        dev->txdByteInd = 0;
-        dev->txdBitInd  = 0;
-
-    } else {
-        /// CS falling edge (bắt đầu giao dịch)
-
-        gpio_intr_enable(dev->clk);
-
-        /// Reset RX index
-        dev->rxdByteInd = 0;
-        dev->rxdBitInd  = 0;
-    }
-}
-
 
 /// SPI ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -349,22 +253,22 @@ int startupSPIDevice(spiDev_t * dev){
     return OKE;
 }
 
-def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
-    __spiEntry("setTransmitBuffer(%p, %p, %d)", dev,txdPtr,size);
+def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
+    __spiEntry("spiSetTransmitBuffer(%p, %p, %d)", dev,txdPtr,size);
 
     if(__is_null(dev)){
         __spiErr("dev = %p is invalid!", dev);
-        goto setTransmitBuffer_ReturnERR_NULL;
+        goto spiSetTransmitBuffer_ReturnERR_NULL;
     }
 
     if(__is_null(txdPtr)){
         __spiErr("txdPtr = %p is invalid!", txdPtr);
-        goto setTransmitBuffer_ReturnERR_NULL;
+        goto spiSetTransmitBuffer_ReturnERR_NULL;
     }
 
     if(__isnot_positive(size)){
         __spiErr("size = %d is invalid!", size);
-        goto setTransmitBuffer_ReturnERR_NULL;
+        goto spiSetTransmitBuffer_ReturnERR_NULL;
     }
 
     dev->txdPtr = txdPtr;
@@ -373,10 +277,10 @@ def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     dev->txdByteInd = 0;
 
 
-    __spiExit("setTransmitBuffer() : %s", OKE);
+    __spiExit("spiSetTransmitBuffer() : %s", OKE);
     return OKE;
 
-    setTransmitBuffer_ReturnERR_NULL:
+    spiSetTransmitBuffer_ReturnERR_NULL:
 
     /// Reset txdPtr and txdSize
     dev->txdPtr = NULL;
@@ -384,26 +288,26 @@ def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     dev->txdBitInd = 0;
     dev->txdByteInd = 0;
 
-    __spiExit("setTransmitBuffer() : %s", ERR_NULL);
+    __spiExit("spiSetTransmitBuffer() : %s", ERR_NULL);
     return ERR_NULL;
 }
 
-def setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
-    __spiEntry("setReceiveBuffer(%p, %p, %d)", dev, rxdPtr, size);
+def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
+    __spiEntry("spiSetReceiveBuffer(%p, %p, %d)", dev, rxdPtr, size);
 
     if(__is_null(dev)){
         __spiErr("dev = %p is invalid!", dev);
-        goto setReceiveBuffer_ReturnERR_NULL;
+        goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
     if(__is_null(rxdPtr)){
         __spiErr("rxdPtr = %p is invalid!", rxdPtr);
-        goto setReceiveBuffer_ReturnERR_NULL;
+        goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
     if(__isnot_positive(size)){
         __spiErr("size = %d is invalid!", size);
-        goto setReceiveBuffer_ReturnERR_NULL;
+        goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
     dev->rxdPtr = rxdPtr;
@@ -411,10 +315,10 @@ def setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
     dev->rxdBitInd = 0;
     dev->rxdByteInd = 0;
 
-    __spiExit("setReceiveBuffer() : %s", STR(OKE));
+    __spiExit("spiSetReceiveBuffer() : %s", STR(OKE));
     return OKE;
 
-    setReceiveBuffer_ReturnERR_NULL:
+    spiSetReceiveBuffer_ReturnERR_NULL:
 
     /// Reset rxdPtr and rxdSize
     dev->rxdPtr = NULL;
@@ -422,7 +326,7 @@ def setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
     dev->rxdBitInd = 0;
     dev->rxdByteInd = 0;
 
-    __spiExit("setReceiveBuffer() : %s", STR(ERR_NULL));
+    __spiExit("spiSetReceiveBuffer() : %s", STR(ERR_NULL));
     return ERR_NULL;
 }
 

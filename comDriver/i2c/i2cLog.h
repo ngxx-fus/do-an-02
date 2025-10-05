@@ -11,27 +11,27 @@
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define I2C_LOG_LEVEL 3
+#define I2C_LOG_LEVEL 4
 
 #if I2C_LOG_LEVEL >= 1
-    #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+    #define __i2cErr(...)       __err( __VA_ARGS__ )
 #else 
     #define __i2cErr(...)
 #endif
 #if I2C_LOG_LEVEL >= 2
-    #define __i2cEntry(...)     __entry( ##__VA_ARGS__ )
-    #define __i2cExit(...)      __exit( ##__VA_ARGS__ )
+    #define __i2cEntry(...)     __entry( __VA_ARGS__ )
+    #define __i2cExit(...)      __exit( __VA_ARGS__ )
 #else 
     #define __i2cEntry(...)
     #define __i2cExit(...)
 #endif 
 #if I2C_LOG_LEVEL >= 3
-    #define __i2cLog(...)      __log( ##__VA_ARGS__ )
+    #define __i2cLog(...)      __log( __VA_ARGS__ )
 #else 
     #define __i2cLog(...)
 #endif 
 #if I2C_LOG_LEVEL >= 4
-    #define __i2cLog1(...)      __log( ##__VA_ARGS__ )
+    #define __i2cLog1(...)      __log( __VA_ARGS__ )
 #else 
     #define __i2cLog1(...)
 #endif 

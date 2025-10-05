@@ -16,24 +16,24 @@
 #define SPI_LOG_LEVEL 3
 
 #if SPI_LOG_LEVEL >= 1
-    #define __spiErr(...)       __err( ##__VA_ARGS__ )
+    #define __spiErr(...)       __err( __VA_ARGS__ )
 #else 
     #define __spiErr(...)
 #endif
 #if SPI_LOG_LEVEL >= 2
-    #define __spiEntry(...)     __entry( ##__VA_ARGS__ )
-    #define __spiExit(...)      __exit( ##__VA_ARGS__ )
+    #define __spiEntry(...)     __entry( __VA_ARGS__ )
+    #define __spiExit(...)      __exit( __VA_ARGS__ )
 #else 
     #define __spiEntry(...)
     #define __spiExit(...)
 #endif 
 #if SPI_LOG_LEVEL >= 3
-    #define __spiLog(...)      __log( ##__VA_ARGS__ )
+    #define __spiLog(...)      __log( __VA_ARGS__ )
 #else 
     #define __spiLog(...)
 #endif 
 #if SPI_LOG_LEVEL >= 4
-    #define __spiLog1(...)      __log( ##__VA_ARGS__ )
+    #define __spiLog1(...)      __log( __VA_ARGS__ )
 #else 
     #define __spiLog1(...)
 #endif 
@@ -104,8 +104,101 @@ def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte);
 
 /// MAIN FUNCTIONS ////////////////////////////////////////////////////////////////////////////////
 
-void IRAM_ATTR spiHandleCLKIsr(void* pv);
-void IRAM_ATTR spiHandleCSIsr(void* pv);
+/// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
+
+void IRAM_ATTR spiHandleCLKIsr(void* pv) {
+    spiDev_t *dev = (spiDev_t*) pv;
+
+    uint8_t *txBuf = (uint8_t*)dev->txdPtr;
+    uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
+
+    if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
+        /// CPHA = 0
+        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
+            /// Rising edge: sample MOSI
+            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
+                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
+                rxBuf[dev->rxdByteInd] <<= 1;
+                rxBuf[dev->rxdByteInd] |= bit;
+                dev->rxdBitInd++;
+
+                if (dev->rxdBitInd >= 8) {
+                    dev->rxdBitInd = 0;
+                    dev->rxdByteInd++;
+                }
+            }
+        } else {
+            /// Falling edge: export MISO
+            if (txBuf && dev->txdByteInd < dev->txdSize) {
+                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
+                if (outBit)
+                    GPIO.out_w1ts = __mask32(dev->miso);
+                else
+                    GPIO.out_w1tc = __mask32(dev->miso);
+
+                dev->txdBitInd++;
+                if (dev->txdBitInd >= 8) {
+                    dev->txdBitInd = 0;
+                    dev->txdByteInd++;
+                }
+            }
+        }
+    } else {
+        /// CPHA = 1
+        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
+            /// Rising edge: export MISO
+            if (txBuf && dev->txdByteInd < dev->txdSize) {
+                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
+                if (outBit)
+                    GPIO.out_w1ts = __mask32(dev->miso);
+                else
+                    GPIO.out_w1tc = __mask32(dev->miso);
+
+                dev->txdBitInd++;
+                if (dev->txdBitInd >= 8) {
+                    dev->txdBitInd = 0;
+                    dev->txdByteInd++;
+                }
+            }
+        } else {
+            /// Falling edge: sample MOSI
+            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
+                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
+                rxBuf[dev->rxdByteInd] <<= 1;
+                rxBuf[dev->rxdByteInd] |= bit;
+                dev->rxdBitInd++;
+
+                if (dev->rxdBitInd >= 8) {
+                    dev->rxdBitInd = 0;
+                    dev->rxdByteInd++;
+                }
+            }
+        }
+    }
+}
+
+void IRAM_ATTR spiHandleCSIsr(void* pv) {
+    spiDev_t *dev = (spiDev_t*) pv;
+
+    if (__is_positive(GPIO.in & __mask32(dev->cs))) {
+        /// CS rising edge (ngắt giao dịch)
+
+        gpio_intr_disable(dev->clk);
+
+        /// Reset TX index
+        dev->txdByteInd = 0;
+        dev->txdBitInd  = 0;
+
+    } else {
+        /// CS falling edge (bắt đầu giao dịch)
+
+        gpio_intr_enable(dev->clk);
+
+        /// Reset RX index
+        dev->rxdByteInd = 0;
+        dev->rxdBitInd  = 0;
+    }
+}
 
 
 /// @brief Create new spiDev_t
@@ -136,14 +229,14 @@ int startupSPIDevice(spiDev_t * dev);
 /// @param txdPtr The pointer to transmit buffer
 /// @param size Size of the transmit buffer (in byte)
 /// @return Default return status
-def setTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size);
+def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size);
 
 /// @brief Set SPI receive buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
 /// @param rxdPtr The pointer to receive buffer
 /// @param size Size of the receive buffer (in byte)
 /// @return Default return status
-int setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
+def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
 
 /// @brief Start the spi transaction (Master only)
 /// @param dev Pointer to spiDev_t

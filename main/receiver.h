@@ -1,5 +1,7 @@
 #include "../helper/general.h"
 
+#if ESP32_DEVICE_MODE == RECEIVER
+
 // #include "../driver/"
 
 void IRAM_ATTR buttonISR(void* pv){
@@ -21,6 +23,7 @@ void IRAM_ATTR buttonISR(void* pv){
 }
 
 void ledTest(){
+    
     /// Output
     gpio_config_t outPin = {
         .intr_type = GPIO_INTR_DISABLE,
@@ -45,29 +48,29 @@ void ledTest(){
     /// Status variable 
     /// testModeVariable[0] : Control the test state, Set 0 to stop test mode
     /// testModeVariable[1] : Save last pressed
-    int64_t testModeVariable[2] = {1, 0};
+    int64_t testModeVariable[2] = {2, 0};
 
     /// Enable all interrupt
     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
     gpio_isr_handler_add(BTN0, buttonISR, (void*) testModeVariable);
 
     /// Running test mode
-    while(testModeVariable[0] != 0){
-        vTaskDelay(200/portTICK_PERIOD_MS);
+    while(testModeVariable[0]-- != 0){
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1ts = (__mask32(PIN0));
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1ts =  __mask32(PIN1);
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1ts = __mask32(PIN2);
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1ts = __mask32(PIN3);
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1tc = (__mask32(PIN0));
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1tc =  __mask32(PIN1);
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1tc = __mask32(PIN2);
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
         GPIO.out_w1tc = __mask32(PIN3);
     };
 
@@ -78,3 +81,5 @@ void ledTest(){
     gpio_reset_pin(PIN3);
 
 }
+
+#endif
