@@ -63,7 +63,7 @@ void app_main(void){
 
     char mode[] = /*2*/ "M: "  /*6*/ "1-WIRE" /*1*/;
     char send[] = /*3*/ "> ?";
-    char rcvd[] = /*2*/ "< ?";
+    char rcvd[] = /*2*/ "< ERR";
 
     drawLineText(oled, "Running...", 0xF00 | 0x00 );
 
@@ -100,8 +100,17 @@ void app_main(void){
         sendDataFrame(currentDataFrame, &receivedByteData);
 
         /// Display data frame if success
-        rcvd[2] = receivedByteData;
-        rcvd[3] = '\0';
+        if(receivedByteData >= 32 && receivedByteData < 126){
+            rcvd[2] = receivedByteData;
+            rcvd[3] = '\0';
+            rcvd[4] = '\0';
+            rcvd[5] = '\0';
+        }else{
+            rcvd[2] = 'E';
+            rcvd[3] = 'R';
+            rcvd[4] = 'R';
+            rcvd[5] = '\0';
+        }
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
         vTaskDelay(DATAFR_INTERVAL);
