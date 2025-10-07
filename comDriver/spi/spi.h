@@ -42,35 +42,50 @@
 
 /// @brief SPI device descriptor
 typedef struct spiDev_t {
-    pin_t       clk;        ///< Clock pin
-    pin_t       mosi;       ///< MOSI pin
-    pin_t       miso;       ///< MISO pin
-    pin_t       cs;         ///< Chip select pin
-    flag_t      conf;       ///< Configuration flags (mode, CPOL, CPHA)
-    uint32_t    freq;       ///< Frequency in Hz
-    void*       txdPtr;     ///< Pointer to TX buffer
-    void*       rxdPtr;     ///< Pointer to RX buffer
-    size_t      rxdSize;    ///< RX buffer size in bytes
-    size_t      rxdByteInd; ///< Current RX byte index
-    size_t      txdSize;    ///< TX buffer size in bytes
-    size_t      txdByteInd; ///< Current TX byte index
-    uint8_t     rxdBitInd;  ///< RX bit index within current byte
-    uint8_t     txdBitInd;  ///< TX bit index within current byte
+    pin_t       clk;        /// Clock pin
+    pin_t       mosi;       /// MOSI pin
+    pin_t       miso;       /// MISO pin
+    pin_t       cs;         /// Chip select pin
+    flag_t      conf;       /// Configuration flags (mode, CPOL, CPHA)
+    uint32_t    freq;       /// Frequency in Hz
+    void*       txdPtr;     /// Pointer to TX buffer
+    void*       rxdPtr;     /// Pointer to RX buffer
+    size_t      rxdSize;    /// RX buffer size in bytes
+    size_t      rxdByteInd; /// Current RX byte index
+    size_t      txdSize;    /// TX buffer size in bytes
+    size_t      txdByteInd; /// Current TX byte index
+    uint8_t     rxdBitInd;  /// RX bit index within current byte
+    uint8_t     txdBitInd;  /// TX bit index within current byte
     portMUX_TYPE mutex;
 } spiDev_t;
 
 /// @brief SPI device role
 enum SPI_DEVICE {
-    SPI_MASTER = 0, ///< Master mode
-    SPI_SLAVE  = 1  ///< Slave mode
+    SPI_MASTER = 0, /// Master mode
+    SPI_SLAVE  = 1  /// Slave mode
 };
 
 /// @brief SPI configuration parameters
-enum SPI_CONFIG {
-    SPI_MODE = 0,   ///< Master or Slave mode
-    SPI_CPOL = 1,   ///< Clock polarity
-    SPI_CPHA = 2    ///< Clock phase
+enum SPI_BIT_ORDER_CONFIG {
+    SPI_MODE = 0,   /// Master or Slave mode
+    SPI_CPOL = 1,   /// Clock polarity
+    SPI_CPHA = 2,    /// Clock phase
+    SPI_BIT_ORDER_CONFIG_COUNT,
 };
+
+/// @brief SPI configuration parameters
+enum SPI_PRESET_CONFIG {
+    SPI_00_MASTER = 0,   /// MATER MODE | CPHA = 0 | CPOL = 0
+    SPI_01_MASTER = 1,   /// MATER MODE | CPHA = 0 | CPOL = 1
+    SPI_10_MASTER = 2,   /// MATER MODE | CPHA = 1 | CPOL = 0
+    SPI_11_MASTER = 3,   /// MATER MODE | CPHA = 1 | CPOL = 1
+    SPI_00_SLAVE = 4,    /// SLAVE MODE | CPHA = 0 | CPOL = 0
+    SPI_01_SLAVE = 5,    /// SLAVE MODE | CPHA = 0 | CPOL = 1
+    SPI_10_SLAVE = 6,    /// SLAVE MODE | CPHA = 1 | CPOL = 0
+    SPI_11_SLAVE = 7,    /// SLAVE MODE | CPHA = 1 | CPOL = 1
+    SPI_PRESET_CONFIG_COUNT
+};
+
 
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
 
@@ -106,7 +121,7 @@ def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte);
 
 /// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
 
-void IRAM_ATTR spiHandleCLKIsr(void* pv) {
+static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
     uint8_t *txBuf = (uint8_t*)dev->txdPtr;
@@ -177,7 +192,7 @@ void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     }
 }
 
-void IRAM_ATTR spiHandleCSIsr(void* pv) {
+static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
@@ -222,7 +237,7 @@ def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,u
 /// @brief Startup (init gpio, ...) base on the config of spiDev
 /// @param dev A pointer to the place which is storing the spiDev_t
 /// @return Default return status
-int startupSPIDevice(spiDev_t * dev);
+def startupSPIDevice(spiDev_t * dev);
 
 /// @brief Set SPI transmit buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
@@ -241,7 +256,14 @@ def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
 /// @brief Start the spi transaction (Master only)
 /// @param dev Pointer to spiDev_t
 /// @return <=0 if error occured; >0 # of received bytes
-def startTransaction(spiDev_t * dev);
+def spiStartTransaction(spiDev_t * dev);
 
+/// @brief Destroy and free all resources associated with an SPI device.
+///        This function disables interrupts, releases GPIO pins,
+///        clears all internal pointers, and frees the device structure.
+/// @param pDev Double pointer to the spiDev_t object.
+///             After this call, *pDev will be set to NULL.
+/// @return Default return status.
+def destroySPIDevice(spiDev_t **pDev);
 
 #endif

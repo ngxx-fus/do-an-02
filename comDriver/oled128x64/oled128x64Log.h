@@ -9,7 +9,7 @@
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define OLED_LOG_LEVEL 4
+#define OLED_LOG_LEVEL 1
 
 #if OLED_LOG_LEVEL >= 1
     #define __oledErr(...)       __err(  __VA_ARGS__ )

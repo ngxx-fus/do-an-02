@@ -41,9 +41,9 @@ def configI2CDevice(i2cDev_t * dev, uint8_t addr, pin_t scl, pin_t sda, flag_t c
     dev->scl    = scl;
     dev->sda    = sda;
     dev->conf   = config;
-    dev->freq   =   ((config & 0x3) == 0) ? (100000) : 
-                    ((config & 0x3) == 1) ? (400000) : 
-                    ((config & 0x3) == 2) ? (800000) : (1000000);
+    dev->freq   =   ((config & 0x3) == I2C_STANDARD_MODE)   ? (100000) : 
+                    ((config & 0x3) == I2C_FAST_MODE)       ? (400000) : 
+                    ((config & 0x3) == I2C_FAST_PLUS_MODE)  ? (800000) : (1000000);
 
     /// Clear all ptr buffer!
 
@@ -98,40 +98,40 @@ def startupI2CDevice(i2cDev_t * dev){
         /// SLAVE MODE ///
 
         /// TODO: Fix GPIO mask
-        // gpio_config_t sdaPin = {
-        //     .intr_type = GPIO_INTR_DISABLE,
-        //     .mode = GPIO_MODE_INPUT_OUTPUT_OD,
-        //     .pin_bit_mask = dev->sda,
-        //     .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        //     .pull_up_en = GPIO_PULLDOWN_DISABLE,
-        // };
-        // gpio_config(&sdaPin);
+        gpio_config_t sdaPin = {
+            .intr_type = GPIO_INTR_DISABLE,
+            .mode = GPIO_MODE_INPUT_OUTPUT_OD,
+            .pin_bit_mask = __mask32(dev->sda),
+            .pull_down_en = GPIO_PULLDOWN_DISABLE,
+            .pull_up_en = GPIO_PULLDOWN_DISABLE,
+        };
+        gpio_config(&sdaPin);
 
-        // gpio_config_t sclPin = {
-        //     .intr_type = GPIO_INTR_DISABLE,
-        //     .mode = GPIO_MODE_INPUT,
-        //     .pin_bit_mask = dev->scl,
-        //     .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        //     .pull_up_en = GPIO_PULLUP_DISABLE,
-        // };
-        // gpio_config(&sclPin);
+        gpio_config_t sclPin = {
+            .intr_type = GPIO_INTR_DISABLE,
+            .mode = GPIO_MODE_INPUT,
+            .pin_bit_mask = __mask32(dev->scl),
+            .pull_down_en = GPIO_PULLDOWN_DISABLE,
+            .pull_up_en = GPIO_PULLUP_DISABLE,
+        };
+        gpio_config(&sclPin);
 
-        // // Install ISR service if not installed
-        // esp_err_t r = gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-        // if (r != ESP_OK && r != ESP_ERR_INVALID_STATE) {
-        //     __i2cErr("gpio_install_isr_service() : %d", r);
-        //     __i2cExit("startupI2CDevice() : %s", STR(ERR));
-        //     return ERR;
-        // }
+        // Install ISR service if not installed
+        esp_err_t r = gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+        if (r != ESP_OK && r != ESP_ERR_INVALID_STATE) {
+            __i2cErr("gpio_install_isr_service() : %d", r);
+            __i2cExit("startupI2CDevice() : %s", STR(ERR));
+            return ERR;
+        }
         
-        // if(__isnot_negative(dev->sda)){
-        //     gpio_set_intr_type(dev->sda, GPIO_INTR_ANYEDGE);
-        //     gpio_isr_handler_add(dev->sda, i2cHandleSDAIsr, dev);
-        // }
-        // if(__isnot_negative(dev->scl)){
-        //     gpio_set_intr_type(dev->scl, GPIO_INTR_ANYEDGE);
-        //     gpio_isr_handler_add(dev->scl, i2cHandleSCLIsr, dev);
-        // }
+        if(__isnot_negative(dev->sda)){
+            gpio_set_intr_type(dev->sda, GPIO_INTR_ANYEDGE);
+            gpio_isr_handler_add(dev->sda, i2cHandleSDAIsr, dev);
+        }
+        if(__isnot_negative(dev->scl)){
+            gpio_set_intr_type(dev->scl, GPIO_INTR_ANYEDGE);
+            gpio_isr_handler_add(dev->scl, i2cHandleSCLIsr, dev);
+        }
     }
 
     __i2cExit("startupI2CDevice() : %s", STR(OKE));
@@ -162,19 +162,17 @@ def i2cSetTransmitBuffer(i2cDev_t * dev, void * txPtr, size_t size){
     dev->txIndByte = 0;
 
 
-    __i2cExit(" i2cSetTransmitBuffer() : %s", OKE);
+    __i2cExit(" i2cSetTransmitBuffer() : %s", STR(OKE));
     return OKE;
 
-     i2cSetTransmitBuffer_ReturnERR_NULL:
-
-    /// Reset txPtr and txSize
-    dev->txPtr = NULL;
-    dev->txSize = 0;
-    dev->txIndBit = 0;
-    dev->txIndByte = 0;
-
-    __i2cExit(" i2cSetTransmitBuffer() : %s", ERR_NULL);
-    return ERR_NULL;
+    i2cSetTransmitBuffer_ReturnERR_NULL:
+        /// Reset txPtr and txSize
+        dev->txPtr = NULL;
+        dev->txSize = 0;
+        dev->txIndBit = 0;
+        dev->txIndByte = 0;
+        __i2cExit(" i2cSetTransmitBuffer() : %s", STR(ERR_NULL));
+        return ERR_NULL;
 }
 
 def i2cSetReceiveBuffer(i2cDev_t * dev, void * rxPtr, size_t size){
@@ -248,6 +246,8 @@ def i2cSendByte(i2cDev_t * dev, uint8_t addr7, uint8_t rw, uint8_t byte, flag_t 
 }
 
 def i2cSendDoubleByte(i2cDev_t * dev, uint8_t addr7, uint8_t rw, uint8_t byteHigh, uint8_t byteLow, flag_t extConf){
+    __i2cEntry("i2cSendDoubleByte(%p, %d, %d, 0x%02x, 0x%02x, 0x%04x)", dev, addr7, rw, byteHigh, byteLow, extConf);
+    
     __I2C_ASSERT_DEV_OK1(STR(i2cSendDoubleByte), dev, STR(dev));
 
     if(__hasFlagBitClr(extConf, I2C_DIS_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex)); 
@@ -283,31 +283,35 @@ def i2cSendDoubleByte(i2cDev_t * dev, uint8_t addr7, uint8_t rw, uint8_t byteHig
     i2cSendDoubleByte_ReturnERR:
         if(__hasFlagBitClr(extConf, I2C_DIS_STOP_CONDI)) i2cStopCondition(dev);
         if(__hasFlagBitClr(extConf, I2C_DIS_EXIT_CRITICAL_SEC)) vPortExitCritical(&(dev->mutex));
+        __i2cExit("i2cSendDoubleByte : %s", STR(ERR));
         return ERR;
 }
 
 def i2cSendBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf){
-    __entry("i2cSendBuffer(%p, %d, %d, 0x%04x)", dev, addr7, rw, extConf);
+    __i2cEntry("i2cSendBuffer(%p, %d, %d, 0x%04x)", dev, addr7, rw, extConf);
 
     __I2C_ASSERT_DEV_OK1(STR(i2cSendBuffer), dev, STR(dev));
 
-    __i2cLog1("[i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC is enable: %d", __hasFlagBitClr(extConf, I2C_DIS_ENTRY_CRITICAL_SEC));
-    __i2cLog1("[i2cSendBuffer] I2C_DIS_START_CONDI is enable: %d", __hasFlagBitClr(extConf, I2C_DIS_START_CONDI));
-    __i2cLog1("[i2cSendBuffer] I2C_DIS_STOP_CONDI is enable: %d", __hasFlagBitClr(extConf, I2C_DIS_STOP_CONDI));
-    __i2cLog1("[i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC is enable: %d", __hasFlagBitClr(extConf, I2C_DIS_EXIT_CRITICAL_SEC));
+    __i2cLog("[i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : %d", __hasFlagBitClr(extConf, I2C_DIS_ENTRY_CRITICAL_SEC));
+    __i2cLog("[i2cSendBuffer] I2C_DIS_START_CONDI : %d", __hasFlagBitClr(extConf, I2C_DIS_START_CONDI));
+    __i2cLog("[i2cSendBuffer] I2C_DIS_STOP_CONDI : %d", __hasFlagBitClr(extConf, I2C_DIS_STOP_CONDI));
+    __i2cLog("[i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : %d", __hasFlagBitClr(extConf, I2C_DIS_EXIT_CRITICAL_SEC));
+    __i2cLog("[i2cSendBuffer] I2C_SKIP_ADDR_FRAME : %d", __hasFlagBitClr(extConf, I2C_SKIP_ADDR_FRAME));
 
     if(__hasFlagBitClr(extConf, I2C_DIS_ENTRY_CRITICAL_SEC)) vPortEnterCritical(&(dev->mutex));
 
     /// Make start condition 
     if(__hasFlagBitClr(extConf, I2C_DIS_START_CONDI)) i2cStartCondition(dev);
-    
-    /// Send address frame
-    __i2cLog1("[i2cSendBuffer] Send sdress frame [0x%04x | %d]", addr7, rw);
-    i2cSendAddressFrame(dev, addr7, rw);
-    /// Get and process returned bit
-    if(i2cGetReturnBit(dev) == I2C_NACK) {
-        __i2cErr("[i2cSendBuffer] Got NACK after send address frame!");
-        goto i2cSendBuffer_ReturnERR;
+
+    if(__hasFlagBitClr(extConf, I2C_SKIP_ADDR_FRAME)){
+        /// Send address frame
+        __i2cLog1("[i2cSendBuffer] Send sdress frame [0x%04x | %d]", addr7, rw);
+        i2cSendAddressFrame(dev, addr7, rw);
+        /// Get and process returned bit
+        if(i2cGetReturnBit(dev) == I2C_NACK) {
+            __i2cErr("[i2cSendBuffer] Got NACK after send address frame!");
+            goto i2cSendBuffer_ReturnERR;
+        }
     }
 
     if(__hasFlagBitSet(extConf, I2C_RESET_TX_INDEX))

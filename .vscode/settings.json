@@ -54,6 +54,26 @@
         "sdkconfig.h": "c",
         "esp_intr_alloc.h": "c",
         "esp_log.h": "c",
-        "i2chelper.h": "c"
+        "i2chelper.h": "c",
+        "bit": "c",
+        "tomthumb.h": "c",
+        "oled128x64helpers.h": "c",
+        "fontutils.h": "c",
+        "helper.h": "c",
+        "freeserifbold9pt7b.h": "c",
+        "gfxfont.h": "c",
+        "sender.h": "c",
+        "receiver.h": "c",
+        "freeserif9pt7b.h": "c",
+        "source_location": "c",
+        "functional": "c",
+        "any": "c",
+        "compare": "c",
+        "ratio": "c",
+        "scoped_allocator": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "variant": "c"
     }
 }

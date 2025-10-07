@@ -7,6 +7,8 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 # Tell CMake to look for additional components in the 'comDriver',  directory
 set(EXTRA_COMPONENT_DIRS
     # "helper"
+    "fonts"
+    "helper"
     "comDriver/i2c"
     "comDriver/oled128x64"
     "comDriver/spi"

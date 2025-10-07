@@ -161,7 +161,7 @@ def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,u
     return OKE;
 }
 
-int startupSPIDevice(spiDev_t * dev){
+def startupSPIDevice(spiDev_t * dev){
     __spiEntry("startupSPIDevice(%p)", dev);
 
     if(__is_null(dev)) {
@@ -333,36 +333,36 @@ def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
 /// @brief Start an SPI transaction (master mode only)
 /// @param dev Pointer to SPI device configuration (spiDev_t)
 /// @return Number of received bytes (>0) or error code (<=0)
-def startTransaction(spiDev_t * dev) {
-    __spiEntry("startTransaction(%p)", dev);
+def spiStartTransaction(spiDev_t * dev) {
+    __spiEntry("spiStartTransaction(%p)", dev);
 
     /// Null check
     if (__is_null(dev)) {
         __spiErr("dev is null!");
-        __spiExit("startTransaction() : %s", STR(ERR_NULL));
+        __spiExit("spiStartTransaction() : %s", STR(ERR_NULL));
         return ERR_NULL;
     }
 
     /// Safety checks
     if (__isnot_positive(dev->txdSize) || __is_null(dev->txdPtr)) {
         __spiErr("tx buffer invalid (ptr=%p size=%d)", dev->txdPtr, dev->txdSize);
-        __spiExit("startTransaction() : %s", STR(ERR_INVALID_ARG));
+        __spiExit("spiStartTransaction() : %s", STR(ERR_INVALID_ARG));
         return ERR_INVALID_ARG;
     }
     if (__isnot_positive(dev->freq)) {
         __spiErr("freq = %d invalid!", dev->freq);
-        __spiExit("startTransaction() : %s", STR(ERR_INVALID_ARG));
+        __spiExit("spiStartTransaction() : %s", STR(ERR_INVALID_ARG));
         return ERR_INVALID_ARG;
     }
 
     /// Check mode: only master supported
     if (__hasFlagBitSet(dev->conf, SPI_MODE) != SPI_MASTER) {
         __spiErr("Wrong mode or Function!");
-        __spiExit("startTransaction() : %s", STR(ERR_INVALID_ARG));
+        __spiExit("spiStartTransaction() : %s", STR(ERR_INVALID_ARG));
         return ERR_INVALID_ARG;
     }
 
-    portENTER_CRITICAL(&(dev->mutex));
+    vPortEnterCritical(&(dev->mutex));
 
     /// Clear RX buffer if provided
     if (__isnot_null(dev->rxdPtr) && __is_positive(dev->rxdSize)) {
@@ -486,8 +486,75 @@ def startTransaction(spiDev_t * dev) {
     /// Pull CS up to stop transmission
     if (__isnot_negative(dev->cs)) GPIO.out_w1ts = __mask32(dev->cs);
 
-    portEXIT_CRITICAL(&(dev->mutex));
+    vPortExitCritical(&(dev->mutex));
 
-    __spiExit("startTransaction() : %d", (int)dev->rxdByteInd);
+    __spiExit("spiStartTransaction() : %d", (int)dev->rxdByteInd);
     return (def) dev->rxdByteInd;
+}
+
+def destroySPIDevice(spiDev_t **pDev) {
+    __spiEntry("destroySPIDevice(%p)", pDev);
+
+    if (__is_null(pDev) || __is_null(*pDev)) {
+        __spiErr("pDev or *pDev is null!");
+        __spiExit("destroySPIDevice() : %s", STR(ERR_NULL));
+        return ERR_NULL;
+    }
+
+    spiDev_t *dev = *pDev;
+
+    vPortEnterCritical(&(dev->mutex));
+
+    /// --- 1. Uninstall ISR (only if in slave mode) ---
+    if (__hasFlagBitSet(dev->conf, SPI_MODE) == SPI_SLAVE) {
+        if (__isnot_negative(dev->clk)) {
+            gpio_isr_handler_remove(dev->clk);
+        }
+        if (__isnot_negative(dev->cs)) {
+            gpio_isr_handler_remove(dev->cs);
+        }
+    }
+
+    /// --- 2. Reset all GPIO pins to default (input floating) ---
+    uint64_t gpioMask = 0;
+
+    if (__isnot_negative(dev->clk))  gpioMask |= __mask64(dev->clk);
+    if (__isnot_negative(dev->mosi)) gpioMask |= __mask64(dev->mosi);
+    if (__isnot_negative(dev->miso)) gpioMask |= __mask64(dev->miso);
+    if (__isnot_negative(dev->cs))   gpioMask |= __mask64(dev->cs);
+
+    if (gpioMask) {
+        gpio_config_t defaultPin = {
+            .intr_type = GPIO_INTR_DISABLE,
+            .mode = GPIO_MODE_INPUT,
+            .pin_bit_mask = gpioMask,
+            .pull_down_en = GPIO_PULLDOWN_DISABLE,
+            .pull_up_en = GPIO_PULLUP_DISABLE,
+        };
+        gpio_config(&defaultPin);
+    }
+
+    /// --- 3. Clear buffers and internal pointers ---
+    dev->txdPtr = NULL;
+    dev->rxdPtr = NULL;
+    dev->txdSize = 0;
+    dev->rxdSize = 0;
+
+    dev->txdBitInd = 0;
+    dev->txdByteInd = 0;
+    dev->rxdBitInd = 0;
+    dev->rxdByteInd = 0;
+
+    /// --- 4. Reset other parameters ---
+    dev->freq = 0;
+    dev->conf = 0;
+
+    vPortExitCritical(&(dev->mutex));
+
+    /// --- 5. Free memory and nullify pointer ---
+    free(dev);
+    *pDev = NULL;
+
+    __spiExit("destroySPIDevice() : %s", STR(OKE));
+    return OKE;
 }

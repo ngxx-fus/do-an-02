@@ -8,7 +8,7 @@
 #include <stdarg.h>     /// for variadic arguments (va_list, va_start, va_end)
 
 /// Type of a GPIO
-typedef int8_t pin_t;
+typedef int32_t pin_t;
 
 #if ESP32_DEVICE_MODE == SENDER
 
@@ -38,6 +38,7 @@ typedef int8_t pin_t;
 
 #endif 
 
+/// @brief States of pin
 enum PIN_STATE {
     UNUSED = -1,
     INVALID = -2,

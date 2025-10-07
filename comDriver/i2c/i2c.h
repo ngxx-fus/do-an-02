@@ -20,13 +20,19 @@
 /// @brief Handle SCL interrupt in slave mode
 /// @param pv Pointer to i2cDev_t
 static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+    __i2cEntry("i2cHandleSCLIsr(%p)", pvI2CDev);
+    
 
+    __i2cExit("i2cHandleSCLIsr()");
 }
 
 /// @brief Handle SDA interrupt in slave mode
 /// @param pv Pointer to i2cDev_t
 static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+    __i2cEntry("i2cHandleSDAIsr(%p)", pvI2CDev);
 
+
+    __i2cExit("i2cHandleSDAIsr()");
 }
 
 /// @brief Create a new I2C device instance
