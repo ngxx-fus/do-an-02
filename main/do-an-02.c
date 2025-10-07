@@ -41,10 +41,12 @@ void app_main(void){
     createOLEDDevice(&oled);
     configOLEDDevice(oled, OLED_SCL, OLED_SDA, I2C_INFINITY_MODE);
     startupOLEDDevice(oled);
+    __log("Start up...");
+    drawLineText(oled, "Start up ...", 0xF00 | 0x00 );
     
-    __log("Enter test mode!");
-    drawLineText(oled, "Test mode", 0xF00 | 0x00 );
-    ledTest(NULL);
+    // __log("Enter test mode!");
+    // drawLineText(oled, "Test mode", 0xF00 | 0x00 );
+    // ledTest(NULL);
 
     __log("[+] oledTask()");
     drawLineText(oled, "[+] oledTask()", 0xF00 | 0x00 );
