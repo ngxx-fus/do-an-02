@@ -105,4 +105,6 @@
 /// Unit: micro-sec
 #define LONGPRESS_TIME 2000000
 
+#define COM_SPI_FREQ   1000
+
 #endif

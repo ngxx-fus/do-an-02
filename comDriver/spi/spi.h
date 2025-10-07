@@ -13,7 +13,7 @@
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define SPI_LOG_LEVEL 3
+#define SPI_LOG_LEVEL 4
 
 #if SPI_LOG_LEVEL >= 1
     #define __spiErr(...)       __err( __VA_ARGS__ )
@@ -40,6 +40,8 @@
 
 /// THE DEFINITIONSRELATED TO SPI /////////////////////////////////////////////////////////////////
 
+#define __spiDelay(us)  esp_rom_delay_us(us);
+
 /// @brief SPI device descriptor
 typedef struct spiDev_t {
     pin_t       clk;        /// Clock pin
@@ -65,6 +67,12 @@ enum SPI_DEVICE {
     SPI_SLAVE  = 1  /// Slave mode
 };
 
+/// @brief  SPI clk state (idle/active)
+enum SPI_CLK_STATE {
+    SPICLK_IDLE = 0,
+    SPICLK_ACTIVE = 1,
+};
+
 /// @brief SPI configuration parameters
 enum SPI_BIT_ORDER_CONFIG {
     SPI_MODE = 0,   /// Master or Slave mode
@@ -75,19 +83,64 @@ enum SPI_BIT_ORDER_CONFIG {
 
 /// @brief SPI configuration parameters
 enum SPI_PRESET_CONFIG {
-    SPI_00_MASTER = 0,   /// MATER MODE | CPHA = 0 | CPOL = 0
-    SPI_01_MASTER = 1,   /// MATER MODE | CPHA = 0 | CPOL = 1
-    SPI_10_MASTER = 2,   /// MATER MODE | CPHA = 1 | CPOL = 0
-    SPI_11_MASTER = 3,   /// MATER MODE | CPHA = 1 | CPOL = 1
-    SPI_00_SLAVE = 4,    /// SLAVE MODE | CPHA = 0 | CPOL = 0
-    SPI_01_SLAVE = 5,    /// SLAVE MODE | CPHA = 0 | CPOL = 1
-    SPI_10_SLAVE = 6,    /// SLAVE MODE | CPHA = 1 | CPOL = 0
-    SPI_11_SLAVE = 7,    /// SLAVE MODE | CPHA = 1 | CPOL = 1
+    SPI_00_MASTER = 0,   /// CPHA = 0 | CPOL = 0 | MATER MODE
+    SPI_01_MASTER = 2,   /// CPHA = 0 | CPOL = 1 | MATER MODE
+    SPI_10_MASTER = 4,   /// CPHA = 1 | CPOL = 0 | MATER MODE
+    SPI_11_MASTER = 6,   /// CPHA = 1 | CPOL = 1 | MATER MODE
+    SPI_00_SLAVE = 1,    /// CPHA = 0 | CPOL = 0 | SLAVE MODE
+    SPI_01_SLAVE = 3,    /// CPHA = 0 | CPOL = 1 | SLAVE MODE
+    SPI_10_SLAVE = 5,    /// CPHA = 1 | CPOL = 0 | SLAVE MODE
+    SPI_11_SLAVE = 7,    /// CPHA = 1 | CPOL = 1 | SLAVE MODE
     SPI_PRESET_CONFIG_COUNT
 };
 
 
+
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
+
+/// @brief Set CLK base on CPOL with IDLE/ACTIVE state
+/// @param dev Spi descriptor
+/// @param state LOW : idle state | HIGH : active state 
+static inline  __attribute__((always_inline)) 
+void spiSetCLKState(spiDev_t * dev, enum SPI_CLK_STATE state){
+    if(__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW){
+        /// Idle state is low
+        if (state == SPICLK_IDLE)
+            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
+        else
+            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
+    }else{
+        /// Idle state is high
+        if (state == SPICLK_IDLE)
+            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
+        else
+            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH   
+    }
+}
+
+static inline  __attribute__((always_inline)) 
+void spiSetCLK(spiDev_t * dev, uint8_t level){
+    if (level == LOW)
+        GPIO.out_w1tc = __mask32(dev->clk); ///LOW
+    else
+        GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
+}
+
+static inline  __attribute__((always_inline)) 
+void spiSetCS(spiDev_t * dev, uint8_t level){
+    if (level == LOW)
+        GPIO.out_w1tc = __mask32(dev->cs); ///LOW
+    else
+        GPIO.out_w1ts = __mask32(dev->cs); ///HIGH
+}
+
+static inline  __attribute__((always_inline)) 
+void spiSetMOSI(spiDev_t * dev, uint8_t level){
+    if (level == LOW)
+        GPIO.out_w1tc = __mask32(dev->mosi); ///LOW
+    else
+        GPIO.out_w1ts = __mask32(dev->mosi); ///HIGH
+}
 
 /// @brief Shift the entire byte array left by 1 bit, insert newLSB at the very end.
 /// @param arr   Pointer to the byte array
@@ -123,71 +176,45 @@ def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte);
 
 static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
-
     uint8_t *txBuf = (uint8_t*)dev->txdPtr;
     uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
 
-    if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
-        /// CPHA = 0
-        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
-            /// Rising edge: sample MOSI
-            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
-                rxBuf[dev->rxdByteInd] <<= 1;
-                rxBuf[dev->rxdByteInd] |= bit;
-                dev->rxdBitInd++;
+    bool cpha = __hasFlagBitSet(dev->conf, SPI_CPHA);
+    bool cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
+    bool clkLevel = __is_positive(GPIO.in & __mask32(dev->clk));
 
-                if (dev->rxdBitInd >= 8) {
-                    dev->rxdBitInd = 0;
-                    dev->rxdByteInd++;
-                }
+    bool isRising = cpol ? !clkLevel : clkLevel;
+    bool isSampleEdge = (cpha == 0) ? isRising : !isRising;
+    bool isShiftEdge  = !isSampleEdge;
+
+    if (isSampleEdge) {
+        // Sample MOSI
+        if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
+            uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
+            rxBuf[dev->rxdByteInd] = (rxBuf[dev->rxdByteInd] << 1) | bit;
+            __spiLog1("MOSI: %d | bitID: %d | byteID: %d | Buff: 0x%02x", bit, dev->rxdBitInd, dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
+            if (++dev->rxdBitInd >= 8) {
+                dev->rxdBitInd = 0;
+                dev->rxdByteInd++;
             }
         } else {
-            /// Falling edge: export MISO
-            if (txBuf && dev->txdByteInd < dev->txdSize) {
-                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
-                if (outBit)
-                    GPIO.out_w1ts = __mask32(dev->miso);
-                else
-                    GPIO.out_w1tc = __mask32(dev->miso);
-
-                dev->txdBitInd++;
-                if (dev->txdBitInd >= 8) {
-                    dev->txdBitInd = 0;
-                    dev->txdByteInd++;
-                }
-            }
+            __spiLog1("RX buffer err!");
         }
-    } else {
-        /// CPHA = 1
-        if (__is_positive(GPIO.in & __mask32(dev->clk))) {
-            /// Rising edge: export MISO
-            if (txBuf && dev->txdByteInd < dev->txdSize) {
-                uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
-                if (outBit)
-                    GPIO.out_w1ts = __mask32(dev->miso);
-                else
-                    GPIO.out_w1tc = __mask32(dev->miso);
+    } else if (isShiftEdge) {
+        // Export MISO
+        if (txBuf && dev->txdByteInd < dev->txdSize) {
+            uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
+            if (outBit)
+                GPIO.out_w1ts = __mask32(dev->miso);
+            else
+                GPIO.out_w1tc = __mask32(dev->miso);
 
-                dev->txdBitInd++;
-                if (dev->txdBitInd >= 8) {
-                    dev->txdBitInd = 0;
-                    dev->txdByteInd++;
-                }
+            if (++dev->txdBitInd >= 8) {
+                dev->txdBitInd = 0;
+                dev->txdByteInd++;
             }
         } else {
-            /// Falling edge: sample MOSI
-            if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
-                rxBuf[dev->rxdByteInd] <<= 1;
-                rxBuf[dev->rxdByteInd] |= bit;
-                dev->rxdBitInd++;
-
-                if (dev->rxdBitInd >= 8) {
-                    dev->rxdBitInd = 0;
-                    dev->rxdByteInd++;
-                }
-            }
+            __spiLog1("TX buffer err!");
         }
     }
 }
@@ -196,25 +223,35 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
-        /// CS rising edge (ngắt giao dịch)
-
+        __spiLog1("CS rising edge");
+        /// CS rising edge — end of transaction
         gpio_intr_disable(dev->clk);
 
         /// Reset TX index
         dev->txdByteInd = 0;
         dev->txdBitInd  = 0;
-
     } else {
-        /// CS falling edge (bắt đầu giao dịch)
-
+        __spiLog1("CS falling edge");
+        /// CS falling edge — start of transaction
         gpio_intr_enable(dev->clk);
 
         /// Reset RX index
         dev->rxdByteInd = 0;
         dev->rxdBitInd  = 0;
+
+        /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
+        if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
+            if (__isnot_null(dev->txdPtr) && __is_positive(dev->txdSize)) {
+                uint8_t firstByte = ((uint8_t*)dev->txdPtr)[0];
+                if (firstByte & 0x80) {
+                    GPIO.out_w1ts = __mask32(dev->miso);
+                } else {
+                    GPIO.out_w1tc = __mask32(dev->miso);
+                }
+            }
+        }
     }
 }
-
 
 /// @brief Create new spiDev_t
 /// @param pDev the pointer point to the pointer that point the place which will store spiDev_t
@@ -238,6 +275,26 @@ def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,u
 /// @param dev A pointer to the place which is storing the spiDev_t
 /// @return Default return status
 def startupSPIDevice(spiDev_t * dev);
+
+/// @brief Get transmit buffer size (in bytes)
+/// @param dev Pointer to SPI device
+/// @return Transmit buffer size (>0) or error code (<=0)
+def spiGetTransmitSize(spiDev_t *dev);
+
+/// @brief Get receive buffer size (in bytes)
+/// @param dev Pointer to SPI device
+/// @return Receive buffer size (>0) or error code (<=0)
+def spiGetReceiveSize(spiDev_t *dev);
+
+/// @brief Reset transmit buffer index 
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @return Default return status
+def spiResetTransmitIndex(spiDev_t * dev);
+
+/// @brief Reset receive buffer index 
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @return Default return status
+def spiResetReceiveIndex(spiDev_t * dev);
 
 /// @brief Set SPI transmit buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
