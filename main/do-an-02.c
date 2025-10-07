@@ -69,7 +69,7 @@ void app_main(void){
     startupOLEDDevice(oled);
     drawLineText(oled, "Start up ...", 0xF00 | 0x00 );
 
-    vTaskDelay(100);
+    vTaskDelay(10);
     // __log("Enter test mode!");
     // drawLineText(oled, "Test mode", 0xF00 | 0x00 );
     // ledTest(NULL);
@@ -97,13 +97,16 @@ void app_main(void){
 
     uint8_t currentDataFrame = byteData;
     uint8_t receivedDataFrame = 0;
+
+    uint8_t rcvdDataFrame[5] = {1, 2, 3, 4, 5};
     
-    vTaskDelay(100);
+    vTaskDelay(10);
 
     setSendBackData(&currentDataFrame);
-    setReceiveByteBuff(&receivedDataFrame);
+    setReceiveByteBuff(rcvdDataFrame);
 
     while (systemStage != SYSTEM_STOPPED){
+        currentDataFrame = byteData;
 
         /// Display mode and dataframe
         switch (currentSystemMode){
@@ -122,11 +125,11 @@ void app_main(void){
         }
 
         /// Show received data if any
-        rcvd[2] = receivedDataFrame;
-        rcvd[3] = '\0';
-        rcvd[4] = '\0';
-        rcvd[5] = '\0';
-        rcvd[6] = '\0';
+        rcvd[2] = rcvdDataFrame[0];
+        rcvd[3] = rcvdDataFrame[1];
+        rcvd[4] = rcvdDataFrame[2];
+        rcvd[5] = rcvdDataFrame[3];
+        rcvd[6] = rcvdDataFrame[4];
         rcvd[7] = '\0';
 
         /// Show current sendback dataframe
@@ -137,7 +140,7 @@ void app_main(void){
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        vTaskDelay(1);
+        vTaskDelay(2);
     }
 
     __exit("app_main()");

@@ -171,7 +171,7 @@ def setReceiveByteBuff(uint8_t *byteData){
 
             spiDev_t * spi = (spiDev_t *) comObject;
 
-            ret = spiSetReceiveBuffer(spi, byteData, 1);
+            ret = spiSetReceiveBuffer(spi, byteData, 5);
             if(ret!=OKE) goto setReceiveByteBuff_ReturnERR;
 
         break;
@@ -375,7 +375,7 @@ def modeSwitch(){
                 ret = createSPIDevice(&spi);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
                 
-                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, 10, SPI_10_SLAVE);
+                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, 10, SPI_11_SLAVE);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
 
                 ret = startupSPIDevice(spi);

@@ -255,11 +255,11 @@ def startupSPIDevice(spiDev_t * dev){
             __spiLog1("CLK ISR attached to GPIO %d", dev->clk);
         }
 
-        if (__isnot_negative(dev->cs)) {
-            gpio_set_intr_type(dev->cs, GPIO_INTR_ANYEDGE);
-            gpio_isr_handler_add(dev->cs, spiHandleCSIsr, dev);
-            __spiLog1("CS ISR attached to GPIO %d", dev->cs);
-        }
+        // if (__isnot_negative(dev->cs)) {
+        //     gpio_set_intr_type(dev->cs, GPIO_INTR_ANYEDGE);
+        //     gpio_isr_handler_add(dev->cs, spiHandleCSIsr, dev);
+        //     __spiLog1("CS ISR attached to GPIO %d", dev->cs);
+        // }
     }
 
     __spiExit("startupSPIDevice() : %s", STR(OKE));
@@ -528,98 +528,8 @@ def spiStartTransaction(spiDev_t * dev) {
         }
     }
 
-    /// Main transmit loop
-    while (dev->txdByteInd < dev->txdSize) {
-        uint8_t *currByte = &txBuf[dev->txdByteInd];
-
-        while (dev->txdBitInd < 8) {
-            if (__hasFlagBitSet(dev->conf, SPI_CPHA) == LOW) {
-                /// CPHA = 0: prepare data before first edge, sample at first edge
-
-                /// Drive MOSI
-                if (*currByte & (0x80 >> dev->txdBitInd))
-                    GPIO.out_w1ts = __mask32(dev->mosi);
-                else
-                    GPIO.out_w1tc = __mask32(dev->mosi);
-
-                /// First edge (sample MISO)
-                if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
-                    GPIO.out_w1ts = __mask32(dev->clk);
-                else
-                    GPIO.out_w1tc = __mask32(dev->clk);
-
-                /// Sample MISO
-                if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                    rxBuf[dev->rxdByteInd] <<= 1;
-                    rxBuf[dev->rxdByteInd] |= uint8_tCast(GPIO.in & __mask32(dev->miso));
-                    dev->rxdBitInd++;
-                    if (dev->rxdBitInd == 8) {
-                        __spiLog1("RX byte[%d]=0x%02X", dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
-                        dev->rxdBitInd = 0;
-                        dev->rxdByteInd++;
-                    }
-                }
-
-                esp_rom_delay_us(500000 / dev->freq);
-
-                /// Second edge -> idle
-                if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
-                    GPIO.out_w1tc = __mask32(dev->clk);
-                else
-                    GPIO.out_w1ts = __mask32(dev->clk);
-
-                esp_rom_delay_us(500000 / dev->freq);
-
-            } else {
-                /// CPHA = 1: sample at second edge
-
-                /// First edge
-                if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
-                    GPIO.out_w1ts = __mask32(dev->clk);
-                else
-                    GPIO.out_w1tc = __mask32(dev->clk);
-
-                /// Drive MOSI
-                if (*currByte & (0x80 >> dev->txdBitInd))
-                    GPIO.out_w1ts = __mask32(dev->mosi);
-                else
-                    GPIO.out_w1tc = __mask32(dev->mosi);
-
-                esp_rom_delay_us(500000 / dev->freq);
-
-                /// Second edge (sample)
-                if (__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW)
-                    GPIO.out_w1tc = __mask32(dev->clk);
-                else
-                    GPIO.out_w1ts = __mask32(dev->clk);
-
-                /// Sample MISO
-                if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
-                    rxBuf[dev->rxdByteInd] <<= 1;
-                    rxBuf[dev->rxdByteInd] |= uint8_tCast(GPIO.in & __mask32(dev->miso));
-                    dev->rxdBitInd++;
-                    if (dev->rxdBitInd == 8) {
-                        __spiLog1("RX byte[%d]=0x%02X", dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
-                        dev->rxdBitInd = 0;
-                        dev->rxdByteInd++;
-                    }
-                }
-
-                esp_rom_delay_us(500000 / dev->freq);
-            }
-
-            dev->txdBitInd++;
-        }
-
-        /// TX byte done
-        __spiLog1("TX byte[%d]=0x%02X", dev->txdByteInd, *currByte);
-
-        dev->txdBitInd = 0;
-        dev->txdByteInd++;
-    }
-
     /// Reset CLK to idle
-    spiSetCLK2Idle();
+    spiSetCLKState(dev, SPICLK_IDLE);
 
     /// Pull CS up to stop transmission
     if (__isnot_negative(dev->cs)) GPIO.out_w1ts = __mask32(dev->cs);

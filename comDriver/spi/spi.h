@@ -13,7 +13,7 @@
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define SPI_LOG_LEVEL 4
+#define SPI_LOG_LEVEL 3
 
 #if SPI_LOG_LEVEL >= 1
     #define __spiErr(...)       __err( __VA_ARGS__ )
@@ -94,6 +94,7 @@ enum SPI_PRESET_CONFIG {
     SPI_PRESET_CONFIG_COUNT
 };
 
+#define CIRCLE_BUFF 1
 
 
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
@@ -112,9 +113,9 @@ void spiSetCLKState(spiDev_t * dev, enum SPI_CLK_STATE state){
     }else{
         /// Idle state is high
         if (state == SPICLK_IDLE)
-            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
+            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
         else
-            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH   
+            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
     }
 }
 
@@ -179,6 +180,8 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     uint8_t *txBuf = (uint8_t*)dev->txdPtr;
     uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
 
+    if(GPIO.in & __mask32(dev->cs)) return;
+
     bool cpha = __hasFlagBitSet(dev->conf, SPI_CPHA);
     bool cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
     bool clkLevel = __is_positive(GPIO.in & __mask32(dev->clk));
@@ -189,32 +192,43 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
 
     if (isSampleEdge) {
         // Sample MOSI
-        if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
+        if (rxBuf /*&& dev->rxdByteInd < dev->rxdSize*/) {
             uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
             rxBuf[dev->rxdByteInd] = (rxBuf[dev->rxdByteInd] << 1) | bit;
-            __spiLog1("MOSI: %d | bitID: %d | byteID: %d | Buff: 0x%02x", bit, dev->rxdBitInd, dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
+
+            ets_printf("> %d\n", bit);
+
             if (++dev->rxdBitInd >= 8) {
                 dev->rxdBitInd = 0;
-                dev->rxdByteInd++;
+                // dev->rxdByteInd++;
+                if(CIRCLE_BUFF) 
+                    dev->rxdByteInd = (dev->rxdByteInd+1)%(dev->rxdSize);
+                else 
+                    dev->rxdByteInd++;
             }
         } else {
-            __spiLog1("RX buffer err!");
+            // __spiLog1("RX buffer err!");
         }
     } else if (isShiftEdge) {
         // Export MISO
-        if (txBuf && dev->txdByteInd < dev->txdSize) {
+        if (txBuf /*&& dev->txdByteInd < dev->txdSize*/) {
             uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
             if (outBit)
                 GPIO.out_w1ts = __mask32(dev->miso);
             else
                 GPIO.out_w1tc = __mask32(dev->miso);
 
+            ets_printf("< %d\n", outBit);
+
             if (++dev->txdBitInd >= 8) {
                 dev->txdBitInd = 0;
-                dev->txdByteInd++;
+                if(CIRCLE_BUFF) 
+                    dev->txdByteInd = (dev->txdByteInd+1)%(dev->rxdSize);
+                else 
+                    dev->txdByteInd++;
             }
         } else {
-            __spiLog1("TX buffer err!");
+            // __spiLog1("TX buffer err!");
         }
     }
 }
@@ -225,7 +239,7 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
         __spiLog1("CS rising edge");
         /// CS rising edge — end of transaction
-        gpio_intr_disable(dev->clk);
+        // gpio_intr_disable(dev->clk);
 
         /// Reset TX index
         dev->txdByteInd = 0;
@@ -233,11 +247,13 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     } else {
         __spiLog1("CS falling edge");
         /// CS falling edge — start of transaction
-        gpio_intr_enable(dev->clk);
+        // gpio_intr_enable(dev->clk);
 
         /// Reset RX index
-        dev->rxdByteInd = 0;
-        dev->rxdBitInd  = 0;
+        // dev->rxdByteInd = 0;
+        // dev->rxdBitInd  = 0;
+        dev->txdByteInd = 0;
+        dev->txdBitInd  = 0;
 
         /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
         if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
