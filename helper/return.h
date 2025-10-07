@@ -46,4 +46,6 @@ enum DEFAULT_RETURN_STATUS {
     ERR_INIT_FAILED     = -16, /// Initialization failed
 };
 
+const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret);
+
 #endif

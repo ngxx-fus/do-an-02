@@ -137,7 +137,7 @@ void app_main(void){
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        // while(!checkNewData()) vTaskDelay(1);
+        vTaskDelay(1);
     }
 
     __exit("app_main()");

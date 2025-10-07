@@ -1,5 +1,6 @@
 #include "helper.h"
 #include "stdint.h"
+#include "return.h"
 
 int generateRandom(int seed_input) {
     // --- 1. Persistent state ---
@@ -46,4 +47,28 @@ int generateRandom(int seed_input) {
     // --- 8. Constrain result to [1, 9999] (avoid 0)
     int result = (int)(last_known_random_state % 10000);
     return result ? result : 1;
+}
+
+const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret) {
+    switch (ret) {
+        case OKE:                 return STR_OKE;
+        case ERR:                 return STR_ERR;
+        case ERR_NULL:            return STR_ERR_NULL;
+        case ERR_MALLOC_FAILED:   return STR_ERR_MALLOC_FAILED;
+        case ERR_TIMEOUT:         return STR_ERR_TIMEOUT;
+        case ERR_BUSY:            return STR_ERR_BUSY;
+        case ERR_INVALID_ARG:     return STR_ERR_INVALID_ARG;
+        case ERR_OVERFLOW:        return STR_ERR_OVERFLOW;
+        case ERR_UNDERFLOW:       return STR_ERR_UNDERFLOW;
+        case ERR_NOT_FOUND:       return STR_ERR_NOT_FOUND;
+        case ERR_ALREADY_EXISTS:  return STR_ERR_ALREADY_EXISTS;
+        case ERR_NOT_IMPLEMENTED: return STR_ERR_NOT_IMPLEMENTED;
+        case ERR_UNSUPPORTED:     return STR_ERR_UNSUPPORTED;
+        case ERR_IO:              return STR_ERR_IO;
+        case ERR_PERMISSION:      return STR_ERR_PERMISSION;
+        case ERR_CRC:             return STR_ERR_CRC;
+        case ERR_INIT_FAILED:     return STR_ERR_INIT_FAILED;
+        
+        default:                  return "UNKNOWN_RETURN_CODE";
+    }
 }
