@@ -88,10 +88,19 @@ enum ENUM_SYSTEM_MODE {
 extern void* comObject;
 
 /// @brief Contain 8-bit data frame 
-extern volatile uint8_t sendByteData;
+extern volatile uint8_t byteData;
 
-/// Random 8-bit char (printable)
-extern volatile uint8_t receivedByteData;
+extern volatile flag_t  byteDataControlFlag;
+
+extern portMUX_TYPE     byteDataControlMutex;
+
+enum BYTE_DATA_CTRL {
+    BYTEDATA_GEN_PLAYPAUSE = 0,         /// 0 - Play | 1 - Pause
+    BYTEDATA_GEN_NOW = 0,               /// Set 1 to gen now
+    BYTE_DATA_CTRL_NUM
+};
+
+#if ESP32_DEVICE_MODE == SENDER
 
 /// @brief Mutex for synchronizing access to the sendControlMutex.
 extern portMUX_TYPE     sendControlMutex;
@@ -107,4 +116,24 @@ enum SEND_CONTROL_FLAG {
     SEND_CONTROL_FLAG_NUM
 };
 
-#endif
+#endif  /// END SENDER MODE
+
+#if ESP32_DEVICE_MODE == RECEIVER
+
+/// @brief Received control flag
+extern volatile flag_t  rcvdControlFlag;
+
+/// @brief Mutex for synchronizing access to the rcvdControlFlag.
+extern portMUX_TYPE     rcvdControlMutex;
+
+/// @brief Enumeration defining SEND operation request types.
+enum RECEIVE_CONTROL_FLAG {
+    RCVCTRL_HAS_DATA       = 0,        /// 1: Has received a byte data frame
+    RCVCTRL_NEW_DATA       = 1,        /// 1: Assign new sendback data, reset buffer
+    RECEIVE_CONTROL_FLAG_NUM
+};
+
+#endif  /// END RECEIVER MODE
+
+
+#endif  /// END FILE

@@ -253,6 +253,80 @@ def startupSPIDevice(spiDev_t * dev){
     return OKE;
 }
 
+def spiGetTransmitSize(spiDev_t *dev) {
+    __spiEntry("spiGetTransmitSize(%p)", dev);
+
+    if (__is_null(dev)) {
+        __spiErr("dev = %p is invalid!", dev);
+        __spiExit("spiGetTransmitSize() : %s", STR(ERR_NULL));
+        return ERR_NULL;
+    }
+
+    if (__is_null(dev->txdPtr)) {
+        __spiErr("txdPtr is NULL, no transmit buffer assigned!");
+        __spiExit("spiGetTransmitSize() : %s", STR(ERR_NULL));
+        return 0;
+    }
+
+    __spiExit("spiGetTransmitSize() : %d", dev->txdSize);
+    return (def)dev->txdSize;
+}
+
+def spiGetReceiveSize(spiDev_t *dev) {
+    __spiEntry("spiGetReceiveSize(%p)", dev);
+
+    if (__is_null(dev)) {
+        __spiErr("dev = %p is invalid!", dev);
+        __spiExit("spiGetReceiveSize() : %s", STR(ERR_NULL));
+        return ERR_NULL;
+    }
+
+    if (__is_null(dev->rxdPtr)) {
+        __spiErr("rxdPtr is NULL, no receive buffer assigned!");
+        __spiExit("spiGetReceiveSize() : %s", STR(ERR_NULL));
+        return 0;
+    }
+
+    __spiExit("spiGetReceiveSize() : %d", dev->rxdSize);
+    return (def)dev->rxdSize;
+}
+
+def spiResetTransmitIndex(spiDev_t * dev){
+    __spiEntry("spiResetTransmitIndex(%p)", dev);
+    if(__is_null(dev)){
+        __spiErr("dev = %p is invalid!", dev);
+        goto spiResetTransmitIndex_ReturnERR_NULL;
+    }
+
+    dev->txdBitInd = 0;
+    dev->txdByteInd = 0;
+
+    __spiExit("spiResetTransmitIndex() : %s", STR(OKE));
+    return OKE;
+
+    spiResetTransmitIndex_ReturnERR_NULL:
+    __spiExit("spiResetTransmitIndex() : %s", STR(ERR_NULL));
+    return ERR_NULL;
+}
+
+def spiResetReceiveIndex(spiDev_t * dev){
+    __spiEntry("spiResetReceiveIndex(%p)", dev);
+    if(__is_null(dev)){
+        __spiErr("dev = %p is invalid!", dev);
+        goto spiResetReceiveIndex_ReturnERR_NULL;
+    }
+
+    dev->rxdBitInd = 0;
+    dev->rxdByteInd = 0;
+
+    __spiExit("spiResetReceiveIndex() : %s", STR(OKE));
+    return OKE;
+
+    spiResetReceiveIndex_ReturnERR_NULL:
+    __spiExit("spiResetReceiveIndex() : %s", STR(ERR_NULL));
+    return ERR_NULL;
+}
+
 def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     __spiEntry("spiSetTransmitBuffer(%p, %p, %d)", dev,txdPtr,size);
 

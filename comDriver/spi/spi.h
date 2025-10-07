@@ -196,24 +196,34 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
-        /// CS rising edge (ngắt giao dịch)
-
+        /// CS rising edge — end of transaction
         gpio_intr_disable(dev->clk);
 
         /// Reset TX index
         dev->txdByteInd = 0;
         dev->txdBitInd  = 0;
-
     } else {
-        /// CS falling edge (bắt đầu giao dịch)
-
+        /// CS falling edge — start of transaction
         gpio_intr_enable(dev->clk);
 
         /// Reset RX index
         dev->rxdByteInd = 0;
         dev->rxdBitInd  = 0;
+
+        /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
+        if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
+            if (__isnot_null(dev->txdPtr) && __is_positive(dev->txdSize)) {
+                uint8_t firstByte = ((uint8_t*)dev->txdPtr)[0];
+                if (firstByte & 0x80) {
+                    GPIO.out_w1ts = __mask32(dev->miso);
+                } else {
+                    GPIO.out_w1tc = __mask32(dev->miso);
+                }
+            }
+        }
     }
 }
+
 
 
 /// @brief Create new spiDev_t
@@ -238,6 +248,26 @@ def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,u
 /// @param dev A pointer to the place which is storing the spiDev_t
 /// @return Default return status
 def startupSPIDevice(spiDev_t * dev);
+
+/// @brief Get transmit buffer size (in bytes)
+/// @param dev Pointer to SPI device
+/// @return Transmit buffer size (>0) or error code (<=0)
+def spiGetTransmitSize(spiDev_t *dev);
+
+/// @brief Get receive buffer size (in bytes)
+/// @param dev Pointer to SPI device
+/// @return Receive buffer size (>0) or error code (<=0)
+def spiGetReceiveSize(spiDev_t *dev);
+
+/// @brief Reset transmit buffer index 
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @return Default return status
+def spiResetTransmitIndex(spiDev_t * dev);
+
+/// @brief Reset receive buffer index 
+/// @param dev A pointer to the place which is storing the spiDev_t
+/// @return Default return status
+def spiResetReceiveIndex(spiDev_t * dev);
 
 /// @brief Set SPI transmit buffer
 /// @param dev A pointer to the place which is storing the spiDev_t

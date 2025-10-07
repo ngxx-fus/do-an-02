@@ -189,24 +189,24 @@ def sendDataFrame(uint8_t byteData, uint8_t * rcvdByteData){
 
 /// @brief Random printable character
 /// @param pv As required from. Pls pass NULL ptr!
-void prepairNSendDataTask(void *pv){    
+void prepairByteDataTask(void *pv){    
     /// Wait for the initializing done
-    __log("[prepairNSendDataTask] Wait for the initializing have been done!");
+    __log("[prepairByteDataTask] Wait for the initializing have been done!");
     for( ; systemStage == SYSTEM_INIT; vTaskDelay(1));
 
-    __entry("prepairNSendDataTask(%p)", pv);
+    __entry("prepairByteDataTask(%p)", pv);
 
     while (systemStage != SYSTEM_STOPPED){
         if(__hasFlagBitSet(sendControlFlag, SENDCTRL_REPEAT_SEND)) {
             vTaskDelay(1);
         }else{
-            sendByteData = ((generateRandom(0)) % (126-32+1)) + 32;
-            // __log("[prepairNSendDataTask] Generated : %c", sendByteData);
+            byteData = ((generateRandom(0)) % (126-32+1)) + 32;
+            // __log("[prepairByteDataTask] Generated : %c", byteData);
             vTaskDelay(DATAFR_INTERVAL);
         }
     }
     
-    __exit("prepairNSendDataTask()");
+    __exit("prepairByteDataTask()");
 }
 
 /// MODE CONTROL TASK /////////////////////////////////////////////////////////////////////////////
@@ -249,7 +249,7 @@ void IRAM_ATTR changeModeButtonISR(void* pv) {
         // __log("[changeModeButtonISR] INPUT LEVEL: HIGH");
         lastPosEdgeTime = timeNow;
     } else {
-        __log("[changeModeButtonISR] INPUT LEVEL : LOW");
+        // __log("[changeModeButtonISR] INPUT LEVEL : LOW");
         
         /// Check for short press (e.g. < 500ms)
         // __log("[changeModeButtonISR] Time delta = %ld", timeNow - lastPosEdgeTime);

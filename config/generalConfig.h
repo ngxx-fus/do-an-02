@@ -77,7 +77,7 @@
 #define SENDER              0x0
 #define RECEIVER            0x1
 
-#define ESP32_DEVICE_MODE   SENDER
+#define ESP32_DEVICE_MODE   RECEIVER
 
 /// To config font, check fontUtils.c in fonts/
 /// Currently, the font is: TomThumb

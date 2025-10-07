@@ -1,10 +1,16 @@
+#include "../helper/general.h"
+
 #if ESP32_DEVICE_MODE == SENDER
+    #pragma message("ESP32_DEVICE_MODE: SENDER")
     #include "sender.h"
 #endif
+
 #if ESP32_DEVICE_MODE == RECEIVER
+    #pragma message("ESP32_DEVICE_MODE: RECEIVER")
     #include "receiver.h"
 #endif
 
+/// VARS //////////////////////////////////////////////////////////////////////////////////////////
 
 /// System Stage 
 volatile flag_t systemStage = SYSTEM_INIT;
@@ -23,12 +29,32 @@ portMUX_TYPE systemModeMutex = portMUX_INITIALIZER_UNLOCKED;
 void* comObject = NULL;
 
 /// Random 8-bit char (printable)
-volatile uint8_t sendByteData = '?';
+volatile uint8_t byteData = '?';
+/// Random byte data control flag
+volatile flag_t  byteDataControlFlag = 0;
+/// Random byte data flag mutex
+portMUX_TYPE     byteDataControlMutex = portMUX_INITIALIZER_UNLOCKED;
 
-/// Random 8-bit char (printable)
-volatile uint8_t receivedByteData = '?';
+#if ESP32_DEVICE_MODE == SENDER
 
-volatile flag_t  sendControlFlag = 0;
+    /// Random 8-bit char (printable)
+    volatile uint8_t sendByteData = '?';
+    /// Random 8-bit char (printable)
+    volatile uint8_t receivedByteData = '?';
+    volatile flag_t  sendControlFlag = 0;
+
+#endif
+
+#if ESP32_DEVICE_MODE == RECEIVER
+
+    /// Received data control flag
+    volatile flag_t  rcvdControlFlag = 0;
+    /// Received data control flag mutex
+    portMUX_TYPE     rcvdControlMutex = portMUX_INITIALIZER_UNLOCKED;
+
+#endif
+
+/// MAIN APP //////////////////////////////////////////////////////////////////////////////////////
 
 void app_main(void){
     __entry("app_main()");
@@ -50,9 +76,9 @@ void app_main(void){
     drawLineText(oled, "[+] oledTask()", 0xF00 | 0x00 );
     xTaskCreate(oledTask, "oledTask", 2048, oled, 7, NULL);
 
-    __log("[+] prepairNSendDataTask()");
-    drawLineText(oled, "[+] prepairNSendDataTask()", 0xF00 | 0x00 );
-    xTaskCreate(prepairNSendDataTask, "prepairNSendDataTask", 2048, NULL, 7, NULL);
+    __log("[+] prepairByteDataTask()");
+    drawLineText(oled, "[+] prepairByteDataTask()", 0xF00 | 0x00 );
+    xTaskCreate(prepairByteDataTask, "prepairByteDataTask", 2048, NULL, 7, NULL);
 
     __log("[+] modeControlTask()");
     drawLineText(oled, "[+] modeControlTask()", 0xF00 | 0x00 );
@@ -62,16 +88,18 @@ void app_main(void){
     systemStage = SYSTEM_RUNNING;
 
     char mode[] = /*2*/ "M: "  /*6*/ "1-WIRE" /*1*/;
-    char send[] = /*3*/ "> ?";
-    char rcvd[] = /*2*/ "< ERR";
+    char rcvd[] = /*8*/ "> EMPTY";
+    char send[] = /*8*/ "# ?";
 
     drawLineText(oled, "Running...", 0xF00 | 0x00 );
 
-    uint8_t currentDataFrame = sendByteData;
+    uint8_t currentDataFrame = byteData;
+    uint8_t receivedDataFrame = 0;
+
+    setSendBackData(&currentDataFrame);
+    setReceiveByteBuff(&receivedDataFrame);
 
     while (systemStage != SYSTEM_STOPPED){
-        /// Catch current sendByteData
-        currentDataFrame = sendByteData;
 
         /// Display mode and dataframe
         switch (currentSystemMode){
@@ -89,31 +117,40 @@ void app_main(void){
                 break;
         }
 
-        send[2] = currentDataFrame;
-        mode[9] = '\0';
-        send[3] = '\0';
-
-        drawLineText(oled, mode, __masks32(19) | 0xF00 | 0x00 );
-        drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x01 );
-
-        /// Send byte data frame
-        sendDataFrame(currentDataFrame, &receivedByteData);
-
-        /// Display data frame if success
-        if(receivedByteData >= 32 && receivedByteData < 126){
-            rcvd[2] = receivedByteData;
+        /// Show received data if any
+        if(checkNewData()){
+            rcvd[2] = receivedDataFrame;
             rcvd[3] = '\0';
             rcvd[4] = '\0';
             rcvd[5] = '\0';
+            rcvd[6] = '\0';
+            rcvd[7] = '\0';
+
+            /// Set new sendback dataframe
+            currentDataFrame = byteData;
+            
+            /// Re-assign sendbackdata receivedbuff
+            setSendBackData(&currentDataFrame);
+            setReceiveByteBuff(&receivedDataFrame);
+
         }else{
             rcvd[2] = 'E';
-            rcvd[3] = 'R';
-            rcvd[4] = 'R';
-            rcvd[5] = '\0';
+            rcvd[3] = 'M';
+            rcvd[4] = 'P';
+            rcvd[5] = 'T';
+            rcvd[6] = 'Y';
+            rcvd[7] = '\0';
         }
-        drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        vTaskDelay(DATAFR_INTERVAL);
+        /// Show current sendback dataframe
+        send[2] = currentDataFrame;
+        send[3] = '\0';
+
+        drawLineText(oled, mode, __masks32(19) | 0xF00 | 0x00 );
+        drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
+        drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
+
+        vTaskDelay(1);
     }
 
     __exit("app_main()");
