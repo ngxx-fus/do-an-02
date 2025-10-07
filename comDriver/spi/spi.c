@@ -175,6 +175,8 @@ def startupSPIDevice(spiDev_t * dev){
 
     if(__hasFlagBitClr(dev->conf, SPI_MODE)){
         /// -------- Master --------
+        __spiLog1("[startupSPIDevice] Config for MASTER mode");
+        
         uint64_t gpioMask = 0;
 
         if(__isnot_negative(dev->clk))  gpioMask |= __mask64(dev->clk);
@@ -203,6 +205,8 @@ def startupSPIDevice(spiDev_t * dev){
         gpio_config(&inPin);
     }else{
         /// -------- Slave --------
+        __spiLog1("[startupSPIDevice] Config for SLAVE mode");
+        
         uint64_t gpioMask = 0;
 
         if(__isnot_negative(dev->clk))  gpioMask |= __mask64(dev->clk);

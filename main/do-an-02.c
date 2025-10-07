@@ -67,10 +67,12 @@ void app_main(void){
     createOLEDDevice(&oled);
     configOLEDDevice(oled, OLED_SCL, OLED_SDA, I2C_INFINITY_MODE);
     startupOLEDDevice(oled);
-    
-    __log("Enter test mode!");
-    drawLineText(oled, "Test mode", 0xF00 | 0x00 );
-    ledTest(NULL);
+    drawLineText(oled, "Start up ...", 0xF00 | 0x00 );
+
+    vTaskDelay(100);
+    // __log("Enter test mode!");
+    // drawLineText(oled, "Test mode", 0xF00 | 0x00 );
+    // ledTest(NULL);
 
     __log("[+] oledTask()");
     drawLineText(oled, "[+] oledTask()", 0xF00 | 0x00 );
@@ -98,6 +100,8 @@ void app_main(void){
 
     setSendBackData(&currentDataFrame);
     setReceiveByteBuff(&receivedDataFrame);
+
+    vTaskDelay(100);
 
     while (systemStage != SYSTEM_STOPPED){
 
@@ -150,7 +154,7 @@ void app_main(void){
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        vTaskDelay(1);
+        while(!checkNewData()) vTaskDelay(1);
     }
 
     __exit("app_main()");

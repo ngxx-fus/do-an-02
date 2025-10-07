@@ -13,7 +13,7 @@
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define SPI_LOG_LEVEL 3
+#define SPI_LOG_LEVEL 4
 
 #if SPI_LOG_LEVEL >= 1
     #define __spiErr(...)       __err( __VA_ARGS__ )
