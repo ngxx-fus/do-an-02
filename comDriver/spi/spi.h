@@ -75,14 +75,14 @@ enum SPI_BIT_ORDER_CONFIG {
 
 /// @brief SPI configuration parameters
 enum SPI_PRESET_CONFIG {
-    SPI_00_MASTER = 0,   /// MATER MODE | CPHA = 0 | CPOL = 0
-    SPI_01_MASTER = 1,   /// MATER MODE | CPHA = 0 | CPOL = 1
-    SPI_10_MASTER = 2,   /// MATER MODE | CPHA = 1 | CPOL = 0
-    SPI_11_MASTER = 3,   /// MATER MODE | CPHA = 1 | CPOL = 1
-    SPI_00_SLAVE = 4,    /// SLAVE MODE | CPHA = 0 | CPOL = 0
-    SPI_01_SLAVE = 5,    /// SLAVE MODE | CPHA = 0 | CPOL = 1
-    SPI_10_SLAVE = 6,    /// SLAVE MODE | CPHA = 1 | CPOL = 0
-    SPI_11_SLAVE = 7,    /// SLAVE MODE | CPHA = 1 | CPOL = 1
+    SPI_00_MASTER = 0,   /// CPHA = 0 | CPOL = 0 | MATER MODE
+    SPI_01_MASTER = 2,   /// CPHA = 0 | CPOL = 1 | MATER MODE
+    SPI_10_MASTER = 4,   /// CPHA = 1 | CPOL = 0 | MATER MODE
+    SPI_11_MASTER = 6,   /// CPHA = 1 | CPOL = 1 | MATER MODE
+    SPI_00_SLAVE = 1,    /// CPHA = 0 | CPOL = 0 | SLAVE MODE
+    SPI_01_SLAVE = 3,    /// CPHA = 0 | CPOL = 1 | SLAVE MODE
+    SPI_10_SLAVE = 5,    /// CPHA = 1 | CPOL = 0 | SLAVE MODE
+    SPI_11_SLAVE = 7,    /// CPHA = 1 | CPOL = 1 | SLAVE MODE
     SPI_PRESET_CONFIG_COUNT
 };
 
@@ -137,10 +137,14 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
                 rxBuf[dev->rxdByteInd] |= bit;
                 dev->rxdBitInd++;
 
+                __spiLog1("MOSI [%d|%d] [0x%02x]",  dev->rxdByteInd, dev->rxdBitInd, rxBuf[dev->rxdByteInd]);
+                
                 if (dev->rxdBitInd >= 8) {
                     dev->rxdBitInd = 0;
                     dev->rxdByteInd++;
                 }
+            }else{
+                __spiLog1("Buffer err!");
             }
         } else {
             /// Falling edge: export MISO
@@ -156,6 +160,8 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
                     dev->txdBitInd = 0;
                     dev->txdByteInd++;
                 }
+            }else{
+                __spiLog1("Buffer err!");
             }
         }
     } else {
@@ -174,6 +180,8 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
                     dev->txdBitInd = 0;
                     dev->txdByteInd++;
                 }
+            }else{
+                __spiLog1("Buffer err!");
             }
         } else {
             /// Falling edge: sample MOSI
@@ -183,10 +191,14 @@ static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
                 rxBuf[dev->rxdByteInd] |= bit;
                 dev->rxdBitInd++;
 
+                __spiLog1("MOSI [%d|%d] [0x%02x]",  dev->rxdByteInd, dev->rxdBitInd, rxBuf[dev->rxdByteInd]);
+
                 if (dev->rxdBitInd >= 8) {
                     dev->rxdBitInd = 0;
                     dev->rxdByteInd++;
                 }
+            }else{
+                __spiLog1("Buffer err!");
             }
         }
     }
@@ -196,6 +208,7 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
+        __spiLog1("CS rising edge");
         /// CS rising edge — end of transaction
         gpio_intr_disable(dev->clk);
 
@@ -203,6 +216,7 @@ static void IRAM_ATTR spiHandleCSIsr(void* pv) {
         dev->txdByteInd = 0;
         dev->txdBitInd  = 0;
     } else {
+        __spiLog1("CS falling edge");
         /// CS falling edge — start of transaction
         gpio_intr_enable(dev->clk);
 

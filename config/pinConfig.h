@@ -28,8 +28,8 @@ typedef int32_t pin_t;
 
     #define PIN0    ((pin_t)4)
     #define PIN1    ((pin_t)16)
-    #define PIN3    ((pin_t)5)
-    #define PIN2    ((pin_t)17)
+    #define PIN2    ((pin_t)5)
+    #define PIN3    ((pin_t)17)
 
     #define BTN0    ((pin_t)14)
 

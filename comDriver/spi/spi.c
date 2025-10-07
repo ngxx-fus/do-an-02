@@ -235,21 +235,30 @@ def startupSPIDevice(spiDev_t * dev){
         };
         gpio_config(&outPin);
 
-        // Install ISR service if not installed
+        // Try to install ISR service (safe even if already installed)
         esp_err_t r = gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-        if (r != ESP_OK && r != ESP_ERR_INVALID_STATE) {
-            __spiErr("gpio_install_isr_service() : %d", r);
+
+        if (r == ESP_ERR_INVALID_STATE) {
+            // Already installed, just log info and continue
+            __spiLog1("gpio_install_isr_service(): already installed, continue...");
+        } else if (r != ESP_OK) {
+            // Real error -> log and abort
+            __spiErr("gpio_install_isr_service() failed: %d", r);
             __spiExit("startupSPIDevice() : %s", STR(ERR));
             return ERR;
         }
-        
-        if(__isnot_negative(dev->clk)){
+
+        // Attach ISR handlers safely
+        if (__isnot_negative(dev->clk)) {
             gpio_set_intr_type(dev->clk, GPIO_INTR_ANYEDGE);
             gpio_isr_handler_add(dev->clk, spiHandleCLKIsr, dev);
+            __spiLog1("CLK ISR attached to GPIO %d", dev->clk);
         }
-        if(__isnot_negative(dev->cs)){
+
+        if (__isnot_negative(dev->cs)) {
             gpio_set_intr_type(dev->cs, GPIO_INTR_ANYEDGE);
             gpio_isr_handler_add(dev->cs, spiHandleCSIsr, dev);
+            __spiLog1("CS ISR attached to GPIO %d", dev->cs);
         }
     }
 

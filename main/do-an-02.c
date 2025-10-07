@@ -97,11 +97,11 @@ void app_main(void){
 
     uint8_t currentDataFrame = byteData;
     uint8_t receivedDataFrame = 0;
+    
+    vTaskDelay(100);
 
     setSendBackData(&currentDataFrame);
     setReceiveByteBuff(&receivedDataFrame);
-
-    vTaskDelay(100);
 
     while (systemStage != SYSTEM_STOPPED){
 
@@ -122,29 +122,12 @@ void app_main(void){
         }
 
         /// Show received data if any
-        if(checkNewData()){
-            rcvd[2] = receivedDataFrame;
-            rcvd[3] = '\0';
-            rcvd[4] = '\0';
-            rcvd[5] = '\0';
-            rcvd[6] = '\0';
-            rcvd[7] = '\0';
-
-            /// Set new sendback dataframe
-            currentDataFrame = byteData;
-            
-            /// Re-assign sendbackdata receivedbuff
-            setSendBackData(&currentDataFrame);
-            setReceiveByteBuff(&receivedDataFrame);
-
-        }else{
-            rcvd[2] = 'E';
-            rcvd[3] = 'M';
-            rcvd[4] = 'P';
-            rcvd[5] = 'T';
-            rcvd[6] = 'Y';
-            rcvd[7] = '\0';
-        }
+        rcvd[2] = receivedDataFrame;
+        rcvd[3] = '\0';
+        rcvd[4] = '\0';
+        rcvd[5] = '\0';
+        rcvd[6] = '\0';
+        rcvd[7] = '\0';
 
         /// Show current sendback dataframe
         send[2] = currentDataFrame;
@@ -154,7 +137,7 @@ void app_main(void){
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        while(!checkNewData()) vTaskDelay(1);
+        // while(!checkNewData()) vTaskDelay(1);
     }
 
     __exit("app_main()");
