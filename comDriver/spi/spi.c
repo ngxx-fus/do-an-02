@@ -2,6 +2,8 @@
 
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
 
+#define UINT8_ARRAY(pv, index) (((uint8_t*)(pv))[index])
+
 /// @brief Shift the entire byte array left by 1 bit, insert newLSB at the very end.
 /// @param arr   Pointer to the byte array
 /// @param size  Number of bytes in the array
@@ -82,7 +84,8 @@ def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte) {
 /// @param size    Number of bytes in the array
 /// @param newByte The new byte to insert at the beginning
 /// @return Default return status
- def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
+
+def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
     if (__is_null(arr)) {
         __spiErr("[shiftByteRight] arr = %p is invalid!", arr);
         return ERR;
@@ -98,6 +101,175 @@ def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte) {
     arr[0] = newByte;
 
     return OKE;
+}
+
+inline 
+void spiResetTBuff(spiDev_t *dev){
+    dev->tBuffIndex = 0;
+    dev->tBuffMask  = 0x80;
+    __setFlagBit(dev->stat, SPISTAT_TBUFF_FULL);
+    __clearFlagBit(dev->stat, SPISTAT_TBUFF_EMPTY);
+}
+
+inline 
+void spiResetRBuff(spiDev_t *dev){
+    dev->rBuffIndex = 0;
+    dev->rBuffMask  = 0x80;
+    memset(dev->rBuff, 0, dev->rBuffSize);
+    __setFlagBit(dev->stat, SPISTAT_RBUFF_EMPTY);
+    __clearFlagBit(dev->stat, SPISTAT_RBUFF_FULL);
+}
+
+inline 
+def spiTransmitBuffGetNextBit(spiDev_t * dev, uint8_t * outBit){
+    def ret = OKE;    
+    /// NULL check
+    if(__is_null(dev->tBuff)){
+        ret = ERR_NULL; goto returnERR;
+    }
+    /// Size check
+    if(__isnot_positive(dev->tBuffSize)){
+        ret = ERR_INVALID_ARG; goto returnERR;
+    }
+    /// Check empty
+    if(__hasFlagBitSet(dev->stat, SPISTAT_TBUFF_EMPTY)) {
+        (*outBit) = 0;
+        ret = ERR_UNDERFLOW; goto returnERR;
+    }else{
+        __clearFlagBit(dev->stat, SPISTAT_TBUFF_FULL);
+    }
+    /// Get transmit bit, then shift right tBuffMask
+    (*outBit) = boolCast(UINT8_ARRAY(dev->tBuff, dev->tBuffIndex) & (dev->tBuffMask));
+    /// Move to next bit
+    if ( (dev->tBuffMask) == 0x01 ){
+        if( dev->tBuffIndex+1 < dev->tBuffSize){
+            ++ (dev->tBuffIndex) ;
+        }else{
+            dev->tBuffIndex = 0;
+            __setFlagBit(dev->stat, SPISTAT_TBUFF_EMPTY);
+        }
+        (dev->tBuffMask) = 0x80;
+    }else{
+        (dev->tBuffMask) >>= 1;
+    }
+    return OKE;
+    returnERR:
+        // __spiErr("[spiTransmitBuffGetNextBit] %s", getDefRetStat_Str(ret));
+        return ret;
+}
+
+inline 
+def spiReceiveBuffPushBit(spiDev_t * dev, uint8_t inBit){
+    def ret = OKE;    
+    /// NULL check
+    if(__is_null(dev->rBuff)){
+        ret = ERR_NULL; goto returnERR;
+    }
+    /// Size check
+    if(__isnot_positive(dev->rBuffSize)){
+        ret = ERR_INVALID_ARG; goto returnERR;
+    }
+    /// Check full
+    if(__hasFlagBitSet(dev->stat, SPISTAT_RBUFF_FULL)) {
+        ret = ERR_UNDERFLOW; goto returnERR;
+    }else{
+        __clearFlagBit(dev->stat, SPISTAT_RBUFF_EMPTY);
+    }
+    /// Push received bit
+    if(inBit){
+        UINT8_ARRAY(dev->rBuff, dev->rBuffIndex) |= dev->rBuffMask;
+    }else{
+        UINT8_ARRAY(dev->rBuff, dev->rBuffIndex) &= (~(dev->rBuffMask));
+    }
+    if( (dev->rBuffMask) == 0x1){
+        if( dev->rBuffIndex+1 < dev->rBuffSize){
+            ++ (dev->rBuffIndex) ;
+        }else{
+            dev->rBuffIndex = 0;
+            __setFlagBit(dev->stat, SPISTAT_RBUFF_FULL);
+        }
+        (dev->rBuffMask) = 0x80;
+    }else{
+        (dev->rBuffMask) >>= 1;
+    }
+    return OKE;
+    returnERR:
+        // __spiErr("[spiReceiveBuffPushBit] %s", getDefRetStat_Str(ret));
+        return ret;
+}
+
+/// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
+
+static 
+void IRAM_ATTR spiHandleCLKIsr(void* pv) {
+    spiDev_t *dev = (spiDev_t*) pv;
+
+    uint8_t cpha = __hasFlagBitSet(dev->conf, SPI_CPHA);
+    uint8_t cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
+    uint8_t clkLevel = __is_positive(GPIO.in & __mask32(dev->clk));
+
+    uint8_t isRising = cpol ? !clkLevel : clkLevel;
+    uint8_t isSampleEdge = (cpha == 0) ? isRising : !isRising;
+    uint8_t isShiftEdge  = !isSampleEdge;
+
+    if (isSampleEdge) {
+        // Sample MOSI
+        if (rxBuf && dev->rxdByteInd < dev->rxdSize) {
+            uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
+            rxBuf[dev->rxdByteInd] = (rxBuf[dev->rxdByteInd] << 1) | bit;
+            __spiLog1("MOSI: %d | bitID: %d | byteID: %d | Buff: 0x%02x", bit, dev->rxdBitInd, dev->rxdByteInd, rxBuf[dev->rxdByteInd]);
+            if (++dev->rxdBitInd >= 8) {
+                dev->rxdBitInd = 0;
+                dev->rxdByteInd++;
+            }
+        } else {
+            __spiLog1("RX buffer err!");
+        }
+    } else if (isShiftEdge) {
+        // Export MISO
+        if (txBuf && dev->txdByteInd < dev->txdSize) {
+            uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
+            if (outBit)
+                GPIO.out_w1ts = __mask32(dev->miso);
+            else
+                GPIO.out_w1tc = __mask32(dev->miso);
+
+            if (++dev->txdBitInd >= 8) {
+                dev->txdBitInd = 0;
+                dev->txdByteInd++;
+            }
+        } else {
+            __spiLog1("TX buffer err!");
+        }
+    }
+}
+
+static 
+void IRAM_ATTR spiHandleCSIsr(void* pv) {
+    spiDev_t *dev = (spiDev_t*) pv;
+
+    if (__is_positive(GPIO.in & __mask32(dev->cs))) {
+        __spiLog1("CS rising edge");
+        /// CS rising edge — end of transaction
+        gpio_intr_disable(dev->clk);
+        
+    } else {
+        __spiLog1("CS falling edge");
+        /// CS falling edge — start of transaction
+        gpio_intr_enable(dev->clk);
+
+
+        /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
+        if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
+            if (__isnot_null(dev->tBuff) && __is_positive(dev->tBuffSize)) {
+                if (UINT8_ARRAY(dev->tBuff, 0) & 0x80) {
+                    GPIO.out_w1ts = __mask32(dev->miso);
+                } else {
+                    GPIO.out_w1tc = __mask32(dev->miso);
+                }
+            }
+        }
+    }
 }
 
 /// SPI ///////////////////////////////////////////////////////////////////////////////////////////
@@ -147,15 +319,15 @@ def configSPIDevice(spiDev_t * dev, pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,
 
     /// Clear all ptr buffer!
 
-    dev->txdPtr = NULL;
-    dev->txdSize= 0;
-    dev->rxdPtr = NULL;
-    dev->rxdSize= 0;
+    dev->tBuff = NULL;
+    dev->tBuffSize = 0;
+    spiResetTBuff(dev);
 
-    dev->txdBitInd = 0;
-    dev->txdByteInd = 0;
-    dev->rxdBitInd = 0;
-    dev->rxdByteInd = 0;
+    dev->rBuff = NULL;
+    dev->rBuffSize = 0;
+    spiResetRBuff(dev);
+
+    dev->stat = __masks32(0, 1, 2, 3);
 
     __spiExit("configSPIDevice() : %s", STR(OKE));
     return OKE;
@@ -266,80 +438,6 @@ def startupSPIDevice(spiDev_t * dev){
     return OKE;
 }
 
-def spiGetTransmitSize(spiDev_t *dev) {
-    __spiEntry("spiGetTransmitSize(%p)", dev);
-
-    if (__is_null(dev)) {
-        __spiErr("dev = %p is invalid!", dev);
-        __spiExit("spiGetTransmitSize() : %s", STR(ERR_NULL));
-        return ERR_NULL;
-    }
-
-    if (__is_null(dev->txdPtr)) {
-        __spiErr("txdPtr is NULL, no transmit buffer assigned!");
-        __spiExit("spiGetTransmitSize() : %s", STR(ERR_NULL));
-        return 0;
-    }
-
-    __spiExit("spiGetTransmitSize() : %d", dev->txdSize);
-    return (def)dev->txdSize;
-}
-
-def spiGetReceiveSize(spiDev_t *dev) {
-    __spiEntry("spiGetReceiveSize(%p)", dev);
-
-    if (__is_null(dev)) {
-        __spiErr("dev = %p is invalid!", dev);
-        __spiExit("spiGetReceiveSize() : %s", STR(ERR_NULL));
-        return ERR_NULL;
-    }
-
-    if (__is_null(dev->rxdPtr)) {
-        __spiErr("rxdPtr is NULL, no receive buffer assigned!");
-        __spiExit("spiGetReceiveSize() : %s", STR(ERR_NULL));
-        return 0;
-    }
-
-    __spiExit("spiGetReceiveSize() : %d", dev->rxdSize);
-    return (def)dev->rxdSize;
-}
-
-def spiResetTransmitIndex(spiDev_t * dev){
-    __spiEntry("spiResetTransmitIndex(%p)", dev);
-    if(__is_null(dev)){
-        __spiErr("dev = %p is invalid!", dev);
-        goto spiResetTransmitIndex_ReturnERR_NULL;
-    }
-
-    dev->txdBitInd = 0;
-    dev->txdByteInd = 0;
-
-    __spiExit("spiResetTransmitIndex() : %s", STR(OKE));
-    return OKE;
-
-    spiResetTransmitIndex_ReturnERR_NULL:
-    __spiExit("spiResetTransmitIndex() : %s", STR(ERR_NULL));
-    return ERR_NULL;
-}
-
-def spiResetReceiveIndex(spiDev_t * dev){
-    __spiEntry("spiResetReceiveIndex(%p)", dev);
-    if(__is_null(dev)){
-        __spiErr("dev = %p is invalid!", dev);
-        goto spiResetReceiveIndex_ReturnERR_NULL;
-    }
-
-    dev->rxdBitInd = 0;
-    dev->rxdByteInd = 0;
-
-    __spiExit("spiResetReceiveIndex() : %s", STR(OKE));
-    return OKE;
-
-    spiResetReceiveIndex_ReturnERR_NULL:
-    __spiExit("spiResetReceiveIndex() : %s", STR(ERR_NULL));
-    return ERR_NULL;
-}
-
 def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
     __spiEntry("spiSetTransmitBuffer(%p, %p, %d)", dev,txdPtr,size);
 
@@ -358,23 +456,22 @@ def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size){
         goto spiSetTransmitBuffer_ReturnERR_NULL;
     }
 
-    dev->txdPtr = txdPtr;
-    dev->txdSize = size;
-    dev->txdBitInd = 0;
-    dev->txdByteInd = 0;
+    dev->tBuff      = txdPtr;
+    dev->tBuffSize  = size;
 
+    spiResetTBuff(dev);
+
+    if(__hasFlagBitSet(dev->conf, SPI_CPHA) == LOW){
+        if(__hasFlagBitSet(dev->conf, SPI_MODE) == SPI_MASTER)
+            spiSetMOSI(dev, UINT8_ARRAY(dev->tBuff, dev->tBuffIndex) & 0x80);
+        else
+            spiSetMISO_SlaveMode(dev, UINT8_ARRAY(dev->tBuff, dev->tBuffIndex) & 0x80);
+    }
 
     __spiExit("spiSetTransmitBuffer() : %s", OKE);
     return OKE;
 
     spiSetTransmitBuffer_ReturnERR_NULL:
-
-    /// Reset txdPtr and txdSize
-    dev->txdPtr = NULL;
-    dev->txdSize = 0;
-    dev->txdBitInd = 0;
-    dev->txdByteInd = 0;
-
     __spiExit("spiSetTransmitBuffer() : %s", ERR_NULL);
     return ERR_NULL;
 }
@@ -397,29 +494,19 @@ def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
         goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
-    dev->rxdPtr = rxdPtr;
-    dev->rxdSize = size;
-    dev->rxdBitInd = 0;
-    dev->rxdByteInd = 0;
+    dev->rBuff      = rxdPtr;
+    dev->rBuffSize  = size;
+
+    spiResetRBuff(dev);
 
     __spiExit("spiSetReceiveBuffer() : %s", STR(OKE));
     return OKE;
 
     spiSetReceiveBuffer_ReturnERR_NULL:
-
-    /// Reset rxdPtr and rxdSize
-    dev->rxdPtr = NULL;
-    dev->rxdSize = 0;
-    dev->rxdBitInd = 0;
-    dev->rxdByteInd = 0;
-
     __spiExit("spiSetReceiveBuffer() : %s", STR(ERR_NULL));
     return ERR_NULL;
 }
 
-/// @brief Start an SPI transaction (master mode only)
-/// @param dev Pointer to SPI device configuration (spiDev_t)
-/// @return Number of received bytes (>0) or error code (<=0)
 def spiStartTransaction(spiDev_t * dev) {
     __spiEntry("spiStartTransaction(%p)", dev);
     
@@ -428,12 +515,11 @@ def spiStartTransaction(spiDev_t * dev) {
     /// NULL check
     if (__is_null(dev)) {
         __spiErr("dev is null!");
-        __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ERR_NULL));
         ret = ERR_NULL; goto spiStartTransaction_ReturnERR1; 
     }
     /// Safety checks
-    if (__isnot_positive(dev->txdSize) || __is_null(dev->txdPtr)) {
-        __spiErr("tx buffer invalid (ptr=%p size=%d)", dev->txdPtr, dev->txdSize);
+    if (__isnot_positive(dev->tBuffSize) || __is_null(dev->tBuff)) {
+        __spiErr("tx buffer invalid (ptr=%p size=%d)", dev->tBuff, dev->tBuffSize);
         ret = ERR_INVALID_ARG; goto spiStartTransaction_ReturnERR1;
     }
     /// Check mode: only master supported
@@ -442,89 +528,69 @@ def spiStartTransaction(spiDev_t * dev) {
         ret = ERR_INVALID_ARG; goto spiStartTransaction_ReturnERR1;
     }
 
-    uint8_t *txBuf = (uint8_t*)dev->txdPtr;
-    uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
-    uint8_t cpha = __hasFlagBitSet(dev->conf, SPI_CPHA);
-    uint8_t cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
-    uint8_t ableToReceive = __isnot_null(dev->rxdPtr) && __is_positive(dev->rxdSize);
+    uint8_t *txBuf = (uint8_t*)dev->tBuff;
+    uint8_t *rxBuf = (uint8_t*)dev->rBuff;
+    uint8_t ableToReceive = __isnot_null(dev->rBuff) && 
+                            __is_positive(dev->rBuffSize) &&
+                            __hasFlagBitClr(dev->stat, SPISTAT_RBUFF_FULL);
+    uint8_t currTByte = 0, currTBit; 
 
     vPortEnterCritical(&(dev->mutex));
 
-    if (ableToReceive) {
-        /// Clear RX buffer if provided
-        memset(dev->rxdPtr, 0, dev->rxdSize);
-        /// Reset index counters
-        dev->rxdByteInd = 0;
-        dev->rxdBitInd  = 0;
-    }
+    if (ableToReceive) spiResetRBuff(dev);
 
     /// Reset CLK back to IDLE state
     spiSetCLKState(dev, SPICLK_IDLE);
     /// Pull CS down to start transmission
     spiSetCS(dev, LOW);
 
-    if(cpha == LOW){
-        /// Main transmit loop
-        while (dev->txdByteInd < dev->txdSize){
-            uint8_t *currByte = &txBuf[dev->txdByteInd];
-            /// Export MSB bit data 
-            spiSetMOSI(dev, txBuf[dev->txdByteInd] & 0x80);
-            /// Byte transmit loop
-            for(uint8_t mask = 0x80; mask ; mask >>= 1){
-                    /// Make 1st edge CLK
-                    spiSetCLKState(dev, SPICLK_ACTIVE);
-                    /// Sample at 1st edge on MISO
-                    if(ableToReceive) {
-                        rxBuf[dev->txdByteInd] = (rxBuf[dev->txdByteInd] << 1) | boolCast(GPIO.in & __mask32(dev->miso));
-                        dev->txdBitInd ++;
-    
-                        if(dev->txdBitInd >= 8){
-                            dev->txdBitInd = 0;
-                            dev->txdByteInd ++;
-                        }
-                    }
-                    /// Delay for a half of CLK period
-                    __spiDelay(500000 / dev->freq);
-                    /// Make 2nd edge CLK
-                    spiSetCLKState(dev, SPICLK_IDLE);
-                    /// Export new bit into MOSI
-                    if(mask > 0x1 ){
-                        spiSetMOSI(dev, txBuf[dev->txdByteInd] & (mask>>1));
-                    }else{
-                        if(dev->txdByteInd + 1 < dev->txdSize)
-                            spiSetMOSI(dev, txBuf[dev->txdByteInd+1] & 0x80);
-                    }
-                    /// Delay for a half of CLK period
-                    __spiDelay(500000 / dev->freq);
+    if(__hasFlagBitSet(dev->conf, SPI_CPHA) == LOW){
+        /// Export 1st bit before the fist edge of CLK
+        ret = spiTransmitBuffGetNextBit(dev, &currTBit);
+        spiSetMOSI(dev, currTBit);
+        /// Delay for a half of CLK period
+        __spiDelay(500000/(dev->freq));
+        /// Send n bit in buffer
+        if (ret >= 0)
+            while(0x1){
+                /// Get next bit
+                ret = spiTransmitBuffGetNextBit(dev, &currTBit);
+                /// Make 1st edge
+                spiSetCLKState(dev, SPICLK_ACTIVE);
+                /// Sample MISO
+                if (ableToReceive) 
+                spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
+                /// Delay for a half of CLK period
+                __spiDelay(500000/(dev->freq));
+                /// Make 2nd edge
+                spiSetCLKState(dev, SPICLK_IDLE);
+                /// Export new bit to MOSI
+                spiSetMOSI(dev, currTBit);
+                /// Delay for a half of CLK period
+                __spiDelay(500000/(dev->freq));
+                /// Break if there is nothing to send
+                if (ret < 0) break;
             }
-        }
+    
     }else{
-        /// Main transmit loop
-        while (dev->txdByteInd < dev->txdSize){
-            uint8_t *currByte = &txBuf[dev->txdByteInd];
-            /// Byte transmit loop
-            for(uint8_t mask = 0x80; mask ; mask >>= 1){
-                    /// Make 1st edge CLK
-                    spiSetCLKState(dev, SPICLK_ACTIVE);
-                    /// Export new bit into MOSI
-                    spiSetMOSI(dev, txBuf[dev->txdByteInd] & (mask));
-                    /// Delay for a half of CLK period
-                    __spiDelay(500000 / dev->freq);
-                    /// Make 2nd edge CLK
-                    spiSetCLKState(dev, SPICLK_IDLE);
-                    /// Sample at 1st edge on MISO
-                    if(ableToReceive) {
-                        rxBuf[dev->txdByteInd] = (rxBuf[dev->txdByteInd] << 1) | boolCast(GPIO.in & __mask32(dev->miso));
-                        dev->txdBitInd ++;
-    
-                        if(dev->txdBitInd >= 8){
-                            dev->txdBitInd = 0;
-                            dev->txdByteInd ++;
-                        }
-                    }
-                    /// Delay for a half of CLK period
-                    __spiDelay(500000 / dev->freq);
-            }
+        while(0x1){
+            /// Get next bit
+            ret = spiTransmitBuffGetNextBit(dev, &currTBit);
+            /// Break if there is nothing to send
+            if (ret < 0) break;
+            /// Make 1st edge
+            spiSetCLKState(dev, SPICLK_ACTIVE);
+            /// Export new bit to MOSI
+            spiSetMOSI(dev, currTBit);
+            /// Delay for a half of CLK period
+            __spiDelay(500000/(dev->freq));
+            /// Make 2nd edge
+            spiSetCLKState(dev, SPICLK_IDLE);
+            /// Sample MISO
+            if (ableToReceive) 
+            spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
+            /// Delay for a half of CLK period
+            __spiDelay(500000/(dev->freq));
         }
     }
 
@@ -535,11 +601,11 @@ def spiStartTransaction(spiDev_t * dev) {
     if (__isnot_negative(dev->cs)) GPIO.out_w1ts = __mask32(dev->cs);
 
     vPortExitCritical(&(dev->mutex));
-    __spiExit("spiStartTransaction() : %d", (int)dev->rxdByteInd);
-    return (def) dev->rxdByteInd;
+    __spiExit("spiStartTransaction() : OKE");
+    return OKE;
     
-    // spiStartTransaction_ReturnERR0:
-        // vPortExitCritical(&(dev->mutex));
+    spiStartTransaction_ReturnERR0:
+        vPortExitCritical(&(dev->mutex));
     spiStartTransaction_ReturnERR1:
         __spiExit("spiStartTransaction() : %d", getDefRetStat_Str(ret));
         return ret;
