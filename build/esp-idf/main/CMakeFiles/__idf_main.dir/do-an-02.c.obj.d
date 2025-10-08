@@ -1,8 +1,8 @@
 esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: \
- /home/fus/Documents/DO-AN-02/main/do-an-02.c \
- /home/fus/Documents/DO-AN-02/main/../helper/general.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/do-an-02.c \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/general.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
@@ -36,17 +36,17 @@ esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../config/pinConfig.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../config/generalConfig.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../fonts/fontUtils.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../fonts/gfxfont.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../fonts/localFonts/FreeSerif9pt7b.h \
- /home/fus/Documents/DO-AN-02/main/../helper/../fonts/localFonts/../gfxfont.h \
- /home/fus/Documents/DO-AN-02/main/../helper/flag.h \
- /home/fus/Documents/DO-AN-02/main/../helper/helper.h \
- /home/fus/Documents/DO-AN-02/main/../helper/param.h \
- /home/fus/Documents/DO-AN-02/main/../helper/return.h \
- /home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../config/pinConfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../config/generalConfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../fonts/fontUtils.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../fonts/gfxfont.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/../fonts/localFonts/../gfxfont.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/flag.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/helper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/param.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/return.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/espGPIOWrapper.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -93,10 +93,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
- /home/fus/Documents/DO-AN-02/main/../helper/espLogWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/espLogWrapper.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/fus/Documents/DO-AN-02/main/../helper/espRTOSWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../helper/espRTOSWrapper.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
  /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
@@ -150,17 +150,17 @@ esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h \
- /home/fus/Documents/DO-AN-02/main/receiver.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/spi/spi.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/spi/../../helper/general.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/../../helper/general.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2cLog.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2cDefinition.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2cHelper.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64Commands.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64Log.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64Helpers.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64Definitions.h \
- /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../../fonts/fontUtils.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/receiver.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/spi/spi.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/spi/../../helper/general.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/oled128x64.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../i2c/i2c.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../i2c/../../helper/general.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../i2c/i2cLog.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../i2c/i2cDefinition.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../i2c/i2cHelper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/oled128x64Commands.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/oled128x64Log.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/oled128x64Helpers.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/oled128x64Definitions.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/main/../comDriver/oled128x64/../../fonts/fontUtils.h

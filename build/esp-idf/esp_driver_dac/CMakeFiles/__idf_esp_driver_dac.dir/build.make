@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/depend.make
@@ -75,72 +75,72 @@ esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/codegen:
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/flags.make
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj: /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.i
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_oneshot.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_oneshot.c.s
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/flags.make
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj: /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.i
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_cosine.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_cosine.c.s
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/flags.make
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj: /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.i
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_continuous.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_continuous.c.s
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/flags.make
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj: /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c > CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.i
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/dac_common.c -o CMakeFiles/__idf_esp_driver_dac.dir/dac_common.c.s
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/flags.make
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj: /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj -MF CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj.d -o CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj -c /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c > CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c > CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.i
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c -o CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_driver_dac/esp32/dac_dma.c -o CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.s
 
 # Object files for target __idf_esp_driver_dac
 __idf_esp_driver_dac_OBJECTS = \
@@ -160,19 +160,19 @@ esp-idf/esp_driver_dac/libesp_driver_dac.a: esp-idf/esp_driver_dac/CMakeFiles/__
 esp-idf/esp_driver_dac/libesp_driver_dac.a: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/esp32/dac_dma.c.obj
 esp-idf/esp_driver_dac/libesp_driver_dac.a: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/build.make
 esp-idf/esp_driver_dac/libesp_driver_dac.a: esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libesp_driver_dac.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_driver_dac.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_driver_dac.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libesp_driver_dac.a"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_driver_dac.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_driver_dac.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/build: esp-idf/esp_driver_dac/libesp_driver_dac.a
 .PHONY : esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/build
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_driver_dac.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_driver_dac.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/clean
 
 esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/esp_driver_dac /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac /home/fus/Documents/DO-AN-02/build/esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/.fus/esp-idf/components/esp_driver_dac /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp_driver_dac/CMakeFiles/__idf_esp_driver_dac.dir/depend
 

@@ -34,12 +34,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -54,6 +57,7 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/git"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/git"
       - "/home/fus/.fus/esp-idf/tools/git"
+      - "/home/fus/.local/share/nvim/mason/bin/git"
       - "/usr/local/sbin/git"
       - "/usr/local/bin/git"
     found: "/usr/bin/git"
@@ -70,12 +74,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -109,12 +118,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -129,6 +141,7 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/uname"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/uname"
       - "/home/fus/.fus/esp-idf/tools/uname"
+      - "/home/fus/.local/share/nvim/mason/bin/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
     found: "/usr/bin/uname"
@@ -145,12 +158,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -195,12 +213,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -215,12 +236,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/gmake"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/gmake"
       - "/home/fus/.fus/esp-idf/tools/gmake"
+      - "/home/fus/.local/share/nvim/mason/bin/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/bin/gmake"
       - "/usr/sbin/gmake"
       - "/sbin/gmake"
       - "/bin/gmake"
+      - "/usr/lib/jvm/default-jdk/bin/gmake"
+      - "/usr/lib/jvm/default-jre/bin/gmake"
       - "/home/fus/.fus/gmake"
       - "/home/fus/.fus/esp-idf/gmake"
       - "/home/fus/.fus/esp-idf/components/espcoredump/make"
@@ -234,6 +258,7 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/make"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/make"
       - "/home/fus/.fus/esp-idf/tools/make"
+      - "/home/fus/.local/share/nvim/mason/bin/make"
       - "/usr/local/sbin/make"
       - "/usr/local/bin/make"
     found: "/usr/bin/make"
@@ -250,12 +275,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -290,12 +320,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -318,12 +351,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -367,12 +405,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -396,7 +439,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/4.1.0/CompilerIdC/a.out
+        /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/4.1.2/CompilerIdC/a.out
       
   -
     kind: "find-v1"
@@ -431,12 +474,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-ar"
@@ -453,12 +499,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -494,12 +545,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib"
@@ -516,12 +570,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -557,12 +616,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-strip"
@@ -579,12 +641,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -620,12 +687,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-ld"
@@ -642,12 +712,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -683,12 +758,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-nm"
@@ -705,12 +783,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -746,12 +829,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump"
@@ -768,12 +854,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -809,12 +900,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-objcopy"
@@ -831,12 +925,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -872,12 +971,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-readelf"
@@ -894,12 +996,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -935,12 +1042,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -955,12 +1065,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-dlltool"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-dlltool"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-dlltool"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-dlltool"
       - "/usr/local/sbin/xtensa-esp32-elf-dlltool"
       - "/usr/local/bin/xtensa-esp32-elf-dlltool"
       - "/usr/bin/xtensa-esp32-elf-dlltool"
       - "/usr/sbin/xtensa-esp32-elf-dlltool"
       - "/sbin/xtensa-esp32-elf-dlltool"
       - "/bin/xtensa-esp32-elf-dlltool"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-dlltool"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-dlltool"
       - "/home/fus/.fus/xtensa-esp32-elf-dlltool"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-dlltool"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/dlltool"
@@ -974,12 +1087,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/dlltool"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/dlltool"
       - "/home/fus/.fus/esp-idf/tools/dlltool"
+      - "/home/fus/.local/share/nvim/mason/bin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/usr/bin/dlltool"
       - "/usr/sbin/dlltool"
       - "/sbin/dlltool"
       - "/bin/dlltool"
+      - "/usr/lib/jvm/default-jdk/bin/dlltool"
+      - "/usr/lib/jvm/default-jre/bin/dlltool"
       - "/home/fus/.fus/dlltool"
       - "/home/fus/.fus/esp-idf/dlltool"
     found: false
@@ -996,12 +1112,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1037,12 +1158,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-addr2line"
@@ -1059,12 +1183,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1100,12 +1229,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1120,12 +1252,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-tapi"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-tapi"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-tapi"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-tapi"
       - "/usr/local/sbin/xtensa-esp32-elf-tapi"
       - "/usr/local/bin/xtensa-esp32-elf-tapi"
       - "/usr/bin/xtensa-esp32-elf-tapi"
       - "/usr/sbin/xtensa-esp32-elf-tapi"
       - "/sbin/xtensa-esp32-elf-tapi"
       - "/bin/xtensa-esp32-elf-tapi"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-tapi"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-tapi"
       - "/home/fus/.fus/xtensa-esp32-elf-tapi"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-tapi"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/tapi"
@@ -1139,12 +1274,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/tapi"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/tapi"
       - "/home/fus/.fus/esp-idf/tools/tapi"
+      - "/home/fus/.local/share/nvim/mason/bin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
       - "/usr/bin/tapi"
       - "/usr/sbin/tapi"
       - "/sbin/tapi"
       - "/bin/tapi"
+      - "/usr/lib/jvm/default-jdk/bin/tapi"
+      - "/usr/lib/jvm/default-jre/bin/tapi"
       - "/home/fus/.fus/tapi"
       - "/home/fus/.fus/esp-idf/tapi"
     found: false
@@ -1161,12 +1299,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1204,12 +1347,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1224,12 +1370,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/bin/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-15"
@@ -1243,12 +1392,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/bin/xtensa-esp32-elf-gcc-ar-15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar15"
@@ -1262,12 +1414,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/bin/xtensa-esp32-elf-gcc-ar15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar15"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
@@ -1284,12 +1439,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1327,12 +1487,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1347,12 +1510,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-15"
@@ -1366,12 +1532,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib15"
@@ -1385,12 +1554,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/bin/xtensa-esp32-elf-gcc-ranlib15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib15"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
@@ -1407,12 +1579,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1447,12 +1624,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1475,12 +1655,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1524,12 +1709,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1553,7 +1743,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/4.1.0/CompilerIdCXX/a.out
+        /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/4.1.2/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
@@ -1590,12 +1780,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1610,12 +1803,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/sbin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/bin/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-15.1"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-15.1"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-15"
@@ -1629,12 +1825,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/sbin/xtensa-esp32-elf-gcc-ar-15"
       - "/bin/xtensa-esp32-elf-gcc-ar-15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-15"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar15"
@@ -1648,12 +1847,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/sbin/xtensa-esp32-elf-gcc-ar15"
       - "/bin/xtensa-esp32-elf-gcc-ar15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar15"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
@@ -1670,12 +1872,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1713,12 +1920,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1733,12 +1943,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-15.1"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-15"
@@ -1752,12 +1965,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-15"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib15"
@@ -1771,12 +1987,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib15"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib15"
       - "/bin/xtensa-esp32-elf-gcc-ranlib15"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib15"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib15"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib15"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
@@ -1793,12 +2012,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1833,12 +2057,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1861,12 +2088,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -1918,12 +2150,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -1938,12 +2173,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/bin/xtensa-esp32-elf-gcc-ar-"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-"
@@ -1957,12 +2195,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ar-"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/bin/xtensa-esp32-elf-gcc-ar-"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/sbin/xtensa-esp32-elf-gcc-ar-"
       - "/bin/xtensa-esp32-elf-gcc-ar-"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ar-"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ar-"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ar-"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
@@ -1979,12 +2220,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -2022,12 +2268,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/"
       - "/home/fus/.fus/esp-idf/tools/"
+      - "/home/fus/.local/share/nvim/mason/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
       - "/usr/sbin/"
       - "/sbin/"
       - "/bin/"
+      - "/usr/lib/jvm/default-jdk/bin/"
+      - "/usr/lib/jvm/default-jre/bin/"
       - "/home/fus/.fus/"
       - "/home/fus/.fus/esp-idf/"
     searched_directories:
@@ -2042,12 +2291,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-"
@@ -2061,12 +2313,15 @@ events:
       - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-"
+      - "/home/fus/.local/share/nvim/mason/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/usr/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/sbin/xtensa-esp32-elf-gcc-ranlib-"
       - "/bin/xtensa-esp32-elf-gcc-ranlib-"
+      - "/usr/lib/jvm/default-jdk/bin/xtensa-esp32-elf-gcc-ranlib-"
+      - "/usr/lib/jvm/default-jre/bin/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/xtensa-esp32-elf-gcc-ranlib-"
       - "/home/fus/.fus/esp-idf/xtensa-esp32-elf-gcc-ranlib-"
     found: "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
@@ -2083,12 +2338,17 @@ events:
         - "/home/fus/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
         - "/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin"
         - "/home/fus/.fus/esp-idf/tools"
+        - "/home/fus/.local/share/nvim/mason/bin"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/bin"
         - "/usr/sbin"
         - "/sbin"
         - "/bin"
+        - "/usr/lib/jvm/default-jdk/bin"
+        - "/usr/lib/jvm/default-jre/bin"
+        - "/home/fus/.fus/"
+        - "/home/fus/.fus/esp-idf/"
         - "/home/fus/.fus/"
         - "/home/fus/.fus/esp-idf/"
   -
@@ -2101,8 +2361,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL"
-      binary: "/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL"
+      source: "/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24"
+      binary: "/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero "
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2112,14 +2372,14 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL'
+        Change Dir: '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bcca2/fast
-        make[3]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL'
-        /usr/bin/make  -f CMakeFiles/cmTC_bcca2.dir/build.make CMakeFiles/cmTC_bcca2.dir/build
-        make[4]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL'
-        \x1b[0mBuilding C object CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj\x1b[0m
-        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cf7c/fast
+        make[3]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24'
+        /usr/bin/make  -f CMakeFiles/cmTC_7cf7c.dir/build.make CMakeFiles/cmTC_7cf7c.dir/build
+        make[4]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24'
+        Building C object CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj
+        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         Target: xtensa-esp-elf
@@ -2127,8 +2387,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bcca2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/cc5od3YO.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7cf7c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccIiJYjs.s
         GNU C23 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -2145,13 +2405,13 @@ events:
          /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: b8af796b165ddbed35358e5506fa35de
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj /tmp/cc5od3YO.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj /tmp/ccIiJYjs.s
         COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.'
-        \x1b[0mLinking C executable cmTC_bcca2\x1b[0m
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcca2.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_7cf7c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cf7c.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper
@@ -2162,13 +2422,13 @@ events:
         gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) 
         COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_bcca2' '-dumpdir' 'cmTC_bcca2.'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg93HGg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_bcca2 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_7cf7c' '-dumpdir' 'cmTC_7cf7c.'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbJTmbI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_7cf7c -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_bcca2' '-dumpdir' 'cmTC_bcca2.'
-        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -o cmTC_bcca2
-        make[4]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL'
-        make[3]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_7cf7c' '-dumpdir' 'cmTC_7cf7c.'
+        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -o cmTC_7cf7c
+        make[4]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24'
+        make[3]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24'
         
       exitCode: 0
   -
@@ -2179,9 +2439,17 @@ events:
       - "/home/fus/.fus/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:71 (project)"
     message: |
-      Parsed C implicit include dir info: rv=loading
+      Parsed C implicit include dir info: rv=done
         found start of include info
-        warn: unable to parse implicit include dirs!
+        found start of implicit include info
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include-fixed;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include]
       
       
   -
@@ -2195,16 +2463,105 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL']
+        ignore line: [Change Dir: '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bcca2/fast]
-        ignore line: [make[3]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL']
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_bcca2.dir/build.make CMakeFiles/cmTC_bcca2.dir/build]
-        ignore line: [make[4]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL']
-        ignore line: [\x1b[0mBuilding C object CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj\x1b[0m;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c;Using built-in specs.;COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc;Target: xtensa-esp-elf;Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest;Thread model: posix;Supported LTO compression algorithms: zlib zstd;gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bcca2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/cc5od3YO.s;GNU C23 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf);	compiled by GNU C version 6.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP;;GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072;ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include";ignoring nonexistent directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/include";#include "..." search starts here:;#include <...> search starts here:; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include;End of search list.;Compiler executable checksum: b8af796b165ddbed35358e5506fa35de;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj /tmp/cc5od3YO.s;COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/;LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.';\x1b[0mLinking C executable cmTC_bcca2\x1b[0m;/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcca2.dir/link.txt --verbose=1;Using built-in specs.;COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc;COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper;Target: xtensa-esp-elf;Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest;Thread model: posix;Supported LTO compression algorithms: zlib zstd;gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ;COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/;LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_bcca2' '-dumpdir' 'cmTC_bcca2.'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg93HGg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_bcca2 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_bcca2' '-dumpdir' 'cmTC_bcca2.';/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_bcca2.dir/CMakeCCompilerABI.c.obj -o cmTC_bcca2;make[4]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL';make[3]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Mp00sL';;]
-        implicit libs: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cf7c/fast]
+        ignore line: [make[3]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_7cf7c.dir/build.make CMakeFiles/cmTC_7cf7c.dir/build]
+        ignore line: [make[4]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24']
+        ignore line: [Building C object CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/']
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7cf7c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccIiJYjs.s]
+        ignore line: [GNU C23 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 6.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b8af796b165ddbed35358e5506fa35de]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/']
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj /tmp/ccIiJYjs.s]
+        ignore line: [COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_7cf7c]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cf7c.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ]
+        ignore line: [COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_7cf7c' '-dumpdir' 'cmTC_7cf7c.']
+        link line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbJTmbI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_7cf7c -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
+          arg [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccbJTmbI.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7cf7c] ==> ignore
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
+        ignore line: [ defaulting to 00400074]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_7cf7c' '-dumpdir' 'cmTC_7cf7c.']
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_7cf7c.dir/CMakeCCompilerABI.c.obj -o cmTC_7cf7c]
+        ignore line: [make[4]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24']
+        ignore line: [make[3]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6CNR24']
+        ignore line: []
+        ignore line: []
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [gcc;c;nosys;c;gcc]
         implicit objs: []
-        implicit dirs: []
+        implicit dirs: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/esp32;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit fwks: []
       
       
@@ -2218,8 +2575,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc"
-      binary: "/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc"
+      source: "/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY"
+      binary: "/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2230,14 +2587,14 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc'
+        Change Dir: '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2c426/fast
-        make[3]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc'
-        /usr/bin/make  -f CMakeFiles/cmTC_2c426.dir/build.make CMakeFiles/cmTC_2c426.dir/build
-        make[4]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc'
-        \x1b[0mBuilding CXX object CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj\x1b[0m
-        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d39a7/fast
+        make[3]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY'
+        /usr/bin/make  -f CMakeFiles/cmTC_d39a7.dir/build.make CMakeFiles/cmTC_d39a7.dir/build
+        make[4]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY'
+        Building CXX object CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         Target: xtensa-esp-elf
@@ -2245,8 +2602,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2c426.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccNwmRSI.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d39a7.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/cchZKTb0.s
         GNU C++17 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -2269,13 +2626,13 @@ events:
          /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: b46bbfed52bc55587dc25f5acedaf452
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccNwmRSI.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cchZKTb0.s
         COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.'
-        \x1b[0mLinking CXX executable cmTC_2c426\x1b[0m
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c426.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_d39a7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d39a7.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper
@@ -2286,13 +2643,13 @@ events:
         gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) 
         COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_2c426' '-dumpdir' 'cmTC_2c426.'
-         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cckg4qIz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_2c426 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_d39a7' '-dumpdir' 'cmTC_d39a7.'
+         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccffN8KB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_d39a7 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
         /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_2c426' '-dumpdir' 'cmTC_2c426.'
-        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_2c426
-        make[4]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc'
-        make[3]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_d39a7' '-dumpdir' 'cmTC_d39a7.'
+        /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_d39a7
+        make[4]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY'
+        make[3]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY'
         
       exitCode: 0
   -
@@ -2303,9 +2660,23 @@ events:
       - "/home/fus/.fus/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:71 (project)"
     message: |
-      Parsed CXX implicit include dir info: rv=loading
+      Parsed CXX implicit include dir info: rv=done
         found start of include info
-        warn: unable to parse implicit include dirs!
+        found start of implicit include info
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+          add: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include]
+        end of search list found
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/backward]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+        collapse include dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/backward;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include-fixed;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include]
       
       
   -
@@ -2319,16 +2690,113 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc']
+        ignore line: [Change Dir: '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2c426/fast]
-        ignore line: [make[3]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc']
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_2c426.dir/build.make CMakeFiles/cmTC_2c426.dir/build]
-        ignore line: [make[4]: Entering directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc']
-        ignore line: [\x1b[0mBuilding CXX object CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj\x1b[0m;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp;Using built-in specs.;COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++;Target: xtensa-esp-elf;Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest;Thread model: posix;Supported LTO compression algorithms: zlib zstd;gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2c426.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/ccNwmRSI.s;GNU C++17 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf);	compiled by GNU C version 6.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP;;GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072;ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include";ignoring nonexistent directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include";ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/include";#include "..." search starts here:;#include <...> search starts here:; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include;End of search list.;Compiler executable checksum: b46bbfed52bc55587dc25f5acedaf452;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccNwmRSI.s;COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/;LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.';\x1b[0mLinking CXX executable cmTC_2c426\x1b[0m;/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c426.dir/link.txt --verbose=1;Using built-in specs.;COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++;COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper;Target: xtensa-esp-elf;Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest;Thread model: posix;Supported LTO compression algorithms: zlib zstd;gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ;COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/;LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_2c426' '-dumpdir' 'cmTC_2c426.'; /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cckg4qIz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_2c426 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074;COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_2c426' '-dumpdir' 'cmTC_2c426.';/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_2c426.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_2c426;make[4]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc';make[3]: Leaving directory '/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-Uh0Tcc';;]
-        implicit libs: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d39a7/fast]
+        ignore line: [make[3]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_d39a7.dir/build.make CMakeFiles/cmTC_d39a7.dir/build]
+        ignore line: [make[4]: Entering directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY']
+        ignore line: [Building CXX object CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero     -v -o CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/']
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/ -isysroot /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d39a7.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -o /tmp/cchZKTb0.s]
+        ignore line: [GNU C++17 (crosstool-NG esp-15.1.0_20250607) version 15.1.0 (xtensa-esp-elf)]
+        ignore line: [	compiled by GNU C version 6.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/../../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include"]
+        ignore line: [ignoring duplicate directory "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include/c++/15.1.0/backward]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/include-fixed]
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b46bbfed52bc55587dc25f5acedaf452]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/']
+        ignore line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cchZKTb0.s]
+        ignore line: [COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-v' '-o' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_d39a7]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d39a7.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper]
+        ignore line: [Target: xtensa-esp-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-esp-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --exec_prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-sysroot=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf --with-native-system-header-dir=/include --with-headers=/builds/idf/crosstool-NG/builds/xtensa-esp-elf/xtensa-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-15.1.0_20250607' --disable-__cxa_atexit --enable-cxx-flags='-ffunction-sections -fdata-sections' --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --enable-plugin --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes --disable-win32-utf8-manifest]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.1.0 (crosstool-NG esp-15.1.0_20250607) ]
+        ignore line: [COMPILER_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_d39a7' '-dumpdir' 'cmTC_d39a7.']
+        link line: [ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2 -plugin /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so -plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccffN8KB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_d39a7 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0 -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
+          arg [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/15.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccffN8KB.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
+          arg [--dynconfig=xtensa_esp32.so] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_d39a7] ==> ignore
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
+          arg [-L/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
+          arg [CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
+        ignore line: [ defaulting to 00400074]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-nostartfiles' '-v' '-o' 'cmTC_d39a7' '-dumpdir' 'cmTC_d39a7.']
+        ignore line: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero   -nostartfiles  -v CMakeFiles/cmTC_d39a7.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_d39a7]
+        ignore line: [make[4]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY']
+        ignore line: [make[3]: Leaving directory '/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YdlzrY']
+        ignore line: []
+        ignore line: []
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib]
+        collapse library dir [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit libs: [stdc++;m;gcc;c;nosys;c;gcc]
         implicit objs: []
-        implicit dirs: []
+        implicit dirs: [/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/esp32;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib/esp32;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/lib;/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit fwks: []
       
       

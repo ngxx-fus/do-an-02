@@ -1,7 +1,7 @@
 esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_dma.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_driver_spi/src/gpspi/spi_dma.c \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_driver_spi/include/esp_private/spi_dma.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_types.h \

@@ -42,5 +42,5 @@ esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_boo
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 

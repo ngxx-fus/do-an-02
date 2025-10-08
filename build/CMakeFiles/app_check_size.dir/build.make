@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Utility rule file for app_check_size.
 
@@ -67,7 +67,7 @@ include CMakeFiles/app_check_size.dir/compiler_depend.make
 include CMakeFiles/app_check_size.dir/progress.make
 
 CMakeFiles/app_check_size:
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fus/Documents/DO-AN-02/build/partition_table/partition-table.bin /home/fus/Documents/DO-AN-02/build/do-an-02.bin
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fus/Documents/DO-AN-02-RECEIVER/build/partition_table/partition-table.bin /home/fus/Documents/DO-AN-02-RECEIVER/build/do-an-02.bin
 
 CMakeFiles/app_check_size.dir/codegen:
 .PHONY : CMakeFiles/app_check_size.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/app_check_size.dir/clean:
 .PHONY : CMakeFiles/app_check_size.dir/clean
 
 CMakeFiles/app_check_size.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/app_check_size.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles/app_check_size.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/app_check_size.dir/depend
 

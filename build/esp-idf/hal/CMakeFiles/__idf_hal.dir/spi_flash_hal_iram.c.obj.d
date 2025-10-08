@@ -1,7 +1,7 @@
 esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_hal_iram.c.obj: \
  /home/fus/.fus/esp-idf/components/hal/spi_flash_hal_iram.c \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/config.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_hal.h \
  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_flash_ll.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \

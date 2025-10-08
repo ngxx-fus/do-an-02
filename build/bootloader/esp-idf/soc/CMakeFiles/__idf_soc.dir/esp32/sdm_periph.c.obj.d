@@ -12,7 +12,7 @@ esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdm_periph.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps_full.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \

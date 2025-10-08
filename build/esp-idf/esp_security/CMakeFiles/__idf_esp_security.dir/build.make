@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/depend.make
@@ -75,44 +75,44 @@ esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/codegen:
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/flags.make
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj: /home/fus/.fus/esp-idf/components/esp_security/src/init.c
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/init.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/init.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/init.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/init.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/init.c
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_security.dir/src/init.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/init.c > CMakeFiles/__idf_esp_security.dir/src/init.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/init.c > CMakeFiles/__idf_esp_security.dir/src/init.c.i
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_security.dir/src/init.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/init.c -o CMakeFiles/__idf_esp_security.dir/src/init.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/init.c -o CMakeFiles/__idf_esp_security.dir/src/init.c.s
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/flags.make
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj: /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c > CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c > CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.i
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.s
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/flags.make
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj: /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj -MF CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj.d -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj -c /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c > CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c > CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.i
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c -o CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.s
 
 # Object files for target __idf_esp_security
 __idf_esp_security_OBJECTS = \
@@ -128,19 +128,19 @@ esp-idf/esp_security/libesp_security.a: esp-idf/esp_security/CMakeFiles/__idf_es
 esp-idf/esp_security/libesp_security.a: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj
 esp-idf/esp_security/libesp_security.a: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/build.make
 esp-idf/esp_security/libesp_security.a: esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp_security.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_security.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_security.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp_security.a"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_security.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_security.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/build: esp-idf/esp_security/libesp_security.a
 .PHONY : esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/build
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_security.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_security.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/clean
 
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/esp_security /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security /home/fus/Documents/DO-AN-02/build/esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/.fus/esp-idf/components/esp_security /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/depend
 

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/esp_gdbstub/src/port/xtensa/gdbstub-entry.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa/gdbstub-entry.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_gdbstub/src/port/xtensa/xt_debugexception.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa/xt_debugexception.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_gdbstub/src/port/xtensa/gdbstub-entry.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa/gdbstub-entry.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_gdbstub/src/port/xtensa/xt_debugexception.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa/xt_debugexception.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

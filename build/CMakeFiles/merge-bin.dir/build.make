@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Utility rule file for merge-bin.
 
@@ -67,7 +67,7 @@ include CMakeFiles/merge-bin.dir/compiler_depend.make
 include CMakeFiles/merge-bin.dir/progress.make
 
 CMakeFiles/merge-bin:
-	cd /home/fus/.fus/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "SERIAL_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;;/home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=merge_bin;-o;/home/fus/Documents/DO-AN-02/build/merged-binary.bin;@/home/fus/Documents/DO-AN-02/build/flash_args" -D WORKING_DIRECTORY=/home/fus/Documents/DO-AN-02/build -P run_serial_tool.cmake
+	cd /home/fus/.fus/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "SERIAL_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;;/home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=merge_bin;-o;/home/fus/Documents/DO-AN-02-RECEIVER/build/merged-binary.bin;@/home/fus/Documents/DO-AN-02-RECEIVER/build/flash_args" -D WORKING_DIRECTORY=/home/fus/Documents/DO-AN-02-RECEIVER/build -P run_serial_tool.cmake
 
 CMakeFiles/merge-bin.dir/codegen:
 .PHONY : CMakeFiles/merge-bin.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/merge-bin.dir/clean:
 .PHONY : CMakeFiles/merge-bin.dir/clean
 
 CMakeFiles/merge-bin.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/merge-bin.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles/merge-bin.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/merge-bin.dir/depend
 

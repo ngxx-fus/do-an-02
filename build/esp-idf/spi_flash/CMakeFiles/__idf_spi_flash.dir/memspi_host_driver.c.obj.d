@@ -2,7 +2,7 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/memspi_host_driver.c.obj: \
  /home/fus/.fus/esp-idf/components/spi_flash/memspi_host_driver.c \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash/spi_flash_defs.h \
  /home/fus/.fus/esp-idf/components/spi_flash/include/memspi_host_driver.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_hal.h \

@@ -1,6 +1,6 @@
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj: \
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_console.c \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/private_include/bootloader_console.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \

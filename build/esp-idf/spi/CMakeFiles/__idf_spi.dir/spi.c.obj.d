@@ -1,9 +1,9 @@
 esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: \
- /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c \
- /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/general.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
@@ -37,17 +37,17 @@ esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../config/pinConfig.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../config/generalConfig.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../fonts/fontUtils.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../fonts/gfxfont.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../fonts/localFonts/FreeSerif9pt7b.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/../fonts/localFonts/../gfxfont.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/flag.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/helper.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/param.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/return.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../config/pinConfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../config/generalConfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../fonts/fontUtils.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../fonts/gfxfont.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/../fonts/localFonts/../gfxfont.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/flag.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/helper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/param.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/return.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/espGPIOWrapper.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -94,10 +94,10 @@ esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espLogWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/espLogWrapper.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
- /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espRTOSWrapper.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/../../helper/espRTOSWrapper.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
  /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \

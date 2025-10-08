@@ -3,119 +3,117 @@
 #include "../comDriver/spi/spi.h"
 #include "../comDriver/oled128x64/oled128x64.h"
 
+/// DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////
+
+/// @brief Enumeration defining the system operation stages.
+enum ENUM_SYSTEM_STAGE {
+    SYSTEM_INIT    = 0, /// System is initializing.
+    SYSTEM_RUNNING = 1, /// System is currently running.
+    SYSTEM_STOPPED = 2, /// System has been stopped or halted.
+    SYSTEM_STAGE_COUNT,
+};
+
+/// @brief Global system stage flag used to represent the overall runtime state.
+/// @note Access to this variable must be protected by `systemStageMutex`.
+extern volatile flag_t  systemStage;
+
+/// @brief Mutex for synchronizing access to the system stage flag.
+extern portMUX_TYPE     systemStageMutex;
+
+/// @brief Enumeration defining OLED operation request types.
+enum ENUM_OLED_FLAG {
+    OLED_REQ_FLUSH       = 0, /// Request to flush (update) the OLED display.
+    OLED_REQ_CLR_CANVAS  = 1, /// Request to clear the OLED display canvas.
+    OLED_REQ_COUNT,
+};
+
+/// @brief OLED control flag for requesting display operations.
+/// @note Access to this variable must be protected by `oledFlagMutex`.
+extern volatile flag_t  oledFlag;
+
+/// @brief Mutex for synchronizing access to the OLED flag.
+extern portMUX_TYPE     oledFlagMutex;
+
+/// @brief Enumeration defining supported system communication modes.
+enum ENUM_SYSTEM_MODE {
+    SYSTEM_MODE_SPI    = 0, /// SPI communication mode.
+    SYSTEM_MODE_I2C    = 1, /// I2C communication mode.
+    SYSTEM_MODE_UART   = 2, /// UART communication mode
+    SYSTEM_MODE_1WIRE  = 3, /// 1-Wire communication mode.
+    SYSTEM_MODE_COUNT       /// Number of system modes
+};
+
+/// @brief Global system mode flag representing active communication mode.
+/// @note Access to this variable must be protected by `systemModeMutex`.
+extern volatile flag_t  systemMode;
+
+/// @brief Current protocol mode
+extern volatile flag_t  currentSystemMode;
+
+/// @brief Mutex for synchronizing access to the system mode flag.
+extern portMUX_TYPE     systemModeMutex;
+
+/// @brief Communication object
+/// @note It can be assigned as I2C, SPI, ...
+extern void* comObject;
+
+/// @brief Contain 8-bit data frame 
+extern volatile uint8_t byteData;
+
+enum BYTE_DATA_CTRL {
+    BYTEDATA_GEN_PLAYPAUSE = 0,         /// 0 - Play | 1 - Pause
+    BYTEDATA_GEN_NOW = 0,               /// Set 1 to gen now
+    BYTE_DATA_CTRL_NUM
+};
+
+extern volatile flag_t  byteDataControlFlag;
+
+extern portMUX_TYPE     byteDataControlMutex;
+
+/// @brief Received control flag
+extern volatile flag_t  rcvdControlFlag;
+
+/// @brief Mutex for synchronizing access to the rcvdControlFlag.
+extern portMUX_TYPE     rcvdControlMutex;
+
+/// @brief Enumeration defining SEND operation request types.
+enum RECEIVE_CONTROL_FLAG {
+    RCVCTRL_HAS_DATA       = 0,        /// 1: Has received a byte data frame
+    RCVCTRL_NEW_DATA       = 1,        /// 1: Assign new sendback data, reset buffer
+    RECEIVE_CONTROL_FLAG_NUM
+};
+
+
+
 /// LOCAL /////////////////////////////////////////////////////////////////////////////////////////
 
+/// System Stage 
+volatile flag_t systemStage = SYSTEM_INIT;
+portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
-/// LED TEST MODE /////////////////////////////////////////////////////////////////////////////////
+/// OLED Flags
+volatile flag_t oledFlag = OLED_REQ_COUNT;
+portMUX_TYPE oledFlagMutex = portMUX_INITIALIZER_UNLOCKED;
 
-void IRAM_ATTR buttonISR(void* pv){
-    int64_t* testModeVariable = (int64_t*) pv;
-    int64_t entryButtonISR =  esp_timer_get_time();
-    if((GPIO.in & __mask32(BTN0)) == LOW){
-        __log("Button is pressed!");
-        __log("entryButtonISR = %ld", entryButtonISR);
-        if(entryButtonISR - testModeVariable[1] < 100000){
-            __log("testModeVariable[1] = %ld", testModeVariable[1]);
-            __log("Button is pressed lesthan than 100000us, break test mode!");
-            testModeVariable[0] = 0;
-        }
-        testModeVariable[1] = entryButtonISR;
-    }else{
-        __log("Button is released!");
-    }
-}
+/// System Mode
+volatile flag_t systemMode = SYSTEM_MODE_SPI;
+volatile flag_t currentSystemMode = -1;
+portMUX_TYPE systemModeMutex = portMUX_INITIALIZER_UNLOCKED;
 
-void ledTest(void *pv){
-    __entry("ledTest()");
-    
-    /// Output
-    gpio_config_t outPin = {
-        .intr_type = GPIO_INTR_DISABLE,
-        .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = __mask32(PIN0) | __mask32(PIN1) |  
-                        __mask32(PIN2) | __mask32(PIN3),
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-    };
-    gpio_config(&outPin);
+/// Communication Object
+void* comObject = NULL;
 
-    /// Input + Int
-    gpio_config_t inPin = {
-        .intr_type      = GPIO_INTR_ANYEDGE,
-        .mode           = GPIO_MODE_INPUT,
-        .pin_bit_mask   = __mask32(BTN0),
-        .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en     = GPIO_PULLUP_DISABLE
-    };
-    gpio_config(&inPin);
+/// Random 8-bit char (printable)
+volatile uint8_t byteData = '?';
+/// Random byte data control flag
+volatile flag_t  byteDataControlFlag = 0;
+/// Random byte data flag mutex
+portMUX_TYPE     byteDataControlMutex = portMUX_INITIALIZER_UNLOCKED;
 
-    /// Status variable 
-    /// testModeVariable[0] : Control the test state, Set 0 to stop test mode
-    /// testModeVariable[1] : Save last pressed
-    int64_t testModeVariable[2] = {2, 0};
-
-    /// Enable all interrupt
-    gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-    gpio_isr_handler_add(BTN0, buttonISR, (void*) testModeVariable);
-
-    /// Running test mode
-    while(testModeVariable[0]-- != 0){
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = (__mask32(PIN0));
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts =  __mask32(PIN1);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = __mask32(PIN2);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = __mask32(PIN3);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = (__mask32(PIN0));
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc =  __mask32(PIN1);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = __mask32(PIN2);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = __mask32(PIN3);
-    };
-
-    gpio_uninstall_isr_service();
-    gpio_reset_pin(PIN0);
-    gpio_reset_pin(PIN1);
-    gpio_reset_pin(PIN2);
-    gpio_reset_pin(PIN3);
-
-    __exit("ledTest()");
-}
-
-/// OLED TASK /////////////////////////////////////////////////////////////////////////////////////
-
-void oledTask(void *pv){
-
-    __log("[oledTask] Wait for the initializing have been done!");
-    /// Wait for the initializing done
-    for( ; systemStage == SYSTEM_INIT; vTaskDelay(1));
-
-    __entry("oledTest()");
-
-    oled128x64Dev_t *oled = (oled128x64Dev_t*)pv;
-
-    while (systemStage != SYSTEM_STOPPED){
-        if(__hasFlagBitSet(oledFlag, OLED_REQ_FLUSH)){
-            // __log("[oledTask] Receive flush request!");
-
-            // __log("[oledTask] Clear flush request!");
-            vPortEnterCritical(&oledFlagMutex);
-            __clearFlagBit(oledFlag, OLED_REQ_FLUSH);
-            vPortExitCritical(&oledFlagMutex);
-
-            // __log("[oledTask] Oled flush ...");
-            oledFlush(oled);
-        }
-        vTaskDelay(1);
-    }
-    
-    __exit("oledTest()");
-}
+/// Received data control flag
+volatile flag_t  rcvdControlFlag = 0;
+/// Received data control flag mutex
+portMUX_TYPE     rcvdControlMutex = portMUX_INITIALIZER_UNLOCKED;
 
 /// PREPAIR AND SEND DATA TASK ////////////////////////////////////////////////////////////////////
 

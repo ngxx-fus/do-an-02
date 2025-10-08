@@ -10,4 +10,4 @@ esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h

@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader
 
 # Utility rule file for save-defconfig.
 
@@ -67,8 +67,8 @@ include CMakeFiles/save-defconfig.dir/compiler_depend.make
 include CMakeFiles/save-defconfig.dir/progress.make
 
 CMakeFiles/save-defconfig:
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env --dont-write-deprecated --output savedefconfig /home/fus/.fus/esp-idf/components/bootloader/subproject/sdkconfig.defaults
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config.env
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02-RECEIVER/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config.env --dont-write-deprecated --output savedefconfig /home/fus/.fus/esp-idf/components/bootloader/subproject/sdkconfig.defaults
 
 CMakeFiles/save-defconfig.dir/codegen:
 .PHONY : CMakeFiles/save-defconfig.dir/codegen
@@ -86,6 +86,6 @@ CMakeFiles/save-defconfig.dir/clean:
 .PHONY : CMakeFiles/save-defconfig.dir/clean
 
 CMakeFiles/save-defconfig.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/save-defconfig.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles/save-defconfig.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/save-defconfig.dir/depend
 

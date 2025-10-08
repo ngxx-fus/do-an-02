@@ -2,7 +2,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c
  /home/fus/.fus/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa_ie.c \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_private.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \

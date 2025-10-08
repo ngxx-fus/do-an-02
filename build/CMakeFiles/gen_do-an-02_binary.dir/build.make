@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Utility rule file for gen_do-an-02_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_do-an-02_binary.dir/progress.make
 CMakeFiles/gen_do-an-02_binary: .bin_timestamp
 
 .bin_timestamp: do-an-02.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --elf-sha256-offset 0xb0 --min-rev-full 0 --max-rev-full 399 -o /home/fus/Documents/DO-AN-02/build/do-an-02.bin /home/fus/Documents/DO-AN-02/build/do-an-02.elf
-	/usr/bin/cmake -E echo "Generated /home/fus/Documents/DO-AN-02/build/do-an-02.bin"
-	/usr/bin/cmake -E md5sum /home/fus/Documents/DO-AN-02/build/do-an-02.bin > /home/fus/Documents/DO-AN-02/build/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --elf-sha256-offset 0xb0 --min-rev-full 0 --max-rev-full 399 -o /home/fus/Documents/DO-AN-02-RECEIVER/build/do-an-02.bin /home/fus/Documents/DO-AN-02-RECEIVER/build/do-an-02.elf
+	/usr/bin/cmake -E echo "Generated /home/fus/Documents/DO-AN-02-RECEIVER/build/do-an-02.bin"
+	/usr/bin/cmake -E md5sum /home/fus/Documents/DO-AN-02-RECEIVER/build/do-an-02.bin > /home/fus/Documents/DO-AN-02-RECEIVER/build/.bin_timestamp
 
 CMakeFiles/gen_do-an-02_binary.dir/codegen:
 .PHONY : CMakeFiles/gen_do-an-02_binary.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/gen_do-an-02_binary.dir/clean:
 .PHONY : CMakeFiles/gen_do-an-02_binary.dir/clean
 
 CMakeFiles/gen_do-an-02_binary.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/gen_do-an-02_binary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles/gen_do-an-02_binary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gen_do-an-02_binary.dir/depend
 

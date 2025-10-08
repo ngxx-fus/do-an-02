@@ -10,7 +10,7 @@ esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/include/soc/sdio_slave_periph.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_pins.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \

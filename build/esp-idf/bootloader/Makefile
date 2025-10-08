@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles /home/fus/Documents/DO-AN-02/build/esp-idf/bootloader//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/bootloader//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/clean
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/preinstall
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/preinstall
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/rule
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/rule
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ bootloader-flash: esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/rule
 
 # fast build rule for target.
 bootloader-flash/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build
 .PHONY : bootloader-flash/fast
 
 # Convenience name for target.
 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/rule
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/rule
 .PHONY : esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ encrypted-bootloader-flash: esp-idf/bootloader/CMakeFiles/encrypted-bootloader-f
 
 # fast build rule for target.
 encrypted-bootloader-flash/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build.make esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build
 .PHONY : encrypted-bootloader-flash/fast
 
 # Help Target
@@ -214,6 +214,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

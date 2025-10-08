@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c" "esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj" "gcc" "esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj.d"
+  "/home/fus/Documents/DO-AN-02-RECEIVER/comDriver/i2c/i2c.c" "esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj" "gcc" "esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

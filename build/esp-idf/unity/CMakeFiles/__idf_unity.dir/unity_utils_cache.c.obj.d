@@ -1,6 +1,6 @@
 esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj: \
  /home/fus/.fus/esp-idf/components/unity/unity_utils_cache.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/unity/unity/src/unity.h \
  /home/fus/.fus/esp-idf/components/unity/unity/src/unity_internals.h \
  /home/fus/.fus/esp-idf/components/unity/include/unity_config.h \

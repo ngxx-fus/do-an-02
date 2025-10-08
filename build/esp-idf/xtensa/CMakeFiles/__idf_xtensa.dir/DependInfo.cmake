@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_context.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_context.S.obj"
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_intr_asm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_intr_asm.S.obj"
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_vectors.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_context.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_context.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_intr_asm.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_intr_asm.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_vectors.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

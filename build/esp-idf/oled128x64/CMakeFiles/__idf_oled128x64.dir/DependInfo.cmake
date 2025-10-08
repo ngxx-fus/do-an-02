@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c" "esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj" "gcc" "esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj.d"
+  "/home/fus/Documents/DO-AN-02-RECEIVER/comDriver/oled128x64/oled128x64.c" "esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj" "gcc" "esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

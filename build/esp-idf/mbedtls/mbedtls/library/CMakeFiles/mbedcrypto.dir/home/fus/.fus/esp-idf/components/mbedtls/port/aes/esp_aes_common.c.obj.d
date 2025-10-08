@@ -1,6 +1,6 @@
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/fus/.fus/esp-idf/components/mbedtls/port/aes/esp_aes_common.c.obj: \
  /home/fus/.fus/esp-idf/components/mbedtls/port/aes/esp_aes_common.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/mbedtls/port/aes/include/esp_aes_internal.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.fus/esp-idf/components/mbedtls/port/include/aes/esp_aes.h \

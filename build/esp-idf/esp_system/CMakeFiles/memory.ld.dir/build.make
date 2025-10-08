@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Utility rule file for memory.ld.
 
@@ -70,8 +70,8 @@ esp-idf/esp_system/CMakeFiles/memory.ld: esp-idf/esp_system/ld/memory.ld
 
 esp-idf/esp_system/ld/memory.ld: /home/fus/.fus/esp-idf/components/esp_system/ld/esp32/memory.ld.in
 esp-idf/esp_system/ld/memory.ld: config/sdkconfig.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/ld/memory.ld linker script..."
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system && /usr/bin/cmake -DCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DSOURCE=/home/fus/.fus/esp-idf/components/esp_system/ld/esp32/memory.ld.in -DTARGET=/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/ld/memory.ld -DCONFIG_DIR=/home/fus/Documents/DO-AN-02/build/config -DLD_DIR=/home/fus/.fus/esp-idf/components/esp_system/ld -P /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/ld/linker_script_generator.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/ld/memory.ld linker script..."
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system && /usr/bin/cmake -DCC=/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DSOURCE=/home/fus/.fus/esp-idf/components/esp_system/ld/esp32/memory.ld.in -DTARGET=/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/ld/memory.ld -DCONFIG_DIR=/home/fus/Documents/DO-AN-02-RECEIVER/build/config -DLD_DIR=/home/fus/.fus/esp-idf/components/esp_system/ld -P /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/ld/linker_script_generator.cmake
 
 esp-idf/esp_system/CMakeFiles/memory.ld.dir/codegen:
 .PHONY : esp-idf/esp_system/CMakeFiles/memory.ld.dir/codegen
@@ -86,10 +86,10 @@ esp-idf/esp_system/CMakeFiles/memory.ld.dir/build: memory.ld
 .PHONY : esp-idf/esp_system/CMakeFiles/memory.ld.dir/build
 
 esp-idf/esp_system/CMakeFiles/memory.ld.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system && $(CMAKE_COMMAND) -P CMakeFiles/memory.ld.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system && $(CMAKE_COMMAND) -P CMakeFiles/memory.ld.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_system/CMakeFiles/memory.ld.dir/clean
 
 esp-idf/esp_system/CMakeFiles/memory.ld.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/esp_system /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system /home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/memory.ld.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/.fus/esp-idf/components/esp_system /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/memory.ld.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp_system/CMakeFiles/memory.ld.dir/depend
 

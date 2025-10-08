@@ -71,5 +71,5 @@ esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 

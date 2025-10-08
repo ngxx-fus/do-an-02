@@ -1,5 +1,0 @@
-Command: make -j 10 all
-/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiHandleCLKIsr':
-/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:209:13: warning: unused variable 'isShiftEdge' [-Wunused-variable]
-  209 |     uint8_t isShiftEdge  = !isSampleEdge;
-      |             ^~~~~~~~~~~

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/depend.make
@@ -75,86 +75,86 @@ esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/codegen:
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c > CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c > CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c -o CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_mmu_map.c -o CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.s
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj -MF CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj -MF CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c > CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c > CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c -o CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c -o CMakeFiles/__idf_esp_mm.dir/port/esp32/ext_mem_layout.c.s
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c > CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c > CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c -o CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_msync.c -o CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.s
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj -MF CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c > CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c > CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c -o CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/esp_cache_utils.c -o CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.s
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj -MF CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj -MF CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c > CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c > CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c -o CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/cache_esp32.c -o CMakeFiles/__idf_esp_mm.dir/cache_esp32.c.s
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/flags.make
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj: /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj -MF CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj -MF CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj.d -o CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj -c /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c > CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c > CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.i
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c -o CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_mm/heap_align_hw.c -o CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.s
 
 # Object files for target __idf_esp_mm
 __idf_esp_mm_OBJECTS = \
@@ -176,19 +176,19 @@ esp-idf/esp_mm/libesp_mm.a: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/cache_esp
 esp-idf/esp_mm/libesp_mm.a: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj
 esp-idf/esp_mm/libesp_mm.a: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/build.make
 esp-idf/esp_mm/libesp_mm.a: esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libesp_mm.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_mm.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_mm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libesp_mm.a"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_mm.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_mm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/build: esp-idf/esp_mm/libesp_mm.a
 .PHONY : esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/build
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_mm.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_mm.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/clean
 
 esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/esp_mm /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm /home/fus/Documents/DO-AN-02/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/.fus/esp-idf/components/esp_mm /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/depend
 

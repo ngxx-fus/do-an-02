@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c" "esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj" "gcc" "esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj.d"
+  "/home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c" "esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj" "gcc" "esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

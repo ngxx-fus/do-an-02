@@ -1,7 +1,7 @@
 esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_mschapv2.c.obj: \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/src/eap_peer/eap_mschapv2.c \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
  /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/os.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/types.h \

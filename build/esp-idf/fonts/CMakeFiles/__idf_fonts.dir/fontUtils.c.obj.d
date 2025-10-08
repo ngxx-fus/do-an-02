@@ -1,7 +1,7 @@
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: \
- /home/fus/Documents/DO-AN-02/fonts/fontUtils.c \
- /home/fus/Documents/DO-AN-02/fonts/fontUtils.h \
- /home/fus/Documents/DO-AN-02/fonts/gfxfont.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/fonts/fontUtils.c \
+ /home/fus/Documents/DO-AN-02-RECEIVER/fonts/fontUtils.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/fonts/gfxfont.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
@@ -9,5 +9,5 @@ esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
- /home/fus/Documents/DO-AN-02/fonts/localFonts/FreeSerif9pt7b.h \
- /home/fus/Documents/DO-AN-02/fonts/localFonts/../gfxfont.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/fonts/localFonts/../gfxfont.h

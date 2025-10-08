@@ -93,5 +93,5 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash/spi_flash_defs.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 

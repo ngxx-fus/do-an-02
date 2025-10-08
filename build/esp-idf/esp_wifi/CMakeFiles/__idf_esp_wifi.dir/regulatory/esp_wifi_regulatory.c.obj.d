@@ -10,7 +10,7 @@ esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/regulatory/esp_wifi_regulatory.c.
  /home/fus/.fus/esp-idf/components/esp_wifi/include/esp_wifi_types_generic.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_event/include/esp_event_base.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_interface.h \
  /home/fus/.fus/esp-idf/components/esp_wifi/include/esp_wifi.h \

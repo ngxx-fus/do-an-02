@@ -3,7 +3,7 @@ esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.obj: \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rmt_periph.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \

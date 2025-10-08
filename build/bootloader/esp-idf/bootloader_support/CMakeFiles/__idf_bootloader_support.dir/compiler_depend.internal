@@ -114,7 +114,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_fl
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash/spi_flash_defs.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c
@@ -244,7 +244,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_fl
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/bootloader_flash/src/flash_qio_mode.c
@@ -347,7 +347,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_fl
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_clock_init.c
@@ -429,7 +429,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_clock_loader.c
@@ -475,7 +475,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_common.c
@@ -594,7 +594,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_common_loader.c
@@ -720,7 +720,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_console.c
@@ -796,7 +796,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/uart_periph.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_console_loader.c
@@ -822,7 +822,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_efuse.c
@@ -885,7 +885,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_init.c
@@ -1033,7 +1033,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_mem.c
@@ -1097,7 +1097,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_panic.c
@@ -1181,7 +1181,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_random.c
@@ -1265,7 +1265,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_random_esp32.c
@@ -1339,7 +1339,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_sha.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_sha.c
@@ -1396,7 +1396,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/hwcrypto_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/bootloader_utility.c
@@ -1565,7 +1565,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c
@@ -1715,7 +1715,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/boo
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_soc.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/esp32/bootloader_soc.c
@@ -1863,7 +1863,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/flash_encrypt.c
@@ -1954,7 +1954,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_enc
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/flash_partitions.c
@@ -2017,7 +2017,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_par
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
  /home/fus/.fus/esp-idf/components/bootloader_support/src/secure_boot.c
@@ -2101,5 +2101,5 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_bo
  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/config/sdkconfig.h
 

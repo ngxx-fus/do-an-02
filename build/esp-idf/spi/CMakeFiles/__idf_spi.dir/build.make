@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-RECEIVER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build
 
 # Include any dependencies generated for this target.
 include esp-idf/spi/CMakeFiles/__idf_spi.dir/depend.make
@@ -73,18 +73,18 @@ esp-idf/spi/CMakeFiles/__idf_spi.dir/codegen:
 .PHONY : esp-idf/spi/CMakeFiles/__idf_spi.dir/codegen
 
 esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: esp-idf/spi/CMakeFiles/__idf_spi.dir/flags.make
-esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c
+esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c
 esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj: esp-idf/spi/CMakeFiles/__idf_spi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj -MF CMakeFiles/__idf_spi.dir/spi.c.obj.d -o CMakeFiles/__idf_spi.dir/spi.c.obj -c /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj -MF CMakeFiles/__idf_spi.dir/spi.c.obj.d -o CMakeFiles/__idf_spi.dir/spi.c.obj -c /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c
 
 esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_spi.dir/spi.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c > CMakeFiles/__idf_spi.dir/spi.c.i
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c > CMakeFiles/__idf_spi.dir/spi.c.i
 
 esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_spi.dir/spi.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c -o CMakeFiles/__idf_spi.dir/spi.c.s
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi/spi.c -o CMakeFiles/__idf_spi.dir/spi.c.s
 
 # Object files for target __idf_spi
 __idf_spi_OBJECTS = \
@@ -96,19 +96,19 @@ __idf_spi_EXTERNAL_OBJECTS =
 esp-idf/spi/libspi.a: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj
 esp-idf/spi/libspi.a: esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make
 esp-idf/spi/libspi.a: esp-idf/spi/CMakeFiles/__idf_spi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libspi.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && $(CMAKE_COMMAND) -P CMakeFiles/__idf_spi.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_spi.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libspi.a"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && $(CMAKE_COMMAND) -P CMakeFiles/__idf_spi.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_spi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/spi/CMakeFiles/__idf_spi.dir/build: esp-idf/spi/libspi.a
 .PHONY : esp-idf/spi/CMakeFiles/__idf_spi.dir/build
 
 esp-idf/spi/CMakeFiles/__idf_spi.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/spi && $(CMAKE_COMMAND) -P CMakeFiles/__idf_spi.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi && $(CMAKE_COMMAND) -P CMakeFiles/__idf_spi.dir/cmake_clean.cmake
 .PHONY : esp-idf/spi/CMakeFiles/__idf_spi.dir/clean
 
 esp-idf/spi/CMakeFiles/__idf_spi.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/comDriver/spi /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/spi /home/fus/Documents/DO-AN-02/build/esp-idf/spi/CMakeFiles/__idf_spi.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-RECEIVER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-RECEIVER /home/fus/Documents/DO-AN-02-RECEIVER/comDriver/spi /home/fus/Documents/DO-AN-02-RECEIVER/build /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/spi/CMakeFiles/__idf_spi.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/spi/CMakeFiles/__idf_spi.dir/depend
 

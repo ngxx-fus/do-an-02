@@ -1,4 +1,4 @@
-/* * Data converted from /home/fus/Documents/DO-AN-02/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

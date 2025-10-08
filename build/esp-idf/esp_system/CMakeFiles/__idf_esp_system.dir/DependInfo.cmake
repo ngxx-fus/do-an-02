@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/debug_helpers_asm.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_handler.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_routines.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/expression_with_stack_asm.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/panic_handler_asm.S.obj"
-  "/home/fus/.fus/esp-idf/components/esp_system/port/soc/esp32/highint_hdl.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32/highint_hdl.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/debug_helpers_asm.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_handler.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_routines.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/expression_with_stack_asm.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/panic_handler_asm.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_system/port/soc/esp32/highint_hdl.S" "/home/fus/Documents/DO-AN-02-RECEIVER/build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32/highint_hdl.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -631,14 +631,14 @@ esp-idf/xtensa/clean: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/clean
 CMakeFiles/menuconfig.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/menuconfig.dir/build.make CMakeFiles/menuconfig.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/menuconfig.dir/build.make CMakeFiles/menuconfig.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target menuconfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target menuconfig"
 .PHONY : CMakeFiles/menuconfig.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/menuconfig.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/menuconfig.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/menuconfig.dir/rule
 
 # Convenience name for target.
@@ -648,7 +648,7 @@ menuconfig: CMakeFiles/menuconfig.dir/rule
 # codegen rule for target.
 CMakeFiles/menuconfig.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/menuconfig.dir/build.make CMakeFiles/menuconfig.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target menuconfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target menuconfig"
 .PHONY : CMakeFiles/menuconfig.dir/codegen
 
 # clean rule for target.
@@ -663,14 +663,14 @@ CMakeFiles/menuconfig.dir/clean:
 CMakeFiles/confserver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confserver.dir/build.make CMakeFiles/confserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confserver.dir/build.make CMakeFiles/confserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target confserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target confserver"
 .PHONY : CMakeFiles/confserver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/confserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/confserver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/confserver.dir/rule
 
 # Convenience name for target.
@@ -680,7 +680,7 @@ confserver: CMakeFiles/confserver.dir/rule
 # codegen rule for target.
 CMakeFiles/confserver.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/confserver.dir/build.make CMakeFiles/confserver.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target confserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target confserver"
 .PHONY : CMakeFiles/confserver.dir/codegen
 
 # clean rule for target.
@@ -695,14 +695,14 @@ CMakeFiles/confserver.dir/clean:
 CMakeFiles/save-defconfig.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/save-defconfig.dir/build.make CMakeFiles/save-defconfig.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/save-defconfig.dir/build.make CMakeFiles/save-defconfig.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target save-defconfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target save-defconfig"
 .PHONY : CMakeFiles/save-defconfig.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/save-defconfig.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/save-defconfig.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/save-defconfig.dir/rule
 
 # Convenience name for target.
@@ -712,7 +712,7 @@ save-defconfig: CMakeFiles/save-defconfig.dir/rule
 # codegen rule for target.
 CMakeFiles/save-defconfig.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/save-defconfig.dir/build.make CMakeFiles/save-defconfig.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target save-defconfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target save-defconfig"
 .PHONY : CMakeFiles/save-defconfig.dir/codegen
 
 # clean rule for target.
@@ -727,14 +727,14 @@ CMakeFiles/save-defconfig.dir/clean:
 CMakeFiles/_project_elf_src.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_project_elf_src.dir/build.make CMakeFiles/_project_elf_src.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_project_elf_src.dir/build.make CMakeFiles/_project_elf_src.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=95 "Built target _project_elf_src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=95 "Built target _project_elf_src"
 .PHONY : CMakeFiles/_project_elf_src.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/_project_elf_src.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/_project_elf_src.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/_project_elf_src.dir/rule
 
 # Convenience name for target.
@@ -744,7 +744,7 @@ _project_elf_src: CMakeFiles/_project_elf_src.dir/rule
 # codegen rule for target.
 CMakeFiles/_project_elf_src.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_project_elf_src.dir/build.make CMakeFiles/_project_elf_src.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=95 "Finished codegen for target _project_elf_src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=95 "Finished codegen for target _project_elf_src"
 .PHONY : CMakeFiles/_project_elf_src.dir/codegen
 
 # clean rule for target.
@@ -761,14 +761,14 @@ CMakeFiles/bootloader.elf.dir/all: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/al
 CMakeFiles/bootloader.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader.elf.dir/build.make CMakeFiles/bootloader.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader.elf.dir/build.make CMakeFiles/bootloader.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=96 "Built target bootloader.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=96 "Built target bootloader.elf"
 .PHONY : CMakeFiles/bootloader.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bootloader.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 96
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bootloader.elf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/bootloader.elf.dir/rule
 
 # Convenience name for target.
@@ -778,7 +778,7 @@ bootloader.elf: CMakeFiles/bootloader.elf.dir/rule
 # codegen rule for target.
 CMakeFiles/bootloader.elf.dir/codegen: CMakeFiles/_project_elf_src.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader.elf.dir/build.make CMakeFiles/bootloader.elf.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=96 "Finished codegen for target bootloader.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=96 "Finished codegen for target bootloader.elf"
 .PHONY : CMakeFiles/bootloader.elf.dir/codegen
 
 # clean rule for target.
@@ -793,14 +793,14 @@ CMakeFiles/bootloader.elf.dir/clean:
 CMakeFiles/size.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size.dir/build.make CMakeFiles/size.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size.dir/build.make CMakeFiles/size.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target size"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target size"
 .PHONY : CMakeFiles/size.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/size.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/size.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/size.dir/rule
 
 # Convenience name for target.
@@ -810,7 +810,7 @@ size: CMakeFiles/size.dir/rule
 # codegen rule for target.
 CMakeFiles/size.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size.dir/build.make CMakeFiles/size.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size"
 .PHONY : CMakeFiles/size.dir/codegen
 
 # clean rule for target.
@@ -825,14 +825,14 @@ CMakeFiles/size.dir/clean:
 CMakeFiles/size-files.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-files.dir/build.make CMakeFiles/size-files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-files.dir/build.make CMakeFiles/size-files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target size-files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target size-files"
 .PHONY : CMakeFiles/size-files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/size-files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/size-files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/size-files.dir/rule
 
 # Convenience name for target.
@@ -842,7 +842,7 @@ size-files: CMakeFiles/size-files.dir/rule
 # codegen rule for target.
 CMakeFiles/size-files.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-files.dir/build.make CMakeFiles/size-files.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size-files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size-files"
 .PHONY : CMakeFiles/size-files.dir/codegen
 
 # clean rule for target.
@@ -857,14 +857,14 @@ CMakeFiles/size-files.dir/clean:
 CMakeFiles/size-components.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-components.dir/build.make CMakeFiles/size-components.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-components.dir/build.make CMakeFiles/size-components.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target size-components"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target size-components"
 .PHONY : CMakeFiles/size-components.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/size-components.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/size-components.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/size-components.dir/rule
 
 # Convenience name for target.
@@ -874,7 +874,7 @@ size-components: CMakeFiles/size-components.dir/rule
 # codegen rule for target.
 CMakeFiles/size-components.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/size-components.dir/build.make CMakeFiles/size-components.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size-components"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target size-components"
 .PHONY : CMakeFiles/size-components.dir/codegen
 
 # clean rule for target.
@@ -889,14 +889,14 @@ CMakeFiles/size-components.dir/clean:
 CMakeFiles/uf2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2.dir/build.make CMakeFiles/uf2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2.dir/build.make CMakeFiles/uf2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target uf2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target uf2"
 .PHONY : CMakeFiles/uf2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uf2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uf2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/uf2.dir/rule
 
 # Convenience name for target.
@@ -906,7 +906,7 @@ uf2: CMakeFiles/uf2.dir/rule
 # codegen rule for target.
 CMakeFiles/uf2.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2.dir/build.make CMakeFiles/uf2.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target uf2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target uf2"
 .PHONY : CMakeFiles/uf2.dir/codegen
 
 # clean rule for target.
@@ -921,14 +921,14 @@ CMakeFiles/uf2.dir/clean:
 CMakeFiles/uf2-app.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2-app.dir/build.make CMakeFiles/uf2-app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2-app.dir/build.make CMakeFiles/uf2-app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target uf2-app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target uf2-app"
 .PHONY : CMakeFiles/uf2-app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uf2-app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uf2-app.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/uf2-app.dir/rule
 
 # Convenience name for target.
@@ -938,7 +938,7 @@ uf2-app: CMakeFiles/uf2-app.dir/rule
 # codegen rule for target.
 CMakeFiles/uf2-app.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uf2-app.dir/build.make CMakeFiles/uf2-app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target uf2-app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target uf2-app"
 .PHONY : CMakeFiles/uf2-app.dir/codegen
 
 # clean rule for target.
@@ -953,14 +953,14 @@ CMakeFiles/uf2-app.dir/clean:
 CMakeFiles/gen_bootloader_binary.dir/all: CMakeFiles/bootloader.elf.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_bootloader_binary.dir/build.make CMakeFiles/gen_bootloader_binary.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_bootloader_binary.dir/build.make CMakeFiles/gen_bootloader_binary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=99 "Built target gen_bootloader_binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=99 "Built target gen_bootloader_binary"
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gen_bootloader_binary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gen_bootloader_binary.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/rule
 
 # Convenience name for target.
@@ -970,7 +970,7 @@ gen_bootloader_binary: CMakeFiles/gen_bootloader_binary.dir/rule
 # codegen rule for target.
 CMakeFiles/gen_bootloader_binary.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_bootloader_binary.dir/build.make CMakeFiles/gen_bootloader_binary.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=99 "Finished codegen for target gen_bootloader_binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=99 "Finished codegen for target gen_bootloader_binary"
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/codegen
 
 # clean rule for target.
@@ -985,14 +985,14 @@ CMakeFiles/gen_bootloader_binary.dir/clean:
 CMakeFiles/gen_project_binary.dir/all: CMakeFiles/gen_bootloader_binary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_project_binary.dir/build.make CMakeFiles/gen_project_binary.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_project_binary.dir/build.make CMakeFiles/gen_project_binary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target gen_project_binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target gen_project_binary"
 .PHONY : CMakeFiles/gen_project_binary.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gen_project_binary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gen_project_binary.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/gen_project_binary.dir/rule
 
 # Convenience name for target.
@@ -1002,7 +1002,7 @@ gen_project_binary: CMakeFiles/gen_project_binary.dir/rule
 # codegen rule for target.
 CMakeFiles/gen_project_binary.dir/codegen: CMakeFiles/gen_bootloader_binary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_project_binary.dir/build.make CMakeFiles/gen_project_binary.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target gen_project_binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target gen_project_binary"
 .PHONY : CMakeFiles/gen_project_binary.dir/codegen
 
 # clean rule for target.
@@ -1018,14 +1018,14 @@ CMakeFiles/app.dir/all: CMakeFiles/gen_project_binary.dir/all
 CMakeFiles/app.dir/all: CMakeFiles/bootloader_check_size.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target app"
 .PHONY : CMakeFiles/app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/app.dir/rule
 
 # Convenience name for target.
@@ -1036,7 +1036,7 @@ app: CMakeFiles/app.dir/rule
 CMakeFiles/app.dir/codegen: CMakeFiles/gen_project_binary.dir/all
 CMakeFiles/app.dir/codegen: CMakeFiles/bootloader_check_size.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target app"
 .PHONY : CMakeFiles/app.dir/codegen
 
 # clean rule for target.
@@ -1051,14 +1051,14 @@ CMakeFiles/app.dir/clean:
 CMakeFiles/bootloader_check_size.dir/all: CMakeFiles/gen_project_binary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader_check_size.dir/build.make CMakeFiles/bootloader_check_size.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader_check_size.dir/build.make CMakeFiles/bootloader_check_size.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target bootloader_check_size"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target bootloader_check_size"
 .PHONY : CMakeFiles/bootloader_check_size.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bootloader_check_size.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 97
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 97
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bootloader_check_size.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : CMakeFiles/bootloader_check_size.dir/rule
 
 # Convenience name for target.
@@ -1068,7 +1068,7 @@ bootloader_check_size: CMakeFiles/bootloader_check_size.dir/rule
 # codegen rule for target.
 CMakeFiles/bootloader_check_size.dir/codegen: CMakeFiles/gen_project_binary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bootloader_check_size.dir/build.make CMakeFiles/bootloader_check_size.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target bootloader_check_size"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target bootloader_check_size"
 .PHONY : CMakeFiles/bootloader_check_size.dir/codegen
 
 # clean rule for target.
@@ -1083,14 +1083,14 @@ CMakeFiles/bootloader_check_size.dir/clean:
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/all: esp-idf/soc/CMakeFiles/__idf_soc.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=92,93,94 "Built target __idf_xtensa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=92,93,94 "Built target __idf_xtensa"
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 92
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 92
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
 
 # Convenience name for target.
@@ -1100,7 +1100,7 @@ __idf_xtensa: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
 # codegen rule for target.
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=92,93,94 "Finished codegen for target __idf_xtensa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=92,93,94 "Finished codegen for target __idf_xtensa"
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/codegen
 
 # clean rule for target.
@@ -1115,14 +1115,14 @@ esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/clean:
 esp-idf/soc/CMakeFiles/__idf_soc.dir/all: esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90 "Built target __idf_soc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90 "Built target __idf_soc"
 .PHONY : esp-idf/soc/CMakeFiles/__idf_soc.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 89
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 89
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/CMakeFiles/__idf_soc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 
 # Convenience name for target.
@@ -1132,7 +1132,7 @@ __idf_soc: esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 # codegen rule for target.
 esp-idf/soc/CMakeFiles/__idf_soc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90 "Finished codegen for target __idf_soc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90 "Finished codegen for target __idf_soc"
 .PHONY : esp-idf/soc/CMakeFiles/__idf_soc.dir/codegen
 
 # clean rule for target.
@@ -1147,14 +1147,14 @@ esp-idf/soc/CMakeFiles/__idf_soc.dir/clean:
 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/all: esp-idf/hal/CMakeFiles/__idf_hal.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=66 "Built target __idf_micro-ecc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=66 "Built target __idf_micro-ecc"
 .PHONY : esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 65
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 65
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
 
 # Convenience name for target.
@@ -1164,7 +1164,7 @@ __idf_micro-ecc: esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
 # codegen rule for target.
 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=66 "Finished codegen for target __idf_micro-ecc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=66 "Finished codegen for target __idf_micro-ecc"
 .PHONY : esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/codegen
 
 # clean rule for target.
@@ -1179,14 +1179,14 @@ esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/clean:
 esp-idf/hal/CMakeFiles/__idf_hal.dir/all: esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=49,50,51,52,53,54,55 "Built target __idf_hal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=49,50,51,52,53,54,55 "Built target __idf_hal"
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/hal/CMakeFiles/__idf_hal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 64
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 64
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/hal/CMakeFiles/__idf_hal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
 
 # Convenience name for target.
@@ -1196,7 +1196,7 @@ __idf_hal: esp-idf/hal/CMakeFiles/__idf_hal.dir/rule
 # codegen rule for target.
 esp-idf/hal/CMakeFiles/__idf_hal.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make esp-idf/hal/CMakeFiles/__idf_hal.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=49,50,51,52,53,54,55 "Finished codegen for target __idf_hal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=49,50,51,52,53,54,55 "Finished codegen for target __idf_hal"
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/codegen
 
 # clean rule for target.
@@ -1211,14 +1211,14 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/clean:
 esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/all: esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build.make esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build.make esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=91 "Built target __idf_spi_flash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=91 "Built target __idf_spi_flash"
 .PHONY : esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 57
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 57
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/rule
 
 # Convenience name for target.
@@ -1228,7 +1228,7 @@ __idf_spi_flash: esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/rule
 # codegen rule for target.
 esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/build.make esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=91 "Finished codegen for target __idf_spi_flash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=91 "Finished codegen for target __idf_spi_flash"
 .PHONY : esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/codegen
 
 # clean rule for target.
@@ -1243,14 +1243,14 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/clean:
 esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/all: esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/build.make esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/build.make esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=27,28 "Built target __idf_esp_bootloader_format"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=27,28 "Built target __idf_esp_bootloader_format"
 .PHONY : esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 56
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 56
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/rule
 
 # Convenience name for target.
@@ -1260,7 +1260,7 @@ __idf_esp_bootloader_format: esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_
 # codegen rule for target.
 esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/build.make esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=27,28 "Finished codegen for target __idf_esp_bootloader_format"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=27,28 "Finished codegen for target __idf_esp_bootloader_format"
 .PHONY : esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/codegen
 
 # clean rule for target.
@@ -1275,14 +1275,14 @@ esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/clean:
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/all: esp-idf/efuse/CMakeFiles/__idf_efuse.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target __idf_bootloader_support"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target __idf_bootloader_support"
 .PHONY : esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
 
 # Convenience name for target.
@@ -1292,7 +1292,7 @@ __idf_bootloader_support: esp-idf/bootloader_support/CMakeFiles/__idf_bootloader
 # codegen rule for target.
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Finished codegen for target __idf_bootloader_support"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Finished codegen for target __idf_bootloader_support"
 .PHONY : esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/codegen
 
 # clean rule for target.
@@ -1307,14 +1307,14 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/clean:
 esp-idf/efuse/CMakeFiles/__idf_efuse.dir/all: esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build.make esp-idf/efuse/CMakeFiles/__idf_efuse.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build.make esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=21,22,23,24,25,26 "Built target __idf_efuse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=21,22,23,24,25,26 "Built target __idf_efuse"
 .PHONY : esp-idf/efuse/CMakeFiles/__idf_efuse.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/__idf_efuse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/__idf_efuse.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/__idf_efuse.dir/rule
 
 # Convenience name for target.
@@ -1324,7 +1324,7 @@ __idf_efuse: esp-idf/efuse/CMakeFiles/__idf_efuse.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/__idf_efuse.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/__idf_efuse.dir/build.make esp-idf/efuse/CMakeFiles/__idf_efuse.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=21,22,23,24,25,26 "Finished codegen for target __idf_efuse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=21,22,23,24,25,26 "Finished codegen for target __idf_efuse"
 .PHONY : esp-idf/efuse/CMakeFiles/__idf_efuse.dir/codegen
 
 # clean rule for target.
@@ -1339,14 +1339,14 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/clean:
 esp-idf/efuse/CMakeFiles/efuse-common-table.dir/all:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-common-table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target efuse-common-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target efuse-common-table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-common-table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/efuse-common-table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/efuse-common-table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-common-table.dir/rule
 
 # Convenience name for target.
@@ -1356,7 +1356,7 @@ efuse-common-table: esp-idf/efuse/CMakeFiles/efuse-common-table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/efuse-common-table.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-common-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-common-table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse-common-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse-common-table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-common-table.dir/codegen
 
 # clean rule for target.
@@ -1371,14 +1371,14 @@ esp-idf/efuse/CMakeFiles/efuse-common-table.dir/clean:
 esp-idf/efuse/CMakeFiles/efuse_common_table.dir/all: esp-idf/efuse/CMakeFiles/efuse-common-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_common_table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=97 "Built target efuse_common_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=97 "Built target efuse_common_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_common_table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/efuse_common_table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/efuse_common_table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_common_table.dir/rule
 
 # Convenience name for target.
@@ -1388,7 +1388,7 @@ efuse_common_table: esp-idf/efuse/CMakeFiles/efuse_common_table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/efuse_common_table.dir/codegen: esp-idf/efuse/CMakeFiles/efuse-common-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_common_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_common_table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=97 "Finished codegen for target efuse_common_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=97 "Finished codegen for target efuse_common_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_common_table.dir/codegen
 
 # clean rule for target.
@@ -1403,14 +1403,14 @@ esp-idf/efuse/CMakeFiles/efuse_common_table.dir/clean:
 esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/all:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target efuse-custom-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target efuse-custom-table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/rule
 
 # Convenience name for target.
@@ -1420,7 +1420,7 @@ efuse-custom-table: esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/build.make esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse-custom-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse-custom-table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/codegen
 
 # clean rule for target.
@@ -1435,14 +1435,14 @@ esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/clean:
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/all: esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=98 "Built target efuse_custom_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=98 "Built target efuse_custom_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/rule
 
 # Convenience name for target.
@@ -1452,7 +1452,7 @@ efuse_custom_table: esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/codegen: esp-idf/efuse/CMakeFiles/efuse-custom-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=98 "Finished codegen for target efuse_custom_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=98 "Finished codegen for target efuse_custom_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/codegen
 
 # clean rule for target.
@@ -1467,14 +1467,14 @@ esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/clean:
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/all:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build.make esp-idf/efuse/CMakeFiles/show-efuse-table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build.make esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target show-efuse-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target show-efuse-table"
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/rule
 
 # Convenience name for target.
@@ -1484,7 +1484,7 @@ show-efuse-table: esp-idf/efuse/CMakeFiles/show-efuse-table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build.make esp-idf/efuse/CMakeFiles/show-efuse-table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target show-efuse-table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target show-efuse-table"
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/codegen
 
 # clean rule for target.
@@ -1499,14 +1499,14 @@ esp-idf/efuse/CMakeFiles/show-efuse-table.dir/clean:
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/all: esp-idf/efuse/CMakeFiles/show-efuse-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make esp-idf/efuse/CMakeFiles/show_efuse_table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=100 "Built target show_efuse_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=100 "Built target show_efuse_table"
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/rule
 
 # Convenience name for target.
@@ -1516,7 +1516,7 @@ show_efuse_table: esp-idf/efuse/CMakeFiles/show_efuse_table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/codegen: esp-idf/efuse/CMakeFiles/show-efuse-table.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make esp-idf/efuse/CMakeFiles/show_efuse_table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=100 "Finished codegen for target show_efuse_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=100 "Finished codegen for target show_efuse_table"
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/codegen
 
 # clean rule for target.
@@ -1531,14 +1531,14 @@ esp-idf/efuse/CMakeFiles/show_efuse_table.dir/clean:
 esp-idf/efuse/CMakeFiles/efuse_test_table.dir/all:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_test_table.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Built target efuse_test_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Built target efuse_test_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_test_table.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/efuse/CMakeFiles/efuse_test_table.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/efuse/CMakeFiles/efuse_test_table.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_test_table.dir/rule
 
 # Convenience name for target.
@@ -1548,7 +1548,7 @@ efuse_test_table: esp-idf/efuse/CMakeFiles/efuse_test_table.dir/rule
 # codegen rule for target.
 esp-idf/efuse/CMakeFiles/efuse_test_table.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/efuse/CMakeFiles/efuse_test_table.dir/build.make esp-idf/efuse/CMakeFiles/efuse_test_table.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse_test_table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num= "Finished codegen for target efuse_test_table"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_test_table.dir/codegen
 
 # clean rule for target.
@@ -1563,14 +1563,14 @@ esp-idf/efuse/CMakeFiles/efuse_test_table.dir/clean:
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/all: esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build.make esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build.make esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=47,48 "Built target __idf_esp_system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=47,48 "Built target __idf_esp_system"
 .PHONY : esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/rule
 
 # Convenience name for target.
@@ -1580,7 +1580,7 @@ __idf_esp_system: esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/rule
 # codegen rule for target.
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/build.make esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=47,48 "Finished codegen for target __idf_esp_system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=47,48 "Finished codegen for target __idf_esp_system"
 .PHONY : esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/codegen
 
 # clean rule for target.
@@ -1595,14 +1595,14 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/clean:
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/all: esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Built target __idf_esp_hw_support"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Built target __idf_esp_hw_support"
 .PHONY : esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
 
 # Convenience name for target.
@@ -1612,7 +1612,7 @@ __idf_esp_hw_support: esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
 # codegen rule for target.
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Finished codegen for target __idf_esp_hw_support"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39 "Finished codegen for target __idf_esp_hw_support"
 .PHONY : esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/codegen
 
 # clean rule for target.
@@ -1627,14 +1627,14 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clean:
 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/all: esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=29,30 "Built target __idf_esp_common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=29,30 "Built target __idf_esp_common"
 .PHONY : esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 
 # Convenience name for target.
@@ -1644,7 +1644,7 @@ __idf_esp_common: esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 # codegen rule for target.
 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=29,30 "Finished codegen for target __idf_esp_common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=29,30 "Finished codegen for target __idf_esp_common"
 .PHONY : esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/codegen
 
 # clean rule for target.
@@ -1659,14 +1659,14 @@ esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/clean:
 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/all: esp-idf/log/CMakeFiles/__idf_log.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Built target __idf_esp_rom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Built target __idf_esp_rom"
 .PHONY : esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 
 # Convenience name for target.
@@ -1676,7 +1676,7 @@ __idf_esp_rom: esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 # codegen rule for target.
 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Finished codegen for target __idf_esp_rom"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=40,41,42,43,44,45,46 "Finished codegen for target __idf_esp_rom"
 .PHONY : esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/codegen
 
 # clean rule for target.
@@ -1691,14 +1691,14 @@ esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/clean:
 esp-idf/log/CMakeFiles/__idf_log.dir/all:
 	$(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=56,57,58,59,60,61,62,63 "Built target __idf_log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=56,57,58,59,60,61,62,63 "Built target __idf_log"
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/log/CMakeFiles/__idf_log.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/CMakeFiles/__idf_log.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/rule
 
 # Convenience name for target.
@@ -1708,7 +1708,7 @@ __idf_log: esp-idf/log/CMakeFiles/__idf_log.dir/rule
 # codegen rule for target.
 esp-idf/log/CMakeFiles/__idf_log.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=56,57,58,59,60,61,62,63 "Finished codegen for target __idf_log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=56,57,58,59,60,61,62,63 "Finished codegen for target __idf_log"
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/codegen
 
 # clean rule for target.
@@ -1723,14 +1723,14 @@ esp-idf/log/CMakeFiles/__idf_log.dir/clean:
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=64,65 "Built target __idf_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=64,65 "Built target __idf_main"
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/all
 
 # Build rule for subdir invocation for target.
 esp-idf/main/CMakeFiles/__idf_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 94
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 94
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/CMakeFiles/__idf_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles 0
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/rule
 
 # Convenience name for target.
@@ -1740,7 +1740,7 @@ __idf_main: esp-idf/main/CMakeFiles/__idf_main.dir/rule
 # codegen rule for target.
 esp-idf/main/CMakeFiles/__idf_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=64,65 "Finished codegen for target __idf_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fus/Documents/DO-AN-02-RECEIVER/build/bootloader/CMakeFiles --progress-num=64,65 "Finished codegen for target __idf_main"
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/codegen
 
 # clean rule for target.
