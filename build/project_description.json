@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "do-an-02",
-    "project_version":    "fe5eb5e-dirty",
+    "project_version":    "d1cb909-dirty",
     "project_path":       "/home/fus/Documents/DO-AN-02",
     "idf_path":           "/home/fus/.fus/esp-idf",
     "build_dir":          "/home/fus/Documents/DO-AN-02/build",
