@@ -1,0 +1,172 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/main/../helper/flag.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/../helper/general.h:25,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:1,
+                 from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cFreq':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:61:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   61 |     __I2C_ASSERT_PIN_OK(STR(__i2cFreq), dev->freq, STR(freq));
+      |     ^~~~~~~~~~~~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2c.h:8,
+                 from /home/fus/Documents/DO-AN-02/main/../driver/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:3:
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:61:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   61 |     __I2C_ASSERT_PIN_OK(STR(__i2cFreq), dev->freq, STR(freq));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:71:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   71 |     __I2C_ASSERT_PIN_OK(STR(__i2cSCL), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:71:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   71 |     __I2C_ASSERT_PIN_OK(STR(__i2cSCL), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:81:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   81 |     __I2C_ASSERT_PIN_OK(STR(__i2cSDA), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:81:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   81 |     __I2C_ASSERT_PIN_OK(STR(__i2cSDA), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSetSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:91:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   91 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:91:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   91 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSetSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:104:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  104 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:104:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  104 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cGetSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:117:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  117 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:117:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  117 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cGetSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:127:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  127 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[%s] %s = %d is invalid"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:44:13: note: in expansion of macro '__i2cErr'
+   44 |             __i2cErr("[%s] %s = %d is invalid",             \
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:127:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  127 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function 'i2cResetIndexTransmitBuffer':
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[i2cResetIndexTransmitBuffer] Dev is null!"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:247:9: note: in expansion of macro '__i2cErr'
+  247 |         __i2cErr("[i2cResetIndexTransmitBuffer] Dev is null!");
+      |         ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function 'i2cResetIndexReceiveBuffer':
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[i2cResetIndexReceiveBuffer] Dev is null!"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:261:9: note: in expansion of macro '__i2cErr'
+  261 |         __i2cErr("[i2cResetIndexReceiveBuffer] Dev is null!");
+      |         ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function 'i2cClearTransmitBuffer':
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[i2cClearTransmitBuffer] Dev is null!"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:275:9: note: in expansion of macro '__i2cErr'
+  275 |         __i2cErr("[i2cClearTransmitBuffer] Dev is null!");
+      |         ^~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function 'i2cClearReceiveBuffer':
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cLog.h:17:38: error: pasting "(" and ""[i2cClearReceiveBuffer] Dev is null!"" does not give a valid preprocessing token
+   17 |     #define __i2cErr(...)       __err( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:290:9: note: in expansion of macro '__i2cErr'
+  290 |         __i2cErr("[i2cClearReceiveBuffer] Dev is null!");
+      |         ^~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7295: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

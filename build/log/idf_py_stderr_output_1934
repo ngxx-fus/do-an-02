@@ -1,0 +1,24 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:10:9: note: '#pragma message: oled128x64.c is compiling...'
+   10 | #pragma message("oled128x64.c is compiling...")
+      |         ^~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'oledResetView':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:128:9: error: implicit declaration of function 'oledSendCommand' [-Wimplicit-function-declaration]
+  128 |         oledSendCommand(oled, cmds[i]);  // Gửi từng byte lệnh (control=0x00)
+      |         ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'oledShowRAMContent':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:151:9: warning: unused variable 'ret' [-Wunused-variable]
+  151 |     def ret;
+      |         ^~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Definitions.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:6:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:31:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   31 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/build.make:79: esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7497: esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

@@ -1,0 +1,2006 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5e4h ( 46564) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b60c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc5c vaddr=40080000 size=023bch (  9148) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15f54h ( 89940) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035f7c vaddr=400823bc size=08fa4h ( 36772) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ef28 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      73bc7e6-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:43:46[0m
+[0;32mI (209) app_init: ELF file SHA256:  fa2506977...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B360 len 00014CA0 (83 KiB): IRAM[0m
+[0;33mW (265) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44044] [-->] app_main()
+[44083] [log] Set systemStage = SYSTEM_INIT
+[44333] [log] Start up OLED screen
+[1052624] [log] [+] oledTask()
+[1063820] [log] [oledTask] Wait for the initializing have been done!
+[1063916] [log] [+] prepairByteDataTask()
+[1075421] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075527] [log] [+] modeControlTask()
+[1086927] [log] [modeControlTask] Wait for the initializing have been done!
+[1087030] [log] Set systemStage = SYSTEM_RUNNING
+[1097997] [-->] oledTest()
+[1098061] [-->] prepairByteDataTask(0x00000000)
+[1098176] [-->] modeControlTask(0x00000000)
+[1099705] [-[>]9993SendBackD[modeControlTask
+[efault9] [err] MODE: syste[-->e is nowivalid! --> 0)
+[10[65079[err] EXITsetSendBackemMo() : ERot [111155--> A->] se
+Rece3204] [luff(0x3ffb420b)S[11157MODE[err] M1DE: systemM>] createS valid! (sp Abort!
+ 1Dev)3
+[ 121561] [<eceiveByteSuff(vice() 
+OKE
+[1125101] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 10, config: 0x0005)
+[1134736] [<--] configSPIDevice() : OKE
+[1138287] [-->] startupSPIDevice(0x3ffb6de4)
+[1142292] [log] [startupSPIDevice] Config for SLAVE mode
+[1148421] [<--] startupSPIDevice() : OKE
+[1150976] [<--] modeControl() : OKE
+[3146190] [log] CLK: 0
+[3146224] [log] MOSI: 0
+[3146255] [log] CS falling edge
+[3196191] [log] CLK: 1
+[3196218] [log] MOSI: 0
+[3246191] [log] CLK: 0
+[3246217] [log] MOSI: 0
+[3296192] [log] CLK: 1
+[3296218] [log] MOSI: 0
+[3346192] [log] CLK: 0
+[3346218] [log] MOSI: 1
+[3396193] [log] CLK: 1
+[3396219] [log] MOSI: 1
+[3446193] [log] CLK: 0
+[3446218] [log] MOSI: 0
+[3496193] [log] CLK: 1
+[3496220] [log] MOSI: 0
+[3546194] [log] CLK: 0
+[3546219] [log] MOSI: 1
+[3596194] [log] CLK: 1
+[3596221] [log] MOSI: 1
+[3646194] [log] CLK: 0
+[3646220] [log] MOSI: 1
+[3696195] [log] CLK: 1
+[3696221] [log] MOSI: 1
+[3746195] [log] CLK: 0
+[3746221] [log] MOSI: 0
+[3796195] [log] CLK: 1
+[3796222] [log] MOSI: 0
+[3846196] [log] CLK: 0
+[3846221] [log] MOSI: 0
+[3896196] [log] CLK: 1
+[3896223] [log] MOSI: 0
+[3946197] [log] CS rising edge
+[5986208] [log] CS falling edge
+[6036208] [log] CLK: 1
+[6036235] [log] MOSI: 0
+[6086209] [log] CLK: 0
+[6086234] [log] MOSI: 1
+[6136209] [log] CLK: 1
+[6136236] [log] MOSI: 1
+[6186209] [log] CLK: 0
+[6186235] [log] MOSI: 0
+[6236210] [log] CLK: 1
+[6236236] [log] MOSI: 0
+[6286210] [log] CLK: 0
+[6286236] [log] MOSI: 1
+[6336210] [log] CLK: 1
+[6336237] [log] MOSI: 1
+[6386211] [log] CLK: 0
+[6386236] [log] MOSI: 0
+[6436211] [log] CLK: 1
+[6436238] [log] MOSI: 0
+[6486211] [log] CLK: 0
+[6486237] [log] MOSI: 1
+[6536212] [log] CLK: 1
+[6536239] [log] MOSI: 1
+[6586212] [log] CLK: 0
+[6586238] [log] MOSI: 0
+[6636213] [log] CLK: 1
+[6636239] [log] MOSI: 0
+[6686213] [log] CLK: 0
+[6686239] [log] MOSI: 0
+[6736213] [log] CLK: 1
+[6736240] [log] MOSI: 0
+[6786214] [log] CS rising edge
+[8826180] [log] CS falling edge
+[8876181] [log] CLK: 1
+[8876208] [log] MOSI: 0
+[8926182] [log] CLK: 0
+[8926207] [log] MOSI: 1
+[8976182] [log] CLK: 1
+[8976209] [log] MOSI: 1
+[9026182] [log] CLK: 0
+[9026208] [log] MOSI: 1
+[9076183] [log] CLK: 1
+[9076209] [log] MOSI: 1
+[9126183] [log] CLK: 0
+[9126209] [log] MOSI: 1
+[9176183] [log] CLK: 1
+[9176210] [log] MOSI: 1
+[9226184] [log] CLK: 0
+[9226209] [log] MOSI: 1
+[9276184] [log] CLK: 1
+[9276211] [log] MOSI: 1
+[9326184] [log] CLK: 0
+[9326210] [log] MOSI: 0
+[9376185] [log] CLK: 1
+[9376212] [log] MOSI: 0
+[9426185] [log] CLK: 0
+[9426211] [log] MOSI: 0
+[9476186] [log] CLK: 1
+[9476212] [log] MOSI: 0
+[9526186] [log] CLK: 0
+[9526212] [log] MOSI: 0
+[9576186] [log] CLK: 1
+[9576213] [log] MOSI: 0
+[9626187] [log] CS rising edge
+[11666175] [log] CS falling edge
+[11716176] [log] CLK: 1
+[11716204] [log] MOSI: 0
+[11766176] [log] CLK: 0
+[11766204] [log] MOSI: 1
+[11816177] [log] CLK: 1
+[11816205] [log] MOSI: 1
+[11866177] [log] CLK: 0
+[11866204] [log] MOSI: 1
+[11916178] [log] CLK: 1
+[11916206] [log] MOSI: 1
+[11966178] [log] CLK: 0
+[11966205] [log] MOSI: 1
+[12016178] [log] CLK: 1
+[12016207] [log] MOSI: 1
+[12066179] [log] CLK: 0
+[12066206] [log] MOSI: 0
+[12116179] [log] CLK: 1
+[12116207] [log] MOSI: 0
+[12166179] [log] CLK: 0
+[12166207] [log] MOSI: 0
+[12216180] [log] CLK: 1
+[12216208] [log] MOSI: 0
+[12266180] [log] CLK: 0
+[12266207] [log] MOSI: 0
+[12316180] [log] CLK: 1
+[12316209] [log] MOSI: 0
+[12366181] [log] CLK: 0
+[12366208] [log] MOSI: 1
+[12416181] [log] CLK: 1
+[12416209] [log] MOSI: 1
+[12466182] [log] CS rising edge
+[14506170] [log] CS falling edge
+[14556171] [log] CLK: 1
+[14556199] [log] MOSI: 0
+[14606171] [log] CLK: 0
+[14606199] [log] MOSI: 1
+[14656172] [log] CLK: 1
+[14656200] [log] MOSI: 1
+[14706172] [log] CLK: 0
+[14706199] [log] MOSI: 0
+[14756172] [log] CLK: 1
+[14756201] [log] MOSI: 0
+[14806173] [log] CLK: 0
+[14806200] [log] MOSI: 0
+[14856173] [log] CLK: 1
+[14856201] [log] MOSI: 0
+[14906173] [log] CLK: 0
+[14906201] [log] MOSI: 0
+[14956174] [log] CLK: 1
+[14956202] [log] MOSI: 0
+[15006174] [log] CLK: 0
+[15006201] [log] MOSI: 1
+[15056175] [log] CLK: 1
+[15056203] [log] MOSI: 1
+[15106175] [log] CLK: 0
+[15106202] [log] MOSI: 1
+[15156175] [log] CLK: 1
+[15156204] [log] MOSI: 1
+[15206176] [log] CLK: 0
+[15206203] [log] MOSI: 1
+[15256176] [log] CLK: 1
+[15256204] [log] MOSI: 1
+[15306176] [log] CS rising edge
+[17346128] [log] CS falling edge
+[17396129] [log] CLK: 1
+[17396157] [log] MOSI: 0
+[17446129] [log] CLK: 0
+[17446156] [log] MOSI: 1
+[17496129] [log] CLK: 1
+[17496158] [log] MOSI: 1
+[17546130] [log] CLK: 0
+[17546157] [log] MOSI: 0
+[17596130] [log] CLK: 1
+[17596158] [log] MOSI: 0
+[17646130] [log] CLK: 0
+[17646158] [log] MOSI: 1
+[17696131] [log] CLK: 1
+[17696159] [log] MOSI: 1
+[17746131] [log] CLK: 0
+[17746158] [log] MOSI: 1
+[17796132] [log] CLK: 1
+[17796160] [log] MOSI: 1
+[17846132] [log] CLK: 0
+[17846159] [log] MOSI: 0
+[17896132] [log] CLK: 1
+[17896161] [log] MOSI: 0
+[17946133] [log] CLK: 0
+[17946160] [log] MOSI: 1
+[17996133] [log] CLK: 1
+[17996161] [log] MOSI: 1
+[18046133] [log] CLK: 0
+[18046161] [log] MOSI: 1
+[18096134] [log] CLK: 1
+[18096162] [log] MOSI: 1
+[18146134] [log] CS rising edge
+[20186133] [log] CS falling edge
+[20236133] [log] CLK: 1
+[20236162] [log] MOSI: 0
+[20286134] [log] CLK: 0
+[20286161] [log] MOSI: 1
+[20336134] [log] CLK: 1
+[20336162] [log] MOSI: 1
+[20386134] [log] CLK: 0
+[20386162] [log] MOSI: 1
+[20436135] [log] CLK: 1
+[20436163] [log] MOSI: 1
+[20486135] [log] CLK: 0
+[20486162] [log] MOSI: 1
+[20536136] [log] CLK: 1
+[20536164] [log] MOSI: 1
+[20586136] [log] CLK: 0
+[20586163] [log] MOSI: 0
+[20636136] [log] CLK: 1
+[20636165] [log] MOSI: 0
+[20686137] [log] CLK: 0
+[20686164] [log] MOSI: 0
+[20736137] [log] CLK: 1
+[20736165] [log] MOSI: 0
+[20786137] [log] CLK: 0
+[20786165] [log] MOSI: 0
+[20836138] [log] CLK: 1
+[20836166] [log] MOSI: 0
+[20886138] [log] CLK: 0
+[20886165] [log] MOSI: 0
+[20936138] [log] CLK: 1
+[20936167] [log] MOSI: 0
+[20986139] [log] CS rising edge
+[23026123] [log] CS falling edge
+[23076123] [log] CLK: 1
+[23076152] [log] MOSI: 0
+[23126124] [log] CLK: 0
+[23126151] [log] MOSI: 1
+[23176124] [log] CLK: 1
+[23176152] [log] MOSI: 1
+[23226124] [log] CLK: 0
+[23226152] [log] MOSI: 0
+[23276125] [log] CLK: 1
+[23276153] [log] MOSI: 0
+[23326125] [log] CLK: 0
+[23326152] [log] MOSI: 1
+[23376125] [log] CLK: 1
+[23376154] [log] MOSI: 1
+[23426126] [log] CLK: 0
+[23426153] [log] MOSI: 0
+[23476126] [log] CLK: 1
+[23476154] [log] MOSI: 0
+[23526126] [log] CLK: 0
+[23526154] [log] MOSI: 0
+[23576127] [log] CLK: 1
+[23576155] [log] MOSI: 0
+[23626127] [log] CLK: 0
+[23626155] [log] MOSI: 1
+[23676128] [log] CLK: 1
+[23676156] [log] MOSI: 1
+[23726128] [log] CLK: 0
+[23726155] [log] MOSI: 0
+[23776128] [log] CLK: 1
+[23776157] [log] MOSI: 0
+[23826129] [log] CS rising edge
+[25866100] [log] CS falling edge
+[25916101] [log] CLK: 1
+[25916129] [log] MOSI: 0
+[25966101] [log] CLK: 0
+[25966128] [log] MOSI: 0
+[26016101] [log] CLK: 1
+[26016130] [log] MOSI: 0
+[26066102] [log] CLK: 0
+[26066129] [log] MOSI: 1
+[26116102] [log] CLK: 1
+[26116130] [log] MOSI: 1
+[26166102] [log] CLK: 0
+[26166130] [log] MOSI: 1
+[26216103] [log] CLK: 1
+[26216131] [log] MOSI: 1
+[26266103] [log] CLK: 0
+[26266131] [log] MOSI: 0
+[26316104] [log] CLK: 1
+[26316132] [log] MOSI: 0
+[26366104] [log] CLK: 0
+[26366131] [log] MOSI: 1
+[26416104] [log] CLK: 1
+[26416133] [log] MOSI: 1
+[26466105] [log] CLK: 0
+[26466132] [log] MOSI: 1
+[26516105] [log] CLK: 1
+[26516133] [log] MOSI: 1
+[26566105] [log] CLK: 0
+[26566133] [log] MOSI: 0
+[26616106] [log] CLK: 1
+[26616134] [log] MOSI: 0
+[26666106] [log] CS rising edge
+[28706084] [log] CS falling edge
+[28756085] [log] CLK: 1
+[28756113] [log] MOSI: 0
+[28806085] [log] CLK: 0
+[28806112] [log] MOSI: 1
+[28856085] [log] CLK: 1
+[28856114] [log] MOSI: 1
+[28906086] [log] CLK: 0
+[28906113] [log] MOSI: 1
+[28956086] [log] CLK: 1
+[28956114] [log] MOSI: 1
+[29006086] [log] CLK: 0
+[29006114] [log] MOSI: 0
+[29056087] [log] CLK: 1
+[29056115] [log] MOSI: 0
+[29106087] [log] CLK: 0
+[29106114] [log] MOSI: 1
+[29156088] [log] CLK: 1
+[29156116] [log] MOSI: 1
+[29206088] [log] CLK: 0
+[29206115] [log] MOSI: 0
+[29256088] [log] CLK: 1
+[29256117] [log] MOSI: 0
+[29306089] [log] CLK: 0
+[29306116] [log] MOSI: 0
+[29356089] [log] CLK: 1
+[29356117] [log] MOSI: 0
+[29406089] [log] CLK: 0
+[29406117] [log] MOSI: 0
+[29456090] [log] CLK: 1
+[29456118] [log] MOSI: 0
+[29506090] [log] CS rising edge
+[31546064] [log] CS falling edge
+[31596065] [log] CLK: 1
+[31596093] [log] MOSI: 0
+[31646065] [log] CLK: 0
+[31646092] [log] MOSI: 1
+[31696065] [log] CLK: 1
+[31696094] [log] MOSI: 1
+[31746066] [log] CLK: 0
+[31746093] [log] MOSI: 1
+[31796066] [log] CLK: 1
+[31796094] [log] MOSI: 1
+[31846066] [log] CLK: 0
+[31846094] [log] MOSI: 1
+[31896067] [log] CLK: 1
+[31896095] [log] MOSI: 1
+[31946067] [log] CLK: 0
+[31946094] [log] MOSI: 0
+[31996067] [log] CLK: 1
+[31996096] [log] MOSI: 0
+[32046068] [log] CLK: 0
+[32046095] [log] MOSI: 1
+[32096068] [log] CLK: 1
+[32096096] [log] MOSI: 1
+[32146069] [log] CLK: 0
+[32146096] [log] MOSI: 1
+[32196069] [log] CLK: 1
+[32196097] [log] MOSI: 1
+[32246069] [log] CLK: 0
+[32246097] [log] MOSI: 1
+[32296070] [log] CLK: 1
+[32296098] [log] MOSI: 1
+[32346070] [log] CS rising edge
+[34386015] [log] CS falling edge
+[34436016] [log] CLK: 1
+[34436044] [log] MOSI: 0
+[34486016] [log] CLK: 0
+[34486043] [log] MOSI: 0
+[34536017] [log] CLK: 1
+[34536045] [log] MOSI: 0
+[34586017] [log] CLK: 0
+[34586044] [log] MOSI: 1
+[34636017] [log] CLK: 1
+[34636046] [log] MOSI: 1
+[34686018] [log] CLK: 0
+[34686045] [log] MOSI: 0
+[34736018] [log] CLK: 1
+[34736046] [log] MOSI: 0
+[34786018] [log] CLK: 0
+[34786046] [log] MOSI: 1
+[34836019] [log] CLK: 1
+[34836047] [log] MOSI: 1
+[34886019] [log] CLK: 0
+[34886046] [log] MOSI: 1
+[34936020] [log] CLK: 1
+[34936048] [log] MOSI: 1
+[34986020] [log] CLK: 0
+[34986047] [log] MOSI: 1
+[35036020] [log] CLK: 1
+[35036049] [log] MOSI: 1
+[35086021] [log] CLK: 0
+[35086048] [log] MOSI: 0
+[35136021] [log] CLK: 1
+[35136049] [log] MOSI: 0
+[35186021] [log] CS rising edge
+[37226019] [log] CS falling edge
+[37276020] [log] CLK: 1
+[37276048] [log] MOSI: 0
+[37326020] [log] CLK: 0
+[37326047] [log] MOSI: 0
+[37376021] [log] CLK: 1
+[37376049] [log] MOSI: 0
+[37426021] [log] CLK: 0
+[37426048] [log] MOSI: 1
+[37476021] [log] CLK: 1
+[37476050] [log] MOSI: 1
+[37526022] [log] CLK: 0
+[37526049] [log] MOSI: 0
+[37576022] [log] CLK: 1
+[37576050] [log] MOSI: 0
+[37626022] [log] CLK: 0
+[37626050] [log] MOSI: 1
+[37676023] [log] CLK: 1
+[37676051] [log] MOSI: 1
+[37726023] [log] CLK: 0
+[37726050] [log] MOSI: 0
+[37776023] [log] CLK: 1
+[37776052] [log] MOSI: 0
+[37826024] [log] CLK: 0
+[37826051] [log] MOSI: 1
+[37876024] [log] CLK: 1
+[37876052] [log] MOSI: 1
+[37926024] [log] CLK: 0
+[37926052] [log] MOSI: 0
+[37976025] [log] CLK: 1
+[37976053] [log] MOSI: 0
+[38026025] [log] CS rising edge
+[40065981] [log] CS falling edge
+[40115982] [log] CLK: 1
+[40116010] [log] MOSI: 0
+[40165982] [log] CLK: 0
+[40166010] [log] MOSI: 0
+[40215983] [log] CLK: 1
+[40216011] [log] MOSI: 0
+[40265983] [log] CLK: 0
+[40266011] [log] MOSI: 1
+[40315984] [log] CLK: 1
+[40316012] [log] MOSI: 1
+[40365984] [log] CLK: 0
+[40366011] [log] MOSI: 0
+[40415984] [log] CLK: 1
+[40416013] [log] MOSI: 0
+[40465985] [log] CLK: 0
+[40466012] [log] MOSI: 0
+[40515985] [log] CLK: 1
+[40516013] [log] MOSI: 0
+[40565985] [log] CLK: 0
+[40566013] [log] MOSI: 0
+[40615986] [log] CLK: 1
+[40616014] [log] MOSI: 0
+[40665986] [log] CLK: 0
+[40666013] [log] MOSI: 0
+[40715986] [log] CLK: 1
+[40716015] [log] MOSI: 0
+[40765987] [log] CLK: 0
+[40766014] [log] MOSI: 0
+[40815987] [log] CLK: 1
+[40816016] [log] MOSI: 0
+[40865988] [log] CS rising edge
+[42906032] [log] CS falling edge
+[42956032] [log] CLK: 1
+[42956061] [log] MOSI: 0
+[43006033] [log] CLK: 0
+[43006060] [log] MOSI: 1
+[43056033] [log] CLK: 1
+[43056062] [log] MOSI: 1
+[43106033] [log] CLK: 0
+[43106061] [log] MOSI: 0
+[43156034] [log] CLK: 1
+[43156062] [log] MOSI: 0
+[43206034] [log] CLK: 0
+[43206062] [log] MOSI: 0
+[43256035] [log] CLK: 1
+[43256063] [log] MOSI: 0
+[43306035] [log] CLK: 0
+[43306062] [log] MOSI: 1
+[43356035] [log] CLK: 1
+[43356064] [log] MOSI: 1
+[43406036] [log] CLK: 0
+[43406063] [log] MOSI: 1
+[43456036] [log] CLK: 1
+[43456064] [log] MOSI: 1
+[43506036] [log] CLK: 0
+[43506064] [log] MOSI: 0
+[43556037] [log] CLK: 1
+[43556065] [log] MOSI: 0
+[43606037] [log] CLK: 0
+[43606065] [log] MOSI: 1
+[43656038] [log] CLK: 1
+[43656066] [log] MOSI: 1
+[43706038] [log] CS rising edge
+[45745991] [log] CS falling edge
+[45795992] [log] CLK: 1
+[45796021] [log] MOSI: 0
+[45845992] [log] CLK: 0
+[45846020] [log] MOSI: 1
+[45895993] [log] CLK: 1
+[45896021] [log] MOSI: 1
+[45945993] [log] CLK: 0
+[45946021] [log] MOSI: 0
+[45995994] [log] CLK: 1
+[45996022] [log] MOSI: 0
+[46045994] [log] CLK: 0
+[46046021] [log] MOSI: 0
+[46095994] [log] CLK: 1
+[46096023] [log] MOSI: 0
+[46145995] [log] CLK: 0
+[46146022] [log] MOSI: 0
+[46195995] [log] CLK: 1
+[46196023] [log] MOSI: 0
+[46245995] [log] CLK: 0
+[46246023] [log] MOSI: 1
+[46295996] [log] CLK: 1
+[46296024] [log] MOSI: 1
+[46345996] [log] CLK: 0
+[46346024] [log] MOSI: 0
+[46395996] [log] CLK: 1
+[46396025] [log] MOSI: 0
+[46445997] [log] CLK: 0
+[46446024] [log] MOSI: 1
+[46495997] [log] CLK: 1
+[46496026] [log] MOSI: 1
+[46545998] [log] CS rising edge
+[48585958] [log] CS falling edge
+[48635959] [log] CLK: 1
+[48635987] [log] MOSI: 0
+[48685959] [log] CLK: 0
+[48685987] [log] MOSI: 1
+[48735960] [log] CLK: 1
+[48735988] [log] MOSI: 1
+[48785960] [log] CLK: 0
+[48785987] [log] MOSI: 1
+[48835960] [log] CLK: 1
+[48835989] [log] MOSI: 1
+[48885961] [log] CLK: 0
+[48885988] [log] MOSI: 0
+[48935961] [log] CLK: 1
+[48935990] [log] MOSI: 0
+[48985961] [log] CLK: 0
+[48985989] [log] MOSI: 0
+[49035962] [log] CLK: 1
+[49035990] [log] MOSI: 0
+[49085962] [log] CLK: 0
+[49085990] [log] MOSI: 0
+[49135963] [log] CLK: 1
+[49135991] [log] MOSI: 0
+[49185963] [log] CLK: 0
+[49185990] [log] MOSI: 1
+[49235963] [log] CLK: 1
+[49235992] [log] MOSI: 1
+[49285964] [log] CLK: 0
+[49285991] [log] MOSI: 1
+[49335964] [log] CLK: 1
+[49335992] [log] MOSI: 1
+[49385964] [log] CS rising edge
+[51425939] [log] CS falling edge
+[51475940] [log] CLK: 1
+[51475968] [log] MOSI: 0
+[51525940] [log] CLK: 0
+[51525967] [log] MOSI: 1
+[51575940] [log] CLK: 1
+[51575969] [log] MOSI: 1
+[51625941] [log] CLK: 0
+[51625968] [log] MOSI: 1
+[51675941] [log] CLK: 1
+[51675969] [log] MOSI: 1
+[51725941] [log] CLK: 0
+[51725969] [log] MOSI: 0
+[51775942] [log] CLK: 1
+[51775970] [log] MOSI: 0
+[51825942] [log] CLK: 0
+[51825969] [log] MOSI: 0
+[51875942] [log] CLK: 1
+[51875971] [log] MOSI: 0
+[51925943] [log] CLK: 0
+[51925970] [log] MOSI: 0
+[51975943] [log] CLK: 1
+[51975972] [log] MOSI: 0
+[52025944] [log] CLK: 0
+[52025971] [log] MOSI: 1
+[52075944] [log] CLK: 1
+[52075972] [log] MOSI: 1
+[52125944] [log] CLK: 0
+[52125972] [log] MOSI: 1
+[52175945] [log] CLK: 1
+[52175973] [log] MOSI: 1
+[52225945] [log] CS rising edge
+[54265924] [log] CS falling edge
+[54315925] [log] CLK: 1
+[54315953] [log] MOSI: 0
+[54365925] [log] CLK: 0
+[54365953] [log] MOSI: 1
+[54415926] [log] CLK: 1
+[54415954] [log] MOSI: 1
+[54465926] [log] CLK: 0
+[54465953] [log] MOSI: 0
+[54515926] [log] CLK: 1
+[54515955] [log] MOSI: 0
+[54565927] [log] CLK: 0
+[54565954] [log] MOSI: 1
+[54615927] [log] CLK: 1
+[54615955] [log] MOSI: 1
+[54665927] [log] CLK: 0
+[54665955] [log] MOSI: 1
+[54715928] [log] CLK: 1
+[54715956] [log] MOSI: 1
+[54765928] [log] CLK: 0
+[54765955] [log] MOSI: 1
+[54815928] [log] CLK: 1
+[54815957] [log] MOSI: 1
+[54865929] [log] CLK: 0
+[54865956] [log] MOSI: 0
+[54915929] [log] CLK: 1
+[54915958] [log] MOSI: 0
+[54965930] [log] CLK: 0
+[54965957] [log] MOSI: 0
+[55015930] [log] CLK: 1
+[55015958] [log] MOSI: 0
+[55065930] [log] CS rising edge
+[57105905] [log] CS falling edge
+[57155906] [log] CLK: 1
+[57155935] [log] MOSI: 0
+[57205906] [log] CLK: 0
+[57205934] [log] MOSI: 1
+[57255907] [log] CLK: 1
+[57255935] [log] MOSI: 1
+[57305907] [log] CLK: 0
+[57305935] [log] MOSI: 1
+[57355908] [log] CLK: 1
+[57355936] [log] MOSI: 1
+[57405908] [log] CLK: 0
+[57405935] [log] MOSI: 1
+[57455908] [log] CLK: 1
+[57455937] [log] MOSI: 1
+[57505909] [log] CLK: 0
+[57505936] [log] MOSI: 0
+[57555909] [log] CLK: 1
+[57555938] [log] MOSI: 0
+[57605909] [log] CLK: 0
+[57605937] [log] MOSI: 0
+[57655910] [log] CLK: 1
+[57655938] [log] MOSI: 0
+[57705910] [log] CLK: 0
+[57705938] [log] MOSI: 1
+[57755911] [log] CLK: 1
+[57755939] [log] MOSI: 1
+[57805911] [log] CLK: 0
+[57805938] [log] MOSI: 0
+[57855911] [log] CLK: 1
+[57855940] [log] MOSI: 0
+[57905912] [log] CS rising edge
+[59945925] [log] CS falling edge
+[59995925] [log] CLK: 1
+[59995954] [log] MOSI: 0
+[60045926] [log] CLK: 0
+[60045953] [log] MOSI: 1
+[60095926] [log] CLK: 1
+[60095955] [log] MOSI: 1
+[60145927] [log] CLK: 0
+[60145954] [log] MOSI: 0
+[60195927] [log] CLK: 1
+[60195955] [log] MOSI: 0
+[60245927] [log] CLK: 0
+[60245955] [log] MOSI: 0
+[60295928] [log] CLK: 1
+[60295956] [log] MOSI: 0
+[60345928] [log] CLK: 0
+[60345955] [log] MOSI: 0
+[60395928] [log] CLK: 1
+[60395957] [log] MOSI: 0
+[60445929] [log] CLK: 0
+[60445956] [log] MOSI: 0
+[60495929] [log] CLK: 1
+[60495958] [log] MOSI: 0
+[60545929] [log] CLK: 0
+[60545957] [log] MOSI: 1
+[60595930] [log] CLK: 1
+[60595958] [log] MOSI: 1
+[60645930] [log] CLK: 0
+[60645958] [log] MOSI: 0
+[60695931] [log] CLK: 1
+[60695959] [log] MOSI: 0
+[60745931] [log] CS rising edge
+[62785873] [log] CS falling edge
+[62835874] [log] CLK: 1
+[62835903] [log] MOSI: 0
+[62885874] [log] CLK: 0
+[62885902] [log] MOSI: 1
+[62935875] [log] CLK: 1
+[62935903] [log] MOSI: 1
+[62985875] [log] CLK: 0
+[62985903] [log] MOSI: 0
+[63035876] [log] CLK: 1
+[63035904] [log] MOSI: 0
+[63085876] [log] CLK: 0
+[63085903] [log] MOSI: 1
+[63135876] [log] CLK: 1
+[63135905] [log] MOSI: 1
+[63185877] [log] CLK: 0
+[63185904] [log] MOSI: 1
+[63235877] [log] CLK: 1
+[63235906] [log] MOSI: 1
+[63285877] [log] CLK: 0
+[63285905] [log] MOSI: 1
+[63335878] [log] CLK: 1
+[63335906] [log] MOSI: 1
+[63385878] [log] CLK: 0
+[63385906] [log] MOSI: 0
+[63435879] [log] CLK: 1
+[63435907] [log] MOSI: 0
+[63485879] [log] CLK: 0
+[63485906] [log] MOSI: 0
+[63535879] [log] CLK: 1
+[63535908] [log] MOSI: 0
+[63585880] [log] CS rising edge
+[65625899] [log] CS falling edge
+[65675900] [log] CLK: 1
+[65675928] [log] MOSI: 0
+[65725900] [log] CLK: 0
+[65725928] [log] MOSI: 1
+[65775901] [log] CLK: 1
+[65775929] [log] MOSI: 1
+[65825901] [log] CLK: 0
+[65825928] [log] MOSI: 0
+[65875901] [log] CLK: 1
+[65875930] [log] MOSI: 0
+[65925902] [log] CLK: 0
+[65925929] [log] MOSI: 0
+[65975902] [log] CLK: 1
+[65975931] [log] MOSI: 0
+[66025902] [log] CLK: 0
+[66025930] [log] MOSI: 0
+[66075903] [log] CLK: 1
+[66075931] [log] MOSI: 0
+[66125903] [log] CLK: 0
+[66125931] [log] MOSI: 0
+[66175904] [log] CLK: 1
+[66175932] [log] MOSI: 0
+[66225904] [log] CLK: 0
+[66225931] [log] MOSI: 0
+[66275904] [log] CLK: 1
+[66275933] [log] MOSI: 0
+[66325905] [log] CLK: 0
+[66325932] [log] MOSI: 0
+[66375905] [log] CLK: 1
+[66375934] [log] MOSI: 0
+[66425905] [log] CS rising edge
+[68465863] [log] CS falling edge
+[68515864] [log] CLK: 1
+[68515892] [log] MOSI: 0
+[68565864] [log] CLK: 0
+[68565891] [log] MOSI: 0
+[68615864] [log] CLK: 1
+[68615893] [log] MOSI: 0
+[68665865] [log] CLK: 0
+[68665892] [log] MOSI: 1
+[68715865] [log] CLK: 1
+[68715893] [log] MOSI: 1
+[68765865] [log] CLK: 0
+[68765893] [log] MOSI: 1
+[68815866] [log] CLK: 1
+[68815894] [log] MOSI: 1
+[68865866] [log] CLK: 0
+[68865894] [log] MOSI: 0
+[68915866] [log] CLK: 1
+[68915895] [log] MOSI: 0
+[68965867] [log] CLK: 0
+[68965894] [log] MOSI: 1
+[69015867] [log] CLK: 1
+[69015896] [log] MOSI: 1
+[69065868] [log] CLK: 0
+[69065895] [log] MOSI: 1
+[69115868] [log] CLK: 1
+[69115896] [log] MOSI: 1
+[69165868] [log] CLK: 0
+[69165896] [log] MOSI: 0
+[69215869] [log] CLK: 1
+[69215897] [log] MOSI: 0
+[69265869] [log] CS rising edge
+[71305814] [log] CS falling edge
+[71355815] [log] CLK: 1
+[71355844] [log] MOSI: 0
+[71405815] [log] CLK: 0
+[71405843] [log] MOSI: 0
+[71455816] [log] CLK: 1
+[71455844] [log] MOSI: 0
+[71505816] [log] CLK: 0
+[71505844] [log] MOSI: 1
+[71555817] [log] CLK: 1
+[71555845] [log] MOSI: 1
+[71605817] [log] CLK: 0
+[71605844] [log] MOSI: 0
+[71655817] [log] CLK: 1
+[71655846] [log] MOSI: 0
+[71705818] [log] CLK: 0
+[71705845] [log] MOSI: 0
+[71755818] [log] CLK: 1
+[71755846] [log] MOSI: 0
+[71805818] [log] CLK: 0
+[71805846] [log] MOSI: 0
+[71855819] [log] CLK: 1
+[71855847] [log] MOSI: 0
+[71905819] [log] CLK: 0
+[71905846] [log] MOSI: 0
+[71955819] [log] CLK: 1
+[71955848] [log] MOSI: 0
+[72005820] [log] CLK: 0
+[72005847] [log] MOSI: 0
+[72055820] [log] CLK: 1
+[72055849] [log] MOSI: 0
+[72105821] [log] CS rising edge
+[74145822] [log] CS falling edge
+[74195823] [log] CLK: 1
+[74195851] [log] MOSI: 0
+[74245823] [log] CLK: 0
+[74245851] [log] MOSI: 1
+[74295823] [log] CLK: 1
+[74295852] [log] MOSI: 1
+[74345824] [log] CLK: 0
+[74345851] [log] MOSI: 1
+[74395824] [log] CLK: 1
+[74395853] [log] MOSI: 1
+[74445825] [log] CLK: 0
+[74445852] [log] MOSI: 1
+[74495825] [log] CLK: 1
+[74495853] [log] MOSI: 1
+[74545825] [log] CLK: 0
+[74545853] [log] MOSI: 1
+[74595826] [log] CLK: 1
+[74595854] [log] MOSI: 1
+[74645826] [log] CLK: 0
+[74645854] [log] MOSI: 0
+[74695826] [log] CLK: 1
+[74695855] [log] MOSI: 0
+[74745827] [log] CLK: 0
+[74745854] [log] MOSI: 1
+[74795827] [log] CLK: 1
+[74795856] [log] MOSI: 1
+[74845827] [log] CLK: 0
+[74845855] [log] MOSI: 1
+[74895828] [log] CLK: 1
+[74895856] [log] MOSI: 1
+[74945828] [log] CS rising edge
+[76985815] [log] CS falling edge
+[77035816] [log] CLK: 1
+[77035844] [log] MOSI: 0
+[77085816] [log] CLK: 0
+[77085844] [log] MOSI: 1
+[77135816] [log] CLK: 1
+[77135845] [log] MOSI: 1
+[77185817] [log] CLK: 0
+[77185844] [log] MOSI: 1
+[77235817] [log] CLK: 1
+[77235846] [log] MOSI: 1
+[77285818] [log] CLK: 0
+[77285845] [log] MOSI: 1
+[77335818] [log] CLK: 1
+[77335846] [log] MOSI: 1
+[77385818] [log] CLK: 0
+[77385846] [log] MOSI: 0
+[77435819] [log] CLK: 1
+[77435847] [log] MOSI: 0
+[77485819] [log] CLK: 0
+[77485846] [log] MOSI: 1
+[77535819] [log] CLK: 1
+[77535848] [log] MOSI: 1
+[77585820] [log] CLK: 0
+[77585847] [log] MOSI: 1
+[77635820] [log] CLK: 1
+[77635849] [log] MOSI: 1
+[77685820] [log] CLK: 0
+[77685848] [log] MOSI: 1
+[77735821] [log] CLK: 1
+[77735849] [log] MOSI: 1
+[77785821] [log] CS rising edge
+[79825799] [log] CS falling edge
+[79875800] [log] CLK: 1
+[79875828] [log] MOSI: 0
+[79925800] [log] CLK: 0
+[79925828] [log] MOSI: 1
+[79975800] [log] CLK: 1
+[79975829] [log] MOSI: 1
+[80025801] [log] CLK: 0
+[80025828] [log] MOSI: 0
+[80075801] [log] CLK: 1
+[80075830] [log] MOSI: 0
+[80125802] [log] CLK: 0
+[80125829] [log] MOSI: 1
+[80175802] [log] CLK: 1
+[80175830] [log] MOSI: 1
+[80225802] [log] CLK: 0
+[80225830] [log] MOSI: 0
+[80275803] [log] CLK: 1
+[80275831] [log] MOSI: 0
+[80325803] [log] CLK: 0
+[80325830] [log] MOSI: 0
+[80375803] [log] CLK: 1
+[80375832] [log] MOSI: 0
+[80425804] [log] CLK: 0
+[80425831] [log] MOSI: 1
+[80475804] [log] CLK: 1
+[80475833] [log] MOSI: 1
+[80525804] [log] CLK: 0
+[80525832] [log] MOSI: 1
+[80575805] [log] CLK: 1
+[80575833] [log] MOSI: 1
+[80625805] [log] CS rising edge
+[82665779] [log] CS falling edge
+[82715780] [log] CLK: 1
+[82715808] [log] MOSI: 0
+[82765780] [log] CLK: 0
+[82765807] [log] MOSI: 1
+[82815780] [log] CLK: 1
+[82815809] [log] MOSI: 1
+[82865781] [log] CLK: 0
+[82865808] [log] MOSI: 1
+[82915781] [log] CLK: 1
+[82915810] [log] MOSI: 1
+[82965781] [log] CLK: 0
+[82965809] [log] MOSI: 0
+[83015782] [log] CLK: 1
+[83015810] [log] MOSI: 0
+[83065782] [log] CLK: 0
+[83065810] [log] MOSI: 1
+[83115783] [log] CLK: 1
+[83115811] [log] MOSI: 1
+[83165783] [log] CLK: 0
+[83165810] [log] MOSI: 1
+[83215783] [log] CLK: 1
+[83215812] [log] MOSI: 1
+[83265784] [log] CLK: 0
+[83265811] [log] MOSI: 1
+[83315784] [log] CLK: 1
+[83315812] [log] MOSI: 1
+[83365784] [log] CLK: 0
+[83365812] [log] MOSI: 1
+[83415785] [log] CLK: 1
+[83415813] [log] MOSI: 1
+[83465785] [log] CS rising edge
+[85505749] [log] CS falling edge
+[85555750] [log] CLK: 1
+[85555778] [log] MOSI: 0
+[85605750] [log] CLK: 0
+[85605778] [log] MOSI: 0
+[85655750] [log] CLK: 1
+[85655779] [log] MOSI: 0
+[85705751] [log] CLK: 0
+[85705778] [log] MOSI: 1
+[85755751] [log] CLK: 1
+[85755780] [log] MOSI: 1
+[85805752] [log] CLK: 0
+[85805779] [log] MOSI: 0
+[85855752] [log] CLK: 1
+[85855780] [log] MOSI: 0
+[85905752] [log] CLK: 0
+[85905780] [log] MOSI: 1
+[85955753] [log] CLK: 1
+[85955781] [log] MOSI: 1
+[86005753] [log] CLK: 0
+[86005780] [log] MOSI: 1
+[86055753] [log] CLK: 1
+[86055782] [log] MOSI: 1
+[86105754] [log] CLK: 0
+[86105781] [log] MOSI: 1
+[86155754] [log] CLK: 1
+[86155783] [log] MOSI: 1
+[86205754] [log] CLK: 0
+[86205782] [log] MOSI: 1
+[86255755] [log] CLK: 1
+[86255783] [log] MOSI: 1
+[86305755] [log] CS rising edge
+[88345750] [log] CS falling edge
+[88395751] [log] CLK: 1
+[88395779] [log] MOSI: 0
+[88445751] [log] CLK: 0
+[88445779] [log] MOSI: 1
+[88495751] [log] CLK: 1
+[88495780] [log] MOSI: 1
+[88545752] [log] CLK: 0
+[88545779] [log] MOSI: 1
+[88595752] [log] CLK: 1
+[88595781] [log] MOSI: 1
+[88645753] [log] CLK: 0
+[88645780] [log] MOSI: 1
+[88695753] [log] CLK: 1
+[88695781] [log] MOSI: 1
+[88745753] [log] CLK: 0
+[88745781] [log] MOSI: 1
+[88795754] [log] CLK: 1
+[88795782] [log] MOSI: 1
+[88845754] [log] CLK: 0
+[88845781] [log] MOSI: 0
+[88895754] [log] CLK: 1
+[88895783] [log] MOSI: 0
+[88945755] [log] CLK: 0
+[88945782] [log] MOSI: 0
+[88995755] [log] CLK: 1
+[88995784] [log] MOSI: 0
+[89045755] [log] CLK: 0
+[89045783] [log] MOSI: 1
+[89095756] [log] CLK: 1
+[89095784] [log] MOSI: 1
+[89145756] [log] CS rising edge
+[91185730] [log] CS falling edge
+[91235731] [log] CLK: 1
+[91235760] [log] MOSI: 0
+[91285731] [log] CLK: 0
+[91285759] [log] MOSI: 1
+[91335732] [log] CLK: 1
+[91335760] [log] MOSI: 1
+[91385732] [log] CLK: 0
+[91385760] [log] MOSI: 1
+[91435732] [log] CLK: 1
+[91435761] [log] MOSI: 1
+[91485733] [log] CLK: 0
+[91485760] [log] MOSI: 0
+[91535733] [log] CLK: 1
+[91535762] [log] MOSI: 0
+[91585734] [log] CLK: 0
+[91585761] [log] MOSI: 0
+[91635734] [log] CLK: 1
+[91635762] [log] MOSI: 0
+[91685734] [log] CLK: 0
+[91685762] [log] MOSI: 1
+[91735735] [log] CLK: 1
+[91735763] [log] MOSI: 1
+[91785735] [log] CLK: 0
+[91785763] [log] MOSI: 1
+[91835735] [log] CLK: 1
+[91835764] [log] MOSI: 1
+[91885736] [log] CLK: 0
+[91885763] [log] MOSI: 0
+[91935736] [log] CLK: 1
+[91935765] [log] MOSI: 0
+[91985737] [log] CS rising edge
+[94025729] [log] CS falling edge
+[94075730] [log] CLK: 1
+[94075758] [log] MOSI: 0
+[94125730] [log] CLK: 0
+[94125758] [log] MOSI: 1
+[94175730] [log] CLK: 1
+[94175759] [log] MOSI: 1
+[94225731] [log] CLK: 0
+[94225758] [log] MOSI: 0
+[94275731] [log] CLK: 1
+[94275760] [log] MOSI: 0
+[94325731] [log] CLK: 0
+[94325759] [log] MOSI: 0
+[94375732] [log] CLK: 1
+[94375760] [log] MOSI: 0
+[94425732] [log] CLK: 0
+[94425760] [log] MOSI: 0
+[94475733] [log] CLK: 1
+[94475761] [log] MOSI: 0
+[94525733] [log] CLK: 0
+[94525760] [log] MOSI: 0
+[94575733] [log] CLK: 1
+[94575762] [log] MOSI: 0
+[94625734] [log] CLK: 0
+[94625761] [log] MOSI: 1
+[94675734] [log] CLK: 1
+[94675763] [log] MOSI: 1
+[94725734] [log] CLK: 0
+[94725762] [log] MOSI: 1
+[94775735] [log] CLK: 1
+[94775763] [log] MOSI: 1
+[94825735] [log] CS rising edge
+[96865708] [log] CS falling edge
+[96915709] [log] CLK: 1
+[96915737] [log] MOSI: 0
+[96965709] [log] CLK: 0
+[96965736] [log] MOSI: 1
+[97015709] [log] CLK: 1
+[97015738] [log] MOSI: 1
+[97065710] [log] CLK: 0
+[97065737] [log] MOSI: 0
+[97115710] [log] CLK: 1
+[97115739] [log] MOSI: 0
+[97165710] [log] CLK: 0
+[97165738] [log] MOSI: 1
+[97215711] [log] CLK: 1
+[97215739] [log] MOSI: 1
+[97265711] [log] CLK: 0
+[97265739] [log] MOSI: 0
+[97315712] [log] CLK: 1
+[97315740] [log] MOSI: 0
+[97365712] [log] CLK: 0
+[97365739] [log] MOSI: 0
+[97415712] [log] CLK: 1
+[97415741] [log] MOSI: 0
+[97465713] [log] CLK: 0
+[97465740] [log] MOSI: 0
+[97515713] [log] CLK: 1
+[97515741] [log] MOSI: 0
+[97565713] [log] CLK: 0
+[97565741] [log] MOSI: 0
+[97615714] [log] CLK: 1
+[97615742] [log] MOSI: 0
+[97665714] [log] CS rising edge
+[99705682] [log] CS falling edge
+[99755683] [log] CLK: 1
+[99755711] [log] MOSI: 0
+[99805683] [log] CLK: 0
+[99805711] [log] MOSI: 0
+[99855684] [log] CLK: 1
+[99855712] [log] MOSI: 0
+[99905684] [log] CLK: 0
+[99905711] [log] MOSI: 1
+[99955684] [log] CLK: 1
+[99955713] [log] MOSI: 1
+[100005685] [log] CLK: 0
+[100005714] [log] MOSI: 1
+[100055685] [log] CLK: 1
+[100055715] [log] MOSI: 1
+[100105685] [log] CLK: 0
+[100105715] [log] MOSI: 0
+[100155686] [log] CLK: 1
+[100155716] [log] MOSI: 0
+[100205686] [log] CLK: 0
+[100205715] [log] MOSI: 0
+[100255687] [log] CLK: 1
+[100255717] [log] MOSI: 0
+[100305687] [log] CLK: 0
+[100305716] [log] MOSI: 0
+[100355687] [log] CLK: 1
+[100355717] [log] MOSI: 0
+[100405688] [log] CLK: 0
+[100405717] [log] MOSI: 1
+[100455688] [log] CLK: 1
+[100455718] [log] MOSI: 1
+[100505688] [log] CS rising edge
+[102545665] [log] CS falling edge
+[102595665] [log] CLK: 1
+[102595695] [log] MOSI: 0
+[102645666] [log] CLK: 0
+[102645695] [log] MOSI: 0
+[102695666] [log] CLK: 1
+[102695696] [log] MOSI: 0
+[102745666] [log] CLK: 0
+[102745695] [log] MOSI: 1
+[102795667] [log] CLK: 1
+[102795697] [log] MOSI: 1
+[102845667] [log] CLK: 0
+[102845696] [log] MOSI: 1
+[102895668] [log] CLK: 1
+[102895698] [log] MOSI: 1
+[102945668] [log] CLK: 0
+[102945697] [log] MOSI: 1
+[102995668] [log] CLK: 1
+[102995698] [log] MOSI: 1
+[103045669] [log] CLK: 0
+[103045698] [log] MOSI: 1
+[103095669] [log] CLK: 1
+[103095699] [log] MOSI: 1
+[103145669] [log] CLK: 0
+[103145698] [log] MOSI: 1
+[103195670] [log] CLK: 1
+[103195700] [log] MOSI: 1
+[103245670] [log] CLK: 0
+[103245699] [log] MOSI: 1
+[103295670] [log] CLK: 1
+[103295701] [log] MOSI: 1
+[103345671] [log] CS rising edge
+[105385690] [log] CS falling edge
+[105435690] [log] CLK: 1
+[105435720] [log] MOSI: 0
+[105485691] [log] CLK: 0
+[105485720] [log] MOSI: 1
+[105535691] [log] CLK: 1
+[105535721] [log] MOSI: 1
+[105585691] [log] CLK: 0
+[105585720] [log] MOSI: 0
+[105635692] [log] CLK: 1
+[105635722] [log] MOSI: 0
+[105685692] [log] CLK: 0
+[105685721] [log] MOSI: 0
+[105735692] [log] CLK: 1
+[105735723] [log] MOSI: 0
+[105785693] [log] CLK: 0
+[105785722] [log] MOSI: 1
+[105835693] [log] CLK: 1
+[105835723] [log] MOSI: 1
+[105885694] [log] CLK: 0
+[105885723] [log] MOSI: 1
+[105935694] [log] CLK: 1
+[105935724] [log] MOSI: 1
+[105985694] [log] CLK: 0
+[105985723] [log] MOSI: 0
+[106035695] [log] CLK: 1
+[106035725] [log] MOSI: 0
+[106085695] [log] CLK: 0
+[106085724] [log] MOSI: 1
+[106135695] [log] CLK: 1
+[106135725] [log] MOSI: 1
+[106185696] [log] CS rising edge
+[108225629] [log] CS falling edge
+[108275630] [log] CLK: 1
+[108275660] [log] MOSI: 0
+[108325630] [log] CLK: 0
+[108325659] [log] MOSI: 1
+[108375630] [log] CLK: 1
+[108375660] [log] MOSI: 1
+[108425631] [log] CLK: 0
+[108425660] [log] MOSI: 1
+[108475631] [log] CLK: 1
+[108475661] [log] MOSI: 1
+[108525631] [log] CLK: 0
+[108525661] [log] MOSI: 1
+[108575632] [log] CLK: 1
+[108575662] [log] MOSI: 1
+[108625632] [log] CLK: 0
+[108625661] [log] MOSI: 1
+[108675633] [log] CLK: 1
+[108675663] [log] MOSI: 1
+[108725633] [log] CLK: 0
+[108725662] [log] MOSI: 0
+[108775633] [log] CLK: 1
+[108775663] [log] MOSI: 0
+[108825634] [log] CLK: 0
+[108825663] [log] MOSI: 1
+[108875634] [log] CLK: 1
+[108875664] [log] MOSI: 1
+[108925634] [log] CLK: 0
+[108925663] [log] MOSI: 0
+[108975635] [log] CLK: 1
+[108975665] [log] MOSI: 0
+[109025635] [log] CS rising edge
+[111065620] [log] CS falling edge
+[111115621] [log] CLK: 1
+[111115651] [log] MOSI: 0
+[111165621] [log] CLK: 0
+[111165650] [log] MOSI: 0
+[111215621] [log] CLK: 1
+[111215652] [log] MOSI: 0
+[111265622] [log] CLK: 0
+[111265651] [log] MOSI: 1
+[111315622] [log] CLK: 1
+[111315652] [log] MOSI: 1
+[111365623] [log] CLK: 0
+[111365652] [log] MOSI: 1
+[111415623] [log] CLK: 1
+[111415653] [log] MOSI: 1
+[111465623] [log] CLK: 0
+[111465652] [log] MOSI: 0
+[111515624] [log] CLK: 1
+[111515654] [log] MOSI: 0
+[111565624] [log] CLK: 0
+[111565653] [log] MOSI: 0
+[111615624] [log] CLK: 1
+[111615654] [log] MOSI: 0
+[111665625] [log] CLK: 0
+[111665654] [log] MOSI: 0
+[111715625] [log] CLK: 1
+[111715655] [log] MOSI: 0
+[111765625] [log] CLK: 0
+[111765655] [log] MOSI: 1
+[111815626] [log] CLK: 1
+[111815656] [log] MOSI: 1
+[111865626] [log] CS rising edge
+[113905614] [log] CS falling edge
+[113955614] [log] CLK: 1
+[113955645] [log] MOSI: 0
+[114005615] [log] CLK: 0
+[114005644] [log] MOSI: 0
+[114055615] [log] CLK: 1
+[114055645] [log] MOSI: 0
+[114105615] [log] CLK: 0
+[114105645] [log] MOSI: 1
+[114155616] [log] CLK: 1
+[114155646] [log] MOSI: 1
+[114205616] [log] CLK: 0
+[114205645] [log] MOSI: 1
+[114255617] [log] CLK: 1
+[114255647] [log] MOSI: 1
+[114305617] [log] CLK: 0
+[114305646] [log] MOSI: 1
+[114355617] [log] CLK: 1
+[114355647] [log] MOSI: 1
+[114405618] [log] CLK: 0
+[114405647] [log] MOSI: 0
+[114455618] [log] CLK: 1
+[114455648] [log] MOSI: 0
+[114505618] [log] CLK: 0
+[114505647] [log] MOSI: 0
+[114555619] [log] CLK: 1
+[114555649] [log] MOSI: 0
+[114605619] [log] CLK: 0
+[114605648] [log] MOSI: 0
+[114655620] [log] CLK: 1
+[114655650] [log] MOSI: 0
+[114705620] [log] CS rising edge
+[116745570] [log] CS falling edge
+[116795571] [log] CLK: 1
+[116795601] [log] MOSI: 0
+[116845571] [log] CLK: 0
+[116845600] [log] MOSI: 0
+[116895572] [log] CLK: 1
+[116895602] [log] MOSI: 0
+[116945572] [log] CLK: 0
+[116945601] [log] MOSI: 1
+[116995572] [log] CLK: 1
+[116995602] [log] MOSI: 1
+[117045573] [log] CLK: 0
+[117045602] [log] MOSI: 0
+[117095573] [log] CLK: 1
+[117095603] [log] MOSI: 0
+[117145573] [log] CLK: 0
+[117145602] [log] MOSI: 0
+[117195574] [log] CLK: 1
+[117195604] [log] MOSI: 0
+[117245574] [log] CLK: 0
+[117245603] [log] MOSI: 1
+[117295574] [log] CLK: 1
+[117295605] [log] MOSI: 1
+[117345575] [log] CLK: 0
+[117345604] [log] MOSI: 1
+[117395575] [log] CLK: 1
+[117395605] [log] MOSI: 1
+[117445576] [log] CLK: 0
+[117445605] [log] MOSI: 1
+[117495576] [log] CLK: 1
+[117495606] [log] MOSI: 1
+[117545576] [log] CS rising edge
+[119585578] [log] CS falling edge
+[119635579] [log] CLK: 1
+[119635609] [log] MOSI: 0
+[119685579] [log] CLK: 0
+[119685608] [log] MOSI: 1
+[119735579] [log] CLK: 1
+[119735609] [log] MOSI: 1
+[119785580] [log] CLK: 0
+[119785609] [log] MOSI: 1
+[119835580] [log] CLK: 1
+[119835610] [log] MOSI: 1
+[119885580] [log] CLK: 0
+[119885609] [log] MOSI: 1
+[119935581] [log] CLK: 1
+[119935611] [log] MOSI: 1
+[119985581] [log] CLK: 0
+[119985610] [log] MOSI: 0
+[120035581] [log] CLK: 1
+[120035612] [log] MOSI: 0
+[120085582] [log] CLK: 0
+[120085611] [log] MOSI: 1
+[120135582] [log] CLK: 1
+[120135612] [log] MOSI: 1
+[120185583] [log] CLK: 0
+[120185612] [log] MOSI: 1
+[120235583] [log] CLK: 1
+[120235613] [log] MOSI: 1
+[120285583] [log] CLK: 0
+[120285612] [log] MOSI: 1
+[120335584] [log] CLK: 1
+[120335614] [log] MOSI: 1
+[120385584] [log] CS rising edge
+[122425596] [log] CS falling edge
+[122475597] [log] CLK: 1
+[122475627] [log] MOSI: 0
+[122525597] [log] CLK: 0
+[122525626] [log] MOSI: 1
+[122575598] [log] CLK: 1
+[122575628] [log] MOSI: 1
+[122625598] [log] CLK: 0
+[122625627] [log] MOSI: 0
+[122675598] [log] CLK: 1
+[122675628] [log] MOSI: 0
+[122725599] [log] CLK: 0
+[122725628] [log] MOSI: 0
+[122775599] [log] CLK: 1
+[122775629] [log] MOSI: 0
+[122825599] [log] CLK: 0
+[122825629] [log] MOSI: 1
+[122875600] [log] CLK: 1
+[122875630] [log] MOSI: 1
+[122925600] [log] CLK: 0
+[122925629] [log] MOSI: 1
+[122975601] [log] CLK: 1
+[122975631] [log] MOSI: 1
+[123025601] [log] CLK: 0
+[123025630] [log] MOSI: 0
+[123075601] [log] CLK: 1
+[123075631] [log] MOSI: 0
+[123125602] [log] CLK: 0
+[123125631] [log] MOSI: 1
+[123175602] [log] CLK: 1
+[123175632] [log] MOSI: 1
+[123225602] [log] CS rising edge
+[125265554] [log] CS falling edge
+[125315555] [log] CLK: 1
+[125315585] [log] MOSI: 0
+[125365555] [log] CLK: 0
+[125365585] [log] MOSI: 1
+[125415556] [log] CLK: 1
+[125415586] [log] MOSI: 1
+[125465556] [log] CLK: 0
+[125465585] [log] MOSI: 0
+[125515557] [log] CLK: 1
+[125515587] [log] MOSI: 0
+[125565557] [log] CLK: 0
+[125565586] [log] MOSI: 1
+[125615557] [log] CLK: 1
+[125615587] [log] MOSI: 1
+[125665558] [log] CLK: 0
+[125665587] [log] MOSI: 0
+[125715558] [log] CLK: 1
+[125715588] [log] MOSI: 0
+[125765558] [log] CLK: 0
+[125765587] [log] MOSI: 1
+[125815559] [log] CLK: 1
+[125815589] [log] MOSI: 1
+[125865559] [log] CLK: 0
+[125865588] [log] MOSI: 0
+[125915559] [log] CLK: 1
+[125915590] [log] MOSI: 0
+[125965560] [log] CLK: 0
+[125965589] [log] MOSI: 0
+[126015560] [log] CLK: 1
+[126015590] [log] MOSI: 0
+[126065561] [log] CS rising edge
+[128105552] [log] CS falling edge
+[128155552] [log] CLK: 1
+[128155583] [log] MOSI: 0
+[128205553] [log] CLK: 0
+[128205582] [log] MOSI: 1
+[128255553] [log] CLK: 1
+[128255583] [log] MOSI: 1
+[128305553] [log] CLK: 0
+[128305583] [log] MOSI: 0
+[128355554] [log] CLK: 1
+[128355584] [log] MOSI: 0
+[128405554] [log] CLK: 0
+[128405583] [log] MOSI: 1
+[128455555] [log] CLK: 1
+[128455585] [log] MOSI: 1
+[128505555] [log] CLK: 0
+[128505584] [log] MOSI: 1
+[128555555] [log] CLK: 1
+[128555585] [log] MOSI: 1
+[128605556] [log] CLK: 0
+[128605585] [log] MOSI: 0
+[128655556] [log] CLK: 1
+[128655586] [log] MOSI: 0
+[128705556] [log] CLK: 0
+[128705585] [log] MOSI: 0
+[128755557] [log] CLK: 1
+[128755587] [log] MOSI: 0
+[128805557] [log] CLK: 0
+[128805586] [log] MOSI: 0
+[128855558] [log] CLK: 1
+[128855588] [log] MOSI: 0
+[128905558] [log] CS rising edge
+[130945490] [log] CS falling edge
+[130995491] [log] CLK: 1
+[130995521] [log] MOSI: 0
+[131045491] [log] CLK: 0
+[131045520] [log] MOSI: 0
+[131095492] [log] CLK: 1
+[131095522] [log] MOSI: 0
+[131145492] [log] CLK: 0
+[131145521] [log] MOSI: 1
+[131195493] [log] CLK: 1
+[131195523] [log] MOSI: 1
+[131245493] [log] CLK: 0
+[131245522] [log] MOSI: 1
+[131295493] [log] CLK: 1
+[131295523] [log] MOSI: 1
+[131345494] [log] CLK: 0
+[131345523] [log] MOSI: 1
+[131395494] [log] CLK: 1
+[131395524] [log] MOSI: 1
+[131445494] [log] CLK: 0
+[131445523] [log] MOSI: 0
+[131495495] [log] CLK: 1
+[131495525] [log] MOSI: 0
+[131545495] [log] CLK: 0
+[131545524] [log] MOSI: 1
+[131595495] [log] CLK: 1
+[131595526] [log] MOSI: 1
+[131645496] [log] CLK: 0
+[131645525] [log] MOSI: 0
+[131695496] [log] CLK: 1
+[131695526] [log] MOSI: 0
+[131745497] [log] CS rising edge
+[133785472] [log] CS falling edge
+[133835473] [log] CLK: 1
+[133835503] [log] MOSI: 0
+[133885473] [log] CLK: 0
+[133885502] [log] MOSI: 0
+[133935474] [log] CLK: 1
+[133935504] [log] MOSI: 0
+[133985474] [log] CLK: 0
+[133985503] [log] MOSI: 1
+[134035474] [log] CLK: 1
+[134035504] [log] MOSI: 1
+[134085475] [log] CLK: 0
+[134085504] [log] MOSI: 0
+[134135475] [log] CLK: 1
+[134135505] [log] MOSI: 0
+[134185475] [log] CLK: 0
+[134185505] [log] MOSI: 0
+[134235476] [log] CLK: 1
+[134235506] [log] MOSI: 0
+[134285476] [log] CLK: 0
+[134285505] [log] MOSI: 0
+[134335477] [log] CLK: 1
+[134335507] [log] MOSI: 0
+[134385477] [log] CLK: 0
+[134385506] [log] MOSI: 0
+[134435477] [log] CLK: 1
+[134435507] [log] MOSI: 0
+[134485478] [log] CLK: 0
+[134485507] [log] MOSI: 0
+[134535478] [log] CLK: 1
+[134535508] [log] MOSI: 0
+[134585478] [log] CS rising edge
+[136625500] [log] CS falling edge
+[136675501] [log] CLK: 1
+[136675531] [log] MOSI: 0
+[136725502] [log] CLK: 0
+[136725531] [log] MOSI: 1
+[136775502] [log] CLK: 1
+[136775532] [log] MOSI: 1
+[136825502] [log] CLK: 0
+[136825531] [log] MOSI: 0
+[136875503] [log] CLK: 1
+[136875533] [log] MOSI: 0
+[136925503] [log] CLK: 0
+[136925532] [log] MOSI: 1
+[136975503] [log] CLK: 1
+[136975533] [log] MOSI: 1
+[137025504] [log] CLK: 0
+[137025533] [log] MOSI: 0
+[137075504] [log] CLK: 1
+[137075534] [log] MOSI: 0
+[137125504] [log] CLK: 0
+[137125533] [log] MOSI: 0
+[137175505] [log] CLK: 1
+[137175535] [log] MOSI: 0
+[137225505] [log] CLK: 0
+[137225534] [log] MOSI: 1
+[137275506] [log] CLK: 1
+[137275536] [log] MOSI: 1
+[137325506] [log] CLK: 0
+[137325535] [log] MOSI: 0
+[137375506] [log] CLK: 1
+[137375536] [log] MOSI: 0
+[137425507] [log] CS rising edge
+[139465464] [log] CS falling edge
+[139515465] [log] CLK: 1
+[139515495] [log] MOSI: 0
+[139565466] [log] CLK: 0
+[139565495] [log] MOSI: 0
+[139615466] [log] CLK: 1
+[139615496] [log] MOSI: 0
+[139665466] [log] CLK: 0
+[139665495] [log] MOSI: 1
+[139715467] [log] CLK: 1
+[139715497] [log] MOSI: 1
+[139765467] [log] CLK: 0
+[139765496] [log] MOSI: 1
+[139815467] [log] CLK: 1
+[139815498] [log] MOSI: 1
+[139865468] [log] CLK: 0
+[139865497] [log] MOSI: 0
+[139915468] [log] CLK: 1
+[139915498] [log] MOSI: 0
+[139965468] [log] CLK: 0
+[139965498] [log] MOSI: 0
+[140015469] [log] CLK: 1
+[140015499] [log] MOSI: 0
+[140065469] [log] CLK: 0
+[140065498] [log] MOSI: 0
+[140115470] [log] CLK: 1
+[140115500] [log] MOSI: 0
+[140165470] [log] CLK: 0
+[140165499] [log] MOSI: 1
+[140215470] [log] CLK: 1
+[140215500] [log] MOSI: 1
+[140265471] [log] CS rising edge
+[142305442] [log] CS falling edge
+[142355443] [log] CLK: 1
+[142355473] [log] MOSI: 0
+[142405443] [log] CLK: 0
+[142405472] [log] MOSI: 0
+[142455444] [log] CLK: 1
+[142455474] [log] MOSI: 0
+[142505444] [log] CLK: 0
+[142505473] [log] MOSI: 1
+[142555445] [log] CLK: 1
+[142555475] [log] MOSI: 1
+[142605445] [log] CLK: 0
+[142605474] [log] MOSI: 0
+[142655445] [log] CLK: 1
+[142655475] [log] MOSI: 0
+[142705446] [log] CLK: 0
+[142705475] [log] MOSI: 1
+[142755446] [log] CLK: 1
+[142755476] [log] MOSI: 1
+[142805446] [log] CLK: 0
+[142805475] [log] MOSI: 0
+[142855447] [log] CLK: 1
+[142855477] [log] MOSI: 0
+[142905447] [log] CLK: 0
+[142905476] [log] MOSI: 1
+[142955447] [log] CLK: 1
+[142955478] [log] MOSI: 1
+[143005448] [log] CLK: 0
+[143005477] [log] MOSI: 1
+[143055448] [log] CLK: 1
+[143055478] [log] MOSI: 1
+[143105449] [log] CS rising edge
+[145145452] [log] CS falling edge
+[145195452] [log] CLK: 1
+[145195482] [log] MOSI: 0
+[145245453] [log] CLK: 0
+[145245482] [log] MOSI: 1
+[145295453] [log] CLK: 1
+[145295483] [log] MOSI: 1
+[145345453] [log] CLK: 0
+[145345482] [log] MOSI: 0
+[145395454] [log] CLK: 1
+[145395484] [log] MOSI: 0
+[145445454] [log] CLK: 0
+[145445483] [log] MOSI: 1
+[145495454] [log] CLK: 1
+[145495485] [log] MOSI: 1
+[145545455] [log] CLK: 0
+[145545484] [log] MOSI: 1
+[145595455] [log] CLK: 1
+[145595485] [log] MOSI: 1
+[145645456] [log] CLK: 0
+[145645485] [log] MOSI: 0
+[145695456] [log] CLK: 1
+[145695486] [log] MOSI: 0
+[145745456] [log] CLK: 0
+[145745485] [log] MOSI: 1
+[145795457] [log] CLK: 1
+[145795487] [log] MOSI: 1
+[145845457] [log] CLK: 0
+[145845486] [log] MOSI: 0
+[145895457] [log] CLK: 1
+[145895488] [log] MOSI: 0
+[145945458] [log] CS rising edge
+[147985438] [log] CS falling edge
+[148035439] [log] CLK: 1
+[148035469] [log] MOSI: 0
+[148085439] [log] CLK: 0
+[148085468] [log] MOSI: 1
+[148135440] [log] CLK: 1
+[148135470] [log] MOSI: 1
+[148185440] [log] CLK: 0
+[148185469] [log] MOSI: 0
+[148235440] [log] CLK: 1
+[148235471] [log] MOSI: 0
+[148285441] [log] CLK: 0
+[148285470] [log] MOSI: 1
+[148335441] [log] CLK: 1
+[148335471] [log] MOSI: 1
+[148385441] [log] CLK: 0
+[148385471] [log] MOSI: 0
+[148435442] [log] CLK: 1
+[148435472] [log] MOSI: 0
+[148485442] [log] CLK: 0
+[148485471] [log] MOSI: 0
+[148535443] [log] CLK: 1
+[148535473] [log] MOSI: 0
+[148585443] [log] CLK: 0
+[148585472] [log] MOSI: 1
+[148635443] [log] CLK: 1
+[148635473] [log] MOSI: 1
+[148685444] [log] CLK: 0
+[148685473] [log] MOSI: 0
+[148735444] [log] CLK: 1
+[148735474] [log] MOSI: 0
+[148785444] [log] CS rising edge
+[150825408] [log] CS falling edge
+[150875408] [log] CLK: 1
+[150875438] [log] MOSI: 0
+[150925409] [log] CLK: 0
+[150925438] [log] MOSI: 0
+[150975409] [log] CLK: 1
+[150975439] [log] MOSI: 0
+[151025409] [log] CLK: 0
+[151025439] [log] MOSI: 1
+[151075410] [log] CLK: 1
+[151075440] [log] MOSI: 1
+[151125410] [log] CLK: 0
+[151125439] [log] MOSI: 1
+[151175411] [log] CLK: 1
+[151175441] [log] MOSI: 1
+[151225411] [log] CLK: 0
+[151225440] [log] MOSI: 0
+[151275411] [log] CLK: 1
+[151275441] [log] MOSI: 0
+[151325412] [log] CLK: 0
+[151325441] [log] MOSI: 1
+[151375412] [log] CLK: 1
+[151375442] [log] MOSI: 1
+[151425412] [log] CLK: 0
+[151425441] [log] MOSI: 0
+[151475413] [log] CLK: 1
+[151475443] [log] MOSI: 0
+[151525413] [log] CLK: 0
+[151525442] [log] MOSI: 0
+[151575413] [log] CLK: 1
+[151575444] [log] MOSI: 0
+[151625414] [log] CS rising edge
+[153665381] [log] CS falling edge
+[153715382] [log] CLK: 1
+[153715412] [log] MOSI: 0
+[153765382] [log] CLK: 0
+[153765411] [log] MOSI: 0
+[153815382] [log] CLK: 1
+[153815412] [log] MOSI: 0
+[153865383] [log] CLK: 0
+[153865412] [log] MOSI: 1
+[153915383] [log] CLK: 1
+[153915413] [log] MOSI: 1
+[153965383] [log] CLK: 0
+[153965412] [log] MOSI: 0
+[154015384] [log] CLK: 1
+[154015414] [log] MOSI: 0
+[154065384] [log] CLK: 0
+[154065413] [log] MOSI: 1
+[154115385] [log] CLK: 1
+[154115415] [log] MOSI: 1
+[154165385] [log] CLK: 0
+[154165414] [log] MOSI: 0
+[154215385] [log] CLK: 1
+[154215415] [log] MOSI: 0
+[154265386] [log] CLK: 0
+[154265415] [log] MOSI: 0
+[154315386] [log] CLK: 1
+[154315416] [log] MOSI: 0
+[154365386] [log] CLK: 0
+[154365415] [log] MOSI: 1
+[154415387] [log] CLK: 1
+[154415417] [log] MOSI: 1
+[154465387] [log] CS rising edge
+[156505401] [log] CS falling edge
+[156555402] [log] CLK: 1
+[156555432] [log] MOSI: 0
+[156605402] [log] CLK: 0
+[156605431] [log] MOSI: 0
+[156655403] [log] CLK: 1
+[156655433] [log] MOSI: 0
+[156705403] [log] CLK: 0
+[156705432] [log] MOSI: 1
+[156755404] [log] CLK: 1
+[156755434] [log] MOSI: 1
+[156805404] [log] CLK: 0
+[156805433] [log] MOSI: 0
+[156855404] [log] CLK: 1
+[156855434] [log] MOSI: 0
+[156905405] [log] CLK: 0
+[156905434] [log] MOSI: 0
+[156955405] [log] CLK: 1
+[156955435] [log] MOSI: 0
+[157005405] [log] CLK: 0
+[157005434] [log] MOSI: 1
+[157055406] [log] CLK: 1
+[157055436] [log] MOSI: 1
+[157105406] [log] CLK: 0
+[157105435] [log] MOSI: 1
+[157155406] [log] CLK: 1
+[157155437] [log] MOSI: 1
+[157205407] [log] CLK: 0
+[157205436] [log] MOSI: 0
+[157255407] [log] CLK: 1
+[157255437] [log] MOSI: 0
+[157305408] [log] CS rising edge
+[159345373] [log] CS falling edge
+[159395374] [log] CLK: 1
+[159395404] [log] MOSI: 0
+[159445374] [log] CLK: 0
+[159445403] [log] MOSI: 1
+[159495374] [log] CLK: 1
+[159495404] [log] MOSI: 1
+[159545375] [log] CLK: 0
+[159545404] [log] MOSI: 0
+[159595375] [log] CLK: 1
+[159595405] [log] MOSI: 0
+[159645375] [log] CLK: 0
+[159645404] [log] MOSI: 0
+[159695376] [log] CLK: 1
+[159695406] [log] MOSI: 0
+[159745376] [log] CLK: 0
+[159745405] [log] MOSI: 0
+[159795376] [log] CLK: 1
+[159795406] [log] MOSI: 0
+[159845377] [log] CLK: 0
+[159845406] [log] MOSI: 0
+[159895377] [log] CLK: 1
+[159895407] [log] MOSI: 0
+[159945377] [log] CLK: 0
+[159945407] [log] MOSI: 0
+[159995378] [log] CLK: 1
+[159995408] [log] MOSI: 0
+[160045378] [log] CLK: 0
+[160045407] [log] MOSI: 1
+[160095379] [log] CLK: 1
+[160095409] [log] MOSI: 1
+[160145379] [log] CS rising edge
+[162185336] [log] CS falling edge
+[162235337] [log] CLK: 1
+[162235367] [log] MOSI: 0
+[162285337] [log] CLK: 0
+[162285366] [log] MOSI: 1
+[162335338] [log] CLK: 1
+[162335368] [log] MOSI: 1
+[162385338] [log] CLK: 0
+[162385367] [log] MOSI: 1
+[162435339] [log] CLK: 1
+[162435369] [log] MOSI: 1
+[162485339] [log] CLK: 0
+[162485368] [log] MOSI: 1
+[162535339] [log] CLK: 1
+[162535369] [log] MOSI: 1
+[162585340] [log] CLK: 0
+[162585369] [log] MOSI: 0
+[162635340] [log] CLK: 1
+[162635370] [log] MOSI: 0
+[162685340] [log] CLK: 0
+[162685369] [log] MOSI: 1
+[162735341] [log] CLK: 1
+[162735371] [log] MOSI: 1
+[162785341] [log] CLK: 0
+[162785370] [log] MOSI: 1
+[162835341] [log] CLK: 1
+[162835372] [log] MOSI: 1
+[162885342] [log] CLK: 0
+[162885371] [log] MOSI: 0
+[162935342] [log] CLK: 1
+[162935372] [log] MOSI: 0
+[162985343] [log] CS rising edge
+[165025322] [log] CS falling edge
+[165075323] [log] CLK: 1
+[165075353] [log] MOSI: 0
+[165125323] [log] CLK: 0
+[165125353] [log] MOSI: 1
+[165175324] [log] CLK: 1
+[165175354] [log] MOSI: 1
+[165225324] [log] CLK: 0
+[165225353] [log] MOSI: 0
+[165275325] [log] CLK: 1
+[165275355] [log] MOSI: 0
+[165325325] [log] CLK: 0
+[165325354] [log] MOSI: 0
+[165375325] [log] CLK: 1
+[165375355] [log] MOSI: 0
+[165425326] [log] CLK: 0
+[165425355] [log] MOSI: 1
+[165475326] [log] CLK: 1
+[165475356] [log] MOSI: 1
+[165525326] [log] CLK: 0
+[165525355] [log] MOSI: 0
+[165575327] [log] CLK: 1
+[165575357] [log] MOSI: 0
+[165625327] [log] CLK: 0
+[165625356] [log] MOSI: 1
+[165675327] [log] CLK: 1
+[165675358] [log] MOSI: 1
+[165725328] [log] CLK: 0
+[165725357] [log] MOSI: 0
+[165775328] [log] CLK: 1
+[165775358] [log] MOSI: 0
+[165825329] [log] CS rising edge
+[167865311] [log] CS falling edge
+[167915311] [log] CLK: 1
+[167915342] [log] MOSI: 0
+[167965312] [log] CLK: 0
+[167965341] [log] MOSI: 0
+[168015312] [log] CLK: 1
+[168015342] [log] MOSI: 0
+[168065312] [log] CLK: 0
+[168065342] [log] MOSI: 1
+[168115313] [log] CLK: 1
+[168115343] [log] MOSI: 1
+[168165313] [log] CLK: 0
+[168165342] [log] MOSI: 1
+[168215314] [log] CLK: 1
+[168215344] [log] MOSI: 1
+[168265314] [log] CLK: 0
+[168265343] [log] MOSI: 1
+[168315314] [log] CLK: 1
+[168315344] [log] MOSI: 1
+[168365315] [log] CLK: 0
+[168365344] [log] MOSI: 1
+[168415315] [log] CLK: 1
+[168415345] [log] MOSI: 1
+[168465315] [log] CLK: 0
+[168465345] [log] MOSI: 1
+[168515316] [log] CLK: 1
+[168515346] [log] MOSI: 1
+[168565316] [log] CLK: 0
+[168565345] [log] MOSI: 1
+[168615317] [log] CLK: 1
+[168615347] [log] MOSI: 1
+[168665317] [log] CS rising edge
+[170705287] [log] CS falling edge
+[170755288] [log] CLK: 1
+[170755318] [log] MOSI: 0
+[170805288] [log] CLK: 0
+[170805317] [log] MOSI: 1
+[170855289] [log] CLK: 1
+[170855319] [log] MOSI: 1
+[170905289] [log] CLK: 0
+[170905318] [log] MOSI: 1
+[170955289] [log] CLK: 1
+[170955320] [log] MOSI: 1
+[171005290] [log] CLK: 0
+[171005319] [log] MOSI: 0
+[171055290] [log] CLK: 1
+[171055320] [log] MOSI: 0
+[171105290] [log] CLK: 0
+[171105320] [log] MOSI: 1
+[171155291] [log] CLK: 1
+[171155321] [log] MOSI: 1
+[171205291] [log] CLK: 0
+[171205320] [log] MOSI: 1
+[171255292] [log] CLK: 1
+[171255322] [log] MOSI: 1
+[171305292] [log] CLK: 0
+[171305321] [log] MOSI: 0
+[171355292] [log] CLK: 1
+[171355322] [log] MOSI: 0
+[171405293] [log] CLK: 0
+[171405322] [log] MOSI: 0
+[171455293] [log] CLK: 1
+[171455323] [log] MOSI: 0
+[171505293] [log] CS rising edge

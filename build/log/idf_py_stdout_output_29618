@@ -1,0 +1,567 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5ach ( 46508) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5d4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc14 vaddr=40080000 size=02404h (  9220) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1918ch (102796) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391b4 vaddr=40082404 size=09060h ( 36960) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004221c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (209) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (214) app_init: ELF file SHA256:  7c3c82c47...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (252) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (263) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) main_task: Started on CPU0[0m
+[0;32mI (298) main_task: Calling app_main()[0m
+[31144] [-->] app_main()
+[31187] [log] Set systemStage = SYSTEM_INIT
+[31403] [log] Start up OLED screen
+[35585] [log] Enter test mode!
+[49151] [-->] ledTest()
+[849839] [<--] ledTest()
+[849883] [log] [+] oledTask()
+[861463] [log] [oledTask] Wait for the initializing have been done!
+[861564] [log] [+] prepairDataTask()
+[873244] [log] [prepairDataTask] Wait for the initializing have been done!
+[873338] [log] [+] modeControlTask()
+[884970] [log] [modeControlTask] Wait for the initializing have been done!
+[885068] [log] Set systemStage = SYSTEM_RUNNING
+[896268] [-->] oledTest()
+[896335] [-->] prepairDataTask(0x3ffb0388)
+[896443] [-->] modeControlTask(0x3ffb0388)
+[11651780] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[11651842] [log] INPUT LEVEL: HIGH
+[11651878] [<--] changeModeButtonISR(0, 0, 0, 0, 0)
+[14390138] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[14390188] [log] INPUT LEVEL: HIGH
+[14390221] [<--] changeModeButtonISR(0, 0, 11651779, 0, 0)
+[14391835] [-->] changeModeButtonISR(0, 0, 11651779, 0, 0)
+[19230137] [-->] changeModeButtonISR(0, 0, 11651779, 0, 0)
+[19230200] [log] INPUT LEVEL: HIGH
+[19230233] [<--] changeModeButtonISR(0, 0, 14390137, 0, 0)
+[19415071] [-->] changeModeButtonISR(0, 0, 14390137, 0, 0)
+[19415135] [log] [changeModeButtonISR] Input level : LOW
+[19415184] [<--] changeModeButtonISR(0, 0, 14390137, 0, 19415071)
+[21290512] [-->] changeModeButtonISR(0, 0, 14390137, 0, 19415071)
+[21290588] [log] INPUT LEVEL: HIGH
+[21290620] [<--] changeModeButtonISR(0, 0, 19230136, 0, 19415071)
+[22918845] [-->] changeModeButtonISR(0, 0, 19230136, 0, 19415071)
+[22918921] [log] [changeModeButtonISR] Input level : LOW
+[22918967] [<--] changeModeButtonISR(19415071, 0, 19230136, 0, 22918844)
+[25577433] [-->] changeModeButtonISR(19415071, 0, 19230136, 0, 22918844)
+[25577522] [log] INPUT LEVEL: HIGH
+[25577555] [<--] changeModeButtonISR(19415071, 0, 21290511, 0, 22918844)
+[26210845] [-->] changeModeButtonISR(19415071, 0, 21290511, 0, 22918844)
+[26210934] [log] [changeModeButtonISR] Input level : LOW
+[26211064] [<--] changeModeButtonISR(22918844, 0, 21290511, 0, 26210845)
+[32610180] [-->] changeModeButtonISR(22918844, 0, 21290511, 0, 26210845)
+[32610269] [log] INPUT LEVEL: HIGH
+[32610302] [<--] changeModeButtonISR(22918844, 0, 25577433, 0, 26210845)
+[32614915] [-->] changeModeButtonISR(22918844, 0, 25577433, 0, 26210845)
+[32621337] [log] INPUT LEVEL: HIGH
+[32624461] [<--] changeModeButtonISR(22918844, 0, 32610179, 0, 26210845)
+[32930137] [-->] changeModeButtonISR(22918844, 0, 32610179, 0, 26210845)
+[32930226] [log] [changeModeButtonISR] Input level : LOW
+[32930356] [<--] changeModeButtonISR(26210845, 0, 32610179, 0, 32930136)
+[34290137] [-->] changeModeButtonISR(26210845, 0, 32610179, 0, 32930136)
+[34290226] [log] INPUT LEVEL: HIGH
+[34290258] [<--] changeModeButtonISR(26210845, 0, 32614914, 0, 32930136)
+[34510141] [-->] changeModeButtonISR(26210845, 0, 32614914, 0, 32930136)
+[34510230] [log] [changeModeButtonISR] Input level : LOW
+[34510360] [<--] changeModeButtonISR(32930136, 0, 32614914, 0, 34510140)
+[35630141] [-->] changeModeButtonISR(32930136, 0, 32614914, 0, 34510140)
+[35630230] [log] INPUT LEVEL: HIGH
+[35630262] [<--] changeModeButtonISR(32930136, 0, 34290136, 0, 34510140)
+[35950141] [-->] changeModeButtonISR(32930136, 0, 34290136, 0, 34510140)
+[35950230] [log] [changeModeButtonISR] Input level : LOW
+[35950360] [<--] changeModeButtonISR(34510140, 0, 34290136, 0, 35950140)
+[36831142] [-->] changeModeButtonISR(34510140, 0, 34290136, 0, 35950140)
+[36831231] [log] INPUT LEVEL: HIGH
+[36831263] [<--] changeModeButtonISR(34510140, 0, 35630140, 0, 35950140)
+[37110141] [-->] changeModeButtonISR(34510140, 0, 35630140, 0, 35950140)
+[37110230] [log] [changeModeButtonISR] Input level : LOW
+[37110360] [<--] changeModeButtonISR(35950140, 0, 35630140, 0, 37110140)
+[38195878] [-->] changeModeButtonISR(35950140, 0, 35630140, 0, 37110140)
+[38195967] [log] INPUT LEVEL: HIGH
+[38195999] [<--] changeModeButtonISR(35950140, 0, 36831141, 0, 37110140)
+[38399062] [-->] changeModeButtonISR(35950140, 0, 36831141, 0, 37110140)
+[38399151] [log] [changeModeButtonISR] Input level : LOW
+[38399281] [<--] changeModeButtonISR(37110140, 0, 36831141, 0, 38399062)
+[38405716] [-->] changeModeButtonISR(37110140, 0, 36831141, 0, 38399062)
+[38412129] [log] [changeModeButtonISR] Input level : LOW
+[38417163] [<--] changeModeButtonISR(38399062, 0, 36831141, 0, 38405716)
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5ach ( 46508) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5d4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc14 vaddr=40080000 size=02404h (  9220) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1918ch (102796) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391b4 vaddr=40082404 size=09060h ( 36960) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004221c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+I (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (209) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (214) app_init: ELF file SHA256:  7c3c82c47...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (252) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (263) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) main_task: Started on CPU0[0m
+[0;32mI (298) main_task: Calling app_main()[0m
+[31142] [-->] app_main()
+[31185] [log] Set systemStage = SYSTEM_INIT
+[31403] [log] Start up OLED screen
+[35585] [log] Enter test mode!
+[49151] [-->] ledTest()
+[849837] [<--] ledTest()
+[849881] [log] [+] oledTask()
+[861461] [log] [oledTask] Wait for the initializing have been done!
+[861562] [log] [+] prepairDataTask()
+[873242] [log] [prepairDataTask] Wait for the initializing have been done!
+[873336] [log] [+] modeControlTask()
+[884968] [log] [modeControlTask] Wait for the initializing have been done!
+[885066] [log] Set systemStage = SYSTEM_RUNNING
+[896266] [-->] oledTest()
+[896333] [-->] prepairDataTask(0x3ffb0388)
+[896441] [-->] modeControlTask(0x3ffb0388)
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5ach ( 46508) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5d4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc14 vaddr=40080000 size=02404h (  9220) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1918ch (102796) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391b4 vaddr=40082404 size=09060h ( 36960) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004221c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (209) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (214) app_init: ELF file SHA256:  7c3c82c47...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (252) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (263) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) main_task: Started on CPU0[0m
+[0;32mI (298) main_task: Calling app_main()[0m
+[31140] [-->] app_main()
+[31183] [log] Set systemStage = SYSTEM_INIT
+[31403] [log] Start up OLED screen
+[35585] [log] Enter test mode!
+[49151] [-->] ledTest()
+[849834] [<--] ledTest()
+[849879] [log] [+] oledTask()
+[861459] [log] [oledTask] Wait for the initializing have been done!
+[861560] [log] [+] prepairDataTask()
+[873240] [log] [prepairDataTask] Wait for the initializing have been done!
+[873334] [log] [+] modeControlTask()
+[884966] [log] [modeControlTask] Wait for the initializing have been done!
+[885063] [log] Set systemStage = SYSTEM_RUNNING
+[896264] [-->] oledTest()
+[896331] [-->] prepairDataTask(0x3ffb0388)
+[896439] [-->] modeControlTask(0x3ffb0388)
+[5030133] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[5030193] [log] INPUT LEVEL: HIGH
+[5030228] [<--] changeModeButtonISR(0, 0, 0, 0, 0)
+[5210136] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[5210185] [log] [changeModeButtonISR] Input level : LOW
+[5210233] [<--] changeModeButtonISR(0, 0, 0, 0, 5210136)
+[22873871] [-->] changeModeButtonISR(0, 0, 0, 0, 5210136)
+[22873933] [log] [changeModeButtonISR] Input level : LOW
+[22873978] [<--] changeModeButtonISR(5210136, 0, 0, 0, 22873871)
+[22878519] [-->] changeModeButtonISR(5210136, 0, 0, 0, 22873871)
+[22884247] [log] INPUT LEVEL: HIGH
+[22887372] [<--] changeModeButtonISR(5210136, 0, 5030132, 0, 22873871)
+[22893642] [log] Detected 1 shorts pressed --> Changed mode!
+[22899007] [-->] modeSwitch()
+[22901710] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[22907344] [log] ENTRY: SYSTEM_MODE_I2C
+[22911368] [<--] modeControl() : OKE
+[23010425] [-->] changeModeButtonISR(5210136, 0, 5030132, 0, 22873871)
+[23010510] [log] [changeModeButtonISR] Input level : LOW
+[23010556] [<--] changeModeButtonISR(22873871, 0, 5030132, 0, 23010424)
+[25630164] [-->] changeModeButtonISR(22873871, 0, 5030132, 0, 23010424)
+[25630251] [log] INPUT LEVEL: HIGH
+[25630283] [<--] changeModeButtonISR(22873871, 0, 22878519, 0, 23010424)
+[25797468] [-->] changeModeButtonISR(22873871, 0, 22878519, 0, 23010424)
+[25797557] [log] [changeModeButtonISR] Input level : LOW
+[25797687] [<--] changeModeButtonISR(23010424, 0, 22878519, 0, 25797468)
+[28758946] [-->] changeModeButtonISR(23010424, 0, 22878519, 0, 25797468)
+[28759035] [log] INPUT LEVEL: HIGH
+[28759067] [<--] changeModeButtonISR(23010424, 0, 25630163, 0, 25797468)
+[28990160] [-->] changeModeButtonISR(23010424, 0, 25630163, 0, 25797468)
+[28990249] [log] [changeModeButtonISR] Input level : LOW
+[28990379] [<--] changeModeButtonISR(25797468, 0, 25630163, 0, 28990159)
+[29716888] [-->] changeModeButtonISR(25797468, 0, 25630163, 0, 28990159)
+[29716977] [log] INPUT LEVEL: HIGH
+[29717010] [<--] changeModeButtonISR(25797468, 0, 28758945, 0, 28990159)
+[29910176] [-->] changeModeButtonISR(25797468, 0, 28758945, 0, 28990159)
+[29910265] [log] [changeModeButtonISR] Input level : LOW
+[29910395] [<--] changeModeButtonISR(28990159, 0, 28758945, 0, 29910175)
+[30659278] [-->] changeModeButtonISR(28990159, 0, 28758945, 0, 29910175)
+[30659367] [log] INPUT LEVEL: HIGH
+[30659399] [<--] changeModeButtonISR(28990159, 0, 29716888, 0, 29910175)
+[30858357] [-->] changeModeButtonISR(28990159, 0, 29716888, 0, 29910175)
+[30858446] [log] [changeModeButtonISR] Input level : LOW
+[30858576] [<--] changeModeButtonISR(29910175, 0, 29716888, 0, 30858356)
+[31454483] [-->] changeModeButtonISR(29910175, 0, 29716888, 0, 30858356)
+[31454572] [log] INPUT LEVEL: HIGH
+[31454605] [<--] changeModeButtonISR(29910175, 0, 30659277, 0, 30858356)
+[31670160] [-->] changeModeButtonISR(29910175, 0, 30659277, 0, 30858356)
+[31670249] [log] [changeModeButtonISR] Input level : LOW
+[31670379] [<--] changeModeButtonISR(30858356, 0, 30659277, 0, 31670159)
+[32172860] [-->] changeModeButtonISR(30858356, 0, 30659277, 0, 31670159)
+[32172949] [log] INPUT LEVEL: HIGH
+[32172981] [<--] changeModeButtonISR(30858356, 0, 31454483, 0, 31670159)
+[32350164] [-->] changeModeButtonISR(30858356, 0, 31454483, 0, 31670159)
+[32350253] [log] [changeModeButtonISR] Input level : LOW
+[32350383] [<--] changeModeButtonISR(31670159, 0, 31454483, 0, 32350163)
+[32674691] [-->] changeModeButtonISR(31670159, 0, 31454483, 0, 32350163)
+[32674780] [log] INPUT LEVEL: HIGH
+[32674813] [<--] changeModeButtonISR(31670159, 0, 32172859, 0, 32350163)
+[32679662] [log] Detected 1 shorts pressed --> Changed mode!
+[32684806] [-->] modeSwitch()
+[32687505] [log] EXIT MODE: SYSTEM_MODE_I2C
+[32691607] [log] ENTRY: SYSTEM_MODE_UART
+[32695057] [<--] modeControl() : OKE
+[32700458] [<--] modeControlTask()
+[1;31mE (32968) FreeRTOS: FreeRTOS Task "modeControlTask" should not return, Aborting now![0m
+[3
+abort() was called at PC 0x400e6f63 on core 1
+
+
+Backtrace: 0x400853a1:0x3ffb6b10 0x40085369:0x3ffb6b30 0x4008966d:0x3ffb6b50 0x400e6f63:0x3ffb6bc0
+
+
+
+
+ELF file SHA256: 7c3c82c47
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5ach ( 46508) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5d4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc14 vaddr=40080000 size=02404h (  9220) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1918ch (102796) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391b4 vaddr=40082404 size=09060h ( 36960) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004221c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (208) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (213) app_init: ELF file SHA256:  7c3c82c47...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) main_task: Started on CPU0[0m
+[0;32mI (297) main_task: Calling app_main()[0m
+[31142] [-->] app_main()
+[31185] [log] Set systemStage = SYSTEM_INIT
+[31403] [log] Start up OLED screen
+[35585] [log] Enter test mode!
+[49151] [-->] ledTest()
+[849836] [<--] ledTest()
+[849881] [log] [+] oledTask()
+[861461] [log] [oledTask] Wait for the initializing have been done!
+[861562] [log] [+] prepairDataTask()
+[873242] [log] [prepairDataTask] Wait for the initializing have been done!
+[873336] [log] [+] modeControlTask()
+[884968] [log] [modeControlTask] Wait for the initializing have been done!
+[885066] [log] Set systemStage = SYSTEM_RUNNING
+[896266] [-->] oledTest()
+[896333] [-->] prepairDataTask(0x3ffb0388)
+[896441] [-->] modeControlTask(0x3ffb0388)
+[1475717] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[1475778] [log] INPUT LEVEL: HIGH
+[1475812] [<--] changeModeButtonISR(0, 0, 0, 0, 0)
+[1710135] [-->] changeModeButtonISR(0, 0, 0, 0, 0)
+[1710183] [log] INPUT LEVEL: HIGH
+[1710214] [<--] changeModeButtonISR(0, 0, 1475717, 0, 0)
+[1711484] [-->] changeModeButtonISR(0, 0, 1475717, 0, 0)
+[1716519] [-->] changeModeButtonISR(0, 0, 1475717, 0, 0)
+[1721552] [log] [changeModeButtonISR] Input level : LOW
+[1726499] [<--] changeModeButtonISR(0, 0, 1475717, 0, 1716519)
+[2215779] [-->] changeModeButtonISR(0, 0, 1475717, 0, 1716519)
+[2215850] [log] INPUT LEVEL: HIGH
+[2215881] [<--] changeModeButtonISR(0, 0, 1710134, 0, 1716519)
+[2219664] [log] Detected 1 shorts pressed --> Changed mode!
+[2223988] [-->] modeSwitch()
+[2226596] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[2232152] [log] ENTRY: SYSTEM_MODE_I2C
+[2235758] [<--] modeControl() : OKE
+[2450166] [-->] changeModeButtonISR(0, 0, 1710134, 0, 1716519)
+[2450237] [log] [changeModeButtonISR] Input level : LOW
+[2450281] [<--] changeModeButtonISR(1716519, 0, 1710134, 0, 2450165)
+[3015653] [-->] changeModeButtonISR(1716519, 0, 1710134, 0, 2450165)
+[3015735] [log] INPUT LEVEL: HIGH
+[3015765] [<--] changeModeButtonISR(1716519, 0, 2215778, 0, 2450165)
+[3258375] [-->] changeModeButtonISR(1716519, 0, 2215778, 0, 2450165)
+[3258457] [log] [changeModeButtonISR] Input level : LOW
+[3258501] [<--] changeModeButtonISR(2450165, 0, 2215778, 0, 3258374)
+[3770162] [-->] changeModeButtonISR(2450165, 0, 2215778, 0, 3258374)
+[3770244] [log] INPUT LEVEL: HIGH
+[3770275] [<--] changeModeButtonISR(2450165, 0, 3015652, 0, 3258374)
+[3970883] [-->] changeModeButtonISR(2450165, 0, 3015652, 0, 3258374)
+[3970965] [log] [changeModeButtonISR] Input level : LOW
+[3971009] [<--] changeModeButtonISR(3258374, 0, 3015652, 0, 3970882)
+[4510138] [-->] changeModeButtonISR(3258374, 0, 3015652, 0, 3970882)
+[4510220] [log] INPUT LEVEL: HIGH
+[4510251] [<--] changeModeButtonISR(3258374, 0, 3770161, 0, 3970882)
+[4710138] [-->] changeModeButtonISR(3258374, 0, 3770161, 0, 3970882)
+[4710220] [log] [changeModeButtonISR] Input level : LOW
+[4710264] [<--] changeModeButtonISR(3970882, 0, 3770161, 0, 4710138)
+[5330162] [-->] changeModeButtonISR(3970882, 0, 3770161, 0, 4710138)
+[5330244] [log] INPUT LEVEL: HIGH
+[5330275] [<--] changeModeButtonISR(3970882, 0, 4510138, 0, 4710138)
+[5496927] [-->] changeModeButtonISR(3970882, 0, 4510138, 0, 4710138)
+[5497009] [log] [changeModeButtonISR] Input level : LOW
+[5497053] [<--] changeModeButtonISR(4710138, 0, 4510138, 0, 5496926)
+[5975579] [-->] changeModeButtonISR(4710138, 0, 4510138, 0, 5496926)
+[5975662] [log] INPUT LEVEL: HIGH
+[5975693] [<--] changeModeButtonISR(4710138, 0, 5330161, 0, 5496926)
+[5979664] [log] Detected 1 shorts pressed --> Changed mode!
+[5984826] [-->] modeSwitch()
+[5987434] [log] EXIT MODE: SYSTEM_MODE_I2C
+[5991373] [log] ENTRY: SYSTEM_MODE_UART
+[5994808] [<--] modeControl() : OKE
+[6000461] [<--] modeControlTask()
+[1;31mE (6267) FreeRTOS: FreeRTOS Task "modeControlTask" should not return, Aborting now![0m
+[6
+abort() was called at PC 0x400e6f63 on core 1
+
+
+Backtrace: 0x400853a1:0x3ffb6b10 0x40085369:0x3ffb6b30 0x4008966d:0x3ffb6b50 0x400e6f63:0x3ffb6bc0
+
+
+
+
+ELF file SHA256: 7c3c82c47
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5ach ( 46508) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5d4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc14 vaddr=40080000 size=02404h (  9220) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1918ch (102796) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391b4 vaddr=40082404 size=09060h ( 36960) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004221c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (208) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (213) app_init: ELF file SHA256:  7c3c82c47...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) main_task: Started on CPU0[0m
+[0;32mI (297) main_task: Calling app_main()[0m
+[31242] [-->] app_main()
+[31285] [log] Set systemStage = SYSTEM_INIT
+[31403] [log] Start up OLED screen
+[35585] [log] Enter test mode!
+[49151] [-->] ledTest()
+[849936] [<--] ledTest()
+[849981] [log] [+] oledTask()
+[861561] [log] [oledTask] Wait for the initializing have been done!
+[861662] [log] [+] prepairDataTask()
+[873342] [log] [prepairDataTask] Wait for the initializing have been done!
+[873436] [log] [+] modeControlTask()
+[885068] [log] [modeControlTask] Wait for the initializing have been done!
+[885166] [log] Set systemStage = SYSTEM_RUNNING
+[896366] [-->] oledTest()
+[896433] [-->] prepairDataTask(0x3ffb0388)
+[896541] [-->] modeControlTask(0x3ffb0388)

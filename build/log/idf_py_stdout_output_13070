@@ -1,0 +1,101 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x16 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  8 2025 14:55:20[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b884h ( 47236) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b8ac vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001deec vaddr=40080000 size=0212ch (  8492) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16584h ( 91524) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=000365ac vaddr=4008212c size=091d4h ( 37332) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=0003f788 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     do-an-02[0m
+[0;32mI (200) app_init: App version:      f91ca9a-dirty[0m
+[0;32mI (205) app_init: Compile time:     Oct  8 2025 14:56:45[0m
+[0;32mI (210) app_init: ELF file SHA256:  6c01df651...[0m
+[0;32mI (214) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (220) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFB2F30 len 0002D0D0 (180 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008B300 len 00014D00 (83 KiB): IRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[31037] [-->] app_main()
+[31072] [log] Set systemStage = SYSTEM_INIT
+[31415] [log] Start up OLED screen
+[35549] [log] Start up...
+[48399] [log] [+] oledTask()
+[59580] [log] [oledTask] Wait for the initializing have been done!
+[59718] [log] [+] prepairNSendDataTask()
+[71160] [log] [prepairNSendDataTask] Wait for the initializing have been done!
+[71247] [log] [+] modeControlTask()
+[82561] [log] [modeControlTask] Wait for the initializing have been done!
+[82649] [log] Set systemStage = SYSTEM_RUNNING
+[93561] [-->] oledTest()
+[93618] [-->] prepairNSendDataTask(0x00000000)
+[93730] [-->] modeControlTask(0x00000000)
+[94893] [log] [modeControlTask] Default mode: 0
+[97588] [-->] modeSwitch(-1 --> 0)
+[100722] [err] EXIT MODE: systemMode is not valid! --> Abort![
+0603182] [log]endDataFraEe(g, 0xMffb03_S)I[119009]  [rr] MODEateSPIDmMode(spiDev_t li pDev)
+[or436
+]114949 createSPIndvice() : OKE: [-178
+0] [-->] configSPIDevice(dev: 0x3ffb6dd4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 1000, config: 0x0006)
+[127553] [<--] configSPIDevice() : OKE
+[131012] [-->] startupSPIDevice(0x3ffb6dd4)
+[134918] [log] [startupSPIDevice] Config for MASTER mode
+[140372] [<--] startupSPIDevice() : OKE
+[143512] [<--] modeControl() : OKE
+768] [-->] sendDataFrame([, 0x3ffb0388)
+[2130816] [log] SPI Send: [
+[2130856] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb4190, 1)
+[2131706] [<--] spiSetTransmitBuffer() : <null>
+[2135943] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[2141507] [<--] spiSetReceiveBuffer() : OKE
+[2145401] [-->] spiStartTransaction(0x3ffb6dd4)
+[2157804] [<--] spiStartTransaction() : OKE
+[2157860] [<--] sendDataFrame()
+[4170762] [-->] sendDataFrame(a, 0x3ffb0388)
+[4170810] [log] SPI Send: a
+[4170838] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb4190, 1)
+[4171676] [<--] spiSetTransmitBuffer() : <null>
+[4175929] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[4181485] [<--] spiSetReceiveBuffer() : OKE
+[4185391] [-->] spiStartTransaction(0x3ffb6dd4)
+[4197707] [<--] spiStartTransaction() : OKE
+[4197748] [<--] sendDataFrame()

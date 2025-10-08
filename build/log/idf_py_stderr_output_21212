@@ -1,0 +1,86 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/main/../helper/flag.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/../helper/general.h:25,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:1,
+                 from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cFreq':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:61:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   61 |     __I2C_ASSERT_PIN_OK("__i2cFreq", dev->freq, STR(freq));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:71:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   71 |     __I2C_ASSERT_PIN_OK(STR(__i2cSCL), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:81:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   81 |     __I2C_ASSERT_PIN_OK(STR(__i2cSDA), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSetSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:91:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   91 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cSetSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:104:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  104 |     __I2C_ASSERT_PIN_OK(STR(__i2cSetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cGetSDA':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:117:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  117 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSDA), dev->sda, STR(dev->sda));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h: In function '__i2cGetSCL':
+/home/fus/Documents/DO-AN-02/main/../helper/helper.h:52:35: warning: ordered comparison of pointer with integer zero [-Wextra]
+   52 | #define __isnot_positive(x)  ((x) <= 0)   ///< Check x <= 0.
+      |                                   ^~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:43:12: note: in expansion of macro '__isnot_positive'
+   43 |         if(__isnot_positive(pinName)){                      \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../driver/oled128x64/../i2c/i2cHelper.h:127:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+  127 |     __I2C_ASSERT_PIN_OK(STR(__i2cGetSCL), dev->scl, STR(dev->scl));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/main/libmain.a(do-an-02.c.obj):(.literal.oledTest+0x8): undefined reference to `createOLEDDevice'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/main/libmain.a(do-an-02.c.obj):(.literal.oledTest+0xc): undefined reference to `configOLEDDevice'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/main/libmain.a(do-an-02.c.obj):(.literal.oledTest+0x10): undefined reference to `startupOLEDDevice'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/main/libmain.a(do-an-02.c.obj): in function `oledTest':
+/home/fus/Documents/DO-AN-02/main/sender.h:81:(.text.oledTest+0x17): undefined reference to `createOLEDDevice'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/main/sender.h:82:(.text.oledTest+0x23): undefined reference to `configOLEDDevice'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/main/sender.h:84:(.text.oledTest+0x2b): undefined reference to `startupOLEDDevice'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/do-an-02.elf.dir/build.make:613: do-an-02.elf] Error 1
+make[1]: *** [CMakeFiles/Makefile2:3124: CMakeFiles/do-an-02.elf.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

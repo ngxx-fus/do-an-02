@@ -1,0 +1,12 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:9:10: fatal error: driver/gpio.h: No such file or directory
+    9 | #include "driver/gpio.h"        /// high-level GPIO driver (gpio_set_level, gpio_get_level, gpio_config)
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7494: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

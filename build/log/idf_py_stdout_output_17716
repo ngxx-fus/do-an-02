@@ -1,0 +1,342 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  7 2025 21:41:57[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b6e4h ( 46820) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b70c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dd5c vaddr=40080000 size=022bch (  8892) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15ec4h ( 89796) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035eec vaddr=400822bc size=08ff8h ( 36856) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003eeec vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      943fa1c-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 21:43:11[0m
+[0;32mI (209) app_init: ELF file SHA256:  0bb465982...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2B4 len 00014D4C (83 KiB): IRAM[0m
+[0;33mW (265) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[43913] [-->] app_main()
+[43945] [log] Set systemStage = SYSTEM_INIT
+[44356] [log] Start up OLED screen
+[1052524] [log] [+] oledTask()
+[1060044] [log] [oledTask] Wait for the initializing have been done!
+[1060117] [log] [+] prepairByteDataTask()
+[1067798] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1067876] [log] [+] modeControlTask()
+[1076621] [log] [modeControlTask] Wait for the initializing have been done!
+[1076698] [log] Set systemStage = SYSTEM_RUNNING
+[1087354] [-->] oledTest()
+[1087397] [-->] prepairByteDataTask(0x00000000)
+[1087499] [-->] modeControlTask(0x00000000)
+[1091674] [log] [modeControlTask] Default mode: 0
+[1095099] [-->] modeSwitch(-1 --> 0)
+[1098397] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[1103945] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[1107855] [-->] createSPIDevice(spiDev_t ** pDev)
+[1112298] [<--] createSPIDevice() : OKE
+[1115837] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 10, config: 0x0005)
+[1125477] [<--] configSPIDevice() : OKE
+[1129028] [-->] startupSPIDevice(0x3ffb6de4)
+[1133032] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (1396) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[1145314] [log] gpio_install_isr_service(): already installed, continue...
+[1151789] [log] CLK ISR attached to GPIO 4
+[1155597] [log] CS ISR attached to GPIO 17
+[1159409] [<--] startupSPIDevice() : OKE
+[1163063] [<--] modeControl() : OKE
+[2082564] [-->] setSendBackData(0x3ffb420a)
+[2082615] [log] SPI set sendback byte: g
+[2082655] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb420a, 1)
+[2084542] [<--] spiSetTransmitBuffer() : <null>
+[2088791] [<--] setSendBackData() : OKE
+[2092346] [-->] setReceiveByteBuff(0x3ffb420b)
+[2096513] [log] SPI set sendback byte: 
+[2100159] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb420b, 5)
+[2105722] [<--] spiSetReceiveBuffer() : OKE
+[2109629] [<--] setReceiveByteBuff() : OKE
+[3949759] [log] CS falling edge
+[4023524] [log] CS rising edge
+[8066644] [log] CS falling edge
+[8138495] [log] 8|0|0x5e
+[8149786] [log] CS rising edge
+[12183449] [log] CS falling edge
+[12259758] [log] 8|0|0x22
+[12266661] [log] CS rising edge
+[16309765] [log] CS falling edge
+[16383475] [log] CS rising edge
+[20426663] [log] CS falling edge
+[20498424] [log] 8|0|0x65
+[20509778] [log] CS rising edge
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  7 2025 21:41:57[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b6e4h ( 46820) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b70c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dd5c vaddr=40080000 size=022bch (  8892) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15ec4h ( 89796) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035eec vaddr=400822bc size=08ff8h ( 36856) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003eeec vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      943fa1c-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 21:43:11[0m
+[0;32mI (209) app_init: ELF file SHA256:  0bb465982...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2B4 len 00014D4C (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[43913] [-->] app_main()
+[43945] [log] Set systemStage = SYSTEM_INIT
+[44356] [log] Start up OLED screen
+[1052524] [log] [+] oledTask()
+[1060044] [log] [oledTask] Wait for the initializing have been done!
+[1060118] [log] [+] prepairByteDataTask()
+[1067798] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1067876] [log] [+] modeControlTask()
+[1076621] [log] [modeControlTask] Wait for the initializing have been done!
+[1076698] [log] Set systemStage = SYSTEM_RUNNING
+[1087354] [-->] oledTest()
+[1087398] [-->] prepairByteDataTask(0x00000000)
+[1087499] [-->] modeControlTask(0x00000000)
+[1091675] [log] [modeControlTask] Default mode: 0
+[1095099] [-->] modeSwitch(-1 --> 0)
+[1098397] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[1103945] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[1107855] [-->] createSPIDevice(spiDev_t ** pDev)
+[1112298] [<--] createSPIDevice() : OKE
+[1115837] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 10, config: 0x0005)
+[1125477] [<--] configSPIDevice() : OKE
+[1129028] [-->] startupSPIDevice(0x3ffb6de4)
+[1133032] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (1396) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[1145314] [log] gpio_install_isr_service(): already installed, continue...
+[1151789] [log] CLK ISR attached to GPIO 4
+[1155597] [log] CS ISR attached to GPIO 17
+[1159409] [<--] startupSPIDevice() : OKE
+[1163063] [<--] modeControl() : OKE
+[2082564] [-->] setSendBackData(0x3ffb420a)
+[2082615] [log] SPI set sendback byte: g
+[2082655] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb420a, 1)
+[2084542] [<--] spiSetTransmitBuffer() : <null>
+[2088791] [<--] setSendBackData() : OKE
+[2092346] [-->] setReceiveByteBuff(0x3ffb420b)
+[2096513] [log] SPI set sendback byte: 
+[2100159] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb420b, 5)
+[2105722] [<--] spiSetReceiveBuffer() : OKE
+[2109628] [<--] setReceiveByteBuff() : OKE
+[4819759] [log] CS falling edge
+[4898226] [log] CS rising edge
+[8938215] [log] CS falling edge
+[9019775] [log] CS rising edge
+[13058162] [log] CS falling edge
+[13138175] [log] CS rising edge
+[17179758] [log] CS falling edge
+[17258150] [log] CS rising edge
+[21298127] [log] CS falling edge
+[21379759] [log] CS rising edge
+[25418115] [log] CS falling edge
+[25498128] [log] CS rising edge
+[29539775] [log] CS falling edge
+[29613065] [log] 8|0|0x2f
+[29618065] [log] CS rising edge
+[33658017] [log] CS falling edge
+[33733046] [log] 8|0|0x3a
+[33739789] [log] CS rising edge
+[37778023] [log] CS falling edge
+[37856637] [log] 8|0|0x43
+[37858036] [log] CS rising edge
+[41899785] [log] CS falling edge
+[41973004] [log] 8|0|0x34
+[41978004] [log] CS rising edge
+[46017951] [log] CS falling edge
+[46093058] [log] 8|0|0x5e
+[46099801] [log] CS rising edge
+[50137924] [log] CS falling edge
+[50216637] [log] 8|0|0x74
+[50217937] [log] CS rising edge
+[54259770] [log] CS falling edge
+[54332939] [log] 8|0|0x4f
+[54337940] [log] CS rising edge
+[58377881] [log] CS falling edge
+[58452893] [log] 8|0|0x6a
+[58459789] [log] CS rising edge
+[62497852] [log] CS falling edge
+[62503334] [err] [i2cSendBuffer] Got NACK after send byte[30] in buffer!
+[62572865] [log] 8|0|0x28
+[62577865] [log] CS rising edge
+[66617844] [log] CS falling edge
+[66692857] [log] 8|0|0x39
+[66699789] [log] CS rising edge
+[70737819] [log] CS falling edge
+[70816674] [log] 8|0|0x6b
+[70817832] [log] CS rising edge
+[74859785] [log] CS falling edge
+[74932789] [log] 8|0|0x61
+[74937790] [log] CS rising edge
+[78977769] [log] CS falling edge
+[79052791] [log] 8|0|0x24
+[79059793] [log] CS rising edge
+[83097720] [log] CS falling edge
+[83176637] [log] 8|0|0x5e
+[83177733] [log] CS rising edge
+[87219770] [log] CS falling edge
+[87292691] [log] 8|0|0x2e
+[87297692] [log] CS rising edge
+[91337712] [log] CS falling edge
+[91412725] [log] 8|0|0x57
+[91419807] [log] CS rising edge
+[95457662] [log] CS falling edge
+[95536637] [log] 8|0|0x38
+[95537675] [log] CS rising edge
+[99579783] [log] CS falling edge
+[99652635] [log] 8|0|0x31
+[99657636] [log] CS rising edge
+[103697595] [log] CS falling edge
+[103772666] [log] 8|0|0x2b
+[103779795] [log] CS rising edge
+[107817575] [log] CS falling edge
+[107896638] [log] 8|0|0x6f
+[107897588] [log] CS rising edge
+[111939777] [log] CS falling edge
+[112012575] [log] 8|0|0x56
+[112017575] [log] CS rising edge
+[116057513] [log] CS falling edge
+[116132528] [log] 8|0|0x3d
+[116139804] [log] CS rising edge
+[120177479] [log] CS falling edge
+[120256634] [log] 8|0|0x7c
+[120257492] [log] CS rising edge
+[124299764] [log] CS falling edge
+[124372506] [log] 8|0|0x58
+[124377507] [log] CS rising edge
+[128417443] [log] CS falling edge
+[128492456] [log] 8|0|0x31
+[128499778] [log] CS rising edge
+[132537397] [log] CS falling edge
+[132616634] [log] 8|0|0x2c
+[132617410] [log] CS rising edge
+[136659761] [log] CS falling edge
+[136732412] [log] 8|0|0x33
+[136737413] [log] CS rising edge
+[140777397] [log] CS falling edge
+[140852409] [log] 8|0|0x51
+[140859799] [log] CS rising edge
+[144897343] [log] CS falling edge
+[144976634] [log] 8|0|0x3f
+[144977356] [log] CS rising edge
+[149019776] [log] CS falling edge
+[149092343] [log] 8|0|0x43
+[149097344] [log] CS rising edge
+[153137283] [log] CS falling edge
+[153212295] [log] 8|0|0x74
+[153219774] [log] CS rising edge
+[157257267] [log] CS falling edge
+[157336651] [log] 8|0|0x6f
+[157337280] [log] CS rising edge
+[161379777] [log] CS falling edge
+[161452244] [log] 8|0|0x69
+[161457244] [log] CS rising edge
+[165497229] [log] CS falling edge
+[165572241] [log] 8|0|0x56
+[165579793] [log] CS rising edge
+[169617207] [log] CS falling edge
+[169696638] [log] 8|0|0x4e
+[169697220] [log] CS rising edge
+[173739788] [log] CS falling edge
+[173812198] [log] 8|0|0x48
+[173817199] [log] CS rising edge
+[177857130] [log] CS falling edge
+[177932142] [log] 8|0|0x5e
+[177939782] [log] CS rising edge
+[181977134] [log] CS falling edge
+[182056649] [log] 8|0|0x52
+[182057147] [log] CS rising edge
+[186099791] [log] CS falling edge
+[186172093] [log] 8|0|0x63
+[186177093] [log] CS rising edge
+[190217083] [log] CS falling edge
+[190292096] [log] 8|0|0x58
+[190299803] [log] CS rising edge
+[194337026] [log] CS falling edge
+[194416654] [log] 8|0|0x69
+[194417039] [log] CS rising edge

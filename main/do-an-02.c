@@ -90,23 +90,20 @@ void app_main(void){
     systemStage = SYSTEM_RUNNING;
 
     char mode[] = /*2*/ "M: "  /*6*/ "1-WIRE" /*1*/;
-    char rcvd[] = /*8*/ "> EMPTY";
-    char send[] = /*8*/ "# ?";
+    char rcvd[] = /*10*/ "> 000 : c";
+    char send[] = /*10*/ "# 000 : c";
 
     drawLineText(oled, "Running...", 0xF00 | 0x00 );
 
     uint8_t currentDataFrame = byteData;
     uint8_t receivedDataFrame = 0;
 
-    uint8_t rcvdDataFrame[5] = {1, 2, 3, 4, 5};
-    
     vTaskDelay(10);
 
     setSendBackData(&currentDataFrame);
-    setReceiveByteBuff(rcvdDataFrame);
+    setReceiveByteBuff(&receivedDataFrame, 1);
 
     while (systemStage != SYSTEM_STOPPED){
-        currentDataFrame = byteData;
 
         /// Display mode and dataframe
         switch (currentSystemMode){
@@ -125,22 +122,36 @@ void app_main(void){
         }
 
         /// Show received data if any
-        rcvd[2] = rcvdDataFrame[0];
-        rcvd[3] = rcvdDataFrame[1];
-        rcvd[4] = rcvdDataFrame[2];
-        rcvd[5] = rcvdDataFrame[3];
-        rcvd[6] = rcvdDataFrame[4];
-        rcvd[7] = '\0';
+        rcvd[2] = '0' + (receivedDataFrame / 100);
+        rcvd[3] = '0' + ((receivedDataFrame % 100) / 10);
+        rcvd[4] = '0' + (receivedDataFrame % 10);
+        rcvd[5] = ' ';
+        rcvd[6] = ':';
+        rcvd[7] = ' ';
+        rcvd[8] = receivedDataFrame;
+        rcvd[9] = '\0';
 
         /// Show current sendback dataframe
-        send[2] = currentDataFrame;
-        send[3] = '\0';
+        send[2] = '0' + (currentDataFrame / 100);
+        send[3] = '0' + ((currentDataFrame % 100) / 10);
+        send[4] = '0' + (currentDataFrame % 10);
+        send[5] = ' ';
+        send[6] = ':';
+        send[7] = ' ';
+        send[8] = currentDataFrame;
+        send[9] = '\0';
 
         drawLineText(oled, mode, __masks32(19) | 0xF00 | 0x00 );
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x01 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
-        vTaskDelay(2);
+        while(!checkNewData()) vTaskDelay(1);
+        __log("[app_main] Has new data!");
+        currentDataFrame = byteData;
+        setSendBackData(&currentDataFrame);
+        setReceiveByteBuff(&receivedDataFrame, 1);
+
+        // vTaskDelay(10);
     }
 
     __exit("app_main()");

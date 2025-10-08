@@ -1,0 +1,12 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiGetTransmitSize':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:266:9: error: implicit declaration of function '__spiWarn' [-Wimplicit-function-declaration]
+  266 |         __spiWarn("txdPtr is NULL, no transmit buffer assigned!");
+      |         ^~~~~~~~~
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7589: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+make: *** [Makefile:136: all] Error 2

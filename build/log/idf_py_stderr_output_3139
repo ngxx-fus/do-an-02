@@ -1,0 +1,18 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/sender.h: In function 'oledTest':
+/home/fus/Documents/DO-AN-02/main/sender.h:97:5: error: implicit declaration of function 'oledFlush' [-Wimplicit-function-declaration]
+   97 |     oledFlush(oled);
+      |     ^~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:3:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:28:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   28 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7400: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

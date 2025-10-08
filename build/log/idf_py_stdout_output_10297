@@ -1,0 +1,856 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b6c4h ( 46788) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b6ec vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dd3c vaddr=40080000 size=022dch (  8924) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15e98h ( 89752) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035ec0 vaddr=400822dc size=090bch ( 37052) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ef84 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      73bc7e6-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:43:46[0m
+[0;32mI (209) app_init: ELF file SHA256:  024ca95db...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B398 len 00014C68 (83 KiB): IRAM[0m
+[0;33mW (265) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44131] [-->] app_main()
+[44170] [log] Set systemStage = SYSTEM_INIT
+[44353] [log] Start up OLED screen
+[1052625] [log] [+] oledTask()
+[1063798] [log] [oledTask] Wait for the initializing have been done!
+[1063889] [log] [+] prepairByteDataTask()
+[1075324] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075417] [log] [+] modeControlTask()
+[1086742] [log] [modeControlTask] Wait for the initializing have been done!
+[1086837] [log] Set systemStage = SYSTEM_RUNNING
+[1097772] [-->] oledTest()
+[1097832] [-->] prepairByteDataTask(0x00000000)
+[1097943] [-->] modeControlTask(0x00000000)
+[1099663] [[10998et] [log] [ata(0x3ffb0390)
+[efault0mo[err] MODE: system-->e is notivalid! --> 0)
+[10[540788err] EXIT etSendBackDmMo() : ERRt [1111442-> Abo>] setRece3091] [log](0NTRfb420a)
+[11157MODE_SPr] M1117 systemMode is not vaevice(spiDeort!
+ 1De081
+[ 121535] [<-eceiveaytSPIDev) : ER: OKE
+[1125074] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 10, config: 0x0005)
+[1134709] [<--] configSPIDevice() : OKE
+[1138260] [-->] startupSPIDevice(0x3ffb6de4)
+[1142265] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (1406) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[1154540] [log] gpio_install_isr_service(): already installed, continue...
+[1161024] [log] CLK ISR attached to GPIO 4
+[1164831] [log] CS ISR attached to GPIO 17
+[1168646] [<--] startupSPIDevice() : OKE
+[1172296] [<--] modeControl() : OKE
+[2409180] [log] Buffer err!
+[2409216] [log] CS falling edge
+[2462044] [log] Buffer err!
+[2515342] [log] Buffer err!
+[2568079] [log] Buffer err!
+[2610475] [log] Buffer err!
+[2663773] [log] Buffer err!
+[2716509] [log] Buffer err!
+[2758905] [log] Buffer err!
+[2812143] [log] Buffer err!
+[2864933] [log] Buffer err!
+[2918171] [log] Buffer err!
+[2960567] [log] Buffer err!
+[3013363] [log] Buffer err!
+[3066606] [log] Buffer err!
+[3109010] [log] Buffer err!
+[3161693] [log] Buffer err!
+[3214954] [log] CS rising edge
+[5257851] [log] CS falling edge
+[5300288] [log] Buffer err!
+[5353496] [log] Buffer err!
+[5406181] [log] Buffer err!
+[5448542] [log] Buffer err!
+[5501746] [log] Buffer err!
+[5554491] [log] Buffer err!
+[5607694] [log] Buffer err!
+[5650056] [log] Buffer err!
+[5702800] [log] Buffer err!
+[5756004] [log] Buffer err!
+[5798365] [log] Buffer err!
+[5851050] [log] Buffer err!
+[5904314] [log] Buffer err!
+[5956999] [log] Buffer err!
+[5999360] [log] Buffer err!
+[6052564] [log] CS rising edge
+[1;31mE (7376) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (7376) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (7376) task_wdt: Tasks currently running:[0m
+[1;31mE (7376) task_wdt: CPU 0: main[0m
+[1;31mE (7376) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (7376) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[8091943] [log] CS falling edge
+[8145287] [log] Buffer err!
+[8197976] [log] Buffer err!
+[8240334] [log] Buffer err!
+[8293594] [log] Buffer err!
+[8346275] [log] Buffer err!
+[8388633] [log] Buffer err!
+[8441834] [log] Buffer err!
+[8494566] [log] Buffer err!
+[8547767] [log] Buffer err!
+[8590125] [log] Buffer err!
+[8642865] [log] Buffer err!
+[8696066] [log] Buffer err!
+[8738424] [log] Buffer err!
+[8791105] [log] Buffer err!
+[8844365] [log] Buffer err!
+[8897045] [log] CS rising edge
+[10931981] [log] CS falling edge
+[10985377] [log] Buffer err!
+[11038147] [log] Buffer err!
+[11080566] [log] Buffer err!
+[11133831] [log] Buffer err!
+[11186608] [log] Buffer err!
+[11229033] [log] Buffer err!
+[11282300] [log] Buffer err!
+[11335139] [log] Buffer err!
+[11378348] [log] Buffer err!
+[11430835] [log] Buffer err!
+[11483674] [log] Buffer err!
+[11536941] [log] Buffer err!
+[11579366] [log] Buffer err!
+[11632145] [log] Buffer err!
+[11685468] [log] Buffer err!
+[11738247] [log] CS rising edge
+[1;31mE (12386) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (12386) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (12386) task_wdt: Tasks currently running:[0m
+[1;31mE (12386) task_wdt: CPU 0: main[0m
+[1;31mE (12386) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (12386) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[13769888] [log] CS falling edge
+[13823236] [log] Buffer err!
+[13875931] [log] Buffer err!
+[13918294] [log] Buffer err!
+[13971499] [log] Buffer err!
+[14024246] [log] Buffer err!
+[14077451] [log] Buffer err!
+[14119814] [log] Buffer err!
+[14172501] [log] Buffer err!
+[14225766] [log] Buffer err!
+[14268394] [log] Buffer err!
+[14320819] [log] Buffer err!
+[14374084] [log] Buffer err!
+[14426770] [log] Buffer err!
+[14469133] [log] Buffer err!
+[14522339] [log] Buffer err!
+[14575085] [log] CS rising edge
+[16610318] [log] CS falling edge
+[16663737] [log] Buffer err!
+[16716541] [log] Buffer err!
+[16758981] [log] Buffer err!
+[16812265] [log] Buffer err!
+[16865128] [log] Buffer err!
+[16908353] [log] Buffer err!
+[16960855] [log] Buffer err!
+[17013719] [log] Buffer err!
+[17067003] [log] Buffer err!
+[17109444] [log] Buffer err!
+[1;31mE (17386) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (17386) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (17386) task_wdt: Tasks currently running:[0m
+[1;31mE (17386) task_wdt: CPU 0: main[0m
+[1;31mE (17386) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (17386) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[17169914] [log] Buffer err!
+[17215026] [log] Buffer err!
+[17267816] [log] Buffer err!
+[17310212] [log] Buffer err!
+[17363462] [log] Buffer err!
+[17416198] [log] CS rising edge
+[19450246] [log] CS falling edge
+[19503583] [log] Buffer err!
+[19556263] [log] Buffer err!
+[19598622] [log] Buffer err!
+[19651823] [log] Buffer err!
+[19704569] [log] Buffer err!
+[19757771] [log] Buffer err!
+[19800129] [log] Buffer err!
+[19852869] [log] Buffer err!
+[19906071] [log] Buffer err!
+[19948429] [log] Buffer err!
+[20001110] [log] Buffer err!
+[20054370] [log] Buffer err!
+[20107051] [log] Buffer err!
+[20149409] [log] Buffer err!
+[20202611] [log] Buffer err!
+[20255295] [log] CS rising edge
+[1;31mE (22396) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (22396) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (22396) task_wdt: Tasks currently running:[0m
+[1;31mE (22396) task_wdt: CPU 0: main[0m
+[1;31mE (22396) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (22396) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[22296432] [log] CS falling edge
+[22338914] [log] Buffer err!
+[22391661] [log] Buffer err!
+[22444962] [log] Buffer err!
+[22497702] [log] Buffer err!
+[22540101] [log] Buffer err!
+[22593402] [log] Buffer err!
+[22646137] [log] Buffer err!
+[22688536] [log] Buffer err!
+[22741777] [log] Buffer err!
+[22794580] [log] Buffer err!
+[22847821] [log] Buffer err!
+[22890220] [log] Buffer err!
+[22942964] [log] Buffer err!
+[22996205] [log] Buffer err!
+[23038604] [log] Buffer err!
+[23091343] [log] CS rising edge
+[25135454] [log] CS falling edge
+[25178193] [log] Buffer err!
+[25230604] [log] Buffer err!
+[25283822] [log] Buffer err!
+[25336522] [log] Buffer err!
+[25378927] [log] Buffer err!
+[25432175] [log] Buffer err!
+[25484986] [log] Buffer err!
+[25528198] [log] Buffer err!
+[25580641] [log] Buffer err!
+[25633453] [log] Buffer err!
+[25686700] [log] Buffer err!
+[25729105] [log] Buffer err!
+[25781855] [log] Buffer err!
+[25835163] [log] Buffer err!
+[25887912] [log] Buffer err!
+[25930317] [log] CS rising edge
+[1;31mE (27406) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (27406) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (27406) task_wdt: Tasks currently running:[0m
+[1;31mE (27406) task_wdt: CPU 0: main[0m
+[1;31mE (27406) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (27406) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[27972630] [log] CS falling edge
+[28025452] [log] Buffer err!
+[28068178] [log] Buffer err!
+[28121101] [log] Buffer err!
+[28173899] [log] Buffer err!
+[28227139] [log] Buffer err!
+[28269537] [log] Buffer err!
+[28322276] [log] Buffer err!
+[28375576] [log] Buffer err!
+[28418255] [log] Buffer err!
+[28470715] [log] Buffer err!
+[28524015] [log] Buffer err!
+[28576754] [log] Buffer err!
+[28619151] [log] Buffer err!
+[28672392] [log] Buffer err!
+[28725190] [log] Buffer err!
+[28768183] [log] CS rising edge
+[30810295] [log] CS falling edge
+[30863063] [log] Buffer err!
+[30916232] [log] Buffer err!
+[30958558] [log] Buffer err!
+[31011190] [log] Buffer err!
+[31064418] [log] Buffer err!
+[31117050] [log] Buffer err!
+[31159376] [log] Buffer err!
+[31212545] [log] Buffer err!
+[31265236] [log] Buffer err!
+[31308191] [log] Buffer err!
+[31360734] [log] Buffer err!
+[31413427] [log] Buffer err!
+[31466664] [log] Buffer err!
+[31509083] [log] Buffer err!
+[31561853] [log] Buffer err!
+[31615174] [log] CS rising edge
+[1;31mE (32416) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (32416) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (32416) task_wdt: Tasks currently running:[0m
+[1;31mE (32416) task_wdt: CPU 0: main[0m
+[1;31mE (32416) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (32416) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[33657655] [log] CS falling edge
+[33700138] [log] Buffer err!
+[33753450] [log] Buffer err!
+[33806191] [log] Buffer err!
+[33848591] [log] Buffer err!
+[33901833] [log] Buffer err!
+[33954636] [log] Buffer err!
+[34007878] [log] Buffer err!
+[34050277] [log] Buffer err!
+[34103078] [log] Buffer err!
+[34156320] [log] Buffer err!
+[34198719] [log] Buffer err!
+[34251460] [log] Buffer err!
+[34304762] [log] Buffer err!
+[34357503] [log] Buffer err!
+[34399902] [log] Buffer err!
+[34453204] [log] CS rising edge
+[36495936] [log] CS falling edge
+[36538334] [log] Buffer err!
+[36591498] [log] Buffer err!
+[36644184] [log] Buffer err!
+[36697349] [log] Buffer err!
+[36739671] [log] Buffer err!
+[36792297] [log] Buffer err!
+[36845521] [log] Buffer err!
+[36898147] [log] Buffer err!
+[36940469] [log] Buffer err!
+[36993694] [log] Buffer err!
+[37046319] [log] Buffer err!
+[37088641] [log] Buffer err!
+[37141806] [log] Buffer err!
+[1;31mE (37426) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (37426) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (37426) task_wdt: Tasks currently running:[0m
+[1;31mE (37426) task_wdt: CPU 0: main[0m
+[1;31mE (37426) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (37426) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[37202273] [log] Buffer err!
+[37247224] [log] Buffer err!
+[37289554] [log] CS rising edge
+[39334538] [log] CS falling edge
+[39387870] [log] Buffer err!
+[39430284] [log] Buffer err!
+[39483106] [log] Buffer err!
+[39536303] [log] Buffer err!
+[39578653] [log] Buffer err!
+[39631321] [log] Buffer err!
+[39684566] [log] Buffer err!
+[39737233] [log] Buffer err!
+[39779583] [log] Buffer err!
+[39832836] [log] Buffer err!
+[39885503] [log] Buffer err!
+[39928127] [log] Buffer err!
+[39981048] [log] Buffer err!
+[40033775] [log] Buffer err!
+[40086968] [log] Buffer err!
+[40129318] [log] CS rising edge
+[42171959] [log] CS falling edge
+[1;31mE (42426) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (42426) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (42426) task_wdt: Tasks currently running:[0m
+[1;31mE (42426) task_wdt: CPU 0: main[0m
+[1;31mE (42426) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (42426) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[42225068] [log] Buffer err!
+[42277790] [log] Buffer err!
+[42320158] [log] Buffer err!
+[42373428] [log] Buffer err!
+[42426097] [log] Buffer err!
+[42468465] [log] Buffer err!
+[42521676] [log] Buffer err!
+[42574429] [log] Buffer err!
+[42627640] [log] Buffer err!
+[42670007] [log] Buffer err!
+[42722761] [log] Buffer err!
+[42775971] [log] Buffer err!
+[42818339] [log] Buffer err!
+[42871033] [log] Buffer err!
+[42924303] [log] Buffer err!
+[42976997] [log] CS rising edge
+[45010940] [log] CS falling edge
+[45064319] [log] Buffer err!
+[45117062] [log] Buffer err!
+[45159463] [log] Buffer err!
+[45212766] [log] Buffer err!
+[45265509] [log] Buffer err!
+[45308124] [log] Buffer err!
+[45361156] [log] Buffer err!
+[45413959] [log] Buffer err!
+[45467202] [log] Buffer err!
+[45509602] [log] Buffer err!
+[45562346] [log] Buffer err!
+[45615611] [log] Buffer err!
+[45658087] [log] Buffer err!
+[45710664] [log] Buffer err!
+[45763929] [log] Buffer err!
+[45816616] [log] CS rising edge
+[1;31mE (47426) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (47426) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (47426) task_wdt: Tasks currently running:[0m
+[1;31mE (47426) task_wdt: CPU 0: main[0m
+[1;31mE (47426) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (47426) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D9575:0x3FFB4180 0x400D97F0:0x3FFB41B0 0x400D720E:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[47857184] [log] CS falling edge
+[47899649] [log] Buffer err!
+[47952370] [log] Buffer err!
+[48005654] [log] Buffer err!
+[48048060] [log] Buffer err!
+[48100750] [log] Buffer err!
+[48154034] [log] Buffer err!
+[48206747] [log] Buffer err!
+[48249128] [log] Buffer err!
+[48302351] [log] Buffer err!
+[48355124] [log] Buffer err!
+[48398063] [log] Buffer err!
+[48450731] [log] Buffer err!
+[48503505] [log] Buffer err!
+[48556728] [log] Buffer err!
+[48599109] [log] Buffer err!
+[48651822] [log] CS rising edge
+[50696010] [log] CS falling edge
+[50738459] [log] Buffer err!
+[50791161] [log] Buffer err!
+[50844437] [log] Buffer err!
+[50897139] [log] Buffer err!
+[50939512] [log] Buffer err!
+[50992788] [log] Buffer err!
+[51045490] [log] Buffer err!
+[51088078] [log] Buffer err!
+[51141083] [log] Buffer err!
+[51193789] [log] Buffer err!
+[51247004] [log] Buffer err!
+[51289378] [log] Buffer err!
+[51342080] [log] Buffer err!
+[51395356] [log] Buffer err!
+[51448058] [log] Buffer err!
+[51490431] [log] CS rising edge
+[1;31mE (52436) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (52436) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (52436) task_wdt: Tasks currently running:[0m
+[1;31mE (52436) task_wdt: CPU 0: main[0m
+[1;31mE (52436) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (52436) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[53533216] [log] CS falling edge
+[53586062] [log] Buffer err!
+[53628484] [log] Buffer err!
+[53681716] [log] Buffer err!
+[53734464] [log] Buffer err!
+[53787670] [log] Buffer err!
+[53830034] [log] Buffer err!
+[53882782] [log] Buffer err!
+[53935988] [log] Buffer err!
+[53978352] [log] Buffer err!
+[54031040] [log] Buffer err!
+[54084307] [log] Buffer err!
+[54136994] [log] Buffer err!
+[54179358] [log] Buffer err!
+[54232565] [log] Buffer err!
+[54285279] [log] Buffer err!
+[54328079] [log] CS rising edge
+[56371759] [log] CS falling edge
+[56424636] [log] Buffer err!
+[56477879] [log] Buffer err!
+[56520280] [log] Buffer err!
+[56573083] [log] Buffer err!
+[56626326] [log] Buffer err!
+[56668726] [log] Buffer err!
+[56721469] [log] Buffer err!
+[56774772] [log] Buffer err!
+[56827515] [log] Buffer err!
+[56869916] [log] Buffer err!
+[56923218] [log] Buffer err!
+[56975961] [log] Buffer err!
+[57018362] [log] Buffer err!
+[57071605] [log] Buffer err!
+[57124408] [log] Buffer err!
+[57177651] [log] CS rising edge
+[1;31mE (57446) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (57446) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (57446) task_wdt: Tasks currently running:[0m
+[1;31mE (57446) task_wdt: CPU 0: main[0m
+[1;31mE (57446) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (57446) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[59217553] [log] CS falling edge
+[59259986] [log] Buffer err!
+[59313247] [log] Buffer err!
+[59365914] [log] Buffer err!
+[59408264] [log] Buffer err!
+[59461456] [log] Buffer err!
+[59514128] [log] Buffer err!
+[59567320] [log] Buffer err!
+[59609670] [log] Buffer err!
+[59662337] [log] Buffer err!
+[59715591] [log] Buffer err!
+[59757990] [log] Buffer err!
+[59810700] [log] Buffer err!
+[59863990] [log] Buffer err!
+[59916712] [log] Buffer err!
+[59959099] [log] Buffer err!
+[60012329] [log] CS rising edge
+[62056323] [log] CS falling edge
+[62098764] [log] Buffer err!
+[62151973] [log] Buffer err!
+[1;31mE (62456) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (62456) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (62456) task_wdt: Tasks currently running:[0m
+[1;31mE (62456) task_wdt: CPU 0: main[0m
+[1;31mE (62456) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (62456) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[62233632] [log] Buffer err!
+[62257434] [log] Buffer err!
+[62299816] [log] Buffer err!
+[62352506] [log] Buffer err!
+[62405775] [log] Buffer err!
+[62448141] [log] Buffer err!
+[62500832] [log] Buffer err!
+[62554100] [log] Buffer err!
+[62606790] [log] Buffer err!
+[62649156] [log] Buffer err!
+[62702364] [log] Buffer err!
+[62755114] [log] Buffer err!
+[62797974] [log] Buffer err!
+[62850691] [log] CS rising edge
+[64894085] [log] CS falling edge
+[64947376] [log] Buffer err!
+[64989750] [log] Buffer err!
+[65042452] [log] Buffer err!
+[65095729] [log] Buffer err!
+[65138103] [log] Buffer err!
+[65190805] [log] Buffer err!
+[65244080] [log] Buffer err!
+[65296782] [log] Buffer err!
+[65339156] [log] Buffer err!
+[65392372] [log] Buffer err!
+[65445134] [log] Buffer err!
+[65487962] [log] Buffer err!
+[65540726] [log] Buffer err!
+[65593488] [log] Buffer err!
+[65646704] [log] Buffer err!
+[65689077] [log] CS rising edge
+[1;31mE (67466) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (67466) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (67466) task_wdt: Tasks currently running:[0m
+[1;31mE (67466) task_wdt: CPU 0: main[0m
+[1;31mE (67466) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (67466) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[67730350] [log] CS falling edge
+[67783730] [log] Buffer err!
+[67836476] [log] Buffer err!
+[67878873] [log] Buffer err!
+[67932114] [log] Buffer err!
+[67984916] [log] Buffer err!
+[68027940] [log] Buffer err!
+[68080557] [log] Buffer err!
+[68133356] [log] Buffer err!
+[68186598] [log] Buffer err!
+[68228996] [log] Buffer err!
+[68281734] [log] Buffer err!
+[68334986] [log] Buffer err!
+[68387725] [log] Buffer err!
+[68430123] [log] Buffer err!
+[68483424] [log] Buffer err!
+[68536142] [log] CS rising edge
+[70570371] [log] CS falling edge
+[70623743] [log] Buffer err!
+[70676476] [log] Buffer err!
+[70718870] [log] Buffer err!
+[70772107] [log] Buffer err!
+[70824900] [log] Buffer err!
+[70868078] [log] Buffer err!
+[70920534] [log] Buffer err!
+[70973327] [log] Buffer err!
+[71026564] [log] Buffer err!
+[71068958] [log] Buffer err!
+[71121691] [log] Buffer err!
+[71174987] [log] Buffer err!
+[71227720] [log] Buffer err!
+[71270114] [log] Buffer err!
+[71323411] [log] Buffer err!
+[71376122] [log] CS rising edge
+[1;31mE (72476) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (72476) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (72476) task_wdt: Tasks currently running:[0m
+[1;31mE (72476) task_wdt: CPU 0: main[0m
+[1;31mE (72476) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (72476) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[73415768] [log] CS falling edge
+[73458185] [log] Buffer err!
+[73510835] [log] Buffer err!
+[73564071] [log] Buffer err!
+[73616713] [log] Buffer err!
+[73659046] [log] Buffer err!
+[73712222] [log] Buffer err!
+[73764923] [log] Buffer err!
+[73808040] [log] Buffer err!
+[73860436] [log] Buffer err!
+[73913123] [log] Buffer err!
+[73966289] [log] Buffer err!
+[74008612] [log] Buffer err!
+[74061239] [log] Buffer err!
+[74114465] [log] Buffer err!
+[74167091] [log] Buffer err!
+[74209414] [log] CS rising edge
+[76251314] [log] CS falling edge
+[76304108] [log] Buffer err!
+[76357310] [log] Buffer err!
+[76399670] [log] Buffer err!
+[76452352] [log] Buffer err!
+[76505614] [log] Buffer err!
+[76547974] [log] Buffer err!
+[76600656] [log] Buffer err!
+[76653919] [log] Buffer err!
+[76706601] [log] Buffer err!
+[76748961] [log] Buffer err!
+[76802164] [log] Buffer err!
+[76854900] [log] Buffer err!
+[76898044] [log] Buffer err!
+[76950465] [log] Buffer err!
+[77003207] [log] Buffer err!
+[77056409] [log] CS rising edge
+[1;31mE (77476) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (77476) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (77476) task_wdt: Tasks currently running:[0m
+[1;31mE (77476) task_wdt: CPU 0: main[0m
+[1;31mE (77476) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (77476) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[79095720] [log] CS falling edge
+[79138152] [log] Buffer err!
+[79191350] [log] Buffer err!
+[79244074] [log] Buffer err!
+[79297265] [log] Buffer err!
+[79339613] [log] Buffer err!
+[79392277] [log] Buffer err!
+[79445527] [log] Buffer err!
+[79487875] [log] Buffer err!
+[79540539] [log] Buffer err!
+[79593781] [log] Buffer err!
+[79646445] [log] Buffer err!
+[79688793] [log] Buffer err!
+[79741983] [log] Buffer err!
+[79794707] [log] Buffer err!
+[79847897] [log] Buffer err!
+[79890245] [log] CS rising edge
+[81931814] [log] CS falling edge
+[81985150] [log] Buffer err!
+[82037830] [log] Buffer err!
+[82080189] [log] Buffer err!
+[82133452] [log] Buffer err!
+[82186132] [log] Buffer err!
+[1;31mE (82476) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (82476) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (82476) task_wdt: Tasks currently running:[0m
+[1;31mE (82476) task_wdt: CPU 0: main[0m
+[1;31mE (82476) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (82476) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[82257404] [log] Buffer err!
+[82281202] [log] Buffer err!
+[82333957] [log] Buffer err!
+[82387158] [log] Buffer err!
+[82429517] [log] Buffer err!
+[82482197] [log] Buffer err!
+[82535459] [log] Buffer err!
+[82577885] [log] Buffer err!
+[82630500] [log] Buffer err!
+[82683761] [log] Buffer err!
+[82736441] [log] CS rising edge
+[84768698] [log] CS falling edge
+[84821968] [log] Buffer err!
+[84874699] [log] Buffer err!
+[84927894] [log] Buffer err!
+[84970246] [log] Buffer err!
+[85022937] [log] Buffer err!
+[85076132] [log] Buffer err!
+[85118484] [log] Buffer err!
+[85171155] [log] Buffer err!
+[85224409] [log] Buffer err!
+[85277080] [log] Buffer err!
+[85319432] [log] Buffer err!
+[85372631] [log] Buffer err!
+[85425302] [log] Buffer err!
+[85467872] [log] Buffer err!
+[85520852] [log] Buffer err!
+[85573582] [log] CS rising edge
+[1;31mE (87486) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (87486) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (87486) task_wdt: Tasks currently running:[0m
+[1;31mE (87486) task_wdt: CPU 0: main[0m
+[1;31mE (87486) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (87486) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[87612907] [log] CS falling edge
+[87665638] [log] Buffer err!
+[87707982] [log] Buffer err!
+[87761161] [log] Buffer err!
+[87813868] [log] Buffer err!
+[87867047] [log] Buffer err!
+[87909383] [log] Buffer err!
+[87962030] [log] Buffer err!
+[88015270] [log] Buffer err!
+[88057974] [log] Buffer err!
+[88110449] [log] Buffer err!
+[88163766] [log] Buffer err!
+[88216528] [log] Buffer err!
+[88258942] [log] Buffer err!
+[88312198] [log] Buffer err!
+[88365004] [log] Buffer err!
+[88407854] [log] CS rising edge
+[90452850] [log] CS falling edge
+[90505614] [log] Buffer err!
+[90547978] [log] Buffer err!
+[90601184] [log] Buffer err!
+[90653932] [log] Buffer err!
+[90707138] [log] Buffer err!
+[90749502] [log] Buffer err!
+[90802190] [log] Buffer err!
+[90855460] [log] Buffer err!
+[90897823] [log] Buffer err!
+[90950511] [log] Buffer err!
+[91003777] [log] Buffer err!
+[91056465] [log] Buffer err!
+[91098829] [log] Buffer err!
+[91152035] [log] Buffer err!
+[91204783] [log] Buffer err!
+[91247931] [log] CS rising edge
+[1;31mE (92486) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (92486) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (92486) task_wdt: Tasks currently running:[0m
+[1;31mE (92486) task_wdt: CPU 0: main[0m
+[1;31mE (92486) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (92486) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7219:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+
+[93288285] [log] CS falling edge
+[93341091] [log] Buffer err!
+[93394389] [log] Buffer err!
+[93447112] [log] Buffer err!
+[93489499] [log] Buffer err!
+[93542788] [log] Buffer err!
+[93595511] [log] Buffer err!
+[93637898] [log] Buffer err!
+[93691128] [log] Buffer err!
+[93743910] [log] Buffer err!
+[93797140] [log] Buffer err!
+[93839527] [log] Buffer err!
+[93892250] [log] Buffer err!
+[93945539] [log] Buffer err!
+[93987927] [log] Buffer err!
+[94040650] [log] Buffer err!
+[94093928] [log] CS rising edge
+[96136986] [log] CS falling edge
+[96179480] [log] Buffer err!
+[96232801] [log] Buffer err!
+[96285571] [log] Buffer err!
+[96327990] [log] Buffer err!
+[96381251] [log] Buffer err!
+[96434081] [log] Buffer err!
+[96487342] [log] Buffer err!
+[96529761] [log] Buffer err!
+[96582531] [log] Buffer err!
+[96635851] [log] Buffer err!
+[96678270] [log] Buffer err!
+[96731040] [log] Buffer err!
+[96784360] [log] Buffer err!
+[96837131] [log] Buffer err!
+[96879549] [log] Buffer err!
+[96932870] [log] CS rising edge
+[1;31mE (97496) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (97496) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (97496) task_wdt: Tasks currently running:[0m
+[1;31mE (97496) task_wdt: CPU 0: main[0m
+[1;31mE (97496) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (97496) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC00A:0x3FFB10C0 0x400DC3DC:0x3FFB10E0 0x40082A81:0x3FFB1110 0x4000BFED:0x3FFB4120 0x40085642:0x3FFB4130 0x400D9270:0x3FFB4150 0x400D962F:0x3FFB4180 0x400D9831:0x3FFB41B0 0x400D7224:0x3FFB41E0 0x400D3986:0x3FFB4230 0x400E3C51:0x3FFB4260
+

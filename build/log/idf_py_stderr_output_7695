@@ -1,0 +1,8 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/fonts/fontUtils.c:4: error: ignoring '#pragma masseage ' [-Werror=unknown-pragmas]
+    4 | #pragma masseage("fontUtils.c is compiling...")
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build.make:79: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7458: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

@@ -1,0 +1,37 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.h: In function 'spiHandleCLKIsr':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:132:13: error: implicit declaration of function '__is_positive' [-Wimplicit-function-declaration]
+  132 |         if (__is_positive(GPIO.in & __mask32(dev->clk))) {
+      |             ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'shiftArrayLeft':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:15:8: error: implicit declaration of function '__isnot_positive' [-Wimplicit-function-declaration]
+   15 |     if(__isnot_positive(size)){
+      |        ^~~~~~~~~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:16,
+                 from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h: In function '__i2cFreq':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h:43:12: error: implicit declaration of function '__isnot_positive' [-Wimplicit-function-declaration]
+   43 |         if(__isnot_positive(pinValue)){                     \
+      |            ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h:61:5: note: in expansion of macro '__I2C_ASSERT_PIN_OK'
+   61 |     __I2C_ASSERT_PIN_OK("__i2cFreq", dev->freq, STR(freq));
+      |     ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'startupSPIDevice':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:180:12: error: implicit declaration of function '__isnot_negative' [-Wimplicit-function-declaration]
+  180 |         if(__isnot_negative(dev->clk))  gpioMask |= __mask64(dev->clk);
+      |            ^~~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7589: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c: In function 'startupI2CDevice':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:127:12: error: implicit declaration of function '__isnot_negative' [-Wimplicit-function-declaration]
+  127 |         if(__isnot_negative(dev->sda)){
+      |            ^~~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/i2c/CMakeFiles/__idf_i2c.dir/build.make:79: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7523: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

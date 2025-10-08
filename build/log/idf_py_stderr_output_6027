@@ -1,0 +1,56 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:33,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiStartTransaction':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:431:49: error: implicit declaration of function 'getDefRetStat_Str' [-Wimplicit-function-declaration]
+  431 |         __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ERR_NULL));
+      |                                                 ^~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espLogWrapper.h:17:94: note: in definition of macro '__exit'
+   17 |     #define __exit(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+      |                                                                                              ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:431:9: note: in expansion of macro '__spiExit'
+  431 |         __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ERR_NULL));
+      |         ^~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:462:5: error: implicit declaration of function 'spiSetCLKState' [-Wimplicit-function-declaration]
+  462 |     spiSetCLKState(dev, SPICLK_IDLE);
+      |     ^~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:462:25: error: 'SPICLK_IDLE' undeclared (first use in this function); did you mean 'SPICLK_IN_IDX'?
+  462 |     spiSetCLKState(dev, SPICLK_IDLE);
+      |                         ^~~~~~~~~~~
+      |                         SPICLK_IN_IDX
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:462:25: note: each undeclared identifier is reported only once for each function it appears in
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:464:5: error: implicit declaration of function 'spiSetCS' [-Wimplicit-function-declaration]
+  464 |     spiSetCS(dev, LOW);
+      |     ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:471:13: error: implicit declaration of function 'spiSetMOSI' [-Wimplicit-function-declaration]
+  471 |             spiSetMOSI(dev, txBuf[dev->txdByteInd] & 0x80);
+      |             ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:475:41: error: 'SPICLK_ACTIVE' undeclared (first use in this function)
+  475 |                     spiSetCLKState(dev, SPICLK_ACTIVE);
+      |                                         ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:487:21: error: implicit declaration of function '__spiDelay' [-Wimplicit-function-declaration]
+  487 |                     __spiDelay(500000 / dev->freq);
+      |                     ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:469:22: warning: unused variable 'currByte' [-Wunused-variable]
+  469 |             uint8_t *currByte = &txBuf[dev->txdByteInd];
+      |                      ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:504:22: warning: unused variable 'currByte' [-Wunused-variable]
+  504 |             uint8_t *currByte = &txBuf[dev->txdByteInd];
+      |                      ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:554:47: error: implicit declaration of function 'uint8_tCast' [-Wimplicit-function-declaration]
+  554 |                     rxBuf[dev->rxdByteInd] |= uint8_tCast(GPIO.in & __mask32(dev->miso));
+      |                                               ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:622:5: error: implicit declaration of function 'spiSetCLK2Idle' [-Wimplicit-function-declaration]
+  622 |     spiSetCLK2Idle();
+      |     ^~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:448:13: warning: unused variable 'cpol' [-Wunused-variable]
+  448 |     uint8_t cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
+      |             ^~~~
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7589: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

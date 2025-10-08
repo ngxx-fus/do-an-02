@@ -1,0 +1,495 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b414h ( 46100) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b43c vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001da7c vaddr=40080000 size=0259ch (  9628) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15ff0h ( 90096) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00036018 vaddr=4008259c size=08f10h ( 36624) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ef30 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      a08380c-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (209) app_init: ELF file SHA256:  3701bcf20...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B4AC len 00014B54 (82 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[31099] [-->] app_main()
+[31142] [log] Set systemStage = SYSTEM_INIT
+[31407] [log] Start up OLED screen
+[35601] [log] Enter test mode!
+[49143] [-->] ledTest()
+[849875] [<--] ledTest()
+[849907] [log] [+] oledTask()
+[861455] [log] [oledTask] Wait for the initializing have been done!
+[861564] [log] [+] prepairDataTask()
+[873153] [log] [prepairDataTask] Wait for the initializing have been done!
+[873251] [log] [+] modeControlTask()
+[884832] [log] [modeControlTask] Wait for the initializing have been done!
+[884933] [log] Set systemStage = SYSTEM_RUNNING
+[896126] [-->] oledTest()
+[896189] [-->] prepairDataTask(0x00000000)
+[896287] [-->] modeControlTask(0x00000000)
+[897054] [log] [modeControlTask] Default mode: 0
+[899221] [-->] modeSwitch(-1 --> 0)
+[902445] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[907902] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[911721] [-->] createSPIDevice(spiDev_t ** pDev)
+[916081] [<--] createSPIDevice() : OKE
+[919538] [-->] configSPIDevice(dev: 0x3ffb6dac, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 100000, config: 0x0000)
+[929437] [<--] configSPIDevice() : OKE
+[932901] [-->] startupSPIDevice(0x3ffb6dac)
+[937255] [<--] startupSPIDevice() : OKE
+[940375] [<--] modeControl() : OKE
+[15690172] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 0, 0, 0, 0)
+[15690261] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[15690315] [<--] changeModeButtonISR(0x3ffb6b60, -9, 0, 0, 0, 0)
+
+[15895889] [-->] changeModeButtonISR(0x3ffb6b60, 1, 0, 0, 0, 0)
+[15895958] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[15896011] [log] [changeModeButtonISR] Time delta = 15690172
+[15900709] [<--] changeModeButtonISR(0x3ffb6b60, -9, 0, 0, 0, 0)
+
+[16530173] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 0, 0, 0, 0)
+[16530249] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[16530295] [<--] changeModeButtonISR(0x3ffb6b60, -9, 0, 0, 15690172, 0)
+
+[16710173] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 0, 0, 15690172, 0)
+[16710262] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[16710652] [log] [changeModeButtonISR] Time delta = 634283
+[16715860] [<--] changeModeButtonISR(0x3ffb6b60, -7, 15895889, 0, 15690172, 0)
+
+[17204001] [-->] changeModeButtonISR(0x3ffb6b60, 1, 15895889, 0, 15690172, 0)
+[17204095] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[17204654] [<--] changeModeButtonISR(0x3ffb6b60, -9, 15895889, 0, 16530172, 0)
+
+[17340169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 15895889, 0, 16530172, 0)
+[17340271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[17341256] [log] [changeModeButtonISR] Time delta = 493828
+[17346464] [log] [changeModeButtonISR] Is short pressed!
+[17351499] [<--] changeModeButtonISR(0x3ffb6b60, -9, 16710172, 0, 16530172, 0)
+
+[17358630] [log] Detected 1 shorts pressed --> Changed mode!
+[17363999] [-->] modeSwitch(0 --> 1)
+[17367305] [log] EXIT MODE: SYSTEM_MODE_SPI
+[17371211] [-->] destroySPIDevice(0x3ffb2d10)
+[17375414] [<--] destroySPIDevice() : OKE
+[17379032] [log] ENTRY: SYSTEM_MODE_I2C
+[17382646] [<--] modeControl() : OKE
+[22780168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 16710172, 0, 16530172, 0)
+[22780271] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[22781256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 16710172, 0, 17204000, 0)
+
+[22923445] [-->] changeModeButtonISR(0x3ffb6b60, 1, 16710172, 0, 17204000, 0)
+[22923540] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[22924098] [log] [changeModeButtonISR] Time delta = 5440000
+[22929394] [<--] changeModeButtonISR(0x3ffb6b60, -8, 17340168, 0, 17204000, 0)
+
+[23740168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 17340168, 0, 17204000, 0)
+[23740271] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[23741256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 17340168, 0, 22780168, 0)
+
+[23900185] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 17340168, 0, 22780168, 0)
+[23900287] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[23901272] [log] [changeModeButtonISR] Time delta = 816724
+[23906480] [<--] changeModeButtonISR(0x3ffb6b60, -7, 22923444, 0, 22780168, 0)
+
+[24652542] [-->] changeModeButtonISR(0x3ffb6b60, 1, 22923444, 0, 22780168, 0)
+[24652636] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[24653195] [<--] changeModeButtonISR(0x3ffb6b60, -9, 22923444, 0, 23740168, 0)
+
+[24817417] [-->] changeModeButtonISR(0x3ffb6b60, 1, 22923444, 0, 23740168, 0)
+[24817511] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[24818070] [log] [changeModeButtonISR] Time delta = 752357
+[24823278] [<--] changeModeButtonISR(0x3ffb6b60, -7, 23900184, 0, 23740168, 0)
+
+[24830412] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 23900184, 0, 23740168, 0)
+[24837688] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[24842722] [log] [changeModeButtonISR] Time delta = -164875
+[24848018] [log] [changeModeButtonISR] Is short pressed!
+[24853052] [<--] changeModeButtonISR(0x3ffb6b60, -9, 24817416, 0, 23740168, 0)
+
+[24860193] [log] Detected 1 shorts pressed --> Changed mode!
+[24865552] [-->] modeSwitch(1 --> 2)
+[24868851] [log] EXIT MODE: SYSTEM_MODE_I2C
+[24872837] [log] ENTRY: SYSTEM_MODE_UART
+[24876403] [<--] modeControl() : OKE
+[25600169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 24817416, 0, 23740168, 0)
+[25600272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[25601256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 24817416, 0, 24652541, 0)
+
+[25780169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 24817416, 0, 24652541, 0)
+[25780272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[25781256] [log] [changeModeButtonISR] Time delta = 769757
+[25786464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 24830411, 0, 24652541, 0)
+
+[26298493] [-->] changeModeButtonISR(0x3ffb6b60, 1, 24830411, 0, 24652541, 0)
+[26298588] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[26299146] [<--] changeModeButtonISR(0x3ffb6b60, -9, 24830411, 0, 25600168, 0)
+
+[26450169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 24830411, 0, 25600168, 0)
+[26450272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[26451256] [log] [changeModeButtonISR] Time delta = 518324
+[26456465] [<--] changeModeButtonISR(0x3ffb6b60, -7, 25780168, 0, 25600168, 0)
+
+[26740169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 25780168, 0, 25600168, 0)
+[26740272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[26741256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 25780168, 0, 26298492, 0)
+
+[26883292] [-->] changeModeButtonISR(0x3ffb6b60, 1, 25780168, 0, 26298492, 0)
+[26883386] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[26883945] [log] [changeModeButtonISR] Time delta = 290000
+[26889153] [log] [changeModeButtonISR] Is short pressed!
+[26894188] [<--] changeModeButtonISR(0x3ffb6b60, -9, 26450168, 0, 26298492, 0)
+
+[26901322] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 26450168, 0, 26298492, 0)
+[26908597] [log] [changeModeButt [ISR] INPUcted 1 shorts
+[269136--> [log] [chane!
+deButtonI] [-->] modlta = -143123 
+[6926917] [lo[lo[changeModeButtonISR] Is short pressed!
+[26923962] [<--] changeModeButtonISR(0x3ffb6b60, -9, 26883291, 0, 26298492, 0)
+
+ EXIT MODE: SYSTEM_MODE_UART
+[26933688] [log] ENTRY: SYSTEM_MODE_1WIRE
+[26937416] [<--] modeControl() : OKE
+[26950159] [log] Detected 1 shorts pressed --> Changed mode!
+[26950210] [-->] modeSwitch(3 --> 0)
+[26950251] [log] EXIT MODE: SYSTEM_MODE_1WIRE
+[26953475] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[26957468] [-->] createSPIDevice(spiDev_t ** pDev)
+[26962006] [<--] createSPIDevice() : OKE
+[26965632] [-->] configSPIDevice(dev: 0x3ffb6dac, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 100000, config: 0x0000)
+[26975709] [<--] configSPIDevice() : OKE
+[26979347] [-->] startupSPIDevice(0x3ffb6dac)
+[26983517] [<--] startupSPIDevice() : OKE
+[26987156] [<--] modeControl() : OKE
+[27018350] [-->] changeModeButtonISR(0x3ffb6b60, 1, 26883291, 0, 26298492, 0)
+[27018444] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[27019003] [<--] changeModeButtonISR(0x3ffb6b60, -9, 26883291, 0, 26740168, 0)
+
+[27150169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 26883291, 0, 26740168, 0)
+[27150271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[27151256] [log] [changeModeButtonISR] Time delta = 117028
+[27156464] [log] [changeModeButtonISR] Is short pressed!
+[27161499] [<--] changeModeButtonISR(0x3ffb6b60, -9, 26901321, 0, 26740168, 0)
+
+[27168630] [log] Detected 1 shorts pressed --> Changed mode!
+[27173999] [-->] modeSwitch(0 --> 1)
+[27177297] [log] EXIT MODE: SYSTEM_MODE_SPI
+[27181203] [-->] destroySPIDevice(0x3ffb2d10)
+[27185331] [<--] destroySPIDevice() : OKE
+[27189016] [log] ENTRY: SYSTEM_MODE_I2C
+[27192622] [<--] modeControl() : OKE
+[27954338] [-->] changeModeButtonISR(0x3ffb6b60, 1, 26901321, 0, 26740168, 0)
+[27954433] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[27954991] [<--] changeModeButtonISR(0x3ffb6b60, -9, 26901321, 0, 27018349, 0)
+
+[28470168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 26901321, 0, 27018349, 0)
+[28470271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[28471256] [log] [changeModeButtonISR] Time delta = 804169
+[28476464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 27150168, 0, 27018349, 0)
+
+[28863532] [-->] changeModeButtonISR(0x3ffb6b60, 1, 27150168, 0, 27018349, 0)
+[28863626] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[28864185] [<--] changeModeButtonISR(0x3ffb6b60, -9, 27150168, 0, 27954337, 0)
+
+[28940172] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 27150168, 0, 27954337, 0)
+[28940275] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[28941259] [log] [changeModeButtonISR] Time delta = 393363
+[28946468] [log] [changeModeButtonISR] Is short pressed!
+[28951502] [<--] changeModeButtonISR(0x3ffb6b60, -9, 28470168, 0, 27954337, 0)
+
+[28958634] [log] Detected 1 shorts pressed --> Changed mode!
+[28964002] [-->] modeSwitch(1 --> 2)
+[28967301] [log] EXIT MODE: SYSTEM_MODE_I2C
+[28971252] [log] ENTRY: SYSTEM_MODE_UART
+[28974853] [<--] modeControl() : OKE
+[29492657] [-->] changeModeButtonISR(0x3ffb6b60, 1, 28470168, 0, 27954337, 0)
+[29492751] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[29493310] [<--] changeModeButtonISR(0x3ffb6b60, -9, 28470168, 0, 28863531, 0)
+
+[29516425] [-->] changeModeButtonISR(0x3ffb6b60, 1, 28470168, 0, 28863531, 0)
+[29516520] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[29517078] [log] [changeModeButtonISR] Time delta = 552485
+[29522287] [<--] changeModeButtonISR(0x3ffb6b60, -7, 28940171, 0, 28863531, 0)
+
+[30303439] [-->] changeModeButtonISR(0x3ffb6b60, 1, 28940171, 0, 28863531, 0)
+[30303533] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[30304092] [<--] changeModeButtonISR(0x3ffb6b60, -9, 28940171, 0, 29492656, 0)
+
+[30480169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 28940171, 0, 29492656, 0)
+[30480271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[30481256] [log] [changeModeButtonISR] Time delta = 787014
+[30486464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 29516424, 0, 29492656, 0)
+
+[31354281] [-->] changeModeButtonISR(0x3ffb6b60, 1, 29516424, 0, 29492656, 0)
+[31354375] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[31354934] [<--] changeModeButtonISR(0x3ffb6b60, -9, 29516424, 0, 30303438, 0)
+
+[31776496] [-->] changeModeButtonISR(0x3ffb6b60, 1, 29516424, 0, 30303438, 0)
+[31776590] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[31777149] [log] [changeModeButtonISR] Time delta = 874112
+[31782357] [<--] changeModeButtonISR(0x3ffb6b60, -7, 30480168, 0, 30303438, 0)
+
+[32687552] [-->] changeModeButtonISR(0x3ffb6b60, 1, 30480168, 0, 30303438, 0)
+[32687646] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[32688205] [<--] changeModeButtonISR(0x3ffb6b60, -9, 30480168, 0, 31354280, 0)
+
+[32800169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 30480168, 0, 31354280, 0)
+[32800271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[32801256] [log] [changeModeButtonISR] Time delta = 911056
+[32806464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 31776495, 0, 31354280, 0)
+
+[33490169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 31776495, 0, 31354280, 0)
+[33490272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[33491256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 31776495, 0, 32687551, 0)
+
+[33630169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 31776495, 0, 32687551, 0)
+[33630272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[33631256] [log] [changeModeButtonISR] Time delta = 690000
+[33636464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 32800168, 0, 32687551, 0)
+
+[34500169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 32800168, 0, 32687551, 0)
+[34500272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[34501256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 32800168, 0, 33490168, 0)
+
+[34640169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 32800168, 0, 33490168, 0)
+[34640272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[34641256] [log] [changeModeButtonISR] Time delta = 870000
+[34646464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 33630168, 0, 33490168, 0)
+
+[34758120] [-->] changeModeButtonISR(0x3ffb6b60, 1, 33630168, 0, 33490168, 0)
+[34758214] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[34758773] [<--] changeModeButtonISR(0x3ffb6b60, -9, 33630168, 0, 34500168, 0)
+
+[34850169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 33630168, 0, 34500168, 0)
+[34850272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[34851256] [log] [changeModeButtonISR] Time delta = 117951
+[34856464] [log] [changeModeButtonISR] Is short pressed!
+[34861499] [<--] changeModeButtonISR(0x3ffb6b60, -9, 34640168, 0, 34500168, 0)
+
+[34868630] [log] Detected 1 shorts pressed --> Changed mode!
+[34873999] [-->] modeSwitch(2 --> 3)
+[34877298] [log] EXIT MODE: SYSTEM_MODE_UART
+[34881291] [log] ENTRY: SYSTEM_MODE_1WIRE
+[34885023] [<--] modeControl() : OKE
+[35660169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 34640168, 0, 34500168, 0)
+[35660272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[35661256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 34640168, 0, 34758119, 0)
+
+[36686114] [-->] changeModeButtonISR(0x3ffb6b60, 1, 34640168, 0, 34758119, 0)
+[36686209] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[36686767] [log] [changeModeButtonISR] Time delta = 810000
+[36691976] [<--] changeModeButtonISR(0x3ffb6b60, -7, 34850168, 0, 34758119, 0)
+
+[37075809] [-->] changeModeButtonISR(0x3ffb6b60, 1, 34850168, 0, 34758119, 0)
+[37075904] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[37076462] [<--] changeModeButtonISR(0x3ffb6b60, -9, 34850168, 0, 35660168, 0)
+
+[37110168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 34850168, 0, 35660168, 0)
+[37110270] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[37111255] [log] [changeModeButtonISR] Time delta = 389695
+[37116463] [log] [changeModeButtonISR] Is short pressed!
+[37121498] [<--] changeModeButtonISR(0x3ffb6b60, -9, 36686113, 0, 35660168, 0)
+
+[37128629] [log] Detected 1 shorts pressed --> Changed mode!
+[37133998] [-->] modeSwitch(3 --> 0)
+[37137296] [log] EXIT MODE: SYSTEM_MODE_1WIRE
+[37141376] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[37145369] [-->] createSPIDevice(spiDev_t ** pDev)
+[37149895] [<--] createSPIDevice() : OKE
+[37153529] [-->] configSPIDevice(dev: 0x3ffb6dac, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 100000, config: 0x0000)
+[37163598] [<--] configSPIDevice() : OKE
+[37167244] [-->] startupSPIDevice(0x3ffb6dac)
+[37171378] [<--] startupSPIDevice() : OKE
+[37175057] [<--] modeControl() : OKE
+[37818860] [-->] changeModeButtonISR(0x3ffb6b60, 1, 36686113, 0, 35660168, 0)
+[37818954] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[37819513] [<--] changeModeButtonISR(0x3ffb6b60, -9, 36686113, 0, 37075808, 0)
+
+[37870168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 36686113, 0, 37075808, 0)
+[37870271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[37871255] [log] [changeModeButtonISR] Time delta = 708692
+[37876464] [<--] changeModeButtonISR(0x3ffb6b60, -7, 37110167, 0, 37075808, 0)
+
+[38963656] [-->] changeModeButtonISR(0x3ffb6b60, 1, 37110167, 0, 37075808, 0)
+[38963750] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[38964309] [<--] changeModeButtonISR(0x3ffb6b60, -9, 37110167, 0, 37818859, 0)
+
+[39000167] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 37110167, 0, 37818859, 0)
+[39000270] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[39001254] [log] [changeModeButtonISR] Time delta = 1093487
+[39006549] [<--] changeModeButtonISR(0x3ffb6b60, -8, 37870168, 0, 37818859, 0)
+
+[39555150] [-->] changeModeButtonISR(0x3ffb6b60, 1, 37870168, 0, 37818859, 0)
+[39555244] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[39555803] [<--] changeModeButtonISR(0x3ffb6b60, -9, 37870168, 0, 38963655, 0)
+
+[39679881] [-->] changeModeButtonISR(0x3ffb6b60, 0, 37870168, 0, 38963655, 0)
+[39679974] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[39680534] [log] [changeModeButtonISR] Time delta = 554983
+[39685742] [<--] changeModeButtonISR(0x3ffb6b60, -7, 39000166, 0, 38963655, 0)
+
+[39801485] [-->] changeModeButtonISR(0x3ffb6b60, 1, 39000166, 0, 38963655, 0)
+[39801579] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[39802138] [<--] changeModeButtonISR(0x3ffb6b60, -9, 39000166, 0, 39555149, 0)
+
+[39880168] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 39000166, 0, 39555149, 0)
+[39880271] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[39881255] [log] [changeModeButtonISR] Time delta = 121604
+[39886464] [log] [changeModeButtonISR] Is short pressed!
+[39891498] [<--] changeModeButtonISR(0x3ffb6b60, -9, 39679880, 0, 39555149, 0)
+
+[39898630] [log] Detected 1 shorts pressed --> Changed mode!
+[39903999] [-->] modeSwitch(0 --> 1)
+[39907297] [log] EXIT MODE: SYSTEM_MODE_SPI
+[39911203] [-->] destroySPIDevice(0x3ffb2d10)
+[39915330] [<--] destroySPIDevice() : OKE
+[39919016] [log] ENTRY: SYSTEM_MODE_I2C
+[39922622] [<--] modeControl() : OKE
+[40007335] [-->] changeModeButtonISR(0x3ffb6b60, 1, 39679880, 0, 39555149, 0)
+[40007429] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[40007988] [<--] changeModeButtonISR(0x3ffb6b60, -9, 39679880, 0, 39801484, 0)
+
+[40128394] [-->] changeModeButtonISR(0x3ffb6b60, 1, 39679880, 0, 39801484, 0)
+[40128489] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[40129047] [log] [changeModeButtonISR] Time delta = 127166
+[40134256] [log] [changeModeButtonISR] Is short pressed!
+[40139291] [<--] changeModeButtonISR(0x3ffb6b60, -9, 39880168, 0, 39801484, 0)
+
+[40146428] [log] Detected 1 shorts pressed --> Changed mode!
+[40151791] [-->] modeSwitch(1 --> 2)
+[40155089] [log] EXIT MODE: SYSTEM_MODE_I2C
+[40055003] [err] [i2cSY:dBuffer]MODE_UART
+f4016send byte[9 modeControer!
+ OKE
+[40800169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 39880168, 0, 39801484, 0)
+[40800271] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[40801256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 39880168, 0, 40007334, 0)
+
+[40889043] [-->] changeModeButtonISR(0x3ffb6b60, 1, 39880168, 0, 40007334, 0)
+[40889137] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[40889695] [log] [changeModeButtonISR] Time delta = 671774
+[40894904] [<--] changeModeButtonISR(0x3ffb6b60, -7, 40128394, 0, 40007334, 0)
+
+[40990169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 40128394, 0, 40007334, 0)
+[40990272] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[40991256] [<--] changeModeButtonISR(0x3ffb6b60, -9, 40128394, 0, 40800168, 0)
+
+[41117428] [-->] changeModeButtonISR(0x3ffb6b60, 1, 40128394, 0, 40800168, 0)
+[41117522] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[41118081] [log] [changeModeButtonISR] Time delta = 101126
+[41123289] [log] [changeModeButtonISR] Is short pressed!
+[41128324] [<--] changeModeButtonISR(0x3ffb6b60, -9, 40889042, 0, 40800168, 0)
+
+[41135457] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 40811002, 0, 40800168,cted 1 shorts pr[log] [chaChanged modonISR] INPUT LEV-->] modeS[41147768] [<--] chang157] [logonISR(0x3ffb6b60, -9, 40889042, 0, 40990168, 0)
+
+[41154898] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 40889042, 0, 409901 MODE: SYSTEM_MO8] [log] [c1163654] [uttonISR] I SYSTEM_MOD HIGH
+
+[41761386] [<--changeModerol() : OK0E3
+fb6b60, -9, 40889042, 0, 41135457, 0)
+
+[41310169] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 40889042, 0, 41135457, 0)
+[41310272] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[41311256] [log] [changeModeButtonISR] Time delta = 37470
+[41316378] [log] [changeModeButtonISR] Is short pressed!
+[41321412] [<--] changeModeButtonISR(0x3ffb6b60, -9, 41117427, 0, 41135457, 0)
+
+[41328544] [log] Detected 1 shorts pressed --> Changed mode!
+[41333912] [-->] modeSwitch(3 --> 0)
+[41337211] [log] EXIT MODE: SYSTEM_MODE_1WIRE
+[41341291] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[41345284] [-->] createSPIDevice(spiDev_t ** pDev)
+[41349810] [<--] createSPIDevice() : OKE
+[41353443] [-->] configSPIDevice(dev: 0x3ffb6dac, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 100000, config: 0x0000)
+[41363513] [<--] configSPIDevice() : OKE
+[41367159] [-->] startupSPIDevice(0x3ffb6dac)
+[41371289] [<--] startupSPIDevice() : OKE
+[41374971] [<--] modeControl() : OKE
+[42030172] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 41117427, 0, 41135457, 0)
+[42030275] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[42031260] [<--] changeModeButtonISR(0x3ffb6b60, -9, 41117427, 0, 41154897, 0)
+
+[42131381] [-->] changeModeButtonISR(0x3ffb6b60, 1, 41117427, 0, 41154897, 0)
+[42131475] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[42132034] [log] [changeModeButtonISR] Time delta = 720004
+[42137242] [<--] changeModeButtonISR(0x3ffb6b60, -7, 41310168, 0, 41154897, 0)
+
+[42144372] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 41310168, 0, 41154897, 0)
+[42151652] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[42156686] [log] [changeModeButtonISR] Time delta = -101208
+[42161982] [log] [changeModeButtonISR] Is short pressed!
+[42167016] [<--] changeModeButtonISR(0x3ffb6b60, -9, 42131380, 0, 41154897, 0)
+
+[42174156] [log] Detected 1 shorts pressed --> Changed mode!
+[42179516] [-->] modeSwitch(0 --> 1)
+[42182815] [log] EXIT MODE: SYSTEM_MODE_SPI
+[42186721] [-->] destroySPIDevice(0x3ffb2d10)
+[42190848] [<--] destroySPIDevice() : OKE
+[42194533] [log] ENTRY: SYSTEM_MODE_I2C
+[42198139] [<--] modeControl() : OKE
+[42304353] [-->] changeModeButtonISR(0x3ffb6b60, 1, 42131380, 0, 41154897, 0)
+[42304447] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[42305006] [<--] changeModeButtonISR(0x3ffb6b60, -9, 42131380, 0, 42030172, 0)
+
+[42400172] [-->] changeModeButtonISR(0x3ffb6b60, 393251, 42131380, 0, 42030172, 0)
+[42400275] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[42401259] [log] [changeModeButtonISR] Time delta = 159981
+[42406468] [log] [changeModeButtonISR] Is short pressed!
+[42411502] [<--] changeModeButtonISR(0x3ffb6b60, -9, 42144371, 0, 42030172, 0)
+
+[42418634] [log] Detected 1 shorts pressed --> Changed mode!
+[42424002] [-->] modeSwitch(1 --> 2)
+[42427301] [log] EXIT MODE: SYSTEM_MODE_I2C
+[42431252] [log] ENTRY: SYSTEM_MODE_UART
+[42434853] [<--] modeControl() : OKE
+[43152623] [-->] changeModeButtonISR(0x3ffb6b60, 1, 42144371, 0, 42030172, 0)
+[43152718] [log] [changeModeButtonISR] INPUT LEVEL: HIGH
+[43153276] [<--] changeModeButtonISR(0x3ffb6b60, -9, 42144371, 0, 42304352, 0)
+
+[43295036] [-->] changeModeButtonISR(0x3ffb6b60, 1, 42144371, 0, 42304352, 0)
+[43295131] [log] [changeModeButtonISR] INPUT LEVEL : LOW
+[43295689] [log] [changeModeButtonISR] Time delta = 752451
+[43300897] [<--] changeModeButtonISR(0x3ffb6b60, -7, 42400171, 0, 42304352, 0)
+

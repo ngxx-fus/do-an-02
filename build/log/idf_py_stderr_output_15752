@@ -1,0 +1,56 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/sender.h: In function 'oledTask':
+/home/fus/Documents/DO-AN-02/main/sender.h:116:10: warning: unused variable 'c' [-Wunused-variable]
+  116 |     char c[] = "--> 0";
+      |          ^
+/home/fus/Documents/DO-AN-02/main/do-an-02.c: In function 'app_main':
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:71:26: warning: passing argument 1 of 'snprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   71 |                 snprintf(content, 31, "M: %s\nSend %02X", "SPI", byteData);
+      |                          ^~~~~~~
+In file included from /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:10,
+                 from /home/fus/Documents/DO-AN-02/main/../helper/general.h:19,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:1:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:272:19: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  272 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:74:26: warning: passing argument 1 of 'snprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   74 |                 snprintf(content, 31, "M: %s\nSend %02X", "I2C", byteData);
+      |                          ^~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:272:19: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  272 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:77:26: warning: passing argument 1 of 'snprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   77 |                 snprintf(content, 31, "M: %s\nSend %02X", "UART", byteData);
+      |                          ^~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:272:19: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  272 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:80:26: warning: passing argument 1 of 'snprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |                 snprintf(content, 31, "M: %s\nSend %02X", "1-WIRE", byteData);
+      |                          ^~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:272:19: note: expected 'char * restrict' but argument is of type 'volatile char *'
+  272 | int     snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                   ^
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:84:55: warning: passing argument 4 of 'oledDrawText' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |         oledDrawText(oled, defaultTextH(mainFont), 0, content, 1, 1, 0);
+      |                                                       ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/sender.h:4:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h:106:30: note: expected 'const char *' but argument is of type 'volatile char *'
+  106 |                  const char *str, color_t cl, bool wrap, byte_t lineHeight);
+      |                  ~~~~~~~~~~~~^~~
+In file included from /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h:4:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:31:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   31 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/sender.h:3:
+/home/fus/Documents/DO-AN-02/main/../comDriver/spi/spi.h:195:23: warning: 'spiHandleCSIsr' defined but not used [-Wunused-function]
+  195 | static void IRAM_ATTR spiHandleCSIsr(void* pv) {
+      |                       ^~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../comDriver/spi/spi.h:124:23: warning: 'spiHandleCLKIsr' defined but not used [-Wunused-function]
+  124 | static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
+      |                       ^~~~~~~~~~~~~~~

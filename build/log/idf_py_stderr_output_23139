@@ -1,0 +1,129 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB1 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e63afd8e16dc2cde3fa427912a715bc30a64ba4360e70300d5df5862d3370841[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7224: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m9[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7224: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m9[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7224: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m9[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x400e2249: [0;33m__d2b[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdlib/mprec.c[0m[0m:[1;31m783[0m
+[0m--- 0x400d970b: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m389[0m
+[0m--- 0x400d97cd: [0;33mcreateSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m123[0m
+[0m--- 0x400d9829: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d720e: [0;33mgenerateRandom[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/helper/helper.c[0m[0m:[1;31m48[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7219: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m8[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7219: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m8[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7219: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m8[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7219: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m8[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m--- 0x400dc00a: [0;33mfind_entry_from_task_handle_and_check_all_reset[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m157[0m
+[0m--- 0x400dc3dc: [0;33mesp_task_wdt_init[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m522[0m
+[0m--- 0x40082a81: [0;33m_xt_medint3[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1376[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mspinlock_acquire[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m142[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m479[0m
+[0m--- 0x400d9270: [0;33m__i2cSetSCL[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m104[0m
+[0m--- (inlined by) [0;33mi2cStopCondition[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2cHelper.h[0m[0m:[1;31m170[0m
+[0m--- (inlined by) [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m342[0m
+[0m--- 0x400d962f: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d9831: [0;33mconfigSPIDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c[0m[0m:[1;31m135[0m
+[0m--- 0x400d7219: [0;33mcreateI2CDevice[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m8[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m206[0m
+[0m--- 0x400e3c51: [0;33mesp_panic_handler_increment_entry_count[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m290[0m
+[0m

@@ -1,0 +1,9 @@
+Command: make -j 10 flash
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiHandleCLKIsr':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:211:13: warning: unused variable 'isShiftEdge' [-Wunused-variable]
+  211 |     uint8_t isShiftEdge  = !isSampleEdge;
+      |             ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:227:16: warning: 'spiHandleCSIsr' defined but not used [-Wunused-function]
+  227 | void IRAM_ATTR spiHandleCSIsr(void* pv) {
+      |                ^~~~~~~~~~~~~~

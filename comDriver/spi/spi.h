@@ -3,6 +3,41 @@
 
 #include "../../helper/general.h"
 
+/*
+----------------------------------
+
+Transmit buffer
+           ____________________ 0x80 (start transmitting)
+          /             _______ 0x01 (stop transmitting)
+         /             /
+        7 6 5 4 3 2 1 0 
+0: [MSB - - - - - - - - LSB]
+1: [MSB - - - - - - - - LSB]
+1: [MSB - - - - - - - - LSB]
+2: [MSB - - - - - - - - LSB]
+3: [MSB - - - - - - - - LSB]
+4: [MSB - - - - - - - - LSB]
+index
+
+Data transmit start at buffer[0], from MSB to LSB.
+
+----------------------------------
+Receiver buffer
+           ____________________ 0x80 (stop receiving)
+          /             _______ 0x01 (start receiving)
+         /             /
+        7 6 5 4 3 2 1 0 
+0: [MSB - - - - - - - - LSB]
+1: [MSB - - - - - - - - LSB]
+1: [MSB - - - - - - - - LSB]
+2: [MSB - - - - - - - - LSB]
+3: [MSB - - - - - - - - LSB]
+4: [MSB - - - - - - - - LSB]
+
+Data is receiving from MSB to LSB in a byte, and fill from 0 in a buffer.
+
+*/
+
 /// LOG CONTROL ///////////////////////////////////////////////////////////////////////////////////
 
 /*
@@ -50,14 +85,25 @@ typedef struct spiDev_t {
     pin_t       cs;         /// Chip select pin
     flag_t      conf;       /// Configuration flags (mode, CPOL, CPHA)
     uint32_t    freq;       /// Frequency in Hz
-    void*       txdPtr;     /// Pointer to TX buffer
-    void*       rxdPtr;     /// Pointer to RX buffer
-    size_t      rxdSize;    /// RX buffer size in bytes
-    size_t      rxdByteInd; /// Current RX byte index
-    size_t      txdSize;    /// TX buffer size in bytes
-    size_t      txdByteInd; /// Current TX byte index
-    uint8_t     rxdBitInd;  /// RX bit index within current byte
-    uint8_t     txdBitInd;  /// TX bit index within current byte
+    
+    flag_t      stat;     /// Status flags ()
+
+    void*       tBuff;
+    size_t      tBuffSize;
+    size_t      tBuffIndex;
+    size_t      tBuffMask;
+
+    void*       rBuff;
+    size_t      rBuffSize;
+    size_t      rBuffIndex;
+    size_t      rBuffMask;
+
+    /// Private:
+
+    uint8_t     __cpha;             /// NOTE: Only can be set via config function!
+    uint8_t     __cpol;             /// NOTE: Only can be set via config function!
+    uint8_t     __master_slave;     /// 0: Master | 1: Slave. NOTE: Only can be set via config function!
+
     portMUX_TYPE mutex;
 } spiDev_t;
 
@@ -94,180 +140,43 @@ enum SPI_PRESET_CONFIG {
     SPI_PRESET_CONFIG_COUNT
 };
 
-#define CIRCLE_BUFF 1
-
+enum SPI_STATUS_FLAG {
+    SPISTAT_TBUFF_FULL = 0, /// After assign buffer (0: Don't care | 1: Full)
+    SPISTAT_RBUFF_FULL,     /// Full, can not receive anymore! (0: Don't care | 1: Full)
+    SPISTAT_TBUFF_EMPTY,    /// Nothing to be send! (0: Don't care | 1: Empty)
+    SPISTAT_RBUFF_EMPTY,    /// After assign buffer! (0: Don't care | 1: Empty)
+    SPI_STATUS_FLAG_NUM
+};
 
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
 
 /// @brief Set CLK base on CPOL with IDLE/ACTIVE state
 /// @param dev Spi descriptor
 /// @param state LOW : idle state | HIGH : active state 
-static inline  __attribute__((always_inline)) 
-void spiSetCLKState(spiDev_t * dev, enum SPI_CLK_STATE state){
-    if(__hasFlagBitSet(dev->conf, SPI_CPOL) == LOW){
-        /// Idle state is low
-        if (state == SPICLK_IDLE)
-            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
-        else
-            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
-    }else{
-        /// Idle state is high
-        if (state == SPICLK_IDLE)
-            GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
-        else
-            GPIO.out_w1tc = __mask32(dev->clk); ///LOW
-    }
-}
-
-static inline  __attribute__((always_inline)) 
-void spiSetCLK(spiDev_t * dev, uint8_t level){
-    if (level == LOW)
-        GPIO.out_w1tc = __mask32(dev->clk); ///LOW
+static inline __attribute__((always_inline))
+void spiSetCLKState(spiDev_t *dev, enum SPI_CLK_STATE state) {
+    uint8_t     cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
+    uint32_t    mask = __mask32(dev->clk);
+    if (state == SPICLK_IDLE)
+        (cpol ? (GPIO.out_w1ts = mask) : (GPIO.out_w1tc = mask));
     else
-        GPIO.out_w1ts = __mask32(dev->clk); ///HIGH
+        (cpol ? (GPIO.out_w1tc = mask) : (GPIO.out_w1ts = mask));
 }
 
-static inline  __attribute__((always_inline)) 
-void spiSetCS(spiDev_t * dev, uint8_t level){
+/// @brief Set GPIO to HIGH or LOW
+static inline __attribute__((always_inline))
+void spiSetGPIO(uint32_t gpio, uint8_t level) {
     if (level == LOW)
-        GPIO.out_w1tc = __mask32(dev->cs); ///LOW
+        GPIO.out_w1tc = __mask32(gpio);
     else
-        GPIO.out_w1ts = __mask32(dev->cs); ///HIGH
+        GPIO.out_w1ts = __mask32(gpio);
 }
 
-static inline  __attribute__((always_inline)) 
-void spiSetMOSI(spiDev_t * dev, uint8_t level){
-    if (level == LOW)
-        GPIO.out_w1tc = __mask32(dev->mosi); ///LOW
-    else
-        GPIO.out_w1ts = __mask32(dev->mosi); ///HIGH
-}
-
-/// @brief Shift the entire byte array left by 1 bit, insert newLSB at the very end.
-/// @param arr   Pointer to the byte array
-/// @param size  Number of bytes in the array
-/// @param newLSB The bit (0 or 1) to put in the least significant bit of the last byte
-/// @return Default return status
- def shiftArrayLeft(uint8_t * arr, size_t size, uint8_t newLSB);
-
-/// @brief Shift the entire byte array right by 1 bit, insert newMSB at the very front.
-/// @param arr    Pointer to the byte array
-/// @param size   Number of bytes in the array
-/// @param newMSB The bit (0 or 1) to put in the most significant bit of the first byte
-/// @return Default return status
-def shiftArrayRight(uint8_t * arr, size_t size, uint8_t newMSB);
-
-/// @brief Shift the entire byte array left by 1 byte, insert newByte at the last position.
-/// @param arr     Pointer to the byte array
-/// @param size    Number of bytes in the array
-/// @param newByte The new byte to insert at the end
-/// @return Default return status
-def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte);
-
-/// @brief Shift the entire byte array right by 1 byte, insert newByte at the front.
-/// @param arr     Pointer to the byte array
-/// @param size    Number of bytes in the array
-/// @param newByte The new byte to insert at the beginning
-/// @return Default return status
-def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte);
+#define spiSetCS(dev, lvl)              spiSetGPIO((dev)->cs,   (lvl))
+#define spiSetMOSI(dev, lvl)            spiSetGPIO((dev)->mosi, (lvl))
+#define spiSetMISO_SlaveMode(dev, lvl)  spiSetGPIO((dev)->miso, (lvl))
 
 /// MAIN FUNCTIONS ////////////////////////////////////////////////////////////////////////////////
-
-/// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
-
-static void IRAM_ATTR spiHandleCLKIsr(void* pv) {
-    spiDev_t *dev = (spiDev_t*) pv;
-    uint8_t *txBuf = (uint8_t*)dev->txdPtr;
-    uint8_t *rxBuf = (uint8_t*)dev->rxdPtr;
-
-    if(GPIO.in & __mask32(dev->cs)) return;
-
-    bool cpha = __hasFlagBitSet(dev->conf, SPI_CPHA);
-    bool cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
-    bool clkLevel = __is_positive(GPIO.in & __mask32(dev->clk));
-
-    bool isRising = cpol ? !clkLevel : clkLevel;
-    bool isSampleEdge = (cpha == 0) ? isRising : !isRising;
-    bool isShiftEdge  = !isSampleEdge;
-
-    if (isSampleEdge) {
-        // Sample MOSI
-        if (rxBuf /*&& dev->rxdByteInd < dev->rxdSize*/) {
-            uint8_t bit = (__is_positive(GPIO.in & __mask32(dev->mosi))) ? 1 : 0;
-            rxBuf[dev->rxdByteInd] = (rxBuf[dev->rxdByteInd] << 1) | bit;
-
-            ets_printf("> %d\n", bit);
-
-            if (++dev->rxdBitInd >= 8) {
-                dev->rxdBitInd = 0;
-                // dev->rxdByteInd++;
-                if(CIRCLE_BUFF) 
-                    dev->rxdByteInd = (dev->rxdByteInd+1)%(dev->rxdSize);
-                else 
-                    dev->rxdByteInd++;
-            }
-        } else {
-            // __spiLog1("RX buffer err!");
-        }
-    } else if (isShiftEdge) {
-        // Export MISO
-        if (txBuf /*&& dev->txdByteInd < dev->txdSize*/) {
-            uint8_t outBit = (txBuf[dev->txdByteInd] & (0x80 >> dev->txdBitInd)) ? 1 : 0;
-            if (outBit)
-                GPIO.out_w1ts = __mask32(dev->miso);
-            else
-                GPIO.out_w1tc = __mask32(dev->miso);
-
-            ets_printf("< %d\n", outBit);
-
-            if (++dev->txdBitInd >= 8) {
-                dev->txdBitInd = 0;
-                if(CIRCLE_BUFF) 
-                    dev->txdByteInd = (dev->txdByteInd+1)%(dev->rxdSize);
-                else 
-                    dev->txdByteInd++;
-            }
-        } else {
-            // __spiLog1("TX buffer err!");
-        }
-    }
-}
-
-static void IRAM_ATTR spiHandleCSIsr(void* pv) {
-    spiDev_t *dev = (spiDev_t*) pv;
-
-    if (__is_positive(GPIO.in & __mask32(dev->cs))) {
-        __spiLog1("CS rising edge");
-        /// CS rising edge — end of transaction
-        // gpio_intr_disable(dev->clk);
-
-        /// Reset TX index
-        dev->txdByteInd = 0;
-        dev->txdBitInd  = 0;
-    } else {
-        __spiLog1("CS falling edge");
-        /// CS falling edge — start of transaction
-        // gpio_intr_enable(dev->clk);
-
-        /// Reset RX index
-        // dev->rxdByteInd = 0;
-        // dev->rxdBitInd  = 0;
-        dev->txdByteInd = 0;
-        dev->txdBitInd  = 0;
-
-        /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
-        if (__hasFlagBitClr(dev->conf, SPI_CPHA)) {
-            if (__isnot_null(dev->txdPtr) && __is_positive(dev->txdSize)) {
-                uint8_t firstByte = ((uint8_t*)dev->txdPtr)[0];
-                if (firstByte & 0x80) {
-                    GPIO.out_w1ts = __mask32(dev->miso);
-                } else {
-                    GPIO.out_w1tc = __mask32(dev->miso);
-                }
-            }
-        }
-    }
-}
 
 /// @brief Create new spiDev_t
 /// @param pDev the pointer point to the pointer that point the place which will store spiDev_t
@@ -284,7 +193,7 @@ def createSPIDevice(spiDev_t ** pDev);
 /// @param config Set MODE, CPOL, CPHA bit.
 /// @return Default return status
 /// @note - Config flag: MSB<[31]-[30]-...-[2:CPHA]-[1:CPOL]-[0:MODE]>LSB
-/// @note - In slave mode, txdPtr, txdSize, rxdPtr, rxdSize have to be set before any transaction!
+/// @note - In slave mode, tBuff, tBuffSize, rBuff, rBuffSize have to be set before any transaction!
 def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,uint32_t freq, flag_t config);
 
 /// @brief Startup (init gpio, ...) base on the config of spiDev
@@ -314,17 +223,17 @@ def spiResetReceiveIndex(spiDev_t * dev);
 
 /// @brief Set SPI transmit buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
-/// @param txdPtr The pointer to transmit buffer
+/// @param tBuff The pointer to transmit buffer
 /// @param size Size of the transmit buffer (in byte)
 /// @return Default return status
-def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size);
+def spiSetTransmitBuffer(spiDev_t * dev, void * tBuff, size_t size);
 
 /// @brief Set SPI receive buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
-/// @param rxdPtr The pointer to receive buffer
+/// @param rBuff The pointer to receive buffer
 /// @param size Size of the receive buffer (in byte)
 /// @return Default return status
-def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
+def spiSetReceiveBuffer(spiDev_t * dev, void * rBuff, size_t size);
 
 /// @brief Start the spi transaction (Master only)
 /// @param dev Pointer to spiDev_t

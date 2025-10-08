@@ -1,0 +1,2014 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ts Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aecch ( 44748) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001aef4 vaddr=3ffb0000 size=02628h (  9768) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001d524 vaddr=40080000 size=02af4h ( 10996) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15534h ( 87348) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=0003555c vaddr=40082af4 size=086bch ( 34492) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003dc20 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     do-an-02[0m
+[0;32mI (197) app_init: App version:      a08380c-dirty[0m
+[0;32mI (201) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (206) app_init: ELF file SHA256:  4bb03838f...[0m
+[0;32mI (211) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (234) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFB2EF0 len 0002D110 (180 KiB): DRAM[0m
+[0;32mI (244) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 4008B1B0 len 00014E50 (83 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (267) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (280) main_task: Started on CPU0[0m
+[0;32mI (290) main_task: Calling app_main()[0m
+[31146] [-->] app_main()
+[31180] [log] [+] ledTest()
+[31213] [-->] ledTest()
+[1629869] [<--] ledTest()
+[1629895] [log] [+] oledTest()
+[1630007] [-->] oledTest()
+[1630050] [-->] createOLEDDevice(0x3ffb55f0)
+[1630201] [-->] createI2CDevice(i2cDev_t ** pDev)
+[1634626] [<--] createI2CDevice() : OKE
+[1638161] [<--] createOLEDDevice() : OKE
+[1641811] [-->] configOLEDDevice(0x3ffafe30)
+[1645800] [-->] configI2CDevice(dev: 0x3ffaffb4, SCL: 22, SDA: 21, config: 0x0001)
+[1653108] [<--] configI2CDevice() : OKE
+[1656655] [<--] configOLEDDevice() : OKE
+[1660300] [-->] startupOLEDDevice(0x3ffafe30)
+[1664380] [-->] startupI2CDevice(0x3ffaffb4)
+[1668373] [log] Set up for I2C master mode...
+[1672498] [<--] startupI2CDevice() : OKE
+[1676103] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55a0, 24)
+[1681923] [<--]  i2cSetTransmitBuffer() : OKE
+[1685999] [log] Send start-up sequence ...
+[1689818] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0030)
+[1695792] [<--] i2cSendBuffer() : OKE
+[1698234] [<--] startupOLEDDevice() : OKE
+[1701967] [-->] oledShowRAMContent(0x3ffafe30)
+[1706137] [-->] i2cSendDoubleByte(0x3ffaffb4, 60, 0, 0x00, 0xaf, 0x0000)
+[1713003] [-->] i2cSendDoubleByte(0x3ffaffb4, 60, 0, 0x00, 0xa4, 0x0000)
+[1719061] [<--] oledTurnOnAllPixels() : OKE
+[1723064] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[1729508] [-->] oled_draw_char(11, 5, N, 1)
+[1733446] [<--] oledDrawChar() : OKE
+[1736689] [-->] oled_draw_char(11, 9, g, 1)
+[1740605] [<--] oledDrawChar() : OKE
+[1743894] [-->] oled_draw_char(11, 13, x, 1)
+[1747894] [<--] oledDrawChar() : OKE
+[1751181] [-->] oled_draw_char(11, 17, x, 1)
+[1755182] [<--] oledDrawChar() : OKE
+[1758477] [-->] oled_draw_char(11, 21, F, 1)
+[1762480] [<--] oledDrawChar() : OKE
+[1765768] [-->] oled_draw_char(11, 25, u, 1)
+[1769770] [<--] oledDrawChar() : OKE
+[1773056] [-->] oled_draw_char(11, 29, s, 1)
+[1777057] [<--] oledDrawChar() : OKE
+[1780348] [-->] oled_draw_char(11, 33,  , 1)
+[1784346] [<--] oledDrawChar() : OKE
+[1787643] [-->] oled_draw_char(11, 35, -, 1)
+[1791639] [<--] oledDrawChar() : OKE
+[1794931] [-->] oled_draw_char(11, 39,  , 1)
+[1798925] [<--] oledDrawChar() : OKE
+[1802227] [-->] oled_draw_char(11, 41, T, 1)
+[1806229] [<--] oledDrawChar() : OKE
+[1809518] [-->] oled_draw_char(11, 45, e, 1)
+[1813515] [<--] oledDrawChar() : OKE
+[1816806] [-->] oled_draw_char(11, 49, s, 1)
+[1820807] [<--] oledDrawChar() : OKE
+[1824097] [-->] oled_draw_char(11, 53, t, 1)
+[1828100] [<--] oledDrawChar() : OKE
+[1831389] [-->] oled_draw_char(11, 57, M, 1)
+[1835393] [<--] oledDrawChar() : OKE
+[1838684] [-->] oled_draw_char(11, 61, o, 1)
+[1842685] [<--] oledDrawChar() : OKE
+[1845972] [-->] oled_draw_char(11, 65, d, 1)
+[1849975] [<--] oledDrawChar() : OKE
+[1853264] [-->] oled_draw_char(11, 69, e, 1)
+[1857265] [<--] oledDrawChar() : OKE
+[1860555] [<--] oledDrawText() : OKE
+[1863861] [-->] oledFlush(0x3ffafe30)
+[1867243] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[1872968] [<--]  i2cSetTransmitBuffer() : OKE
+[1877048] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[1882193] [<--] i2cSendBuffer() : OKE
+[1885472] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[1891457] [<--]  i2cSetTransmitBuffer() : OKE
+[1895828] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[1927456] [<--] i2cSendBuffer() : OKE
+[1927490] [<--] oledFlush() : OKE
+[1927526] [log] Fill canvas with '0' color ...
+[1927723] [log] Draw text ...
+[1929502] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[1936096] [-->] oled_draw_char(11, 5, N, 1)
+[1940013] [<--] oledDrawChar() : OKE
+[1943300] [-->] oled_draw_char(11, 9, g, 1)
+[1947216] [<--] oledDrawChar() : OKE
+[1950505] [-->] oled_draw_char(11, 13, x, 1)
+[1954505] [<--] oledDrawChar() : OKE
+[1957796] [-->] oled_draw_char(11, 17, x, 1)
+[1961797] [<--] oledDrawChar() : OKE
+[1965088] [-->] oled_draw_char(11, 21, F, 1)
+[1969091] [<--] oledDrawChar() : OKE
+[1972380] [-->] oled_draw_char(11, 25, u, 1)
+[1976381] [<--] oledDrawChar() : OKE
+[1979671] [-->] oled_draw_char(11, 29, s, 1)
+[1983673] [<--] oledDrawChar() : OKE
+[1986963] [-->] oled_draw_char(11, 33,  , 1)
+[1990957] [<--] oledDrawChar() : OKE
+[1994255] [-->] oled_draw_char(11, 35, -, 1)
+[1998250] [<--] oledDrawChar() : OKE
+[2001546] [-->] oled_draw_char(11, 39,  , 1)
+[2005540] [<--] oledDrawChar() : OKE
+[2008838] [-->] oled_draw_char(11, 41, T, 1)
+[2012840] [<--] oledDrawChar() : OKE
+[2016129] [-->] oled_draw_char(11, 45, e, 1)
+[2020131] [<--] oledDrawChar() : OKE
+[2023421] [-->] oled_draw_char(11, 49, s, 1)
+[2027422] [<--] oledDrawChar() : OKE
+[2030713] [-->] oled_draw_char(11, 53, t, 1)
+[2034715] [<--] oledDrawChar() : OKE
+[2038004] [-->] oled_draw_char(11, 57, M, 1)
+[2042009] [<--] oledDrawChar() : OKE
+[2045296] [-->] oled_draw_char(11, 61, o, 1)
+[2049296] [<--] oledDrawChar() : OKE
+[2052587] [-->] oled_draw_char(11, 65, d, 1)
+[2056590] [<--] oledDrawChar() : OKE
+[2059879] [-->] oled_draw_char(11, 69, e, 1)
+[2063880] [<--] oledDrawChar() : OKE
+[2067170] [<--] oledDrawText() : OKE
+[2070469] [log] Draw char ...
+[2073164] [-->] oledDrawText(17, 5, "0", 1, wrap=1, lh=6)
+[2078285] [-->] oled_draw_char(17, 5, 0, 1)
+[2082198] [<--] oledDrawChar() : OKE
+[2085486] [<--] oledDrawText() : OKE
+[2088784] [log] Oled flush ...
+[2091566] [-->] oledFlush(0x3ffafe30)
+[2094947] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[2100677] [<--]  i2cSetTransmitBuffer() : OKE
+[2104757] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[2109903] [<--] i2cSendBuffer() : OKE
+[2113177] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[2119166] [<--]  i2cSetTransmitBuffer() : OKE
+[2123302] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[2155169] [<--] i2cSendBuffer() : OKE
+[2155203] [<--] oledFlush() : OKE
+[2155235] [log] Delay 300 ticks ...
+[5149699] [log] Fill canvas with '0' color ...
+[5149892] [log] Draw text ...
+[5149920] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[5151915] [-->] oled_draw_char(11, 5, N, 1)
+[5155833] [<--] oledDrawChar() : OKE
+[5159120] [-->] oled_draw_char(11, 9, g, 1)
+[5163036] [<--] oledDrawChar() : OKE
+[5166325] [-->] oled_draw_char(11, 13, x, 1)
+[5170325] [<--] oledDrawChar() : OKE
+[5173617] [-->] oled_draw_char(11, 17, x, 1)
+[5177617] [<--] oledDrawChar() : OKE
+[5180908] [-->] oled_draw_char(11, 21, F, 1)
+[5184911] [<--] oledDrawChar() : OKE
+[5188200] [-->] oled_draw_char(11, 25, u, 1)
+[5192201] [<--] oledDrawChar() : OKE
+[5195491] [-->] oled_draw_char(11, 29, s, 1)
+[5199492] [<--] oledDrawChar() : OKE
+[5202783] [-->] oled_draw_char(11, 33,  , 1)
+[5206777] [<--] oledDrawChar() : OKE
+[5210075] [-->] oled_draw_char(11, 35, -, 1)
+[5214070] [<--] oledDrawChar() : OKE
+[5217366] [-->] oled_draw_char(11, 39,  , 1)
+[5221360] [<--] oledDrawChar() : OKE
+[5224658] [-->] oled_draw_char(11, 41, T, 1)
+[5228660] [<--] oledDrawChar() : OKE
+[5231949] [-->] oled_draw_char(11, 45, e, 1)
+[5235951] [<--] oledDrawChar() : OKE
+[5239241] [-->] oled_draw_char(11, 49, s, 1)
+[5243242] [<--] oledDrawChar() : OKE
+[5246532] [-->] oled_draw_char(11, 53, t, 1)
+[5250535] [<--] oledDrawChar() : OKE
+[5253824] [-->] oled_draw_char(11, 57, M, 1)
+[5257828] [<--] oledDrawChar() : OKE
+[5261116] [-->] oled_draw_char(11, 61, o, 1)
+[5265116] [<--] oledDrawChar() : OKE
+[5268407] [-->] oled_draw_char(11, 65, d, 1)
+[5272410] [<--] oledDrawChar() : OKE
+[5275699] [-->] oled_draw_char(11, 69, e, 1)
+[5279702] [<--] oledDrawChar() : OKE
+[5282990] [<--] oledDrawText() : OKE
+[5286289] [log] Draw char ...
+[5288979] [-->] oledDrawText(17, 5, "1", 1, wrap=1, lh=6)
+[5294101] [-->] oled_draw_char(17, 5, 1, 1)
+[5298020] [<--] oledDrawChar() : OKE
+[5301306] [<--] oledDrawText() : OKE
+[5304604] [log] Oled flush ...
+[5307382] [-->] oledFlush(0x3ffafe30)
+[5310767] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[5316496] [<--]  i2cSetTransmitBuffer() : OKE
+[5320577] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[5325722] [<--] i2cSendBuffer() : OKE
+[5328996] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[5334986] [<--]  i2cSetTransmitBuffer() : OKE
+[5339122] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[5370988] [<--] i2cSendBuffer() : OKE
+[5371023] [<--] oledFlush() : OKE
+[5371055] [log] Delay 300 ticks ...
+[8369699] [log] Fill canvas with '0' color ...
+[8369892] [log] Draw text ...
+[8369920] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[8371915] [-->] oled_draw_char(11, 5, N, 1)
+[8375833] [<--] oledDrawChar() : OKE
+[8379120] [-->] oled_draw_char(11, 9, g, 1)
+[8383036] [<--] oledDrawChar() : OKE
+[8386325] [-->] oled_draw_char(11, 13, x, 1)
+[8390325] [<--] oledDrawChar() : OKE
+[8393616] [-->] oled_draw_char(11, 17, x, 1)
+[8397617] [<--] oledDrawChar() : OKE
+[8400908] [-->] oled_draw_char(11, 21, F, 1)
+[8404911] [<--] oledDrawChar() : OKE
+[8408200] [-->] oled_draw_char(11, 25, u, 1)
+[8412201] [<--] oledDrawChar() : OKE
+[8415491] [-->] oled_draw_char(11, 29, s, 1)
+[8419492] [<--] oledDrawChar() : OKE
+[8422783] [-->] oled_draw_char(11, 33,  , 1)
+[8426777] [<--] oledDrawChar() : OKE
+[8430075] [-->] oled_draw_char(11, 35, -, 1)
+[8434070] [<--] oledDrawChar() : OKE
+[8437366] [-->] oled_draw_char(11, 39,  , 1)
+[8441360] [<--] oledDrawChar() : OKE
+[8444658] [-->] oled_draw_char(11, 41, T, 1)
+[8448660] [<--] oledDrawChar() : OKE
+[8451949] [-->] oled_draw_char(11, 45, e, 1)
+[8455951] [<--] oledDrawChar() : OKE
+[8459241] [-->] oled_draw_char(11, 49, s, 1)
+[8463242] [<--] oledDrawChar() : OKE
+[8466532] [-->] oled_draw_char(11, 53, t, 1)
+[8470535] [<--] oledDrawChar() : OKE
+[8473824] [-->] oled_draw_char(11, 57, M, 1)
+[8477828] [<--] oledDrawChar() : OKE
+[8481116] [-->] oled_draw_char(11, 61, o, 1)
+[8485116] [<--] oledDrawChar() : OKE
+[8488407] [-->] oled_draw_char(11, 65, d, 1)
+[8492410] [<--] oledDrawChar() : OKE
+[8495699] [-->] oled_draw_char(11, 69, e, 1)
+[8499702] [<--] oledDrawChar() : OKE
+[8502990] [<--] oledDrawText() : OKE
+[8506289] [log] Draw char ...
+[8508979] [-->] oledDrawText(17, 5, "2", 1, wrap=1, lh=6)
+[8514101] [-->] oled_draw_char(17, 5, 2, 1)
+[8518017] [<--] oledDrawChar() : OKE
+[8521306] [<--] oledDrawText() : OKE
+[8524604] [log] Oled flush ...
+[8527382] [-->] oledFlush(0x3ffafe30)
+[8530768] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[8536497] [<--]  i2cSetTransmitBuffer() : OKE
+[8540577] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[8545722] [<--] i2cSendBuffer() : OKE
+[8548996] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[8554986] [<--]  i2cSetTransmitBuffer() : OKE
+[8559122] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[8590989] [<--] i2cSendBuffer() : OKE
+[8591023] [<--] oledFlush() : OKE
+[8591055] [log] Delay 300 ticks ...
+11589699] [log] Fill canvas with '0' color ...
+[11589893] [log] Draw text ...
+[11589923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[11592176] [-->] oled_draw_char(11, 5, N, 1)
+[11596180] [<--] oledDrawChar() : OKE
+[11599554] [-->] oled_draw_char(11, 9, g, 1)
+[11603557] [<--] oledDrawChar() : OKE
+[11606933] [-->] oled_draw_char(11, 13, x, 1)
+[11611020] [<--] oledDrawChar() : OKE
+[11614398] [-->] oled_draw_char(11, 17, x, 1)
+[11618485] [<--] oledDrawChar() : OKE
+[11621863] [-->] oled_draw_char(11, 21, F, 1)
+[11625953] [<--] oledDrawChar() : OKE
+[11629328] [-->] oled_draw_char(11, 25, u, 1)
+[11633416] [<--] oledDrawChar() : OKE
+[11636793] [-->] oled_draw_char(11, 29, s, 1)
+[11640882] [<--] oledDrawChar() : OKE
+[11644259] [-->] oled_draw_char(11, 33,  , 1)
+[11648339] [<--] oledDrawChar() : OKE
+[11651724] [-->] oled_draw_char(11, 35, -, 1)
+[11655806] [<--] oledDrawChar() : OKE
+[11659189] [-->] oled_draw_char(11, 39,  , 1)
+[11663270] [<--] oledDrawChar() : OKE
+[11666654] [-->] oled_draw_char(11, 41, T, 1)
+[11670743] [<--] oledDrawChar() : OKE
+[11674119] [-->] oled_draw_char(11, 45, e, 1)
+[11678207] [<--] oledDrawChar() : OKE
+[11681585] [-->] oled_draw_char(11, 49, s, 1)
+[11685673] [<--] oledDrawChar() : OKE
+[11689050] [-->] oled_draw_char(11, 53, t, 1)
+[11693139] [<--] oledDrawChar() : OKE
+[11696515] [-->] oled_draw_char(11, 57, M, 1)
+[11700606] [<--] oledDrawChar() : OKE
+[11703980] [-->] oled_draw_char(11, 61, o, 1)
+[11708067] [<--] oledDrawChar() : OKE
+[11711446] [-->] oled_draw_char(11, 65, d, 1)
+[11715535] [<--] oledDrawChar() : OKE
+[11718910] [-->] oled_draw_char(11, 69, e, 1)
+[11722999] [<--] oledDrawChar() : OKE
+[11726375] [<--] oledDrawText() : OKE
+[11729761] [log] Draw char ...
+[11732538] [-->] oledDrawText(17, 5, "3", 1, wrap=1, lh=6)
+[11737751] [-->] oled_draw_char(17, 5, 3, 1)
+[11741749] [<--] oledDrawChar() : OKE
+[11745125] [<--] oledDrawText() : OKE
+[11748510] [log] Oled flush ...
+[11751375] [-->] oledFlush(0x3ffafe30)
+[11754847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[11760663] [<--]  i2cSetTransmitBuffer() : OKE
+[11764830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[11770062] [<--] i2cSendBuffer() : OKE
+[11773424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[11779500] [<--]  i2cSetTransmitBuffer() : OKE
+[11783723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[11815676] [<--] i2cSendBuffer() : OKE
+[11815712] [<--] oledFlush() : OKE
+[11815746] [log] Delay 300 ticks ...
+[14809699] [log] Fill canvas with '0' color ...
+[14809893] [log] Draw text ...
+[14809923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[14812176] [-->] oled_draw_char(11, 5, N, 1)
+[14816180] [<--] oledDrawChar() : OKE
+[14819554] [-->] oled_draw_char(11, 9, g, 1)
+[14823557] [<--] oledDrawChar() : OKE
+[14826933] [-->] oled_draw_char(11, 13, x, 1)
+[14831020] [<--] oledDrawChar() : OKE
+[14834398] [-->] oled_draw_char(11, 17, x, 1)
+[14838485] [<--] oledDrawChar() : OKE
+[14841863] [-->] oled_draw_char(11, 21, F, 1)
+[14845953] [<--] oledDrawChar() : OKE
+[14849328] [-->] oled_draw_char(11, 25, u, 1)
+[14853416] [<--] oledDrawChar() : OKE
+[14856793] [-->] oled_draw_char(11, 29, s, 1)
+[14860882] [<--] oledDrawChar() : OKE
+[14864259] [-->] oled_draw_char(11, 33,  , 1)
+[14868339] [<--] oledDrawChar() : OKE
+[14871724] [-->] oled_draw_char(11, 35, -, 1)
+[14875806] [<--] oledDrawChar() : OKE
+[14879189] [-->] oled_draw_char(11, 39,  , 1)
+[14883270] [<--] oledDrawChar() : OKE
+[14886654] [-->] oled_draw_char(11, 41, T, 1)
+[14890743] [<--] oledDrawChar() : OKE
+[14894119] [-->] oled_draw_char(11, 45, e, 1)
+[14898207] [<--] oledDrawChar() : OKE
+[14901585] [-->] oled_draw_char(11, 49, s, 1)
+[14905673] [<--] oledDrawChar() : OKE
+[14909050] [-->] oled_draw_char(11, 53, t, 1)
+[14913139] [<--] oledDrawChar() : OKE
+[14916515] [-->] oled_draw_char(11, 57, M, 1)
+[14920606] [<--] oledDrawChar() : OKE
+[14923980] [-->] oled_draw_char(11, 61, o, 1)
+[14928067] [<--] oledDrawChar() : OKE
+[14931446] [-->] oled_draw_char(11, 65, d, 1)
+[14935535] [<--] oledDrawChar() : OKE
+[14938910] [-->] oled_draw_char(11, 69, e, 1)
+[14942999] [<--] oledDrawChar() : OKE
+[14946375] [<--] oledDrawText() : OKE
+[14949761] [log] Draw char ...
+[14952538] [-->] oledDrawText(17, 5, "4", 1, wrap=1, lh=6)
+[14957747] [-->] oled_draw_char(17, 5, 4, 1)
+[14961750] [<--] oledDrawChar() : OKE
+[14965125] [<--] oledDrawText() : OKE
+[14968511] [log] Oled flush ...
+[14971375] [-->] oledFlush(0x3ffafe30)
+[14974847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[14980663] [<--]  i2cSetTransmitBuffer() : OKE
+[14984830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[14990062] [<--] i2cSendBuffer() : OKE
+[14993424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[14999500] [<--]  i2cSetTransmitBuffer() : OKE
+[15003723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[15035676] [<--] i2cSendBuffer() : OKE
+[15035712] [<--] oledFlush() : OKE
+[15035746] [log] Delay 300 ticks ...
+[18029699] [log] Fill canvas with '0' color ...
+[18029893] [log] Draw text ...
+[18029923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[18032176] [-->] oled_draw_char(11, 5, N, 1)
+[18036180] [<--] oledDrawChar() : OKE
+[18039554] [-->] oled_draw_char(11, 9, g, 1)
+[18043557] [<--] oledDrawChar() : OKE
+[18046933] [-->] oled_draw_char(11, 13, x, 1)
+[18051020] [<--] oledDrawChar() : OKE
+[18054398] [-->] oled_draw_char(11, 17, x, 1)
+[18058485] [<--] oledDrawChar() : OKE
+[18061863] [-->] oled_draw_char(11, 21, F, 1)
+[18065953] [<--] oledDrawChar() : OKE
+[18069328] [-->] oled_draw_char(11, 25, u, 1)
+[18073416] [<--] oledDrawChar() : OKE
+[18076793] [-->] oled_draw_char(11, 29, s, 1)
+[18080882] [<--] oledDrawChar() : OKE
+[18084259] [-->] oled_draw_char(11, 33,  , 1)
+[18088339] [<--] oledDrawChar() : OKE
+[18091724] [-->] oled_draw_char(11, 35, -, 1)
+[18095806] [<--] oledDrawChar() : OKE
+[18099189] [-->] oled_draw_char(11, 39,  , 1)
+[18103270] [<--] oledDrawChar() : OKE
+[18106654] [-->] oled_draw_char(11, 41, T, 1)
+[18110743] [<--] oledDrawChar() : OKE
+[18114119] [-->] oled_draw_char(11, 45, e, 1)
+[18118207] [<--] oledDrawChar() : OKE
+[18121585] [-->] oled_draw_char(11, 49, s, 1)
+[18125673] [<--] oledDrawChar() : OKE
+[18129050] [-->] oled_draw_char(11, 53, t, 1)
+[18133139] [<--] oledDrawChar() : OKE
+[18136515] [-->] oled_draw_char(11, 57, M, 1)
+[18140606] [<--] oledDrawChar() : OKE
+[18143980] [-->] oled_draw_char(11, 61, o, 1)
+[18148067] [<--] oledDrawChar() : OKE
+[18151446] [-->] oled_draw_char(11, 65, d, 1)
+[18155535] [<--] oledDrawChar() : OKE
+[18158910] [-->] oled_draw_char(11, 69, e, 1)
+[18162999] [<--] oledDrawChar() : OKE
+[18166375] [<--] oledDrawText() : OKE
+[18169761] [log] Draw char ...
+[18172538] [-->] oledDrawText(17, 5, "5", 1, wrap=1, lh=6)
+[18177747] [-->] oled_draw_char(17, 5, 5, 1)
+[18181750] [<--] oledDrawChar() : OKE
+[18185125] [<--] oledDrawText() : OKE
+[18188511] [log] Oled flush ...
+[18191375] [-->] oledFlush(0x3ffafe30)
+[18194847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[18200663] [<--]  i2cSetTransmitBuffer() : OKE
+[18204830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[18210062] [<--] i2cSendBuffer() : OKE
+[18213424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[18219500] [<--]  i2cSetTransmitBuffer() : OKE
+[18223723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[18255676] [<--] i2cSendBuffer() : OKE
+[18255712] [<--] oledFlush() : OKE
+[18255746] [log] Delay 300 ticks ...
+[21249699] [log] Fill canvas with '0' color ...
+[21249893] [log] Draw text ...
+[21249923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[21252176] [-->] oled_draw_char(11, 5, N, 1)
+[21256180] [<--] oledDrawChar() : OKE
+[21259554] [-->] oled_draw_char(11, 9, g, 1)
+[21263557] [<--] oledDrawChar() : OKE
+[21266933] [-->] oled_draw_char(11, 13, x, 1)
+[21271020] [<--] oledDrawChar() : OKE
+[21274398] [-->] oled_draw_char(11, 17, x, 1)
+[21278485] [<--] oledDrawChar() : OKE
+[21281863] [-->] oled_draw_char(11, 21, F, 1)
+[21285953] [<--] oledDrawChar() : OKE
+[21289328] [-->] oled_draw_char(11, 25, u, 1)
+[21293416] [<--] oledDrawChar() : OKE
+[21296793] [-->] oled_draw_char(11, 29, s, 1)
+[21300882] [<--] oledDrawChar() : OKE
+[21304259] [-->] oled_draw_char(11, 33,  , 1)
+[21308339] [<--] oledDrawChar() : OKE
+[21311724] [-->] oled_draw_char(11, 35, -, 1)
+[21315806] [<--] oledDrawChar() : OKE
+[21319189] [-->] oled_draw_char(11, 39,  , 1)
+[21323270] [<--] oledDrawChar() : OKE
+[21326654] [-->] oled_draw_char(11, 41, T, 1)
+[21330743] [<--] oledDrawChar() : OKE
+[21334119] [-->] oled_draw_char(11, 45, e, 1)
+[21338207] [<--] oledDrawChar() : OKE
+[21341585] [-->] oled_draw_char(11, 49, s, 1)
+[21345673] [<--] oledDrawChar() : OKE
+[21349050] [-->] oled_draw_char(11, 53, t, 1)
+[21353139] [<--] oledDrawChar() : OKE
+[21356515] [-->] oled_draw_char(11, 57, M, 1)
+[21360606] [<--] oledDrawChar() : OKE
+[21363980] [-->] oled_draw_char(11, 61, o, 1)
+[21368067] [<--] oledDrawChar() : OKE
+[21371446] [-->] oled_draw_char(11, 65, d, 1)
+[21375535] [<--] oledDrawChar() : OKE
+[21378910] [-->] oled_draw_char(11, 69, e, 1)
+[21382999] [<--] oledDrawChar() : OKE
+[21386375] [<--] oledDrawText() : OKE
+[21389761] [log] Draw char ...
+[21392538] [-->] oledDrawText(17, 5, "6", 1, wrap=1, lh=6)
+[21397747] [-->] oled_draw_char(17, 5, 6, 1)
+[21401751] [<--] oledDrawChar() : OKE
+[21405125] [<--] oledDrawText() : OKE
+[21408511] [log] Oled flush ...
+[21411375] [-->] oledFlush(0x3ffafe30)
+[21414847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[21420663] [<--]  i2cSetTransmitBuffer() : OKE
+[21424830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[21430062] [<--] i2cSendBuffer() : OKE
+[21433424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[21439500] [<--]  i2cSetTransmitBuffer() : OKE
+[21443723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[21475676] [<--] i2cSendBuffer() : OKE
+[21475712] [<--] oledFlush() : OKE
+[21475746] [log] Delay 300 ticks ...
+[499] [log] Fill canvas with '0' color ...
+[24469893] [log] Draw text ...
+[24469923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[24472176] [-->] oled_draw_char(11, 5, N, 1)
+[24476180] [<--] oledDrawChar() : OKE
+[24479554] [-->] oled_draw_char(11, 9, g, 1)
+[24483557] [<--] oledDrawChar() : OKE
+[24486933] [-->] oled_draw_char(11, 13, x, 1)
+[24491020] [<--] oledDrawChar() : OKE
+[24494398] [-->] oled_draw_char(11, 17, x, 1)
+[24498485] [<--] oledDrawChar() : OKE
+[24501863] [-->] oled_draw_char(11, 21, F, 1)
+[24505953] [<--] oledDrawChar() : OKE
+[24509328] [-->] oled_draw_char(11, 25, u, 1)
+[24513416] [<--] oledDrawChar() : OKE
+[24516793] [-->] oled_draw_char(11, 29, s, 1)
+[24520882] [<--] oledDrawChar() : OKE
+[24524259] [-->] oled_draw_char(11, 33,  , 1)
+[24528339] [<--] oledDrawChar() : OKE
+[24531724] [-->] oled_draw_char(11, 35, -, 1)
+[24535806] [<--] oledDrawChar() : OKE
+[24539189] [-->] oled_draw_char(11, 39,  , 1)
+[24543270] [<--] oledDrawChar() : OKE
+[24546654] [-->] oled_draw_char(11, 41, T, 1)
+[24550743] [<--] oledDrawChar() : OKE
+[24554119] [-->] oled_draw_char(11, 45, e, 1)
+[24558207] [<--] oledDrawChar() : OKE
+[24561585] [-->] oled_draw_char(11, 49, s, 1)
+[24565673] [<--] oledDrawChar() : OKE
+[24569050] [-->] oled_draw_char(11, 53, t, 1)
+[24573139] [<--] oledDrawChar() : OKE
+[24576515] [-->] oled_draw_char(11, 57, M, 1)
+[24580606] [<--] oledDrawChar() : OKE
+[24583980] [-->] oled_draw_char(11, 61, o, 1)
+[24588067] [<--] oledDrawChar() : OKE
+[24591446] [-->] oled_draw_char(11, 65, d, 1)
+[24595535] [<--] oledDrawChar() : OKE
+[24598910] [-->] oled_draw_char(11, 69, e, 1)
+[24602999] [<--] oledDrawChar() : OKE
+[24606375] [<--] oledDrawText() : OKE
+[24609761] [log] Draw char ...
+[24612538] [-->] oledDrawText(17, 5, "7", 1, wrap=1, lh=6)
+[24617751] [-->] oled_draw_char(17, 5, 7, 1)
+[24621749] [<--] oledDrawChar() : OKE
+[24625125] [<--] oledDrawText() : OKE
+[24628510] [log] Oled flush ...
+[24631375] [-->] oledFlush(0x3ffafe30)
+[24634847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[24640663] [<--]  i2cSetTransmitBuffer() : OKE
+[24644830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[24650062] [<--] i2cSendBuffer() : OKE
+[24653424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[24659500] [<--]  i2cSetTransmitBuffer() : OKE
+[24663723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[24695676] [<--] i2cSendBuffer() : OKE
+[24695712] [<--] oledFlush() : OKE
+[24695746] [log] Delay 300 ticks ...
+[27689699] [log] Fill canvas with '0' color ...
+[27689893] [log] Draw text ...
+[27689923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[27692176] [-->] oled_draw_char(11, 5, N, 1)
+[27696180] [<--] oledDrawChar() : OKE
+[27699554] [-->] oled_draw_char(11, 9, g, 1)
+[27703557] [<--] oledDrawChar() : OKE
+[27706933] [-->] oled_draw_char(11, 13, x, 1)
+[27711020] [<--] oledDrawChar() : OKE
+[27714398] [-->] oled_draw_char(11, 17, x, 1)
+[27718485] [<--] oledDrawChar() : OKE
+[27721863] [-->] oled_draw_char(11, 21, F, 1)
+[27725953] [<--] oledDrawChar() : OKE
+[27729328] [-->] oled_draw_char(11, 25, u, 1)
+[27733416] [<--] oledDrawChar() : OKE
+[27736793] [-->] oled_draw_char(11, 29, s, 1)
+[27740882] [<--] oledDrawChar() : OKE
+[27744259] [-->] oled_draw_char(11, 33,  , 1)
+[27748339] [<--] oledDrawChar() : OKE
+[27751724] [-->] oled_draw_char(11, 35, -, 1)
+[27755806] [<--] oledDrawChar() : OKE
+[27759189] [-->] oled_draw_char(11, 39,  , 1)
+[27763270] [<--] oledDrawChar() : OKE
+[27766654] [-->] oled_draw_char(11, 41, T, 1)
+[27770743] [<--] oledDrawChar() : OKE
+[27774119] [-->] oled_draw_char(11, 45, e, 1)
+[27778207] [<--] oledDrawChar() : OKE
+[27781585] [-->] oled_draw_char(11, 49, s, 1)
+[27785673] [<--] oledDrawChar() : OKE
+[27789050] [-->] oled_draw_char(11, 53, t, 1)
+[27793139] [<--] oledDrawChar() : OKE
+[27796515] [-->] oled_draw_char(11, 57, M, 1)
+[27800606] [<--] oledDrawChar() : OKE
+[27803980] [-->] oled_draw_char(11, 61, o, 1)
+[27808067] [<--] oledDrawChar() : OKE
+[27811446] [-->] oled_draw_char(11, 65, d, 1)
+[27815535] [<--] oledDrawChar() : OKE
+[27818910] [-->] oled_draw_char(11, 69, e, 1)
+[27822999] [<--] oledDrawChar() : OKE
+[27826375] [<--] oledDrawText() : OKE
+[27829761] [log] Draw char ...
+[27832538] [-->] oledDrawText(17, 5, "8", 1, wrap=1, lh=6)
+[27837747] [-->] oled_draw_char(17, 5, 8, 1)
+[27841756] [<--] oledDrawChar() : OKE
+[27845125] [<--] oledDrawText() : OKE
+[27848511] [log] Oled flush ...
+[27851375] [-->] oledFlush(0x3ffafe30)
+[27854847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[27860663] [<--]  i2cSetTransmitBuffer() : OKE
+[27864830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[27870062] [<--] i2cSendBuffer() : OKE
+[27873424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[27879500] [<--]  i2cSetTransmitBuffer() : OKE
+[27883723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[27915676] [<--] i2cSendBuffer() : OKE
+[27915712] [<--] oledFlush() : OKE
+[27915746] [log] Delay 300 ticks ...
+[30909699] [log] Fill canvas with '0' color ...
+[30909893] [log] Draw text ...
+[30909923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[30912176] [-->] oled_draw_char(11, 5, N, 1)
+[30916180] [<--] oledDrawChar() : OKE
+[30919554] [-->] oled_draw_char(11, 9, g, 1)
+[30923557] [<--] oledDrawChar() : OKE
+[30926933] [-->] oled_draw_char(11, 13, x, 1)
+[30931020] [<--] oledDrawChar() : OKE
+[30934398] [-->] oled_draw_char(11, 17, x, 1)
+[30938485] [<--] oledDrawChar() : OKE
+[30941863] [-->] oled_draw_char(11, 21, F, 1)
+[30945953] [<--] oledDrawChar() : OKE
+[30949328] [-->] oled_draw_char(11, 25, u, 1)
+[30953416] [<--] oledDrawChar() : OKE
+[30956793] [-->] oled_draw_char(11, 29, s, 1)
+[30960882] [<--] oledDrawChar() : OKE
+[30964259] [-->] oled_draw_char(11, 33,  , 1)
+[30968339] [<--] oledDrawChar() : OKE
+[30971724] [-->] oled_draw_char(11, 35, -, 1)
+[30975806] [<--] oledDrawChar() : OKE
+[30979189] [-->] oled_draw_char(11, 39,  , 1)
+[30983270] [<--] oledDrawChar() : OKE
+[30986654] [-->] oled_draw_char(11, 41, T, 1)
+[30990743] [<--] oledDrawChar() : OKE
+[30994119] [-->] oled_draw_char(11, 45, e, 1)
+[30998207] [<--] oledDrawChar() : OKE
+[31001585] [-->] oled_draw_char(11, 49, s, 1)
+[31005673] [<--] oledDrawChar() : OKE
+[31009050] [-->] oled_draw_char(11, 53, t, 1)
+[31013139] [<--] oledDrawChar() : OKE
+[31016515] [-->] oled_draw_char(11, 57, M, 1)
+[31020606] [<--] oledDrawChar() : OKE
+[31023980] [-->] oled_draw_char(11, 61, o, 1)
+[31028067] [<--] oledDrawChar() : OKE
+[31031446] [-->] oled_draw_char(11, 65, d, 1)
+[31035535] [<--] oledDrawChar() : OKE
+[31038910] [-->] oled_draw_char(11, 69, e, 1)
+[31042999] [<--] oledDrawChar() : OKE
+[31046375] [<--] oledDrawText() : OKE
+[31049761] [log] Draw char ...
+[31052538] [-->] oledDrawText(17, 5, "9", 1, wrap=1, lh=6)
+[31057747] [-->] oled_draw_char(17, 5, 9, 1)
+[31061751] [<--] oledDrawChar() : OKE
+[31065125] [<--] oledDrawText() : OKE
+[31068511] [log] Oled flush ...
+[31071375] [-->] oledFlush(0x3ffafe30)
+[31074847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[31080663] [<--]  i2cSetTransmitBuffer() : OKE
+[31084830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[31090062] [<--] i2cSendBuffer() : OKE
+[31093428] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[31099500] [<--]  i2cSetTransmitBuffer() : OKE
+[31103723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[31135676] [<--] i2cSendBuffer() : OKE
+[31135712] [<--] oledFlush() : OKE
+[31135746] [log] Delay 300 ticks ...
+[34129699] [log] Fill canvas with '0' color ...
+[34129893] [log] Draw text ...
+[34129923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[34132176] [-->] oled_draw_char(11, 5, N, 1)
+[34136180] [<--] oledDrawChar() : OKE
+[34139554] [-->] oled_draw_char(11, 9, g, 1)
+[34143557] [<--] oledDrawChar() : OKE
+[34146933] [-->] oled_draw_char(11, 13, x, 1)
+[34151020] [<--] oledDrawChar() : OKE
+[34154398] [-->] oled_draw_char(11, 17, x, 1)
+[34158485] [<--] oledDrawChar() : OKE
+[34161863] [-->] oled_draw_char(11, 21, F, 1)
+[34165953] [<--] oledDrawChar() : OKE
+[34169328] [-->] oled_draw_char(11, 25, u, 1)
+[34173416] [<--] oledDrawChar() : OKE
+[34176793] [-->] oled_draw_char(11, 29, s, 1)
+[34180882] [<--] oledDrawChar() : OKE
+[34184259] [-->] oled_draw_char(11, 33,  , 1)
+[34188339] [<--] oledDrawChar() : OKE
+[34191724] [-->] oled_draw_char(11, 35, -, 1)
+[34195806] [<--] oledDrawChar() : OKE
+[34199189] [-->] oled_draw_char(11, 39,  , 1)
+[34203270] [<--] oledDrawChar() : OKE
+[34206654] [-->] oled_draw_char(11, 41, T, 1)
+[34210743] [<--] oledDrawChar() : OKE
+[34214119] [-->] oled_draw_char(11, 45, e, 1)
+[34218207] [<--] oledDrawChar() : OKE
+[34221585] [-->] oled_draw_char(11, 49, s, 1)
+[34225673] [<--] oledDrawChar() : OKE
+[34229050] [-->] oled_draw_char(11, 53, t, 1)
+[34233139] [<--] oledDrawChar() : OKE
+[34236515] [-->] oled_draw_char(11, 57, M, 1)
+[34240606] [<--] oledDrawChar() : OKE
+[34243980] [-->] oled_draw_char(11, 61, o, 1)
+[34248067] [<--] oledDrawChar() : OKE
+[34251446] [-->] oled_draw_char(11, 65, d, 1)
+[34255535] [<--] oledDrawChar() : OKE
+[34258910] [-->] oled_draw_char(11, 69, e, 1)
+[34262999] [<--] oledDrawChar() : OKE
+[34266375] [<--] oledDrawText() : OKE
+[34269761] [log] Draw char ...
+[34272538] [-->] oledDrawText(17, 5, ":", 1, wrap=1, lh=6)
+[34277747] [-->] oled_draw_char(17, 5, :, 1)
+[34281749] [<--] oledDrawChar() : OKE
+[34285125] [<--] oledDrawText() : OKE
+[34288511] [log] Oled flush ...
+[34291375] [-->] oledFlush(0x3ffafe30)
+[34294847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[34300663] [<--]  i2cSetTransmitBuffer() : OKE
+[34304830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[34310062] [<--] i2cSendBuffer() : OKE
+[34313424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[34319500] [<--]  i2cSetTransmitBuffer() : OKE
+[34323723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[34355676] [<--] i2cSendBuffer() : OKE
+[34355712] [<--] oledFlush() : OKE
+[34355746] [log] Delay 300 ticks ...
+37349699] [log] Fill canvas with '0' color ...
+[37349893] [log] Draw text ...
+[37349923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[37352176] [-->] oled_draw_char(11, 5, N, 1)
+[37356180] [<--] oledDrawChar() : OKE
+[37359554] [-->] oled_draw_char(11, 9, g, 1)
+[37363557] [<--] oledDrawChar() : OKE
+[37366933] [-->] oled_draw_char(11, 13, x, 1)
+[37371020] [<--] oledDrawChar() : OKE
+[37374398] [-->] oled_draw_char(11, 17, x, 1)
+[37378485] [<--] oledDrawChar() : OKE
+[37381863] [-->] oled_draw_char(11, 21, F, 1)
+[37385953] [<--] oledDrawChar() : OKE
+[37389328] [-->] oled_draw_char(11, 25, u, 1)
+[37393416] [<--] oledDrawChar() : OKE
+[37396793] [-->] oled_draw_char(11, 29, s, 1)
+[37400882] [<--] oledDrawChar() : OKE
+[37404259] [-->] oled_draw_char(11, 33,  , 1)
+[37408339] [<--] oledDrawChar() : OKE
+[37411724] [-->] oled_draw_char(11, 35, -, 1)
+[37415806] [<--] oledDrawChar() : OKE
+[37419189] [-->] oled_draw_char(11, 39,  , 1)
+[37423270] [<--] oledDrawChar() : OKE
+[37426654] [-->] oled_draw_char(11, 41, T, 1)
+[37430743] [<--] oledDrawChar() : OKE
+[37434119] [-->] oled_draw_char(11, 45, e, 1)
+[37438207] [<--] oledDrawChar() : OKE
+[37441585] [-->] oled_draw_char(11, 49, s, 1)
+[37445673] [<--] oledDrawChar() : OKE
+[37449050] [-->] oled_draw_char(11, 53, t, 1)
+[37453139] [<--] oledDrawChar() : OKE
+[37456515] [-->] oled_draw_char(11, 57, M, 1)
+[37460606] [<--] oledDrawChar() : OKE
+[37463980] [-->] oled_draw_char(11, 61, o, 1)
+[37468067] [<--] oledDrawChar() : OKE
+[37471446] [-->] oled_draw_char(11, 65, d, 1)
+[37475535] [<--] oledDrawChar() : OKE
+[37478910] [-->] oled_draw_char(11, 69, e, 1)
+[37482999] [<--] oledDrawChar() : OKE
+[37486375] [<--] oledDrawText() : OKE
+[37489761] [log] Draw char ...
+[37492538] [-->] oledDrawText(17, 5, ";", 1, wrap=1, lh=6)
+[37497751] [-->] oled_draw_char(17, 5, ;, 1)
+[37501746] [<--] oledDrawChar() : OKE
+[37505125] [<--] oledDrawText() : OKE
+[37508510] [log] Oled flush ...
+[37511375] [-->] oledFlush(0x3ffafe30)
+[37514847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[37520663] [<--]  i2cSetTransmitBuffer() : OKE
+[37524830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[37530062] [<--] i2cSendBuffer() : OKE
+[37533428] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[37539500] [<--]  i2cSetTransmitBuffer() : OKE
+[37543723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[37575676] [<--] i2cSendBuffer() : OKE
+[37575712] [<--] oledFlush() : OKE
+[37575746] [log] Delay 300 ticks ...
+[40569699] [log] Fill canvas with '0' color ...
+[40569893] [log] Draw text ...
+[40569923] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[40572176] [-->] oled_draw_char(11, 5, N, 1)
+[40576180] [<--] oledDrawChar() : OKE
+[40579554] [-->] oled_draw_char(11, 9, g, 1)
+[40583557] [<--] oledDrawChar() : OKE
+[40586933] [-->] oled_draw_char(11, 13, x, 1)
+[40591020] [<--] oledDrawChar() : OKE
+[40594398] [-->] oled_draw_char(11, 17, x, 1)
+[40598485] [<--] oledDrawChar() : OKE
+[40601863] [-->] oled_draw_char(11, 21, F, 1)
+[40605953] [<--] oledDrawChar() : OKE
+[40609328] [-->] oled_draw_char(11, 25, u, 1)
+[40613416] [<--] oledDrawChar() : OKE
+[40616793] [-->] oled_draw_char(11, 29, s, 1)
+[40620882] [<--] oledDrawChar() : OKE
+[40624259] [-->] oled_draw_char(11, 33,  , 1)
+[40628339] [<--] oledDrawChar() : OKE
+[40631724] [-->] oled_draw_char(11, 35, -, 1)
+[40635806] [<--] oledDrawChar() : OKE
+[40639189] [-->] oled_draw_char(11, 39,  , 1)
+[40643270] [<--] oledDrawChar() : OKE
+[40646654] [-->] oled_draw_char(11, 41, T, 1)
+[40650743] [<--] oledDrawChar() : OKE
+[40654119] [-->] oled_draw_char(11, 45, e, 1)
+[40658207] [<--] oledDrawChar() : OKE
+[40661585] [-->] oled_draw_char(11, 49, s, 1)
+[40665673] [<--] oledDrawChar() : OKE
+[40669050] [-->] oled_draw_char(11, 53, t, 1)
+[40673139] [<--] oledDrawChar() : OKE
+[40676515] [-->] oled_draw_char(11, 57, M, 1)
+[40680606] [<--] oledDrawChar() : OKE
+[40683980] [-->] oled_draw_char(11, 61, o, 1)
+[40688067] [<--] oledDrawChar() : OKE
+[40691446] [-->] oled_draw_char(11, 65, d, 1)
+[40695535] [<--] oledDrawChar() : OKE
+[40698910] [-->] oled_draw_char(11, 69, e, 1)
+[40702999] [<--] oledDrawChar() : OKE
+[40706375] [<--] oledDrawText() : OKE
+[40709761] [log] Draw char ...
+[40712538] [-->] oledDrawText(17, 5, "<", 1, wrap=1, lh=6)
+[40717747] [-->] oled_draw_char(17, 5, <, 1)
+[40721752] [<--] oledDrawChar() : OKE
+[40725125] [<--] oledDrawText() : OKE
+[40728511] [log] Oled flush ...
+[40731375] [-->] oledFlush(0x3ffafe30)
+[40734847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[40740663] [<--]  i2cSetTransmitBuffer() : OKE
+[40744830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[40750062] [<--] i2cSendBuffer() : OKE
+[40753424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[40759500] [<--]  i2cSetTransmitBuffer() : OKE
+[40763723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[40795676] [<--] i2cSendBuffer() : OKE
+[40795712] [<--] oledFlush() : OKE
+[40795746] [log] Delay 300 ticks ...
+[43789699] [log] Fill canvas with '0' color ...
+[43789893] [log] Draw text ...
+[43789924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[43792176] [-->] oled_draw_char(11, 5, N, 1)
+[43796180] [<--] oledDrawChar() : OKE
+[43799554] [-->] oled_draw_char(11, 9, g, 1)
+[43803557] [<--] oledDrawChar() : OKE
+[43806933] [-->] oled_draw_char(11, 13, x, 1)
+[43811020] [<--] oledDrawChar() : OKE
+[43814398] [-->] oled_draw_char(11, 17, x, 1)
+[43818485] [<--] oledDrawChar() : OKE
+[43821863] [-->] oled_draw_char(11, 21, F, 1)
+[43825953] [<--] oledDrawChar() : OKE
+[43829328] [-->] oled_draw_char(11, 25, u, 1)
+[43833416] [<--] oledDrawChar() : OKE
+[43836793] [-->] oled_draw_char(11, 29, s, 1)
+[43840882] [<--] oledDrawChar() : OKE
+[43844259] [-->] oled_draw_char(11, 33,  , 1)
+[43848339] [<--] oledDrawChar() : OKE
+[43851724] [-->] oled_draw_char(11, 35, -, 1)
+[43855806] [<--] oledDrawChar() : OKE
+[43859189] [-->] oled_draw_char(11, 39,  , 1)
+[43863270] [<--] oledDrawChar() : OKE
+[43866654] [-->] oled_draw_char(11, 41, T, 1)
+[43870743] [<--] oledDrawChar() : OKE
+[43874119] [-->] oled_draw_char(11, 45, e, 1)
+[43878207] [<--] oledDrawChar() : OKE
+[43881585] [-->] oled_draw_char(11, 49, s, 1)
+[43885673] [<--] oledDrawChar() : OKE
+[43889050] [-->] oled_draw_char(11, 53, t, 1)
+[43893139] [<--] oledDrawChar() : OKE
+[43896515] [-->] oled_draw_char(11, 57, M, 1)
+[43900606] [<--] oledDrawChar() : OKE
+[43903980] [-->] oled_draw_char(11, 61, o, 1)
+[43908067] [<--] oledDrawChar() : OKE
+[43911446] [-->] oled_draw_char(11, 65, d, 1)
+[43915535] [<--] oledDrawChar() : OKE
+[43918910] [-->] oled_draw_char(11, 69, e, 1)
+[43922999] [<--] oledDrawChar() : OKE
+[43926375] [<--] oledDrawText() : OKE
+[43929761] [log] Draw char ...
+[43932538] [-->] oledDrawText(17, 5, "=", 1, wrap=1, lh=6)
+[43937747] [-->] oled_draw_char(17, 5, =, 1)
+[43941746] [<--] oledDrawChar() : OKE
+[43945125] [<--] oledDrawText() : OKE
+[43948511] [log] Oled flush ...
+[43951375] [-->] oledFlush(0x3ffafe30)
+[43954847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[43960663] [<--]  i2cSetTransmitBuffer() : OKE
+[43964830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[43970062] [<--] i2cSendBuffer() : OKE
+[43973428] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[43979500] [<--]  i2cSetTransmitBuffer() : OKE
+[43983723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[44015676] [<--] i2cSendBuffer() : OKE
+[44015712] [<--] oledFlush() : OKE
+[44015746] [log] Delay 300 ticks ...
+[47009699] [log] Fill canvas with '0' color ...
+[47009893] [log] Draw text ...
+[47009924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[47012176] [-->] oled_draw_char(11, 5, N, 1)
+[47016180] [<--] oledDrawChar() : OKE
+[47019554] [-->] oled_draw_char(11, 9, g, 1)
+[47023557] [<--] oledDrawChar() : OKE
+[47026933] [-->] oled_draw_char(11, 13, x, 1)
+[47031020] [<--] oledDrawChar() : OKE
+[47034398] [-->] oled_draw_char(11, 17, x, 1)
+[47038485] [<--] oledDrawChar() : OKE
+[47041863] [-->] oled_draw_char(11, 21, F, 1)
+[47045953] [<--] oledDrawChar() : OKE
+[47049328] [-->] oled_draw_char(11, 25, u, 1)
+[47053416] [<--] oledDrawChar() : OKE
+[47056793] [-->] oled_draw_char(11, 29, s, 1)
+[47060882] [<--] oledDrawChar() : OKE
+[47064259] [-->] oled_draw_char(11, 33,  , 1)
+[47068339] [<--] oledDrawChar() : OKE
+[47071724] [-->] oled_draw_char(11, 35, -, 1)
+[47075806] [<--] oledDrawChar() : OKE
+[47079189] [-->] oled_draw_char(11, 39,  , 1)
+[47083270] [<--] oledDrawChar() : OKE
+[47086654] [-->] oled_draw_char(11, 41, T, 1)
+[47090743] [<--] oledDrawChar() : OKE
+[47094119] [-->] oled_draw_char(11, 45, e, 1)
+[47098207] [<--] oledDrawChar() : OKE
+[47101585] [-->] oled_draw_char(11, 49, s, 1)
+[47105673] [<--] oledDrawChar() : OKE
+[47109050] [-->] oled_draw_char(11, 53, t, 1)
+[47113139] [<--] oledDrawChar() : OKE
+[47116515] [-->] oled_draw_char(11, 57, M, 1)
+[47120606] [<--] oledDrawChar() : OKE
+[47123980] [-->] oled_draw_char(11, 61, o, 1)
+[47128067] [<--] oledDrawChar() : OKE
+[47131446] [-->] oled_draw_char(11, 65, d, 1)
+[47135535] [<--] oledDrawChar() : OKE
+[47138910] [-->] oled_draw_char(11, 69, e, 1)
+[47142999] [<--] oledDrawChar() : OKE
+[47146375] [<--] oledDrawText() : OKE
+[47149761] [log] Draw char ...
+[47152538] [-->] oledDrawText(17, 5, ">", 1, wrap=1, lh=6)
+[47157747] [-->] oled_draw_char(17, 5, >, 1)
+[47161752] [<--] oledDrawChar() : OKE
+[47165125] [<--] oledDrawText() : OKE
+[47168511] [log] Oled flush ...
+[47171375] [-->] oledFlush(0x3ffafe30)
+[47174847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[47180663] [<--]  i2cSetTransmitBuffer() : OKE
+[47184830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[47190062] [<--] i2cSendBuffer() : OKE
+[47193424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[47199500] [<--]  i2cSetTransmitBuffer() : OKE
+[47203723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[47235676] [<--] i2cSendBuffer() : OKE
+[47235712] [<--] oledFlush() : OKE
+[47235746] [log] Delay 300 ticks ...
+50229699] [log] Fill canvas with '0' color ...
+[50229893] [log] Draw text ...
+[50229924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[50232176] [-->] oled_draw_char(11, 5, N, 1)
+[50236180] [<--] oledDrawChar() : OKE
+[50239554] [-->] oled_draw_char(11, 9, g, 1)
+[50243557] [<--] oledDrawChar() : OKE
+[50246933] [-->] oled_draw_char(11, 13, x, 1)
+[50251020] [<--] oledDrawChar() : OKE
+[50254398] [-->] oled_draw_char(11, 17, x, 1)
+[50258485] [<--] oledDrawChar() : OKE
+[50261863] [-->] oled_draw_char(11, 21, F, 1)
+[50265953] [<--] oledDrawChar() : OKE
+[50269328] [-->] oled_draw_char(11, 25, u, 1)
+[50273416] [<--] oledDrawChar() : OKE
+[50276793] [-->] oled_draw_char(11, 29, s, 1)
+[50280882] [<--] oledDrawChar() : OKE
+[50284259] [-->] oled_draw_char(11, 33,  , 1)
+[50288339] [<--] oledDrawChar() : OKE
+[50291724] [-->] oled_draw_char(11, 35, -, 1)
+[50295806] [<--] oledDrawChar() : OKE
+[50299189] [-->] oled_draw_char(11, 39,  , 1)
+[50303270] [<--] oledDrawChar() : OKE
+[50306654] [-->] oled_draw_char(11, 41, T, 1)
+[50310743] [<--] oledDrawChar() : OKE
+[50314119] [-->] oled_draw_char(11, 45, e, 1)
+[50318207] [<--] oledDrawChar() : OKE
+[50321585] [-->] oled_draw_char(11, 49, s, 1)
+[50325673] [<--] oledDrawChar() : OKE
+[50329050] [-->] oled_draw_char(11, 53, t, 1)
+[50333139] [<--] oledDrawChar() : OKE
+[50336515] [-->] oled_draw_char(11, 57, M, 1)
+[50340606] [<--] oledDrawChar() : OKE
+[50343980] [-->] oled_draw_char(11, 61, o, 1)
+[50348067] [<--] oledDrawChar() : OKE
+[50351446] [-->] oled_draw_char(11, 65, d, 1)
+[50355535] [<--] oledDrawChar() : OKE
+[50358910] [-->] oled_draw_char(11, 69, e, 1)
+[50362999] [<--] oledDrawChar() : OKE
+[50366375] [<--] oledDrawText() : OKE
+[50369761] [log] Draw char ...
+[50372538] [-->] oledDrawText(17, 5, "?", 1, wrap=1, lh=6)
+[50377751] [-->] oled_draw_char(17, 5, ?, 1)
+[50381753] [<--] oledDrawChar() : OKE
+[50385125] [<--] oledDrawText() : OKE
+[50388510] [log] Oled flush ...
+[50391375] [-->] oledFlush(0x3ffafe30)
+[50394847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[50400663] [<--]  i2cSetTransmitBuffer() : OKE
+[50404830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[50410062] [<--] i2cSendBuffer() : OKE
+[50413428] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[50419500] [<--]  i2cSetTransmitBuffer() : OKE
+[50423723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[50455676] [<--] i2cSendBuffer() : OKE
+[50455712] [<--] oledFlush() : OKE
+[50455746] [log] Delay 300 ticks ...
+[53449699] [log] Fill canvas with '0' color ...
+[53449893] [log] Draw text ...
+[53449924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[53452176] [-->] oled_draw_char(11, 5, N, 1)
+[53456180] [<--] oledDrawChar() : OKE
+[53459554] [-->] oled_draw_char(11, 9, g, 1)
+[53463557] [<--] oledDrawChar() : OKE
+[53466933] [-->] oled_draw_char(11, 13, x, 1)
+[53471020] [<--] oledDrawChar() : OKE
+[53474398] [-->] oled_draw_char(11, 17, x, 1)
+[53478485] [<--] oledDrawChar() : OKE
+[53481863] [-->] oled_draw_char(11, 21, F, 1)
+[53485953] [<--] oledDrawChar() : OKE
+[53489328] [-->] oled_draw_char(11, 25, u, 1)
+[53493416] [<--] oledDrawChar() : OKE
+[53496793] [-->] oled_draw_char(11, 29, s, 1)
+[53500882] [<--] oledDrawChar() : OKE
+[53504259] [-->] oled_draw_char(11, 33,  , 1)
+[53508339] [<--] oledDrawChar() : OKE
+[53511724] [-->] oled_draw_char(11, 35, -, 1)
+[53515806] [<--] oledDrawChar() : OKE
+[53519189] [-->] oled_draw_char(11, 39,  , 1)
+[53523270] [<--] oledDrawChar() : OKE
+[53526654] [-->] oled_draw_char(11, 41, T, 1)
+[53530743] [<--] oledDrawChar() : OKE
+[53534119] [-->] oled_draw_char(11, 45, e, 1)
+[53538207] [<--] oledDrawChar() : OKE
+[53541585] [-->] oled_draw_char(11, 49, s, 1)
+[53545673] [<--] oledDrawChar() : OKE
+[53549050] [-->] oled_draw_char(11, 53, t, 1)
+[53553139] [<--] oledDrawChar() : OKE
+[53556515] [-->] oled_draw_char(11, 57, M, 1)
+[53560606] [<--] oledDrawChar() : OKE
+[53563980] [-->] oled_draw_char(11, 61, o, 1)
+[53568067] [<--] oledDrawChar() : OKE
+[53571446] [-->] oled_draw_char(11, 65, d, 1)
+[53575535] [<--] oledDrawChar() : OKE
+[53578910] [-->] oled_draw_char(11, 69, e, 1)
+[53582999] [<--] oledDrawChar() : OKE
+[53586375] [<--] oledDrawText() : OKE
+[53589761] [log] Draw char ...
+[53592538] [-->] oledDrawText(17, 5, "@", 1, wrap=1, lh=6)
+[53597747] [-->] oled_draw_char(17, 5, @, 1)
+[53601750] [<--] oledDrawChar() : OKE
+[53605125] [<--] oledDrawText() : OKE
+[53608510] [log] Oled flush ...
+[53611375] [-->] oledFlush(0x3ffafe30)
+[53614847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[53620663] [<--]  i2cSetTransmitBuffer() : OKE
+[53624830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[53630062] [<--] i2cSendBuffer() : OKE
+[53633424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[53639500] [<--]  i2cSetTransmitBuffer() : OKE
+[53643723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[53675676] [<--] i2cSendBuffer() : OKE
+[53675712] [<--] oledFlush() : OKE
+[53675746] [log] Delay 300 ticks ...
+[56669699] [log] Fill canvas with '0' color ...
+[56669893] [log] Draw text ...
+[56669924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[56672176] [-->] oled_draw_char(11, 5, N, 1)
+[56676180] [<--] oledDrawChar() : OKE
+[56679554] [-->] oled_draw_char(11, 9, g, 1)
+[56683557] [<--] oledDrawChar() : OKE
+[56686933] [-->] oled_draw_char(11, 13, x, 1)
+[56691020] [<--] oledDrawChar() : OKE
+[56694398] [-->] oled_draw_char(11, 17, x, 1)
+[56698485] [<--] oledDrawChar() : OKE
+[56701863] [-->] oled_draw_char(11, 21, F, 1)
+[56705953] [<--] oledDrawChar() : OKE
+[56709328] [-->] oled_draw_char(11, 25, u, 1)
+[56713416] [<--] oledDrawChar() : OKE
+[56716793] [-->] oled_draw_char(11, 29, s, 1)
+[56720882] [<--] oledDrawChar() : OKE
+[56724259] [-->] oled_draw_char(11, 33,  , 1)
+[56728339] [<--] oledDrawChar() : OKE
+[56731724] [-->] oled_draw_char(11, 35, -, 1)
+[56735806] [<--] oledDrawChar() : OKE
+[56739189] [-->] oled_draw_char(11, 39,  , 1)
+[56743270] [<--] oledDrawChar() : OKE
+[56746654] [-->] oled_draw_char(11, 41, T, 1)
+[56750743] [<--] oledDrawChar() : OKE
+[56754119] [-->] oled_draw_char(11, 45, e, 1)
+[56758207] [<--] oledDrawChar() : OKE
+[56761585] [-->] oled_draw_char(11, 49, s, 1)
+[56765673] [<--] oledDrawChar() : OKE
+[56769050] [-->] oled_draw_char(11, 53, t, 1)
+[56773139] [<--] oledDrawChar() : OKE
+[56776515] [-->] oled_draw_char(11, 57, M, 1)
+[56780606] [<--] oledDrawChar() : OKE
+[56783980] [-->] oled_draw_char(11, 61, o, 1)
+[56788067] [<--] oledDrawChar() : OKE
+[56791446] [-->] oled_draw_char(11, 65, d, 1)
+[56795535] [<--] oledDrawChar() : OKE
+[56798910] [-->] oled_draw_char(11, 69, e, 1)
+[56802999] [<--] oledDrawChar() : OKE
+[56806375] [<--] oledDrawText() : OKE
+[56809761] [log] Draw char ...
+[56812538] [-->] oledDrawText(17, 5, "A", 1, wrap=1, lh=6)
+[56817747] [-->] oled_draw_char(17, 5, A, 1)
+[56821751] [<--] oledDrawChar() : OKE
+[56825125] [<--] oledDrawText() : OKE
+[56828511] [log] Oled flush ...
+[56831375] [-->] oledFlush(0x3ffafe30)
+[56834847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[56840663] [<--]  i2cSetTransmitBuffer() : OKE
+[56844830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[56850062] [<--] i2cSendBuffer() : OKE
+[56853424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[56859500] [<--]  i2cSetTransmitBuffer() : OKE
+[56863723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[56895676] [<--] i2cSendBuffer() : OKE
+[56895712] [<--] oledFlush() : OKE
+[56895746] [log] Delay 300 ticks ...
+[59889699] [log] Fill canvas with '0' color ...
+[59889893] [log] Draw text ...
+[59889924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[59892176] [-->] oled_draw_char(11, 5, N, 1)
+[59896180] [<--] oledDrawChar() : OKE
+[59899554] [-->] oled_draw_char(11, 9, g, 1)
+[59903557] [<--] oledDrawChar() : OKE
+[59906933] [-->] oled_draw_char(11, 13, x, 1)
+[59911020] [<--] oledDrawChar() : OKE
+[59914398] [-->] oled_draw_char(11, 17, x, 1)
+[59918485] [<--] oledDrawChar() : OKE
+[59921863] [-->] oled_draw_char(11, 21, F, 1)
+[59925953] [<--] oledDrawChar() : OKE
+[59929328] [-->] oled_draw_char(11, 25, u, 1)
+[59933416] [<--] oledDrawChar() : OKE
+[59936793] [-->] oled_draw_char(11, 29, s, 1)
+[59940882] [<--] oledDrawChar() : OKE
+[59944259] [-->] oled_draw_char(11, 33,  , 1)
+[59948339] [<--] oledDrawChar() : OKE
+[59951724] [-->] oled_draw_char(11, 35, -, 1)
+[59955806] [<--] oledDrawChar() : OKE
+[59959189] [-->] oled_draw_char(11, 39,  , 1)
+[59963270] [<--] oledDrawChar() : OKE
+[59966654] [-->] oled_draw_char(11, 41, T, 1)
+[59970743] [<--] oledDrawChar() : OKE
+[59974119] [-->] oled_draw_char(11, 45, e, 1)
+[59978207] [<--] oledDrawChar() : OKE
+[59981585] [-->] oled_draw_char(11, 49, s, 1)
+[59985673] [<--] oledDrawChar() : OKE
+[59989050] [-->] oled_draw_char(11, 53, t, 1)
+[59993139] [<--] oledDrawChar() : OKE
+[59996515] [-->] oled_draw_char(11, 57, M, 1)
+[60000606] [<--] oledDrawChar() : OKE
+[60003980] [-->] oled_draw_char(11, 61, o, 1)
+[60008067] [<--] oledDrawChar() : OKE
+[60011446] [-->] oled_draw_char(11, 65, d, 1)
+[60015535] [<--] oledDrawChar() : OKE
+[60018910] [-->] oled_draw_char(11, 69, e, 1)
+[60022999] [<--] oledDrawChar() : OKE
+[60026375] [<--] oledDrawText() : OKE
+[60029761] [log] Draw char ...
+[60032538] [-->] oledDrawText(17, 5, "B", 1, wrap=1, lh=6)
+[60037747] [-->] oled_draw_char(17, 5, B, 1)
+[60041751] [<--] oledDrawChar() : OKE
+[60045125] [<--] oledDrawText() : OKE
+[60048511] [log] Oled flush ...
+[60051375] [-->] oledFlush(0x3ffafe30)
+[60054847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[60060663] [<--]  i2cSetTransmitBuffer() : OKE
+[60064830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[60070062] [<--] i2cSendBuffer() : OKE
+[60073424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[60079500] [<--]  i2cSetTransmitBuffer() : OKE
+[60083723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[60115676] [<--] i2cSendBuffer() : OKE
+[60115712] [<--] oledFlush() : OKE
+[60115746] [log] Delay 300 ticks ...
+[66329699] [log] Fill canvas with '0' color ...
+[66329893] [log] Draw text ...
+[66329924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[66332176] [-->] oled_draw_char(11, 5, N, 1)
+[66336180] [<--] oledDrawChar() : OKE
+[66339554] [-->] oled_draw_char(11, 9, g, 1)
+[66343557] [<--] oledDrawChar() : OKE
+[66346932] [-->] oled_draw_char(11, 13, x, 1)
+[66351020] [<--] oledDrawChar() : OKE
+[66354398] [-->] oled_draw_char(11, 17, x, 1)
+[66358485] [<--] oledDrawChar() : OKE
+[66361863] [-->] oled_draw_char(11, 21, F, 1)
+[66365953] [<--] oledDrawChar() : OKE
+[66369328] [-->] oled_draw_char(11, 25, u, 1)
+[66373416] [<--] oledDrawChar() : OKE
+[66376793] [-->] oled_draw_char(11, 29, s, 1)
+[66380882] [<--] oledDrawChar() : OKE
+[66384259] [-->] oled_draw_char(11, 33,  , 1)
+[66388339] [<--] oledDrawChar() : OKE
+[66391724] [-->] oled_draw_char(11, 35, -, 1)
+[66395806] [<--] oledDrawChar() : OKE
+[66399189] [-->] oled_draw_char(11, 39,  , 1)
+[66403270] [<--] oledDrawChar() : OKE
+[66406654] [-->] oled_draw_char(11, 41, T, 1)
+[66410743] [<--] oledDrawChar() : OKE
+[66414119] [-->] oled_draw_char(11, 45, e, 1)
+[66418207] [<--] oledDrawChar() : OKE
+[66421585] [-->] oled_draw_char(11, 49, s, 1)
+[66425673] [<--] oledDrawChar() : OKE
+[66429050] [-->] oled_draw_char(11, 53, t, 1)
+[66433139] [<--] oledDrawChar() : OKE
+[66436515] [-->] oled_draw_char(11, 57, M, 1)
+[66440606] [<--] oledDrawChar() : OKE
+[66443980] [-->] oled_draw_char(11, 61, o, 1)
+[66448067] [<--] oledDrawChar() : OKE
+[66451445] [-->] oled_draw_char(11, 65, d, 1)
+[66455535] [<--] oledDrawChar() : OKE
+[66458910] [-->] oled_draw_char(11, 69, e, 1)
+[66462999] [<--] oledDrawChar() : OKE
+[66466375] [<--] oledDrawText() : OKE
+[66469761] [log] Draw char ...
+[66472538] [-->] oledDrawText(17, 5, "D", 1, wrap=1, lh=6)
+[66477747] [-->] oled_draw_char(17, 5, D, 1)
+[66481751] [<--] oledDrawChar() : OKE
+[66485125] [<--] oledDrawText() : OKE
+[66488511] [log] Oled flush ...
+[66491375] [-->] oledFlush(0x3ffafe30)
+[66494847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[66500663] [<--]  i2cSetTransmitBuffer() : OKE
+[66504830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[66510062] [<--] i2cSendBuffer() : OKE
+[66513424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[66519500] [<--]  i2cSetTransmitBuffer() : OKE
+[66523723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[66555676] [<--] i2cSendBuffer() : OKE
+[66555712] [<--] oledFlush() : OKE
+[66555746] [log] Delay 300 ticks ...
+[69549699] [log] Fill canvas with '0' color ...
+[69549893] [log] Draw text ...
+[69549924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[69552176] [-->] oled_draw_char(11, 5, N, 1)
+[69556180] [<--] oledDrawChar() : OKE
+[69559554] [-->] oled_draw_char(11, 9, g, 1)
+[69563557] [<--] oledDrawChar() : OKE
+[69566932] [-->] oled_draw_char(11, 13, x, 1)
+[69571020] [<--] oledDrawChar() : OKE
+[69574398] [-->] oled_draw_char(11, 17, x, 1)
+[69578485] [<--] oledDrawChar() : OKE
+[69581863] [-->] oled_draw_char(11, 21, F, 1)
+[69585953] [<--] oledDrawChar() : OKE
+[69589328] [-->] oled_draw_char(11, 25, u, 1)
+[69593416] [<--] oledDrawChar() : OKE
+[69596793] [-->] oled_draw_char(11, 29, s, 1)
+[69600882] [<--] oledDrawChar() : OKE
+[69604259] [-->] oled_draw_char(11, 33,  , 1)
+[69608339] [<--] oledDrawChar() : OKE
+[69611724] [-->] oled_draw_char(11, 35, -, 1)
+[69615806] [<--] oledDrawChar() : OKE
+[69619189] [-->] oled_draw_char(11, 39,  , 1)
+[69623270] [<--] oledDrawChar() : OKE
+[69626654] [-->] oled_draw_char(11, 41, T, 1)
+[69630743] [<--] oledDrawChar() : OKE
+[69634119] [-->] oled_draw_char(11, 45, e, 1)
+[69638207] [<--] oledDrawChar() : OKE
+[69641585] [-->] oled_draw_char(11, 49, s, 1)
+[69645673] [<--] oledDrawChar() : OKE
+[69649050] [-->] oled_draw_char(11, 53, t, 1)
+[69653139] [<--] oledDrawChar() : OKE
+[69656515] [-->] oled_draw_char(11, 57, M, 1)
+[69660606] [<--] oledDrawChar() : OKE
+[69663980] [-->] oled_draw_char(11, 61, o, 1)
+[69668067] [<--] oledDrawChar() : OKE
+[69671445] [-->] oled_draw_char(11, 65, d, 1)
+[69675535] [<--] oledDrawChar() : OKE
+[69678910] [-->] oled_draw_char(11, 69, e, 1)
+[69682999] [<--] oledDrawChar() : OKE
+[69686375] [<--] oledDrawText() : OKE
+[69689761] [log] Draw char ...
+[69692538] [-->] oledDrawText(17, 5, "E", 1, wrap=1, lh=6)
+[69697747] [-->] oled_draw_char(17, 5, E, 1)
+[69701751] [<--] oledDrawChar() : OKE
+[69705125] [<--] oledDrawText() : OKE
+[69708511] [log] Oled flush ...
+[69711375] [-->] oledFlush(0x3ffafe30)
+[69714847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[69720663] [<--]  i2cSetTransmitBuffer() : OKE
+[69724830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[69730062] [<--] i2cSendBuffer() : OKE
+[69733424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[69739500] [<--]  i2cSetTransmitBuffer() : OKE
+[69743723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[69775676] [<--] i2cSendBuffer() : OKE
+[69775712] [<--] oledFlush() : OKE
+[69775746] [log] Delay 300 ticks ...
+[72769699] [log] Fill canvas with '0' color ...
+[72769893] [log] Draw text ...
+[72769924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[72772176] [-->] oled_draw_char(11, 5, N, 1)
+[72776180] [<--] oledDrawChar() : OKE
+[72779554] [-->] oled_draw_char(11, 9, g, 1)
+[72783557] [<--] oledDrawChar() : OKE
+[72786932] [-->] oled_draw_char(11, 13, x, 1)
+[72791020] [<--] oledDrawChar() : OKE
+[72794398] [-->] oled_draw_char(11, 17, x, 1)
+[72798485] [<--] oledDrawChar() : OKE
+[72801863] [-->] oled_draw_char(11, 21, F, 1)
+[72805953] [<--] oledDrawChar() : OKE
+[72809328] [-->] oled_draw_char(11, 25, u, 1)
+[72813416] [<--] oledDrawChar() : OKE
+[72816793] [-->] oled_draw_char(11, 29, s, 1)
+[72820882] [<--] oledDrawChar() : OKE
+[72824259] [-->] oled_draw_char(11, 33,  , 1)
+[72828339] [<--] oledDrawChar() : OKE
+[72831724] [-->] oled_draw_char(11, 35, -, 1)
+[72835806] [<--] oledDrawChar() : OKE
+[72839189] [-->] oled_draw_char(11, 39,  , 1)
+[72843270] [<--] oledDrawChar() : OKE
+[72846654] [-->] oled_draw_char(11, 41, T, 1)
+[72850743] [<--] oledDrawChar() : OKE
+[72854119] [-->] oled_draw_char(11, 45, e, 1)
+[72858207] [<--] oledDrawChar() : OKE
+[72861585] [-->] oled_draw_char(11, 49, s, 1)
+[72865673] [<--] oledDrawChar() : OKE
+[72869050] [-->] oled_draw_char(11, 53, t, 1)
+[72873139] [<--] oledDrawChar() : OKE
+[72876515] [-->] oled_draw_char(11, 57, M, 1)
+[72880606] [<--] oledDrawChar() : OKE
+[72883980] [-->] oled_draw_char(11, 61, o, 1)
+[72888067] [<--] oledDrawChar() : OKE
+[72891445] [-->] oled_draw_char(11, 65, d, 1)
+[72895535] [<--] oledDrawChar() : OKE
+[72898910] [-->] oled_draw_char(11, 69, e, 1)
+[72902999] [<--] oledDrawChar() : OKE
+[72906375] [<--] oledDrawText() : OKE
+[72909761] [log] Draw char ...
+[72912538] [-->] oledDrawText(17, 5, "F", 1, wrap=1, lh=6)
+[72917747] [-->] oled_draw_char(17, 5, F, 1)
+[72921750] [<--] oledDrawChar() : OKE
+[72925125] [<--] oledDrawText() : OKE
+[72928510] [log] Oled flush ...
+[72931375] [-->] oledFlush(0x3ffafe30)
+[72934847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[72940663] [<--]  i2cSetTransmitBuffer() : OKE
+[72944830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[72950062] [<--] i2cSendBuffer() : OKE
+[72953424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[72959500] [<--]  i2cSetTransmitBuffer() : OKE
+[72963723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[72995676] [<--] i2cSendBuffer() : OKE
+[72995712] [<--] oledFlush() : OKE
+[72995746] [log] Delay 300 ticks ...
+75989699] [log] Fill canvas with '0' color ...
+[75989893] [log] Draw text ...
+[75989924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[75992176] [-->] oled_draw_char(11, 5, N, 1)
+[75996180] [<--] oledDrawChar() : OKE
+[75999554] [-->] oled_draw_char(11, 9, g, 1)
+[76003557] [<--] oledDrawChar() : OKE
+[76006932] [-->] oled_draw_char(11, 13, x, 1)
+[76011020] [<--] oledDrawChar() : OKE
+[76014398] [-->] oled_draw_char(11, 17, x, 1)
+[76018485] [<--] oledDrawChar() : OKE
+[76021863] [-->] oled_draw_char(11, 21, F, 1)
+[76025953] [<--] oledDrawChar() : OKE
+[76029328] [-->] oled_draw_char(11, 25, u, 1)
+[76033416] [<--] oledDrawChar() : OKE
+[76036793] [-->] oled_draw_char(11, 29, s, 1)
+[76040882] [<--] oledDrawChar() : OKE
+[76044259] [-->] oled_draw_char(11, 33,  , 1)
+[76048339] [<--] oledDrawChar() : OKE
+[76051724] [-->] oled_draw_char(11, 35, -, 1)
+[76055806] [<--] oledDrawChar() : OKE
+[76059189] [-->] oled_draw_char(11, 39,  , 1)
+[76063270] [<--] oledDrawChar() : OKE
+[76066654] [-->] oled_draw_char(11, 41, T, 1)
+[76070743] [<--] oledDrawChar() : OKE
+[76074119] [-->] oled_draw_char(11, 45, e, 1)
+[76078207] [<--] oledDrawChar() : OKE
+[76081585] [-->] oled_draw_char(11, 49, s, 1)
+[76085673] [<--] oledDrawChar() : OKE
+[76089050] [-->] oled_draw_char(11, 53, t, 1)
+[76093139] [<--] oledDrawChar() : OKE
+[76096515] [-->] oled_draw_char(11, 57, M, 1)
+[76100606] [<--] oledDrawChar() : OKE
+[76103980] [-->] oled_draw_char(11, 61, o, 1)
+[76108067] [<--] oledDrawChar() : OKE
+[76111445] [-->] oled_draw_char(11, 65, d, 1)
+[76115535] [<--] oledDrawChar() : OKE
+[76118910] [-->] oled_draw_char(11, 69, e, 1)
+[76122999] [<--] oledDrawChar() : OKE
+[76126375] [<--] oledDrawText() : OKE
+[76129761] [log] Draw char ...
+[76132538] [-->] oledDrawText(17, 5, "G", 1, wrap=1, lh=6)
+[76137751] [-->] oled_draw_char(17, 5, G, 1)
+[76141751] [<--] oledDrawChar() : OKE
+[76145125] [<--] oledDrawText() : OKE
+[76148511] [log] Oled flush ...
+[76151375] [-->] oledFlush(0x3ffafe30)
+[76154847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[76160663] [<--]  i2cSetTransmitBuffer() : OKE
+[76164830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[76170062] [<--] i2cSendBuffer() : OKE
+[76173424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[76179500] [<--]  i2cSetTransmitBuffer() : OKE
+[76183723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[76215676] [<--] i2cSendBuffer() : OKE
+[76215712] [<--] oledFlush() : OKE
+[76215746] [log] Delay 300 ticks ...
+[79209699] [log] Fill canvas with '0' color ...
+[79209893] [log] Draw text ...
+[79209924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[79212176] [-->] oled_draw_char(11, 5, N, 1)
+[79216180] [<--] oledDrawChar() : OKE
+[79219554] [-->] oled_draw_char(11, 9, g, 1)
+[79223557] [<--] oledDrawChar() : OKE
+[79226932] [-->] oled_draw_char(11, 13, x, 1)
+[79231020] [<--] oledDrawChar() : OKE
+[79234398] [-->] oled_draw_char(11, 17, x, 1)
+[79238485] [<--] oledDrawChar() : OKE
+[79241863] [-->] oled_draw_char(11, 21, F, 1)
+[79245953] [<--] oledDrawChar() : OKE
+[79249328] [-->] oled_draw_char(11, 25, u, 1)
+[79253416] [<--] oledDrawChar() : OKE
+[79256793] [-->] oled_draw_char(11, 29, s, 1)
+[79260882] [<--] oledDrawChar() : OKE
+[79264259] [-->] oled_draw_char(11, 33,  , 1)
+[79268339] [<--] oledDrawChar() : OKE
+[79271724] [-->] oled_draw_char(11, 35, -, 1)
+[79275806] [<--] oledDrawChar() : OKE
+[79279189] [-->] oled_draw_char(11, 39,  , 1)
+[79283270] [<--] oledDrawChar() : OKE
+[79286654] [-->] oled_draw_char(11, 41, T, 1)
+[79290743] [<--] oledDrawChar() : OKE
+[79294119] [-->] oled_draw_char(11, 45, e, 1)
+[79298207] [<--] oledDrawChar() : OKE
+[79301585] [-->] oled_draw_char(11, 49, s, 1)
+[79305673] [<--] oledDrawChar() : OKE
+[79309050] [-->] oled_draw_char(11, 53, t, 1)
+[79313139] [<--] oledDrawChar() : OKE
+[79316515] [-->] oled_draw_char(11, 57, M, 1)
+[79320606] [<--] oledDrawChar() : OKE
+[79323980] [-->] oled_draw_char(11, 61, o, 1)
+[79328067] [<--] oledDrawChar() : OKE
+[79331446] [-->] oled_draw_char(11, 65, d, 1)
+[79335535] [<--] oledDrawChar() : OKE
+[79338910] [-->] oled_draw_char(11, 69, e, 1)
+[79342999] [<--] oledDrawChar() : OKE
+[79346375] [<--] oledDrawText() : OKE
+[79349761] [log] Draw char ...
+[79352538] [-->] oledDrawText(17, 5, "H", 1, wrap=1, lh=6)
+[79357747] [-->] oled_draw_char(17, 5, H, 1)
+[79361751] [<--] oledDrawChar() : OKE
+[79365125] [<--] oledDrawText() : OKE
+[79368511] [log] Oled flush ...
+[79371375] [-->] oledFlush(0x3ffafe30)
+[79374847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[79380663] [<--]  i2cSetTransmitBuffer() : OKE
+[79384830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[79390062] [<--] i2cSendBuffer() : OKE
+[79393424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[79399500] [<--]  i2cSetTransmitBuffer() : OKE
+[79403723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[79435676] [<--] i2cSendBuffer() : OKE
+[79435712] [<--] oledFlush() : OKE
+[79435746] [log] Delay 300 ticks ...
+[82429699] [log] Fill canvas with '0' color ...
+[82429893] [log] Draw text ...
+[82429924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[82432176] [-->] oled_draw_char(11, 5, N, 1)
+[82436180] [<--] oledDrawChar() : OKE
+[82439554] [-->] oled_draw_char(11, 9, g, 1)
+[82443557] [<--] oledDrawChar() : OKE
+[82446932] [-->] oled_draw_char(11, 13, x, 1)
+[82451020] [<--] oledDrawChar() : OKE
+[82454398] [-->] oled_draw_char(11, 17, x, 1)
+[82458485] [<--] oledDrawChar() : OKE
+[82461863] [-->] oled_draw_char(11, 21, F, 1)
+[82465953] [<--] oledDrawChar() : OKE
+[82469328] [-->] oled_draw_char(11, 25, u, 1)
+[82473416] [<--] oledDrawChar() : OKE
+[82476793] [-->] oled_draw_char(11, 29, s, 1)
+[82480882] [<--] oledDrawChar() : OKE
+[82484259] [-->] oled_draw_char(11, 33,  , 1)
+[82488339] [<--] oledDrawChar() : OKE
+[82491724] [-->] oled_draw_char(11, 35, -, 1)
+[82495806] [<--] oledDrawChar() : OKE
+[82499189] [-->] oled_draw_char(11, 39,  , 1)
+[82503270] [<--] oledDrawChar() : OKE
+[82506654] [-->] oled_draw_char(11, 41, T, 1)
+[82510743] [<--] oledDrawChar() : OKE
+[82514119] [-->] oled_draw_char(11, 45, e, 1)
+[82518207] [<--] oledDrawChar() : OKE
+[82521585] [-->] oled_draw_char(11, 49, s, 1)
+[82525673] [<--] oledDrawChar() : OKE
+[82529050] [-->] oled_draw_char(11, 53, t, 1)
+[82533139] [<--] oledDrawChar() : OKE
+[82536515] [-->] oled_draw_char(11, 57, M, 1)
+[82540606] [<--] oledDrawChar() : OKE
+[82543980] [-->] oled_draw_char(11, 61, o, 1)
+[82548067] [<--] oledDrawChar() : OKE
+[82551445] [-->] oled_draw_char(11, 65, d, 1)
+[82555535] [<--] oledDrawChar() : OKE
+[82558910] [-->] oled_draw_char(11, 69, e, 1)
+[82562999] [<--] oledDrawChar() : OKE
+[82566375] [<--] oledDrawText() : OKE
+[82569761] [log] Draw char ...
+[82572538] [-->] oledDrawText(17, 5, "I", 1, wrap=1, lh=6)
+[82577747] [-->] oled_draw_char(17, 5, I, 1)
+[82581750] [<--] oledDrawChar() : OKE
+[82585125] [<--] oledDrawText() : OKE
+[82588511] [log] Oled flush ...
+[82591375] [-->] oledFlush(0x3ffafe30)
+[82594847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[82600663] [<--]  i2cSetTransmitBuffer() : OKE
+[82604830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[82610062] [<--] i2cSendBuffer() : OKE
+[82613424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[82619500] [<--]  i2cSetTransmitBuffer() : OKE
+[82623723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[82655676] [<--] i2cSendBuffer() : OKE
+[82655712] [<--] oledFlush() : OKE
+[82655746] [log] Delay 300 ticks ...
+[85649699] [log] Fill canvas with '0' color ...
+[85649893] [log] Draw text ...
+[85649924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[85652176] [-->] oled_draw_char(11, 5, N, 1)
+[85656180] [<--] oledDrawChar() : OKE
+[85659554] [-->] oled_draw_char(11, 9, g, 1)
+[85663557] [<--] oledDrawChar() : OKE
+[85666932] [-->] oled_draw_char(11, 13, x, 1)
+[85671020] [<--] oledDrawChar() : OKE
+[85674398] [-->] oled_draw_char(11, 17, x, 1)
+[85678485] [<--] oledDrawChar() : OKE
+[85681863] [-->] oled_draw_char(11, 21, F, 1)
+[85685953] [<--] oledDrawChar() : OKE
+[85689328] [-->] oled_draw_char(11, 25, u, 1)
+[85693416] [<--] oledDrawChar() : OKE
+[85696793] [-->] oled_draw_char(11, 29, s, 1)
+[85700882] [<--] oledDrawChar() : OKE
+[85704259] [-->] oled_draw_char(11, 33,  , 1)
+[85708339] [<--] oledDrawChar() : OKE
+[85711724] [-->] oled_draw_char(11, 35, -, 1)
+[85715806] [<--] oledDrawChar() : OKE
+[85719189] [-->] oled_draw_char(11, 39,  , 1)
+[85723270] [<--] oledDrawChar() : OKE
+[85726654] [-->] oled_draw_char(11, 41, T, 1)
+[85730743] [<--] oledDrawChar() : OKE
+[85734119] [-->] oled_draw_char(11, 45, e, 1)
+[85738207] [<--] oledDrawChar() : OKE
+[85741585] [-->] oled_draw_char(11, 49, s, 1)
+[85745673] [<--] oledDrawChar() : OKE
+[85749050] [-->] oled_draw_char(11, 53, t, 1)
+[85753139] [<--] oledDrawChar() : OKE
+[85756515] [-->] oled_draw_char(11, 57, M, 1)
+[85760606] [<--] oledDrawChar() : OKE
+[85763980] [-->] oled_draw_char(11, 61, o, 1)
+[85768067] [<--] oledDrawChar() : OKE
+[85771445] [-->] oled_draw_char(11, 65, d, 1)
+[85775535] [<--] oledDrawChar() : OKE
+[85778910] [-->] oled_draw_char(11, 69, e, 1)
+[85782999] [<--] oledDrawChar() : OKE
+[85786375] [<--] oledDrawText() : OKE
+[85789761] [log] Draw char ...
+[85792538] [-->] oledDrawText(17, 5, "J", 1, wrap=1, lh=6)
+[85797747] [-->] oled_draw_char(17, 5, J, 1)
+[85801749] [<--] oledDrawChar() : OKE
+[85805125] [<--] oledDrawText() : OKE
+[85808511] [log] Oled flush ...
+[85811375] [-->] oledFlush(0x3ffafe30)
+[85814847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[85820663] [<--]  i2cSetTransmitBuffer() : OKE
+[85824830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[85830062] [<--] i2cSendBuffer() : OKE
+[85833424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[85839500] [<--]  i2cSetTransmitBuffer() : OKE
+[85843723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[85875676] [<--] i2cSendBuffer() : OKE
+[85875712] [<--] oledFlush() : OKE
+[85875746] [log] Delay 300 ticks ...
+88869699] [log] Fill canvas with '0' color ...
+[88869893] [log] Draw text ...
+[88869924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[88872176] [-->] oled_draw_char(11, 5, N, 1)
+[88876180] [<--] oledDrawChar() : OKE
+[88879554] [-->] oled_draw_char(11, 9, g, 1)
+[88883557] [<--] oledDrawChar() : OKE
+[88886932] [-->] oled_draw_char(11, 13, x, 1)
+[88891020] [<--] oledDrawChar() : OKE
+[88894398] [-->] oled_draw_char(11, 17, x, 1)
+[88898485] [<--] oledDrawChar() : OKE
+[88901863] [-->] oled_draw_char(11, 21, F, 1)
+[88905953] [<--] oledDrawChar() : OKE
+[88909328] [-->] oled_draw_char(11, 25, u, 1)
+[88913416] [<--] oledDrawChar() : OKE
+[88916793] [-->] oled_draw_char(11, 29, s, 1)
+[88920882] [<--] oledDrawChar() : OKE
+[88924259] [-->] oled_draw_char(11, 33,  , 1)
+[88928339] [<--] oledDrawChar() : OKE
+[88931724] [-->] oled_draw_char(11, 35, -, 1)
+[88935806] [<--] oledDrawChar() : OKE
+[88939189] [-->] oled_draw_char(11, 39,  , 1)
+[88943270] [<--] oledDrawChar() : OKE
+[88946654] [-->] oled_draw_char(11, 41, T, 1)
+[88950743] [<--] oledDrawChar() : OKE
+[88954119] [-->] oled_draw_char(11, 45, e, 1)
+[88958207] [<--] oledDrawChar() : OKE
+[88961585] [-->] oled_draw_char(11, 49, s, 1)
+[88965673] [<--] oledDrawChar() : OKE
+[88969050] [-->] oled_draw_char(11, 53, t, 1)
+[88973139] [<--] oledDrawChar() : OKE
+[88976515] [-->] oled_draw_char(11, 57, M, 1)
+[88980606] [<--] oledDrawChar() : OKE
+[88983980] [-->] oled_draw_char(11, 61, o, 1)
+[88988067] [<--] oledDrawChar() : OKE
+[88991445] [-->] oled_draw_char(11, 65, d, 1)
+[88995535] [<--] oledDrawChar() : OKE
+[88998910] [-->] oled_draw_char(11, 69, e, 1)
+[89002999] [<--] oledDrawChar() : OKE
+[89006375] [<--] oledDrawText() : OKE
+[89009761] [log] Draw char ...
+[89012538] [-->] oledDrawText(17, 5, "K", 1, wrap=1, lh=6)
+[89017747] [-->] oled_draw_char(17, 5, K, 1)
+[89021751] [<--] oledDrawChar() : OKE
+[89025125] [<--] oledDrawText() : OKE
+[89028511] [log] Oled flush ...
+[89031375] [-->] oledFlush(0x3ffafe30)
+[89034847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[89040663] [<--]  i2cSetTransmitBuffer() : OKE
+[89044830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[89050062] [<--] i2cSendBuffer() : OKE
+[89053424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[89059500] [<--]  i2cSetTransmitBuffer() : OKE
+[89063723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[89095676] [<--] i2cSendBuffer() : OKE
+[89095712] [<--] oledFlush() : OKE
+[89095746] [log] Delay 300 ticks ...
+[92089699] [log] Fill canvas with '0' color ...
+[92089893] [log] Draw text ...
+[92089924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[92092176] [-->] oled_draw_char(11, 5, N, 1)
+[92096180] [<--] oledDrawChar() : OKE
+[92099554] [-->] oled_draw_char(11, 9, g, 1)
+[92103557] [<--] oledDrawChar() : OKE
+[92106932] [-->] oled_draw_char(11, 13, x, 1)
+[92111020] [<--] oledDrawChar() : OKE
+[92114398] [-->] oled_draw_char(11, 17, x, 1)
+[92118485] [<--] oledDrawChar() : OKE
+[92121863] [-->] oled_draw_char(11, 21, F, 1)
+[92125953] [<--] oledDrawChar() : OKE
+[92129328] [-->] oled_draw_char(11, 25, u, 1)
+[92133416] [<--] oledDrawChar() : OKE
+[92136793] [-->] oled_draw_char(11, 29, s, 1)
+[92140882] [<--] oledDrawChar() : OKE
+[92144259] [-->] oled_draw_char(11, 33,  , 1)
+[92148339] [<--] oledDrawChar() : OKE
+[92151724] [-->] oled_draw_char(11, 35, -, 1)
+[92155806] [<--] oledDrawChar() : OKE
+[92159189] [-->] oled_draw_char(11, 39,  , 1)
+[92163270] [<--] oledDrawChar() : OKE
+[92166654] [-->] oled_draw_char(11, 41, T, 1)
+[92170743] [<--] oledDrawChar() : OKE
+[92174119] [-->] oled_draw_char(11, 45, e, 1)
+[92178207] [<--] oledDrawChar() : OKE
+[92181585] [-->] oled_draw_char(11, 49, s, 1)
+[92185673] [<--] oledDrawChar() : OKE
+[92189050] [-->] oled_draw_char(11, 53, t, 1)
+[92193139] [<--] oledDrawChar() : OKE
+[92196515] [-->] oled_draw_char(11, 57, M, 1)
+[92200606] [<--] oledDrawChar() : OKE
+[92203980] [-->] oled_draw_char(11, 61, o, 1)
+[92208067] [<--] oledDrawChar() : OKE
+[92211445] [-->] oled_draw_char(11, 65, d, 1)
+[92215535] [<--] oledDrawChar() : OKE
+[92218910] [-->] oled_draw_char(11, 69, e, 1)
+[92222999] [<--] oledDrawChar() : OKE
+[92226375] [<--] oledDrawText() : OKE
+[92229761] [log] Draw char ...
+[92232538] [-->] oledDrawText(17, 5, "L", 1, wrap=1, lh=6)
+[92237747] [-->] oled_draw_char(17, 5, L, 1)
+[92241749] [<--] oledDrawChar() : OKE
+[92245125] [<--] oledDrawText() : OKE
+[92248511] [log] Oled flush ...
+[92251375] [-->] oledFlush(0x3ffafe30)
+[92254847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[92260663] [<--]  i2cSetTransmitBuffer() : OKE
+[92264830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[92270062] [<--] i2cSendBuffer() : OKE
+[92273424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[92279500] [<--]  i2cSetTransmitBuffer() : OKE
+[92283723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[92315676] [<--] i2cSendBuffer() : OKE
+[92315712] [<--] oledFlush() : OKE
+[92315746] [log] Delay 300 ticks ...
+[95309699] [log] Fill canvas with '0' color ...
+[95309893] [log] Draw text ...
+[95309924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[95312176] [-->] oled_draw_char(11, 5, N, 1)
+[95316180] [<--] oledDrawChar() : OKE
+[95319554] [-->] oled_draw_char(11, 9, g, 1)
+[95323557] [<--] oledDrawChar() : OKE
+[95326932] [-->] oled_draw_char(11, 13, x, 1)
+[95331020] [<--] oledDrawChar() : OKE
+[95334398] [-->] oled_draw_char(11, 17, x, 1)
+[95338485] [<--] oledDrawChar() : OKE
+[95341863] [-->] oled_draw_char(11, 21, F, 1)
+[95345953] [<--] oledDrawChar() : OKE
+[95349328] [-->] oled_draw_char(11, 25, u, 1)
+[95353416] [<--] oledDrawChar() : OKE
+[95356793] [-->] oled_draw_char(11, 29, s, 1)
+[95360882] [<--] oledDrawChar() : OKE
+[95364259] [-->] oled_draw_char(11, 33,  , 1)
+[95368339] [<--] oledDrawChar() : OKE
+[95371724] [-->] oled_draw_char(11, 35, -, 1)
+[95375806] [<--] oledDrawChar() : OKE
+[95379189] [-->] oled_draw_char(11, 39,  , 1)
+[95383270] [<--] oledDrawChar() : OKE
+[95386654] [-->] oled_draw_char(11, 41, T, 1)
+[95390743] [<--] oledDrawChar() : OKE
+[95394119] [-->] oled_draw_char(11, 45, e, 1)
+[95398207] [<--] oledDrawChar() : OKE
+[95401585] [-->] oled_draw_char(11, 49, s, 1)
+[95405673] [<--] oledDrawChar() : OKE
+[95409050] [-->] oled_draw_char(11, 53, t, 1)
+[95413139] [<--] oledDrawChar() : OKE
+[95416515] [-->] oled_draw_char(11, 57, M, 1)
+[95420606] [<--] oledDrawChar() : OKE
+[95423980] [-->] oled_draw_char(11, 61, o, 1)
+[95428067] [<--] oledDrawChar() : OKE
+[95431445] [-->] oled_draw_char(11, 65, d, 1)
+[95435535] [<--] oledDrawChar() : OKE
+[95438910] [-->] oled_draw_char(11, 69, e, 1)
+[95442999] [<--] oledDrawChar() : OKE
+[95446375] [<--] oledDrawText() : OKE
+[95449761] [log] Draw char ...
+[95452538] [-->] oledDrawText(17, 5, "M", 1, wrap=1, lh=6)
+[95457747] [-->] oled_draw_char(17, 5, M, 1)
+[95461752] [<--] oledDrawChar() : OKE
+[95465125] [<--] oledDrawText() : OKE
+[95468510] [log] Oled flush ...
+[95471375] [-->] oledFlush(0x3ffafe30)
+[95474847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[95480663] [<--]  i2cSetTransmitBuffer() : OKE
+[95484830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[95490062] [<--] i2cSendBuffer() : OKE
+[95493424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[95499500] [<--]  i2cSetTransmitBuffer() : OKE
+[95503723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[95535676] [<--] i2cSendBuffer() : OKE
+[95535712] [<--] oledFlush() : OKE
+[95535746] [log] Delay 300 ticks ...
+[98529699] [log] Fill canvas with '0' color ...
+[98529893] [log] Draw text ...
+[98529924] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[98532176] [-->] oled_draw_char(11, 5, N, 1)
+[98536180] [<--] oledDrawChar() : OKE
+[98539554] [-->] oled_draw_char(11, 9, g, 1)
+[98543557] [<--] oledDrawChar() : OKE
+[98546932] [-->] oled_draw_char(11, 13, x, 1)
+[98551020] [<--] oledDrawChar() : OKE
+[98554398] [-->] oled_draw_char(11, 17, x, 1)
+[98558485] [<--] oledDrawChar() : OKE
+[98561863] [-->] oled_draw_char(11, 21, F, 1)
+[98565953] [<--] oledDrawChar() : OKE
+[98569328] [-->] oled_draw_char(11, 25, u, 1)
+[98573416] [<--] oledDrawChar() : OKE
+[98576793] [-->] oled_draw_char(11, 29, s, 1)
+[98580882] [<--] oledDrawChar() : OKE
+[98584259] [-->] oled_draw_char(11, 33,  , 1)
+[98588339] [<--] oledDrawChar() : OKE
+[98591724] [-->] oled_draw_char(11, 35, -, 1)
+[98595806] [<--] oledDrawChar() : OKE
+[98599189] [-->] oled_draw_char(11, 39,  , 1)
+[98603270] [<--] oledDrawChar() : OKE
+[98606654] [-->] oled_draw_char(11, 41, T, 1)
+[98610743] [<--] oledDrawChar() : OKE
+[98614119] [-->] oled_draw_char(11, 45, e, 1)
+[98618207] [<--] oledDrawChar() : OKE
+[98621585] [-->] oled_draw_char(11, 49, s, 1)
+[98625673] [<--] oledDrawChar() : OKE
+[98629050] [-->] oled_draw_char(11, 53, t, 1)
+[98633139] [<--] oledDrawChar() : OKE
+[98636515] [-->] oled_draw_char(11, 57, M, 1)
+[98640606] [<--] oledDrawChar() : OKE
+[98643980] [-->] oled_draw_char(11, 61, o, 1)
+[98648067] [<--] oledDrawChar() : OKE
+[98651445] [-->] oled_draw_char(11, 65, d, 1)
+[98655535] [<--] oledDrawChar() : OKE
+[98658910] [-->] oled_draw_char(11, 69, e, 1)
+[98662999] [<--] oledDrawChar() : OKE
+[98666375] [<--] oledDrawText() : OKE
+[98669761] [log] Draw char ...
+[98672538] [-->] oledDrawText(17, 5, "N", 1, wrap=1, lh=6)
+[98677747] [-->] oled_draw_char(17, 5, N, 1)
+[98681752] [<--] oledDrawChar() : OKE
+[98685125] [<--] oledDrawText() : OKE
+[98688511] [log] Oled flush ...
+[98691375] [-->] oledFlush(0x3ffafe30)
+[98694847] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[98700663] [<--]  i2cSetTransmitBuffer() : OKE
+[98704830] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[98710062] [<--] i2cSendBuffer() : OKE
+[98713424] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[98719500] [<--]  i2cSetTransmitBuffer() : OKE
+[98723723] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[98755676] [<--] i2cSendBuffer() : OKE
+[98755712] [<--] oledFlush() : OKE
+[98755746] [log] Delay 300 ticks ...
+[104979699] [log] Fill canvas with '0' color ...
+[104979895] [log] Draw text ...
+[104979927] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[104982436] [-->] oled_draw_char(11, 5, N, 1)
+[104986528] [<--] oledDrawChar() : OKE
+[104989988] [-->] oled_draw_char(11, 9, g, 1)
+[104994078] [<--] oledDrawChar() : OKE
+[104997540] [-->] oled_draw_char(11, 13, x, 1)
+[105001714] [<--] oledDrawChar() : OKE
+[105005179] [-->] oled_draw_char(11, 17, x, 1)
+[105009353] [<--] oledDrawChar() : OKE
+[105012818] [-->] oled_draw_char(11, 21, F, 1)
+[105016994] [<--] oledDrawChar() : OKE
+[105020457] [-->] oled_draw_char(11, 25, u, 1)
+[105024631] [<--] oledDrawChar() : OKE
+[105028095] [-->] oled_draw_char(11, 29, s, 1)
+[105032270] [<--] oledDrawChar() : OKE
+[105035734] [-->] oled_draw_char(11, 33,  , 1)
+[105039902] [<--] oledDrawChar() : OKE
+[105043373] [-->] oled_draw_char(11, 35, -, 1)
+[105047542] [<--] oledDrawChar() : OKE
+[105051012] [-->] oled_draw_char(11, 39,  , 1)
+[105055179] [<--] oledDrawChar() : OKE
+[105058651] [-->] oled_draw_char(11, 41, T, 1)
+[105062826] [<--] oledDrawChar() : OKE
+[105066289] [-->] oled_draw_char(11, 45, e, 1)
+[105070464] [<--] oledDrawChar() : OKE
+[105073928] [-->] oled_draw_char(11, 49, s, 1)
+[105078103] [<--] oledDrawChar() : OKE
+[105081567] [-->] oled_draw_char(11, 53, t, 1)
+[105085743] [<--] oledDrawChar() : OKE
+[105089206] [-->] oled_draw_char(11, 57, M, 1)
+[105093384] [<--] oledDrawChar() : OKE
+[105096845] [-->] oled_draw_char(11, 61, o, 1)
+[105101019] [<--] oledDrawChar() : OKE
+[105104484] [-->] oled_draw_char(11, 65, d, 1)
+[105108660] [<--] oledDrawChar() : OKE
+[105112123] [-->] oled_draw_char(11, 69, e, 1)
+[105116297] [<--] oledDrawChar() : OKE
+[105119761] [<--] oledDrawText() : OKE
+[105123233] [log] Draw char ...
+[105126097] [-->] oledDrawText(17, 5, "P", 1, wrap=1, lh=6)
+[105131393] [-->] oled_draw_char(17, 5, P, 1)
+[105135482] [<--] oledDrawChar() : OKE
+[105138944] [<--] oledDrawText() : OKE
+[105142417] [log] Oled flush ...
+[105145368] [-->] oledFlush(0x3ffafe30)
+[105148927] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[105154830] [<--]  i2cSetTransmitBuffer() : OKE
+[105159083] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[105164403] [<--] i2cSendBuffer() : OKE
+[105167851] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[105174014] [<--]  i2cSetTransmitBuffer() : OKE
+[105178323] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[105210363] [<--] i2cSendBuffer() : OKE
+[105210402] [<--] oledFlush() : OKE
+[105210437] [log] Delay 300 ticks ...
+[108209699] [log] Fill canvas with '0' color ...
+[108209895] [log] Draw text ...
+[108209927] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[108212436] [-->] oled_draw_char(11, 5, N, 1)
+[108216528] [<--] oledDrawChar() : OKE
+[108219988] [-->] oled_draw_char(11, 9, g, 1)
+[108224078] [<--] oledDrawChar() : OKE
+[108227540] [-->] oled_draw_char(11, 13, x, 1)
+[108231714] [<--] oledDrawChar() : OKE
+[108235179] [-->] oled_draw_char(11, 17, x, 1)
+[108239353] [<--] oledDrawChar() : OKE
+[108242818] [-->] oled_draw_char(11, 21, F, 1)
+[108246994] [<--] oledDrawChar() : OKE
+[108250457] [-->] oled_draw_char(11, 25, u, 1)
+[108254631] [<--] oledDrawChar() : OKE
+[108258095] [-->] oled_draw_char(11, 29, s, 1)
+[108262270] [<--] oledDrawChar() : OKE
+[108265734] [-->] oled_draw_char(11, 33,  , 1)
+[108269902] [<--] oledDrawChar() : OKE
+[108273373] [-->] oled_draw_char(11, 35, -, 1)
+[108277542] [<--] oledDrawChar() : OKE
+[108281012] [-->] oled_draw_char(11, 39,  , 1)
+[108285179] [<--] oledDrawChar() : OKE
+[108288651] [-->] oled_draw_char(11, 41, T, 1)
+[108292826] [<--] oledDrawChar() : OKE
+[108296289] [-->] oled_draw_char(11, 45, e, 1)
+[108300464] [<--] oledDrawChar() : OKE
+[108303928] [-->] oled_draw_char(11, 49, s, 1)
+[108308103] [<--] oledDrawChar() : OKE
+[108311567] [-->] oled_draw_char(11, 53, t, 1)
+[108315743] [<--] oledDrawChar() : OKE
+[108319206] [-->] oled_draw_char(11, 57, M, 1)
+[108323384] [<--] oledDrawChar() : OKE
+[108326845] [-->] oled_draw_char(11, 61, o, 1)
+[108331019] [<--] oledDrawChar() : OKE
+[108334484] [-->] oled_draw_char(11, 65, d, 1)
+[108338660] [<--] oledDrawChar() : OKE
+[108342123] [-->] oled_draw_char(11, 69, e, 1)
+[108346297] [<--] oledDrawChar() : OKE
+[108349761] [<--] oledDrawText() : OKE
+[108353233] [log] Draw char ...
+[108356097] [-->] oledDrawText(17, 5, "Q", 1, wrap=1, lh=6)
+[108361393] [-->] oled_draw_char(17, 5, Q, 1)
+[108365483] [<--] oledDrawChar() : OKE
+[108368944] [<--] oledDrawText() : OKE
+[108372417] [log] Oled flush ...
+[108375368] [-->] oledFlush(0x3ffafe30)
+[108378927] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[108384830] [<--]  i2cSetTransmitBuffer() : OKE
+[108389083] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[108394403] [<--] i2cSendBuffer() : OKE
+[108397851] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[108404014] [<--]  i2cSetTransmitBuffer() : OKE
+[108408323] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[108440363] [<--] i2cSendBuffer() : OKE
+[108440402] [<--] oledFlush() : OKE
+[108440437] [log] Delay 300 ticks ...
+[111439699] [log] Fill canvas with '0' color ...
+[111439895] [log] Draw text ...
+[111439927] [-->] oledDrawText(11, 5, "NgxxFus - TestMode", 1, wrap=1, lh=6)
+[111442436] [-->] oled_draw_char(11, 5, N, 1)
+[111446528] [<--] oledDrawChar() : OKE
+[111449988] [-->] oled_draw_char(11, 9, g, 1)
+[111454078] [<--] oledDrawChar() : OKE
+[111457540] [-->] oled_draw_char(11, 13, x, 1)
+[111461714] [<--] oledDrawChar() : OKE
+[111465179] [-->] oled_draw_char(11, 17, x, 1)
+[111469353] [<--] oledDrawChar() : OKE
+[111472818] [-->] oled_draw_char(11, 21, F, 1)
+[111476994] [<--] oledDrawChar() : OKE
+[111480457] [-->] oled_draw_char(11, 25, u, 1)
+[111484631] [<--] oledDrawChar() : OKE
+[111488095] [-->] oled_draw_char(11, 29, s, 1)
+[111492270] [<--] oledDrawChar() : OKE
+[111495734] [-->] oled_draw_char(11, 33,  , 1)
+[111499902] [<--] oledDrawChar() : OKE
+[111503373] [-->] oled_draw_char(11, 35, -, 1)
+[111507542] [<--] oledDrawChar() : OKE
+[111511012] [-->] oled_draw_char(11, 39,  , 1)
+[111515179] [<--] oledDrawChar() : OKE
+[111518651] [-->] oled_draw_char(11, 41, T, 1)
+[111522826] [<--] oledDrawChar() : OKE
+[111526289] [-->] oled_draw_char(11, 45, e, 1)
+[111530464] [<--] oledDrawChar() : OKE
+[111533928] [-->] oled_draw_char(11, 49, s, 1)
+[111538103] [<--] oledDrawChar() : OKE
+[111541567] [-->] oled_draw_char(11, 53, t, 1)
+[111545743] [<--] oledDrawChar() : OKE
+[111549206] [-->] oled_draw_char(11, 57, M, 1)
+[111553384] [<--] oledDrawChar() : OKE
+[111556845] [-->] oled_draw_char(11, 61, o, 1)
+[111561019] [<--] oledDrawChar() : OKE
+[111564484] [-->] oled_draw_char(11, 65, d, 1)
+[111568660] [<--] oledDrawChar() : OKE
+[111572123] [-->] oled_draw_char(11, 69, e, 1)
+[111576297] [<--] oledDrawChar() : OKE
+[111579761] [<--] oledDrawText() : OKE
+[111583233] [log] Draw char ...
+[111586097] [-->] oledDrawText(17, 5, "R", 1, wrap=1, lh=6)
+[111591393] [-->] oled_draw_char(17, 5, R, 1)
+[111595484] [<--] oledDrawChar() : OKE
+[111598944] [<--] oledDrawText() : OKE
+[111602417] [log] Oled flush ...
+[111605368] [-->] oledFlush(0x3ffafe30)
+[111608927] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb55b0, 3)
+[111614830] [<--]  i2cSetTransmitBuffer() : OKE
+[111619083] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0010)
+[111624403] [<--] i2cSendBuffer() : OKE
+[111627851] [-->]  i2cSetTransmitBuffer(0x3ffaffb4, 0x3ffb56b0, 1024)
+[111634014] [<--]  i2cSetTransmitBuffer() : OKE
+[111638323] [-->] i2cSendBuffer(0x3ffaffb4, 60, 0, 0x0011)
+[111670363] [<--] i2cSendBuffer() : OKE
+[111670402] [<--] oledFlush() : OKE
+[111670437] [log] Delay 300 ticks ...

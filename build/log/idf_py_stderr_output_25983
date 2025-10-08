@@ -1,0 +1,10 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/main/../helper/general.h:16,
+                 from /home/fus/Documents/DO-AN-02/main/do-an-02.h:1,
+                 from /home/fus/Documents/DO-AN-02/main/do-an-02.c:1:
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:49:28: error: unknown type name 'isrFunc_t'
+   49 | void gpioSetISR(pin_t pin, isrFunc_t *isr){
+      |                            ^~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7295: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

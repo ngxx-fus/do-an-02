@@ -1,0 +1,613 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b9b4h ( 47540) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b9dc vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001e01c vaddr=40080000 size=01ffch (  8188) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=163b4h ( 91060) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=000363dc vaddr=40081ffc size=09424h ( 37924) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=0003f808 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     do-an-02[0m
+[0;32mI (201) app_init: App version:      a08380c-dirty[0m
+[0;32mI (205) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (210) app_init: ELF file SHA256:  bf7f591c3...[0m
+[0;32mI (214) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (220) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (224) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (228) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008B420 len 00014BE0 (82 KiB): IRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[31106] [-->] app_main()
+[31141] [log] Set systemStage = SYSTEM_INIT
+[31407] [log] Start up OLED screen
+[34536] [-->] createOLEDDevice(0x3ffb41e0)
+[38386] [-->] createI2CDevice(i2cDev_t ** pDev)
+[42629] [<--] createI2CDevice() : OKE
+[45994] [<--] createOLEDDevice() : OKE
+[49466] [-->] configOLEDDevice(0x3ffafe30, 22, 21, 0x03)
+[54501] [-->] configI2CDevice(dev: 0x3ffafe40, SCL: 22, SDA: 21, config: 0x0003)
+[61635] [<--] configI2CDevice() : OKE
+[65008] [<--] configOLEDDevice() : OKE
+[68481] [-->] startupOLEDDevice(0x3ffafe30)
+[72383] [-->] startupI2CDevice(0x3ffafe40)
+[76206] [log] Set up for I2C master mode...
+[80467] [<--] startupI2CDevice() : OKE
+[83597] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4190, 24)
+[89231] [<--]  i2cSetTransmitBuffer() : OKE
+[93129] [log] Send start-up sequence ...
+[96779] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0030)
+[101636] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[107100] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[111962] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[116736] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[122118] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[127520] [<--] i2cSendBuffer() : OKE
+[130286] [<--] startupOLEDDevice() : OKE
+[133927] [log] Enter test mode!
+[136792] [-->] oledResetView(0x3ffafe30)
+[140438] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[146163] [<--]  i2cSetTransmitBuffer() : OKE
+[150156] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[155103] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[160572] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[165433] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[170208] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[175589] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[180615] [<--] i2cSendBuffer() : OKE
+[183753] [<--] oledResetView() : OKE
+[187052] [-->] oledShowRAMContent(0x3ffafe30)
+[191140] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[197860] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[203835] [<--] oledTurnOnAllPixels() : OKE
+[207817] [-->] oledDrawText(22, 0, "Test mode", 1, wrap=1, lh=0)
+[213382] [-->] oled_draw_char(22, 0, T, 1)
+[217259] [<--] oledDrawChar() : OKE
+[220385] [-->] oled_draw_char(22, 11, e, 1)
+[224318] [<--] oledDrawChar() : OKE
+[227503] [-->] oled_draw_char(22, 19, s, 1)
+[231428] [<--] oledDrawChar() : OKE
+[234617] [-->] oled_draw_char(22, 26, t, 1)
+[238543] [<--] oledDrawChar() : OKE
+[241739] [-->] oled_draw_char(22, 31,  , 1)
+[245641] [<--] oledDrawChar() : OKE
+[248857] [-->] oled_draw_char(22, 36, m, 1)
+[252810] [<--] oledDrawChar() : OKE
+[255975] [-->] oled_draw_char(22, 50, o, 1)
+[259904] [<--] oledDrawChar() : OKE
+[263089] [-->] oled_draw_char(22, 59, d, 1)
+[267033] [<--] oledDrawChar() : OKE
+[270207] [-->] oled_draw_char(22, 68, e, 1)
+[274136] [<--] oledDrawChar() : OKE
+[277325] [<--] oledDrawText() : OKE
+[280541] [-->] oledFlush(0x3ffafe30)
+[283843] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[289564] [<--]  i2cSetTransmitBuffer() : OKE
+[293561] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[298505] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[303974] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[308835] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[313609] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[318991] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[324015] [<--] i2cSendBuffer() : OKE
+[327151] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[333053] [<--]  i2cSetTransmitBuffer() : OKE
+[337308] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[341994] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[347463] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[352324] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[357098] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[362480] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[377607] [<--] i2cSendBuffer() : OKE
+[377640] [<--] oledFlush() : OKE
+[377678] [-->] ledTest()
+, 1)
+[1318950] [<--] oledDrawChar() : OKE
+[1322226] [-->] oled_draw_char(22, 84, k, 1)
+[1326258] [<--] oledDrawChar() : OKE
+[1329522] [-->] oled_draw_char(22, 93, (, 1)
+[1333536] [<--] oledDrawChar() : OKE
+[1336810] [-->] oled_draw_char(22, 99, ), 1)
+[1340823] [<--] oledDrawChar() : OKE
+[1344101] [<--] oledDrawText() : OKE
+[1347399] [-->] oledFlush(0x3ffafe30)
+[1350789] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[1356600] [<--]  i2cSetTransmitBuffer() : OKE
+[1360681] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1365715] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1371270] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1376218] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1381079] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1386548] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1391663] [<--] i2cSendBuffer() : OKE
+[1394885] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[1400871] [<--]  i2cSetTransmitBuffer() : OKE
+[1404978] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[1409985] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1415541] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[1420489] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1425350] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1430819] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[1446033] [<--] i2cSendBuffer() : OKE
+[1446068] [<--] oledFlush() : OKE
+[1446238] [-->] oledTest()
+[1446340] [log] [+] prepairDataTask()
+[1448010] [-->] oledResetView(0x3ffafe30)
+[1451739] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[1457554] [<--]  i2cSetTransmitBuffer() : OKE
+[1461638] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1466669] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1472224] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1477172] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1482033] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1487502] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1492619] [<--] i2cSendBuffer() : OKE
+[1495835] [<--] oledResetView() : OKE
+[1499221] [-->] oledShowRAMContent(0x3ffafe30)
+[1503387] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[1509937] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[1516268] [<--] oledTurnOnAllPixels() : OKE
+[1520301] [-->] oledDrawText(22, 0, "[+] prepairDataTask()", 1, wrap=1, lh=0)
+[1526998] [-->] oled_draw_char(22, 0, [, 1)
+[1530934] [<--] oledDrawChar() : OKE
+[1534203] [-->] oled_draw_char(22, 6, +, 1)
+[1538129] [<--] oledDrawChar() : OKE
+[1541412] [-->] oled_draw_char(22, 16, ], 1)
+[1545422] [<--] oledDrawChar() : OKE
+[1548700] [-->] oled_draw_char(22, 22,  , 1)
+[1552697] [<--] oledDrawChar() : OKE
+[1555991] [-->] oled_draw_char(22, 27, p, 1)
+[1560026] [<--] oledDrawChar() : OKE
+[1563283] [-->] oled_draw_char(22, 36, r, 1)
+[1567292] [<--] oledDrawChar() : OKE
+[1570579] [-->] oled_draw_char(22, 42, e, 1)
+[1574590] [<--] oledDrawChar() : OKE
+[1577866] [-->] oled_draw_char(22, 50, p, 1)
+[1581900] [<--] oledDrawChar() : OKE
+[1585158] [-->] oled_draw_char(22, 59, a, 1)
+[1589173] [<--] oledDrawChar() : OKE
+[1592457] [-->] oled_draw_char(22, 67, i, 1)
+[1596462] [<--] oledDrawChar() : OKE
+[1599755] [-->] oled_draw_char(22, 72, r, 1)
+[1603750] [<--] oledDrawChar() : OKE
+[1607036] [-->] oled_draw_char(22, 78, D, 1)
+[1611085] [<--] oledDrawChar() : OKE
+[1614324] [-->] oled_draw_char(22, 91, a, 1)
+[1618339] [<--] oledDrawChar() : OKE
+[1621620] [-->] oled_draw_char(22, 99, t, 1)
+[1625628] [<--] oledDrawChar() : OKE
+[1628907] [-->] oled_draw_char(22, 104, a, 1)
+[1633013] [<--] oledDrawChar() : OKE
+[1636286] [-->] oled_draw_char(22, 112, T, 1)
+[1640408] [<--] oledDrawChar() : OKE
+[1643664] [-->] oled_draw_char(44, 0, a, 1)
+[1647592] [<--] oledDrawChar() : OKE
+[1650873] [-->] oled_draw_char(44, 8, s, 1)
+[1654794] [<--] oledDrawChar() : OKE
+[1658074] [-->] oled_draw_char(44, 15, k, 1)
+[1662109] [<--] oledDrawChar() : OKE
+[1665365] [-->] oled_draw_char(44, 24, (, 1)
+[1669379] [<--] oledDrawChar() : OKE
+[1672661] [-->] oled_draw_char(44, 30, ), 1)
+[1676671] [<--] oledDrawChar() : OKE
+[1679948] [<--] oledDrawText() : OKE
+[1683247] [-->] oledFlush(0x3ffafe30)
+[1686632] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[1692448] [<--]  i2cSetTransmitBuffer() : OKE
+[1696528] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1701562] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1707118] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1712066] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1716927] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1722395] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1727510] [<--] i2cSendBuffer() : OKE
+[1730729] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[1736718] [<--]  i2cSetTransmitBuffer() : OKE
+[1740825] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[1745833] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1751388] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[1756336] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1761197] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1766666] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[1781916] [<--] i2cSendBuffer() : OKE
+[1781950] [<--] oledFlush() : OKE
+[1782059] [-->] prepairDataTask(0x3ffb0388)
+[1782134] [log] [+] modeControlTask()
+[1785329] [-->] oledResetView(0x3ffafe30)
+[1789062] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[1794877] [<--]  i2cSetTransmitBuffer() : OKE
+[1798957] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1803992] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1809547] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1814495] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1819356] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1824825] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1829942] [<--] i2cSendBuffer() : OKE
+[1833158] [<--] oledResetView() : OKE
+[1836544] [-->] oledShowRAMContent(0x3ffafe30)
+[1840710] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[1847255] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[1853592] [<--] oledTurnOnAllPixels() : OKE
+[1857624] [-->] oledDrawText(22, 0, "[+] prepairDataTask()", 1, wrap=1, lh=0)
+[1864322] [-->] oled_draw_char(22, 0, [, 1)
+[1868253] [<--] oledDrawChar() : OKE
+[1871531] [-->] oled_draw_char(22, 6, +, 1)
+[1875452] [<--] oledDrawChar() : OKE
+[1878731] [-->] oled_draw_char(22, 16, ], 1)
+[1882750] [<--] oledDrawChar() : OKE
+[1886023] [-->] oled_draw_char(22, 22,  , 1)
+[1890020] [<--] oledDrawChar() : OKE
+[1893314] [-->] oled_draw_char(22, 27, p, 1)
+[1897344] [<--] oledDrawChar() : OKE
+[1900610] [-->] oled_draw_char(22, 36, r, 1)
+[1904615] [<--] oledDrawChar() : OKE
+[1907897] [-->] oled_draw_char(22, 42, e, 1)
+[1911917] [<--] oledDrawChar() : OKE
+[1915189] [-->] oled_draw_char(22, 50, p, 1)
+[1919219] [<--] oledDrawChar() : OKE
+[1922485] [-->] oled_draw_char(22, 59, a, 1)
+[1926496] [<--] oledDrawChar() : OKE
+[1929777] [-->] oled_draw_char(22, 67, i, 1)
+[1933781] [<--] oledDrawChar() : OKE
+[1937064] [-->] oled_draw_char(22, 72, r, 1)
+[1941078] [<--] oledDrawChar() : OKE
+[1944355] [-->] oled_draw_char(22, 78, D, 1)
+[1948396] [<--] oledDrawChar() : OKE
+[1951651] [-->] oled_draw_char(22, 91, a, 1)
+[1955662] [<--] oledDrawChar() : OKE
+[1958939] [-->] oled_draw_char(22, 99, t, 1)
+[1962952] [<--] oledDrawChar() : OKE
+[1966230] [-->] oled_draw_char(22, 104, a, 1)
+[1970336] [<--] oledDrawChar() : OKE
+[1973609] [-->] oled_draw_char(22, 112, T, 1)
+[1977727] [<--] oleh : OKE
+[1980991] [-->] oled_draw_char(44, 0, a, 1)
+[1984915] [<--] oledDrawChar() : OKE
+[1988192] [-->] oled_draw_char(44, 8, s, 1)
+[1992121] [<--] oledDrawChar() : OKE
+[1995397] [-->] oled_draw_char(44, 15, k, 1)
+[1999428] [<--] oledDrawChar() : OKE
+[2002692] [-->] oled_draw_char(44, 24, (, 1)
+[2006702] [<--] oledDrawChar() : OKE
+[2009984] [-->] oled_draw_char(44, 30, ), 1)
+[2013994] [<--] oledDrawChar() : OKE
+[2017271] [<--] oledDrawText() : OKE
+[2020570] [-->] oledFlush(0x3ffafe30)
+[2023955] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[2029771] [<--]  i2cSetTransmitBuffer() : OKE
+[2033851] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[2038885] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[2044441] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[2049389] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[2054250] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[2059761] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[2064833] [<--] i2cSendBuffer() : OKE
+[2068052] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[2074041] [<--]  i2cSetTransmitBuffer() : OKE
+[2078144] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[2083156] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[2088711] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[2093659] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[2098520] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[2103989] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[2119254] [<--] i2cSendBuffer() : OKE
+[2119289] [<--] oledFlush() : OKE
+[2119402] [-->] modeControlTask(0x3ffb0388)
+[2119484] [log] Set systemStage = SYSTEM_RUNNING
+r] I2C_DIS_STOP_CONDI : 1
+[116736] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[122118] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[127520] [<--] i2cSendBuffer() : OKE
+[130286] [<--] startupOLEDDevice() : OKE
+[133927] [log] Enter test mode!
+[136792] [-->] oledResetView(0x3ffafe30)
+[140438] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[146163] [<--]  i2cSetTransmitBuffer() : OKE
+[150156] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[155103] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[160572] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[165433] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI r awChar() : OKE
+[227503] [-->] oled_draw_char(22, 19, s, 1)
+[231428] [<--] oledDrawChar() : OKE
+[234617] [-->] oled_draw_char(22, 26, t, 1)
+[238543] [<--] oledDrawChar() : OKE
+[241739] [-->] oled_draw_char(22, 31,  , 1)
+[245641] [<--] oledDrawChar() : OKE
+[248857] [-->] oled_draw_char(22, 36, m, 1)
+[252810] [<--] oledDrawChar() : OKE
+[255975] [-->] oled_draw_char(22, 50, o, 1)
+[259904] [<--] oledDrawChar() : OKE
+[263089] [-->] oled_draw_char(22, 59, d, 1)
+[267033] [<--] oledDrawChar() : OKE
+[270207] [-->] oled_draw_char(22, 68, e, 1)
+[274136] [<--] oledDrawChar() : OKE
+[277325] [<--] oledDrawText() : OKE
+[280541] [-->] oledFlush(0x3ffafe30)
+[283843] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[289564] [<--]  i2cSetTransmitBuffer() : OKE
+[293561] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[298505] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[303974] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[308835] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[313609] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[318991] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[324015] [<--] i2cSendBuffer() : OKE
+[327151] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[333053] [<--]  i2cSetTransmitBuffer() : OKE
+[337308] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[341994] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[347463] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[352324] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[357098] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[362480] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[377607] [<--] i2cSendBuffer() : OKE
+[377640] [<--] oledFlush() : OKE
+[377678] [-->] ledTest()
+[1169918] [<--] ledTest()
+[1169956] [log] [+] oledTask()
+[1169996] [-->] oledResetView(0x3ffafe30)
+[1170050] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[1173368] [<--]  i2cSetTransmitBuffer() : OKE
+[1177436] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1182475] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1188026] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1192974] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1197835] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1203304] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1208448] [<--] i2cSendBuffer() : OKE
+[1211638] [<--] oledResetView() : OKE
+[1215023] [-->] oledShowRAMContent(0x3ffafe30)
+[1219189] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[1225806] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[1232071] [<--] oledTurnOnAllPixels() : OKE
+[1236103] [-->] oledDrawText(22, 0, "[+] oledTask()", 1, wrap=1, lh=0)
+[1242197] [-->] oled_draw_char(22, 0, [, 1)
+[1246140] [<--] oledDrawChar() : OKE
+[1249402] [-->] oled_draw_char(22, 6, +, 1)
+[1253328] [<--] oledDrawChar() : OKE
+[1256603] [-->] oled_draw_char(22, 16, ], 1)
+[1260621] [<--] oledDrawChar() : OKE
+[1263894] [-->] oled_draw_char(22, 22,  , 1)
+[1267887] [<--] oledDrawChar() : OKE
+[1271186] [-->] oled_draw_char(22, 27, o, 1)
+[1275205] [<--] oledDrawChar() : OKE
+[1278477] [-->] oled_draw_char(22, 36, l, 1)
+[1282491] [<--] oledDrawChar() : OKE
+[1285769] [-->] oled_draw_char(22, 41, e, 1)
+[1289785] [<--] oledDrawChar() : OKE
+[1293061] [-->] oled_draw_char(22, 49, d, 1)
+[1297092] [<--] oledDrawChar() : OKE
+[1300352] [-->] oled_draw_char(22, 58, T, 1)
+[1304383] [<--] oledDrawChar() : OKE
+[1307648] [-->] oled_draw_char(22, 69, a, 1)
+[1311659] [<--] oledDrawChar() : OKE
+[1314935] [-->] oled_draw_char(22, 77, s, 1)
+[1318951] [<--] oledDrawChar() : OKE
+[1322227] [-->] oled_draw_char(22, 84, k, 1)
+[1326258] [<--] oledDrawChar() : OKE
+[1329522] [-->] oled_draw_char(22, 93, (, 1)
+[1333536] [<--] oledDrawChar() : OKE
+[1336810] [-->] oled_draw_char(22, 99, ), 1)
+[1340824] [<--] oledDrawChar() : OKE
+[1344101] [<--] oledDrawText() : OKE
+[1347400] [-->] oledFlush(0x3ffafe30)
+[1350789] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[1356601] [<--]  i2cSetTransmitBuffer() : OKE
+[1360681] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1365716] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1371271] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1376219] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1381080] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1386549] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1391663] [<--] i2cSendBuffer() : OKE
+[1394886] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[1400872] [<--]  i2cSetTransmitBuffer() : OKE
+[1404978] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[1409986] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1415541] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[1420489] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1425350] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1430819] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[1446034] [<--] i2cSendBuffer() : OKE
+[1446069] [<--] oledFlush() : OKE
+[1446239] [-->] oledTest()
+[1446341] [log] [+] prepairDataTask()
+[1448010] [-->] oledResetView(0x3ffafe30)
+[1451740] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[1457555] [<--]  i2cSetTransmitBuffer() : OKE
+[1461639] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1466669] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1472225] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1477173] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1482034] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1487503] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1492619] [<--] i2cSendBuffer() : OKE
+[1495836] [<--] oledResetView() : OKE
+[1499221] [-->] oledShowRAMContent(0x3ffafe30)
+[1503388] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[1509937] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[1516269] [<--] oledTurnOnAllPixels() : OKE
+[1520302] [-->] oledDrawText(22, 0, "[+] prepairDataTask()", 1, wrap=1, lh=0)
+[1526999] [-->] oled_draw_char(22, 0, [, 1)
+[1530935] [<--] oledDrawChar() : OKE
+[1534204] [-->] oled_draw_char(22, 6, +, 1)
+[1538130] [<--] oledDrawChar() : OKE
+[1541413] [-->] oled_draw_char(22, 16, ], 1)
+[1545423] [<--] oledDrawChar() : OKE
+[1548700] [-->] oled_draw_char(22, 22,  , 1)
+[1552697] [<--] oledDrawChar() : OKE
+[1555992] [-->] oled_draw_char(22, 27, p, 1)
+[1560026] [<--] oledDrawChar() : OKE
+[1563284] [-->] oled_draw_char(22, 36, r, 1)
+[1567293] [<--] oledDrawChar() : OKE
+[1570579] [-->] oled_draw_char(22, 42, e, 1)
+[1574591] [<--] oledDrawChar() : OKE
+[1577867] [-->] oled_draw_char(22, 50, p, 1)
+[1581901] [<--] oledDrawChar() : OKE
+[1585158] [-->] oled_draw_char(22, 59, a, 1)
+[1589173] [<--] oledDrawChar() : OKE
+[1592458] [-->] oled_draw_char(22, 67, i, 1)
+[1596463] [<--] oledDrawChar() : OKE
+[1599755] [-->] oled_draw_char(22, 72, r, 1)
+[1603751] [<--] oledDrawChar() : OKE
+[1607037] [-->] oled_draw_char(22, 78, D, 1)
+[1611085] [<--] oledDrawChar() : OKE
+[1614325] [-->] oled_draw_char(22, 91, a, 1)
+[1618340] [<--] oledDrawChar() : OKE
+[1621621] [-->] oled_draw_char(22, 99, t, 1)
+[1625629] [<--] oledDrawChar() : OKE
+[1628908] [-->] oled_draw_char(22, 104, a, 1)
+[1633014] [<--] oledDrawChar() : OKE
+[1636286] [-->] oled_draw_char(22, 112, T, 1)
+[1640408] [<--] oledDrawChar() : OKE
+[1643665] [-->] oled_draw_char(44, 0, a, 1)
+[1647593] [<--] oledDrawChar() : OKE
+[1650874] [-->] oled_draw_char(44, 8, s, 1)
+[1654794] [<--] oledDrawChar() : OKE
+[1658074] [-->] oled_draw_char(44, 15, k, 1)
+[1662110] [<--] oledDrawChar() : OKE
+[1665366] [-->] oled_draw_char(44, 24, (, 1)
+[1669380] [<--] oledDrawChar() : OKE
+[1672662] [-->] oled_draw_char(44, 30, ), 1)
+[1676671] [<--] oledDrawChar() : OKE
+[1679949] [<--] oledDrawText() : OKE
+[1683247] [-->] oledFlush(0x3ffafe30)
+[1686633] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[1692449] [<--]  i2cSetTransmitBuffer() : OKE
+[1696528] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1701563] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1707118] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1712066] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1716927] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1722396] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1727511] [<--] i2cSendBuffer() : OKE
+[1730730] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[1736719] [<--]  i2cSetTransmitBuffer() : OKE
+[1740826] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[1745833] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1751389] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[1756337] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1761198] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1766666] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[1781916] [<--] i2cSendBuffer() : OKE
+[1781951] [<--] oledFlush() : OKE
+[1782060] [-->] prepairDataTask(0x3ffb0388)
+[1782135] [log] [+] modeControlTask()
+[1785329] [-->] oledResetView(0x3ffafe30)
+[1789062] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 15)
+[1794878] [<--]  i2cSetTransmitBuffer() : OKE
+[1798958] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[1803993] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[1809548] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[1814496] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[1819357] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[1824826] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[1829943] [<--] i2cSendBuffer() : OKE
+[1833159] [<--] oledResetView() : OKE
+[1836544] [-->] oledShowRAMContent(0x3ffafe30)
+[1840711] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xaf, 0x0000)
+[1847256] [-->] i2cSendDoubleByte(0x3ffafe40, 60, 0, 0x00, 0xa4, 0x0000)
+[1853592] [<--] oledTurnOnAllPixels() : OKE
+[1857625] [-->] oledDrawText(22, 0, "[+] prepairDataTask()", 1, wrap=1, lh=0)
+[1864322] [-->] oled_draw_char(22, 0, [, 1)
+[1868254] [<--] oledDrawChar() : OKE
+[1871531] [-->] oled_draw_char(22, 6, +, 1)
+[1875453] [<--] oledDrawChar() : OKE
+[1878732] [-->] oled_draw_char(22, 16, ], 1)
+[1882750] [<--] oledDrawChar() : OKE
+[1886023] [-->] oled_draw_char(22, 22,  , 1)
+[1890020] [<--] oledDrawChar() : OKE
+[1893315] [-->] oled_draw_char(22, 27, p, 1)
+[1897345] [<--] oledDrawChar() : OKE
+[1900611] [-->] oled_draw_char(22, 36, r, 1)
+[1904616] [<--] oledDrawChar() : OKE
+[1907898] [-->] oled_draw_char(22, 42, e, 1)
+[1911918] [<--] oledDrawChar() : OKE
+[1915190] [-->] oled_draw_char(22, 50, p, 1)
+[1919220] [<--] oledDrawChar() : OKE
+[1922486] [-->] oled_draw_char(22, 59, a, 1)
+[1926496] [<--] oledDrawChar() : OKE
+[1929778] [-->] oled_draw_char(22, 67, i, 1)
+[1933782] [<--] oledDrawChar() : OKE
+[1937064] [-->] oled_draw_char(22, 72, r, 1)
+[1941078] [<--] oledDrawChar() : OKE
+[1944356] [-->] oled_draw_char(22, 78, D, 1)
+[1948396] [<--] oledDrawChar() : OKE
+[1951652] [-->] oled_draw_char(22, 91, a, 1)
+[1955663] [<--] oledDrawChar() : OKE
+[1958939] [-->] oled_draw_char(22, 99, t, 1)
+[1962952] [<--] oledDrawChar() : OKE
+[1966231] [-->] oled_draw_char(22, 104, a, 1)
+[1970337] [<--] oledDrawChar() : OKE
+[1973609] [-->] oled_draw_char(22, 112, T, 1)
+[1977727] [<--] oledDrawChar() : OKE
+[1980992] [-->] oled_draw_char(44, 0, a, 1)
+[1984916] [<--] oledDrawChar() : OKE
+[1988192] [-->] oled_draw_char(44, 8, s, 1)
+[1992122] [<--] oledDrawChar() : OKE
+[1995397] [-->] oled_draw_char(44, 15, k, 1)
+[1999429] [<--] oledDrawChar() : OKE
+[2002693] [-->] oled_draw_char(44, 24, (, 1)
+[2006703] [<--] oledDrawChar() : OKE
+[2009985] [-->] oled_draw_char(44, 30, ), 1)
+[2013994] [<--] oledDrawChar() : OKE
+[2017272] [<--] oledDrawText() : OKE
+[2020570] [-->] oledFlush(0x3ffafe30)
+[2023956] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4170, 14)
+[2029772] [<--]  i2cSetTransmitBuffer() : OKE
+[2033851] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0010)
+[2038886] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[2044442] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 1
+[2049389] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[2054250] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[2059762] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 1
+[2064834] [<--] i2cSendBuffer() : OKE
+[2068053] [-->]  i2cSetTransmitBuffer(0x3ffafe40, 0x3ffb4ed4, 1024)
+[2074042] [<--]  i2cSetTransmitBuffer() : OKE
+[2078145] [-->] i2cSendBuffer(0x3ffafe40, 60, 0, 0x0051)
+[2083156] [log] [i2cSendBuffer] I2C_DIS_ENTRY_CRITICAL_SEC : 1
+[2088712] [log] [i2cSendBuffer] I2C_DIS_START_CONDI : 0
+[2093660] [log] [i2cSendBuffer] I2C_DIS_STOP_CONDI : 1
+[2098521] [log] [i2cSendBuffer] I2C_DIS_EXIT_CRITICAL_SEC : 1
+[2103990] [log] [i2cSendBuffer] I2C_SKIP_ADDR_FRAME : 0
+[2119255] [<--] i2cSendBuffer() : OKE
+[2119289] [<--] oledFlush() : OKE
+[2119402] [-->] modeControlTask(0x3ffb0388)
+[2119484] [log] Set systemStage = SYSTEM_RUNNING

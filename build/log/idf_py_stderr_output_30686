@@ -1,0 +1,107 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:61:12: warning: 'gpioGetState' defined but not used [-Wunused-function]
+   61 | static def gpioGetState(pin_t pin){
+      |            ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:54:13: warning: 'gpioSetState' defined but not used [-Wunused-function]
+   54 | static void gpioSetState(pin_t pin, level_t level){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:38:13: warning: 'gpioSetInput' defined but not used [-Wunused-function]
+   38 | static void gpioSetInput(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:27:13: warning: 'gpioSetOutpin' defined but not used [-Wunused-function]
+   27 | static void gpioSetOutpin(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:20:13: warning: 'setupISR' defined but not used [-Wunused-function]
+   20 | static void setupISR(){
+      |             ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:61:12: warning: 'gpioGetState' defined but not used [-Wunused-function]
+   61 | static def gpioGetState(pin_t pin){
+      |            ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:54:13: warning: 'gpioSetState' defined but not used [-Wunused-function]
+   54 | static void gpioSetState(pin_t pin, level_t level){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:38:13: warning: 'gpioSetInput' defined but not used [-Wunused-function]
+   38 | static void gpioSetInput(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:27:13: warning: 'gpioSetOutpin' defined but not used [-Wunused-function]
+   27 | static void gpioSetOutpin(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:20:13: warning: 'setupISR' defined but not used [-Wunused-function]
+   20 | static void setupISR(){
+      |             ^~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/flag.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/general.h:25,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Definitions.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:4:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:31:9: warning: '__max' redefined
+   31 | #define __max(a, b) ((a) > (b) ? (a) : (b))  ///< Return max(a,b).
+      |         ^~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:2:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:9:13: note: this is the location of the previous definition
+    9 |     #define __max(a, b) ((a)>(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:32:9: warning: '__min' redefined
+   32 | #define __min(a, b) ((a) < (b) ? (a) : (b))  ///< Return min(a,b).
+      |         ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:5:13: note: this is the location of the previous definition
+    5 |     #define __min(a, b) ((a)<(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:6:9: note: '#pragma message: oled128x64.c is compiling...'
+    6 | #pragma message("oled128x64.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/general.h:28:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/espGPIOWrapper.h:61:12: warning: 'gpioGetState' defined but not used [-Wunused-function]
+   61 | static def gpioGetState(pin_t pin){
+      |            ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/espGPIOWrapper.h:54:13: warning: 'gpioSetState' defined but not used [-Wunused-function]
+   54 | static void gpioSetState(pin_t pin, level_t level){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/espGPIOWrapper.h:38:13: warning: 'gpioSetInput' defined but not used [-Wunused-function]
+   38 | static void gpioSetInput(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/espGPIOWrapper.h:27:13: warning: 'gpioSetOutpin' defined but not used [-Wunused-function]
+   27 | static void gpioSetOutpin(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/espGPIOWrapper.h:20:13: warning: 'setupISR' defined but not used [-Wunused-function]
+   20 | static void setupISR(){
+      |             ^~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:1,
+                 from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:61:12: warning: 'gpioGetState' defined but not used [-Wunused-function]
+   61 | static def gpioGetState(pin_t pin){
+      |            ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:54:13: warning: 'gpioSetState' defined but not used [-Wunused-function]
+   54 | static void gpioSetState(pin_t pin, level_t level){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:38:13: warning: 'gpioSetInput' defined but not used [-Wunused-function]
+   38 | static void gpioSetInput(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:27:13: warning: 'gpioSetOutpin' defined but not used [-Wunused-function]
+   27 | static void gpioSetOutpin(uint64_t gpioPinMask){
+      |             ^~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../helper/espGPIOWrapper.h:20:13: warning: 'setupISR' defined but not used [-Wunused-function]
+   20 | static void setupISR(){
+      |             ^~~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/oled128x64/liboled128x64.a(oled128x64.c.obj): in function `i2cHandleSCLIsr':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:22: multiple definition of `i2cHandleSCLIsr'; esp-idf/main/libmain.a(do-an-02.c.obj):/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22: first defined here
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/oled128x64/liboled128x64.a(oled128x64.c.obj): in function `i2cHandleSDAIsr':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:28: multiple definition of `i2cHandleSDAIsr'; esp-idf/main/libmain.a(do-an-02.c.obj):/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:28: first defined here
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/i2c/libi2c.a(i2c.c.obj): in function `i2cHandleSCLIsr':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:22: multiple definition of `i2cHandleSCLIsr'; esp-idf/main/libmain.a(do-an-02.c.obj):/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22: first defined here
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/i2c/libi2c.a(i2c.c.obj): in function `i2cHandleSDAIsr':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:28: multiple definition of `i2cHandleSDAIsr'; esp-idf/main/libmain.a(do-an-02.c.obj):/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:28: first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/do-an-02.elf.dir/build.make:617: do-an-02.elf] Error 1
+make[1]: *** [CMakeFiles/Makefile2:3196: CMakeFiles/do-an-02.elf.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

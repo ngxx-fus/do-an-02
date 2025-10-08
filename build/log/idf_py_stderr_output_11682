@@ -1,0 +1,41 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:104:1: warning: ignoring attribute 'section (".iram1.2")' because it conflicts with previous 'section (".iram1.0")' [-Wattributes]
+  104 | void IRAM_ATTR spiHandleCLKIsr(void* pv) {
+      | ^~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:107:16: note: previous declaration here
+  107 | void IRAM_ATTR spiHandleCLKIsr(void* pv);
+      |                ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:175:1: warning: ignoring attribute 'section (".iram1.3")' because it conflicts with previous 'section (".iram1.1")' [-Wattributes]
+  175 | void IRAM_ATTR spiHandleCSIsr(void* pv) {
+      | ^~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:108:16: note: previous declaration here
+  108 | void IRAM_ATTR spiHandleCSIsr(void* pv);
+      |                ^~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:391:5: error: conflicting types for 'setReceiveBuffer'; have 'def(spiDev_t *, void *, size_t)' {aka 'long int(spiDev_t *, void *, unsigned int)'}
+  391 | def setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size){
+      |     ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:146:5: note: previous declaration of 'setReceiveBuffer' with type 'int(spiDev_t *, void *, size_t)' {aka 'int(spiDev_t *, void *, unsigned int)'}
+  146 | int setReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
+      |     ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'shiftArrayLeft':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:26:1: error: control reaches end of non-void function [-Werror=return-type]
+   26 | }
+      | ^
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7471: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:64:5: error: conflicting types for 'startupI2CDevice'; have 'int(i2cDev_t *)'
+   64 | int startupI2CDevice(i2cDev_t * dev){
+      |     ^~~~~~~~~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:45:5: note: previous declaration of 'startupI2CDevice' with type 'def(i2cDev_t *)' {aka 'long int(i2cDev_t *)'}
+   45 | def startupI2CDevice(i2cDev_t * dev);
+      |     ^~~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/i2c/CMakeFiles/__idf_i2c.dir/build.make:79: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7406: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

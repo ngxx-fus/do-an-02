@@ -1,0 +1,26 @@
+Command: make -j 10 flash
+In file included from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/sender.h: In function 'oledTask':
+/home/fus/Documents/DO-AN-02/main/sender.h:97:10: warning: unused variable 'c' [-Wunused-variable]
+   97 |     char c[] = "--> 0";
+      |          ^
+In file included from /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:3:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:31:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   31 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+CMake Error at /home/fus/.fus/esp-idf/components/esptool_py/run_serial_tool.cmake:67 (message):
+  
+  /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;;/home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32
+  failed.
+
+
+
+make[3]: *** [CMakeFiles/flash.dir/build.make:73: flash] Error 1
+make[2]: *** [CMakeFiles/Makefile2:3115: CMakeFiles/flash.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:3122: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:208: flash] Error 2

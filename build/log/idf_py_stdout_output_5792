@@ -1,0 +1,7339 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5cch ( 46540) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5f4 vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc34 vaddr=40080000 size=023e4h (  9188) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=191bch (102844) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=000391e4 vaddr=400823e4 size=09080h ( 36992) load[0m
+[0;32mI (168) esp_image: segment 5: paddr=0004226c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (186) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (200) app_init: Project name:     do-an-02[0m
+[0;32mI (204) app_init: App version:      a08380c-dirty[0m
+[0;32mI (208) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (213) app_init: ELF file SHA256:  574ad400d...[0m
+[0;32mI (218) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2F18 len 0002D0E8 (180 KiB): DRAM[0m
+[0;32mI (252) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008B464 len 00014B9C (82 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) main_task: Started on CPU0[0m
+[0;32mI (298) main_task: Calling app_main()[0m
+[31067] [-->] app_main()
+[31109] [log] Set systemStage = SYSTEM_INIT
+[31391] [log] Start up OLED screen
+[35560] [log] Enter test mode!
+[49152] [-->] ledTest()
+[849788] [<--] ledTest()
+[849827] [log] [+] oledTask()
+[861407] [log] [oledTask] Wait for the initializing have been done!
+[861497] [log] [+] prepairDataTask()
+[873157] [log] [prepairDataTask] Wait for the initializing have been done!
+[873247] [log] [+] modeControlTask()
+[884875] [log] [modeControlTask] Wait for the initializing have been done!
+[884969] [log] Set systemStage = SYSTEM_RUNNING
+[896173] [-->] oledTest()
+[896240] [-->] prepairDataTask(0x3ffb0388)
+[896344] [-->] modeControlTask(0x00000000)
+[897117] [log] Content: M: 1-WIRE
+Send 
+[920335] [log] Content: M: 1-WIRE
+Send 
+[940286] [log] Content: M: 1-WIRE
+Send 
+[960286] [log] Content: M: 1-WIRE
+Send 
+[980286] [log] Content: M: 1-WIRE
+Send 
+[1000286] [log] Content: M: 1-WIRE
+Send 
+[1020286] [log] Content: M: 1-WIRE
+Send 
+[1040286] [log] Content: M: 1-WIRE
+Send 
+[1060286] [log] Content: M: 1-WIRE
+Send 
+[1080286] [log] Content: M: 1-WIRE
+Send 
+[1100286] [log] Content: M: 1-WIRE
+Send 
+[1120286] [log] Content: M: 1-WIRE
+Send 
+[1140286] [log] Content: M: 1-WIRE
+Send 
+[1160286] [log] Content: M: 1-WIRE
+Send 
+[1180286] [log] Content: M: 1-WIRE
+Send 
+[1200286] [log] Content: M: 1-WIRE
+Send 
+[1220286] [log] Content: M: 1-WIRE
+Send 
+[1240286] [log] Content: M: 1-WIRE
+Send 
+[1260286] [log] Content: M: 1-WIRE
+Send 
+[1280286] [log] Content: M: 1-WIRE
+Send 
+[1300286] [log] Content: M: 1-WIRE
+Send 
+[1320286] [log] Content: M: 1-WIRE
+Send 
+[1340286] [log] Content: M: 1-WIRE
+Send 
+[1360286] [log] Content: M: 1-WIRE
+Send 
+[1380286] [log] Content: M: 1-WIRE
+Send 
+[1400302] [log] Content: M: 1-WIRE
+Send 
+[1420286] [log] Content: M: 1-WIRE
+Send 
+[1440286] [log] Content: M: 1-WIRE
+Send 
+[1460286] [log] Content: M: 1-WIRE
+Send 
+[1480286] [log] Content: M: 1-WIRE
+Send 
+[1500286] [log] Content: M: 1-WIRE
+Send 
+[1520286] [log] Content: M: 1-WIRE
+Send 
+[1540286] [log] Content: M: 1-WIRE
+Send 
+[1560286] [log] Content: M: 1-WIRE
+Send 
+[1580286] [log] Content: M: 1-WIRE
+Send 
+[1600286] [log] Content: M: 1-WIRE
+Send 
+[1620286] [log] Content: M: 1-WIRE
+Send 
+[1640286] [log] Content: M: 1-WIRE
+Send 
+[1660286] [log] Content: M: 1-WIRE
+Send 
+[1680286] [log] Content: M: 1-WIRE
+Send 
+[1700286] [log] Content: M: 1-WIRE
+Send 
+[1720286] [log] Content: M: 1-WIRE
+Send 
+[1740286] [log] Content: M: 1-WIRE
+Send 
+[1760286] [log] Content: M: 1-WIRE
+Send 
+[1780286] [log] Content: M: 1-WIRE
+Send 
+[1800286] [log] Content: M: 1-WIRE
+Send 
+[1820286] [log] Content: M: 1-WIRE
+Send 
+[1840286] [log] Content: M: 1-WIRE
+Send 
+[1860286] [log] Content: M: 1-WIRE
+Send 
+[1880286] [log] Content: M: 1-WIRE
+Send 
+[1900302] [log] Content: M: 1-WIRE
+Send 
+[1920286] [log] Content: M: 1-WIRE
+Send 
+[1940286] [log] Content: M: 1-WIRE
+Send 
+[1960286] [log] Content: M: 1-WIRE
+Send 
+[1980286] [log] Content: M: 1-WIRE
+Send 
+[2000286] [log] Content: M: 1-WIRE
+Send 
+[2020286] [log] Content: M: 1-WIRE
+Send 
+[2040286] [log] Content: M: 1-WIRE
+Send 
+[2060286] [log] Content: M: 1-WIRE
+Send 
+[2080286] [log] Content: M: 1-WIRE
+Send 
+[2100286] [log] Content: M: 1-WIRE
+Send 
+[2120286] [log] Content: M: 1-WIRE
+Send 
+[2140286] [log] Content: M: 1-WIRE
+Send 
+[2160286] [log] Content: M: 1-WIRE
+Send 
+[2180286] [log] Content: M: 1-WIRE
+Send 
+[2200286] [log] Content: M: 1-WIRE
+Send 
+[2220286] [log] Content: M: 1-WIRE
+Send 
+[2240286] [log] Content: M: 1-WIRE
+Send 
+[2260286] [log] Content: M: 1-WIRE
+Send 
+[2280286] [log] Content: M: 1-WIRE
+Send 
+[2300286] [log] Content: M: 1-WIRE
+Send 
+[2320286] [log] Content: M: 1-WIRE
+Send 
+[2340286] [log] Content: M: 1-WIRE
+Send 
+[2360286] [log] Content: M: 1-WIRE
+Send 
+[2380286] [log] Content: M: 1-WIRE
+Send 
+[2400302] [log] Content: M: 1-WIRE
+Send 
+[2420286] [log] Content: M: 1-WIRE
+Send 
+[2440286] [log] Content: M: 1-WIRE
+Send 
+[2460286] [log] Content: M: 1-WIRE
+Send 
+[2480286] [log] Content: M: 1-WIRE
+Send 
+[2500286] [log] Content: M: 1-WIRE
+Send 
+[2520286] [log] Content: M: 1-WIRE
+Send 
+[2540286] [log] Content: M: 1-WIRE
+Send 
+[2560286] [log] Content: M: 1-WIRE
+Send 
+[2580286] [log] Content: M: 1-WIRE
+Send 
+[2600286] [log] Content: M: 1-WIRE
+Send 
+[2620286] [log] Content: M: 1-WIRE
+Send 
+[2640286] [log] Content: M: 1-WIRE
+Send 
+[2660286] [log] Content: M: 1-WIRE
+Send 
+[2680286] [log] Content: M: 1-WIRE
+Send 
+[2700286] [log] Content: M: 1-WIRE
+Send 
+[2720286] [log] Content: M: 1-WIRE
+Send 
+[2740286] [log] Content: M: 1-WIRE
+Send 
+[2760286] [log] Content: M: 1-WIRE
+Send 
+[2780286] [log] Content: M: 1-WIRE
+Send 
+[2800286] [log] Content: M: 1-WIRE
+Send 
+[2820286] [log] Content: M: 1-WIRE
+Send 
+[2840286] [log] Content: M: 1-WIRE
+Send 
+[2860286] [log] Content: M: 1-WIRE
+Send 
+[2880286] [log] Content: M: 1-WIRE
+Send 
+[2900302] [log] Content: M: 1-WIRE
+Send 
+[2920286] [log] Content: M: 1-WIRE
+Send 
+[2940286] [log] Content: M: 1-WIRE
+Send 
+[2960286] [log] Content: M: 1-WIRE
+Send 
+[2980286] [log] Content: M: 1-WIRE
+Send 
+[3000286] [log] Content: M: 1-WIRE
+Send 
+[3020286] [log] Content: M: 1-WIRE
+Send 
+[3040286] [log] Content: M: 1-WIRE
+Send 
+[3060286] [log] Content: M: 1-WIRE
+Send 
+[3080286] [log] Content: M: 1-WIRE
+Send 
+[3100286] [log] Content: M: 1-WIRE
+Send 
+[3120286] [log] Content: M: 1-WIRE
+Send 
+[3140286] [log] Content: M: 1-WIRE
+Send 
+[3160286] [log] Content: M: 1-WIRE
+Send 
+[3180286] [log] Content: M: 1-WIRE
+Send 
+[3200286] [log] Content: M: 1-WIRE
+Send 
+[3220286] [log] Content: M: 1-WIRE
+Send 
+[3240286] [log] Content: M: 1-WIRE
+Send 
+[3260286] [log] Content: M: 1-WIRE
+Send 
+[3280286] [log] Content: M: 1-WIRE
+Send 
+[3300286] [log] Content: M: 1-WIRE
+Send 
+[3320286] [log] Content: M: 1-WIRE
+Send 
+[3340286] [log] Content: M: 1-WIRE
+Send 
+[3360286] [log] Content: M: 1-WIRE
+Send 
+[3380286] [log] Content: M: 1-WIRE
+Send 
+[3400302] [log] Content: M: 1-WIRE
+Send 
+[3420286] [log] Content: M: 1-WIRE
+Send 
+[3440286] [log] Content: M: 1-WIRE
+Send 
+[3460286] [log] Content: M: 1-WIRE
+Send 
+[3480286] [log] Content: M: 1-WIRE
+Send 
+[3500286] [log] Content: M: 1-WIRE
+Send 
+[3520286] [log] Content: M: 1-WIRE
+Send 
+[3540286] [log] Content: M: 1-WIRE
+Send 
+[3560286] [log] Content: M: 1-WIRE
+Send 
+[3580286] [log] Content: M: 1-WIRE
+Send 
+[3600286] [log] Content: M: 1-WIRE
+Send 
+[3620286] [log] Content: M: 1-WIRE
+Send 
+[3640286] [log] Content: M: 1-WIRE
+Send 
+[3660286] [log] Content: M: 1-WIRE
+Send 
+[3680286] [log] Content: M: 1-WIRE
+Send 
+[3700286] [log] Content: M: 1-WIRE
+Send 
+[3720286] [log] Content: M: 1-WIRE
+Send 
+[3740286] [log] Content: M: 1-WIRE
+Send 
+[3760286] [log] Content: M: 1-WIRE
+Send 
+[3780286] [log] Content: M: 1-WIRE
+Send 
+[3800286] [log] Content: M: 1-WIRE
+Send 
+[3820286] [log] Content: M: 1-WIRE
+Send 
+[3840286] [log] Content: M: 1-WIRE
+Send 
+[3860286] [log] Content: M: 1-WIRE
+Send 
+[3880286] [log] Content: M: 1-WIRE
+Send 
+[3900302] [log] Content: M: 1-WIRE
+Send 
+[3920286] [log] Content: M: 1-WIRE
+Send 
+[3940286] [log] Content: M: 1-WIRE
+Send 
+[3960286] [log] Content: M: 1-WIRE
+Send 
+[3980286] [log] Content: M: 1-WIRE
+Send 
+[4000286] [log] Content: M: 1-WIRE
+Send 
+[4020286] [log] Content: M: 1-WIRE
+Send 
+[4040286] [log] Content: M: 1-WIRE
+Send 
+[4060286] [log] Content: M: 1-WIRE
+Send 
+[4080286] [log] Content: M: 1-WIRE
+Send 
+[4100286] [log] Content: M: 1-WIRE
+Send 
+[4120286] [log] Content: M: 1-WIRE
+Send 
+[4140286] [log] Content: M: 1-WIRE
+Send 
+[4160286] [log] Content: M: 1-WIRE
+Send 
+[4180286] [log] Content: M: 1-WIRE
+Send 
+[4200286] [log] Content: M: 1-WIRE
+Send 
+[4220286] [log] Content: M: 1-WIRE
+Send 
+[4240286] [log] Content: M: 1-WIRE
+Send 
+[4260286] [log] Content: M: 1-WIRE
+Send 
+[4280286] [log] Content: M: 1-WIRE
+Send 
+[4300286] [log] Content: M: 1-WIRE
+Send 
+[4320286] [log] Content: M: 1-WIRE
+Send 
+[4340286] [log] Content: M: 1-WIRE
+Send 
+[4360286] [log] Content: M: 1-WIRE
+Send 
+[4380286] [log] Content: M: 1-WIRE
+Send 
+[4400302] [log] Content: M: 1-WIRE
+Send 
+[4420286] [log] Content: M: 1-WIRE
+Send 
+[4440286] [log] Content: M: 1-WIRE
+Send 
+[4460286] [log] Content: M: 1-WIRE
+Send 
+[4480286] [log] Content: M: 1-WIRE
+Send 
+[4500286] [log] Content: M: 1-WIRE
+Send 
+[4520286] [log] Content: M: 1-WIRE
+Send 
+[4540286] [log] Content: M: 1-WIRE
+Send 
+[4560286] [log] Content: M: 1-WIRE
+Send 
+[4580286] [log] Content: M: 1-WIRE
+Send 
+[4600286] [log] Content: M: 1-WIRE
+Send 
+[4620286] [log] Content: M: 1-WIRE
+Send 
+[4640286] [log] Content: M: 1-WIRE
+Send 
+[4660286] [log] Content: M: 1-WIRE
+Send 
+[4680286] [log] Content: M: 1-WIRE
+Send 
+[4700286] [log] Content: M: 1-WIRE
+Send 
+[4720286] [log] Content: M: 1-WIRE
+Send 
+[4740286] [log] Content: M: 1-WIRE
+Send 
+[4760286] [log] Content: M: 1-WIRE
+Send 
+[4780286] [log] Content: M: 1-WIRE
+Send 
+[4800286] [log] Content: M: 1-WIRE
+Send 
+[4820286] [log] Content: M: 1-WIRE
+Send 
+[4840286] [log] Content: M: 1-WIRE
+Send 
+[4860286] [log] Content: M: 1-WIRE
+Send 
+[4880286] [log] Content: M: 1-WIRE
+Send 
+[4900302] [log] Content: M: 1-WIRE
+Send 
+[4920286] [log] Content: M: 1-WIRE
+Send 
+[4940286] [log] Content: M: 1-WIRE
+Send 
+[4960286] [log] Content: M: 1-WIRE
+Send 
+[4980286] [log] Content: M: 1-WIRE
+Send 
+[5000286] [log] Content: M: 1-WIRE
+Send 
+[5020286] [log] Content: M: 1-WIRE
+Send 
+[5040286] [log] Content: M: 1-WIRE
+Send 
+[5060286] [log] Content: M: 1-WIRE
+Send 
+[5080286] [log] Content: M: 1-WIRE
+Send 
+[5100286] [log] Content: M: 1-WIRE
+Send 
+[5120286] [log] Content: M: 1-WIRE
+Send 
+[5140286] [log] Content: M: 1-WIRE
+Send 
+[5160286] [log] Content: M: 1-WIRE
+Send 
+[5180286] [log] Content: M: 1-WIRE
+Send 
+[5200286] [log] Content: M: 1-WIRE
+Send 
+[5220286] [log] Content: M: 1-WIRE
+Send 
+[5240286] [log] Content: M: 1-WIRE
+Send 
+[5260286] [log] Content: M: 1-WIRE
+Send 
+[5280286] [log] Content: M: 1-WIRE
+Send 
+[5300286] [log] Content: M: 1-WIRE
+Send 
+[5320286] [log] Content: M: 1-WIRE
+Send 
+[5340286] [log] Content: M: 1-WIRE
+Send 
+[5360286] [log] Content: M: 1-WIRE
+Send 
+[5380286] [log] Content: M: 1-WIRE
+Send 
+[5400302] [log] Content: M: 1-WIRE
+Send 
+[5420286] [log] Content: M: 1-WIRE
+Send 
+[5440286] [log] Content: M: 1-WIRE
+Send 
+[5460286] [log] Content: M: 1-WIRE
+Send 
+[5480286] [log] Content: M: 1-WIRE
+Send 
+[5500286] [log] Content: M: 1-WIRE
+Send 
+[5520286] [log] Content: M: 1-WIRE
+Send 
+[5540286] [log] Content: M: 1-WIRE
+Send 
+[5560286] [log] Content: M: 1-WIRE
+Send 
+[5580286] [log] Content: M: 1-WIRE
+Send 
+[5600286] [log] Content: M: 1-WIRE
+Send 
+[5620286] [log] Content: M: 1-WIRE
+Send 
+[5640286] [log] Content: M: 1-WIRE
+Send 
+[5660286] [log] Content: M: 1-WIRE
+Send 
+[5680286] [log] Content: M: 1-WIRE
+Send 
+[5700286] [log] Content: M: 1-WIRE
+Send 
+[5720286] [log] Content: M: 1-WIRE
+Send 
+[5740286] [log] Content: M: 1-WIRE
+Send 
+[5760286] [log] Content: M: 1-WIRE
+Send 
+[5780286] [log] Content: M: 1-WIRE
+Send 
+[5800286] [log] Content: M: 1-WIRE
+Send 
+[5820286] [log] Content: M: 1-WIRE
+Send 
+[5840286] [log] Content: M: 1-WIRE
+Send 
+[5860286] [log] Content: M: 1-WIRE
+Send 
+[5880286] [log] Content: M: 1-WIRE
+Send 
+[5900302] [log] Content: M: 1-WIRE
+Send 
+[5920286] [log] Content: M: 1-WIRE
+Send 
+[5940286] [log] Content: M: 1-WIRE
+Send 
+[5960286] [log] Content: M: 1-WIRE
+Send 
+[5980286] [log] Content: M: 1-WIRE
+Send 
+[6000286] [log] Content: M: 1-WIRE
+Send 
+[6020286] [log] Content: M: 1-WIRE
+Send 
+[6040286] [log] Content: M: 1-WIRE
+Send 
+[6060286] [log] Content: M: 1-WIRE
+Send 
+[6080286] [log] Content: M: 1-WIRE
+Send 
+[6100286] [log] Content: M: 1-WIRE
+Send 
+[6120286] [log] Content: M: 1-WIRE
+Send 
+[6140286] [log] Content: M: 1-WIRE
+Send 
+[6160286] [log] Content: M: 1-WIRE
+Send 
+[6180286] [log] Content: M: 1-WIRE
+Send 
+[6200286] [log] Content: M: 1-WIRE
+Send 
+[6220286] [log] Content: M: 1-WIRE
+Send 
+[6240286] [log] Content: M: 1-WIRE
+Send 
+[6260286] [log] Content: M: 1-WIRE
+Send 
+[6280286] [log] Content: M: 1-WIRE
+Send 
+[6300286] [log] Content: M: 1-WIRE
+Send 
+[6320286] [log] Content: M: 1-WIRE
+Send 
+[6340286] [log] Content: M: 1-WIRE
+Send 
+[6360286] [log] Content: M: 1-WIRE
+Send 
+[6380286] [log] Content: M: 1-WIRE
+Send 
+[6400302] [log] Content: M: 1-WIRE
+Send 
+[6420286] [log] Content: M: 1-WIRE
+Send 
+[6440286] [log] Content: M: 1-WIRE
+Send 
+[6460286] [log] Content: M: 1-WIRE
+Send 
+[6480286] [log] Content: M: 1-WIRE
+Send 
+[6500286] [log] Content: M: 1-WIRE
+Send 
+[6520286] [log] Content: M: 1-WIRE
+Send 
+[6540286] [log] Content: M: 1-WIRE
+Send 
+[6560286] [log] Content: M: 1-WIRE
+Send 
+[6580286] [log] Content: M: 1-WIRE
+Send 
+[6600286] [log] Content: M: 1-WIRE
+Send 
+[6620286] [log] Content: M: 1-WIRE
+Send 
+[6640286] [log] Content: M: 1-WIRE
+Send 
+[6660286] [log] Content: M: 1-WIRE
+Send 
+[6680286] [log] Content: M: 1-WIRE
+Send 
+[6700286] [log] Content: M: 1-WIRE
+Send 
+[6720286] [log] Content: M: 1-WIRE
+Send 
+[6740286] [log] Content: M: 1-WIRE
+Send 
+[6760286] [log] Content: M: 1-WIRE
+Send 
+[6780286] [log] Content: M: 1-WIRE
+Send 
+[6800286] [log] Content: M: 1-WIRE
+Send 
+[6820286] [log] Content: M: 1-WIRE
+Send 
+[6840286] [log] Content: M: 1-WIRE
+Send 
+[6860286] [log] Content: M: 1-WIRE
+Send 
+[6880286] [log] Content: M: 1-WIRE
+Send 
+[6900302] [log] Content: M: 1-WIRE
+Send 
+[6920286] [log] Content: M: 1-WIRE
+Send 
+[6940286] [log] Content: M: 1-WIRE
+Send 
+[6960286] [log] Content: M: 1-WIRE
+Send 
+[6980286] [log] Content: M: 1-WIRE
+Send 
+[7000286] [log] Content: M: 1-WIRE
+Send 
+[7020286] [log] Content: M: 1-WIRE
+Send 
+[7040286] [log] Content: M: 1-WIRE
+Send 
+[7060286] [log] Content: M: 1-WIRE
+Send 
+[7080286] [log] Content: M: 1-WIRE
+Send 
+[7100286] [log] Content: M: 1-WIRE
+Send 
+[7120286] [log] Content: M: 1-WIRE
+Send 
+[7140286] [log] Content: M: 1-WIRE
+Send 
+[7160286] [log] Content: M: 1-WIRE
+Send 
+[7180286] [log] Content: M: 1-WIRE
+Send 
+[7200286] [log] Content: M: 1-WIRE
+Send 
+[7220286] [log] Content: M: 1-WIRE
+Send 
+[7240286] [log] Content: M: 1-WIRE
+Send 
+[7260286] [log] Content: M: 1-WIRE
+Send 
+[7280286] [log] Content: M: 1-WIRE
+Send 
+[7300286] [log] Content: M: 1-WIRE
+Send 
+[7320286] [log] Content: M: 1-WIRE
+Send 
+[7340286] [log] Content: M: 1-WIRE
+Send 
+[7360286] [log] Content: M: 1-WIRE
+Send 
+[7380286] [log] Content: M: 1-WIRE
+Send 
+[7400302] [log] Content: M: 1-WIRE
+Send 
+[7420286] [log] Content: M: 1-WIRE
+Send 
+[7440286] [log] Content: M: 1-WIRE
+Send 
+[7460286] [log] Content: M: 1-WIRE
+Send 
+[7480286] [log] Content: M: 1-WIRE
+Send 
+[7500286] [log] Content: M: 1-WIRE
+Send 
+[7520286] [log] Content: M: 1-WIRE
+Send 
+[7540286] [log] Content: M: 1-WIRE
+Send 
+[7560286] [log] Content: M: 1-WIRE
+Send 
+[7580286] [log] Content: M: 1-WIRE
+Send 
+[7600286] [log] Content: M: 1-WIRE
+Send 
+[7620286] [log] Content: M: 1-WIRE
+Send 
+[7640286] [log] Content: M: 1-WIRE
+Send 
+[7660286] [log] Content: M: 1-WIRE
+Send 
+[7680286] [log] Content: M: 1-WIRE
+Send 
+[7700286] [log] Content: M: 1-WIRE
+Send 
+[7720286] [log] Content: M: 1-WIRE
+Send 
+[7740286] [log] Content: M: 1-WIRE
+Send 
+[7760286] [log] Content: M: 1-WIRE
+Send 
+[7780286] [log] Content: M: 1-WIRE
+Send 
+[7800286] [log] Content: M: 1-WIRE
+Send 
+[7820286] [log] Content: M: 1-WIRE
+Send 
+[7840286] [log] Content: M: 1-WIRE
+Send 
+[7860286] [log] Content: M: 1-WIRE
+Send 
+[7880286] [log] Content: M: 1-WIRE
+Send 
+[7900302] [log] Content: M: 1-WIRE
+Send 
+[7920286] [log] Content: M: 1-WIRE
+Send 
+[7940286] [log] Content: M: 1-WIRE
+Send 
+[7960286] [log] Content: M: 1-WIRE
+Send 
+[7980286] [log] Content: M: 1-WIRE
+Send 
+[8000286] [log] Content: M: 1-WIRE
+Send 
+[8020286] [log] Content: M: 1-WIRE
+Send 
+[8040286] [log] Content: M: 1-WIRE
+Send 
+[8060286] [log] Content: M: 1-WIRE
+Send 
+[8080286] [log] Content: M: 1-WIRE
+Send 
+[8100286] [log] Content: M: 1-WIRE
+Send 
+[8120286] [log] Content: M: 1-WIRE
+Send 
+[8140286] [log] Content: M: 1-WIRE
+Send 
+[8160286] [log] Content: M: 1-WIRE
+Send 
+[8180286] [log] Content: M: 1-WIRE
+Send 
+[8200286] [log] Content: M: 1-WIRE
+Send 
+[8220286] [log] Content: M: 1-WIRE
+Send 
+[8240286] [log] Content: M: 1-WIRE
+Send 
+[8260286] [log] Content: M: 1-WIRE
+Send 
+[8280286] [log] Content: M: 1-WIRE
+Send 
+[8300286] [log] Content: M: 1-WIRE
+Send 
+[8320286] [log] Content: M: 1-WIRE
+Send 
+[8340286] [log] Content: M: 1-WIRE
+Send 
+[8360286] [log] Content: M: 1-WIRE
+Send 
+[8380286] [log] Content: M: 1-WIRE
+Send 
+[8400302] [log] Content: M: 1-WIRE
+Send 
+[8420286] [log] Content: M: 1-WIRE
+Send 
+[8440286] [log] Content: M: 1-WIRE
+Send 
+[8460286] [log] Content: M: 1-WIRE
+Send 
+[8480286] [log] Content: M: 1-WIRE
+Send 
+[8500286] [log] Content: M: 1-WIRE
+Send 
+[8520286] [log] Content: M: 1-WIRE
+Send 
+[8540286] [log] Content: M: 1-WIRE
+Send 
+[8560286] [log] Content: M: 1-WIRE
+Send 
+[8580286] [log] Content: M: 1-WIRE
+Send 
+[8600286] [log] Content: M: 1-WIRE
+Send 
+[8620286] [log] Content: M: 1-WIRE
+Send 
+[8640286] [log] Content: M: 1-WIRE
+Send 
+[8660286] [log] Content: M: 1-WIRE
+Send 
+[8680286] [log] Content: M: 1-WIRE
+Send 
+[8700286] [log] Content: M: 1-WIRE
+Send 
+[8720286] [log] Content: M: 1-WIRE
+Send 
+[8740286] [log] Content: M: 1-WIRE
+Send 
+[8760286] [log] Content: M: 1-WIRE
+Send 
+[8780286] [log] Content: M: 1-WIRE
+Send 
+[8800286] [log] Content: M: 1-WIRE
+Send 
+[8820286] [log] Content: M: 1-WIRE
+Send 
+[8840286] [log] Content: M: 1-WIRE
+Send 
+[8860286] [log] Content: M: 1-WIRE
+Send 
+[8880286] [log] Content: M: 1-WIRE
+Send 
+[8900302] [log] Content: M: 1-WIRE
+Send 
+[8920286] [log] Content: M: 1-WIRE
+Send 
+[8940286] [log] Content: M: 1-WIRE
+Send 
+[8960286] [log] Content: M: 1-WIRE
+Send 
+[8980286] [log] Content: M: 1-WIRE
+Send 
+[9000286] [log] Content: M: 1-WIRE
+Send 
+[9020286] [log] Content: M: 1-WIRE
+Send 
+[9040286] [log] Content: M: 1-WIRE
+Send 
+[9060286] [log] Content: M: 1-WIRE
+Send 
+[9080286] [log] Content: M: 1-WIRE
+Send 
+[9100286] [log] Content: M: 1-WIRE
+Send 
+[9120286] [log] Content: M: 1-WIRE
+Send 
+[9140286] [log] Content: M: 1-WIRE
+Send 
+[9160286] [log] Content: M: 1-WIRE
+Send 
+[9180286] [log] Content: M: 1-WIRE
+Send 
+[9200286] [log] Content: M: 1-WIRE
+Send 
+[9220286] [log] Content: M: 1-WIRE
+Send 
+[9240286] [log] Content: M: 1-WIRE
+Send 
+[9260286] [log] Content: M: 1-WIRE
+Send 
+[9280286] [log] Content: M: 1-WIRE
+Send 
+[9300286] [log] Content: M: 1-WIRE
+Send 
+[9320286] [log] Content: M: 1-WIRE
+Send 
+[9340286] [log] Content: M: 1-WIRE
+Send 
+[9360286] [log] Content: M: 1-WIRE
+Send 
+[9380286] [log] Content: M: 1-WIRE
+Send 
+[9400302] [log] Content: M: 1-WIRE
+Send 
+[9420286] [log] Content: M: 1-WIRE
+Send 
+[9440286] [log] Content: M: 1-WIRE
+Send 
+[9460286] [log] Content: M: 1-WIRE
+Send 
+[9480286] [log] Content: M: 1-WIRE
+Send 
+[9500286] [log] Content: M: 1-WIRE
+Send 
+[9520286] [log] Content: M: 1-WIRE
+Send 
+[9540286] [log] Content: M: 1-WIRE
+Send 
+[9560286] [log] Content: M: 1-WIRE
+Send 
+[9580286] [log] Content: M: 1-WIRE
+Send 
+[9600286] [log] Content: M: 1-WIRE
+Send 
+[9620286] [log] Content: M: 1-WIRE
+Send 
+[9640286] [log] Content: M: 1-WIRE
+Send 
+[9660286] [log] Content: M: 1-WIRE
+Send 
+[9680286] [log] Content: M: 1-WIRE
+Send 
+[9700286] [log] Content: M: 1-WIRE
+Send 
+[9720286] [log] Content: M: 1-WIRE
+Send 
+[9740286] [log] Content: M: 1-WIRE
+Send 
+[9760286] [log] Content: M: 1-WIRE
+Send 
+[9780286] [log] Content: M: 1-WIRE
+Send 
+[9800286] [log] Content: M: 1-WIRE
+Send 
+[9820286] [log] Content: M: 1-WIRE
+Send 
+[9840286] [log] Content: M: 1-WIRE
+Send 
+[9860286] [log] Content: M: 1-WIRE
+Send 
+[9880286] [log] Content: M: 1-WIRE
+Send 
+[9900302] [log] Content: M: 1-WIRE
+Send 
+[9920286] [log] Content: M: 1-WIRE
+Send 
+[9940286] [log] Content: M: 1-WIRE
+Send 
+[9960286] [log] Content: M: 1-WIRE
+Send 
+[9980286] [log] Content: M: 1-WIRE
+Send 
+[10000286] [log] Content: M: 1-WIRE
+Send 
+[10020286] [log] Content: M: 1-WIRE
+Send 
+[10040286] [log] Content: M: 1-WIRE
+Send 
+[10060286] [log] Content: M: 1-WIRE
+Send 
+[10080286] [log] Content: M: 1-WIRE
+Send 
+[10100286] [log] Content: M: 1-WIRE
+Send 
+[10120286] [log] Content: M: 1-WIRE
+Send 
+[10140286] [log] Content: M: 1-WIRE
+Send 
+[10160286] [log] Content: M: 1-WIRE
+Send 
+[10180286] [log] Content: M: 1-WIRE
+Send 
+[10200286] [log] Content: M: 1-WIRE
+Send 
+[10220286] [log] Content: M: 1-WIRE
+Send 
+[10240286] [log] Content: M: 1-WIRE
+Send 
+[10260286] [log] Content: M: 1-WIRE
+Send 
+[10280286] [log] Content: M: 1-WIRE
+Send 
+[10300286] [log] Content: M: 1-WIRE
+Send 
+[10320286] [log] Content: M: 1-WIRE
+Send 
+[10340286] [log] Content: M: 1-WIRE
+Send 
+[10360286] [log] Content: M: 1-WIRE
+Send 
+[10380286] [log] Content: M: 1-WIRE
+Send 
+[10400302] [log] Content: M: 1-WIRE
+Send 
+[10420286] [log] Content: M: 1-WIRE
+Send 
+[10440286] [log] Content: M: 1-WIRE
+Send 
+[10460286] [log] Content: M: 1-WIRE
+Send 
+[10480286] [log] Content: M: 1-WIRE
+Send 
+[10500286] [log] Content: M: 1-WIRE
+Send 
+[10520286] [log] Content: M: 1-WIRE
+Send 
+[10540286] [log] Content: M: 1-WIRE
+Send 
+[10560286] [log] Content: M: 1-WIRE
+Send 
+[10580286] [log] Content: M: 1-WIRE
+Send 
+[10600286] [log] Content: M: 1-WIRE
+Send 
+[10620286] [log] Content: M: 1-WIRE
+Send 
+[10640286] [log] Content: M: 1-WIRE
+Send 
+[10660286] [log] Content: M: 1-WIRE
+Send 
+[10680286] [log] Content: M: 1-WIRE
+Send 
+[10700286] [log] Content: M: 1-WIRE
+Send 
+[10720286] [log] Content: M: 1-WIRE
+Send 
+[10740286] [log] Content: M: 1-WIRE
+Send 
+[10760286] [log] Content: M: 1-WIRE
+Send 
+[10780286] [log] Content: M: 1-WIRE
+Send 
+[10800286] [log] Content: M: 1-WIRE
+Send 
+[10820286] [log] Content: M: 1-WIRE
+Send 
+[10840286] [log] Content: M: 1-WIRE
+Send 
+[10860286] [log] Content: M: 1-WIRE
+Send 
+[10880286] [log] Content: M: 1-WIRE
+Send 
+[10900302] [log] Content: M: 1-WIRE
+Send 
+[10920286] [log] Content: M: 1-WIRE
+Send 
+[10940286] [log] Content: M: 1-WIRE
+Send 
+[10960286] [log] Content: M: 1-WIRE
+Send 
+[10980286] [log] Content: M: 1-WIRE
+Send 
+[11000286] [log] Content: M: 1-WIRE
+Send 
+[11020286] [log] Content: M: 1-WIRE
+Send 
+[11040286] [log] Content: M: 1-WIRE
+Send 
+[11060286] [log] Content: M: 1-WIRE
+Send 
+[11080286] [log] Content: M: 1-WIRE
+Send 
+[11100286] [log] Content: M: 1-WIRE
+Send 
+[11120286] [log] Content: M: 1-WIRE
+Send 
+[11140286] [log] Content: M: 1-WIRE
+Send 
+[11160286] [log] Content: M: 1-WIRE
+Send 
+[11180286] [log] Content: M: 1-WIRE
+Send 
+[11200286] [log] Content: M: 1-WIRE
+Send 
+[11220286] [log] Content: M: 1-WIRE
+Send 
+[11240286] [log] Content: M: 1-WIRE
+Send 
+[11260286] [log] Content: M: 1-WIRE
+Send 
+[11280286] [log] Content: M: 1-WIRE
+Send 
+[11300286] [log] Content: M: 1-WIRE
+Send 
+[11320286] [log] Content: M: 1-WIRE
+Send 
+[11340286] [log] Content: M: 1-WIRE
+Send 
+[11360286] [log] Content: M: 1-WIRE
+Send 
+[11380286] [log] Content: M: 1-WIRE
+Send 
+[11400302] [log] Content: M: 1-WIRE
+Send 
+[11420286] [log] Content: M: 1-WIRE
+Send 
+[11440286] [log] Content: M: 1-WIRE
+Send 
+[11460286] [log] Content: M: 1-WIRE
+Send 
+[11480286] [log] Content: M: 1-WIRE
+Send 
+[11500286] [log] Content: M: 1-WIRE
+Send 
+[11520286] [log] Content: M: 1-WIRE
+Send 
+[11540286] [log] Content: M: 1-WIRE
+Send 
+[11560286] [log] Content: M: 1-WIRE
+Send 
+[11580286] [log] Content: M: 1-WIRE
+Send 
+[11600286] [log] Content: M: 1-WIRE
+Send 
+[11620286] [log] Content: M: 1-WIRE
+Send 
+[11640286] [log] Content: M: 1-WIRE
+Send 
+[11660286] [log] Content: M: 1-WIRE
+Send 
+[11680286] [log] Content: M: 1-WIRE
+Send 
+[11700286] [log] Content: M: 1-WIRE
+Send 
+[11720286] [log] Content: M: 1-WIRE
+Send 
+[11740286] [log] Content: M: 1-WIRE
+Send 
+[11760286] [log] Content: M: 1-WIRE
+Send 
+[11780286] [log] Content: M: 1-WIRE
+Send 
+[11800286] [log] Content: M: 1-WIRE
+Send 
+[11820286] [log] Content: M: 1-WIRE
+Send 
+[11840286] [log] Content: M: 1-WIRE
+Send 
+[11860286] [log] Content: M: 1-WIRE
+Send 
+[11880286] [log] Content: M: 1-WIRE
+Send 
+[11900302] [log] Content: M: 1-WIRE
+Send 
+[11920286] [log] Content: M: 1-WIRE
+Send 
+[11940286] [log] Content: M: 1-WIRE
+Send 
+[11960286] [log] Content: M: 1-WIRE
+Send 
+[11980286] [log] Content: M: 1-WIRE
+Send 
+[12000286] [log] Content: M: 1-WIRE
+Send 
+[12020286] [log] Content: M: 1-WIRE
+Send 
+[12040286] [log] Content: M: 1-WIRE
+Send 
+[12060286] [log] Content: M: 1-WIRE
+Send 
+[12080286] [log] Content: M: 1-WIRE
+Send 
+[12100286] [log] Content: M: 1-WIRE
+Send 
+[12120286] [log] Content: M: 1-WIRE
+Send 
+[12140286] [log] Content: M: 1-WIRE
+Send 
+[12160286] [log] Content: M: 1-WIRE
+Send 
+[12180286] [log] Content: M: 1-WIRE
+Send 
+[12200286] [log] Content: M: 1-WIRE
+Send 
+[12220286] [log] Content: M: 1-WIRE
+Send 
+[12240286] [log] Content: M: 1-WIRE
+Send 
+[12260286] [log] Content: M: 1-WIRE
+Send 
+[12280286] [log] Content: M: 1-WIRE
+Send 
+[12300286] [log] Content: M: 1-WIRE
+Send 
+[12320286] [log] Content: M: 1-WIRE
+Send 
+[12340286] [log] Content: M: 1-WIRE
+Send 
+[12360286] [log] Content: M: 1-WIRE
+Send 
+[12380286] [log] Content: M: 1-WIRE
+Send 
+[12400302] [log] Content: M: 1-WIRE
+Send 
+[12420286] [log] Content: M: 1-WIRE
+Send 
+[12440286] [log] Content: M: 1-WIRE
+Send 
+[12460286] [log] Content: M: 1-WIRE
+Send 
+[12480286] [log] Content: M: 1-WIRE
+Send 
+[12500286] [log] Content: M: 1-WIRE
+Send 
+[12520286] [log] Content: M: 1-WIRE
+Send 
+[12540286] [log] Content: M: 1-WIRE
+Send 
+[12560286] [log] Content: M: 1-WIRE
+Send 
+[12580286] [log] Content: M: 1-WIRE
+Send 
+[12600286] [log] Content: M: 1-WIRE
+Send 
+[12620286] [log] Content: M: 1-WIRE
+Send 
+[12640286] [log] Content: M: 1-WIRE
+Send 
+[12660286] [log] Content: M: 1-WIRE
+Send 
+[12680286] [log] Content: M: 1-WIRE
+Send 
+[12700286] [log] Content: M: 1-WIRE
+Send 
+[12720286] [log] Content: M: 1-WIRE
+Send 
+[12740286] [log] Content: M: 1-WIRE
+Send 
+[12760286] [log] Content: M: 1-WIRE
+Send 
+[12780286] [log] Content: M: 1-WIRE
+Send 
+[12800286] [log] Content: M: 1-WIRE
+Send 
+[12820286] [log] Content: M: 1-WIRE
+Send 
+[12840286] [log] Content: M: 1-WIRE
+Send 
+[12860286] [log] Content: M: 1-WIRE
+Send 
+[12880286] [log] Content: M: 1-WIRE
+Send 
+[12900302] [log] Content: M: 1-WIRE
+Send 
+[12920286] [log] Content: M: 1-WIRE
+Send 
+[12940286] [log] Content: M: 1-WIRE
+Send 
+[12960286] [log] Content: M: 1-WIRE
+Send 
+[12980286] [log] Content: M: 1-WIRE
+Send 
+[13000286] [log] Content: M: 1-WIRE
+Send 
+[13020286] [log] Content: M: 1-WIRE
+Send 
+[13040286] [log] Content: M: 1-WIRE
+Send 
+[13060286] [log] Content: M: 1-WIRE
+Send 
+[13080286] [log] Content: M: 1-WIRE
+Send 
+[13100286] [log] Content: M: 1-WIRE
+Send 
+[13120286] [log] Content: M: 1-WIRE
+Send 
+[13140286] [log] Content: M: 1-WIRE
+Send 
+[13160286] [log] Content: M: 1-WIRE
+Send 
+[13180286] [log] Content: M: 1-WIRE
+Send 
+[13200286] [log] Content: M: 1-WIRE
+Send 
+[13220286] [log] Content: M: 1-WIRE
+Send 
+[13240286] [log] Content: M: 1-WIRE
+Send 
+[13260286] [log] Content: M: 1-WIRE
+Send 
+[13280286] [log] Content: M: 1-WIRE
+Send 
+[13300286] [log] Content: M: 1-WIRE
+Send 
+[13320286] [log] Content: M: 1-WIRE
+Send 
+[13340286] [log] Content: M: 1-WIRE
+Send 
+[13360286] [log] Content: M: 1-WIRE
+Send 
+[13380286] [log] Content: M: 1-WIRE
+Send 
+[13400302] [log] Content: M: 1-WIRE
+Send 
+[13420286] [log] Content: M: 1-WIRE
+Send 
+[13440286] [log] Content: M: 1-WIRE
+Send 
+[13460286] [log] Content: M: 1-WIRE
+Send 
+[13480286] [log] Content: M: 1-WIRE
+Send 
+[13500286] [log] Content: M: 1-WIRE
+Send 
+[13520286] [log] Content: M: 1-WIRE
+Send 
+[13540286] [log] Content: M: 1-WIRE
+Send 
+[13560286] [log] Content: M: 1-WIRE
+Send 
+[13580286] [log] Content: M: 1-WIRE
+Send 
+[13600286] [log] Content: M: 1-WIRE
+Send 
+[13620286] [log] Content: M: 1-WIRE
+Send 
+[13640286] [log] Content: M: 1-WIRE
+Send 
+[13660286] [log] Content: M: 1-WIRE
+Send 
+[13680286] [log] Content: M: 1-WIRE
+Send 
+[13700286] [log] Content: M: 1-WIRE
+Send 
+[13720286] [log] Content: M: 1-WIRE
+Send 
+[13740286] [log] Content: M: 1-WIRE
+Send 
+[13760286] [log] Content: M: 1-WIRE
+Send 
+[13780286] [log] Content: M: 1-WIRE
+Send 
+[13800286] [log] Content: M: 1-WIRE
+Send 
+[13820286] [log] Content: M: 1-WIRE
+Send 
+[13840286] [log] Content: M: 1-WIRE
+Send 
+[13860286] [log] Content: M: 1-WIRE
+Send 
+[13880286] [log] Content: M: 1-WIRE
+Send 
+[13900302] [log] Content: M: 1-WIRE
+Send 
+[13920286] [log] Content: M: 1-WIRE
+Send 
+[13940286] [log] Content: M: 1-WIRE
+Send 
+[13960286] [log] Content: M: 1-WIRE
+Send 
+[13980286] [log] Content: M: 1-WIRE
+Send 
+[14000286] [log] Content: M: 1-WIRE
+Send 
+[14020286] [log] Content: M: 1-WIRE
+Send 
+[14040286] [log] Content: M: 1-WIRE
+Send 
+[14060286] [log] Content: M: 1-WIRE
+Send 
+[14080286] [log] Content: M: 1-WIRE
+Send 
+[14100286] [log] Content: M: 1-WIRE
+Send 
+[14120286] [log] Content: M: 1-WIRE
+Send 
+[14140286] [log] Content: M: 1-WIRE
+Send 
+[14160286] [log] Content: M: 1-WIRE
+Send 
+[14180286] [log] Content: M: 1-WIRE
+Send 
+[14200286] [log] Content: M: 1-WIRE
+Send 
+[14220286] [log] Content: M: 1-WIRE
+Send 
+[14240286] [log] Content: M: 1-WIRE
+Send 
+[14260286] [log] Content: M: 1-WIRE
+Send 
+[14280286] [log] Content: M: 1-WIRE
+Send 
+[14300286] [log] Content: M: 1-WIRE
+Send 
+[14320286] [log] Content: M: 1-WIRE
+Send 
+[14340286] [log] Content: M: 1-WIRE
+Send 
+[14360286] [log] Content: M: 1-WIRE
+Send 
+[14380286] [log] Content: M: 1-WIRE
+Send 
+[14400302] [log] Content: M: 1-WIRE
+Send 
+[14420286] [log] Content: M: 1-WIRE
+Send 
+[14440286] [log] Content: M: 1-WIRE
+Send 
+[14460286] [log] Content: M: 1-WIRE
+Send 
+[14480286] [log] Content: M: 1-WIRE
+Send 
+[14500286] [log] Content: M: 1-WIRE
+Send 
+[14520286] [log] Content: M: 1-WIRE
+Send 
+[14540286] [log] Content: M: 1-WIRE
+Send 
+[14560286] [log] Content: M: 1-WIRE
+Send 
+[14580286] [log] Content: M: 1-WIRE
+Send 
+[14600286] [log] Content: M: 1-WIRE
+Send 
+[14620286] [log] Content: M: 1-WIRE
+Send 
+[14640286] [log] Content: M: 1-WIRE
+Send 
+[14660286] [log] Content: M: 1-WIRE
+Send 
+[14680286] [log] Content: M: 1-WIRE
+Send 
+[14700286] [log] Content: M: 1-WIRE
+Send 
+[14720286] [log] Content: M: 1-WIRE
+Send 
+[14740286] [log] Content: M: 1-WIRE
+Send 
+[14760286] [log] Content: M: 1-WIRE
+Send 
+[14780286] [log] Content: M: 1-WIRE
+Send 
+[14800286] [log] Content: M: 1-WIRE
+Send 
+[14820286] [log] Content: M: 1-WIRE
+Send 
+[14840286] [log] Content: M: 1-WIRE
+Send 
+[14860286] [log] Content: M: 1-WIRE
+Send 
+[14880286] [log] Content: M: 1-WIRE
+Send 
+[14900302] [log] Content: M: 1-WIRE
+Send 
+[14920286] [log] Content: M: 1-WIRE
+Send 
+[14940286] [log] Content: M: 1-WIRE
+Send 
+[14960286] [log] Content: M: 1-WIRE
+Send 
+[14980286] [log] Content: M: 1-WIRE
+Send 
+[15000286] [log] Content: M: 1-WIRE
+Send 
+[15020286] [log] Content: M: 1-WIRE
+Send 
+[15040286] [log] Content: M: 1-WIRE
+Send 
+[15060286] [log] Content: M: 1-WIRE
+Send 
+[15080286] [log] Content: M: 1-WIRE
+Send 
+[15100286] [log] Content: M: 1-WIRE
+Send 
+[15120286] [log] Content: M: 1-WIRE
+Send 
+[15140286] [log] Content: M: 1-WIRE
+Send 
+[15160286] [log] Content: M: 1-WIRE
+Send 
+[15180286] [log] Content: M: 1-WIRE
+Send 
+[15200286] [log] Content: M: 1-WIRE
+Send 
+[15220286] [log] Content: M: 1-WIRE
+Send 
+[15240286] [log] Content: M: 1-WIRE
+Send 
+[15260286] [log] Content: M: 1-WIRE
+Send 
+[15280286] [log] Content: M: 1-WIRE
+Send 
+[15300286] [log] Content: M: 1-WIRE
+Send 
+[15320286] [log] Content: M: 1-WIRE
+Send 
+[15340286] [log] Content: M: 1-WIRE
+Send 
+[15360286] [log] Content: M: 1-WIRE
+Send 
+[15380286] [log] Content: M: 1-WIRE
+Send 
+[15400302] [log] Content: M: 1-WIRE
+Send 
+[15420286] [log] Content: M: 1-WIRE
+Send 
+[15440286] [log] Content: M: 1-WIRE
+Send 
+[15460286] [log] Content: M: 1-WIRE
+Send 
+[15480286] [log] Content: M: 1-WIRE
+Send 
+[15500286] [log] Content: M: 1-WIRE
+Send 
+[15520286] [log] Content: M: 1-WIRE
+Send 
+[15540286] [log] Content: M: 1-WIRE
+Send 
+[15560286] [log] Content: M: 1-WIRE
+Send 
+[15580286] [log] Content: M: 1-WIRE
+Send 
+[15600286] [log] Content: M: 1-WIRE
+Send 
+[15620286] [log] Content: M: 1-WIRE
+Send 
+[15640286] [log] Content: M: 1-WIRE
+Send 
+[15660286] [log] Content: M: 1-WIRE
+Send 
+[15680286] [log] Content: M: 1-WIRE
+Send 
+[15700286] [log] Content: M: 1-WIRE
+Send 
+[15720286] [log] Content: M: 1-WIRE
+Send 
+[15740286] [log] Content: M: 1-WIRE
+Send 
+[15760286] [log] Content: M: 1-WIRE
+Send 
+[15780286] [log] Content: M: 1-WIRE
+Send 
+[15800286] [log] Content: M: 1-WIRE
+Send 
+[15820286] [log] Content: M: 1-WIRE
+Send 
+[15840286] [log] Content: M: 1-WIRE
+Send 
+[15860286] [log] Content: M: 1-WIRE
+Send 
+[15880286] [log] Content: M: 1-WIRE
+Send 
+[15900302] [log] Content: M: 1-WIRE
+Send 
+[15920286] [log] Content: M: 1-WIRE
+Send 
+[15940286] [log] Content: M: 1-WIRE
+Send 
+[15960286] [log] Content: M: 1-WIRE
+Send 
+[15980286] [log] Content: M: 1-WIRE
+Send 
+[16000286] [log] Content: M: 1-WIRE
+Send 
+[16020286] [log] Content: M: 1-WIRE
+Send 
+[16040286] [log] Content: M: 1-WIRE
+Send 
+[16060286] [log] Content: M: 1-WIRE
+Send 
+[16080286] [log] Content: M: 1-WIRE
+Send 
+[16100286] [log] Content: M: 1-WIRE
+Send 
+[16120286] [log] Content: M: 1-WIRE
+Send 
+[16140286] [log] Content: M: 1-WIRE
+Send 
+[16160286] [log] Content: M: 1-WIRE
+Send 
+[16180286] [log] Content: M: 1-WIRE
+Send 
+[16200286] [log] Content: M: 1-WIRE
+Send 
+[16220286] [log] Content: M: 1-WIRE
+Send 
+[16240286] [log] Content: M: 1-WIRE
+Send 
+[16260286] [log] Content: M: 1-WIRE
+Send 
+[16280286] [log] Content: M: 1-WIRE
+Send 
+[16300286] [log] Content: M: 1-WIRE
+Send 
+[16320286] [log] Content: M: 1-WIRE
+Send 
+[16340286] [log] Content: M: 1-WIRE
+Send 
+[16360286] [log] Content: M: 1-WIRE
+Send 
+[16380286] [log] Content: M: 1-WIRE
+Send 
+[16400302] [log] Content: M: 1-WIRE
+Send 
+[16420286] [log] Content: M: 1-WIRE
+Send 
+[16440286] [log] Content: M: 1-WIRE
+Send 
+[16460286] [log] Content: M: 1-WIRE
+Send 
+[16480286] [log] Content: M: 1-WIRE
+Send 
+[16500286] [log] Content: M: 1-WIRE
+Send 
+[16520286] [log] Content: M: 1-WIRE
+Send 
+[16540286] [log] Content: M: 1-WIRE
+Send 
+[16560286] [log] Content: M: 1-WIRE
+Send 
+[16580286] [log] Content: M: 1-WIRE
+Send 
+[16600286] [log] Content: M: 1-WIRE
+Send 
+[16620286] [log] Content: M: 1-WIRE
+Send 
+[16640286] [log] Content: M: 1-WIRE
+Send 
+[16660286] [log] Content: M: 1-WIRE
+Send 
+[16680286] [log] Content: M: 1-WIRE
+Send 
+[16700286] [log] Content: M: 1-WIRE
+Send 
+[16720286] [log] Content: M: 1-WIRE
+Send 
+[16740286] [log] Content: M: 1-WIRE
+Send 
+[16760286] [log] Content: M: 1-WIRE
+Send 
+[16780286] [log] Content: M: 1-WIRE
+Send 
+[16800286] [log] Content: M: 1-WIRE
+Send 
+[16820286] [log] Content: M: 1-WIRE
+Send 
+[16840286] [log] Content: M: 1-WIRE
+Send 
+[16860286] [log] Content: M: 1-WIRE
+Send 
+[16880286] [log] Content: M: 1-WIRE
+Send 
+[16900302] [log] Content: M: 1-WIRE
+Send 
+[16920286] [log] Content: M: 1-WIRE
+Send 
+[16940286] [log] Content: M: 1-WIRE
+Send 
+[16960286] [log] Content: M: 1-WIRE
+Send 
+[16980286] [log] Content: M: 1-WIRE
+Send 
+[17000286] [log] Content: M: 1-WIRE
+Send 
+[17020286] [log] Content: M: 1-WIRE
+Send 
+[17040286] [log] Content: M: 1-WIRE
+Send 
+[17060286] [log] Content: M: 1-WIRE
+Send 
+[17080286] [log] Content: M: 1-WIRE
+Send 
+[17100286] [log] Content: M: 1-WIRE
+Send 
+[17120286] [log] Content: M: 1-WIRE
+Send 
+[17140286] [log] Content: M: 1-WIRE
+Send 
+[17160286] [log] Content: M: 1-WIRE
+Send 
+[17180286] [log] Content: M: 1-WIRE
+Send 
+[17200286] [log] Content: M: 1-WIRE
+Send 
+[17220286] [log] Content: M: 1-WIRE
+Send 
+[17240286] [log] Content: M: 1-WIRE
+Send 
+[17260286] [log] Content: M: 1-WIRE
+Send 
+[17280286] [log] Content: M: 1-WIRE
+Send 
+[17300286] [log] Content: M: 1-WIRE
+Send 
+[17320286] [log] Content: M: 1-WIRE
+Send 
+[17340286] [log] Content: M: 1-WIRE
+Send 
+[17360286] [log] Content: M: 1-WIRE
+Send 
+[17380286] [log] Content: M: 1-WIRE
+Send 
+[17400302] [log] Content: M: 1-WIRE
+Send 
+[17420286] [log] Content: M: 1-WIRE
+Send 
+[17440286] [log] Content: M: 1-WIRE
+Send 
+[17460286] [log] Content: M: 1-WIRE
+Send 
+[17480286] [log] Content: M: 1-WIRE
+Send 
+[17500286] [log] Content: M: 1-WIRE
+Send 
+[17520286] [log] Content: M: 1-WIRE
+Send 
+[17540286] [log] Content: M: 1-WIRE
+Send 
+[17560286] [log] Content: M: 1-WIRE
+Send 
+[17580286] [log] Content: M: 1-WIRE
+Send 
+[17600286] [log] Content: M: 1-WIRE
+Send 
+[17620286] [log] Content: M: 1-WIRE
+Send 
+[17640286] [log] Content: M: 1-WIRE
+Send 
+[17660286] [log] Content: M: 1-WIRE
+Send 
+[17680286] [log] Content: M: 1-WIRE
+Send 
+[17700286] [log] Content: M: 1-WIRE
+Send 
+[17720286] [log] Content: M: 1-WIRE
+Send 
+[17740286] [log] Content: M: 1-WIRE
+Send 
+[17760286] [log] Content: M: 1-WIRE
+Send 
+[17780286] [log] Content: M: 1-WIRE
+Send 
+[17800286] [log] Content: M: 1-WIRE
+Send 
+[17820286] [log] Content: M: 1-WIRE
+Send 
+[17840286] [log] Content: M: 1-WIRE
+Send 
+[17860286] [log] Content: M: 1-WIRE
+Send 
+[17880286] [log] Content: M: 1-WIRE
+Send 
+[17900302] [log] Content: M: 1-WIRE
+Send 
+[17920286] [log] Content: M: 1-WIRE
+Send 
+[17940286] [log] Content: M: 1-WIRE
+Send 
+[17960286] [log] Content: M: 1-WIRE
+Send 
+[17980286] [log] Content: M: 1-WIRE
+Send 
+[18000286] [log] Content: M: 1-WIRE
+Send 
+[18020286] [log] Content: M: 1-WIRE
+Send 
+[18040286] [log] Content: M: 1-WIRE
+Send 
+[18060286] [log] Content: M: 1-WIRE
+Send 
+[18080286] [log] Content: M: 1-WIRE
+Send 
+[18100286] [log] Content: M: 1-WIRE
+Send 
+[18120286] [log] Content: M: 1-WIRE
+Send 
+[18140286] [log] Content: M: 1-WIRE
+Send 
+[18160286] [log] Content: M: 1-WIRE
+Send 
+[18180286] [log] Content: M: 1-WIRE
+Send 
+[18200286] [log] Content: M: 1-WIRE
+Send 
+[18220286] [log] Content: M: 1-WIRE
+Send 
+[18240286] [log] Content: M: 1-WIRE
+Send 
+[18260286] [log] Content: M: 1-WIRE
+Send 
+[18280286] [log] Content: M: 1-WIRE
+Send 
+[18300286] [log] Content: M: 1-WIRE
+Send 
+[18320286] [log] Content: M: 1-WIRE
+Send 
+[18340286] [log] Content: M: 1-WIRE
+Send 
+[18360286] [log] Content: M: 1-WIRE
+Send 
+[18380286] [log] Content: M: 1-WIRE
+Send 
+[18400302] [log] Content: M: 1-WIRE
+Send 
+[18420286] [log] Content: M: 1-WIRE
+Send 
+[18440286] [log] Content: M: 1-WIRE
+Send 
+[18460286] [log] Content: M: 1-WIRE
+Send 
+[18480286] [log] Content: M: 1-WIRE
+Send 
+[18500286] [log] Content: M: 1-WIRE
+Send 
+[18520286] [log] Content: M: 1-WIRE
+Send 
+[18540286] [log] Content: M: 1-WIRE
+Send 
+[18560286] [log] Content: M: 1-WIRE
+Send 
+[18580286] [log] Content: M: 1-WIRE
+Send 
+[18600286] [log] Content: M: 1-WIRE
+Send 
+[18620286] [log] Content: M: 1-WIRE
+Send 
+[18640286] [log] Content: M: 1-WIRE
+Send 
+[18660286] [log] Content: M: 1-WIRE
+Send 
+[18680286] [log] Content: M: 1-WIRE
+Send 
+[18700286] [log] Content: M: 1-WIRE
+Send 
+[18720286] [log] Content: M: 1-WIRE
+Send 
+[18740286] [log] Content: M: 1-WIRE
+Send 
+[18760286] [log] Content: M: 1-WIRE
+Send 
+[18780286] [log] Content: M: 1-WIRE
+Send 
+[18800286] [log] Content: M: 1-WIRE
+Send 
+[18820286] [log] Content: M: 1-WIRE
+Send 
+[18840286] [log] Content: M: 1-WIRE
+Send 
+[18860286] [log] Content: M: 1-WIRE
+Send 
+[18880286] [log] Content: M: 1-WIRE
+Send 
+[18900302] [log] Content: M: 1-WIRE
+Send 
+[18920286] [log] Content: M: 1-WIRE
+Send 
+[18940286] [log] Content: M: 1-WIRE
+Send 
+[18960286] [log] Content: M: 1-WIRE
+Send 
+[18980286] [log] Content: M: 1-WIRE
+Send 
+[19000286] [log] Content: M: 1-WIRE
+Send 
+[19020286] [log] Content: M: 1-WIRE
+Send 
+[19040286] [log] Content: M: 1-WIRE
+Send 
+[19060286] [log] Content: M: 1-WIRE
+Send 
+[19080286] [log] Content: M: 1-WIRE
+Send 
+[19100286] [log] Content: M: 1-WIRE
+Send 
+[19120286] [log] Content: M: 1-WIRE
+Send 
+[19140286] [log] Content: M: 1-WIRE
+Send 
+[19160286] [log] Content: M: 1-WIRE
+Send 
+[19180286] [log] Content: M: 1-WIRE
+Send 
+[19200286] [log] Content: M: 1-WIRE
+Send 
+[19220286] [log] Content: M: 1-WIRE
+Send 
+[19240286] [log] Content: M: 1-WIRE
+Send 
+[19260286] [log] Content: M: 1-WIRE
+Send 
+[19280286] [log] Content: M: 1-WIRE
+Send 
+[19300286] [log] Content: M: 1-WIRE
+Send 
+[19320286] [log] Content: M: 1-WIRE
+Send 
+[19340286] [log] Content: M: 1-WIRE
+Send 
+[19360286] [log] Content: M: 1-WIRE
+Send 
+[19380286] [log] Content: M: 1-WIRE
+Send 
+[19400302] [log] Content: M: 1-WIRE
+Send 
+[19420286] [log] Content: M: 1-WIRE
+Send 
+[19440286] [log] Content: M: 1-WIRE
+Send 
+[19460286] [log] Content: M: 1-WIRE
+Send 
+[19480286] [log] Content: M: 1-WIRE
+Send 
+[19500286] [log] Content: M: 1-WIRE
+Send 
+[19520286] [log] Content: M: 1-WIRE
+Send 
+[19540286] [log] Content: M: 1-WIRE
+Send 
+[19560286] [log] Content: M: 1-WIRE
+Send 
+[19580286] [log] Content: M: 1-WIRE
+Send 
+[19600286] [log] Content: M: 1-WIRE
+Send 
+[19620286] [log] Content: M: 1-WIRE
+Send 
+[19640286] [log] Content: M: 1-WIRE
+Send 
+[19660286] [log] Content: M: 1-WIRE
+Send 
+[19680286] [log] Content: M: 1-WIRE
+Send 
+[19700286] [log] Content: M: 1-WIRE
+Send 
+[19720286] [log] Content: M: 1-WIRE
+Send 
+[19740286] [log] Content: M: 1-WIRE
+Send 
+[19760286] [log] Content: M: 1-WIRE
+Send 
+[19780286] [log] Content: M: 1-WIRE
+Send 
+[19800286] [log] Content: M: 1-WIRE
+Send 
+[19820286] [log] Content: M: 1-WIRE
+Send 
+[19840286] [log] Content: M: 1-WIRE
+Send 
+[19860286] [log] Content: M: 1-WIRE
+Send 
+[19880286] [log] Content: M: 1-WIRE
+Send 
+[19900302] [log] Content: M: 1-WIRE
+Send 
+[19920286] [log] Content: M: 1-WIRE
+Send 
+[19940286] [log] Content: M: 1-WIRE
+Send 
+[19960286] [log] Content: M: 1-WIRE
+Send 
+[19980286] [log] Content: M: 1-WIRE
+Send 
+[20000286] [log] Content: M: 1-WIRE
+Send 
+[20020286] [log] Content: M: 1-WIRE
+Send 
+[20040286] [log] Content: M: 1-WIRE
+Send 
+[20060286] [log] Content: M: 1-WIRE
+Send 
+[20080286] [log] Content: M: 1-WIRE
+Send 
+[20100286] [log] Content: M: 1-WIRE
+Send 
+[20120286] [log] Content: M: 1-WIRE
+Send 
+[20140286] [log] Content: M: 1-WIRE
+Send 
+[20160286] [log] Content: M: 1-WIRE
+Send 
+[20180286] [log] Content: M: 1-WIRE
+Send 
+[20200286] [log] Content: M: 1-WIRE
+Send 
+[20220286] [log] Content: M: 1-WIRE
+Send 
+[20240286] [log] Content: M: 1-WIRE
+Send 
+[20260286] [log] Content: M: 1-WIRE
+Send 
+[20280286] [log] Content: M: 1-WIRE
+Send 
+[20300286] [log] Content: M: 1-WIRE
+Send 
+[20320286] [log] Content: M: 1-WIRE
+Send 
+[20340286] [log] Content: M: 1-WIRE
+Send 
+[20360286] [log] Content: M: 1-WIRE
+Send 
+[20380286] [log] Content: M: 1-WIRE
+Send 
+[20400302] [log] Content: M: 1-WIRE
+Send 
+[20420286] [log] Content: M: 1-WIRE
+Send 
+[20440286] [log] Content: M: 1-WIRE
+Send 
+[20460286] [log] Content: M: 1-WIRE
+Send 
+[20480286] [log] Content: M: 1-WIRE
+Send 
+[20500286] [log] Content: M: 1-WIRE
+Send 
+[20520286] [log] Content: M: 1-WIRE
+Send 
+[20540286] [log] Content: M: 1-WIRE
+Send 
+[20560286] [log] Content: M: 1-WIRE
+Send 
+[20580286] [log] Content: M: 1-WIRE
+Send 
+[20600286] [log] Content: M: 1-WIRE
+Send 
+[20620286] [log] Content: M: 1-WIRE
+Send 
+[20640286] [log] Content: M: 1-WIRE
+Send 
+[20660286] [log] Content: M: 1-WIRE
+Send 
+[20680286] [log] Content: M: 1-WIRE
+Send 
+[20700286] [log] Content: M: 1-WIRE
+Send 
+[20720286] [log] Content: M: 1-WIRE
+Send 
+[20740286] [log] Content: M: 1-WIRE
+Send 
+[20760286] [log] Content: M: 1-WIRE
+Send 
+[20780286] [log] Content: M: 1-WIRE
+Send 
+[20800286] [log] Content: M: 1-WIRE
+Send 
+[20820286] [log] Content: M: 1-WIRE
+Send 
+[20840286] [log] Content: M: 1-WIRE
+Send 
+[20860286] [log] Content: M: 1-WIRE
+Send 
+[20880286] [log] Content: M: 1-WIRE
+Send 
+[20900302] [log] Content: M: 1-WIRE
+Send 
+[20920286] [log] Content: M: 1-WIRE
+Send 
+[20940286] [log] Content: M: 1-WIRE
+Send 
+[20960286] [log] Content: M: 1-WIRE
+Send 
+[20980286] [log] Content: M: 1-WIRE
+Send 
+[21000286] [log] Content: M: 1-WIRE
+Send 
+[21020286] [log] Content: M: 1-WIRE
+Send 
+[21040286] [log] Content: M: 1-WIRE
+Send 
+[21060286] [log] Content: M: 1-WIRE
+Send 
+[21080286] [log] Content: M: 1-WIRE
+Send 
+[21100286] [log] Content: M: 1-WIRE
+Send 
+[21120286] [log] Content: M: 1-WIRE
+Send 
+[21140286] [log] Content: M: 1-WIRE
+Send 
+[21160286] [log] Content: M: 1-WIRE
+Send 
+[21180286] [log] Content: M: 1-WIRE
+Send 
+[21200286] [log] Content: M: 1-WIRE
+Send 
+[21220286] [log] Content: M: 1-WIRE
+Send 
+[21240286] [log] Content: M: 1-WIRE
+Send 
+[21260286] [log] Content: M: 1-WIRE
+Send 
+[21280286] [log] Content: M: 1-WIRE
+Send 
+[21300286] [log] Content: M: 1-WIRE
+Send 
+[21320286] [log] Content: M: 1-WIRE
+Send 
+[21340286] [log] Content: M: 1-WIRE
+Send 
+[21360286] [log] Content: M: 1-WIRE
+Send 
+[21380286] [log] Content: M: 1-WIRE
+Send 
+[21400302] [log] Content: M: 1-WIRE
+Send 
+[21420286] [log] Content: M: 1-WIRE
+Send 
+[21440286] [log] Content: M: 1-WIRE
+Send 
+[21460286] [log] Content: M: 1-WIRE
+Send 
+[21480286] [log] Content: M: 1-WIRE
+Send 
+[21500286] [log] Content: M: 1-WIRE
+Send 
+[21520286] [log] Content: M: 1-WIRE
+Send 
+[21540286] [log] Content: M: 1-WIRE
+Send 
+[21560286] [log] Content: M: 1-WIRE
+Send 
+[21580286] [log] Content: M: 1-WIRE
+Send 
+[21600286] [log] Content: M: 1-WIRE
+Send 
+[21620286] [log] Content: M: 1-WIRE
+Send 
+[21640286] [log] Content: M: 1-WIRE
+Send 
+[21660286] [log] Content: M: 1-WIRE
+Send 
+[21680286] [log] Content: M: 1-WIRE
+Send 
+[21700286] [log] Content: M: 1-WIRE
+Send 
+[21720286] [log] Content: M: 1-WIRE
+Send 
+[21740286] [log] Content: M: 1-WIRE
+Send 
+[21760286] [log] Content: M: 1-WIRE
+Send 
+[21780286] [log] Content: M: 1-WIRE
+Send 
+[21800286] [log] Content: M: 1-WIRE
+Send 
+[21820286] [log] Content: M: 1-WIRE
+Send 
+[21840286] [log] Content: M: 1-WIRE
+Send 
+[21860286] [log] Content: M: 1-WIRE
+Send 
+[21880286] [log] Content: M: 1-WIRE
+Send 
+[21900302] [log] Content: M: 1-WIRE
+Send 
+[21920286] [log] Content: M: 1-WIRE
+Send 
+[21940286] [log] Content: M: 1-WIRE
+Send 
+[21960286] [log] Content: M: 1-WIRE
+Send 
+[21980286] [log] Content: M: 1-WIRE
+Send 
+[22000286] [log] Content: M: 1-WIRE
+Send 
+[22020286] [log] Content: M: 1-WIRE
+Send 
+[22040286] [log] Content: M: 1-WIRE
+Send 
+[22060286] [log] Content: M: 1-WIRE
+Send 
+[22080286] [log] Content: M: 1-WIRE
+Send 
+[22100286] [log] Content: M: 1-WIRE
+Send 
+[22120286] [log] Content: M: 1-WIRE
+Send 
+[22140286] [log] Content: M: 1-WIRE
+Send 
+[22160286] [log] Content: M: 1-WIRE
+Send 
+[22180286] [log] Content: M: 1-WIRE
+Send 
+[22200286] [log] Content: M: 1-WIRE
+Send 
+[22220286] [log] Content: M: 1-WIRE
+Send 
+[22240286] [log] Content: M: 1-WIRE
+Send 
+[22260286] [log] Content: M: 1-WIRE
+Send 
+[22280286] [log] Content: M: 1-WIRE
+Send 
+[22300286] [log] Content: M: 1-WIRE
+Send 
+[22320286] [log] Content: M: 1-WIRE
+Send 
+[22340286] [log] Content: M: 1-WIRE
+Send 
+[22360286] [log] Content: M: 1-WIRE
+Send 
+[22380286] [log] Content: M: 1-WIRE
+Send 
+[22400302] [log] Content: M: 1-WIRE
+Send 
+[22420286] [log] Content: M: 1-WIRE
+Send 
+[22440286] [log] Content: M: 1-WIRE
+Send 
+[22460286] [log] Content: M: 1-WIRE
+Send 
+[22480286] [log] Content: M: 1-WIRE
+Send 
+[22500286] [log] Content: M: 1-WIRE
+Send 
+[22520286] [log] Content: M: 1-WIRE
+Send 
+[22540286] [log] Content: M: 1-WIRE
+Send 
+[22560286] [log] Content: M: 1-WIRE
+Send 
+[22580286] [log] Content: M: 1-WIRE
+Send 
+[22600286] [log] Content: M: 1-WIRE
+Send 
+[22620286] [log] Content: M: 1-WIRE
+Send 
+[22640286] [log] Content: M: 1-WIRE
+Send 
+[22660286] [log] Content: M: 1-WIRE
+Send 
+[22680286] [log] Content: M: 1-WIRE
+Send 
+[22700286] [log] Content: M: 1-WIRE
+Send 
+[22720286] [log] Content: M: 1-WIRE
+Send 
+[22740286] [log] Content: M: 1-WIRE
+Send 
+[22760286] [log] Content: M: 1-WIRE
+Send 
+[22780286] [log] Content: M: 1-WIRE
+Send 
+[22800286] [log] Content: M: 1-WIRE
+Send 
+[22820286] [log] Content: M: 1-WIRE
+Send 
+[22840286] [log] Content: M: 1-WIRE
+Send 
+[22860286] [log] Content: M: 1-WIRE
+Send 
+[22880286] [log] Content: M: 1-WIRE
+Send 
+[22900302] [log] Content: M: 1-WIRE
+Send 
+[22920286] [log] Content: M: 1-WIRE
+Send 
+[22940286] [log] Content: M: 1-WIRE
+Send 
+[22960286] [log] Content: M: 1-WIRE
+Send 
+[22980286] [log] Content: M: 1-WIRE
+Send 
+[23000286] [log] Content: M: 1-WIRE
+Send 
+[23020286] [log] Content: M: 1-WIRE
+Send 
+[23040286] [log] Content: M: 1-WIRE
+Send 
+[23060286] [log] Content: M: 1-WIRE
+Send 
+[23080286] [log] Content: M: 1-WIRE
+Send 
+[23100286] [log] Content: M: 1-WIRE
+Send 
+[23120286] [log] Content: M: 1-WIRE
+Send 
+[23140286] [log] Content: M: 1-WIRE
+Send 
+[23160286] [log] Content: M: 1-WIRE
+Send 
+[23180286] [log] Content: M: 1-WIRE
+Send 
+[23200286] [log] Content: M: 1-WIRE
+Send 
+[23220286] [log] Content: M: 1-WIRE
+Send 
+[23240286] [log] Content: M: 1-WIRE
+Send 
+[23260286] [log] Content: M: 1-WIRE
+Send 
+[23280286] [log] Content: M: 1-WIRE
+Send 
+[23300286] [log] Content: M: 1-WIRE
+Send 
+[23320286] [log] Content: M: 1-WIRE
+Send 
+[23340286] [log] Content: M: 1-WIRE
+Send 
+[23360286] [log] Content: M: 1-WIRE
+Send 
+[23380286] [log] Content: M: 1-WIRE
+Send 
+[23400302] [log] Content: M: 1-WIRE
+Send 
+[23420286] [log] Content: M: 1-WIRE
+Send 
+[23440286] [log] Content: M: 1-WIRE
+Send 
+[23460286] [log] Content: M: 1-WIRE
+Send 
+[23480286] [log] Content: M: 1-WIRE
+Send 
+[23500286] [log] Content: M: 1-WIRE
+Send 
+[23520286] [log] Content: M: 1-WIRE
+Send 
+[23540286] [log] Content: M: 1-WIRE
+Send 
+[23560286] [log] Content: M: 1-WIRE
+Send 
+[23580286] [log] Content: M: 1-WIRE
+Send 
+[23600286] [log] Content: M: 1-WIRE
+Send 
+[23620286] [log] Content: M: 1-WIRE
+Send 
+[23640286] [log] Content: M: 1-WIRE
+Send 
+[23660286] [log] Content: M: 1-WIRE
+Send 
+[23680286] [log] Content: M: 1-WIRE
+Send 
+[23700286] [log] Content: M: 1-WIRE
+Send 
+[23720286] [log] Content: M: 1-WIRE
+Send 
+[23740286] [log] Content: M: 1-WIRE
+Send 
+[23760286] [log] Content: M: 1-WIRE
+Send 
+[23780286] [log] Content: M: 1-WIRE
+Send 
+[23800286] [log] Content: M: 1-WIRE
+Send 
+[23820286] [log] Content: M: 1-WIRE
+Send 
+[23840286] [log] Content: M: 1-WIRE
+Send 
+[23860286] [log] Content: M: 1-WIRE
+Send 
+[23880286] [log] Content: M: 1-WIRE
+Send 
+[23900302] [log] Content: M: 1-WIRE
+Send 
+[23920286] [log] Content: M: 1-WIRE
+Send 
+[23940286] [log] Content: M: 1-WIRE
+Send 
+[23960286] [log] Content: M: 1-WIRE
+Send 
+[23980286] [log] Content: M: 1-WIRE
+Send 
+[24000286] [log] Content: M: 1-WIRE
+Send 
+[24020286] [log] Content: M: 1-WIRE
+Send 
+[24040286] [log] Content: M: 1-WIRE
+Send 
+[24060286] [log] Content: M: 1-WIRE
+Send 
+[24080286] [log] Content: M: 1-WIRE
+Send 
+[24100286] [log] Content: M: 1-WIRE
+Send 
+[24120286] [log] Content: M: 1-WIRE
+Send 
+[24140286] [log] Content: M: 1-WIRE
+Send 
+[24160286] [log] Content: M: 1-WIRE
+Send 
+[24180286] [log] Content: M: 1-WIRE
+Send 
+[24200286] [log] Content: M: 1-WIRE
+Send 
+[24220286] [log] Content: M: 1-WIRE
+Send 
+[24240286] [log] Content: M: 1-WIRE
+Send 
+[24260286] [log] Content: M: 1-WIRE
+Send 
+[24280286] [log] Content: M: 1-WIRE
+Send 
+[24300286] [log] Content: M: 1-WIRE
+Send 
+[24320286] [log] Content: M: 1-WIRE
+Send 
+[24340286] [log] Content: M: 1-WIRE
+Send 
+[24360286] [log] Content: M: 1-WIRE
+Send 
+[24380286] [log] Content: M: 1-WIRE
+Send 
+[24400302] [log] Content: M: 1-WIRE
+Send 
+[24420286] [log] Content: M: 1-WIRE
+Send 
+[24440286] [log] Content: M: 1-WIRE
+Send 
+[24460286] [log] Content: M: 1-WIRE
+Send 
+[24480286] [log] Content: M: 1-WIRE
+Send 
+[24500286] [log] Content: M: 1-WIRE
+Send 
+[24520286] [log] Content: M: 1-WIRE
+Send 
+[24540286] [log] Content: M: 1-WIRE
+Send 
+[24560286] [log] Content: M: 1-WIRE
+Send 
+[24580286] [log] Content: M: 1-WIRE
+Send 
+[24600286] [log] Content: M: 1-WIRE
+Send 
+[24620286] [log] Content: M: 1-WIRE
+Send 
+[24640286] [log] Content: M: 1-WIRE
+Send 
+[24660286] [log] Content: M: 1-WIRE
+Send 
+[24680286] [log] Content: M: 1-WIRE
+Send 
+[24700286] [log] Content: M: 1-WIRE
+Send 
+[24720286] [log] Content: M: 1-WIRE
+Send 
+[24740286] [log] Content: M: 1-WIRE
+Send 
+[24760286] [log] Content: M: 1-WIRE
+Send 
+[24780286] [log] Content: M: 1-WIRE
+Send 
+[24800286] [log] Content: M: 1-WIRE
+Send 
+[24820286] [log] Content: M: 1-WIRE
+Send 
+[24840286] [log] Content: M: 1-WIRE
+Send 
+[24860286] [log] Content: M: 1-WIRE
+Send 
+[24880286] [log] Content: M: 1-WIRE
+Send 
+[24900302] [log] Content: M: 1-WIRE
+Send 
+[24920286] [log] Content: M: 1-WIRE
+Send 
+[24940286] [log] Content: M: 1-WIRE
+Send 
+[24960286] [log] Content: M: 1-WIRE
+Send 
+[24980286] [log] Content: M: 1-WIRE
+Send 
+[25000286] [log] Content: M: 1-WIRE
+Send 
+[25020286] [log] Content: M: 1-WIRE
+Send 
+[25040286] [log] Content: M: 1-WIRE
+Send 
+[25060286] [log] Content: M: 1-WIRE
+Send 
+[25080286] [log] Content: M: 1-WIRE
+Send 
+[25100286] [log] Content: M: 1-WIRE
+Send 
+[25120286] [log] Content: M: 1-WIRE
+Send 
+[25140286] [log] Content: M: 1-WIRE
+Send 
+[25160286] [log] Content: M: 1-WIRE
+Send 
+[25180286] [log] Content: M: 1-WIRE
+Send 
+[25200286] [log] Content: M: 1-WIRE
+Send 
+[25220286] [log] Content: M: 1-WIRE
+Send 
+[25240286] [log] Content: M: 1-WIRE
+Send 
+[25260286] [log] Content: M: 1-WIRE
+Send 
+[25280286] [log] Content: M: 1-WIRE
+Send 
+[25300286] [log] Content: M: 1-WIRE
+Send 
+[25320286] [log] Content: M: 1-WIRE
+Send 
+[25340286] [log] Content: M: 1-WIRE
+Send 
+[25360286] [log] Content: M: 1-WIRE
+Send 
+[25380286] [log] Content: M: 1-WIRE
+Send 
+[25400302] [log] Content: M: 1-WIRE
+Send 
+[25420286] [log] Content: M: 1-WIRE
+Send 
+[25440286] [log] Content: M: 1-WIRE
+Send 
+[25460286] [log] Content: M: 1-WIRE
+Send 
+[25480286] [log] Content: M: 1-WIRE
+Send 
+[25500286] [log] Content: M: 1-WIRE
+Send 
+[25520286] [log] Content: M: 1-WIRE
+Send 
+[25540286] [log] Content: M: 1-WIRE
+Send 
+[25560286] [log] Content: M: 1-WIRE
+Send 
+[25580286] [log] Content: M: 1-WIRE
+Send 
+[25600286] [log] Content: M: 1-WIRE
+Send 
+[25620286] [log] Content: M: 1-WIRE
+Send 
+[25640286] [log] Content: M: 1-WIRE
+Send 
+[25660286] [log] Content: M: 1-WIRE
+Send 
+[25680286] [log] Content: M: 1-WIRE
+Send 
+[25700286] [log] Content: M: 1-WIRE
+Send 
+[25720286] [log] Content: M: 1-WIRE
+Send 
+[25740286] [log] Content: M: 1-WIRE
+Send 
+[25760286] [log] Content: M: 1-WIRE
+Send 
+[25780286] [log] Content: M: 1-WIRE
+Send 
+[25800286] [log] Content: M: 1-WIRE
+Send 
+[25820286] [log] Content: M: 1-WIRE
+Send 
+[25840286] [log] Content: M: 1-WIRE
+Send 
+[25860286] [log] Content: M: 1-WIRE
+Send 
+[25880286] [log] Content: M: 1-WIRE
+Send 
+[25900302] [log] Content: M: 1-WIRE
+Send 
+[25920286] [log] Content: M: 1-WIRE
+Send 
+[25940286] [log] Content: M: 1-WIRE
+Send 
+[25960286] [log] Content: M: 1-WIRE
+Send 
+[25980286] [log] Content: M: 1-WIRE
+Send 
+[26000286] [log] Content: M: 1-WIRE
+Send 
+[26020286] [log] Content: M: 1-WIRE
+Send 
+[26040286] [log] Content: M: 1-WIRE
+Send 
+[26060286] [log] Content: M: 1-WIRE
+Send 
+[26080286] [log] Content: M: 1-WIRE
+Send 
+[26100286] [log] Content: M: 1-WIRE
+Send 
+[26120286] [log] Content: M: 1-WIRE
+Send 
+[26140286] [log] Content: M: 1-WIRE
+Send 
+[26160286] [log] Content: M: 1-WIRE
+Send 
+[26180286] [log] Content: M: 1-WIRE
+Send 
+[26200286] [log] Content: M: 1-WIRE
+Send 
+[26220286] [log] Content: M: 1-WIRE
+Send 
+[26240286] [log] Content: M: 1-WIRE
+Send 
+[26260286] [log] Content: M: 1-WIRE
+Send 
+[26280286] [log] Content: M: 1-WIRE
+Send 
+[26300286] [log] Content: M: 1-WIRE
+Send 
+[26320286] [log] Content: M: 1-WIRE
+Send 
+[26340286] [log] Content: M: 1-WIRE
+Send 
+[26360286] [log] Content: M: 1-WIRE
+Send 
+[26380286] [log] Content: M: 1-WIRE
+Send 
+[26400302] [log] Content: M: 1-WIRE
+Send 
+[26420286] [log] Content: M: 1-WIRE
+Send 
+[26440286] [log] Content: M: 1-WIRE
+Send 
+[26460286] [log] Content: M: 1-WIRE
+Send 
+[26480286] [log] Content: M: 1-WIRE
+Send 
+[26500286] [log] Content: M: 1-WIRE
+Send 
+[26520286] [log] Content: M: 1-WIRE
+Send 
+[26540286] [log] Content: M: 1-WIRE
+Send 
+[26560286] [log] Content: M: 1-WIRE
+Send 
+[26580286] [log] Content: M: 1-WIRE
+Send 
+[26600286] [log] Content: M: 1-WIRE
+Send 
+[26620286] [log] Content: M: 1-WIRE
+Send 
+[26640286] [log] Content: M: 1-WIRE
+Send 
+[26660286] [log] Content: M: 1-WIRE
+Send 
+[26680286] [log] Content: M: 1-WIRE
+Send 
+[26700286] [log] Content: M: 1-WIRE
+Send 
+[26720286] [log] Content: M: 1-WIRE
+Send 
+[26740286] [log] Content: M: 1-WIRE
+Send 
+[26760286] [log] Content: M: 1-WIRE
+Send 
+[26780286] [log] Content: M: 1-WIRE
+Send 
+[26800286] [log] Content: M: 1-WIRE
+Send 
+[26820286] [log] Content: M: 1-WIRE
+Send 
+[26840286] [log] Content: M: 1-WIRE
+Send 
+[26860286] [log] Content: M: 1-WIRE
+Send 
+[26880286] [log] Content: M: 1-WIRE
+Send 
+[26900302] [log] Content: M: 1-WIRE
+Send 
+[26920286] [log] Content: M: 1-WIRE
+Send 
+[26940286] [log] Content: M: 1-WIRE
+Send 
+[26960286] [log] Content: M: 1-WIRE
+Send 
+[26980286] [log] Content: M: 1-WIRE
+Send 
+[27000286] [log] Content: M: 1-WIRE
+Send 
+[27020286] [log] Content: M: 1-WIRE
+Send 
+[27040286] [log] Content: M: 1-WIRE
+Send 
+[27060286] [log] Content: M: 1-WIRE
+Send 
+[27080286] [log] Content: M: 1-WIRE
+Send 
+[27100286] [log] Content: M: 1-WIRE
+Send 
+[27120286] [log] Content: M: 1-WIRE
+Send 
+[27140286] [log] Content: M: 1-WIRE
+Send 
+[27160286] [log] Content: M: 1-WIRE
+Send 
+[27180286] [log] Content: M: 1-WIRE
+Send 
+[27200286] [log] Content: M: 1-WIRE
+Send 
+[27220286] [log] Content: M: 1-WIRE
+Send 
+[27240286] [log] Content: M: 1-WIRE
+Send 
+[27260286] [log] Content: M: 1-WIRE
+Send 
+[27280286] [log] Content: M: 1-WIRE
+Send 
+[27300286] [log] Content: M: 1-WIRE
+Send 
+[27320286] [log] Content: M: 1-WIRE
+Send 
+[27340286] [log] Content: M: 1-WIRE
+Send 
+[27360286] [log] Content: M: 1-WIRE
+Send 
+[27380286] [log] Content: M: 1-WIRE
+Send 
+[27400302] [log] Content: M: 1-WIRE
+Send 
+[27420286] [log] Content: M: 1-WIRE
+Send 
+[27440286] [log] Content: M: 1-WIRE
+Send 
+[27460286] [log] Content: M: 1-WIRE
+Send 
+[27480286] [log] Content: M: 1-WIRE
+Send 
+[27500286] [log] Content: M: 1-WIRE
+Send 
+[27520286] [log] Content: M: 1-WIRE
+Send 
+[27540286] [log] Content: M: 1-WIRE
+Send 
+[27560286] [log] Content: M: 1-WIRE
+Send 
+[27580286] [log] Content: M: 1-WIRE
+Send 
+[27600286] [log] Content: M: 1-WIRE
+Send 
+[27620286] [log] Content: M: 1-WIRE
+Send 
+[27640286] [log] Content: M: 1-WIRE
+Send 
+[27660286] [log] Content: M: 1-WIRE
+Send 
+[27680286] [log] Content: M: 1-WIRE
+Send 
+[27700286] [log] Content: M: 1-WIRE
+Send 
+[27720286] [log] Content: M: 1-WIRE
+Send 
+[27740286] [log] Content: M: 1-WIRE
+Send 
+[27760286] [log] Content: M: 1-WIRE
+Send 
+[27780286] [log] Content: M: 1-WIRE
+Send 
+[27800286] [log] Content: M: 1-WIRE
+Send 
+[27820286] [log] Content: M: 1-WIRE
+Send 
+[27840286] [log] Content: M: 1-WIRE
+Send 
+[27860286] [log] Content: M: 1-WIRE
+Send 
+[27880286] [log] Content: M: 1-WIRE
+Send 
+[27900302] [log] Content: M: 1-WIRE
+Send 
+[27920286] [log] Content: M: 1-WIRE
+Send 
+[27940286] [log] Content: M: 1-WIRE
+Send 
+[27960286] [log] Content: M: 1-WIRE
+Send 
+[27980286] [log] Content: M: 1-WIRE
+Send 
+[28000286] [log] Content: M: 1-WIRE
+Send 
+[28020286] [log] Content: M: 1-WIRE
+Send 
+[28040286] [log] Content: M: 1-WIRE
+Send 
+[28060286] [log] Content: M: 1-WIRE
+Send 
+[28080286] [log] Content: M: 1-WIRE
+Send 
+[28100286] [log] Content: M: 1-WIRE
+Send 
+[28120286] [log] Content: M: 1-WIRE
+Send 
+[28140286] [log] Content: M: 1-WIRE
+Send 
+[28160286] [log] Content: M: 1-WIRE
+Send 
+[28180286] [log] Content: M: 1-WIRE
+Send 
+[28200286] [log] Content: M: 1-WIRE
+Send 
+[28220286] [log] Content: M: 1-WIRE
+Send 
+[28240286] [log] Content: M: 1-WIRE
+Send 
+[28260286] [log] Content: M: 1-WIRE
+Send 
+[28280286] [log] Content: M: 1-WIRE
+Send 
+[28300286] [log] Content: M: 1-WIRE
+Send 
+[28320286] [log] Content: M: 1-WIRE
+Send 
+[28340286] [log] Content: M: 1-WIRE
+Send 
+[28360286] [log] Content: M: 1-WIRE
+Send 
+[28380286] [log] Content: M: 1-WIRE
+Send 
+[28400302] [log] Content: M: 1-WIRE
+Send 
+[28420286] [log] Content: M: 1-WIRE
+Send 
+[28440286] [log] Content: M: 1-WIRE
+Send 
+[28460286] [log] Content: M: 1-WIRE
+Send 
+[28480286] [log] Content: M: 1-WIRE
+Send 
+[28500286] [log] Content: M: 1-WIRE
+Send 
+[28520286] [log] Content: M: 1-WIRE
+Send 
+[28540286] [log] Content: M: 1-WIRE
+Send 
+[28560286] [log] Content: M: 1-WIRE
+Send 
+[28580286] [log] Content: M: 1-WIRE
+Send 
+[28600286] [log] Content: M: 1-WIRE
+Send 
+[28620286] [log] Content: M: 1-WIRE
+Send 
+[28640286] [log] Content: M: 1-WIRE
+Send 
+[28660286] [log] Content: M: 1-WIRE
+Send 
+[28680286] [log] Content: M: 1-WIRE
+Send 
+[28700286] [log] Content: M: 1-WIRE
+Send 
+[28720286] [log] Content: M: 1-WIRE
+Send 
+[28740286] [log] Content: M: 1-WIRE
+Send 
+[28760286] [log] Content: M: 1-WIRE
+Send 
+[28780286] [log] Content: M: 1-WIRE
+Send 
+[28800286] [log] Content: M: 1-WIRE
+Send 
+[28820286] [log] Content: M: 1-WIRE
+Send 
+[28840286] [log] Content: M: 1-WIRE
+Send 
+[28860286] [log] Content: M: 1-WIRE
+Send 
+[28880286] [log] Content: M: 1-WIRE
+Send 
+[28900302] [log] Content: M: 1-WIRE
+Send 
+[28920286] [log] Content: M: 1-WIRE
+Send 
+[28940286] [log] Content: M: 1-WIRE
+Send 
+[28960286] [log] Content: M: 1-WIRE
+Send 
+[28980286] [log] Content: M: 1-WIRE
+Send 
+[29000286] [log] Content: M: 1-WIRE
+Send 
+[29020286] [log] Content: M: 1-WIRE
+Send 
+[29040286] [log] Content: M: 1-WIRE
+Send 
+[29060286] [log] Content: M: 1-WIRE
+Send 
+[29080286] [log] Content: M: 1-WIRE
+Send 
+[29100286] [log] Content: M: 1-WIRE
+Send 
+[29120286] [log] Content: M: 1-WIRE
+Send 
+[29140286] [log] Content: M: 1-WIRE
+Send 
+[29160286] [log] Content: M: 1-WIRE
+Send 
+[29180286] [log] Content: M: 1-WIRE
+Send 
+[29200286] [log] Content: M: 1-WIRE
+Send 
+[29220286] [log] Content: M: 1-WIRE
+Send 
+[29240286] [log] Content: M: 1-WIRE
+Send 
+[29260286] [log] Content: M: 1-WIRE
+Send 
+[29280286] [log] Content: M: 1-WIRE
+Send 
+[29300286] [log] Content: M: 1-WIRE
+Send 
+[29320286] [log] Content: M: 1-WIRE
+Send 
+[29340286] [log] Content: M: 1-WIRE
+Send 
+[29360286] [log] Content: M: 1-WIRE
+Send 
+[29380286] [log] Content: M: 1-WIRE
+Send 
+[29400302] [log] Content: M: 1-WIRE
+Send 
+[29420286] [log] Content: M: 1-WIRE
+Send 
+[29440286] [log] Content: M: 1-WIRE
+Send 
+[29460286] [log] Content: M: 1-WIRE
+Send 
+[29480286] [log] Content: M: 1-WIRE
+Send 
+[29500286] [log] Content: M: 1-WIRE
+Send 
+[29520286] [log] Content: M: 1-WIRE
+Send 
+[29540286] [log] Content: M: 1-WIRE
+Send 
+[29560286] [log] Content: M: 1-WIRE
+Send 
+[29580286] [log] Content: M: 1-WIRE
+Send 
+[29600286] [log] Content: M: 1-WIRE
+Send 
+[29620286] [log] Content: M: 1-WIRE
+Send 
+[29640286] [log] Content: M: 1-WIRE
+Send 
+[29660286] [log] Content: M: 1-WIRE
+Send 
+[29680286] [log] Content: M: 1-WIRE
+Send 
+[29700286] [log] Content: M: 1-WIRE
+Send 
+[29720286] [log] Content: M: 1-WIRE
+Send 
+[29740286] [log] Content: M: 1-WIRE
+Send 
+[29760286] [log] Content: M: 1-WIRE
+Send 
+[29780286] [log] Content: M: 1-WIRE
+Send 
+[29800286] [log] Content: M: 1-WIRE
+Send 
+[29820286] [log] Content: M: 1-WIRE
+Send 
+[29840286] [log] Content: M: 1-WIRE
+Send 
+[29860286] [log] Content: M: 1-WIRE
+Send 
+[29880286] [log] Content: M: 1-WIRE
+Send 
+[29900302] [log] Content: M: 1-WIRE
+Send 
+[29920286] [log] Content: M: 1-WIRE
+Send 
+[29940286] [log] Content: M: 1-WIRE
+Send 
+[29960286] [log] Content: M: 1-WIRE
+Send 
+[29980286] [log] Content: M: 1-WIRE
+Send 
+[30000286] [log] Content: M: 1-WIRE
+Send 
+[30020286] [log] Content: M: 1-WIRE
+Send 
+[30040286] [log] Content: M: 1-WIRE
+Send 
+[30060286] [log] Content: M: 1-WIRE
+Send 
+[30080286] [log] Content: M: 1-WIRE
+Send 
+[30100286] [log] Content: M: 1-WIRE
+Send 
+[30120286] [log] Content: M: 1-WIRE
+Send 
+[30140286] [log] Content: M: 1-WIRE
+Send 
+[30160286] [log] Content: M: 1-WIRE
+Send 
+[30180286] [log] Content: M: 1-WIRE
+Send 
+[30200286] [log] Content: M: 1-WIRE
+Send 
+[30220286] [log] Content: M: 1-WIRE
+Send 
+[30240286] [log] Content: M: 1-WIRE
+Send 
+[30260286] [log] Content: M: 1-WIRE
+Send 
+[30280286] [log] Content: M: 1-WIRE
+Send 
+[30300286] [log] Content: M: 1-WIRE
+Send 
+[30320286] [log] Content: M: 1-WIRE
+Send 
+[30340286] [log] Content: M: 1-WIRE
+Send 
+[30360286] [log] Content: M: 1-WIRE
+Send 
+[30380286] [log] Content: M: 1-WIRE
+Send 
+[30400302] [log] Content: M: 1-WIRE
+Send 
+[30420286] [log] Content: M: 1-WIRE
+Send 
+[30440286] [log] Content: M: 1-WIRE
+Send 
+[30460286] [log] Content: M: 1-WIRE
+Send 
+[30480286] [log] Content: M: 1-WIRE
+Send 
+[30500286] [log] Content: M: 1-WIRE
+Send 
+[30520286] [log] Content: M: 1-WIRE
+Send 
+[30540286] [log] Content: M: 1-WIRE
+Send 
+[30560286] [log] Content: M: 1-WIRE
+Send 
+[30580286] [log] Content: M: 1-WIRE
+Send 
+[30600286] [log] Content: M: 1-WIRE
+Send 
+[30620286] [log] Content: M: 1-WIRE
+Send 
+[30640286] [log] Content: M: 1-WIRE
+Send 
+[30660286] [log] Content: M: 1-WIRE
+Send 
+[30680286] [log] Content: M: 1-WIRE
+Send 
+[30700286] [log] Content: M: 1-WIRE
+Send 
+[30720286] [log] Content: M: 1-WIRE
+Send 
+[30740286] [log] Content: M: 1-WIRE
+Send 
+[30760286] [log] Content: M: 1-WIRE
+Send 
+[30780286] [log] Content: M: 1-WIRE
+Send 
+[30800286] [log] Content: M: 1-WIRE
+Send 
+[30820286] [log] Content: M: 1-WIRE
+Send 
+[30840286] [log] Content: M: 1-WIRE
+Send 
+[30860286] [log] Content: M: 1-WIRE
+Send 
+[30880286] [log] Content: M: 1-WIRE
+Send 
+[30900302] [log] Content: M: 1-WIRE
+Send 
+[30920286] [log] Content: M: 1-WIRE
+Send 
+[30940286] [log] Content: M: 1-WIRE
+Send 
+[30960286] [log] Content: M: 1-WIRE
+Send 
+[30980286] [log] Content: M: 1-WIRE
+Send 
+[31000286] [log] Content: M: 1-WIRE
+Send 
+[31020286] [log] Content: M: 1-WIRE
+Send 
+[31040286] [log] Content: M: 1-WIRE
+Send 
+[31060286] [log] Content: M: 1-WIRE
+Send 
+[31080286] [log] Content: M: 1-WIRE
+Send 
+[31100286] [log] Content: M: 1-WIRE
+Send 
+[31120286] [log] Content: M: 1-WIRE
+Send 
+[31140286] [log] Content: M: 1-WIRE
+Send 
+[31160286] [log] Content: M: 1-WIRE
+Send 
+[31180286] [log] Content: M: 1-WIRE
+Send 
+[31200286] [log] Content: M: 1-WIRE
+Send 
+[31220286] [log] Content: M: 1-WIRE
+Send 
+[31240286] [log] Content: M: 1-WIRE
+Send 
+[31260286] [log] Content: M: 1-WIRE
+Send 
+[31280286] [log] Content: M: 1-WIRE
+Send 
+[31300286] [log] Content: M: 1-WIRE
+Send 
+[31320286] [log] Content: M: 1-WIRE
+Send 
+[31340286] [log] Content: M: 1-WIRE
+Send 
+[31360286] [log] Content: M: 1-WIRE
+Send 
+[31380286] [log] Content: M: 1-WIRE
+Send 
+[31400302] [log] Content: M: 1-WIRE
+Send 
+[31420286] [log] Content: M: 1-WIRE
+Send 
+[31440286] [log] Content: M: 1-WIRE
+Send 
+[31460286] [log] Content: M: 1-WIRE
+Send 
+[31480286] [log] Content: M: 1-WIRE
+Send 
+[31500286] [log] Content: M: 1-WIRE
+Send 
+[31520286] [log] Content: M: 1-WIRE
+Send 
+[31540286] [log] Content: M: 1-WIRE
+Send 
+[31560286] [log] Content: M: 1-WIRE
+Send 
+[31580286] [log] Content: M: 1-WIRE
+Send 
+[31600286] [log] Content: M: 1-WIRE
+Send 
+[31620286] [log] Content: M: 1-WIRE
+Send 
+[31640286] [log] Content: M: 1-WIRE
+Send 
+[31660286] [log] Content: M: 1-WIRE
+Send 
+[31680286] [log] Content: M: 1-WIRE
+Send 
+[31700286] [log] Content: M: 1-WIRE
+Send 
+[31720286] [log] Content: M: 1-WIRE
+Send 
+[31740286] [log] Content: M: 1-WIRE
+Send 
+[31760286] [log] Content: M: 1-WIRE
+Send 
+[31780286] [log] Content: M: 1-WIRE
+Send 
+[31800286] [log] Content: M: 1-WIRE
+Send 
+[31820286] [log] Content: M: 1-WIRE
+Send 
+[31840286] [log] Content: M: 1-WIRE
+Send 
+[31860286] [log] Content: M: 1-WIRE
+Send 
+[31880286] [log] Content: M: 1-WIRE
+Send 
+[31900302] [log] Content: M: 1-WIRE
+Send 
+[31920286] [log] Content: M: 1-WIRE
+Send 
+[31940286] [log] Content: M: 1-WIRE
+Send 
+[31960286] [log] Content: M: 1-WIRE
+Send 
+[31980286] [log] Content: M: 1-WIRE
+Send 
+[32000286] [log] Content: M: 1-WIRE
+Send 
+[32020286] [log] Content: M: 1-WIRE
+Send 
+[32040286] [log] Content: M: 1-WIRE
+Send 
+[32060286] [log] Content: M: 1-WIRE
+Send 
+[32080286] [log] Content: M: 1-WIRE
+Send 
+[32100286] [log] Content: M: 1-WIRE
+Send 
+[32120286] [log] Content: M: 1-WIRE
+Send 
+[32140286] [log] Content: M: 1-WIRE
+Send 
+[32160286] [log] Content: M: 1-WIRE
+Send 
+[32180286] [log] Content: M: 1-WIRE
+Send 
+[32200286] [log] Content: M: 1-WIRE
+Send 
+[32220286] [log] Content: M: 1-WIRE
+Send 
+[32240286] [log] Content: M: 1-WIRE
+Send 
+[32260286] [log] Content: M: 1-WIRE
+Send 
+[32280286] [log] Content: M: 1-WIRE
+Send 
+[32300286] [log] Content: M: 1-WIRE
+Send 
+[32320286] [log] Content: M: 1-WIRE
+Send 
+[32340286] [log] Content: M: 1-WIRE
+Send 
+[32360286] [log] Content: M: 1-WIRE
+Send 
+[32380286] [log] Content: M: 1-WIRE
+Send 
+[32400302] [log] Content: M: 1-WIRE
+Send 
+[32420286] [log] Content: M: 1-WIRE
+Send 
+[32440286] [log] Content: M: 1-WIRE
+Send 
+[32460286] [log] Content: M: 1-WIRE
+Send 
+[32480286] [log] Content: M: 1-WIRE
+Send 
+[32500286] [log] Content: M: 1-WIRE
+Send 
+[32520286] [log] Content: M: 1-WIRE
+Send 
+[32540286] [log] Content: M: 1-WIRE
+Send 
+[32560286] [log] Content: M: 1-WIRE
+Send 
+[32580286] [log] Content: M: 1-WIRE
+Send 
+[32600286] [log] Content: M: 1-WIRE
+Send 
+[32620286] [log] Content: M: 1-WIRE
+Send 
+[32640286] [log] Content: M: 1-WIRE
+Send 
+[32660286] [log] Content: M: 1-WIRE
+Send 
+[32680286] [log] Content: M: 1-WIRE
+Send 
+[32700286] [log] Content: M: 1-WIRE
+Send 
+[32720286] [log] Content: M: 1-WIRE
+Send 
+[32740286] [log] Content: M: 1-WIRE
+Send 
+[32760286] [log] Content: M: 1-WIRE
+Send 
+[32780286] [log] Content: M: 1-WIRE
+Send 
+[32800286] [log] Content: M: 1-WIRE
+Send 
+[32820286] [log] Content: M: 1-WIRE
+Send 
+[32840286] [log] Content: M: 1-WIRE
+Send 
+[32860286] [log] Content: M: 1-WIRE
+Send 
+[32880286] [log] Content: M: 1-WIRE
+Send 
+[32900302] [log] Content: M: 1-WIRE
+Send 
+[32920286] [log] Content: M: 1-WIRE
+Send 
+[32940286] [log] Content: M: 1-WIRE
+Send 
+[32960286] [log] Content: M: 1-WIRE
+Send 
+[32980286] [log] Content: M: 1-WIRE
+Send 
+[33000286] [log] Content: M: 1-WIRE
+Send 
+[33020286] [log] Content: M: 1-WIRE
+Send 
+[33040286] [log] Content: M: 1-WIRE
+Send 
+[33060286] [log] Content: M: 1-WIRE
+Send 
+[33080286] [log] Content: M: 1-WIRE
+Send 
+[33100286] [log] Content: M: 1-WIRE
+Send 
+[33120286] [log] Content: M: 1-WIRE
+Send 
+[33140286] [log] Content: M: 1-WIRE
+Send 
+[33160286] [log] Content: M: 1-WIRE
+Send 
+[33180286] [log] Content: M: 1-WIRE
+Send 
+[33200286] [log] Content: M: 1-WIRE
+Send 
+[33220286] [log] Content: M: 1-WIRE
+Send 
+[33240286] [log] Content: M: 1-WIRE
+Send 
+[33260286] [log] Content: M: 1-WIRE
+Send 
+[33280286] [log] Content: M: 1-WIRE
+Send 
+[33300286] [log] Content: M: 1-WIRE
+Send 
+[33320286] [log] Content: M: 1-WIRE
+Send 
+[33340286] [log] Content: M: 1-WIRE
+Send 
+[33360286] [log] Content: M: 1-WIRE
+Send 
+[33380286] [log] Content: M: 1-WIRE
+Send 
+[33400302] [log] Content: M: 1-WIRE
+Send 
+[33420286] [log] Content: M: 1-WIRE
+Send 
+[33440286] [log] Content: M: 1-WIRE
+Send 
+[33460286] [log] Content: M: 1-WIRE
+Send 
+[33480286] [log] Content: M: 1-WIRE
+Send 
+[33500286] [log] Content: M: 1-WIRE
+Send 
+[33520286] [log] Content: M: 1-WIRE
+Send 
+[33540286] [log] Content: M: 1-WIRE
+Send 
+[33560286] [log] Content: M: 1-WIRE
+Send 
+[33580286] [log] Content: M: 1-WIRE
+Send 
+[33600286] [log] Content: M: 1-WIRE
+Send 
+[33620286] [log] Content: M: 1-WIRE
+Send 
+[33640286] [log] Content: M: 1-WIRE
+Send 
+[33660286] [log] Content: M: 1-WIRE
+Send 
+[33680286] [log] Content: M: 1-WIRE
+Send 
+[33700286] [log] Content: M: 1-WIRE
+Send 
+[33720286] [log] Content: M: 1-WIRE
+Send 
+[33740286] [log] Content: M: 1-WIRE
+Send 
+[33760286] [log] Content: M: 1-WIRE
+Send 
+[33780286] [log] Content: M: 1-WIRE
+Send 
+[33800286] [log] Content: M: 1-WIRE
+Send 
+[33820286] [log] Content: M: 1-WIRE
+Send 
+[33840286] [log] Content: M: 1-WIRE
+Send 
+[33860286] [log] Content: M: 1-WIRE
+Send 
+[33880286] [log] Content: M: 1-WIRE
+Send 
+[33900302] [log] Content: M: 1-WIRE
+Send 
+[33920286] [log] Content: M: 1-WIRE
+Send 
+[33940286] [log] Content: M: 1-WIRE
+Send 
+[33960286] [log] Content: M: 1-WIRE
+Send 
+[33980286] [log] Content: M: 1-WIRE
+Send 
+[34000286] [log] Content: M: 1-WIRE
+Send 
+[34020286] [log] Content: M: 1-WIRE
+Send 
+[34040286] [log] Content: M: 1-WIRE
+Send 
+[34060286] [log] Content: M: 1-WIRE
+Send 
+[34080286] [log] Content: M: 1-WIRE
+Send 
+[34100286] [log] Content: M: 1-WIRE
+Send 
+[34120286] [log] Content: M: 1-WIRE
+Send 
+[34140286] [log] Content: M: 1-WIRE
+Send 
+[34160286] [log] Content: M: 1-WIRE
+Send 
+[34180286] [log] Content: M: 1-WIRE
+Send 
+[34200286] [log] Content: M: 1-WIRE
+Send 
+[34220286] [log] Content: M: 1-WIRE
+Send 
+[34240286] [log] Content: M: 1-WIRE
+Send 
+[34260286] [log] Content: M: 1-WIRE
+Send 
+[34280286] [log] Content: M: 1-WIRE
+Send 
+[34300286] [log] Content: M: 1-WIRE
+Send 
+[34320286] [log] Content: M: 1-WIRE
+Send 
+[34340286] [log] Content: M: 1-WIRE
+Send 
+[34360286] [log] Content: M: 1-WIRE
+Send 
+[34380286] [log] Content: M: 1-WIRE
+Send 
+[34400302] [log] Content: M: 1-WIRE
+Send 
+[34420286] [log] Content: M: 1-WIRE
+Send 
+[34440286] [log] Content: M: 1-WIRE
+Send 
+[34460286] [log] Content: M: 1-WIRE
+Send 
+[34480286] [log] Content: M: 1-WIRE
+Send 
+[34500286] [log] Content: M: 1-WIRE
+Send 
+[34520286] [log] Content: M: 1-WIRE
+Send 
+[34540286] [log] Content: M: 1-WIRE
+Send 
+[34560286] [log] Content: M: 1-WIRE
+Send 
+[34580286] [log] Content: M: 1-WIRE
+Send 
+[34600286] [log] Content: M: 1-WIRE
+Send 
+[34620286] [log] Content: M: 1-WIRE
+Send 
+[34640286] [log] Content: M: 1-WIRE
+Send 
+[34660286] [log] Content: M: 1-WIRE
+Send 
+[34680286] [log] Content: M: 1-WIRE
+Send 
+[34700286] [log] Content: M: 1-WIRE
+Send 
+[34720286] [log] Content: M: 1-WIRE
+Send 
+[34740286] [log] Content: M: 1-WIRE
+Send 
+[34760286] [log] Content: M: 1-WIRE
+Send 
+[34780286] [log] Content: M: 1-WIRE
+Send 
+[34800286] [log] Content: M: 1-WIRE
+Send 
+[34820286] [log] Content: M: 1-WIRE
+Send 
+[34840286] [log] Content: M: 1-WIRE
+Send 
+[34860286] [log] Content: M: 1-WIRE
+Send 
+[34880286] [log] Content: M: 1-WIRE
+Send 
+[34900302] [log] Content: M: 1-WIRE
+Send 
+[34920286] [log] Content: M: 1-WIRE
+Send 
+[34940286] [log] Content: M: 1-WIRE
+Send 
+[34960286] [log] Content: M: 1-WIRE
+Send 
+[34980286] [log] Content: M: 1-WIRE
+Send 
+[35000286] [log] Content: M: 1-WIRE
+Send 
+[35020286] [log] Content: M: 1-WIRE
+Send 
+[35040286] [log] Content: M: 1-WIRE
+Send 
+[35060286] [log] Content: M: 1-WIRE
+Send 
+[35080286] [log] Content: M: 1-WIRE
+Send 
+[35100286] [log] Content: M: 1-WIRE
+Send 
+[35120286] [log] Content: M: 1-WIRE
+Send 
+[35140286] [log] Content: M: 1-WIRE
+Send 
+[35160286] [log] Content: M: 1-WIRE
+Send 
+[35180286] [log] Content: M: 1-WIRE
+Send 
+[35200286] [log] Content: M: 1-WIRE
+Send 
+[35220286] [log] Content: M: 1-WIRE
+Send 
+[35240286] [log] Content: M: 1-WIRE
+Send 
+[35260286] [log] Content: M: 1-WIRE
+Send 
+[35280286] [log] Content: M: 1-WIRE
+Send 
+[35300286] [log] Content: M: 1-WIRE
+Send 
+[35320286] [log] Content: M: 1-WIRE
+Send 
+[35340286] [log] Content: M: 1-WIRE
+Send 
+[35360286] [log] Content: M: 1-WIRE
+Send 
+[35380286] [log] Content: M: 1-WIRE
+Send 
+[35400302] [log] Content: M: 1-WIRE
+Send 
+[35420286] [log] Content: M: 1-WIRE
+Send 
+[35440286] [log] Content: M: 1-WIRE
+Send 
+[35460286] [log] Content: M: 1-WIRE
+Send 
+[35480286] [log] Content: M: 1-WIRE
+Send 
+[35500286] [log] Content: M: 1-WIRE
+Send 
+[35520286] [log] Content: M: 1-WIRE
+Send 
+[35540286] [log] Content: M: 1-WIRE
+Send 
+[35560286] [log] Content: M: 1-WIRE
+Send 
+[35580286] [log] Content: M: 1-WIRE
+Send 
+[35600286] [log] Content: M: 1-WIRE
+Send 
+[35620286] [log] Content: M: 1-WIRE
+Send 
+[35640286] [log] Content: M: 1-WIRE
+Send 
+[35660286] [log] Content: M: 1-WIRE
+Send 
+[35680286] [log] Content: M: 1-WIRE
+Send 
+[35700286] [log] Content: M: 1-WIRE
+Send 
+[35720286] [log] Content: M: 1-WIRE
+Send 
+[35740286] [log] Content: M: 1-WIRE
+Send 
+[35760286] [log] Content: M: 1-WIRE
+Send 
+[35780286] [log] Content: M: 1-WIRE
+Send 
+[35800286] [log] Content: M: 1-WIRE
+Send 
+[35820286] [log] Content: M: 1-WIRE
+Send 
+[35840286] [log] Content: M: 1-WIRE
+Send 
+[35860286] [log] Content: M: 1-WIRE
+Send 
+[35880286] [log] Content: M: 1-WIRE
+Send 
+[35900302] [log] Content: M: 1-WIRE
+Send 
+[35920286] [log] Content: M: 1-WIRE
+Send 
+[35940286] [log] Content: M: 1-WIRE
+Send 
+[35960286] [log] Content: M: 1-WIRE
+Send 
+[35980286] [log] Content: M: 1-WIRE
+Send 
+[36000286] [log] Content: M: 1-WIRE
+Send 
+[36020286] [log] Content: M: 1-WIRE
+Send 
+[36040286] [log] Content: M: 1-WIRE
+Send 
+[36060286] [log] Content: M: 1-WIRE
+Send 
+[36080286] [log] Content: M: 1-WIRE
+Send 
+[36100286] [log] Content: M: 1-WIRE
+Send 
+[36120286] [log] Content: M: 1-WIRE
+Send 
+[36140286] [log] Content: M: 1-WIRE
+Send 
+[36160286] [log] Content: M: 1-WIRE
+Send 
+[36180286] [log] Content: M: 1-WIRE
+Send 
+[36200286] [log] Content: M: 1-WIRE
+Send 
+[36220286] [log] Content: M: 1-WIRE
+Send 
+[36240286] [log] Content: M: 1-WIRE
+Send 
+[36260286] [log] Content: M: 1-WIRE
+Send 
+[36280286] [log] Content: M: 1-WIRE
+Send 
+[36300286] [log] Content: M: 1-WIRE
+Send 
+[36320286] [log] Content: M: 1-WIRE
+Send 
+[36340286] [log] Content: M: 1-WIRE
+Send 
+[36360286] [log] Content: M: 1-WIRE
+Send 
+[36380286] [log] Content: M: 1-WIRE
+Send 
+[36400302] [log] Content: M: 1-WIRE
+Send 
+[36420286] [log] Content: M: 1-WIRE
+Send 
+[36440286] [log] Content: M: 1-WIRE
+Send 
+[36460286] [log] Content: M: 1-WIRE
+Send 
+[36480286] [log] Content: M: 1-WIRE
+Send 
+[36500286] [log] Content: M: 1-WIRE
+Send 
+[36520286] [log] Content: M: 1-WIRE
+Send 
+[36540286] [log] Content: M: 1-WIRE
+Send 
+[36560286] [log] Content: M: 1-WIRE
+Send 
+[36580286] [log] Content: M: 1-WIRE
+Send 
+[36600286] [log] Content: M: 1-WIRE
+Send 
+[36620286] [log] Content: M: 1-WIRE
+Send 
+[36640286] [log] Content: M: 1-WIRE
+Send 
+[36660286] [log] Content: M: 1-WIRE
+Send 
+[36680286] [log] Content: M: 1-WIRE
+Send 
+[36700286] [log] Content: M: 1-WIRE
+Send 
+[36720286] [log] Content: M: 1-WIRE
+Send 
+[36740286] [log] Content: M: 1-WIRE
+Send 
+[36760286] [log] Content: M: 1-WIRE
+Send 
+[36780286] [log] Content: M: 1-WIRE
+Send 
+[36800286] [log] Content: M: 1-WIRE
+Send 
+[36820286] [log] Content: M: 1-WIRE
+Send 
+[36840286] [log] Content: M: 1-WIRE
+Send 
+[36860286] [log] Content: M: 1-WIRE
+Send 
+[36880286] [log] Content: M: 1-WIRE
+Send 
+[36900302] [log] Content: M: 1-WIRE
+Send 
+[36920286] [log] Content: M: 1-WIRE
+Send 
+[36940286] [log] Content: M: 1-WIRE
+Send 
+[36960286] [log] Content: M: 1-WIRE
+Send 
+[36980286] [log] Content: M: 1-WIRE
+Send 
+[37000286] [log] Content: M: 1-WIRE
+Send 
+[37020286] [log] Content: M: 1-WIRE
+Send 
+[37040286] [log] Content: M: 1-WIRE
+Send 
+[37060286] [log] Content: M: 1-WIRE
+Send 
+[37080286] [log] Content: M: 1-WIRE
+Send 
+[37100286] [log] Content: M: 1-WIRE
+Send 
+[37120286] [log] Content: M: 1-WIRE
+Send 
+[37140286] [log] Content: M: 1-WIRE
+Send 
+[37160286] [log] Content: M: 1-WIRE
+Send 
+[37180286] [log] Content: M: 1-WIRE
+Send 
+[37200286] [log] Content: M: 1-WIRE
+Send 
+[37220286] [log] Content: M: 1-WIRE
+Send 
+[37240286] [log] Content: M: 1-WIRE
+Send 
+[37260286] [log] Content: M: 1-WIRE
+Send 
+[37280286] [log] Content: M: 1-WIRE
+Send 
+[37300286] [log] Content: M: 1-WIRE
+Send 
+[37320286] [log] Content: M: 1-WIRE
+Send 
+[37340286] [log] Content: M: 1-WIRE
+Send 
+[37360286] [log] Content: M: 1-WIRE
+Send 
+[37380286] [log] Content: M: 1-WIRE
+Send 
+[37400302] [log] Content: M: 1-WIRE
+Send 
+[37420286] [log] Content: M: 1-WIRE
+Send 
+[37440286] [log] Content: M: 1-WIRE
+Send 
+[37460286] [log] Content: M: 1-WIRE
+Send 
+[37480286] [log] Content: M: 1-WIRE
+Send 
+[37500286] [log] Content: M: 1-WIRE
+Send 
+[37520286] [log] Content: M: 1-WIRE
+Send 
+[37540286] [log] Content: M: 1-WIRE
+Send 
+[37560286] [log] Content: M: 1-WIRE
+Send 
+[37580286] [log] Content: M: 1-WIRE
+Send 
+[37600286] [log] Content: M: 1-WIRE
+Send 
+[37620286] [log] Content: M: 1-WIRE
+Send 
+[37640286] [log] Content: M: 1-WIRE
+Send 
+[37660286] [log] Content: M: 1-WIRE
+Send 
+[37680286] [log] Content: M: 1-WIRE
+Send 
+[37700286] [log] Content: M: 1-WIRE
+Send 
+[37720286] [log] Content: M: 1-WIRE
+Send 
+[37740286] [log] Content: M: 1-WIRE
+Send 
+[37760286] [log] Content: M: 1-WIRE
+Send 
+[37780286] [log] Content: M: 1-WIRE
+Send 
+[37800286] [log] Content: M: 1-WIRE
+Send 
+[37820286] [log] Content: M: 1-WIRE
+Send 
+[37840286] [log] Content: M: 1-WIRE
+Send 
+[37860286] [log] Content: M: 1-WIRE
+Send 
+[37880286] [log] Content: M: 1-WIRE
+Send 
+[37900302] [log] Content: M: 1-WIRE
+Send 
+[37920286] [log] Content: M: 1-WIRE
+Send 
+[37940286] [log] Content: M: 1-WIRE
+Send 
+[37960286] [log] Content: M: 1-WIRE
+Send 
+[37980286] [log] Content: M: 1-WIRE
+Send 
+[38000286] [log] Content: M: 1-WIRE
+Send 
+[38020286] [log] Content: M: 1-WIRE
+Send 
+[38040286] [log] Content: M: 1-WIRE
+Send 
+[38060286] [log] Content: M: 1-WIRE
+Send 
+[38080286] [log] Content: M: 1-WIRE
+Send 
+[38100286] [log] Content: M: 1-WIRE
+Send 
+[38120286] [log] Content: M: 1-WIRE
+Send 
+[38140286] [log] Content: M: 1-WIRE
+Send 
+[38160286] [log] Content: M: 1-WIRE
+Send 
+[38180286] [log] Content: M: 1-WIRE
+Send 
+[38200286] [log] Content: M: 1-WIRE
+Send 
+[38220286] [log] Content: M: 1-WIRE
+Send 
+[38240286] [log] Content: M: 1-WIRE
+Send 
+[38260286] [log] Content: M: 1-WIRE
+Send 
+[38280286] [log] Content: M: 1-WIRE
+Send 
+[38300286] [log] Content: M: 1-WIRE
+Send 
+[38320286] [log] Content: M: 1-WIRE
+Send 
+[38340286] [log] Content: M: 1-WIRE
+Send 
+[38360286] [log] Content: M: 1-WIRE
+Send 
+[38380286] [log] Content: M: 1-WIRE
+Send 
+[38400302] [log] Content: M: 1-WIRE
+Send 
+[38420286] [log] Content: M: 1-WIRE
+Send 
+[38440286] [log] Content: M: 1-WIRE
+Send 
+[38460286] [log] Content: M: 1-WIRE
+Send 
+[38480286] [log] Content: M: 1-WIRE
+Send 
+[38500286] [log] Content: M: 1-WIRE
+Send 
+[38520286] [log] Content: M: 1-WIRE
+Send 
+[38540286] [log] Content: M: 1-WIRE
+Send 
+[38560286] [log] Content: M: 1-WIRE
+Send 
+[38580286] [log] Content: M: 1-WIRE
+Send 
+[38600286] [log] Content: M: 1-WIRE
+Send 
+[38620286] [log] Content: M: 1-WIRE
+Send 
+[38640286] [log] Content: M: 1-WIRE
+Send 
+[38660286] [log] Content: M: 1-WIRE
+Send 
+[38680286] [log] Content: M: 1-WIRE
+Send 
+[38700286] [log] Content: M: 1-WIRE
+Send 
+[38720286] [log] Content: M: 1-WIRE
+Send 
+[38740286] [log] Content: M: 1-WIRE
+Send 
+[38760286] [log] Content: M: 1-WIRE
+Send 
+[38780286] [log] Content: M: 1-WIRE
+Send 
+[38800286] [log] Content: M: 1-WIRE
+Send 
+[38820286] [log] Content: M: 1-WIRE
+Send 
+[38840286] [log] Content: M: 1-WIRE
+Send 
+[38860286] [log] Content: M: 1-WIRE
+Send 
+[38880286] [log] Content: M: 1-WIRE
+Send 
+[38900302] [log] Content: M: 1-WIRE
+Send 
+[38920286] [log] Content: M: 1-WIRE
+Send 
+[38940286] [log] Content: M: 1-WIRE
+Send 
+[38960286] [log] Content: M: 1-WIRE
+Send 
+[38980286] [log] Content: M: 1-WIRE
+Send 
+[39000286] [log] Content: M: 1-WIRE
+Send 
+[39020286] [log] Content: M: 1-WIRE
+Send 
+[39040286] [log] Content: M: 1-WIRE
+Send 
+[39060286] [log] Content: M: 1-WIRE
+Send 
+[39080286] [log] Content: M: 1-WIRE
+Send 
+[39100286] [log] Content: M: 1-WIRE
+Send 
+[39120286] [log] Content: M: 1-WIRE
+Send 
+[39140286] [log] Content: M: 1-WIRE
+Send 
+[39160286] [log] Content: M: 1-WIRE
+Send 
+[39180286] [log] Content: M: 1-WIRE
+Send 
+[39200286] [log] Content: M: 1-WIRE
+Send 
+[39220286] [log] Content: M: 1-WIRE
+Send 
+[39240286] [log] Content: M: 1-WIRE
+Send 
+[39260286] [log] Content: M: 1-WIRE
+Send 
+[39280286] [log] Content: M: 1-WIRE
+Send 
+[39300286] [log] Content: M: 1-WIRE
+Send 
+[39320286] [log] Content: M: 1-WIRE
+Send 
+[39340286] [log] Content: M: 1-WIRE
+Send 
+[39360286] [log] Content: M: 1-WIRE
+Send 
+[39380286] [log] Content: M: 1-WIRE
+Send 
+[39400302] [log] Content: M: 1-WIRE
+Send 
+[39420286] [log] Content: M: 1-WIRE
+Send 
+[39440286] [log] Content: M: 1-WIRE
+Send 
+[39460286] [log] Content: M: 1-WIRE
+Send 
+[39480286] [log] Content: M: 1-WIRE
+Send 
+[39500286] [log] Content: M: 1-WIRE
+Send 
+[39520286] [log] Content: M: 1-WIRE
+Send 
+[39540286] [log] Content: M: 1-WIRE
+Send 
+[39560286] [log] Content: M: 1-WIRE
+Send 
+[39580286] [log] Content: M: 1-WIRE
+Send 
+[39600286] [log] Content: M: 1-WIRE
+Send 
+[39620286] [log] Content: M: 1-WIRE
+Send 
+[39640286] [log] Content: M: 1-WIRE
+Send 
+[39660286] [log] Content: M: 1-WIRE
+Send 
+[39680286] [log] Content: M: 1-WIRE
+Send 
+[39700286] [log] Content: M: 1-WIRE
+Send 
+[39720286] [log] Content: M: 1-WIRE
+Send 
+[39740286] [log] Content: M: 1-WIRE
+Send 
+[39760286] [log] Content: M: 1-WIRE
+Send 
+[39780286] [log] Content: M: 1-WIRE
+Send 
+[39800286] [log] Content: M: 1-WIRE
+Send 
+[39820286] [log] Content: M: 1-WIRE
+Send 
+[39840286] [log] Content: M: 1-WIRE
+Send 
+[39860286] [log] Content: M: 1-WIRE
+Send 
+[39880286] [log] Content: M: 1-WIRE
+Send 
+[39900302] [log] Content: M: 1-WIRE
+Send 
+[39920286] [log] Content: M: 1-WIRE
+Send 
+[39940286] [log] Content: M: 1-WIRE
+Send 
+[39960286] [log] Content: M: 1-WIRE
+Send 
+[39980286] [log] Content: M: 1-WIRE
+Send 
+[40000286] [log] Content: M: 1-WIRE
+Send 
+[40020286] [log] Content: M: 1-WIRE
+Send 
+[40040286] [log] Content: M: 1-WIRE
+Send 
+[40060286] [log] Content: M: 1-WIRE
+Send 
+[40080286] [log] Content: M: 1-WIRE
+Send 
+[40100286] [log] Content: M: 1-WIRE
+Send 
+[40120286] [log] Content: M: 1-WIRE
+Send 
+[40140286] [log] Content: M: 1-WIRE
+Send 
+[40160286] [log] Content: M: 1-WIRE
+Send 
+[40180286] [log] Content: M: 1-WIRE
+Send 
+[40200286] [log] Content: M: 1-WIRE
+Send 
+[40220286] [log] Content: M: 1-WIRE
+Send 
+[40240286] [log] Content: M: 1-WIRE
+Send 
+[40260286] [log] Content: M: 1-WIRE
+Send 
+[40280286] [log] Content: M: 1-WIRE
+Send 
+[40300286] [log] Content: M: 1-WIRE
+Send 
+[40320286] [log] Content: M: 1-WIRE
+Send 
+[40340286] [log] Content: M: 1-WIRE
+Send 
+[40360286] [log] Content: M: 1-WIRE
+Send 
+[40380286] [log] Content: M: 1-WIRE
+Send 
+[40400302] [log] Content: M: 1-WIRE
+Send 
+[40420286] [log] Content: M: 1-WIRE
+Send 
+[40440286] [log] Content: M: 1-WIRE
+Send 
+[40460286] [log] Content: M: 1-WIRE
+Send 
+[40480286] [log] Content: M: 1-WIRE
+Send 
+[40500286] [log] Content: M: 1-WIRE
+Send 
+[40520286] [log] Content: M: 1-WIRE
+Send 
+[40540286] [log] Content: M: 1-WIRE
+Send 
+[40560286] [log] Content: M: 1-WIRE
+Send 
+[40580286] [log] Content: M: 1-WIRE
+Send 
+[40600286] [log] Content: M: 1-WIRE
+Send 
+[40620286] [log] Content: M: 1-WIRE
+Send 
+[40640286] [log] Content: M: 1-WIRE
+Send 
+[40660286] [log] Content: M: 1-WIRE
+Send 
+[40680286] [log] Content: M: 1-WIRE
+Send 
+[40700286] [log] Content: M: 1-WIRE
+Send 
+[40720286] [log] Content: M: 1-WIRE
+Send 
+[40740286] [log] Content: M: 1-WIRE
+Send 
+[40760286] [log] Content: M: 1-WIRE
+Send 
+[40780286] [log] Content: M: 1-WIRE
+Send 
+[40800286] [log] Content: M: 1-WIRE
+Send 
+[40820286] [log] Content: M: 1-WIRE
+Send 
+[40840286] [log] Content: M: 1-WIRE
+Send 
+[40860286] [log] Content: M: 1-WIRE
+Send 
+[40880286] [log] Content: M: 1-WIRE
+Send 
+[40900302] [log] Content: M: 1-WIRE
+Send 
+[40920286] [log] Content: M: 1-WIRE
+Send 
+[40940286] [log] Content: M: 1-WIRE
+Send 
+[40960286] [log] Content: M: 1-WIRE
+Send 
+[40980286] [log] Content: M: 1-WIRE
+Send 
+[41000286] [log] Content: M: 1-WIRE
+Send 
+[41020286] [log] Content: M: 1-WIRE
+Send 
+[41040286] [log] Content: M: 1-WIRE
+Send 
+[41060286] [log] Content: M: 1-WIRE
+Send 
+[41080286] [log] Content: M: 1-WIRE
+Send 
+[41100286] [log] Content: M: 1-WIRE
+Send 
+[41120286] [log] Content: M: 1-WIRE
+Send 
+[41140286] [log] Content: M: 1-WIRE
+Send 
+[41160286] [log] Content: M: 1-WIRE
+Send 
+[41180286] [log] Content: M: 1-WIRE
+Send 
+[41200286] [log] Content: M: 1-WIRE
+Send 
+[41220286] [log] Content: M: 1-WIRE
+Send 
+[41240286] [log] Content: M: 1-WIRE
+Send 
+[41260286] [log] Content: M: 1-WIRE
+Send 
+[41280286] [log] Content: M: 1-WIRE
+Send 
+[41300286] [log] Content: M: 1-WIRE
+Send 
+[41320286] [log] Content: M: 1-WIRE
+Send 
+[41340286] [log] Content: M: 1-WIRE
+Send 
+[41360286] [log] Content: M: 1-WIRE
+Send 
+[41380286] [log] Content: M: 1-WIRE
+Send 
+[41400302] [log] Content: M: 1-WIRE
+Send 
+[41420286] [log] Content: M: 1-WIRE
+Send 
+[41440286] [log] Content: M: 1-WIRE
+Send 
+[41460286] [log] Content: M: 1-WIRE
+Send 
+[41480286] [log] Content: M: 1-WIRE
+Send 
+[41500286] [log] Content: M: 1-WIRE
+Send 
+[41520286] [log] Content: M: 1-WIRE
+Send 
+[41540286] [log] Content: M: 1-WIRE
+Send 
+[41560286] [log] Content: M: 1-WIRE
+Send 
+[41580286] [log] Content: M: 1-WIRE
+Send 
+[41600286] [log] Content: M: 1-WIRE
+Send 
+[41620286] [log] Content: M: 1-WIRE
+Send 
+[41640286] [log] Content: M: 1-WIRE
+Send 
+[41660286] [log] Content: M: 1-WIRE
+Send 
+[41680286] [log] Content: M: 1-WIRE
+Send 
+[41700286] [log] Content: M: 1-WIRE
+Send 
+[41720286] [log] Content: M: 1-WIRE
+Send 
+[41740286] [log] Content: M: 1-WIRE
+Send 
+[41760286] [log] Content: M: 1-WIRE
+Send 
+[41780286] [log] Content: M: 1-WIRE
+Send 
+[41800286] [log] Content: M: 1-WIRE
+Send 
+[41820286] [log] Content: M: 1-WIRE
+Send 
+[41840286] [log] Content: M: 1-WIRE
+Send 
+[41860286] [log] Content: M: 1-WIRE
+Send 
+[41880286] [log] Content: M: 1-WIRE
+Send 
+[41900302] [log] Content: M: 1-WIRE
+Send 
+[41920286] [log] Content: M: 1-WIRE
+Send 
+[41940286] [log] Content: M: 1-WIRE
+Send 
+[41960286] [log] Content: M: 1-WIRE
+Send 
+[41980286] [log] Content: M: 1-WIRE
+Send 
+[42000286] [log] Content: M: 1-WIRE
+Send 
+[42020286] [log] Content: M: 1-WIRE
+Send 
+[42040286] [log] Content: M: 1-WIRE
+Send 
+[42060286] [log] Content: M: 1-WIRE
+Send 
+[42080286] [log] Content: M: 1-WIRE
+Send 
+[42100286] [log] Content: M: 1-WIRE
+Send 
+[42120286] [log] Content: M: 1-WIRE
+Send 
+[42140286] [log] Content: M: 1-WIRE
+Send 
+[42160286] [log] Content: M: 1-WIRE
+Send 
+[42180286] [log] Content: M: 1-WIRE
+Send 
+[42200286] [log] Content: M: 1-WIRE
+Send 
+[42220286] [log] Content: M: 1-WIRE
+Send 
+[42240286] [log] Content: M: 1-WIRE
+Send 
+[42260286] [log] Content: M: 1-WIRE
+Send 
+[42280286] [log] Content: M: 1-WIRE
+Send 
+[42300286] [log] Content: M: 1-WIRE
+Send 
+[42320286] [log] Content: M: 1-WIRE
+Send 
+[42340286] [log] Content: M: 1-WIRE
+Send 
+[42360286] [log] Content: M: 1-WIRE
+Send 
+[42380286] [log] Content: M: 1-WIRE
+Send 
+[42400302] [log] Content: M: 1-WIRE
+Send 
+[42420286] [log] Content: M: 1-WIRE
+Send 
+[42440286] [log] Content: M: 1-WIRE
+Send 
+[42460286] [log] Content: M: 1-WIRE
+Send 
+[42480286] [log] Content: M: 1-WIRE
+Send 
+[42500286] [log] Content: M: 1-WIRE
+Send 
+[42520286] [log] Content: M: 1-WIRE
+Send 
+[42540286] [log] Content: M: 1-WIRE
+Send 
+[42560286] [log] Content: M: 1-WIRE
+Send 
+[42580286] [log] Content: M: 1-WIRE
+Send 
+[42600286] [log] Content: M: 1-WIRE
+Send 
+[42620286] [log] Content: M: 1-WIRE
+Send 
+[42640286] [log] Content: M: 1-WIRE
+Send 
+[42660286] [log] Content: M: 1-WIRE
+Send 
+[42680286] [log] Content: M: 1-WIRE
+Send 
+[42700286] [log] Content: M: 1-WIRE
+Send 
+[42720286] [log] Content: M: 1-WIRE
+Send 
+[42740286] [log] Content: M: 1-WIRE
+Send 
+[42760286] [log] Content: M: 1-WIRE
+Send 
+[42780286] [log] Content: M: 1-WIRE
+Send 
+[42800286] [log] Content: M: 1-WIRE
+Send 
+[42820286] [log] Content: M: 1-WIRE
+Send 
+[42840286] [log] Content: M: 1-WIRE
+Send 
+[42860286] [log] Content: M: 1-WIRE
+Send 
+[42880286] [log] Content: M: 1-WIRE
+Send 
+[42900302] [log] Content: M: 1-WIRE
+Send 
+[42920286] [log] Content: M: 1-WIRE
+Send 
+[42940286] [log] Content: M: 1-WIRE
+Send 
+[42960286] [log] Content: M: 1-WIRE
+Send 
+[42980286] [log] Content: M: 1-WIRE
+Send 
+[43000286] [log] Content: M: 1-WIRE
+Send 
+[43020286] [log] Content: M: 1-WIRE
+Send 
+[43040286] [log] Content: M: 1-WIRE
+Send 
+[43060286] [log] Content: M: 1-WIRE
+Send 
+[43080286] [log] Content: M: 1-WIRE
+Send 
+[43100286] [log] Content: M: 1-WIRE
+Send 
+[43120286] [log] Content: M: 1-WIRE
+Send 
+[43140286] [log] Content: M: 1-WIRE
+Send 
+[43160286] [log] Content: M: 1-WIRE
+Send 
+[43180286] [log] Content: M: 1-WIRE
+Send 
+[43200286] [log] Content: M: 1-WIRE
+Send 
+[43220286] [log] Content: M: 1-WIRE
+Send 
+[43240286] [log] Content: M: 1-WIRE
+Send 
+[43260286] [log] Content: M: 1-WIRE
+Send 
+[43280286] [log] Content: M: 1-WIRE
+Send 
+[43300286] [log] Content: M: 1-WIRE
+Send 
+[43320286] [log] Content: M: 1-WIRE
+Send 
+[43340286] [log] Content: M: 1-WIRE
+Send 
+[43360286] [log] Content: M: 1-WIRE
+Send 
+[43380286] [log] Content: M: 1-WIRE
+Send 
+[43400302] [log] Content: M: 1-WIRE
+Send 
+[43420286] [log] Content: M: 1-WIRE
+Send 
+[43440286] [log] Content: M: 1-WIRE
+Send 
+[43460286] [log] Content: M: 1-WIRE
+Send 
+[43480286] [log] Content: M: 1-WIRE
+Send 
+[43500286] [log] Content: M: 1-WIRE
+Send 
+[43520286] [log] Content: M: 1-WIRE
+Send 
+[43540286] [log] Content: M: 1-WIRE
+Send 
+[43560286] [log] Content: M: 1-WIRE
+Send 
+[43580286] [log] Content: M: 1-WIRE
+Send 
+[43600286] [log] Content: M: 1-WIRE
+Send 
+[43620286] [log] Content: M: 1-WIRE
+Send 
+[43640286] [log] Content: M: 1-WIRE
+Send 
+[43660286] [log] Content: M: 1-WIRE
+Send 
+[43680286] [log] Content: M: 1-WIRE
+Send 
+[43700286] [log] Content: M: 1-WIRE
+Send 
+[43720286] [log] Content: M: 1-WIRE
+Send 
+[43740286] [log] Content: M: 1-WIRE
+Send 
+[43760286] [log] Content: M: 1-WIRE
+Send 
+[43780286] [log] Content: M: 1-WIRE
+Send 
+[43800286] [log] Content: M: 1-WIRE
+Send 
+[43820286] [log] Content: M: 1-WIRE
+Send 
+[43840286] [log] Content: M: 1-WIRE
+Send 
+[43860286] [log] Content: M: 1-WIRE
+Send 
+[43880286] [log] Content: M: 1-WIRE
+Send 
+[43900302] [log] Content: M: 1-WIRE
+Send 
+[43920286] [log] Content: M: 1-WIRE
+Send 
+[43940286] [log] Content: M: 1-WIRE
+Send 
+[43960286] [log] Content: M: 1-WIRE
+Send 
+[43980286] [log] Content: M: 1-WIRE
+Send 
+[44000286] [log] Content: M: 1-WIRE
+Send 
+[44020286] [log] Content: M: 1-WIRE
+Send 
+[44040286] [log] Content: M: 1-WIRE
+Send 
+[44060286] [log] Content: M: 1-WIRE
+Send 
+[44080286] [log] Content: M: 1-WIRE
+Send 
+[44100286] [log] Content: M: 1-WIRE
+Send 
+[44120286] [log] Content: M: 1-WIRE
+Send 
+[44140286] [log] Content: M: 1-WIRE
+Send 
+[44160286] [log] Content: M: 1-WIRE
+Send 
+[44180286] [log] Content: M: 1-WIRE
+Send 
+[44200286] [log] Content: M: 1-WIRE
+Send 
+[44220286] [log] Content: M: 1-WIRE
+Send 
+[44240286] [log] Content: M: 1-WIRE
+Send 
+[44260286] [log] Content: M: 1-WIRE
+Send 
+[44280286] [log] Content: M: 1-WIRE
+Send 
+[44300286] [log] Content: M: 1-WIRE
+Send 
+[44320286] [log] Content: M: 1-WIRE
+Send 
+[44340286] [log] Content: M: 1-WIRE
+Send 
+[44360286] [log] Content: M: 1-WIRE
+Send 
+[44380286] [log] Content: M: 1-WIRE
+Send 
+[44400302] [log] Content: M: 1-WIRE
+Send 
+[44420286] [log] Content: M: 1-WIRE
+Send 
+[44440286] [log] Content: M: 1-WIRE
+Send 
+[44460286] [log] Content: M: 1-WIRE
+Send 
+[44480286] [log] Content: M: 1-WIRE
+Send 
+[44500286] [log] Content: M: 1-WIRE
+Send 
+[44520286] [log] Content: M: 1-WIRE
+Send 
+[44540286] [log] Content: M: 1-WIRE
+Send 
+[44560286] [log] Content: M: 1-WIRE
+Send 
+[44580286] [log] Content: M: 1-WIRE
+Send 
+[44600286] [log] Content: M: 1-WIRE
+Send 
+[44620286] [log] Content: M: 1-WIRE
+Send 
+[44640286] [log] Content: M: 1-WIRE
+Send 
+[44660286] [log] Content: M: 1-WIRE
+Send 
+[44680286] [log] Content: M: 1-WIRE
+Send 
+[44700286] [log] Content: M: 1-WIRE
+Send 
+[44720286] [log] Content: M: 1-WIRE
+Send 
+[44740286] [log] Content: M: 1-WIRE
+Send 
+[44760286] [log] Content: M: 1-WIRE
+Send 
+[44780286] [log] Content: M: 1-WIRE
+Send 
+[44800286] [log] Content: M: 1-WIRE
+Send 
+[44820286] [log] Content: M: 1-WIRE
+Send 
+[44840286] [log] Content: M: 1-WIRE
+Send 
+[44860286] [log] Content: M: 1-WIRE
+Send 
+[44880286] [log] Content: M: 1-WIRE
+Send 
+[44900302] [log] Content: M: 1-WIRE
+Send 
+[44920286] [log] Content: M: 1-WIRE
+Send 
+[44940286] [log] Content: M: 1-WIRE
+Send 
+[44960286] [log] Content: M: 1-WIRE
+Send 
+[44980286] [log] Content: M: 1-WIRE
+Send 
+[45000286] [log] Content: M: 1-WIRE
+Send 
+[45020286] [log] Content: M: 1-WIRE
+Send 
+[45040286] [log] Content: M: 1-WIRE
+Send 
+[45060286] [log] Content: M: 1-WIRE
+Send 
+[45080286] [log] Content: M: 1-WIRE
+Send 
+[45100286] [log] Content: M: 1-WIRE
+Send 
+[45120286] [log] Content: M: 1-WIRE
+Send 
+[45140286] [log] Content: M: 1-WIRE
+Send 
+[45160286] [log] Content: M: 1-WIRE
+Send 
+[45180286] [log] Content: M: 1-WIRE
+Send 
+[45200286] [log] Content: M: 1-WIRE
+Send 
+[45220286] [log] Content: M: 1-WIRE
+Send 
+[45240286] [log] Content: M: 1-WIRE
+Send 
+[45260286] [log] Content: M: 1-WIRE
+Send 
+[45280286] [log] Content: M: 1-WIRE
+Send 
+[45300286] [log] Content: M: 1-WIRE
+Send 
+[45320286] [log] Content: M: 1-WIRE
+Send 
+[45340286] [log] Content: M: 1-WIRE
+Send 
+[45360286] [log] Content: M: 1-WIRE
+Send 
+[45380286] [log] Content: M: 1-WIRE
+Send 
+[45400302] [log] Content: M: 1-WIRE
+Send 
+[45420286] [log] Content: M: 1-WIRE
+Send 
+[45440286] [log] Content: M: 1-WIRE
+Send 
+[45460286] [log] Content: M: 1-WIRE
+Send 
+[45480286] [log] Content: M: 1-WIRE
+Send 
+[45500286] [log] Content: M: 1-WIRE
+Send 
+[45520286] [log] Content: M: 1-WIRE
+Send 
+[45540286] [log] Content: M: 1-WIRE
+Send 
+[45560286] [log] Content: M: 1-WIRE
+Send 
+[45580286] [log] Content: M: 1-WIRE
+Send 
+[45600286] [log] Content: M: 1-WIRE
+Send 
+[45620286] [log] Content: M: 1-WIRE
+Send 
+[45640286] [log] Content: M: 1-WIRE
+Send 
+[45660286] [log] Content: M: 1-WIRE
+Send 
+[45680286] [log] Content: M: 1-WIRE
+Send 
+[45700286] [log] Content: M: 1-WIRE
+Send 
+[45720286] [log] Content: M: 1-WIRE
+Send 
+[45740286] [log] Content: M: 1-WIRE
+Send 
+[45760286] [log] Content: M: 1-WIRE
+Send 
+[45780286] [log] Content: M: 1-WIRE
+Send 
+[45800286] [log] Content: M: 1-WIRE
+Send 
+[45820286] [log] Content: M: 1-WIRE
+Send 
+[45840286] [log] Content: M: 1-WIRE
+Send 
+[45860286] [log] Content: M: 1-WIRE
+Send 
+[45880286] [log] Content: M: 1-WIRE
+Send 
+[45900302] [log] Content: M: 1-WIRE
+Send 
+[45920286] [log] Content: M: 1-WIRE
+Send 
+[45940286] [log] Content: M: 1-WIRE
+Send 
+[45960286] [log] Content: M: 1-WIRE
+Send 
+[45980286] [log] Content: M: 1-WIRE
+Send 
+[46000286] [log] Content: M: 1-WIRE
+Send 
+[46020286] [log] Content: M: 1-WIRE
+Send 
+[46040286] [log] Content: M: 1-WIRE
+Send 
+[46060286] [log] Content: M: 1-WIRE
+Send 
+[46080286] [log] Content: M: 1-WIRE
+Send 
+[46100286] [log] Content: M: 1-WIRE
+Send 
+[46120286] [log] Content: M: 1-WIRE
+Send 
+[46140286] [log] Content: M: 1-WIRE
+Send 
+[46160286] [log] Content: M: 1-WIRE
+Send 
+[46180286] [log] Content: M: 1-WIRE
+Send 
+[46200286] [log] Content: M: 1-WIRE
+Send 
+[46220286] [log] Content: M: 1-WIRE
+Send 
+[46240286] [log] Content: M: 1-WIRE
+Send 
+[46260286] [log] Content: M: 1-WIRE
+Send 
+[46280286] [log] Content: M: 1-WIRE
+Send 
+[46300286] [log] Content: M: 1-WIRE
+Send 
+[46320286] [log] Content: M: 1-WIRE
+Send 
+[46340286] [log] Content: M: 1-WIRE
+Send 
+[46360286] [log] Content: M: 1-WIRE
+Send 
+[46380286] [log] Content: M: 1-WIRE
+Send 
+[46400302] [log] Content: M: 1-WIRE
+Send 
+[46420286] [log] Content: M: 1-WIRE
+Send 
+[46440286] [log] Content: M: 1-WIRE
+Send 
+[46460286] [log] Content: M: 1-WIRE
+Send 
+[46480286] [log] Content: M: 1-WIRE
+Send 
+[46500286] [log] Content: M: 1-WIRE
+Send 
+[46520286] [log] Content: M: 1-WIRE
+Send 
+[46540286] [log] Content: M: 1-WIRE
+Send 
+[46560286] [log] Content: M: 1-WIRE
+Send 
+[46580286] [log] Content: M: 1-WIRE
+Send 
+[46600286] [log] Content: M: 1-WIRE
+Send 
+[46620286] [log] Content: M: 1-WIRE
+Send 
+[46640286] [log] Content: M: 1-WIRE
+Send 
+[46660286] [log] Content: M: 1-WIRE
+Send 
+[46680286] [log] Content: M: 1-WIRE
+Send 
+[46700286] [log] Content: M: 1-WIRE
+Send 
+[46720286] [log] Content: M: 1-WIRE
+Send 
+[46740286] [log] Content: M: 1-WIRE
+Send 
+[46760286] [log] Content: M: 1-WIRE
+Send 
+[46780286] [log] Content: M: 1-WIRE
+Send 
+[46800286] [log] Content: M: 1-WIRE
+Send 
+[46820286] [log] Content: M: 1-WIRE
+Send 
+[46840286] [log] Content: M: 1-WIRE
+Send 
+[46860286] [log] Content: M: 1-WIRE
+Send 
+[46880286] [log] Content: M: 1-WIRE
+Send 
+[46900302] [log] Content: M: 1-WIRE
+Send 
+[46920286] [log] Content: M: 1-WIRE
+Send 
+[46940286] [log] Content: M: 1-WIRE
+Send 
+[46960286] [log] Content: M: 1-WIRE
+Send 
+[46980286] [log] Content: M: 1-WIRE
+Send 
+[47000286] [log] Content: M: 1-WIRE
+Send 
+[47020286] [log] Content: M: 1-WIRE
+Send 
+[47040286] [log] Content: M: 1-WIRE
+Send 
+[47060286] [log] Content: M: 1-WIRE
+Send 
+[47080286] [log] Content: M: 1-WIRE
+Send 
+[47100286] [log] Content: M: 1-WIRE
+Send 
+[47120286] [log] Content: M: 1-WIRE
+Send 
+[47140286] [log] Content: M: 1-WIRE
+Send 
+[47160286] [log] Content: M: 1-WIRE
+Send 
+[47180286] [log] Content: M: 1-WIRE
+Send 
+[47200286] [log] Content: M: 1-WIRE
+Send 
+[47220286] [log] Content: M: 1-WIRE
+Send 
+[47240286] [log] Content: M: 1-WIRE
+Send 
+[47260286] [log] Content: M: 1-WIRE
+Send 
+[47280286] [log] Content: M: 1-WIRE
+Send 
+[47300286] [log] Content: M: 1-WIRE
+Send 
+[47320286] [log] Content: M: 1-WIRE
+Send 
+[47340286] [log] Content: M: 1-WIRE
+Send 
+[47360286] [log] Content: M: 1-WIRE
+Send 
+[47380286] [log] Content: M: 1-WIRE
+Send 
+[47400302] [log] Content: M: 1-WIRE
+Send 
+[47420286] [log] Content: M: 1-WIRE
+Send 
+[47440286] [log] Content: M: 1-WIRE
+Send 
+[47460286] [log] Content: M: 1-WIRE
+Send 
+[47480286] [log] Content: M: 1-WIRE
+Send 
+[47500286] [log] Content: M: 1-WIRE
+Send 
+[47520286] [log] Content: M: 1-WIRE
+Send 
+[47540286] [log] Content: M: 1-WIRE
+Send 
+[47560286] [log] Content: M: 1-WIRE
+Send 
+[47580286] [log] Content: M: 1-WIRE
+Send 
+[47600286] [log] Content: M: 1-WIRE
+Send 
+[47620286] [log] Content: M: 1-WIRE
+Send 
+[47640286] [log] Content: M: 1-WIRE
+Send 
+[47660286] [log] Content: M: 1-WIRE
+Send 
+[47680286] [log] Content: M: 1-WIRE
+Send 
+[47700286] [log] Content: M: 1-WIRE
+Send 
+[47720286] [log] Content: M: 1-WIRE
+Send 
+[47740286] [log] Content: M: 1-WIRE
+Send 
+[47760286] [log] Content: M: 1-WIRE
+Send 
+[47780286] [log] Content: M: 1-WIRE
+Send 
+[47800286] [log] Content: M: 1-WIRE
+Send 
+[47820286] [log] Content: M: 1-WIRE
+Send 
+[47840286] [log] Content: M: 1-WIRE
+Send 
+[47860286] [log] Content: M: 1-WIRE
+Send 
+[47880286] [log] Content: M: 1-WIRE
+Send 
+[47900302] [log] Content: M: 1-WIRE
+Send 
+[47920286] [log] Content: M: 1-WIRE
+Send 
+[47940286] [log] Content: M: 1-WIRE
+Send 
+[47960286] [log] Content: M: 1-WIRE
+Send 
+[47980286] [log] Content: M: 1-WIRE
+Send 
+[48000286] [log] Content: M: 1-WIRE
+Send 
+[48020286] [log] Content: M: 1-WIRE
+Send 
+[48040286] [log] Content: M: 1-WIRE
+Send 
+[48060286] [log] Content: M: 1-WIRE
+Send 
+[48080286] [log] Content: M: 1-WIRE
+Send 
+[48100286] [log] Content: M: 1-WIRE
+Send 
+[48120286] [log] Content: M: 1-WIRE
+Send 
+[48140286] [log] Content: M: 1-WIRE
+Send 
+[48160286] [log] Content: M: 1-WIRE
+Send 
+[48180286] [log] Content: M: 1-WIRE
+Send 
+[48200286] [log] Content: M: 1-WIRE
+Send 
+[48220286] [log] Content: M: 1-WIRE
+Send 
+[48240286] [log] Content: M: 1-WIRE
+Send 
+[48260286] [log] Content: M: 1-WIRE
+Send 
+[48280286] [log] Content: M: 1-WIRE
+Send 
+[48300286] [log] Content: M: 1-WIRE
+Send 
+[48320286] [log] Content: M: 1-WIRE
+Send 
+[48340286] [log] Content: M: 1-WIRE
+Send 
+[48360286] [log] Content: M: 1-WIRE
+Send 
+[48380286] [log] Content: M: 1-WIRE
+Send 
+[48400302] [log] Content: M: 1-WIRE
+Send 
+[48420286] [log] Content: M: 1-WIRE
+Send 
+[48440286] [log] Content: M: 1-WIRE
+Send 
+[48460286] [log] Content: M: 1-WIRE
+Send 
+[48480286] [log] Content: M: 1-WIRE
+Send 
+[48500286] [log] Content: M: 1-WIRE
+Send 
+[48520286] [log] Content: M: 1-WIRE
+Send 
+[48540286] [log] Content: M: 1-WIRE
+Send 
+[48560286] [log] Content: M: 1-WIRE
+Send 
+[48580286] [log] Content: M: 1-WIRE
+Send 
+[48600286] [log] Content: M: 1-WIRE
+Send 
+[48620286] [log] Content: M: 1-WIRE
+Send 
+[48640286] [log] Content: M: 1-WIRE
+Send 
+[48660286] [log] Content: M: 1-WIRE
+Send 
+[48680286] [log] Content: M: 1-WIRE
+Send 
+[48700286] [log] Content: M: 1-WIRE
+Send 
+[48720286] [log] Content: M: 1-WIRE
+Send 
+[48740286] [log] Content: M: 1-WIRE
+Send 
+[48760286] [log] Content: M: 1-WIRE
+Send 
+[48780286] [log] Content: M: 1-WIRE
+Send 
+[48800286] [log] Content: M: 1-WIRE
+Send 
+[48820286] [log] Content: M: 1-WIRE
+Send 
+[48840286] [log] Content: M: 1-WIRE
+Send 
+[48860286] [log] Content: M: 1-WIRE
+Send 
+[48880286] [log] Content: M: 1-WIRE
+Send 
+[48900302] [log] Content: M: 1-WIRE
+Send 
+[48920286] [log] Content: M: 1-WIRE
+Send 
+[48940286] [log] Content: M: 1-WIRE
+Send 
+[48960286] [log] Content: M: 1-WIRE
+Send 
+[48980286] [log] Content: M: 1-WIRE
+Send 
+[49000286] [log] Content: M: 1-WIRE
+Send 
+[49020286] [log] Content: M: 1-WIRE
+Send 
+[49040286] [log] Content: M: 1-WIRE
+Send 
+[49060286] [log] Content: M: 1-WIRE
+Send 
+[49080286] [log] Content: M: 1-WIRE
+Send 
+[49100286] [log] Content: M: 1-WIRE
+Send 
+[49120286] [log] Content: M: 1-WIRE
+Send 
+[49140286] [log] Content: M: 1-WIRE
+Send 
+[49160286] [log] Content: M: 1-WIRE
+Send 
+[49180286] [log] Content: M: 1-WIRE
+Send 
+[49200286] [log] Content: M: 1-WIRE
+Send 
+[49220286] [log] Content: M: 1-WIRE
+Send 
+[49240286] [log] Content: M: 1-WIRE
+Send 
+[49260286] [log] Content: M: 1-WIRE
+Send 
+[49280286] [log] Content: M: 1-WIRE
+Send 
+[49300286] [log] Content: M: 1-WIRE
+Send 
+[49320286] [log] Content: M: 1-WIRE
+Send 
+[49340286] [log] Content: M: 1-WIRE
+Send 
+[49360286] [log] Content: M: 1-WIRE
+Send 
+[49380286] [log] Content: M: 1-WIRE
+Send 
+[49400302] [log] Content: M: 1-WIRE
+Send 
+[49420286] [log] Content: M: 1-WIRE
+Send 
+[49440286] [log] Content: M: 1-WIRE
+Send 
+[49460286] [log] Content: M: 1-WIRE
+Send 
+[49480286] [log] Content: M: 1-WIRE
+Send 
+[49500286] [log] Content: M: 1-WIRE
+Send 
+[49520286] [log] Content: M: 1-WIRE
+Send 
+[49540286] [log] Content: M: 1-WIRE
+Send 
+[49560286] [log] Content: M: 1-WIRE
+Send 
+[49580286] [log] Content: M: 1-WIRE
+Send 
+[49600286] [log] Content: M: 1-WIRE
+Send 
+[49620286] [log] Content: M: 1-WIRE
+Send 
+[49640286] [log] Content: M: 1-WIRE
+Send 
+[49660286] [log] Content: M: 1-WIRE
+Send 
+[49680286] [log] Content: M: 1-WIRE
+Send 
+[49700286] [log] Content: M: 1-WIRE
+Send 
+[49720286] [log] Content: M: 1-WIRE
+Send 
+[49740286] [log] Content: M: 1-WIRE
+Send 
+[49760286] [log] Content: M: 1-WIRE
+Send 
+[49780286] [log] Content: M: 1-WIRE
+Send 
+[49800286] [log] Content: M: 1-WIRE
+Send 
+[49820286] [log] Content: M: 1-WIRE
+Send 
+[49840286] [log] Content: M: 1-WIRE
+Send 
+[49860286] [log] Content: M: 1-WIRE
+Send 
+[49880286] [log] Content: M: 1-WIRE
+Send 
+[49900302] [log] Content: M: 1-WIRE
+Send 
+[49920286] [log] Content: M: 1-WIRE
+Send 
+[49940286] [log] Content: M: 1-WIRE
+Send 
+[49960286] [log] Content: M: 1-WIRE
+Send 
+[49980286] [log] Content: M: 1-WIRE
+Send 
+[50000286] [log] Content: M: 1-WIRE
+Send 
+[50020286] [log] Content: M: 1-WIRE
+Send 
+[50040286] [log] Content: M: 1-WIRE
+Send 
+[50060286] [log] Content: M: 1-WIRE
+Send 
+[50080286] [log] Content: M: 1-WIRE
+Send 
+[50100286] [log] Content: M: 1-WIRE
+Send 
+[50120286] [log] Content: M: 1-WIRE
+Send 
+[50140286] [log] Content: M: 1-WIRE
+Send 
+[50160286] [log] Content: M: 1-WIRE
+Send 
+[50180286] [log] Content: M: 1-WIRE
+Send 
+[50200286] [log] Content: M: 1-WIRE
+Send 
+[50220286] [log] Content: M: 1-WIRE
+Send 
+[50240286] [log] Content: M: 1-WIRE
+Send 
+[50260286] [log] Content: M: 1-WIRE
+Send 
+[50280286] [log] Content: M: 1-WIRE
+Send 
+[50300286] [log] Content: M: 1-WIRE
+Send 
+[50320286] [log] Content: M: 1-WIRE
+Send 
+[50340286] [log] Content: M: 1-WIRE
+Send 
+[50360286] [log] Content: M: 1-WIRE
+Send 
+[50380286] [log] Content: M: 1-WIRE
+Send 
+[50400302] [log] Content: M: 1-WIRE
+Send 
+[50420286] [log] Content: M: 1-WIRE
+Send 
+[50440286] [log] Content: M: 1-WIRE
+Send 
+[50460286] [log] Content: M: 1-WIRE
+Send 
+[50480286] [log] Content: M: 1-WIRE
+Send 
+[50500286] [log] Content: M: 1-WIRE
+Send 
+[50520286] [log] Content: M: 1-WIRE
+Send 
+[50540286] [log] Content: M: 1-WIRE
+Send 
+[50560286] [log] Content: M: 1-WIRE
+Send 
+[50580286] [log] Content: M: 1-WIRE
+Send 
+[50600286] [log] Content: M: 1-WIRE
+Send 
+[50620286] [log] Content: M: 1-WIRE
+Send 
+[50640286] [log] Content: M: 1-WIRE
+Send 
+[50660286] [log] Content: M: 1-WIRE
+Send 
+[50680286] [log] Content: M: 1-WIRE
+Send 
+[50700286] [log] Content: M: 1-WIRE
+Send 
+[50720286] [log] Content: M: 1-WIRE
+Send 
+[50740286] [log] Content: M: 1-WIRE
+Send 
+[50760286] [log] Content: M: 1-WIRE
+Send 
+[50780286] [log] Content: M: 1-WIRE
+Send 
+[50800286] [log] Content: M: 1-WIRE
+Send 
+[50820286] [log] Content: M: 1-WIRE
+Send 
+[50840286] [log] Content: M: 1-WIRE
+Send 
+[50860286] [log] Content: M: 1-WIRE
+Send 
+[50880286] [log] Content: M: 1-WIRE
+Send 
+[50900302] [log] Content: M: 1-WIRE
+Send 
+[50920286] [log] Content: M: 1-WIRE
+Send 
+[50940286] [log] Content: M: 1-WIRE
+Send 
+[50960286] [log] Content: M: 1-WIRE
+Send 
+[50980286] [log] Content: M: 1-WIRE
+Send 
+[51000286] [log] Content: M: 1-WIRE
+Send 
+[51020286] [log] Content: M: 1-WIRE
+Send 
+[51040286] [log] Content: M: 1-WIRE
+Send 
+[51060286] [log] Content: M: 1-WIRE
+Send 
+[51080286] [log] Content: M: 1-WIRE
+Send 
+[51100286] [log] Content: M: 1-WIRE
+Send 
+[51120286] [log] Content: M: 1-WIRE
+Send 
+[51140286] [log] Content: M: 1-WIRE
+Send 
+[51160286] [log] Content: M: 1-WIRE
+Send 
+[51180286] [log] Content: M: 1-WIRE
+Send 
+[51200286] [log] Content: M: 1-WIRE
+Send 
+[51220286] [log] Content: M: 1-WIRE
+Send 
+[51240286] [log] Content: M: 1-WIRE
+Send 
+[51260286] [log] Content: M: 1-WIRE
+Send 
+[51280286] [log] Content: M: 1-WIRE
+Send 
+[51300286] [log] Content: M: 1-WIRE
+Send 
+[51320286] [log] Content: M: 1-WIRE
+Send 
+[51340286] [log] Content: M: 1-WIRE
+Send 
+[51360286] [log] Content: M: 1-WIRE
+Send 
+[51380286] [log] Content: M: 1-WIRE
+Send 
+[51400302] [log] Content: M: 1-WIRE
+Send 
+[51420286] [log] Content: M: 1-WIRE
+Send 
+[51440286] [log] Content: M: 1-WIRE
+Send 
+[51460286] [log] Content: M: 1-WIRE
+Send 
+[51480286] [log] Content: M: 1-WIRE
+Send 
+[51500286] [log] Content: M: 1-WIRE
+Send 
+[51520286] [log] Content: M: 1-WIRE
+Send 
+[51540286] [log] Content: M: 1-WIRE
+Send 
+[51560286] [log] Content: M: 1-WIRE
+Send 
+[51580286] [log] Content: M: 1-WIRE
+Send 
+[51600286] [log] Content: M: 1-WIRE
+Send 
+[51620286] [log] Content: M: 1-WIRE
+Send 
+[51640286] [log] Content: M: 1-WIRE
+Send 
+[51660286] [log] Content: M: 1-WIRE
+Send 
+[51680286] [log] Content: M: 1-WIRE
+Send 
+[51700286] [log] Content: M: 1-WIRE
+Send 
+[51720286] [log] Content: M: 1-WIRE
+Send 
+[51740286] [log] Content: M: 1-WIRE
+Send 
+[51760286] [log] Content: M: 1-WIRE
+Send 
+[51780286] [log] Content: M: 1-WIRE
+Send 
+[51800286] [log] Content: M: 1-WIRE
+Send 
+[51820286] [log] Content: M: 1-WIRE
+Send 
+[51840286] [log] Content: M: 1-WIRE
+Send 
+[51860286] [log] Content: M: 1-WIRE
+Send 
+[51880286] [log] Content: M: 1-WIRE
+Send 
+[51900302] [log] Content: M: 1-WIRE
+Send 
+[51920286] [log] Content: M: 1-WIRE
+Send 
+[51940286] [log] Content: M: 1-WIRE
+Send 
+[51960286] [log] Content: M: 1-WIRE
+Send 
+[51980286] [log] Content: M: 1-WIRE
+Send 
+[52000286] [log] Content: M: 1-WIRE
+Send 
+[52020286] [log] Content: M: 1-WIRE
+Send 
+[52040286] [log] Content: M: 1-WIRE
+Send 
+[52060286] [log] Content: M: 1-WIRE
+Send 
+[52080286] [log] Content: M: 1-WIRE
+Send 
+[52100286] [log] Content: M: 1-WIRE
+Send 
+[52120286] [log] Content: M: 1-WIRE
+Send 
+[52140286] [log] Content: M: 1-WIRE
+Send 
+[52160286] [log] Content: M: 1-WIRE
+Send 
+[52180286] [log] Content: M: 1-WIRE
+Send 
+[52200286] [log] Content: M: 1-WIRE
+Send 
+[52220286] [log] Content: M: 1-WIRE
+Send 
+[52240286] [log] Content: M: 1-WIRE
+Send 
+[52260286] [log] Content: M: 1-WIRE
+Send 
+[52280286] [log] Content: M: 1-WIRE
+Send 
+[52300286] [log] Content: M: 1-WIRE
+Send 
+[52320286] [log] Content: M: 1-WIRE
+Send 
+[52340286] [log] Content: M: 1-WIRE
+Send 
+[52360286] [log] Content: M: 1-WIRE
+Send 
+[52380286] [log] Content: M: 1-WIRE
+Send 
+[52400302] [log] Content: M: 1-WIRE
+Send 
+[52420286] [log] Content: M: 1-WIRE
+Send 
+[52440286] [log] Content: M: 1-WIRE
+Send 
+[52460286] [log] Content: M: 1-WIRE
+Send 
+[52480286] [log] Content: M: 1-WIRE
+Send 
+[52500286] [log] Content: M: 1-WIRE
+Send 
+[52520286] [log] Content: M: 1-WIRE
+Send 
+[52540286] [log] Content: M: 1-WIRE
+Send 
+[52560286] [log] Content: M: 1-WIRE
+Send 
+[52580286] [log] Content: M: 1-WIRE
+Send 
+[52600286] [log] Content: M: 1-WIRE
+Send 
+[52620286] [log] Content: M: 1-WIRE
+Send 
+[52640286] [log] Content: M: 1-WIRE
+Send 
+[52660286] [log] Content: M: 1-WIRE
+Send 
+[52680286] [log] Content: M: 1-WIRE
+Send 
+[52700286] [log] Content: M: 1-WIRE
+Send 
+[52720286] [log] Content: M: 1-WIRE
+Send 
+[52740286] [log] Content: M: 1-WIRE
+Send 
+[52760286] [log] Content: M: 1-WIRE
+Send 
+[52780286] [log] Content: M: 1-WIRE
+Send 
+[52800286] [log] Content: M: 1-WIRE
+Send 
+[52820286] [log] Content: M: 1-WIRE
+Send 
+[52840286] [log] Content: M: 1-WIRE
+Send 
+[52860286] [log] Content: M: 1-WIRE
+Send 
+[52880286] [log] Content: M: 1-WIRE
+Send 
+[52900302] [log] Content: M: 1-WIRE
+Send 
+[52920286] [log] Content: M: 1-WIRE
+Send 
+[52940286] [log] Content: M: 1-WIRE
+Send 
+[52960286] [log] Content: M: 1-WIRE
+Send 
+[52980286] [log] Content: M: 1-WIRE
+Send 
+[53000286] [log] Content: M: 1-WIRE
+Send 
+[53020286] [log] Content: M: 1-WIRE
+Send 
+[53040286] [log] Content: M: 1-WIRE
+Send 
+[53060286] [log] Content: M: 1-WIRE
+Send 
+[53080286] [log] Content: M: 1-WIRE
+Send 
+[53100286] [log] Content: M: 1-WIRE
+Send 
+[53120286] [log] Content: M: 1-WIRE
+Send 
+[53140286] [log] Content: M: 1-WIRE
+Send 
+[53160286] [log] Content: M: 1-WIRE
+Send 
+[53180286] [log] Content: M: 1-WIRE
+Send 
+[53200286] [log] Content: M: 1-WIRE
+Send 
+[53220286] [log] Content: M: 1-WIRE
+Send 
+[53240286] [log] Content: M: 1-WIRE
+Send 
+[53260286] [log] Content: M: 1-WIRE
+Send 
+[53280286] [log] Content: M: 1-WIRE
+Send 
+[53300286] [log] Content: M: 1-WIRE
+Send 
+[53320286] [log] Content: M: 1-WIRE
+Send 
+[53340286] [log] Content: M: 1-WIRE
+Send 
+[53360286] [log] Content: M: 1-WIRE
+Send 
+[53380286] [log] Content: M: 1-WIRE
+Send 
+[53400302] [log] Content: M: 1-WIRE
+Send 
+[53420286] [log] Content: M: 1-WIRE
+Send 
+[53440286] [log] Content: M: 1-WIRE
+Send 
+[53460286] [log] Content: M: 1-WIRE
+Send 
+[53480286] [log] Content: M: 1-WIRE
+Send 
+[53500286] [log] Content: M: 1-WIRE
+Send 
+[53520286] [log] Content: M: 1-WIRE
+Send 
+[53540286] [log] Content: M: 1-WIRE
+Send 
+[53560286] [log] Content: M: 1-WIRE
+Send 
+[53580286] [log] Content: M: 1-WIRE
+Send 
+[53600286] [log] Content: M: 1-WIRE
+Send 
+[53620286] [log] Content: M: 1-WIRE
+Send 
+[53640286] [log] Content: M: 1-WIRE
+Send 
+[53660286] [log] Content: M: 1-WIRE
+Send 
+[53680286] [log] Content: M: 1-WIRE
+Send 
+[53700286] [log] Content: M: 1-WIRE
+Send 
+[53720286] [log] Content: M: 1-WIRE
+Send 
+[53740286] [log] Content: M: 1-WIRE
+Send 
+[53760286] [log] Content: M: 1-WIRE
+Send 
+[53780286] [log] Content: M: 1-WIRE
+Send 
+[53800286] [log] Content: M: 1-WIRE
+Send 
+[53820286] [log] Content: M: 1-WIRE
+Send 
+[53840286] [log] Content: M: 1-WIRE
+Send 
+[53860286] [log] Content: M: 1-WIRE
+Send 
+[53880286] [log] Content: M: 1-WIRE
+Send 
+[53900302] [log] Content: M: 1-WIRE
+Send 
+[53920286] [log] Content: M: 1-WIRE
+Send 
+[53940286] [log] Content: M: 1-WIRE
+Send 
+[53960286] [log] Content: M: 1-WIRE
+Send 
+[53980286] [log] Content: M: 1-WIRE
+Send 
+[54000286] [log] Content: M: 1-WIRE
+Send 
+[54020286] [log] Content: M: 1-WIRE
+Send 
+[54040286] [log] Content: M: 1-WIRE
+Send 
+[54060286] [log] Content: M: 1-WIRE
+Send 
+[54080286] [log] Content: M: 1-WIRE
+Send 
+[54100286] [log] Content: M: 1-WIRE
+Send 
+[54120286] [log] Content: M: 1-WIRE
+Send 
+[54140286] [log] Content: M: 1-WIRE
+Send 
+[54160286] [log] Content: M: 1-WIRE
+Send 
+[54180286] [log] Content: M: 1-WIRE
+Send 
+[54200286] [log] Content: M: 1-WIRE
+Send 
+[54220286] [log] Content: M: 1-WIRE
+Send 
+[54240286] [log] Content: M: 1-WIRE
+Send 
+[54260286] [log] Content: M: 1-WIRE
+Send 
+[54280286] [log] Content: M: 1-WIRE
+Send 
+[54300286] [log] Content: M: 1-WIRE
+Send 
+[54320286] [log] Content: M: 1-WIRE
+Send 
+[54340286] [log] Content: M: 1-WIRE
+Send 
+[54360286] [log] Content: M: 1-WIRE
+Send 
+[54380286] [log] Content: M: 1-WIRE
+Send 
+[54400302] [log] Content: M: 1-WIRE
+Send 
+[54420286] [log] Content: M: 1-WIRE
+Send 
+[54440286] [log] Content: M: 1-WIRE
+Send 
+[54460286] [log] Content: M: 1-WIRE
+Send 
+[54480286] [log] Content: M: 1-WIRE
+Send 
+[54500286] [log] Content: M: 1-WIRE
+Send 
+[54520286] [log] Content: M: 1-WIRE
+Send 
+[54540286] [log] Content: M: 1-WIRE
+Send 
+[54560286] [log] Content: M: 1-WIRE
+Send 
+[54580286] [log] Content: M: 1-WIRE
+Send 
+[54600286] [log] Content: M: 1-WIRE
+Send 
+[54620286] [log] Content: M: 1-WIRE
+Send 
+[54640286] [log] Content: M: 1-WIRE
+Send 
+[54660286] [log] Content: M: 1-WIRE
+Send 
+[54680286] [log] Content: M: 1-WIRE
+Send 
+[54700286] [log] Content: M: 1-WIRE
+Send 
+[54720286] [log] Content: M: 1-WIRE
+Send 
+[54740286] [log] Content: M: 1-WIRE
+Send 
+[54760286] [log] Content: M: 1-WIRE
+Send 
+[54780286] [log] Content: M: 1-WIRE
+Send 
+[54800286] [log] Content: M: 1-WIRE
+Send 
+[54820286] [log] Content: M: 1-WIRE
+Send 
+[54840286] [log] Content: M: 1-WIRE
+Send 
+[54860286] [log] Content: M: 1-WIRE
+Send 
+[54880286] [log] Content: M: 1-WIRE
+Send 
+[54900302] [log] Content: M: 1-WIRE
+Send 
+[54920286] [log] Content: M: 1-WIRE
+Send 
+[54940286] [log] Content: M: 1-WIRE
+Send 
+[54960286] [log] Content: M: 1-WIRE
+Send 
+[54980286] [log] Content: M: 1-WIRE
+Send 
+[55000286] [log] Content: M: 1-WIRE
+Send 
+[55020286] [log] Content: M: 1-WIRE
+Send 
+[55040286] [log] Content: M: 1-WIRE
+Send 
+[55060286] [log] Content: M: 1-WIRE
+Send 
+[55080286] [log] Content: M: 1-WIRE
+Send 
+[55100286] [log] Content: M: 1-WIRE
+Send 
+[55120286] [log] Content: M: 1-WIRE
+Send 
+[55140286] [log] Content: M: 1-WIRE
+Send 
+[55160286] [log] Content: M: 1-WIRE
+Send 
+[55180286] [log] Content: M: 1-WIRE
+Send 
+[55200286] [log] Content: M: 1-WIRE
+Send 
+[55220286] [log] Content: M: 1-WIRE
+Send 
+[55240286] [log] Content: M: 1-WIRE
+Send 
+[55260286] [log] Content: M: 1-WIRE
+Send 
+[55280286] [log] Content: M: 1-WIRE
+Send 
+[55300286] [log] Content: M: 1-WIRE
+Send 
+[55320286] [log] Content: M: 1-WIRE
+Send 
+[55340286] [log] Content: M: 1-WIRE
+Send 
+[55360286] [log] Content: M: 1-WIRE
+Send 
+[55380286] [log] Content: M: 1-WIRE
+Send 
+[55400302] [log] Content: M: 1-WIRE
+Send 
+[55420286] [log] Content: M: 1-WIRE
+Send 
+[55440286] [log] Content: M: 1-WIRE
+Send 
+[55460286] [log] Content: M: 1-WIRE
+Send 
+[55480286] [log] Content: M: 1-WIRE
+Send 
+[55500286] [log] Content: M: 1-WIRE
+Send 
+[55520286] [log] Content: M: 1-WIRE
+Send 
+[55540286] [log] Content: M: 1-WIRE
+Send 
+[55560286] [log] Content: M: 1-WIRE
+Send 
+[55580286] [log] Content: M: 1-WIRE
+Send 
+[55600286] [log] Content: M: 1-WIRE
+Send 
+[55620286] [log] Content: M: 1-WIRE
+Send 
+[55640286] [log] Content: M: 1-WIRE
+Send 
+[55660286] [log] Content: M: 1-WIRE
+Send 
+[55680286] [log] Content: M: 1-WIRE
+Send 
+[55700286] [log] Content: M: 1-WIRE
+Send 
+[55720286] [log] Content: M: 1-WIRE
+Send 
+[55740286] [log] Content: M: 1-WIRE
+Send 
+[55760286] [log] Content: M: 1-WIRE
+Send 
+[55780286] [log] Content: M: 1-WIRE
+Send 
+[55800286] [log] Content: M: 1-WIRE
+Send 
+[55820286] [log] Content: M: 1-WIRE
+Send 
+[55840286] [log] Content: M: 1-WIRE
+Send 
+[55860286] [log] Content: M: 1-WIRE
+Send 
+[55880286] [log] Content: M: 1-WIRE
+Send 
+[55900302] [log] Content: M: 1-WIRE
+Send 
+[55920286] [log] Content: M: 1-WIRE
+Send 
+[55940286] [log] Content: M: 1-WIRE
+Send 
+[55960286] [log] Content: M: 1-WIRE
+Send 
+[55980286] [log] Content: M: 1-WIRE
+Send 
+[56000286] [log] Content: M: 1-WIRE
+Send 
+[56020286] [log] Content: M: 1-WIRE
+Send 
+[56040286] [log] Content: M: 1-WIRE
+Send 
+[56060286] [log] Content: M: 1-WIRE
+Send 
+[56080286] [log] Content: M: 1-WIRE
+Send 
+[56100286] [log] Content: M: 1-WIRE
+Send 
+[56120286] [log] Content: M: 1-WIRE
+Send 
+[56140286] [log] Content: M: 1-WIRE
+Send 
+[56160286] [log] Content: M: 1-WIRE
+Send 
+[56180286] [log] Content: M: 1-WIRE
+Send 
+[56200286] [log] Content: M: 1-WIRE
+Send 
+[56220286] [log] Content: M: 1-WIRE
+Send 
+[56240286] [log] Content: M: 1-WIRE
+Send 
+[56260286] [log] Content: M: 1-WIRE
+Send 
+[56280286] [log] Content: M: 1-WIRE
+Send 
+[56300286] [log] Content: M: 1-WIRE
+Send 
+[56320286] [log] Content: M: 1-WIRE
+Send 
+[56340286] [log] Content: M: 1-WIRE
+Send 
+[56360286] [log] Content: M: 1-WIRE
+Send 
+[56380286] [log] Content: M: 1-WIRE
+Send 
+[56400302] [log] Content: M: 1-WIRE
+Send 
+[56420286] [log] Content: M: 1-WIRE
+Send 
+[56440286] [log] Content: M: 1-WIRE
+Send 
+[56460286] [log] Content: M: 1-WIRE
+Send 
+[56480286] [log] Content: M: 1-WIRE
+Send 
+[56500286] [log] Content: M: 1-WIRE
+Send 
+[56520286] [log] Content: M: 1-WIRE
+Send 
+[56540286] [log] Content: M: 1-WIRE
+Send 
+[56560286] [log] Content: M: 1-WIRE
+Send 
+[56580286] [log] Content: M: 1-WIRE
+Send 
+[56600286] [log] Content: M: 1-WIRE
+Send 
+[56620286] [log] Content: M: 1-WIRE
+Send 
+[56640286] [log] Content: M: 1-WIRE
+Send 
+[56660286] [log] Content: M: 1-WIRE
+Send 
+[56680286] [log] Content: M: 1-WIRE
+Send 
+[56700286] [log] Content: M: 1-WIRE
+Send 
+[56720286] [log] Content: M: 1-WIRE
+Send 
+[56740286] [log] Content: M: 1-WIRE
+Send 
+[56760286] [log] Content: M: 1-WIRE
+Send 
+[56780286] [log] Content: M: 1-WIRE
+Send 
+[56800286] [log] Content: M: 1-WIRE
+Send 
+[56820286] [log] Content: M: 1-WIRE
+Send 
+[56840286] [log] Content: M: 1-WIRE
+Send 
+[56860286] [log] Content: M: 1-WIRE
+Send 
+[56880286] [log] Content: M: 1-WIRE
+Send 
+[56900302] [log] Content: M: 1-WIRE
+Send 
+[56920286] [log] Content: M: 1-WIRE
+Send 
+[56940286] [log] Content: M: 1-WIRE
+Send 
+[56960286] [log] Content: M: 1-WIRE
+Send 
+[56980286] [log] Content: M: 1-WIRE
+Send 
+[57000286] [log] Content: M: 1-WIRE
+Send 
+[57020286] [log] Content: M: 1-WIRE
+Send 
+[57040286] [log] Content: M: 1-WIRE
+Send 
+[57060286] [log] Content: M: 1-WIRE
+Send 
+[57080286] [log] Content: M: 1-WIRE
+Send 
+[57100286] [log] Content: M: 1-WIRE
+Send 
+[57120286] [log] Content: M: 1-WIRE
+Send 
+[57140286] [log] Content: M: 1-WIRE
+Send 
+[57160286] [log] Content: M: 1-WIRE
+Send 
+[57180286] [log] Content: M: 1-WIRE
+Send 
+[57200286] [log] Content: M: 1-WIRE
+Send 
+[57220286] [log] Content: M: 1-WIRE
+Send 
+[57240286] [log] Content: M: 1-WIRE
+Send 
+[57260286] [log] Content: M: 1-WIRE
+Send 
+[57280286] [log] Content: M: 1-WIRE
+Send 
+[57300286] [log] Content: M: 1-WIRE
+Send 
+[57320286] [log] Content: M: 1-WIRE
+Send 
+[57340286] [log] Content: M: 1-WIRE
+Send 
+[57360286] [log] Content: M: 1-WIRE
+Send 
+[57380286] [log] Content: M: 1-WIRE
+Send 
+[57400302] [log] Content: M: 1-WIRE
+Send 
+[57420286] [log] Content: M: 1-WIRE
+Send 
+[57440286] [log] Content: M: 1-WIRE
+Send 
+[57460286] [log] Content: M: 1-WIRE
+Send 
+[57480286] [log] Content: M: 1-WIRE
+Send 
+[57500286] [log] Content: M: 1-WIRE
+Send 
+[57520286] [log] Content: M: 1-WIRE
+Send 
+[57540286] [log] Content: M: 1-WIRE
+Send 
+[57560286] [log] Content: M: 1-WIRE
+Send 
+[57580286] [log] Content: M: 1-WIRE
+Send 
+[57600286] [log] Content: M: 1-WIRE
+Send 
+[57620286] [log] Content: M: 1-WIRE
+Send 
+[57640286] [log] Content: M: 1-WIRE
+Send 
+[57660286] [log] Content: M: 1-WIRE
+Send 
+[57680286] [log] Content: M: 1-WIRE
+Send 
+[57700286] [log] Content: M: 1-WIRE
+Send 
+[57720286] [log] Content: M: 1-WIRE
+Send 
+[57740286] [log] Content: M: 1-WIRE
+Send 
+[57760286] [log] Content: M: 1-WIRE
+Send 
+[57780286] [log] Content: M: 1-WIRE
+Send 
+[57800286] [log] Content: M: 1-WIRE
+Send 
+[57820286] [log] Content: M: 1-WIRE
+Send 
+[57840286] [log] Content: M: 1-WIRE
+Send 
+[57860286] [log] Content: M: 1-WIRE
+Send 
+[57880286] [log] Content: M: 1-WIRE
+Send 
+[57900302] [log] Content: M: 1-WIRE
+Send 
+[57920286] [log] Content: M: 1-WIRE
+Send 
+[57940286] [log] Content: M: 1-WIRE
+Send 
+[57960286] [log] Content: M: 1-WIRE
+Send 
+[57980286] [log] Content: M: 1-WIRE
+Send 
+[58000286] [log] Content: M: 1-WIRE
+Send 
+[58020286] [log] Content: M: 1-WIRE
+Send 
+[58040286] [log] Content: M: 1-WIRE
+Send 
+[58060286] [log] Content: M: 1-WIRE
+Send 
+[58080286] [log] Content: M: 1-WIRE
+Send 
+[58100286] [log] Content: M: 1-WIRE
+Send 
+[58120286] [log] Content: M: 1-WIRE
+Send 
+[58140286] [log] Content: M: 1-WIRE
+Send 
+[58160286] [log] Content: M: 1-WIRE
+Send 
+[58180286] [log] Content: M: 1-WIRE
+Send 
+[58200286] [log] Content: M: 1-WIRE
+Send 
+[58220286] [log] Content: M: 1-WIRE
+Send 
+[58240286] [log] Content: M: 1-WIRE
+Send 
+[58260286] [log] Content: M: 1-WIRE
+Send 
+[58280286] [log] Content: M: 1-WIRE
+Send 
+[58300286] [log] Content: M: 1-WIRE
+Send 
+[58320286] [log] Content: M: 1-WIRE
+Send 
+[58340286] [log] Content: M: 1-WIRE
+Send 
+[58360286] [log] Content: M: 1-WIRE
+Send 
+[58380286] [log] Content: M: 1-WIRE
+Send 
+[58400302] [log] Content: M: 1-WIRE
+Send 
+[58420286] [log] Content: M: 1-WIRE
+Send 
+[58440286] [log] Content: M: 1-WIRE
+Send 
+[58460286] [log] Content: M: 1-WIRE
+Send 
+[58480286] [log] Content: M: 1-WIRE
+Send 
+[58500286] [log] Content: M: 1-WIRE
+Send 
+[58520286] [log] Content: M: 1-WIRE
+Send 
+[58540286] [log] Content: M: 1-WIRE
+Send 
+[58560286] [log] Content: M: 1-WIRE
+Send 
+[58580286] [log] Content: M: 1-WIRE
+Send 
+[58600286] [log] Content: M: 1-WIRE
+Send 
+[58620286] [log] Content: M: 1-WIRE
+Send 
+[58640286] [log] Content: M: 1-WIRE
+Send 
+[58660286] [log] Content: M: 1-WIRE
+Send 
+[58680286] [log] Content: M: 1-WIRE
+Send 
+[58700286] [log] Content: M: 1-WIRE
+Send 
+[58720286] [log] Content: M: 1-WIRE
+Send 
+[58740286] [log] Content: M: 1-WIRE
+Send 
+[58760286] [log] Content: M: 1-WIRE
+Send 
+[58780286] [log] Content: M: 1-WIRE
+Send 
+[58800286] [log] Content: M: 1-WIRE
+Send 
+[58820286] [log] Content: M: 1-WIRE
+Send 
+[58840286] [log] Content: M: 1-WIRE
+Send 
+[58860286] [log] Content: M: 1-WIRE
+Send 
+[58880286] [log] Content: M: 1-WIRE
+Send 
+[58900302] [log] Content: M: 1-WIRE
+Send 
+[58920286] [log] Content: M: 1-WIRE
+Send 
+[58940286] [log] Content: M: 1-WIRE
+Send 
+[58960286] [log] Content: M: 1-WIRE
+Send 
+[58980286] [log] Content: M: 1-WIRE
+Send 
+[59000286] [log] Content: M: 1-WIRE
+Send 
+[59020286] [log] Content: M: 1-WIRE
+Send 
+[59040286] [log] Content: M: 1-WIRE
+Send 
+[59060286] [log] Content: M: 1-WIRE
+Send 
+[59080286] [log] Content: M: 1-WIRE
+Send 
+[59100286] [log] Content: M: 1-WIRE
+Send 
+[59120286] [log] Content: M: 1-WIRE
+Send 
+[59140286] [log] Content: M: 1-WIRE
+Send 
+[59160286] [log] Content: M: 1-WIRE
+Send 
+[59180286] [log] Content: M: 1-WIRE
+Send 
+[59200286] [log] Content: M: 1-WIRE
+Send 
+[59220286] [log] Content: M: 1-WIRE
+Send 
+[59240286] [log] Content: M: 1-WIRE
+Send 
+[59260286] [log] Content: M: 1-WIRE
+Send 
+[59280286] [log] Content: M: 1-WIRE
+Send 
+[59300286] [log] Content: M: 1-WIRE
+Send 
+[59320286] [log] Content: M: 1-WIRE
+Send 
+[59340286] [log] Content: M: 1-WIRE
+Send 
+[59360286] [log] Content: M: 1-WIRE
+Send 
+[59380286] [log] Content: M: 1-WIRE
+Send 
+[59400302] [log] Content: M: 1-WIRE
+Send 
+[59420286] [log] Content: M: 1-WIRE
+Send 
+[59440286] [log] Content: M: 1-WIRE
+Send 
+[59460286] [log] Content: M: 1-WIRE
+Send 
+[59480286] [log] Content: M: 1-WIRE
+Send 
+[59500286] [log] Content: M: 1-WIRE
+Send 
+[59520286] [log] Content: M: 1-WIRE
+Send 
+[59540286] [log] Content: M: 1-WIRE
+Send 
+[59560286] [log] Content: M: 1-WIRE
+Send 
+[59580286] [log] Content: M: 1-WIRE
+Send 
+[59600286] [log] Content: M: 1-WIRE
+Send 
+[59620286] [log] Content: M: 1-WIRE
+Send 
+[59640286] [log] Content: M: 1-WIRE
+Send 
+[59660286] [log] Content: M: 1-WIRE
+Send 
+[59680286] [log] Content: M: 1-WIRE
+Send 
+[59700286] [log] Content: M: 1-WIRE
+Send 
+[59720286] [log] Content: M: 1-WIRE
+Send 
+[59740286] [log] Content: M: 1-WIRE
+Send 
+[59760286] [log] Content: M: 1-WIRE
+Send 
+[59780286] [log] Content: M: 1-WIRE
+Send 
+[59800286] [log] Content: M: 1-WIRE
+Send 
+[59820286] [log] Content: M: 1-WIRE
+Send 
+[59840286] [log] Content: M: 1-WIRE
+Send 
+[59860286] [log] Content: M: 1-WIRE
+Send 
+[59880286] [log] Content: M: 1-WIRE
+Send 
+[59900302] [log] Content: M: 1-WIRE
+Send 
+[59920286] [log] Content: M: 1-WIRE
+Send 
+[59940286] [log] Content: M: 1-WIRE
+Send 
+[59960286] [log] Content: M: 1-WIRE
+Send 
+[59980286] [log] Content: M: 1-WIRE
+Send 
+[60000286] [log] Content: M: 1-WIRE
+Send 
+[60020286] [log] Content: M: 1-WIRE
+Send 
+[60040286] [log] Content: M: 1-WIRE
+Send 
+[60060286] [log] Content: M: 1-WIRE
+Send 
+[60080286] [log] Content: M: 1-WIRE
+Send 
+[60100286] [log] Content: M: 1-WIRE
+Send 
+[60120286] [log] Content: M: 1-WIRE
+Send 
+[60140286] [log] Content: M: 1-WIRE
+Send 
+[60160286] [log] Content: M: 1-WIRE
+Send 
+[60180286] [log] Content: M: 1-WIRE
+Send 
+[60200286] [log] Content: M: 1-WIRE
+Send 
+[60220286] [log] Content: M: 1-WIRE
+Send 
+[60240286] [log] Content: M: 1-WIRE
+Send 
+[60260286] [log] Content: M: 1-WIRE
+Send 
+[60280286] [log] Content: M: 1-WIRE
+Send 
+[60300286] [log] Content: M: 1-WIRE
+Send 
+[60320286] [log] Content: M: 1-WIRE
+Send 
+[60340286] [log] Content: M: 1-WIRE
+Send 
+[60360286] [log] Content: M: 1-WIRE
+Send 
+[60380286] [log] Content: M: 1-WIRE
+Send 
+[60400302] [log] Content: M: 1-WIRE
+Send 
+[60420286] [log] Content: M: 1-WIRE
+Send 
+[60440286] [log] Content: M: 1-WIRE
+Send 
+[60460286] [log] Content: M: 1-WIRE
+Send 
+[60480286] [log] Content: M: 1-WIRE
+Send 
+[60500286] [log] Content: M: 1-WIRE
+Send 
+[60520286] [log] Content: M: 1-WIRE
+Send 
+[60540286] [log] Content: M: 1-WIRE
+Send 
+[60560286] [log] Content: M: 1-WIRE
+Send 
+[60580286] [log] Content: M: 1-WIRE
+Send 
+[60600286] [log] Content: M: 1-WIRE
+Send 
+[60620286] [log] Content: M: 1-WIRE
+Send 
+[60640286] [log] Content: M: 1-WIRE
+Send 
+[60660286] [log] Content: M: 1-WIRE
+Send 
+[60680286] [log] Content: M: 1-WIRE
+Send 
+[60700286] [log] Content: M: 1-WIRE
+Send 
+[60720286] [log] Content: M: 1-WIRE
+Send 
+[60740286] [log] Content: M: 1-WIRE
+Send 
+[60760286] [log] Content: M: 1-WIRE
+Send 
+[60780286] [log] Content: M: 1-WIRE
+Send 
+[60800286] [log] Content: M: 1-WIRE
+Send 
+[60820286] [log] Content: M: 1-WIRE
+Send 
+[60840286] [log] Content: M: 1-WIRE
+Send 
+[60860286] [log] Content: M: 1-WIRE
+Send 
+[60880286] [log] Content: M: 1-WIRE
+Send 
+[60900302] [log] Content: M: 1-WIRE
+Send 
+[60920286] [log] Content: M: 1-WIRE
+Send 
+[60940286] [log] Content: M: 1-WIRE
+Send 
+[60960286] [log] Content: M: 1-WIRE
+Send 
+[60980286] [log] Content: M: 1-WIRE
+Send 
+[61000286] [log] Content: M: 1-WIRE
+Send 
+[61020286] [log] Content: M: 1-WIRE
+Send 
+[61040286] [log] Content: M: 1-WIRE
+Send 
+[61060286] [log] Content: M: 1-WIRE
+Send 
+[61080286] [log] Content: M: 1-WIRE
+Send 
+[61100286] [log] Content: M: 1-WIRE
+Send 
+[61120286] [log] Content: M: 1-WIRE
+Send 
+[61140286] [log] Content: M: 1-WIRE
+Send 
+[61160286] [log] Content: M: 1-WIRE
+Send 
+[61180286] [log] Content: M: 1-WIRE
+Send 
+[61200286] [log] Content: M: 1-WIRE
+Send 
+[61220286] [log] Content: M: 1-WIRE
+Send 
+[61240286] [log] Content: M: 1-WIRE
+Send 
+[61260286] [log] Content: M: 1-WIRE
+Send 
+[61280286] [log] Content: M: 1-WIRE
+Send 
+[61300286] [log] Content: M: 1-WIRE
+Send 
+[61320286] [log] Content: M: 1-WIRE
+Send 
+[61340286] [log] Content: M: 1-WIRE
+Send 
+[61360286] [log] Content: M: 1-WIRE
+Send 
+[61380286] [log] Content: M: 1-WIRE
+Send 
+[61400302] [log] Content: M: 1-WIRE
+Send 
+[61420286] [log] Content: M: 1-WIRE
+Send 
+[61440286] [log] Content: M: 1-WIRE
+Send 
+[61460286] [log] Content: M: 1-WIRE
+Send 
+[61480286] [log] Content: M: 1-WIRE
+Send 
+[61500286] [log] Content: M: 1-WIRE
+Send 
+[61520286] [log] Content: M: 1-WIRE
+Send 
+[61540286] [log] Content: M: 1-WIRE
+Send 
+[61560286] [log] Content: M: 1-WIRE
+Send 
+[61580286] [log] Content: M: 1-WIRE
+Send 
+[61600286] [log] Content: M: 1-WIRE
+Send 
+[61620286] [log] Content: M: 1-WIRE
+Send 
+[61640286] [log] Content: M: 1-WIRE
+Send 
+[61660286] [log] Content: M: 1-WIRE
+Send 
+[61680286] [log] Content: M: 1-WIRE
+Send 
+[61700286] [log] Content: M: 1-WIRE
+Send 
+[61720286] [log] Content: M: 1-WIRE
+Send 
+[61740286] [log] Content: M: 1-WIRE
+Send 
+[61760286] [log] Content: M: 1-WIRE
+Send 
+[61780286] [log] Content: M: 1-WIRE
+Send 
+[61800286] [log] Content: M: 1-WIRE
+Send 
+[61820286] [log] Content: M: 1-WIRE
+Send 
+[61840286] [log] Content: M: 1-WIRE
+Send 
+[61860286] [log] Content: M: 1-WIRE
+Send 
+[61880286] [log] Content: M: 1-WIRE
+Send 
+[61900302] [log] Content: M: 1-WIRE
+Send 
+[61920286] [log] Content: M: 1-WIRE
+Send 
+[61940286] [log] Content: M: 1-WIRE
+Send 
+[61960286] [log] Content: M: 1-WIRE
+Send 
+[61980286] [log] Content: M: 1-WIRE
+Send 
+[62000286] [log] Content: M: 1-WIRE
+Send 
+[62020286] [log] Content: M: 1-WIRE
+Send 
+[62040286] [log] Content: M: 1-WIRE
+Send 
+[62060286] [log] Content: M: 1-WIRE
+Send 
+[62080286] [log] Content: M: 1-WIRE
+Send 
+[62100286] [log] Content: M: 1-WIRE
+Send 
+[62120286] [log] Content: M: 1-WIRE
+Send 
+[62140286] [log] Content: M: 1-WIRE
+Send 
+[62160286] [log] Content: M: 1-WIRE
+Send 
+[62180286] [log] Content: M: 1-WIRE
+Send 
+[62200286] [log] Content: M: 1-WIRE
+Send 
+[62220286] [log] Content: M: 1-WIRE
+Send 
+[62240286] [log] Content: M: 1-WIRE
+Send 
+[62260286] [log] Content: M: 1-WIRE
+Send 
+[62280286] [log] Content: M: 1-WIRE
+Send 
+[62300286] [log] Content: M: 1-WIRE
+Send 
+[62320286] [log] Content: M: 1-WIRE
+Send 
+[62340286] [log] Content: M: 1-WIRE
+Send 
+[62360286] [log] Content: M: 1-WIRE
+Send 
+[62380286] [log] Content: M: 1-WIRE
+Send 
+[62400302] [log] Content: M: 1-WIRE
+Send 
+[62420286] [log] Content: M: 1-WIRE
+Send 
+[62440286] [log] Content: M: 1-WIRE
+Send 
+[62460286] [log] Content: M: 1-WIRE
+Send 
+[62480286] [log] Content: M: 1-WIRE
+Send 
+[62500286] [log] Content: M: 1-WIRE
+Send 
+[62520286] [log] Content: M: 1-WIRE
+Send 
+[62540286] [log] Content: M: 1-WIRE
+Send 
+[62560286] [log] Content: M: 1-WIRE
+Send 
+[62580286] [log] Content: M: 1-WIRE
+Send 
+[62600286] [log] Content: M: 1-WIRE
+Send 
+[62620286] [log] Content: M: 1-WIRE
+Send 
+[62640286] [log] Content: M: 1-WIRE
+Send 
+[62660286] [log] Content: M: 1-WIRE
+Send 
+[62680286] [log] Content: M: 1-WIRE
+Send 
+[62700286] [log] Content: M: 1-WIRE
+Send 
+[62720286] [log] Content: M: 1-WIRE
+Send 
+[62740286] [log] Content: M: 1-WIRE
+Send 
+[62760286] [log] Content: M: 1-WIRE
+Send 
+[62780286] [log] Content: M: 1-WIRE
+Send 
+[62800286] [log] Content: M: 1-WIRE
+Send 
+[62820286] [log] Content: M: 1-WIRE
+Send 
+[62840286] [log] Content: M: 1-WIRE
+Send 
+[62860286] [log] Content: M: 1-WIRE
+Send 
+[62880286] [log] Content: M: 1-WIRE
+Send 
+[62900302] [log] Content: M: 1-WIRE
+Send 
+[62920286] [log] Content: M: 1-WIRE
+Send 
+[62940286] [log] Content: M: 1-WIRE
+Send 
+[62960286] [log] Content: M: 1-WIRE
+Send 
+[62980286] [log] Content: M: 1-WIRE
+Send 
+[63000286] [log] Content: M: 1-WIRE
+Send 
+[63020286] [log] Content: M: 1-WIRE
+Send 
+[63040286] [log] Content: M: 1-WIRE
+Send 
+[63060286] [log] Content: M: 1-WIRE
+Send 
+[63080286] [log] Content: M: 1-WIRE
+Send 
+[63100286] [log] Content: M: 1-WIRE
+Send 
+[63120286] [log] Content: M: 1-WIRE
+Send 
+[63140286] [log] Content: M: 1-WIRE
+Send 
+[63160286] [log] Content: M: 1-WIRE
+Send 
+[63180286] [log] Content: M: 1-WIRE
+Send 
+[63200286] [log] Content: M: 1-WIRE
+Send 
+[63220286] [log] Content: M: 1-WIRE
+Send 
+[63240286] [log] Content: M: 1-WIRE
+Send 
+[63260286] [log] Content: M: 1-WIRE
+Send 
+[63280286] [log] Content: M: 1-WIRE
+Send 
+[63300286] [log] Content: M: 1-WIRE
+Send 
+[63320286] [log] Content: M: 1-WIRE
+Send 
+[63340286] [log] Content: M: 1-WIRE
+Send 
+[63360286] [log] Content: M: 1-WIRE
+Send 
+[63380286] [log] Content: M: 1-WIRE
+Send 
+[63400302] [log] Content: M: 1-WIRE
+Send 
+[63420286] [log] Content: M: 1-WIRE
+Send 
+[63440286] [log] Content: M: 1-WIRE
+Send 
+[63460286] [log] Content: M: 1-WIRE
+Send 
+[63480286] [log] Content: M: 1-WIRE
+Send 
+[63500286] [log] Content: M: 1-WIRE
+Send 
+[63520286] [log] Content: M: 1-WIRE
+Send 
+[63540286] [log] Content: M: 1-WIRE
+Send 
+[63560286] [log] Content: M: 1-WIRE
+Send 
+[63580286] [log] Content: M: 1-WIRE
+Send 
+[63600286] [log] Content: M: 1-WIRE
+Send 
+[63620286] [log] Content: M: 1-WIRE
+Send 
+[63640286] [log] Content: M: 1-WIRE
+Send 
+[63660286] [log] Content: M: 1-WIRE
+Send 
+[63680286] [log] Content: M: 1-WIRE
+Send 
+[63700286] [log] Content: M: 1-WIRE
+Send 
+[63720286] [log] Content: M: 1-WIRE
+Send 
+[63740286] [log] Content: M: 1-WIRE
+Send 
+[63760286] [log] Content: M: 1-WIRE
+Send 
+[63780286] [log] Content: M: 1-WIRE
+Send 
+[63800286] [log] Content: M: 1-WIRE
+Send 
+[63820286] [log] Content: M: 1-WIRE
+Send 
+[63840286] [log] Content: M: 1-WIRE
+Send 
+[63860286] [log] Content: M: 1-WIRE
+Send 
+[63880286] [log] Content: M: 1-WIRE
+Send 
+[63900302] [log] Content: M: 1-WIRE
+Send 
+[63920286] [log] Content: M: 1-WIRE
+Send 
+[63940286] [log] Content: M: 1-WIRE
+Send 
+[63960286] [log] Content: M: 1-WIRE
+Send 
+[63980286] [log] Content: M: 1-WIRE
+Send 
+[64000286] [log] Content: M: 1-WIRE
+Send 
+[64020286] [log] Content: M: 1-WIRE
+Send 
+[64040286] [log] Content: M: 1-WIRE
+Send 
+[64060286] [log] Content: M: 1-WIRE
+Send 
+[64080286] [log] Content: M: 1-WIRE
+Send 
+[64100286] [log] Content: M: 1-WIRE
+Send 
+[64120286] [log] Content: M: 1-WIRE
+Send 
+[64140286] [log] Content: M: 1-WIRE
+Send 
+[64160286] [log] Content: M: 1-WIRE
+Send 
+[64180286] [log] Content: M: 1-WIRE
+Send 
+[64200286] [log] Content: M: 1-WIRE
+Send 
+[64220286] [log] Content: M: 1-WIRE
+Send 
+[64240286] [log] Content: M: 1-WIRE
+Send 
+[64260286] [log] Content: M: 1-WIRE
+Send 
+[64280286] [log] Content: M: 1-WIRE
+Send 
+[64300286] [log] Content: M: 1-WIRE
+Send 
+[64320286] [log] Content: M: 1-WIRE
+Send 
+[64340286] [log] Content: M: 1-WIRE
+Send 
+[64360286] [log] Content: M: 1-WIRE
+Send 
+[64380286] [log] Content: M: 1-WIRE
+Send 
+[64400302] [log] Content: M: 1-WIRE
+Send 
+[64420286] [log] Content: M: 1-WIRE
+Send 
+[64440286] [log] Content: M: 1-WIRE
+Send 
+[64460286] [log] Content: M: 1-WIRE
+Send 
+[64480286] [log] Content: M: 1-WIRE
+Send 
+[64500286] [log] Content: M: 1-WIRE
+Send 
+[64520286] [log] Content: M: 1-WIRE
+Send 
+[64540286] [log] Content: M: 1-WIRE
+Send 
+[64560286] [log] Content: M: 1-WIRE
+Send 
+[64580286] [log] Content: M: 1-WIRE
+Send 
+[64600286] [log] Content: M: 1-WIRE
+Send 
+[64620286] [log] Content: M: 1-WIRE
+Send 
+[64640286] [log] Content: M: 1-WIRE
+Send 
+[64660286] [log] Content: M: 1-WIRE
+Send 
+[64680286] [log] Content: M: 1-WIRE
+Send 
+[64700286] [log] Content: M: 1-WIRE
+Send 
+[64720286] [log] Content: M: 1-WIRE
+Send 
+[64740286] [log] Content: M: 1-WIRE
+Send 
+[64760286] [log] Content: M: 1-WIRE
+Send 
+[64780286] [log] Content: M: 1-WIRE
+Send 
+[64800286] [log] Content: M: 1-WIRE
+Send 
+[64820286] [log] Content: M: 1-WIRE
+Send 
+[64840286] [log] Content: M: 1-WIRE
+Send 
+[64860286] [log] Content: M: 1-WIRE
+Send 
+[64880286] [log] Content: M: 1-WIRE
+Send 
+[64900302] [log] Content: M: 1-WIRE
+Send 
+[64920286] [log] Content: M: 1-WIRE
+Send 
+[64940286] [log] Content: M: 1-WIRE
+Send 
+[64960286] [log] Content: M: 1-WIRE
+Send 
+[64980286] [log] Content: M: 1-WIRE
+Send 
+[65000286] [log] Content: M: 1-WIRE
+Send 
+[65020286] [log] Content: M: 1-WIRE
+Send 
+[65040286] [log] Content: M: 1-WIRE
+Send 
+[65060286] [log] Content: M: 1-WIRE
+Send 
+[65080286] [log] Content: M: 1-WIRE
+Send 
+[65100286] [log] Content: M: 1-WIRE
+Send 
+[65120286] [log] Content: M: 1-WIRE
+Send 
+[65140286] [log] Content: M: 1-WIRE
+Send 
+[65160286] [log] Content: M: 1-WIRE
+Send 
+[65180286] [log] Content: M: 1-WIRE
+Send 
+[65200286] [log] Content: M: 1-WIRE
+Send 
+[65220286] [log] Content: M: 1-WIRE
+Send 
+[65240286] [log] Content: M: 1-WIRE
+Send 
+[65260286] [log] Content: M: 1-WIRE
+Send 
+[65280286] [log] Content: M: 1-WIRE
+Send 
+[65300286] [log] Content: M: 1-WIRE
+Send 
+[65320286] [log] Content: M: 1-WIRE
+Send 
+[65340286] [log] Content: M: 1-WIRE
+Send 
+[65360286] [log] Content: M: 1-WIRE
+Send 
+[65380286] [log] Content: M: 1-WIRE
+Send 
+[65400302] [log] Content: M: 1-WIRE
+Send 
+[65420286] [log] Content: M: 1-WIRE
+Send 
+[65440286] [log] Content: M: 1-WIRE
+Send 
+[65460286] [log] Content: M: 1-WIRE
+Send 
+[65480286] [log] Content: M: 1-WIRE
+Send 
+[65500286] [log] Content: M: 1-WIRE
+Send 
+[65520286] [log] Content: M: 1-WIRE
+Send 
+[65540286] [log] Content: M: 1-WIRE
+Send 
+[65560286] [log] Content: M: 1-WIRE
+Send 
+[65580286] [log] Content: M: 1-WIRE
+Send 
+[65600286] [log] Content: M: 1-WIRE
+Send 
+[65620286] [log] Content: M: 1-WIRE
+Send 
+[65640286] [log] Content: M: 1-WIRE
+Send 
+[65660286] [log] Content: M: 1-WIRE
+Send 
+[65680286] [log] Content: M: 1-WIRE
+Send 
+[65700286] [log] Content: M: 1-WIRE
+Send 
+[65720286] [log] Content: M: 1-WIRE
+Send 
+[65740286] [log] Content: M: 1-WIRE
+Send 
+[65760286] [log] Content: M: 1-WIRE
+Send 
+[65780286] [log] Content: M: 1-WIRE
+Send 
+[65800286] [log] Content: M: 1-WIRE
+Send 
+[65820286] [log] Content: M: 1-WIRE
+Send 
+[65840286] [log] Content: M: 1-WIRE
+Send 
+[65860286] [log] Content: M: 1-WIRE
+Send 
+[65880286] [log] Content: M: 1-WIRE
+Send 
+[65900302] [log] Content: M: 1-WIRE
+Send 
+[65920286] [log] Content: M: 1-WIRE
+Send 
+[65940286] [log] Content: M: 1-WIRE
+Send 
+[65960286] [log] Content: M: 1-WIRE
+Send 
+[65980286] [log] Content: M: 1-WIRE
+Send 
+[66000286] [log] Content: M: 1-WIRE
+Send 
+[66020286] [log] Content: M: 1-WIRE
+Send 
+[66040286] [log] Content: M: 1-WIRE
+Send 
+[66060286] [log] Content: M: 1-WIRE
+Send 
+[66080286] [log] Content: M: 1-WIRE
+Send 
+[66100286] [log] Content: M: 1-WIRE
+Send 
+[66120286] [log] Content: M: 1-WIRE
+Send 
+[66140286] [log] Content: M: 1-WIRE
+Send 
+[66160286] [log] Content: M: 1-WIRE
+Send 
+[66180286] [log] Content: M: 1-WIRE
+Send 
+[66200286] [log] Content: M: 1-WIRE
+Send 
+[66220286] [log] Content: M: 1-WIRE
+Send 
+[66240286] [log] Content: M: 1-WIRE
+Send 
+[66260286] [log] Content: M: 1-WIRE
+Send 
+[66280286] [log] Content: M: 1-WIRE
+Send 
+[66300286] [log] Content: M: 1-WIRE
+Send 
+[66320286] [log] Content: M: 1-WIRE
+Send 
+[66340286] [log] Content: M: 1-WIRE
+Send 
+[66360286] [log] Content: M: 1-WIRE
+Send 
+[66380286] [log] Content: M: 1-WIRE
+Send 
+[66400302] [log] Content: M: 1-WIRE
+Send 
+[66420286] [log] Content: M: 1-WIRE
+Send 
+[66440286] [log] Content: M: 1-WIRE
+Send 
+[66460286] [log] Content: M: 1-WIRE
+Send 
+[66480286] [log] Content: M: 1-WIRE
+Send 
+[66500286] [log] Content: M: 1-WIRE
+Send 
+[66520286] [log] Content: M: 1-WIRE
+Send 
+[66540286] [log] Content: M: 1-WIRE
+Send 
+[66560286] [log] Content: M: 1-WIRE
+Send 
+[66580286] [log] Content: M: 1-WIRE
+Send 
+[66600286] [log] Content: M: 1-WIRE
+Send 
+[66620286] [log] Content: M: 1-WIRE
+Send 
+[66640286] [log] Content: M: 1-WIRE
+Send 
+[66660286] [log] Content: M: 1-WIRE
+Send 
+[66680286] [log] Content: M: 1-WIRE
+Send 
+[66700286] [log] Content: M: 1-WIRE
+Send 
+[66720286] [log] Content: M: 1-WIRE
+Send 
+[66740286] [log] Content: M: 1-WIRE
+Send 
+[66760286] [log] Content: M: 1-WIRE
+Send 
+[66780286] [log] Content: M: 1-WIRE
+Send 
+[66800286] [log] Content: M: 1-WIRE
+Send 
+[66820286] [log] Content: M: 1-WIRE
+Send 
+[66840286] [log] Content: M: 1-WIRE
+Send 
+[66860286] [log] Content: M: 1-WIRE
+Send 
+[66880286] [log] Content: M: 1-WIRE
+Send 
+[66900302] [log] Content: M: 1-WIRE
+Send 
+[66920286] [log] Content: M: 1-WIRE
+Send 
+[66940286] [log] Content: M: 1-WIRE
+Send 
+[66960286] [log] Content: M: 1-WIRE
+Send 
+[66980286] [log] Content: M: 1-WIRE
+Send 
+[67000286] [log] Content: M: 1-WIRE
+Send 
+[67020286] [log] Content: M: 1-WIRE
+Send 
+[67040286] [log] Content: M: 1-WIRE
+Send 
+[67060286] [log] Content: M: 1-WIRE
+Send 
+[67080286] [log] Content: M: 1-WIRE
+Send 
+[67100286] [log] Content: M: 1-WIRE
+Send 
+[67120286] [log] Content: M: 1-WIRE
+Send 
+[67140286] [log] Content: M: 1-WIRE
+Send 
+[67160286] [log] Content: M: 1-WIRE
+Send 
+[67180286] [log] Content: M: 1-WIRE
+Send 
+[67200286] [log] Content: M: 1-WIRE
+Send 
+[67220286] [log] Content: M: 1-WIRE
+Send 
+[67240286] [log] Content: M: 1-WIRE
+Send 
+[67260286] [log] Content: M: 1-WIRE
+Send 
+[67280286] [log] Content: M: 1-WIRE
+Send 
+[67300286] [log] Content: M: 1-WIRE
+Send 
+[67320286] [log] Content: M: 1-WIRE
+Send 
+[67340286] [log] Content: M: 1-WIRE
+Send 
+[67360286] [log] Content: M: 1-WIRE
+Send 
+[67380286] [log] Content: M: 1-WIRE
+Send 
+[67400302] [log] Content: M: 1-WIRE
+Send 
+[67420286] [log] Content: M: 1-WIRE
+Send 
+[67440286] [log] Content: M: 1-WIRE
+Send 
+[67460286] [log] Content: M: 1-WIRE
+Send 
+[67480286] [log] Content: M: 1-WIRE
+Send 
+[67500286] [log] Content: M: 1-WIRE
+Send 
+[67520286] [log] Content: M: 1-WIRE
+Send 
+[67540286] [log] Content: M: 1-WIRE
+Send 
+[67560286] [log] Content: M: 1-WIRE
+Send 
+[67580286] [log] Content: M: 1-WIRE
+Send 
+[67600286] [log] Content: M: 1-WIRE
+Send 
+[67620286] [log] Content: M: 1-WIRE
+Send 
+[67640286] [log] Content: M: 1-WIRE
+Send 
+[67660286] [log] Content: M: 1-WIRE
+Send 
+[67680286] [log] Content: M: 1-WIRE
+Send 
+[67700286] [log] Content: M: 1-WIRE
+Send 
+[67720286] [log] Content: M: 1-WIRE
+Send 
+[67740286] [log] Content: M: 1-WIRE
+Send 
+[67760286] [log] Content: M: 1-WIRE
+Send 
+[67780286] [log] Content: M: 1-WIRE
+Send 
+[67800286] [log] Content: M: 1-WIRE
+Send 
+[67820286] [log] Content: M: 1-WIRE
+Send 
+[67840286] [log] Content: M: 1-WIRE
+Send 
+[67860286] [log] Content: M: 1-WIRE
+Send 
+[67880286] [log] Content: M: 1-WIRE
+Send 
+[67900302] [log] Content: M: 1-WIRE
+Send 
+[67920286] [log] Content: M: 1-WIRE
+Send 
+[67940286] [log] Content: M: 1-WIRE
+Send 
+[67960286] [log] Content: M: 1-WIRE
+Send 
+[67980286] [log] Content: M: 1-WIRE
+Send 
+[68000286] [log] Content: M: 1-WIRE
+Send 
+[68020286] [log] Content: M: 1-WIRE
+Send 
+[68040286] [log] Content: M: 1-WIRE
+Send 
+[68060286] [log] Content: M: 1-WIRE
+Send 
+[68080286] [log] Content: M: 1-WIRE
+Send 
+[68100286] [log] Content: M: 1-WIRE
+Send 
+[68120286] [log] Content: M: 1-WIRE
+Send 
+[68140286] [log] Content: M: 1-WIRE
+Send 
+[68160286] [log] Content: M: 1-WIRE
+Send 
+[68180286] [log] Content: M: 1-WIRE
+Send 
+[68200286] [log] Content: M: 1-WIRE
+Send 
+[68220286] [log] Content: M: 1-WIRE
+Send 
+[68240286] [log] Content: M: 1-WIRE
+Send 
+[68260286] [log] Content: M: 1-WIRE
+Send 
+[68280286] [log] Content: M: 1-WIRE
+Send 
+[68300286] [log] Content: M: 1-WIRE
+Send 
+[68320286] [log] Content: M: 1-WIRE
+Send 
+[68340286] [log] Content: M: 1-WIRE
+Send 
+[68360286] [log] Content: M: 1-WIRE
+Send 
+[68380286] [log] Content: M: 1-WIRE
+Send 
+[68400302] [log] Content: M: 1-WIRE
+Send 
+[68420286] [log] Content: M: 1-WIRE
+Send 
+[68440286] [log] Content: M: 1-WIRE
+Send 
+[68460286] [log] Content: M: 1-WIRE
+Send 
+[68480286] [log] Content: M: 1-WIRE
+Send 
+[68500286] [log] Content: M: 1-WIRE
+Send 
+[68520286] [log] Content: M: 1-WIRE
+Send 
+[68540286] [log] Content: M: 1-WIRE
+Send 
+[68560286] [log] Content: M: 1-WIRE
+Send 
+[68580286] [log] Content: M: 1-WIRE
+Send 
+[68600286] [log] Content: M: 1-WIRE
+Send 
+[68620286] [log] Content: M: 1-WIRE
+Send 
+[68640286] [log] Content: M: 1-WIRE
+Send 
+[68660286] [log] Content: M: 1-WIRE
+Send 
+[68680286] [log] Content: M: 1-WIRE
+Send 
+[68700286] [log] Content: M: 1-WIRE
+Send 
+[68720286] [log] Content: M: 1-WIRE
+Send 
+[68740286] [log] Content: M: 1-WIRE
+Send 
+[68760286] [log] Content: M: 1-WIRE
+Send 
+[68780286] [log] Content: M: 1-WIRE
+Send 
+[68800286] [log] Content: M: 1-WIRE
+Send 
+[68820286] [log] Content: M: 1-WIRE
+Send 
+[68840286] [log] Content: M: 1-WIRE
+Send 
+[68860286] [log] Content: M: 1-WIRE
+Send 
+[68880286] [log] Content: M: 1-WIRE
+Send 
+[68900302] [log] Content: M: 1-WIRE
+Send 
+[68920286] [log] Content: M: 1-WIRE
+Send 
+[68940286] [log] Content: M: 1-WIRE
+Send 
+[68960286] [log] Content: M: 1-WIRE
+Send 
+[68980286] [log] Content: M: 1-WIRE
+Send 
+[69000286] [log] Content: M: 1-WIRE
+Send 
+[69020286] [log] Content: M: 1-WIRE
+Send 
+[69040286] [log] Content: M: 1-WIRE
+Send 
+[69060286] [log] Content: M: 1-WIRE
+Send 
+[69080286] [log] Content: M: 1-WIRE
+Send 
+[69100286] [log] Content: M: 1-WIRE
+Send 
+[69120286] [log] Content: M: 1-WIRE
+Send 
+[69140286] [log] Content: M: 1-WIRE
+Send 
+[69160286] [log] Content: M: 1-WIRE
+Send 
+[69180286] [log] Content: M: 1-WIRE
+Send 
+[69200286] [log] Content: M: 1-WIRE
+Send 
+[69220286] [log] Content: M: 1-WIRE
+Send 
+[69240286] [log] Content: M: 1-WIRE
+Send 
+[69260286] [log] Content: M: 1-WIRE
+Send 
+[69280286] [log] Content: M: 1-WIRE
+Send 
+[69300286] [log] Content: M: 1-WIRE
+Send 
+[69320286] [log] Content: M: 1-WIRE
+Send 
+[69340286] [log] Content: M: 1-WIRE
+Send 
+[69360286] [log] Content: M: 1-WIRE
+Send 
+[69380286] [log] Content: M: 1-WIRE
+Send 
+[69400302] [log] Content: M: 1-WIRE
+Send 
+[69420286] [log] Content: M: 1-WIRE
+Send 
+[69440286] [log] Content: M: 1-WIRE
+Send 
+[69460286] [log] Content: M: 1-WIRE
+Send 
+[69480286] [log] Content: M: 1-WIRE
+Send 
+[69500286] [log] Content: M: 1-WIRE
+Send 
+[69520286] [log] Content: M: 1-WIRE
+Send 
+[69540286] [log] Content: M: 1-WIRE
+Send 
+[69560286] [log] Content: M: 1-WIRE
+Send 
+[69580286] [log] Content: M: 1-WIRE
+Send 
+[69600286] [log] Content: M: 1-WIRE
+Send 
+[69620286] [log] Content: M: 1-WIRE
+Send 
+[69640286] [log] Content: M: 1-WIRE
+Send 
+[69660286] [log] Content: M: 1-WIRE
+Send 
+[69680286] [log] Content: M: 1-WIRE
+Send 
+[69700286] [log] Content: M: 1-WIRE
+Send 
+[69720286] [log] Content: M: 1-WIRE
+Send 
+[69740286] [log] Content: M: 1-WIRE
+Send 
+[69760286] [log] Content: M: 1-WIRE
+Send 
+[69780286] [log] Content: M: 1-WIRE
+Send 
+[69800286] [log] Content: M: 1-WIRE
+Send 
+[69820286] [log] Content: M: 1-WIRE
+Send 
+[69840286] [log] Content: M: 1-WIRE
+Send 
+[69860286] [log] Content: M: 1-WIRE
+Send 
+[69880286] [log] Content: M: 1-WIRE
+Send 
+[69900302] [log] Content: M: 1-WIRE
+Send 
+[69920286] [log] Content: M: 1-WIRE
+Send 
+[69940286] [log] Content: M: 1-WIRE
+Send 
+[69960286] [log] Content: M: 1-WIRE
+Send 
+[69980286] [log] Content: M: 1-WIRE
+Send 
+[70000286] [log] Content: M: 1-WIRE
+Send 
+[70020286] [log] Content: M: 1-WIRE
+Send 
+[70040286] [log] Content: M: 1-WIRE
+Send 
+[70060286] [log] Content: M: 1-WIRE
+Send 
+[70080286] [log] Content: M: 1-WIRE
+Send 
+[70100286] [log] Content: M: 1-WIRE
+Send 
+[70120286] [log] Content: M: 1-WIRE
+Send 
+[70140286] [log] Content: M: 1-WIRE
+Send 
+[70160286] [log] Content: M: 1-WIRE
+Send 
+[70180286] [log] Content: M: 1-WIRE
+Send 
+[70200286] [log] Content: M: 1-WIRE
+Send 
+[70220286] [log] Content: M: 1-WIRE
+Send 
+[70240286] [log] Content: M: 1-WIRE
+Send 
+[70260286] [log] Content: M: 1-WIRE
+Send 
+[70280286] [log] Content: M: 1-WIRE
+Send 
+[70300286] [log] Content: M: 1-WIRE
+Send 
+[70320286] [log] Content: M: 1-WIRE
+Send 
+[70340286] [log] Content: M: 1-WIRE
+Send 
+[70360286] [log] Content: M: 1-WIRE
+Send 
+[70380286] [log] Content: M: 1-WIRE
+Send 
+[70400302] [log] Content: M: 1-WIRE
+Send 
+[70420286] [log] Content: M: 1-WIRE
+Send 
+[70440286] [log] Content: M: 1-WIRE
+Send 
+[70460286] [log] Content: M: 1-WIRE
+Send 
+[70480286] [log] Content: M: 1-WIRE
+Send 
+[70500286] [log] Content: M: 1-WIRE
+Send 
+[70520286] [log] Content: M: 1-WIRE
+Send 
+[70540286] [log] Content: M: 1-WIRE
+Send 
+[70560286] [log] Content: M: 1-WIRE
+Send 
+[70580286] [log] Content: M: 1-WIRE
+Send 
+[70600286] [log] Content: M: 1-WIRE
+Send 
+[70620286] [log] Content: M: 1-WIRE
+Send 
+[70640286] [log] Content: M: 1-WIRE
+Send 
+[70660286] [log] Content: M: 1-WIRE
+Send 
+[70680286] [log] Content: M: 1-WIRE
+Send 
+[70700286] [log] Content: M: 1-WIRE
+Send 
+[70720286] [log] Content: M: 1-WIRE
+Send 
+[70740286] [log] Content: M: 1-WIRE
+Send 
+[70760286] [log] Content: M: 1-WIRE
+Send 
+[70780286] [log] Content: M: 1-WIRE
+Send 
+[70800286] [log] Content: M: 1-WIRE
+Send 
+[70820286] [log] Content: M: 1-WIRE
+Send 
+[70840286] [log] Content: M: 1-WIRE
+Send 
+[70860286] [log] Content: M: 1-WIRE
+Send 
+[70880286] [log] Content: M: 1-WIRE
+Send 
+[70900302] [log] Content: M: 1-WIRE
+Send 
+[70920286] [log] Content: M: 1-WIRE
+Send 
+[70940286] [log] Content: M: 1-WIRE
+Send 
+[70960286] [log] Content: M: 1-WIRE
+Send 
+[70980286] [log] Content: M: 1-WIRE
+Send 
+[71000286] [log] Content: M: 1-WIRE
+Send 
+[71020286] [log] Content: M: 1-WIRE
+Send 
+[71040286] [log] Content: M: 1-WIRE
+Send 
+[71060286] [log] Content: M: 1-WIRE
+Send 
+[71080286] [log] Content: M: 1-WIRE
+Send 
+[71100286] [log] Content: M: 1-WIRE
+Send 
+[71120286] [log] Content: M: 1-WIRE
+Send 
+[71140286] [log] Content: M: 1-WIRE
+Send 
+[71160286] [log] Content: M: 1-WIRE
+Send 
+[71180286] [log] Content: M: 1-WIRE
+Send 
+[71200286] [log] Content: M: 1-WIRE
+Send 
+[71220286] [log] Content: M: 1-WIRE
+Send 
+[71240286] [log] Content: M: 1-WIRE
+Send 
+[71260286] [log] Content: M: 1-WIRE
+Send 
+[71280286] [log] Content: M: 1-WIRE
+Send 
+[71300286] [log] Content: M: 1-WIRE
+Send 
+[71320286] [log] Content: M: 1-WIRE
+Send 
+[71340286] [log] Content: M: 1-WIRE
+Send 
+[71360286] [log] Content: M: 1-WIRE
+Send 
+[71380286] [log] Content: M: 1-WIRE
+Send 
+[71400302] [log] Content: M: 1-WIRE
+Send 
+[71420286] [log] Content: M: 1-WIRE
+Send 
+[71440286] [log] Content: M: 1-WIRE
+Send 
+[71460286] [log] Content: M: 1-WIRE
+Send 
+[71480286] [log] Content: M: 1-WIRE
+Send 
+[71500286] [log] Content: M: 1-WIRE
+Send 
+[71520286] [log] Content: M: 1-WIRE
+Send 
+[71540286] [log] Content: M: 1-WIRE
+Send 
+[71560286] [log] Content: M: 1-WIRE
+Send 
+[71580286] [log] Content: M: 1-WIRE
+Send 
+[71600286] [log] Content: M: 1-WIRE
+Send 
+[71620286] [log] Content: M: 1-WIRE
+Send 
+[71640286] [log] Content: M: 1-WIRE
+Send 
+[71660286] [log] Content: M: 1-WIRE
+Send 
+[71680286] [log] Content: M: 1-WIRE
+Send 
+[71700286] [log] Content: M: 1-WIRE
+Send 
+[71720286] [log] Content: M: 1-WIRE
+Send 
+[71740286] [log] Content: M: 1-WIRE
+Send 
+[71760286] [log] Content: M: 1-WIRE
+Send 
+[71780286] [log] Content: M: 1-WIRE
+Send 
+[71800286] [log] Content: M: 1-WIRE
+Send 
+[71820286] [log] Content: M: 1-WIRE
+Send 
+[71840286] [log] Content: M: 1-WIRE
+Send 
+[71860286] [log] Content: M: 1-WIRE
+Send 
+[71880286] [log] Content: M: 1-WIRE
+Send 
+[71900302] [log] Content: M: 1-WIRE
+Send 
+[71920286] [log] Content: M: 1-WIRE
+Send 
+[71940286] [log] Content: M: 1-WIRE
+Send 
+[71960286] [log] Content: M: 1-WIRE
+Send 
+[71980286] [log] Content: M: 1-WIRE
+Send 
+[72000286] [log] Content: M: 1-WIRE
+Send 
+[72020286] [log] Content: M: 1-WIRE
+Send 
+[72040286] [log] Content: M: 1-WIRE
+Send 
+[72060286] [log] Content: M: 1-WIRE
+Send 
+[72080286] [log] Content: M: 1-WIRE
+Send 
+[72100286] [log] Content: M: 1-WIRE
+Send 
+[72120286] [log] Content: M: 1-WIRE
+Send 
+[72140286] [log] Content: M: 1-WIRE
+Send 
+[72160286] [log] Content: M: 1-WIRE
+Send 
+[72180286] [log] Content: M: 1-WIRE
+Send 
+[72200286] [log] Content: M: 1-WIRE
+Send 
+[72220286] [log] Content: M: 1-WIRE
+Send 
+[72240286] [log] Content: M: 1-WIRE
+Send 
+[72260286] [log] Content: M: 1-WIRE
+Send 
+[72280286] [log] Content: M: 1-WIRE
+Send 
+[72300286] [log] Content: M: 1-WIRE
+Send 
+[72320286] [log] Content: M: 1-WIRE
+Send 
+[72340286] [log] Content: M: 1-WIRE
+Send 
+[72360286] [log] Content: M: 1-WIRE
+Send 
+[72380286] [log] Content: M: 1-WIRE
+Send 
+[72400302] [log] Content: M: 1-WIRE
+Send 
+[72420286] [log] Content: M: 1-WIRE
+Send 
+[72440286] [log] Content: M: 1-WIRE
+Send 
+[72460286] [log] Content: M: 1-WIRE
+Send 
+[72480286] [log] Content: M: 1-WIRE
+Send 
+[72500286] [log] Content: M: 1-WIRE
+Send 
+[72520286] [log] Content: M: 1-WIRE
+Send 
+[72540286] [log] Content: M: 1-WIRE
+Send 
+[72560286] [log] Content: M: 1-WIRE
+Send 
+[72580286] [log] Content: M: 1-WIRE
+Send 
+[72600286] [log] Content: M: 1-WIRE
+Send 
+[72620286] [log] Content: M: 1-WIRE
+Send 
+[72640286] [log] Content: M: 1-WIRE
+Send 
+[72660286] [log] Content: M: 1-WIRE
+Send 
+[72680286] [log] Content: M: 1-WIRE
+Send 
+[72700286] [log] Content: M: 1-WIRE
+Send 
+[72720286] [log] Content: M: 1-WIRE
+Send 
+[72740286] [log] Content: M: 1-WIRE
+Send 
+[72760286] [log] Content: M: 1-WIRE
+Send 
+[72780286] [log] Content: M: 1-WIRE
+Send 
+[72800286] [log] Content: M: 1-WIRE
+Send 
+[72820286] [log] Content: M: 1-WIRE
+Send 
+[72840286] [log] Content: M: 1-WIRE
+Send 
+[72860286] [log] Content: M: 1-WIRE
+Send 
+[72880286] [log] Content: M: 1-WIRE
+Send 
+[72900302] [log] Content: M: 1-WIRE
+Send 
+[72920286] [log] Content: M: 1-WIRE
+Send 
+[72940286] [log] Content: M: 1-WIRE
+Send 
+[72960286] [log] Content: M: 1-WIRE
+Send 
+[72980286] [log] Content: M: 1-WIRE
+Send 
+[73000286] [log] Content: M: 1-WIRE
+Send 
+[73020286] [log] Content: M: 1-WIRE
+Send 
+[73040286] [log] Content: M: 1-WIRE
+Send 
+[73060286] [log] Content: M: 1-WIRE
+Send 
+[73080286] [log] Content: M: 1-WIRE
+Send 
+[73100286] [log] Content: M: 1-WIRE
+Send 
+[73120286] [log] Content: M: 1-WIRE
+Send 
+[73140286] [log] Content: M: 1-WIRE
+Send 
+[73160286] [log] Content: M: 1-WIRE
+Send 
+[73180286] [log] Content: M: 1-WIRE
+Send 
+[73200286] [log] Content: M: 1-WIRE
+Send 
+[73220286] [log] Content: M: 1-WIRE
+Send 
+[73240286] [log] Content: M: 1-WIRE
+Send 
+[73260286] [log] Content: M: 1-WIRE
+Send 
+[73280286] [log] Content: M: 1-WIRE
+Send 
+[73300286] [log] Content: M: 1-WIRE
+Send 
+[73320286] [log] Content: M: 1-WIRE
+Send 
+[73340286] [log] Content: M: 1-WIRE
+Send 
+[73360286] [log] Content: M: 1-WIRE
+Send 
+[73380286] [log] Content: M: 1-WIRE
+Send 
+[73400302] [log] Content: M: 1-WIRE
+Send 
+[73420286] [log] Content: M: 1-WIRE
+Send 
+[73440286] [log] Content: M: 1-WIRE
+Send 
+[73460286] [log] Content: M: 1-WIRE
+Send 
+[73480286] [log] Content: M: 1-WIRE
+Send 
+[73500286] [log] Content: M: 1-WIRE
+Send 
+[73520286] [log] Content: M: 1-WIRE
+Send 
+[73540286] [log] Content: M: 1-WIRE
+Send 

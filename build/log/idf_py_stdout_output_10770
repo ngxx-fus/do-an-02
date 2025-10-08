@@ -1,0 +1,525 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b684h ( 46724) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b6ac vaddr=3ffb0000 size=02638h (  9784) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dcec vaddr=40080000 size=0232ch (  9004) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16368h ( 90984) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00036390 vaddr=4008232c size=090b0h ( 37040) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=0003f448 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     do-an-02[0m
+[0;32mI (200) app_init: App version:      a08380c-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  5 2025 21:22:45[0m
+[0;32mI (209) app_init: ELF file SHA256:  5f79be779...[0m
+[0;32mI (214) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F30 len 0002D0D0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B3DC len 00014C24 (83 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[31197] [-->] app_main()
+[31239] [log] Set systemStage = SYSTEM_INIT
+[31427] [log] Start up OLED screen
+[35578] [log] Enter test mode!
+[48892] [-->] ledTest()
+[849967] [<--] ledTest()
+[850003] [log] [+] oledTask()
+[861277] [log] [oledTask] Wait for the initializing have been done!
+[861382] [log] [+] prepairNSendDataTask()
+[872913] [log] [prepairNSendDataTask] Wait for the initializing have been done!
+[873002] [log] [+] modeControlTask()
+[884349] [log] [modeControlTask] Wait for the initializing have been done!
+[884443] [log] Set systemStage = SYSTEM_RUNNING
+[895400] [-->] oledTest()
+[895474] [-->] prepairNSendDataTask(0x00000000)
+[895584] [-->] modeControlTask(0x00000000)
+[896571] [log] [modeControlTask] Default mode: 0
+[900157] [-->] modeSwitch(-1 --> 0)
+[903377] [err] EXIT MODE: systemMode is not valid[9076 Abor-!
+[908838] [loa] ENTRYx3fDE: SYSTEM_11620] [
+[91266E: systemMoeateSPIDevval(spi--> t ** pDe[96690] [<] [<--]dDaeateSPIDevi [-1]
+OKE
+[920470] [-->] configSPIDevice(dev: 0x3ffafea0, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 100000, config: 0x0000)
+[930378] [<--] configSPIDevice() : OKE
+[933842] [-->] startupSPIDevice(0x3ffafea0)
+[938167] [<--] startupSPIDevice() : OKE
+[941307] [<--] modeControl() : OKE
+[2940766] [-->] sendDataFrame([, 0x3ffb0388)
+[2940814] [log] SPI Send: [
+[2940853] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[2941691] [<--] spiSetTransmitBuffer() : <null>
+[2945941] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[2951500] [<--] spiSetReceiveBuffer() : OKE
+[2955398] [-->] spiStartTransaction(0x3ffafea0)
+[2959880] [<--] spiStartTransaction() : 1
+[2963380] [<--] sendDataFrame() : [1]
+[4980786] [-->] sendDataFrame(a, 0x3ffb0388)
+[4980834] [log] SPI Send: a
+[4980862] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[4981699] [<--] spiSetTransmitBuffer() : <null>
+[4985953] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[4991508] [<--] spiSetReceiveBuffer() : OKE
+[4995415] [-->] spiStartTransaction(0x3ffafea0)
+[4999768] [<--] spiStartTransaction() : 1
+[5003401] [<--] sendDataFrame() : [1]
+[7020772] [-->] sendDataFrame(l, 0x3ffb0388)
+[7020821] [log] SPI Send: l
+[7020848] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[7021686] [<--] spiSetTransmitBuffer() : <null>
+[7025939] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[7031495] [<--] spiSetReceiveBuffer() : OKE
+[7035401] [-->] spiStartTransaction(0x3ffafea0)
+[7039755] [<--] spiStartTransaction() : 1
+[7043387] [<--] sendDataFrame() : [1]
+[9060814] [-->] sendDataFrame(%, 0x3ffb0388)
+[9060862] [log] SPI Send: %
+[9060890] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[9061727] [<--] spiSetTransmitBuffer() : <null>
+[9065980] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[9071536] [<--] spiSetReceiveBuffer() : OKE
+[9075442] [-->] spiStartTransaction(0x3ffafea0)
+[9079841] [<--] spiStartTransaction() : 1
+[9083428] [<--] sendDataFrame() : [1]
+[11100809] [-->] sendDataFrame(@, 0x3ffb0388)
+[11100859] [log] SPI Send: @
+[11100888] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[11101983] [<--] spiSetTransmitBuffer() : <null>
+[11106323] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[11111965] [<--] spiSetReceiveBuffer() : OKE
+[11115958] [-->] spiStartTransaction(0x3ffafea0)
+[11120399] [<--] spiStartTransaction() : 1
+[11124118] [<--] sendDataFrame() : [1]
+[13140778] [-->] sendDataFrame(a, 0x3ffb0388)
+[13140828] [log] SPI Send: a
+[13140857] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[13141952] [<--] spiSetTransmitBuffer() : <null>
+[13146292] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[13151934] [<--] spiSetReceiveBuffer() : OKE
+[13155927] [-->] spiStartTransaction(0x3ffafea0)
+[13160368] [<--] spiStartTransaction() : 1
+[13164087] [<--] sendDataFrame() : [1]
+[15180809] [-->] sendDataFrame(M, 0x3ffb0388)
+[15180859] [log] SPI Send: M
+[15180888] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[15181983] [<--] spiSetTransmitBuffer() : <null>
+[15186323] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[15191966] [<--] spiSetReceiveBuffer() : OKE
+[15195959] [-->] spiStartTransaction(0x3ffafea0)
+[15200399] [<--] spiStartTransaction() : 1
+[15204118] [<--] sendDataFrame() : [1]
+[17220795] [-->] sendDataFrame(d, 0x3ffb0388)
+[17220844] [log] SPI Send: d
+[17220874] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[17221968] [<--] spiSetTransmitBuffer() : <null>
+[17226309] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[17231951] [<--] spiSetReceiveBuffer() : OKE
+[17235944] [-->] spiStartTransaction(0x3ffafea0)
+[17240384] [<--] spiStartTransaction() : 1
+[17244104] [<--] sendDataFrame() : [1]
+[19260768] [-->] sendDataFrame(+, 0x3ffb0388)
+[19260818] [log] SPI Send: +
+[19260847] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[19261942] [<--] spiSetTransmitBuffer() : <null>
+[19266282] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[19271924] [<--] spiSetReceiveBuffer() : OKE
+[19275917] [-->] spiStartTransaction(0x3ffafea0)
+[19280358] [<--] spiStartTransaction() : 1
+[19284077] [<--] sendDataFrame() : [1]
+[21300796] [-->] sendDataFrame(0, 0x3ffb0388)
+[21300846] [log] SPI Send: 0
+[21300875] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[21301970] [<--] spiSetTransmitBuffer() : <null>
+[21306310] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[21311952] [<--] spiSetReceiveBuffer() : OKE
+[21315945] [-->] spiStartTransaction(0x3ffafea0)
+[21320386] [<--] spiStartTransaction() : 1
+[21324105] [<--] sendDataFrame() : [1]
+[23340782] [-->] sendDataFrame({, 0x3ffb0388)
+[23340832] [log] SPI Send: {
+[23340861] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[23341956] [<--] spiSetTransmitBuffer() : <null>
+[23346296] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[23351939] [<--] spiSetReceiveBuffer() : OKE
+[23355932] [-->] spiStartTransaction(0x3ffafea0)
+[23360372] [<--] spiStartTransaction() : 1
+[23364091] [<--] sendDataFrame() : [1]
+[25380799] [-->] sendDataFrame(m, 0x3ffb0388)
+[25380849] [log] SPI Send: m
+[25380878] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[25381973] [<--] spiSetTransmitBuffer() : <null>
+[25386313] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[25391955] [<--] spiSetReceiveBuffer() : OKE
+[25395949] [-->] spiStartTransaction(0x3ffafea0)
+[25400389] [<--] spiStartTransaction() : 1
+[25404108] [<--] sendDataFrame() : [1]
+[27420787] [-->] sendDataFrame(h, 0x3ffb0388)
+[27420837] [log] SPI Send: h
+[27420867] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[27421961] [<--] spiSetTransmitBuffer() : <null>
+[27426302] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[27431944] [<--] spiSetReceiveBuffer() : OKE
+[27435937] [-->] spiStartTransaction(0x3ffafea0)
+[27440377] [<--] spiStartTransaction() : 1
+[27444097] [<--] sendDataFrame() : [1]
+[29460760] [-->] sendDataFrame(', 0x3ffb0388)
+[29460809] [log] SPI Send: '
+[29460839] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[29461933] [<--] spiSetTransmitBuffer() : <null>
+[29466274] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[29471916] [<--] spiSetReceiveBuffer() : OKE
+[29475909] [-->] spiStartTransaction(0x3ffafea0)
+[29480350] [<--] spiStartTransaction() : 1
+[29484069] [<--] sendDataFrame() : [1]
+[31500798] [-->] sendDataFrame(%, 0x3ffb0388)
+[31500848] [log] SPI Send: %
+[31500877] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[31501972] [<--] spiSetTransmitBuffer() : <null>
+[31506312] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[31511954] [<--] spiSetReceiveBuffer() : OKE
+[31515947] [-->] spiStartTransaction(0x3ffafea0)
+[31520388] [<--] spiStartTransaction() : 1
+[31524107] [<--] sendDataFrame() : [1]
+[33540796] [-->] sendDataFrame(E, 0x3ffb0388)
+[33540846] [log] SPI Send: E
+[33540875] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[33541970] [<--] spiSetTransmitBuffer() : <null>
+[33546310] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[33551953] [<--] spiSetReceiveBuffer() : OKE
+[33555946] [-->] spiStartTransaction(0x3ffafea0)
+[33560386] [<--] spiStartTransaction() : 1
+[33564105] [<--] sendDataFrame() : [1]
+[35580750] [-->] sendDataFrame(., 0x3ffb0388)
+[35580799] [log] SPI Send: .
+[35580829] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[35581923] [<--] spiSetTransmitBuffer() : <null>
+[35586264] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[35591906] [<--] spiSetReceiveBuffer() : OKE
+[35595899] [-->] spiStartTransaction(0x3ffafea0)
+[35600340] [<--] spiStartTransaction() : 1
+[35604059] [<--] sendDataFrame() : [1]
+[37620811] [-->] sendDataFrame(H, 0x3ffb0388)
+[37620861] [log] SPI Send: H
+[37620890] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[37621985] [<--] spiSetTransmitBuffer() : <null>
+[37626325] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[37631968] [<--] spiSetReceiveBuffer() : OKE
+[37635961] [-->] spiStartTransaction(0x3ffafea0)
+[37640401] [<--] spiStartTransaction() : 1
+[37644120] [<--] sendDataFrame() : [1]
+[39660764] [-->] sendDataFrame(\, 0x3ffb0388)
+[39660813] [log] SPI Send: \
+[39660843] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[39661937] [<--] spiSetTransmitBuffer() : <null>
+[39666278] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[39671920] [<--] spiSetReceiveBuffer() : OKE
+[39675913] [-->] spiStartTransaction(0x3ffafea0)
+[39680353] [<--] spiStartTransaction() : 1
+[39684073] [<--] sendDataFrame() : [1]
+[41700780] [-->] sendDataFrame(>, 0x3ffb0388)
+[41700830] [log] SPI Send: >
+[41700860] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[41701954] [<--] spiSetTransmitBuffer() : <null>
+[41706294] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[41711937] [<--] spiSetReceiveBuffer() : OKE
+[41715930] [-->] spiStartTransaction(0x3ffafea0)
+[41720370] [<--] spiStartTransaction() : 1
+[41724089] [<--] sendDataFrame() : [1]
+[43740789] [-->] sendDataFrame(Z, 0x3ffb0388)
+[43740839] [log] SPI Send: Z
+[43740868] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[43741963] [<--] spiSetTransmitBuffer() : <null>
+[43746303] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[43751945] [<--] spiSetReceiveBuffer() : OKE
+[43755938] [-->] spiStartTransaction(0x3ffafea0)
+[43760379] [<--] spiStartTransaction() : 1
+[43764098] [<--] sendDataFrame() : [1]
+[45780778] [-->] sendDataFrame(a, 0x3ffb0388)
+[45780828] [log] SPI Send: a
+[45780857] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[45781952] [<--] spiSetTransmitBuffer() : <null>
+[45786292] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[45791934] [<--] spiSetReceiveBuffer() : OKE
+[45795927] [-->] spiStartTransaction(0x3ffafea0)
+[45800368] [<--] spiStartTransaction() : 1
+[45804087] [<--] sendDataFrame() : [1]
+[47820787] [-->] sendDataFrame(w, 0x3ffb0388)
+[47820837] [log] SPI Send: w
+[47820866] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[47821961] [<--] spiSetTransmitBuffer() : <null>
+[47826301] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[47831943] [<--] spiSetReceiveBuffer() : OKE
+[47835936] [-->] spiStartTransaction(0x3ffafea0)
+[47840377] [<--] spiStartTransaction() : 1
+[47844096] [<--] sendDataFrame() : [1]
+[49860783] [-->] sendDataFrame(u, 0x3ffb0388)
+[49860833] [log] SPI Send: u
+[49860862] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[49861957] [<--] spiSetTransmitBuffer() : <null>
+[49866297] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[49871940] [<--] spiSetReceiveBuffer() : OKE
+[49875933] [-->] spiStartTransaction(0x3ffafea0)
+[49880373] [<--] spiStartTransaction() : 1
+[49884092] [<--] sendDataFrame() : [1]
+[51900795] [-->] sendDataFrame(H, 0x3ffb0388)
+[51900845] [log] SPI Send: H
+[51900875] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[51901969] [<--] spiSetTransmitBuffer() : <null>
+[51906309] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[51911952] [<--] spiSetReceiveBuffer() : OKE
+[51915945] [-->] spiStartTransaction(0x3ffafea0)
+[51920385] [<--] spiStartTransaction() : 1
+[51924105] [<--] sendDataFrame() : [1]
+[53940778] [-->] sendDataFrame(e, 0x3ffb0388)
+[53940828] [log] SPI Send: e
+[53940858] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[53941952] [<--] spiSetTransmitBuffer() : <null>
+[53946292] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[53951935] [<--] spiSetReceiveBuffer() : OKE
+[53955928] [-->] spiStartTransaction(0x3ffafea0)
+[53960368] [<--] spiStartTransaction() : 1
+[53964088] [<--] sendDataFrame() : [1]
+[55980789] [-->] sendDataFrame(Z, 0x3ffb0388)
+[55980839] [log] SPI Send: Z
+[55980868] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[55981963] [<--] spiSetTransmitBuffer() : <null>
+[55986303] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[55991945] [<--] spiSetReceiveBuffer() : OKE
+[55995938] [-->] spiStartTransaction(0x3ffafea0)
+[56000379] [<--] spiStartTransaction() : 1
+[56004098] [<--] sendDataFrame() : [1]
+[58020772] [-->] sendDataFrame(\, 0x3ffb0388)
+[58020821] [log] SPI Send: \
+[58020851] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[58021945] [<--] spiSetTransmitBuffer() : <null>
+[58026286] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[58031928] [<--] spiSetReceiveBuffer() : OKE
+[58035921] [-->] spiStartTransaction(0x3ffafea0)
+[58040361] [<--] spiStartTransaction() : 1
+[58044081] [<--] sendDataFrame() : [1]
+[60060786] [-->] sendDataFrame(#, 0x3ffb0388)
+[60060836] [log] SPI Send: #
+[60060865] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[60061960] [<--] spiSetTransmitBuffer() : <null>
+[60066300] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[60071942] [<--] spiSetReceiveBuffer() : OKE
+[60075935] [-->] spiStartTransaction(0x3ffafea0)
+[60080376] [<--] spiStartTransaction() : 1
+[60084095] [<--] sendDataFrame() : [1]
+[62100787] [-->] sendDataFrame(7, 0x3ffb0388)
+[62100837] [log] SPI Send: 7
+[62100867] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[62101961] [<--] spiSetTransmitBuffer() : <null>
+[62106301] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[62111944] [<--] spiSetReceiveBuffer() : OKE
+[62115937] [-->] spiStartTransaction(0x3ffafea0)
+[62120377] [<--] spiStartTransaction() : 1
+[62124096] [<--] sendDataFrame() : [1]
+[64140775] [-->] sendDataFrame(u, 0x3ffb0388)
+[64140825] [log] SPI Send: u
+[64140855] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[64141949] [<--] spiSetTransmitBuffer() : <null>
+[64146289] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[64151932] [<--] spiSetReceiveBuffer() : OKE
+[64155925] [-->] spiStartTransaction(0x3ffafea0)
+[64160365] [<--] spiStartTransaction() : 1
+[64164084] [<--] sendDataFrame() : [1]
+[66180793] [-->] sendDataFrame(p, 0x3ffb0388)
+[66180843] [log] SPI Send: p
+[66180873] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[66181967] [<--] spiSetTransmitBuffer() : <null>
+[66186308] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[66191950] [<--] spiSetReceiveBuffer() : OKE
+[66195943] [-->] spiStartTransaction(0x3ffafea0)
+[66200383] [<--] spiStartTransaction() : 1
+[66204103] [<--] sendDataFrame() : [1]
+[68220787] [-->] sendDataFrame(h, 0x3ffb0388)
+[68220837] [log] SPI Send: h
+[68220867] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[68221961] [<--] spiSetTransmitBuffer() : <null>
+[68226302] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[68231944] [<--] spiSetReceiveBuffer() : OKE
+[68235937] [-->] spiStartTransaction(0x3ffafea0)
+[68240377] [<--] spiStartTransaction() : 1
+[68244096] [<--] sendDataFrame() : [1]
+[70260793] [-->] sendDataFrame(p, 0x3ffb0388)
+[70260843] [log] SPI Send: p
+[70260873] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[70261967] [<--] spiSetTransmitBuffer() : <null>
+[70266308] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[70271950] [<--] spiSetReceiveBuffer() : OKE
+[70275943] [-->] spiStartTransaction(0x3ffafea0)
+[70280383] [<--] spiStartTransaction() : 1
+[70284103] [<--] sendDataFrame() : [1]
+[72300755] [-->] sendDataFrame(|, 0x3ffb0388)
+[72300805] [log] SPI Send: |
+[72300835] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[72301929] [<--] spiSetTransmitBuffer() : <null>
+[72306269] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[72311912] [<--] spiSetReceiveBuffer() : OKE
+[72315905] [-->] spiStartTransaction(0x3ffafea0)
+[72320345] [<--] spiStartTransaction() : 1
+[72324064] [<--] sendDataFrame() : [1]
+[74340758] [-->] sendDataFrame(,, 0x3ffb0388)
+[74340808] [log] SPI Send: ,
+[74340837] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[74341932] [<--] spiSetTransmitBuffer() : <null>
+[74346272] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[74351915] [<--] spiSetReceiveBuffer() : OKE
+[74355907] [-->] spiStartTransaction(0x3ffafea0)
+[74360348] [<--] spiStartTransaction() : 1
+[74364067] [<--] sendDataFrame() : [1]
+[76380768] [-->] sendDataFrame(l, 0x3ffb0388)
+[76380818] [log] SPI Send: l
+[76380848] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[76381942] [<--] spiSetTransmitBuffer() : <null>
+[76386283] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[76391925] [<--] spiSetReceiveBuffer() : OKE
+[76395918] [-->] spiStartTransaction(0x3ffafea0)
+[76400358] [<--] spiStartTransaction() : 1
+[76404078] [<--] sendDataFrame() : [1]
+[78420770] [-->] sendDataFrame(=, 0x3ffb0388)
+[78420820] [log] SPI Send: =
+[78420850] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[78421944] [<--] spiSetTransmitBuffer() : <null>
+[78426285] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[78431927] [<--] spiSetReceiveBuffer() : OKE
+[78435920] [-->] spiStartTransaction(0x3ffafea0)
+[78440360] [<--] spiStartTransaction() : 1
+[78444080] [<--] sendDataFrame() : [1]
+[80460756] [-->] sendDataFrame(~, 0x3ffb0388)
+[80460806] [log] SPI Send: ~
+[80460835] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[80461930] [<--] spiSetTransmitBuffer() : <null>
+[80466270] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[80471912] [<--] spiSetReceiveBuffer() : OKE
+[80475905] [-->] spiStartTransaction(0x3ffafea0)
+[80480346] [<--] spiStartTransaction() : 1
+[80484065] [<--] sendDataFrame() : [1]
+[82500776] [-->] sendDataFrame(I, 0x3ffb0388)
+[82500826] [log] SPI Send: I
+[82500855] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[82501950] [<--] spiSetTransmitBuffer() : <null>
+[82506290] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[82511932] [<--] spiSetReceiveBuffer() : OKE
+[82515925] [-->] spiStartTransaction(0x3ffafea0)
+[82520365] [<--] spiStartTransaction() : 1
+[82524085] [<--] sendDataFrame() : [1]
+[84540765] [-->] sendDataFrame(^, 0x3ffb0388)
+[84540815] [log] SPI Send: ^
+[84540844] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[84541939] [<--] spiSetTransmitBuffer() : <null>
+[84546279] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[84551921] [<--] spiSetReceiveBuffer() : OKE
+[84555914] [-->] spiStartTransaction(0x3ffafea0)
+[84560355] [<--] spiStartTransaction() : 1
+[84564074] [<--] sendDataFrame() : [1]
+[86580765] [-->] sendDataFrame(", 0x3ffb0388)
+[86580815] [log] SPI Send: "
+[86580844] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[86581938] [<--] spiSetTransmitBuffer() : <null>
+[86586279] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[86591921] [<--] spiSetReceiveBuffer() : OKE
+[86595914] [-->] spiStartTransaction(0x3ffafea0)
+[86600355] [<--] spiStartTransaction() : 1
+[86604074] [<--] sendDataFrame() : [1]
+[88620795] [-->] sendDataFrame(H, 0x3ffb0388)
+[88620845] [log] SPI Send: H
+[88620875] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[88621969] [<--] spiSetTransmitBuffer() : <null>
+[88626309] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[88631952] [<--] spiSetReceiveBuffer() : OKE
+[88635945] [-->] spiStartTransaction(0x3ffafea0)
+[88640385] [<--] spiStartTransaction() : 1
+[88644104] [<--] sendDataFrame() : [1]
+[90660778] [-->] sendDataFrame(e, 0x3ffb0388)
+[90660828] [log] SPI Send: e
+[90660858] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[90661952] [<--] spiSetTransmitBuffer() : <null>
+[90666292] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[90671935] [<--] spiSetReceiveBuffer() : OKE
+[90675928] [-->] spiStartTransaction(0x3ffafea0)
+[90680368] [<--] spiStartTransaction() : 1
+[90684088] [<--] sendDataFrame() : [1]
+[92700782] [-->] sendDataFrame(L, 0x3ffb0388)
+[92700832] [log] SPI Send: L
+[92700862] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[92701956] [<--] spiSetTransmitBuffer() : <null>
+[92706296] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[92711939] [<--] spiSetReceiveBuffer() : OKE
+[92715932] [-->] spiStartTransaction(0x3ffafea0)
+[92720372] [<--] spiStartTransaction() : 1
+[92724091] [<--] sendDataFrame() : [1]
+[94740778] [-->] sendDataFrame(1, 0x3ffb0388)
+[94740828] [log] SPI Send: 1
+[94740858] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[94741952] [<--] spiSetTransmitBuffer() : <null>
+[94746293] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[94751935] [<--] spiSetReceiveBuffer() : OKE
+[94755928] [-->] spiStartTransaction(0x3ffafea0)
+[94760368] [<--] spiStartTransaction() : 1
+[94764088] [<--] sendDataFrame() : [1]
+[96780798] [-->] sendDataFrame(%, 0x3ffb0388)
+[96780848] [log] SPI Send: %
+[96780877] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[96781972] [<--] spiSetTransmitBuffer() : <null>
+[96786312] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[96791954] [<--] spiSetReceiveBuffer() : OKE
+[96795947] [-->] spiStartTransaction(0x3ffafea0)
+[96800388] [<--] spiStartTransaction() : 1
+[96804107] [<--] sendDataFrame() : [1]
+[98820778] [-->] sendDataFrame(e, 0x3ffb0388)
+[98820828] [log] SPI Send: e
+[98820858] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[98821952] [<--] spiSetTransmitBuffer() : <null>
+[98826292] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[98831935] [<--] spiSetReceiveBuffer() : OKE
+[98835928] [-->] spiStartTransaction(0x3ffafea0)
+[98840368] [<--] spiStartTransaction() : 1
+[98844088] [<--] sendDataFrame() : [1]
+[100860771] [-->] sendDataFrame(x, 0x3ffb0388)
+[100860823] [log] SPI Send: x
+[100860854] [-->] spiSetTransmitBuffer(0x3ffafea0, 0x3ffb41a0, 1)
+[100862205] [<--] spiSetTransmitBuffer() : <null>
+[100866632] [-->] spiSetReceiveBuffer(0x3ffafea0, 0x3ffb0388, 1)
+[100872362] [<--] spiSetReceiveBuffer() : OKE
+[100876442] [-->] spiStartTransaction(0x3ffafea0)
+[100880969] [<--] spiStartTransaction() : 1
+[100884775] [<--] sendDataFrame() : [1]

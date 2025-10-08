@@ -1,0 +1,100 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB1 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7219: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m137[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7219: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m137[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7224: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m138[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x400e2250: [0;33moledSetPixel[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m257[0m
+[0m--- 0x400d970b: [0;33moledDrawChar[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m333[0m
+[0m--- 0x400d97cd: [0;33moledDrawText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m378[0m
+[0m--- 0x400d9829: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m391[0m
+[0m--- 0x400d720e: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m136[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7219: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m137[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7219: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m137[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d962f: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m213[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7224: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m138[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400dc00a: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400dc3dc: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082a81: [0;33m_xt_lowint1[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x40085642: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x400d9270: [0;33mi2cSendBuffer[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c[0m[0m:[1;31m337[0m
+[0m--- 0x400d95f8: [0;33moledFlush[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m204[0m
+[0m--- 0x400d9831: [0;33mdrawLineText[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c[0m[0m:[1;31m392[0m
+[0m--- 0x400d7219: [0;33mapp_main[0m[0m at [0;32m/home/fus/Documents/DO-AN-02/main/do-an-02.c[0m[0m:[1;31m137[0m
+[0m--- 0x400d3986: [0;33mmain_task[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400e3c51: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

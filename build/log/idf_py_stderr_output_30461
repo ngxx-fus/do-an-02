@@ -1,0 +1,30 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/flag.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/general.h:25,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Definitions.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:4:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:31:9: warning: '__max' redefined
+   31 | #define __max(a, b) ((a) > (b) ? (a) : (b))  ///< Return max(a,b).
+      |         ^~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:2:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:9:13: note: this is the location of the previous definition
+    9 |     #define __max(a, b) ((a)>(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:32:9: warning: '__min' redefined
+   32 | #define __min(a, b) ((a) < (b) ? (a) : (b))  ///< Return min(a,b).
+      |         ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:5:13: note: this is the location of the previous definition
+    5 |     #define __min(a, b) ((a)<(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:6:9: note: '#pragma message: oled128x64.c is compiling...'
+    6 | #pragma message("oled128x64.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/sender.h:3:10: fatal error: ../myDriver/oled128x64/oled128x64.h: No such file or directory
+    3 | #include "../myDriver/oled128x64/oled128x64.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7374: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

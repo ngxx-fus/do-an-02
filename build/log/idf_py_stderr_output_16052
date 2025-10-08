@@ -1,0 +1,53 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:33,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiStartTransaction':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:431:49: error: implicit declaration of function 'getDefRetStat_Str' [-Wimplicit-function-declaration]
+  431 |         __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ERR_NULL));
+      |                                                 ^~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espLogWrapper.h:17:94: note: in definition of macro '__exit'
+   17 |     #define __exit(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+      |                                                                                              ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:431:9: note: in expansion of macro '__spiExit'
+  431 |         __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ERR_NULL));
+      |         ^~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:469:22: warning: unused variable 'currByte' [-Wunused-variable]
+  469 |             uint8_t *currByte = &txBuf[dev->txdByteInd];
+      |                      ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:504:22: warning: unused variable 'currByte' [-Wunused-variable]
+  504 |             uint8_t *currByte = &txBuf[dev->txdByteInd];
+      |                      ^~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:10:9: note: '#pragma message: oled128x64.c is compiling...'
+   10 | #pragma message("oled128x64.c is compiling...")
+      |         ^~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'oledResetView':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:132:46: warning: passing argument 2 of 'i2cSetTransmitBuffer' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  132 |     ret = i2cSetTransmitBuffer(oled->i2cDev, cmds, sizeof(cmds));
+      |                                              ^~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Definitions.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:6:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:62:49: note: expected 'void *' but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+   62 | def i2cSetTransmitBuffer(i2cDev_t * dev, void * txdPtr, size_t size);
+      |                                          ~~~~~~~^~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:554:47: error: implicit declaration of function 'uint8_tCast' [-Wimplicit-function-declaration]
+  554 |                     rxBuf[dev->rxdByteInd] |= uint8_tCast(GPIO.in & __mask32(dev->miso));
+      |                                               ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:31:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   31 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:622:5: error: implicit declaration of function 'spiSetCLK2Idle'; did you mean 'spiSetCLKState'? [-Wimplicit-function-declaration]
+  622 |     spiSetCLK2Idle();
+      |     ^~~~~~~~~~~~~~
+      |     spiSetCLKState
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:448:13: warning: unused variable 'cpol' [-Wunused-variable]
+  448 |     uint8_t cpol = __hasFlagBitSet(dev->conf, SPI_CPOL);
+      |             ^~~~
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7589: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

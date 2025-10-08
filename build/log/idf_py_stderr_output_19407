@@ -1,0 +1,56 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c: In function 'spiStartTransaction':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:519:13: warning: unused variable 'currTByte' [-Wunused-variable]
+  519 |     uint8_t currTByte = 0, currTBit;
+      |             ^~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:515:14: warning: unused variable 'rxBuf' [-Wunused-variable]
+  515 |     uint8_t *rxBuf = (uint8_t*)dev->rBuff;
+      |              ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:514:14: warning: unused variable 'txBuf' [-Wunused-variable]
+  514 |     uint8_t *txBuf = (uint8_t*)dev->tBuff;
+      |              ^~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/do-an-02.c:2:
+/home/fus/Documents/DO-AN-02/main/sender.h: In function 'changeModeButtonISR':
+/home/fus/Documents/DO-AN-02/main/sender.h:240:20: warning: variable 'lastNegEdgeTime' set but not used [-Wunused-but-set-variable]
+  240 |     static int64_t lastNegEdgeTime = 0;
+      |                    ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/do-an-02.c: In function 'app_main':
+/home/fus/Documents/DO-AN-02/main/do-an-02.c:102:41: warning: passing argument 2 of 'sendDataFrame' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  102 |         sendDataFrame(currentDataFrame, &receivedByteData);
+      |                                         ^~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/sender.h:138:47: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+  138 | def sendDataFrame(uint8_t byteData, uint8_t * rcvdByteData){
+      |                                     ~~~~~~~~~~^~~~~~~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/oled128x64.h:4,
+                 from /home/fus/Documents/DO-AN-02/main/sender.h:4:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h: At top level:
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:31:23: warning: 'i2cHandleSDAIsr' defined but not used [-Wunused-function]
+   31 | static void IRAM_ATTR i2cHandleSDAIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/main/../comDriver/oled128x64/../i2c/i2c.h:22:23: warning: 'i2cHandleSCLIsr' defined but not used [-Wunused-function]
+   22 | static void IRAM_ATTR i2cHandleSCLIsr(void* pvI2CDev){
+      |                       ^~~~~~~~~~~~~~~
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj):(.iram1.0.literal+0x8): undefined reference to `spiReceiveBuffPushBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj):(.iram1.0.literal+0xc): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj):(.literal.configSPIDevice+0xc): undefined reference to `spiResetRBuff'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj):(.literal.spiStartTransaction+0x14): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj):(.literal.spiStartTransaction+0x18): undefined reference to `spiReceiveBuffPushBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj): in function `spiHandleCLKIsr':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:217:(.iram1.0+0x62): undefined reference to `spiReceiveBuffPushBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:220:(.iram1.0+0x70): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj): in function `spiResetTBuff':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:111:(.text.configSPIDevice+0x87): undefined reference to `spiResetRBuff'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj): in function `spiSetReceiveBuffer':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:480:(.text.spiSetReceiveBuffer+0x71): undefined reference to `spiResetRBuff'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj): in function `vPortEnterCritical':
+/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567:(.text.spiStartTransaction+0xa2): undefined reference to `spiResetRBuff'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: esp-idf/spi/libspi.a(spi.c.obj): in function `spiStartTransaction':
+/home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:530:(.text.spiStartTransaction+0xe6): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:535:(.text.spiStartTransaction+0x130): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:545:(.text.spiStartTransaction+0x178): undefined reference to `spiReceiveBuffPushBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:555:(.text.spiStartTransaction+0x1f2): undefined reference to `spiTransmitBuffGetNextBit'
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.1.0/../../../../xtensa-esp-elf/bin/ld: /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:574:(.text.spiStartTransaction+0x294): undefined reference to `spiReceiveBuffPushBit'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/do-an-02.elf.dir/build.make:620: do-an-02.elf] Error 1
+make[1]: *** [CMakeFiles/Makefile2:3244: CMakeFiles/do-an-02.elf.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

@@ -1,0 +1,114 @@
+Command: make -j 10 all
+/home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:3:9: note: '#pragma message: i2c.c is compiling...'
+    3 | #pragma message("i2c.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/flag.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/general.h:25,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/i2c.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Definitions.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:4:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:31:9: warning: '__max' redefined
+   31 | #define __max(a, b) ((a) > (b) ? (a) : (b))  ///< Return max(a,b).
+      |         ^~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:2:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:9:13: note: this is the location of the previous definition
+    9 |     #define __max(a, b) ((a)>(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/../i2c/../../helper/helper.h:32:9: warning: '__min' redefined
+   32 | #define __min(a, b) ((a) < (b) ? (a) : (b))  ///< Return min(a,b).
+      |         ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Helpers.h:5:13: note: this is the location of the previous definition
+    5 |     #define __min(a, b) ((a)<(b)?(a):(b))
+      |             ^~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:6:9: note: '#pragma message: oled128x64.c is compiling...'
+    6 | #pragma message("oled128x64.c is compiling...")
+      |         ^~~~~~~
+In file included from /home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:3:
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'createOLEDDevice':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:20:41: error: pasting "(" and ""createOLEDDevice(%p)"" does not give a valid preprocessing token
+   20 |     #define __oledEntry(...)     __entry( ##__VA_ARGS__ )
+      |                                         ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:9:5: note: in expansion of macro '__oledEntry'
+    9 |     __oledEntry("createOLEDDevice(%p)", oled);
+      |     ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""createOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:24:5: note: in expansion of macro '__oledExit'
+   24 |     __oledExit("createOLEDDevice() : %s", STR(OKE));
+      |     ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""createOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:28:9: note: in expansion of macro '__oledExit'
+   28 |         __oledExit("createOLEDDevice() : %s", STR(ERR));
+      |         ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""createOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:32:9: note: in expansion of macro '__oledExit'
+   32 |         __oledExit("createOLEDDevice() : %s", STR(ERR_NULL));
+      |         ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""createOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:36:9: note: in expansion of macro '__oledExit'
+   36 |         __oledExit("createOLEDDevice() : %s", STR(ERR_MALLOC_FAILED));
+      |         ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:35:5: error: label 'ReturnERR_MALLOC_FAILED' defined but not used [-Werror=unused-label]
+   35 |     ReturnERR_MALLOC_FAILED:
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'configOLEDDevice':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:20:41: error: pasting "(" and ""configOLEDDevice(%p)"" does not give a valid preprocessing token
+   20 |     #define __oledEntry(...)     __entry( ##__VA_ARGS__ )
+      |                                         ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:41:5: note: in expansion of macro '__oledEntry'
+   41 |     __oledEntry("configOLEDDevice(%p)", oled);
+      |     ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""configOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:48:5: note: in expansion of macro '__oledExit'
+   48 |     __oledExit("configOLEDDevice() : %s", STR(OKE));
+      |     ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""configOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:52:9: note: in expansion of macro '__oledExit'
+   52 |         __oledExit("configOLEDDevice() : %s", STR(ERR_NULL));
+      |         ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c: In function 'startupOLEDDevice':
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:20:41: error: pasting "(" and ""startupOLEDDevice(%p)"" does not give a valid preprocessing token
+   20 |     #define __oledEntry(...)     __entry( ##__VA_ARGS__ )
+      |                                         ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:57:5: note: in expansion of macro '__oledEntry'
+   57 |     __oledEntry("startupOLEDDevice(%p)", oled);
+      |     ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:27:38: error: pasting "(" and ""Send start-up sequence ..."" does not give a valid preprocessing token
+   27 |     #define __oledLog(...)      __log( ##__VA_ARGS__ )
+      |                                      ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:83:5: note: in expansion of macro '__oledLog'
+   83 |     __oledLog("Send start-up sequence ...");
+      |     ^~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""startupOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:88:5: note: in expansion of macro '__oledExit'
+   88 |     __oledExit("startupOLEDDevice() : %s", STR(OKE));
+      |     ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""startupOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:92:9: note: in expansion of macro '__oledExit'
+   92 |         __oledExit("startupOLEDDevice() : %s", STR(ERR));
+      |         ^~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64Log.h:21:40: error: pasting "(" and ""startupOLEDDevice() : %s"" does not give a valid preprocessing token
+   21 |     #define __oledExit(...)      __exit( ##__VA_ARGS__ )
+      |                                        ^
+/home/fus/Documents/DO-AN-02/comDriver/oled128x64/oled128x64.c:96:9: note: in expansion of macro '__oledExit'
+   96 |         __oledExit("startupOLEDDevice() : %s", STR(ERR_NULL));
+      |         ^~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/build.make:79: esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/oled128x64.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7439: esp-idf/oled128x64/CMakeFiles/__idf_oled128x64.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

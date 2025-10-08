@@ -1,0 +1,211 @@
+Command: make -j 10 all
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/spi/spi.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h: In function 'setupISR':
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:25:5: error: implicit declaration of function 'gpio_install_isr_service' [-Wimplicit-function-declaration]
+   25 |     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:25:30: error: 'ESP_INTR_FLAG_IRAM' undeclared (first use in this function)
+   25 |     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+      |                              ^~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:25:30: note: each undeclared identifier is reported only once for each function it appears in
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h: In function 'gpioSetOutpin':
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:29:5: error: unknown type name 'gpio_config_t'; did you mean 'gpio_io_config_t'?
+   29 |     gpio_config_t outPin = {
+      |     ^~~~~~~~~~~~~
+      |     gpio_io_config_t
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:30:9: error: field name not in record or union initializer
+   30 |         .intr_type = GPIO_INTR_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:30:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:31:9: error: field name not in record or union initializer
+   31 |         .mode = GPIO_MODE_OUTPUT,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:31:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:31:17: warning: excess elements in scalar initializer
+   31 |         .mode = GPIO_MODE_OUTPUT,
+      |                 ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:31:17: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:32:9: error: field name not in record or union initializer
+   32 |         .pin_bit_mask = gpioPinMask,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:32:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:32:25: warning: excess elements in scalar initializer
+   32 |         .pin_bit_mask = gpioPinMask,
+      |                         ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:32:25: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:33:9: error: field name not in record or union initializer
+   33 |         .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:33:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:33:25: warning: excess elements in scalar initializer
+   33 |         .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:33:25: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:34:9: error: field name not in record or union initializer
+   34 |         .pull_up_en = GPIO_PULLUP_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:34:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:34:23: warning: excess elements in scalar initializer
+   34 |         .pull_up_en = GPIO_PULLUP_DISABLE,
+      |                       ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:34:23: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:36:5: error: implicit declaration of function 'gpio_config' [-Wimplicit-function-declaration]
+   36 |     gpio_config(&outPin);
+      |     ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h: In function 'gpioSetInput':
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:40:5: error: unknown type name 'gpio_config_t'; did you mean 'gpio_io_config_t'?
+   40 |     gpio_config_t inPin = {
+      |     ^~~~~~~~~~~~~
+      |     gpio_io_config_t
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:41:9: error: field name not in record or union initializer
+   41 |         .intr_type      = GPIO_INTR_POSEDGE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:41:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:42:9: error: field name not in record or union initializer
+   42 |         .mode           = GPIO_MODE_INPUT,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:42:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:42:27: warning: excess elements in scalar initializer
+   42 |         .mode           = GPIO_MODE_INPUT,
+      |                           ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:42:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:43:9: error: field name not in record or union initializer
+   43 |         .pin_bit_mask   = gpioPinMask,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:43:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:43:27: warning: excess elements in scalar initializer
+   43 |         .pin_bit_mask   = gpioPinMask,
+      |                           ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:43:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:44:9: error: field name not in record or union initializer
+   44 |         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:44:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:44:27: warning: excess elements in scalar initializer
+   44 |         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:44:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:45:9: error: field name not in record or union initializer
+   45 |         .pull_up_en     = GPIO_PULLUP_DISABLE
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:45:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:45:27: warning: excess elements in scalar initializer
+   45 |         .pull_up_en     = GPIO_PULLUP_DISABLE
+      |                           ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espGPIOWrapper.h:45:27: note: (near initialization for 'inPin')
+In file included from /home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/general.h:29:
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espLogWrapper.h: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/spi/../../helper/espLogWrapper.h:6:10: fatal error: esp_timer.h: No such file or directory
+    6 | #include "esp_timer.h"          /// for esp_timer_get_time()
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [esp-idf/spi/CMakeFiles/__idf_spi.dir/build.make:79: esp-idf/spi/CMakeFiles/__idf_spi.dir/spi.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7471: esp-idf/spi/CMakeFiles/__idf_spi.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/general.h:28,
+                 from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.h:4,
+                 from /home/fus/Documents/DO-AN-02/comDriver/i2c/i2c.c:1:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h: In function 'setupISR':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:25:5: error: implicit declaration of function 'gpio_install_isr_service' [-Wimplicit-function-declaration]
+   25 |     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:25:30: error: 'ESP_INTR_FLAG_IRAM' undeclared (first use in this function)
+   25 |     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
+      |                              ^~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:25:30: note: each undeclared identifier is reported only once for each function it appears in
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h: In function 'gpioSetOutpin':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:29:5: error: unknown type name 'gpio_config_t'; did you mean 'gpio_io_config_t'?
+   29 |     gpio_config_t outPin = {
+      |     ^~~~~~~~~~~~~
+      |     gpio_io_config_t
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:30:9: error: field name not in record or union initializer
+   30 |         .intr_type = GPIO_INTR_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:30:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:31:9: error: field name not in record or union initializer
+   31 |         .mode = GPIO_MODE_OUTPUT,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:31:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:31:17: warning: excess elements in scalar initializer
+   31 |         .mode = GPIO_MODE_OUTPUT,
+      |                 ^~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:31:17: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:32:9: error: field name not in record or union initializer
+   32 |         .pin_bit_mask = gpioPinMask,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:32:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:32:25: warning: excess elements in scalar initializer
+   32 |         .pin_bit_mask = gpioPinMask,
+      |                         ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:32:25: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:33:9: error: field name not in record or union initializer
+   33 |         .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:33:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:33:25: warning: excess elements in scalar initializer
+   33 |         .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:33:25: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:34:9: error: field name not in record or union initializer
+   34 |         .pull_up_en = GPIO_PULLUP_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:34:9: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:34:23: warning: excess elements in scalar initializer
+   34 |         .pull_up_en = GPIO_PULLUP_DISABLE,
+      |                       ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:34:23: note: (near initialization for 'outPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:36:5: error: implicit declaration of function 'gpio_config' [-Wimplicit-function-declaration]
+   36 |     gpio_config(&outPin);
+      |     ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h: In function 'gpioSetInput':
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:40:5: error: unknown type name 'gpio_config_t'; did you mean 'gpio_io_config_t'?
+   40 |     gpio_config_t inPin = {
+      |     ^~~~~~~~~~~~~
+      |     gpio_io_config_t
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:41:9: error: field name not in record or union initializer
+   41 |         .intr_type      = GPIO_INTR_POSEDGE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:41:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:42:9: error: field name not in record or union initializer
+   42 |         .mode           = GPIO_MODE_INPUT,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:42:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:42:27: warning: excess elements in scalar initializer
+   42 |         .mode           = GPIO_MODE_INPUT,
+      |                           ^~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:42:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:43:9: error: field name not in record or union initializer
+   43 |         .pin_bit_mask   = gpioPinMask,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:43:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:43:27: warning: excess elements in scalar initializer
+   43 |         .pin_bit_mask   = gpioPinMask,
+      |                           ^~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:43:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:44:9: error: field name not in record or union initializer
+   44 |         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:44:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:44:27: warning: excess elements in scalar initializer
+   44 |         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:44:27: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:45:9: error: field name not in record or union initializer
+   45 |         .pull_up_en     = GPIO_PULLUP_DISABLE
+      |         ^
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:45:9: note: (near initialization for 'inPin')
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:45:27: warning: excess elements in scalar initializer
+   45 |         .pull_up_en     = GPIO_PULLUP_DISABLE
+      |                           ^~~~~~~~~~~~~~~~~~~
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espGPIOWrapper.h:45:27: note: (near initialization for 'inPin')
+In file included from /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/general.h:29:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espLogWrapper.h: At top level:
+/home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espLogWrapper.h:6:10: fatal error: esp_timer.h: No such file or directory
+    6 | #include "esp_timer.h"          /// for esp_timer_get_time()
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [esp-idf/i2c/CMakeFiles/__idf_i2c.dir/build.make:79: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:7406: esp-idf/i2c/CMakeFiles/__idf_i2c.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

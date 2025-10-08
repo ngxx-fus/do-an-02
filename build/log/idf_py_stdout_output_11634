@@ -1,0 +1,2047 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  7 2025 21:41:57[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b714h ( 46868) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b73c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dd8c vaddr=40080000 size=0228ch (  8844) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15ec4h ( 89796) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035eec vaddr=4008228c size=0902ch ( 36908) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ef20 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      943fa1c-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 21:43:11[0m
+[0;32mI (209) app_init: ELF file SHA256:  13577dc2b...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2B8 len 00014D48 (83 KiB): IRAM[0m
+[0;33mW (265) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[43911] [-->] app_main()
+[43943] [log] Set systemStage = SYSTEM_INIT
+[44356] [log] Start up OLED screen
+[1052526] [log] [+] oledTask()
+[1060031] [log] [oledTask] Wait for the initializing have been done!
+[1060104] [log] [+] prepairByteDataTask()
+[1067800] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1067878] [log] [+] modeControlTask()
+[1076608] [log] [modeControlTask] Wait for the initializing have been done!
+[1076684] [log] Set systemStage = SYSTEM_RUNNING
+[1087344] [-->] oledTest()
+[1087388] [-->] prepairByteDataTask(0x00000000)
+[1087489] [-->] modeControlTask(0x00000000)
+[1091657] [log] [modeControlTask] Default mode: 0
+[1095085] [-->] modeSwitch(-1 --> 0)
+[1098384] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[1103931] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[1107841] [-->] createSPIDevice(spiDev_t ** pDev)
+[1112284] [<--] createSPIDevice() : OKE
+[1115824] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 10, config: 0x0005)
+[1125463] [<--] configSPIDevice() : OKE
+[1129014] [-->] startupSPIDevice(0x3ffb6de4)
+[1133019] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (1396) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[1145296] [log] gpio_install_isr_service(): already installed, continue...
+[1151780] [log] CLK ISR attached to GPIO 4
+[1155583] [log] CS ISR attached to GPIO 17
+[1159395] [<--] startupSPIDevice() : OKE
+[1163049] [<--] modeControl() : OKE
+[2082566] [-->] setSendBackData(0x3ffb420a)
+[2082617] [log] SPI set sendback byte: g
+[2082657] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb420a, 1)
+[2084544] [<--] spiSetTransmitBuffer() : <null>
+[2088793] [<--] setSendBackData() : OKE
+[2092348] [-->] setReceiveByteBuff(0x3ffb420b)
+[2096515] [log] SPI set sendback byte: 
+[2100161] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb420b, 5)
+[2105725] [<--] spiSetReceiveBuffer() : OKE
+[2109627] [<--] setReceiveByteBuff() : OKE
+[2377508] [log] CS falling edge
+[2378012] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x02
+[2379013] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x04
+[2380014] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x09
+[2385030] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x13
+[2390318] [log] CS rising edge
+[4427518] [log] CS falling edge
+[4428023] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x26
+[4429024] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x4d
+[4430025] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x9a
+[4435040] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x34
+[4440328] [log] CS rising edge
+[6477487] [log] CS falling edge
+[6477992] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x68
+[6478993] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[6479994] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[6485009] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x46
+[6490297] [log] CS rising edge
+[8527484] [log] CS falling edge
+[8527989] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8c
+[8528990] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x18
+[8529991] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[8535006] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x63
+[8540294] [log] CS rising edge
+[10577465] [log] CS falling edge
+[10577970] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc6
+[10578971] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[10579972] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x1b
+[10585334] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x36
+[10590709] [log] CS rising edge
+[12627448] [log] CS falling edge
+[12627953] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6c
+[12628954] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd9
+[12629956] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb3
+[12635318] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x66
+[12640693] [log] CS rising edge
+[14677443] [log] CS falling edge
+[14677948] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xcc
+[14678949] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x99
+[14679951] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x33
+[14685313] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x67
+[14690688] [log] CS rising edge
+[16727429] [log] CS falling edge
+[16727934] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xce
+[16728935] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[16729936] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x3b
+[16735298] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x77
+[16740673] [log] CS rising edge
+[18777424] [log] CS falling edge
+[18777929] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[18778930] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xdc
+[18779931] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb9
+[18785293] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x73
+[18790668] [log] CS rising edge
+[20827400] [log] CS falling edge
+[20827904] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe6
+[20828906] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xcc
+[20829907] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x99
+[20835269] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x32
+[20840644] [log] CS rising edge
+[22877405] [log] CS falling edge
+[22877909] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x64
+[22878911] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc9
+[22879912] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x92
+[22885274] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x25
+[22890649] [log] CS rising edge
+[24927366] [log] CS falling edge
+[24927871] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[24928872] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x94
+[24929873] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[24935236] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x53
+[24940610] [log] CS rising edge
+[26977377] [log] CS falling edge
+[26977882] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa6
+[26978883] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x4d
+[26979885] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x9b
+[26985247] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x37
+[26990622] [log] CS rising edge
+[29027361] [log] CS falling edge
+[29027866] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6e
+[29028867] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xdc
+[29029869] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb9
+[29035231] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[29040606] [log] CS rising edge
+[31077312] [log] CS falling edge
+[31077817] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe4
+[31078818] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc8
+[31079819] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x91
+[31085181] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x22
+[31090556] [log] CS rising edge
+[33127338] [log] CS falling edge
+[33127842] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x44
+[33128844] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[33129845] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[33135207] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[33140582] [log] CS rising edge
+[35177322] [log] CS falling edge
+[35177826] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[35178828] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[35179829] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x3a
+[35185191] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x75
+[35190566] [log] CS rising edge
+[37227298] [log] CS falling edge
+[37227803] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[37228804] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[37229805] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[37235167] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x56
+[37240542] [log] CS rising edge
+[39277305] [log] CS falling edge
+[39277810] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[39278811] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x59
+[39279812] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xb2
+[39285175] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x65
+[39290549] [log] CS rising edge
+[41327310] [log] CS falling edge
+[41327815] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xca
+[41328816] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[41329817] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[41335179] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[41340554] [log] CS rising edge
+[43377257] [log] CS falling edge
+[43377762] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xaa
+[43378763] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x55
+[43379765] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xaa
+[43385127] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[43390502] [log] CS rising edge
+[45427266] [log] CS falling edge
+[45427771] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xaa
+[45428772] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x55
+[45429773] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[45435136] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x57
+[45440510] [log] CS rising edge
+[47477237] [log] CS falling edge
+[47477741] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xae
+[47478743] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x5d
+[47479744] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xbb
+[47485106] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x77
+[47490481] [log] CS rising edge
+[49527226] [log] CS falling edge
+[49527730] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[49528731] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[49529733] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xbb
+[49535095] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x77
+[49540470] [log] CS rising edge
+[51577231] [log] CS falling edge
+[51577736] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[51578737] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[51579739] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[51585101] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[51590476] [log] CS rising edge
+[53627188] [log] CS falling edge
+[53627693] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe8
+[53628694] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[53629695] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[53635057] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x47
+[53640432] [log] CS rising edge
+[55677184] [log] CS falling edge
+[55677689] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8e
+[55678690] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x1c
+[55679691] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x39
+[55685053] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[55690428] [log] CS rising edge
+[57727171] [log] CS falling edge
+[57727676] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe4
+[57728677] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc8
+[57729678] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x91
+[57735040] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x23
+[57740415] [log] CS rising edge
+[59777171] [log] CS falling edge
+[59777676] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[59778677] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[59779678] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x1b
+[59785040] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x37
+[59790415] [log] CS rising edge
+[61827155] [log] CS falling edge
+[61827660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6e
+[61828661] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[61829662] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[61835024] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[61840399] [log] CS rising edge
+[63877110] [log] CS falling edge
+[63877615] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe8
+[63878616] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[63879617] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[63884980] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x46
+[63890354] [log] CS rising edge
+[65927134] [log] CS falling edge
+[65927639] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8c
+[65928640] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x19
+[65929641] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x33
+[65935003] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x67
+[65940378] [log] CS rising edge
+[67977119] [log] CS falling edge
+[67977624] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xce
+[67978625] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[67979627] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x3b
+[67984989] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x76
+[67990364] [log] CS rising edge
+[70027085] [log] CS falling edge
+[70027590] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xec
+[70028591] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd9
+[70029592] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb3
+[70034955] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x67
+[70040329] [log] CS rising edge
+[72077077] [log] CS falling edge
+[72077581] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xce
+[72078582] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[72079584] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x3a
+[72084946] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x75
+[72090321] [log] CS rising edge
+[74127071] [log] CS falling edge
+[74127576] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[74128577] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[74129579] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[74134941] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x56
+[74140316] [log] CS rising edge
+[76177069] [log] CS falling edge
+[76177574] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[76178575] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x59
+[76179576] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xb2
+[76184938] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x65
+[76190313] [log] CS rising edge
+[78227052] [log] CS falling edge
+[78227557] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xca
+[78228558] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[78229559] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[78234921] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x54
+[78240296] [log] CS rising edge
+[80277027] [log] CS falling edge
+[80277531] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa8
+[80278533] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x51
+[80279534] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[80284896] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x45
+[80290271] [log] CS rising edge
+[82327020] [log] CS falling edge
+[82327525] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8a
+[82328526] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x14
+[82329527] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[82334890] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[82340264] [log] CS rising edge
+[84377002] [log] CS falling edge
+[84377507] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa4
+[84378508] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x49
+[84379509] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x93
+[84384871] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[84390246] [log] CS rising edge
+[86426995] [log] CS falling edge
+[86427499] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[86428501] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[86429502] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x3b
+[86434864] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x77
+[86440239] [log] CS rising edge
+[88476978] [log] CS falling edge
+[88477483] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[88478484] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xdc
+[88479486] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb9
+[88484848] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[88490223] [log] CS rising edge
+[90526967] [log] CS falling edge
+[90527472] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe4
+[90528473] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc9
+[90529474] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x93
+[90534836] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[90540211] [log] CS rising edge
+[92576937] [log] CS falling edge
+[92577442] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[92578443] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x9c
+[92579444] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x39
+[92584806] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[92590181] [log] CS rising edge
+[94626943] [log] CS falling edge
+[94627448] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe4
+[94628449] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc8
+[94629450] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x91
+[94634813] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x22
+[94640187] [log] CS rising edge
+[96676925] [log] CS falling edge
+[96677430] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x44
+[96678431] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[96679432] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[96684794] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[96690169] [log] CS rising edge
+[98726950] [log] CS falling edge
+[98727455] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[98728456] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[98729457] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x3a
+[98734820] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x75
+[98740195] [log] CS rising edge
+[100776902] [log] CS falling edge
+[100777406] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[100778408] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xd4
+[100779643] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa9
+[100785118] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[100790579] [log] CS rising edge
+[102826892] [log] CS falling edge
+[102827396] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa4
+[102828398] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x48
+[102829633] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x91
+[102835108] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x23
+[102840569] [log] CS rising edge
+[104876873] [log] CS falling edge
+[104877378] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[104878379] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[104879614] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x1a
+[104885089] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x35
+[104890550] [log] CS rising edge
+[106926860] [log] CS falling edge
+[106927365] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6a
+[106928366] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[106929601] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xaa
+[106935076] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[106940537] [log] CS rising edge
+[108976845] [log] CS falling edge
+[108977350] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xaa
+[108978351] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x55
+[108979586] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[108985061] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x56
+[108990522] [log] CS rising edge
+[111026841] [log] CS falling edge
+[111027346] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[111028347] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x58
+[111029582] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb1
+[111035057] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x62
+[111040518] [log] CS rising edge
+[113076843] [log] CS falling edge
+[113077348] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc4
+[113078349] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[113079584] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[113085060] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[113090520] [log] CS rising edge
+[115126830] [log] CS falling edge
+[115127334] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[115128335] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[115129571] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x3a
+[115135046] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[115140507] [log] CS rising edge
+[117176821] [log] CS falling edge
+[117177326] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe8
+[117178327] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[117179562] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[117185038] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[117190499] [log] CS rising edge
+[119226811] [log] CS falling edge
+[119227316] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x88
+[119228317] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x10
+[119229552] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x21
+[119235028] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x43
+[119240489] [log] CS rising edge
+[121276766] [log] CS falling edge
+[121277270] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x86
+[121278272] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x0d
+[121279507] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x1a
+[121284982] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x34
+[121290443] [log] CS rising edge
+[123326783] [log] CS falling edge
+[123327288] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x68
+[123328289] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[123329524] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[123335000] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[123340461] [log] CS rising edge
+[125376765] [log] CS falling edge
+[125377270] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x88
+[125378271] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x11
+[125379506] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x22
+[125384982] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[125390443] [log] CS rising edge
+[127426747] [log] CS falling edge
+[127427252] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x88
+[127428253] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x11
+[127429488] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x23
+[127434964] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x46
+[127440425] [log] CS rising edge
+[129476721] [log] CS falling edge
+[129477226] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8c
+[129478227] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x19
+[129479462] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x33
+[129484938] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x66
+[129490399] [log] CS rising edge
+[131526709] [log] CS falling edge
+[131527214] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xcc
+[131528215] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x99
+[131529450] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x32
+[131534926] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x64
+[131540386] [log] CS rising edge
+[133576706] [log] CS falling edge
+[133577211] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc8
+[133578212] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x91
+[133579447] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x22
+[133584923] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[133590384] [log] CS rising edge
+[135626694] [log] CS falling edge
+[135627199] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x88
+[135628200] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x10
+[135629435] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x21
+[135634911] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x42
+[135640372] [log] CS rising edge
+[137676662] [log] CS falling edge
+[137677167] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x84
+[137678168] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x08
+[137679403] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x11
+[137684878] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x23
+[137690339] [log] CS rising edge
+[139726653] [log] CS falling edge
+[139727158] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[139728159] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[139729394] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x1a
+[139734870] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x35
+[139740331] [log] CS rising edge
+[141776673] [log] CS falling edge
+[141777178] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6a
+[141778179] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[141779414] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xaa
+[141784890] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[141790351] [log] CS rising edge
+[143826641] [log] CS falling edge
+[143827146] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xaa
+[143828147] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x55
+[143829382] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xaa
+[143834858] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x54
+[143840319] [log] CS rising edge
+[145876602] [log] CS falling edge
+[145877107] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa8
+[145878108] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x51
+[145879343] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[145884819] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x46
+[145890280] [log] CS rising edge
+[147926618] [log] CS falling edge
+[147927122] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8c
+[147928124] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x18
+[147929359] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[147934834] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x62
+[147940295] [log] CS rising edge
+[149976592] [log] CS falling edge
+[149977097] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc4
+[149978098] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[149979333] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[149984809] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x26
+[149990270] [log] CS rising edge
+[152026603] [log] CS falling edge
+[152027108] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[152028109] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x99
+[152029344] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x32
+[152034820] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x64
+[152040281] [log] CS rising edge
+[154076583] [log] CS falling edge
+[154077088] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc8
+[154078089] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x91
+[154079324] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x22
+[154084800] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x45
+[154090261] [log] CS rising edge
+[156126532] [log] CS falling edge
+[156127037] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8a
+[156128038] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x14
+[156129273] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[156134749] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[156140210] [log] CS rising edge
+[158176542] [log] CS falling edge
+[158177047] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa4
+[158178048] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x48
+[158179283] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x91
+[158184759] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x23
+[158190220] [log] CS rising edge
+[160226525] [log] CS falling edge
+[160227030] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[160228031] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[160229266] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x1a
+[160234741] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x35
+[160240202] [log] CS rising edge
+[162276511] [log] CS falling edge
+[162277016] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6a
+[162278017] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[162279252] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[162284727] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x57
+[162290188] [log] CS rising edge
+[164326523] [log] CS falling edge
+[164327027] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xae
+[164328029] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x5d
+[164329264] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[164334739] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x75
+[164340200] [log] CS rising edge
+[166376487] [log] CS falling edge
+[166376992] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[166377993] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[166379228] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[166384704] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x56
+[166390165] [log] CS rising edge
+[168426506] [log] CS falling edge
+[168427011] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[168428012] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x58
+[168429247] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb1
+[168434723] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x62
+[168440184] [log] CS rising edge
+[170476479] [log] CS falling edge
+[170476984] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc4
+[170477985] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[170479220] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[170484696] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x26
+[170490157] [log] CS rising edge
+[172526475] [log] CS falling edge
+[172526980] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[172527981] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x99
+[172529216] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x32
+[172534692] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x64
+[172540153] [log] CS rising edge
+[174576453] [log] CS falling edge
+[174576958] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc8
+[174577959] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x91
+[174579194] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x22
+[174584670] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x45
+[174590131] [log] CS rising edge
+[176626418] [log] CS falling edge
+[176626923] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8a
+[176627924] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x15
+[176629159] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x2b
+[176634635] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x57
+[176640096] [log] CS rising edge
+[178676439] [log] CS falling edge
+[178676944] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xae
+[178677945] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x5c
+[178679180] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb9
+[178684656] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x73
+[178690116] [log] CS rising edge
+[180726412] [log] CS falling edge
+[180726917] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe6
+[180727918] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xcc
+[180729153] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x99
+[180734629] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x32
+[180740090] [log] CS rising edge
+[182776402] [log] CS falling edge
+[182776907] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x64
+[182777908] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc9
+[182779143] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x93
+[182784619] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x26
+[182790080] [log] CS rising edge
+[184826359] [log] CS falling edge
+[184826864] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[184827865] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x98
+[184829100] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[184834576] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x62
+[184840037] [log] CS rising edge
+[186876377] [log] CS falling edge
+[186876882] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc4
+[186877883] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[186879118] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x12
+[186884594] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x25
+[186890055] [log] CS rising edge
+[188926378] [log] CS falling edge
+[188926883] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[188927884] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x94
+[188929119] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[188934594] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[188940055] [log] CS rising edge
+[190976331] [log] CS falling edge
+[190976836] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa4
+[190977837] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x49
+[190979072] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x93
+[190984548] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[190990009] [log] CS rising edge
+[193026340] [log] CS falling edge
+[193026845] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[193027846] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x9c
+[193029081] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x39
+[193034556] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[193040017] [log] CS rising edge
+[199416644] [log] CS falling edge
+[201096645] [log] CS rising edge
+[201501600] [log] CS falling edge
+[203561238] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe4
+[203661246] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc9
+[203766632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x92
+[203861247] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x25
+[203961248] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x4b
+[204066665] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x96
+[204161249] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2d
+[204261249] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x5b
+[204311257] [log] CS rising edge
+[206351125] [log] CS falling edge
+[206406648] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb6
+[206501130] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x6d
+[206601130] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xdb
+[206706632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[206801131] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6c
+[206901132] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd8
+[207006632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb0
+[207101133] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[207156648] [log] CS rising edge
+[209196648] [log] CS falling edge
+[209241110] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[209346632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[209441111] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x0b
+[209541112] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x16
+[209646632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x2d
+[209741113] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5b
+[209841113] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb6
+[209946632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x6c
+[209991114] [log] CS rising edge
+[212031732] [log] CS falling edge
+[212081736] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd8
+[212181737] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xb1
+[212286632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x62
+[212381738] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xc4
+[212481738] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x88
+[212586632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x10
+[212681739] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x20
+[212781740] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x40
+[212831740] [log] CS rising edge
+[214871676] [log] CS falling edge
+[214926669] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x80
+[215021681] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x01
+[215121681] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x03
+[215226632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x06
+[215321682] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x0c
+[215421683] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x18
+[215526632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x30
+[215621684] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[215676648] [log] CS rising edge
+[217716648] [log] CS falling edge
+[217761701] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[217866632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[217961702] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x0a
+[218061702] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x14
+[218166632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x29
+[218261703] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x53
+[218361704] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa6
+[218466632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x4d
+[218511705] [log] CS rising edge
+[220551642] [log] CS falling edge
+[220601646] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x9a
+[220701647] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x34
+[220806652] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x69
+[220901648] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xd2
+[221001648] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xa5
+[221106632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x4a
+[221201649] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x95
+[221301650] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2b
+[221351650] [log] CS rising edge
+[223391640] [log] CS falling edge
+[223446647] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x56
+[223541645] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xac
+[223641645] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x59
+[223746660] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xb3
+[223841646] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[223941647] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xcc
+[224046632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x98
+[224141648] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x30
+[224196660] [log] CS rising edge
+[226236660] [log] CS falling edge
+[226281625] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x60
+[226386635] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc1
+[226481626] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x83
+[226581626] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x07
+[226686632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0f
+[226781627] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x1e
+[226881628] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x3d
+[226986643] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x7b
+[227031629] [log] CS rising edge
+[229071608] [log] CS falling edge
+[229121612] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf6
+[229221613] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xed
+[229326632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xdb
+[229421614] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[229521614] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6d
+[229626662] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xda
+[229721615] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb4
+[229821616] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x68
+[229871616] [log] CS rising edge
+[231911554] [log] CS falling edge
+[231966660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd0
+[232061559] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xa0
+[232161560] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x41
+[232266663] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x82
+[232361561] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x04
+[232461561] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x09
+[232566632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x13
+[232661562] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x27
+[232716636] [log] CS rising edge
+[234756636] [log] CS falling edge
+[234801591] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[234906662] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x9c
+[235001592] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x39
+[235101593] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[235206644] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe4
+[235301594] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xc9
+[235401594] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x92
+[235506632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x25
+[235551595] [log] CS rising edge
+[237591513] [log] CS falling edge
+[237641517] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[237741518] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x94
+[237846632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[237941519] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[238041519] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xa5
+[238146632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x4b
+[238241520] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x97
+[238341521] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x2e
+[238391521] [log] CS rising edge
+[240431541] [log] CS falling edge
+[240486635] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5c
+[240581546] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xb9
+[240681546] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x72
+[240786644] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xe4
+[240881547] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc9
+[240981548] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x92
+[241086632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x24
+[241181549] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[241236665] [log] CS rising edge
+[243276665] [log] CS falling edge
+[243321500] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[243426632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[243521501] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x42
+[243621502] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x85
+[243726632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0b
+[243821503] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x17
+[243921503] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x2e
+[244026635] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5c
+[244071504] [log] CS rising edge
+[246111503] [log] CS falling edge
+[246161507] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb8
+[246261508] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x71
+[246366659] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xe2
+[246461509] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc5
+[246561509] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x8b
+[246666632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x16
+[246761510] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2d
+[246861511] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5a
+[246911511] [log] CS rising edge
+[248951463] [log] CS falling edge
+[249006661] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb4
+[249101468] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x69
+[249201468] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xd3
+[249306632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xa6
+[249401469] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x4c
+[249501470] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x98
+[249606632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x30
+[249701471] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[249756648] [log] CS rising edge
+[251796648] [log] CS falling edge
+[251841462] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[251946632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[252041463] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x0b
+[252141463] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x17
+[252246632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x2e
+[252341464] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5d
+[252441465] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xbb
+[252546632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x77
+[252591466] [log] CS rising edge
+[254631452] [log] CS falling edge
+[254681457] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[254781457] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[254886632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[254981458] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[255081459] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xe9
+[255186632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd2
+[255281460] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa4
+[255381460] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[255431461] [log] CS rising edge
+[257471410] [log] CS falling edge
+[257526665] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[257621415] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[257721415] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x43
+[257826659] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x86
+[257921416] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x0c
+[258021417] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x19
+[258126632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x32
+[258221418] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x65
+[258276648] [log] CS rising edge
+[260316648] [log] CS falling edge
+[260361415] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xca
+[260466632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[260561416] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[260661416] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[260766660] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xab
+[260861417] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x56
+[260961418] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xad
+[261066632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5a
+[261111419] [log] CS rising edge
+[263151389] [log] CS falling edge
+[263201394] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb4
+[263301394] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x68
+[263406660] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xd1
+[263501396] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xa2
+[263601396] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x44
+[263706665] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x88
+[263801397] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x11
+[263901398] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x23
+[263951398] [log] CS rising edge
+[265991365] [log] CS falling edge
+[266046656] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[266141370] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x8c
+[266241371] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x19
+[266346632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x33
+[266441372] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[266541372] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xcd
+[266646632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x9b
+[266741373] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x37
+[266796649] [log] CS rising edge
+[268836649] [log] CS falling edge
+[268881348] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6e
+[268986652] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[269081349] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xbb
+[269181349] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x77
+[269286654] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xee
+[269381350] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xdd
+[269481351] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xba
+[269586632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x75
+[269631352] [log] CS rising edge
+[271671338] [log] CS falling edge
+[271721342] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[271821343] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[271926632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xab
+[272021344] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x56
+[272121344] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xad
+[272226632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x5a
+[272321345] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb4
+[272421346] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x68
+[272471346] [log] CS rising edge
+[274511322] [log] CS falling edge
+[274566660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd0
+[274661327] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xa1
+[274761328] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x43
+[274866659] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x87
+[274961329] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x0e
+[275061329] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x1c
+[275166632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x38
+[275261330] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x70
+[275316658] [log] CS rising edge
+[277356658] [log] CS falling edge
+[277401279] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe0
+[277506632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc1
+[277601280] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x83
+[277701280] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x07
+[277806632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0f
+[277901281] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1f
+[278001282] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x3e
+[278106650] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x7c
+[278151283] [log] CS rising edge
+[280191266] [log] CS falling edge
+[280241271] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf8
+[280341271] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xf1
+[280446632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe3
+[280541272] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xc6
+[280641273] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x8d
+[280746632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1b
+[280841274] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x36
+[280941274] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x6c
+[280991274] [log] CS rising edge
+[283031242] [log] CS falling edge
+[283086647] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd8
+[283181247] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xb0
+[283281248] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x61
+[283386648] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[283481249] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x87
+[283581250] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x0f
+[283686632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1e
+[283781251] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x3d
+[283836643] [log] CS rising edge
+[285876643] [log] CS falling edge
+[285921222] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x7a
+[286026647] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xf5
+[286121223] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xeb
+[286221224] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xd7
+[286326632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xaf
+[286421225] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5f
+[286521225] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xbf
+[286626632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x7e
+[286671226] [log] CS rising edge
+[288711209] [log] CS falling edge
+[288761214] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xfc
+[288861214] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xf9
+[288966632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xf2
+[289061215] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[289161216] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xcb
+[289266632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x97
+[289361217] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2f
+[289461217] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5e
+[289511217] [log] CS rising edge
+[291551183] [log] CS falling edge
+[291606645] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xbc
+[291701188] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x78
+[291801189] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xf1
+[291906632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xe2
+[292001190] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xc4
+[292101190] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x88
+[292206632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x11
+[292301191] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x22
+[292356639] [log] CS rising edge
+[294396639] [log] CS falling edge
+[294441208] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x44
+[294546665] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[294641209] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x12
+[294741210] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x24
+[294846661] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x49
+[294941211] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x92
+[295041212] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x24
+[295146661] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[295191212] [log] CS rising edge
+[297231177] [log] CS falling edge
+[297281181] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[297381182] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[297486640] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x42
+[297581183] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x84
+[297681183] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x09
+[297786632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x13
+[297881184] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x26
+[297981185] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x4c
+[298031185] [log] CS rising edge
+[300071144] [log] CS falling edge
+[300126656] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x98
+[300221149] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x30
+[300321150] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x61
+[300426648] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[300521151] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x86
+[300621151] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x0c
+[300726632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x18
+[300821152] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x31
+[300876648] [log] CS rising edge
+[302916648] [log] CS falling edge
+[302961765] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x62
+[303066659] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc4
+[303161766] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x89
+[303261767] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x12
+[303366632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x24
+[303461768] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x49
+[303561768] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x92
+[303666632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x25
+[303711769] [log] CS rising edge
+[305751717] [log] CS falling edge
+[305801721] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[305901722] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[306006632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x2b
+[306053344] [err] [i2cSendBuffer] Got NACK after send byte[40] in buffer!
+[306101723] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x57
+[306206674] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xaf
+[306301724] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x5e
+[306401724] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xbc
+[306506632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x78
+[306551725] [log] CS rising edge
+[308591714] [log] CS falling edge
+[308641719] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf0
+[308741719] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xe1
+[308846632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xc3
+[308941721] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x86
+[309041721] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0d
+[309146632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x1a
+[309241722] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x35
+[309341723] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x6b
+[309391723] [log] CS rising edge
+[311431711] [log] CS falling edge
+[311486660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd6
+[311581716] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xac
+[311681716] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x59
+[311786660] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb2
+[311881717] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x64
+[311981718] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xc9
+[312086632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x93
+[312181719] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x26
+[312236669] [log] CS rising edge
+[314276669] [log] CS falling edge
+[314321650] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[314426656] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x98
+[314521651] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[314621652] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x63
+[314726646] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc7
+[314821653] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x8e
+[314921653] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x1d
+[315026632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x3a
+[315071654] [log] CS rising edge
+[317111661] [log] CS falling edge
+[317161665] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x74
+[317261666] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xe9
+[317366632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xd2
+[317461667] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xa4
+[317561667] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x48
+[317666665] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x90
+[317761668] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x21
+[317861669] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x43
+[317911669] [log] CS rising edge
+[319951637] [log] CS falling edge
+[320006659] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x86
+[320101642] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x0c
+[320201642] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x19
+[320306632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x33
+[320401643] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[320501644] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xcd
+[320606632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x9a
+[320701645] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x34
+[320756652] [log] CS rising edge
+[322796652] [log] CS falling edge
+[322841607] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x68
+[322946660] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[323041609] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[323141609] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x47
+[323246663] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x8e
+[323341610] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1d
+[323441611] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x3a
+[323546637] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x74
+[323591611] [log] CS rising edge
+[325631614] [log] CS falling edge
+[325681618] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe8
+[325781619] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[325886632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[325981620] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[326081620] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x89
+[326186632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x13
+[326281621] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x27
+[326381622] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x4f
+[326431622] [log] CS rising edge
+[328471575] [log] CS falling edge
+[328526663] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x9e
+[328621580] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x3d
+[328721581] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x7b
+[328826651] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xf6
+[328921582] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xed
+[329021582] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xda
+[329126632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb5
+[329221583] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x6a
+[329276649] [log] CS rising edge
+[331316649] [log] CS falling edge
+[331361577] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd4
+[331466632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xa8
+[331561578] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x51
+[331661579] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xa3
+[331766632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x47
+[331861580] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x8e
+[331961580] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1c
+[332066632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x39
+[332111581] [log] CS rising edge
+[334151555] [log] CS falling edge
+[334201560] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x72
+[334301560] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xe5
+[334406632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xcb
+[334501561] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x96
+[334601562] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x2d
+[334706635] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x5a
+[334801563] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb5
+[334901563] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x6b
+[334951563] [log] CS rising edge
+[336991521] [log] CS falling edge
+[337046660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd6
+[337141526] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xad
+[337241526] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x5b
+[337346648] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[337441527] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6c
+[337541528] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd8
+[337646632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb0
+[337741529] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[337796648] [log] CS rising edge
+[339836648] [log] CS falling edge
+[339881502] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[339986632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[340081503] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x0a
+[340181504] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x15
+[340286632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x2b
+[340333344] [err] [i2cSendBuffer] Got NACK after send byte[40] in buffer!
+[340381505] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x57
+[340486674] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xaf
+[340581506] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5e
+[340636644] [log] CS rising edge
+[342676644] [log] CS falling edge
+[342721469] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xbc
+[342826632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x78
+[342921470] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xf1
+[343021471] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xe2
+[343126632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc5
+[343221472] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x8b
+[343321472] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x17
+[343426632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x2e
+[343471473] [log] CS rising edge
+[345511506] [log] CS falling edge
+[345561510] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5c
+[345661511] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xb9
+[345766632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x72
+[345861512] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[345961513] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xca
+[346066632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x95
+[346161514] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2b
+[346261514] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x57
+[346311514] [log] CS rising edge
+[348351462] [log] CS falling edge
+[348406674] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xae
+[348501467] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x5c
+[348601467] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb9
+[348706632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[348801468] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe4
+[348901469] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xc8
+[349006632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x91
+[349101470] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x23
+[349156656] [log] CS rising edge
+[351196656] [log] CS falling edge
+[351241437] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x46
+[351346657] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x8c
+[351441438] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x19
+[351541439] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x33
+[351646654] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[351741440] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xcc
+[351841440] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x98
+[351946632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x31
+[351991441] [log] CS rising edge
+[354031412] [log] CS falling edge
+[354081417] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x62
+[354181418] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc4
+[354286632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x89
+[354381419] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x12
+[354481419] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x25
+[354586667] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x4a
+[354681420] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x95
+[354781421] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2b
+[354831421] [log] CS rising edge
+[356871413] [log] CS falling edge
+[356926647] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x56
+[357021419] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xad
+[357121419] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x5a
+[357226661] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xb5
+[357321420] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6a
+[357421421] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xd5
+[357526632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xab
+[357621422] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x56
+[357676659] [log] CS rising edge
+[359716659] [log] CS falling edge
+[359761376] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[359866632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x58
+[359961377] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb1
+[360061378] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x63
+[360166646] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc7
+[360261379] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x8f
+[360361379] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1e
+[360466632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x3d
+[360511380] [log] CS rising edge
+[362551346] [log] CS falling edge
+[362601351] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x7a
+[362701351] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xf5
+[362806632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xeb
+[362901352] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xd7
+[363001353] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xaf
+[363106632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5f
+[363201354] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xbe
+[363301354] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x7c
+[363351354] [log] CS rising edge
+[365391344] [log] CS falling edge
+[365446638] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf8
+[365541349] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xf0
+[365641350] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe1
+[365746632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[365841351] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x86
+[365941351] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x0c
+[366046632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x18
+[366141352] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x31
+[366196648] [log] CS rising edge
+[368236648] [log] CS falling edge
+[368281310] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x62
+[368386659] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xc4
+[368481311] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x89
+[368581312] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x12
+[368686632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x25
+[368781313] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x4b
+[368881313] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x96
+[368986632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x2c
+[369031314] [log] CS rising edge
+[371071316] [log] CS falling edge
+[371121321] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x58
+[371221321] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xb0
+[371326632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x61
+[371421322] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[371521323] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x86
+[371626632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x0c
+[371721324] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x19
+[371821324] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x33
+[371871325] [log] CS rising edge
+[373911293] [log] CS falling edge
+[373966654] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x66
+[374061298] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xcc
+[374161298] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x99
+[374266632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x33
+[374361299] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x67
+[374461300] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xcf
+[374566632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x9f
+[374661301] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x3f
+[374716650] [log] CS rising edge
+[376756650] [log] CS falling edge
+[376801293] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x7e
+[376906639] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xfd
+[377001294] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xfa
+[377101295] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xf4
+[377206632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe8
+[377301296] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd0
+[377401296] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xa1
+[377506632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x43
+[377551297] [log] CS rising edge
+[379591249] [log] CS falling edge
+[379641253] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x86
+[379741254] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x0d
+[379846632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x1b
+[379941255] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x37
+[380041255] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6e
+[380146652] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xdd
+[380241256] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xba
+[380341257] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x74
+[380391257] [log] CS rising edge
+[382431231] [log] CS falling edge
+[382486644] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xe8
+[382581236] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[382681236] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xa3
+[382786632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x46
+[382881238] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x8d
+[382981238] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x1a
+[383086632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x34
+[383181239] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x69
+[383236644] [log] CS rising edge
+[385276644] [log] CS falling edge
+[385321241] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd2
+[385426632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xa5
+[385521242] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x4a
+[385621242] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x95
+[385726632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x2a
+[385821243] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x55
+[385921244] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xab
+[386026632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x56
+[386071245] [log] CS rising edge
+[388111222] [log] CS falling edge
+[388161227] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xac
+[388261227] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x59
+[388366660] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xb2
+[388461228] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x64
+[388561229] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc9
+[388666632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x93
+[388761230] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x27
+[388861230] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x4e
+[388911230] [log] CS rising edge
+[390951179] [log] CS falling edge
+[391006662] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x9c
+[391101184] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x39
+[391201184] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x72
+[391306644] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[391401186] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xcb
+[391501186] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x97
+[391606632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2f
+[391701187] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5e
+[391756644] [log] CS rising edge
+[393796644] [log] CS falling edge
+[393841196] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xbc
+[393946632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x79
+[394041197] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xf2
+[394141197] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[394246632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xca
+[394341198] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x94
+[394441199] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x29
+[394546647] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x52
+[394591199] [log] CS rising edge
+[396631145] [log] CS falling edge
+[396681150] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa4
+[396781150] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x49
+[396886647] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x93
+[396981152] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x26
+[397081152] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x4c
+[397186656] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x98
+[397281153] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x31
+[397381154] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x63
+[397431154] [log] CS rising edge
+[399471125] [log] CS falling edge
+[399526646] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc6
+[399621130] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[399721130] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x1b
+[399826632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x36
+[399921131] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6d
+[400021132] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xda
+[400126632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb4
+[400221133] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x69
+[400276644] [log] CS rising edge
+[402316644] [log] CS falling edge
+[402361134] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd2
+[402466632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xa5
+[402561135] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x4a
+[402661136] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x95
+[402766632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x2a
+[402861137] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x55
+[402961137] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xaa
+[403066632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x54
+[403111138] [log] CS rising edge
+[405151121] [log] CS falling edge
+[405201125] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa8
+[405301126] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x51
+[405406669] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[405501127] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[405601127] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x89
+[405706632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x12
+[405801128] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x24
+[405901129] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[405951129] [log] CS rising edge
+[407991087] [log] CS falling edge
+[408046665] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[408141092] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[408241092] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x43
+[408346659] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x87
+[408441093] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x0e
+[408541094] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1d
+[408646632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x3b
+[408741095] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x77
+[408796654] [log] CS rising edge
+[410836654] [log] CS falling edge
+[410881090] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[410986632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[411081091] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[411181091] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[411286644] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xe9
+[411381092] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd2
+[411481093] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa4
+[411586632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[411631094] [log] CS rising edge
+[413671028] [log] CS falling edge
+[413721033] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[413821033] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[413926640] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x43
+[414021034] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x87
+[414121035] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0f
+[414226632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1f
+[414321036] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x3f
+[414421036] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x7e
+[414471037] [log] CS rising edge
+[416511033] [log] CS falling edge
+[416566639] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xfc
+[416661038] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xf8
+[416761038] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xf1
+[416866632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe3
+[416961039] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xc6
+[417061040] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x8c
+[417166632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x19
+[417261041] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x33
+[417316654] [log] CS rising edge
+[419356654] [log] CS falling edge
+[419401024] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x66
+[419506652] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xcd
+[419601025] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x9a
+[419701025] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x35
+[419806652] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6a
+[419901026] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd4
+[420001027] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xa9
+[420106632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x53
+[420151028] [log] CS rising edge
+[422191020] [log] CS falling edge
+[422241025] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa6
+[422341025] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x4c
+[422446656] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x99
+[422541026] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x32
+[422641027] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x64
+[422746659] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xc9
+[422841028] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x93
+[422941028] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x26
+[422991028] [log] CS rising edge
+[425030980] [log] CS falling edge
+[425086669] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[425180985] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x98
+[425280985] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[425386649] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x63
+[425480986] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xc6
+[425580987] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x8c
+[425686632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x19
+[425780988] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x33
+[425836654] [log] CS rising edge
+[427876654] [log] CS falling edge
+[427920967] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x66
+[428026652] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xcd
+[428120968] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x9b
+[428220969] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x37
+[428326649] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6e
+[428420970] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xdd
+[428520970] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xbb
+[428626632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x77
+[428670971] [log] CS rising edge
+[430710933] [log] CS falling edge
+[430760938] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[430860938] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[430966632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xbb
+[431060939] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x76
+[431160940] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xec
+[431266632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd8
+[431360941] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb1
+[431460941] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x63
+[431510941] [log] CS rising edge
+[433550957] [log] CS falling edge
+[433606646] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc6
+[433700962] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[433800963] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x1a
+[433906632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x35
+[434000964] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6a
+[434100964] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xd5
+[434206632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xab
+[434300965] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x57
+[434356674] [log] CS rising edge
+[436396674] [log] CS falling edge
+[436440902] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xae
+[436546632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x5d
+[436640903] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xbb
+[436740904] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x76
+[436846646] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xec
+[436940905] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd8
+[437040905] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb1
+[437146632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x63
+[437190906] [log] CS rising edge
+[439230881] [log] CS falling edge
+[439280886] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc6
+[439380886] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x8d
+[439486632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x1b
+[439580887] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x37
+[439680888] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6f
+[439786651] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xde
+[439880889] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xbd
+[439980889] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x7a
+[440030890] [log] CS rising edge
+[442070881] [log] CS falling edge
+[442126647] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf4
+[442220886] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xe9
+[442320887] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xd3
+[442426632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xa6
+[442520888] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x4c
+[442620889] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x98
+[442726632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x31
+[442820890] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x62
+[442876659] [log] CS rising edge
+[444916659] [log] CS falling edge
+[444960851] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc4
+[445066632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x89
+[445160852] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[445260853] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x26
+[445366669] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x4d
+[445460854] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x9b
+[445560854] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x36
+[445666658] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x6c
+[445710855] [log] CS rising edge
+[447750836] [log] CS falling edge
+[447800840] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd8
+[447900841] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xb0
+[448006632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x61
+[448100842] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[448200842] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x86
+[448306632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x0d
+[448400844] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1a
+[448500844] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x34
+[448550844] [log] CS rising edge
+[450590838] [log] CS falling edge
+[450646652] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x68
+[450740843] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[450840843] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[450946632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x44
+[451040844] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x88
+[451140845] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x10
+[451246632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x21
+[451340846] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x42
+[451396665] [log] CS rising edge
+[453436665] [log] CS falling edge
+[453480804] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x84
+[453586632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x09
+[453680805] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x13
+[453780806] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x27
+[453886636] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x4e
+[453980807] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x9d
+[454080807] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x3a
+[454186637] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x75
+[454230808] [log] CS rising edge
+[456270789] [log] CS falling edge
+[456320794] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xea
+[456420794] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd5
+[456526632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xaa
+[456620795] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[456720796] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xaa
+[456826632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x54
+[456920797] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xa9
+[457020797] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x53
+[457070798] [log] CS rising edge
+[459110741] [log] CS falling edge
+[459166657] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa6
+[459260746] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x4c
+[459360746] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x99
+[459466632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x32
+[459560747] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x64
+[459660748] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xc9
+[459766632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x93
+[459860749] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x27
+[459916636] [log] CS rising edge
+[461956636] [log] CS falling edge
+[462000771] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[462106662] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x9d
+[462200772] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x3a
+[462300773] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[462406644] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe8
+[462500774] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd0
+[462600774] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xa1
+[462706632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x42
+[462750775] [log] CS rising edge
+[464790750] [log] CS falling edge
+[464840754] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x84
+[464940755] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x09
+[465046632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x12
+[465140756] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x24
+[465240756] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x48
+[465346665] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x91
+[465440757] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x22
+[465540758] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x44
+[465590758] [log] CS rising edge
+[467630701] [log] CS falling edge
+[467686665] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x88
+[467780706] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x11
+[467880707] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x22
+[467986639] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x45
+[468080708] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x8b
+[468180708] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x17
+[468286632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2f
+[468380709] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5e
+[468436644] [log] CS rising edge
+[470476644] [log] CS falling edge
+[470520692] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xbc
+[470626632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x79
+[470720693] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xf2
+[470820694] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[470926632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xcb
+[471020695] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x96
+[471120696] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2d
+[471226635] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x5b
+[471270696] [log] CS rising edge
+[473310688] [log] CS falling edge
+[473360692] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb6
+[473460693] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x6d
+[473566662] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xdb
+[473660694] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[473760694] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6d
+[473866662] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xda
+[473960695] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb5
+[474060696] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x6b
+[474110696] [log] CS rising edge
+[476150654] [log] CS falling edge
+[476206660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd6
+[476300659] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xad
+[476400660] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x5b
+[476506648] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xb7
+[476600661] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6f
+[476700662] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xde
+[476806632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xbc
+[476900663] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x78
+[476956649] [log] CS rising edge
+[478996649] [log] CS falling edge
+[479040619] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf0
+[479146632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xe0
+[479240621] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xc1
+[479340621] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x82
+[479446632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x05
+[479540622] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x0b
+[479640623] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x17
+[479746632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x2e
+[479790623] [log] CS rising edge
+[481830612] [log] CS falling edge
+[481880616] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5c
+[481980617] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xb8
+[482086632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x71
+[482180618] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xe2
+[482280618] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc5
+[482386632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x8b
+[482480619] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x17
+[482580620] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2f
+[482630620] [log] CS rising edge
+[484670579] [log] CS falling edge
+[484726644] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5e
+[484820585] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xbc
+[484920585] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x79
+[485026652] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xf2
+[485120586] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xe5
+[485220587] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xcb
+[485326632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x96
+[485420588] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2d
+[485476634] [log] CS rising edge
+[487516634] [log] CS falling edge
+[487560604] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5a
+[487666661] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xb5
+[487760605] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x6b
+[487860605] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xd6
+[487966632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xad
+[488060606] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x5a
+[488160607] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xb5
+[488266632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x6b
+[488310608] [log] CS rising edge
+[490350579] [log] CS falling edge
+[490400583] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd6
+[490500584] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xac
+[490606632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x59
+[490700585] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xb3
+[490800585] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[490906652] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xcd
+[491000586] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x9b
+[491100587] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x36
+[491150587] [log] CS rising edge
+[493190545] [log] CS falling edge
+[493246658] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x6c
+[493340550] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xd8
+[493440551] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xb1
+[493546632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x62
+[493640552] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xc5
+[493740552] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x8a
+[493846632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x15
+[493940553] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2b
+[493996647] [log] CS rising edge
+[496036647] [log] CS falling edge
+[496080565] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x56
+[496186660] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xad
+[496280566] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x5a
+[496380566] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb4
+[496486632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x68
+[496580567] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd0
+[496680568] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa0
+[496786632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x40
+[496830569] [log] CS rising edge
+[498870516] [log] CS falling edge
+[498920520] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x80
+[499020521] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x01
+[499126632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x03
+[499220522] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x06
+[499320522] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0d
+[499426632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x1b
+[499520523] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x37
+[499620524] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x6f
+[499670524] [log] CS rising edge
+[501710493] [log] CS falling edge
+[501766651] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xde
+[501860498] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xbd
+[501960499] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x7a
+[502066647] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xf5
+[502160500] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xeb
+[502260501] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xd7
+[502366632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xae
+[502460502] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x5d
+[502516648] [log] CS rising edge
+[504556648] [log] CS falling edge
+[504600512] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xba
+[504706632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x74
+[504800513] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe9
+[504900513] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xd2
+[505006632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xa4
+[505100514] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x49
+[505200515] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x93
+[505306632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x26
+[505350515] [log] CS rising edge
+[507390464] [log] CS falling edge
+[507440469] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4c
+[507540470] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x98
+[507646632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x31
+[507740471] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x63
+[507840471] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xc6
+[507946632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x8d
+[508040472] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1a
+[508140473] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x34
+[508190473] [log] CS rising edge
+[510230455] [log] CS falling edge
+[510286652] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x68
+[510380460] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xd1
+[510480461] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xa2
+[510586632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x45
+[510680462] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x8a
+[510780463] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x14
+[510886632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x28
+[510980464] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x50
+[511036658] [log] CS rising edge
+[513076658] [log] CS falling edge
+[513120428] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xa0
+[513226632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x40
+[513320429] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x81
+[513420430] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x03
+[513526632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x07
+[513620431] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x0f
+[513720432] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x1e
+[513826632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x3c
+[513870432] [log] CS rising edge
+[515910392] [log] CS falling edge
+[515960397] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x78
+[516060397] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xf0
+[516166632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe1
+[516260398] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xc2
+[516360399] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x84
+[516466632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x08
+[516560400] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x11
+[516660400] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x22
+[516710401] [log] CS rising edge
+[518750382] [log] CS falling edge
+[518806639] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x44
+[518900387] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x88
+[519000387] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x11
+[519106632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x22
+[519200388] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x45
+[519300389] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x8b
+[519406632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x17
+[519500390] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2f
+[519556644] [log] CS rising edge
+[521596644] [log] CS falling edge
+[521640393] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5e
+[521746645] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xbc
+[521840394] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x79
+[521940394] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xf3
+[522046632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe6
+[522140395] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xcc
+[522240396] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x98
+[522346632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x30
+[522390396] [log] CS rising edge
+[558376660] [log] CS falling edge
+[559974842] [log] CS rising edge
+[560386660] [log] CS falling edge
+[564445688] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x60
+[564549763] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc1
+[564646632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x82
+[564745698] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x05
+[564849761] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0b
+[564946632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x16
+[565045699] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2d
+[565149763] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x5b
+[565195708] [log] CS rising edge
+[569236648] [log] CS falling edge
+[569289776] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb6
+[569386632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x6d
+[569485569] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xdb
+[569589761] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[569686632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x6c
+[569785570] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd8
+[569889761] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb0
+[569986632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[570039776] [log] CS rising edge
+[574076139] [log] CS falling edge
+[574126648] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[574226144] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[574329761] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x0b
+[574426632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x16
+[574526146] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x2d
+[574629763] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5b
+[574726648] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb6
+[574826147] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x6c
+[574876647] [log] CS rising edge
+[578919775] [log] CS falling edge
+[578966150] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd8
+[579069761] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xb0
+[579166632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x61
+[579266152] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xc2
+[579369761] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x84
+[579466632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x09
+[579566153] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x12
+[579669761] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x25
+[579716154] [log] CS rising edge
+[583756667] [log] CS falling edge
+[583809795] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[583906650] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[584006120] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[584109773] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x54
+[584206659] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xa8
+[584306122] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x50
+[584409786] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa0
+[584506632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x40
+[584559797] [log] CS rising edge
+[588596085] [log] CS falling edge
+[588646669] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x80
+[588746090] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x01
+[588849761] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x02
+[588946632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x04
+[589046091] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x09
+[589149761] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x13
+[589246632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x26
+[589346093] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x4d
+[589396674] [log] CS rising edge
+[593439802] [log] CS falling edge
+[593486036] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x9a
+[593589761] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x35
+[593686652] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x6b
+[593786038] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xd6
+[593889761] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xac
+[593986632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x59
+[594086040] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb2
+[594189761] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x64
+[594236040] [log] CS rising edge
+[598276659] [log] CS falling edge
+[598329787] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc8
+[598426632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x90
+[598525993] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x21
+[598629769] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x42
+[598726665] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x85
+[598825994] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x0a
+[598929761] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x15
+[599026632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x2b
+[599079775] [log] CS rising edge
+[603115973] [log] CS falling edge
+[603166647] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x56
+[603265978] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xac
+[603369761] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x59
+[603466660] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xb3
+[603565979] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x66
+[603669780] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xcc
+[603766632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x98
+[603865981] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x30
+[603916660] [log] CS rising edge
+[607959788] [log] CS falling edge
+[608005945] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x60
+[608109763] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xc1
+[608206632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x83
+[608305947] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x07
+[608409761] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x0f
+[608506632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x1e
+[608605948] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x3d
+[608709771] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x7b
+[608755949] [log] CS rising edge
+[612796651] [log] CS falling edge
+[612849779] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xf6
+[612946632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xed
+[613045921] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xdb
+[613149761] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xb6
+[613246632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x6d
+[613345923] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xda
+[613449761] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xb4
+[613546632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x68
+[613599788] [log] CS rising edge
+[617635846] [log] CS falling edge
+[617686660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xd0
+[617785851] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0xa0
+[617889761] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x41
+[617986663] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x82
+[618085853] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x04
+[618189761] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x09
+[618286632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x13
+[618385854] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x27
+[618436636] [log] CS rising edge
+[622479764] [log] CS falling edge
+[622525866] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4e
+[622629790] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x9c
+[622726632] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x39
+[622825868] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x72
+[622929773] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xe4
+[623026632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0xc9
+[623125869] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x92
+[623229761] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x25
+[623275870] [log] CS rising edge
+[627316667] [log] CS falling edge
+[627369795] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x4a
+[627466650] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[627565828] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[627669773] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x54
+[627766659] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0xa8
+[627865829] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x51
+[627969797] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa2
+[628066632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x45
+[628119788] [log] CS rising edge
+[632155753] [log] CS falling edge
+[632206660] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x8a
+[632305758] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x14
+[632409761] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x29
+[632506647] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x52
+[632605760] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xa5
+[632709761] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x4b
+[632806665] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x97
+[632905761] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x2e
+[632956634] [log] CS rising edge
+[636999763] [log] CS falling edge
+[637045746] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x5c
+[637149772] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xb9
+[637246632] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x72
+[637345747] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[637449761] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xcb
+[637546632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x97
+[637645749] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x2e
+[637749763] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5c
+[637795750] [log] CS rising edge
+[641836644] [log] CS falling edge
+[641889772] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb8
+[641986632] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x70
+[642085721] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe1
+[642189761] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xc3
+[642286632] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x87
+[642385723] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x0f
+[642489761] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x1f
+[642586632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x3e
+[642639778] [log] CS rising edge
+[646675706] [log] CS falling edge
+[646726650] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x7c
+[646825711] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xf9
+[646929761] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xf2
+[647026632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xe5
+[647125712] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xcb
+[647229761] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x96
+[647326632] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x2d
+[647425714] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5a
+[647476660] [log] CS rising edge
+[651519789] [log] CS falling edge
+[651565658] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb4
+[651669761] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x69
+[651766644] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xd3
+[651865659] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xa6
+[651969761] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x4c
+[652066656] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x98
+[652165661] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x30
+[652269788] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x61
+[652315662] [log] CS rising edge
+[656356648] [log] CS falling edge
+[656409776] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xc2
+[656506632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x85
+[656605641] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x0b
+[656709761] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x17
+[656806632] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x2e
+[656905642] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x5d
+[657009776] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xbb
+[657106632] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x77
+[657159782] [log] CS rising edge
+[661196225] [log] CS falling edge
+[661246654] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xee
+[661346230] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0xdd
+[661449761] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xba
+[661546632] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x74
+[661646232] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xe9
+[661749761] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0xd2
+[661846632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0xa4
+[661946233] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x48
+[661996665] [log] CS rising edge
+[666039793] [log] CS falling edge
+[666086175] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0x90
+[666189761] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x21
+[666286640] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0x43
+[666386176] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0x86
+[666489761] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x0c
+[666586632] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x19
+[666686178] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x32
+[666789780] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x65
+[666836179] [log] CS rising edge
+[670876648] [log] CS falling edge
+[670929777] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xca
+[671026632] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x95
+[671126164] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0x2a
+[671229773] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0x55
+[671326660] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0xab
+[671426165] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x56
+[671529788] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0xad
+[671626632] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5a
+[671679789] [log] CS rising edge
+[675716103] [log] CS falling edge
+[675766661] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb4
+[675866108] [log] MOSI: 1 | bitID: 1 | byteID: 0 | Buff: 0x69
+[675969772] [log] MOSI: 0 | bitID: 2 | byteID: 0 | Buff: 0xd2
+[676066632] [log] MOSI: 1 | bitID: 3 | byteID: 0 | Buff: 0xa5
+[676166110] [log] MOSI: 1 | bitID: 4 | byteID: 0 | Buff: 0x4b
+[676269793] [log] MOSI: 1 | bitID: 5 | byteID: 0 | Buff: 0x97
+[676366632] [log] MOSI: 0 | bitID: 6 | byteID: 0 | Buff: 0x2e
+[676466111] [log] MOSI: 0 | bitID: 7 | byteID: 0 | Buff: 0x5c
+[676516644] [log] CS rising edge
+[680559772] [log] CS falling edge
+[680606100] [log] MOSI: 0 | bitID: 0 | byteID: 0 | Buff: 0xb8
+[680709761] [log] MOSI: 0 | bitID: 1 | byteID: 0 | Buff: 0x70
+[680806659] [log] MOSI: 1 | bitID: 2 | byteID: 0 | Buff: 0xe1
+[680906101] [log] MOSI: 0 | bitID: 3 | byteID: 0 | Buff: 0xc2
+[681009761] [log] MOSI: 0 | bitID: 4 | byteID: 0 | Buff: 0x84
+[681106632] [log] MOSI: 0 | bitID: 5 | byteID: 0 | Buff: 0x08
+[681206103] [log] MOSI: 1 | bitID: 6 | byteID: 0 | Buff: 0x11
+[681309761] [log] MOSI: 1 | bitID: 7 | byteID: 0 | Buff: 0x23
+[681356103] [log] CS rising edge

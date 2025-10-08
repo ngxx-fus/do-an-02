@@ -1,0 +1,1055 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  8 2025 17:02:46[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b634h ( 46644) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b65c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dcac vaddr=40080000 size=0236ch (  9068) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16094h ( 90260) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=000360bc vaddr=4008236c size=08f78h ( 36728) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003f03c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     do-an-02[0m
+[0;32mI (200) app_init: App version:      fe5eb5e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  8 2025 17:04:09[0m
+[0;32mI (209) app_init: ELF file SHA256:  4391ec639...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2E4 len 00014D1C (83 KiB): IRAM[0m
+[0;33mW (265) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[43954] [-->] app_main()
+[43986] [log] Set systemStage = SYSTEM_INIT
+[44340] [log] Start up OLED screen
+[152597] [log] [+] oledTask()
+[160149] [log] [oledTask] Wait for the initializing have been done!
+[160213] [log] [+] prepairByteDataTask()
+[167944] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[168021] [log] [+] modeControlTask()
+[176399] [log] [modeControlTask] Wait for the initializing have been done!
+[176470] [log] Set systemStage = SYSTEM_RUNNING
+[186954] [-->] oledTest()
+[187008] [-->] prepairByteDataTask(0x00000000)
+[187112] [-->] modeControlTask(0x00000000)
+[191074] [log] [modeControlTask] Default mode: 0
+[194320] [-->] modeSwitch(-1 --> 0)
+[197531] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[202996] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[206820] [-->] createSPIDevice(spiDev_t ** pDev)
+[211172] [<--] createSPIDevice() : OKE
+[214624] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 4, config: 0x0007)
+[224106] [<--] configSPIDevice() : OKE
+[227562] [-->] startupSPIDevice(0x3ffb6de4)
+[231476] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (496) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[243571] [log] gpio_install_isr_service(): already installed, continue...
+[249988] [log] CLK ISR attached to GPIO 4
+[253693] [log] CS ISR attached to GPIO 17
+[257419] [<--] startupSPIDevice() : OKE
+[260986] [<--] modeControl() : OKE
+[282633] [-->] setSendBackData(0x3ffb4202)
+[282684] [log] SPI set sendback byte: g
+[282719] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[284359] [<--] spiSetTransmitBuffer() : <null>
+[288514] [<--] setSendBackData() : OKE
+[291982] [-->] setReceiveByteBuff(0x3ffb4203)
+[296062] [log] SPI set sendback byte: 
+[299625] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[305102] [<--] spiSetReceiveBuffer() : OKE
+[308913] [<--] setReceiveByteBuff() : OKE
+[1650786] [log] << 0
+[1650807] [log] CS falling edge
+[1775786] [log] >> 1
+[1900786] [log] << 1
+[2025786] [log] >> 1
+[2150786] [log] << 1
+[2275786] [log] >> 1
+[2400786] [log] << 0
+[2525786] [log] >> 1
+[2650787] [log] << 0
+[2775786] [log] >> 1
+[2900787] [log] << 1
+[3025786] [log] >> 1
+[3150787] [log] << 1
+[3275786] [log] >> 1
+[3400787] [log] << 1
+[3525786] [log] >> 1
+[3532629] [log] Receive buffer is full!
+[3532661] [-->] setSendBackData(0x3ffb4202)
+[3532693] [log] SPI set sendback byte: [
+[3532717] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[3538147] [<--] spiSetTransmitBuffer() : <null>
+[3542400] [<--] setSendBackData() : OKE
+[3545959] [-->] setReceiveByteBuff(0x3ffb4203)
+[3550126] [log] SPI set sendback byte: 8
+[3553772] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[3559327] [<--] spiSetReceiveBuffer() : OKE
+[3563234] [<--] setReceiveByteBuff() : OKE
+[3650786] [log] CS rising edge
+[5690787] [log] CS falling edge
+[5815787] [log] >> 1
+[5940787] [log] << 0
+[6065787] [log] >> 1
+[6190787] [log] << 1
+[6315787] [log] >> 1
+[6440787] [log] << 0
+[6565787] [log] >> 1
+[6690787] [log] << 1
+[6815787] [log] >> 1
+[6940787] [log] << 1
+[7065787] [log] >> 1
+[7190788] [log] << 0
+[7315787] [log] >> 1
+[7440788] [log] << 1
+[7565787] [log] >> 1
+[7572629] [log] Receive buffer is full!
+[7572653] [-->] setSendBackData(0x3ffb4202)
+[7572685] [log] SPI set sendback byte: l
+[7572709] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[7578143] [<--] spiSetTransmitBuffer() : <null>
+[7582396] [<--] setSendBackData() : OKE
+[7585956] [-->] setReceiveByteBuff(0x3ffb4203)
+[7590122] [log] SPI set sendback byte: W
+[7593768] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[7599323] [<--] spiSetReceiveBuffer() : OKE
+[7603230] [<--] setReceiveByteBuff() : OKE
+[7690787] [log] CS rising edge
+[9730713] [log] CS falling edge
+[9855713] [log] >> 1
+[9980713] [log] << 0
+[10105713] [log] >> 1
+[10230713] [log] << 1
+[10355713] [log] >> 1
+[10480713] [log] << 1
+[10605713] [log] >> 1
+[10730713] [log] << 0
+[10855713] [log] >> 1
+[10980713] [log] << 1
+[11105713] [log] >> 1
+[11230713] [log] << 1
+[11355713] [log] >> 1
+[11480714] [log] << 0
+[11605713] [log] >> 1
+[11612629] [log] Receive buffer is full!
+[11612654] [-->] setSendBackData(0x3ffb4202)
+[11612687] [log] SPI set sendback byte: @
+[11612761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[11618490] [<--] spiSetTransmitBuffer() : <null>
+[11622831] [<--] setSendBackData() : OKE
+[11626476] [-->] setReceiveByteBuff(0x3ffb4203)
+[11630730] [log] SPI set sendback byte: q
+[11634462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[11640105] [<--] spiSetReceiveBuffer() : OKE
+[11644098] [<--] setReceiveByteBuff() : OKE
+[11730713] [log] CS rising edge
+[13770737] [log] CS falling edge
+[13895737] [log] >> 1
+[14020738] [log] << 0
+[14145737] [log] >> 1
+[14270738] [log] << 1
+[14395737] [log] >> 1
+[14520738] [log] << 0
+[14645737] [log] >> 1
+[14770738] [log] << 0
+[14895737] [log] >> 1
+[15020738] [log] << 0
+[15145737] [log] >> 1
+[15270738] [log] << 0
+[15395737] [log] >> 1
+[15520738] [log] << 0
+[15645737] [log] >> 1
+[15652629] [log] Receive buffer is full!
+[15652654] [-->] setSendBackData(0x3ffb4202)
+[15652687] [log] SPI set sendback byte: M
+[15652761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[15658490] [<--] spiSetTransmitBuffer() : <null>
+[15662831] [<--] setSendBackData() : OKE
+[15666476] [-->] setReceiveByteBuff(0x3ffb4203)
+[15670730] [log] SPI set sendback byte: @
+[15674462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[15680105] [<--] spiSetReceiveBuffer() : OKE
+[15684098] [<--] setReceiveByteBuff() : OKE
+[15770738] [log] CS rising edge
+[17810650] [log] CS falling edge
+[17935651] [log] >> 1
+[18060651] [log] << 0
+[18185651] [log] >> 1
+[18310651] [log] << 1
+[18435651] [log] >> 1
+[18560651] [log] << 0
+[18685651] [log] >> 1
+[18810651] [log] << 0
+[18935651] [log] >> 1
+[19060651] [log] << 1
+[19185651] [log] >> 1
+[19310651] [log] << 1
+[19435651] [log] >> 1
+[19560651] [log] << 0
+[19685651] [log] >> 1
+[19692629] [log] Receive buffer is full!
+[19692654] [-->] setSendBackData(0x3ffb4202)
+[19692687] [log] SPI set sendback byte: +
+[19692761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[19698490] [<--] spiSetTransmitBuffer() : <null>
+[19702831] [<--] setSendBackData() : OKE
+[19706476] [-->] setReceiveByteBuff(0x3ffb4203)
+[19710730] [log] SPI set sendback byte:  
+[19714462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[19720105] [<--] spiSetReceiveBuffer() : OKE
+[19724098] [<--] setReceiveByteBuff() : OKE
+[19810651] [log] CS rising edge
+[21850676] [log] CS falling edge
+[21975676] [log] >> 1
+[22100677] [log] << 0
+[22225676] [log] >> 1
+[22350677] [log] << 0
+[22475676] [log] >> 1
+[22600677] [log] << 1
+[22725676] [log] >> 1
+[22850677] [log] << 0
+[22975676] [log] >> 1
+[23100677] [log] << 1
+[23225676] [log] >> 1
+[23350677] [log] << 0
+[23475676] [log] >> 1
+[23600677] [log] << 1
+[23725676] [log] >> 1
+[23732629] [log] Receive buffer is full!
+[23732654] [-->] setSendBackData(0x3ffb4202)
+[23732687] [log] SPI set sendback byte: {
+[23732761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[23738490] [<--] spiSetTransmitBuffer() : <null>
+[23742831] [<--] setSendBackData() : OKE
+[23746476] [-->] setReceiveByteBuff(0x3ffb4203)
+[23750730] [log] SPI set sendback byte: U
+[23754462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[23760105] [<--] spiSetReceiveBuffer() : OKE
+[23764098] [<--] setReceiveByteBuff() : OKE
+[23850677] [log] CS rising edge
+[25890666] [log] CS falling edge
+[26015666] [log] >> 1
+[26140666] [log] << 0
+[26265666] [log] >> 1
+[26390666] [log] << 1
+[26515666] [log] >> 1
+[26640666] [log] << 1
+[26765666] [log] >> 1
+[26890666] [log] << 1
+[27015666] [log] >> 1
+[27140666] [log] << 1
+[27265666] [log] >> 1
+[27390666] [log] << 0
+[27515666] [log] >> 1
+[27640667] [log] << 1
+[27765666] [log] >> 1
+[27772629] [log] Receive buffer is full!
+[27772654] [-->] setSendBackData(0x3ffb4202)
+[27772687] [log] SPI set sendback byte: h
+[27772761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[27778490] [<--] spiSetTransmitBuffer() : <null>
+[27782831] [<--] setSendBackData() : OKE
+[27786476] [-->] setReceiveByteBuff(0x3ffb4203)
+[27790730] [log] SPI set sendback byte: Z
+[27794462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[27800105] [<--] spiSetReceiveBuffer() : OKE
+[27804098] [<--] setReceiveByteBuff() : OKE
+[27890666] [log] CS rising edge
+[29930605] [log] CS falling edge
+[30055606] [log] >> 1
+[30180606] [log] << 0
+[30305606] [log] >> 1
+[30430606] [log] << 1
+[30555606] [log] >> 1
+[30680606] [log] << 1
+[30805606] [log] >> 1
+[30930606] [log] << 0
+[31055606] [log] >> 1
+[31180606] [log] << 1
+[31305606] [log] >> 1
+[31430606] [log] << 0
+[31555606] [log] >> 1
+[31680606] [log] << 0
+[31805606] [log] >> 1
+[31812629] [log] Receive buffer is full!
+[31812654] [-->] setSendBackData(0x3ffb4202)
+[31812687] [log] SPI set sendback byte: %
+[31812761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[31818490] [<--] spiSetTransmitBuffer() : <null>
+[31822831] [<--] setSendBackData() : OKE
+[31826476] [-->] setReceiveByteBuff(0x3ffb4203)
+[31830730] [log] SPI set sendback byte: f
+[31834462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[31840105] [<--] spiSetReceiveBuffer() : OKE
+[31844098] [<--] setReceiveByteBuff() : OKE
+[31930606] [log] CS rising edge
+[33970577] [log] CS falling edge
+[34095577] [log] >> 1
+[34220578] [log] << 0
+[34345577] [log] >> 1
+[34470578] [log] << 0
+[34595577] [log] >> 1
+[34720578] [log] << 1
+[34845577] [log] >> 1
+[34970578] [log] << 0
+[35095577] [log] >> 1
+[35220578] [log] << 0
+[35345577] [log] >> 1
+[35470578] [log] << 1
+[35595577] [log] >> 1
+[35720578] [log] << 0
+[35845578] [log] >> 1
+[35852629] [log] Receive buffer is full!
+[35852654] [-->] setSendBackData(0x3ffb4202)
+[35852687] [log] SPI set sendback byte: .
+[35852761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[35858490] [<--] spiSetTransmitBuffer() : <null>
+[35862831] [<--] setSendBackData() : OKE
+[35866476] [-->] setReceiveByteBuff(0x3ffb4203)
+[35870730] [log] SPI set sendback byte: `
+[35874462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[35880105] [<--] spiSetReceiveBuffer() : OKE
+[35884098] [<--] setReceiveByteBuff() : OKE
+[35970578] [log] CS rising edge
+[38010554] [log] CS falling edge
+[38135554] [log] >> 1
+[38260555] [log] << 0
+[38385554] [log] >> 1
+[38510555] [log] << 0
+[38635554] [log] >> 1
+[38760555] [log] << 1
+[38885555] [log] >> 1
+[39010555] [log] << 0
+[39135555] [log] >> 1
+[39260555] [log] << 1
+[39385555] [log] >> 1
+[39510555] [log] << 1
+[39635555] [log] >> 1
+[39760555] [log] << 1
+[39885555] [log] >> 1
+[39892629] [log] Receive buffer is full!
+[39892654] [-->] setSendBackData(0x3ffb4202)
+[39892687] [log] SPI set sendback byte: \
+[39892761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[39898490] [<--] spiSetTransmitBuffer() : <null>
+[39902831] [<--] setSendBackData() : OKE
+[39906476] [-->] setReceiveByteBuff(0x3ffb4203)
+[39910730] [log] SPI set sendback byte: x
+[39914462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[39920105] [<--] spiSetReceiveBuffer() : OKE
+[39924098] [<--] setReceiveByteBuff() : OKE
+[40010555] [log] CS rising edge
+[42050527] [log] CS falling edge
+[42175527] [log] >> 1
+[42300528] [log] << 0
+[42425527] [log] >> 1
+[42550528] [log] << 1
+[42675527] [log] >> 1
+[42800528] [log] << 0
+[42925527] [log] >> 1
+[43050528] [log] << 1
+[43175527] [log] >> 1
+[43300528] [log] << 1
+[43425528] [log] >> 1
+[43550528] [log] << 1
+[43675528] [log] >> 1
+[43800528] [log] << 0
+[43925528] [log] >> 1
+[43932629] [log] Receive buffer is full!
+[43932654] [-->] setSendBackData(0x3ffb4202)
+[43932687] [log] SPI set sendback byte: Z
+[43932761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[43938490] [<--] spiSetTransmitBuffer() : <null>
+[43942831] [<--] setSendBackData() : OKE
+[43946476] [-->] setReceiveByteBuff(0x3ffb4203)
+[43950730] [log] SPI set sendback byte: x
+[43954462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[43960105] [<--] spiSetReceiveBuffer() : OKE
+[43964098] [<--] setReceiveByteBuff() : OKE
+[44050528] [log] CS rising edge
+[46090480] [log] CS falling edge
+[46215480] [log] >> 1
+[46340481] [log] << 0
+[46465480] [log] >> 1
+[46590481] [log] << 1
+[46715480] [log] >> 1
+[46840481] [log] << 0
+[46965480] [log] >> 1
+[47090481] [log] << 1
+[47215480] [log] >> 1
+[47340481] [log] << 1
+[47465480] [log] >> 1
+[47590481] [log] << 0
+[47715480] [log] >> 1
+[47840481] [log] << 1
+[47965480] [log] >> 1
+[47972629] [log] Receive buffer is full!
+[47972654] [-->] setSendBackData(0x3ffb4202)
+[47972687] [log] SPI set sendback byte: w
+[47972761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[47978490] [<--] spiSetTransmitBuffer() : <null>
+[47982831] [<--] setSendBackData() : OKE
+[47986476] [-->] setReceiveByteBuff(0x3ffb4203)
+[47990730] [log] SPI set sendback byte: |
+[47994462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[48000105] [<--] spiSetReceiveBuffer() : OKE
+[48004098] [<--] setReceiveByteBuff() : OKE
+[48090481] [log] CS rising edge
+[50130474] [log] CS falling edge
+[50255474] [log] >> 1
+[50380475] [log] << 0
+[50505474] [log] >> 1
+[50630475] [log] << 1
+[50755474] [log] >> 1
+[50880475] [log] << 1
+[51005474] [log] >> 1
+[51130475] [log] << 1
+[51255474] [log] >> 1
+[51380475] [log] << 0
+[51505474] [log] >> 1
+[51630475] [log] << 1
+[51755474] [log] >> 1
+[51880475] [log] << 1
+[52005475] [log] >> 1
+[52012629] [log] Receive buffer is full!
+[52012654] [-->] setSendBackData(0x3ffb4202)
+[52012687] [log] SPI set sendback byte: H
+[52012761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[52018490] [<--] spiSetTransmitBuffer() : <null>
+[52022831] [<--] setSendBackData() : OKE
+[52026476] [-->] setReceiveByteBuff(0x3ffb4203)
+[52030730] [log] SPI set sendback byte: "
+[52034462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[52040105] [<--] spiSetReceiveBuffer() : OKE
+[52044098] [<--] setReceiveByteBuff() : OKE
+[52130475] [log] CS rising edge
+[54170479] [log] CS falling edge
+[54295479] [log] >> 1
+[54420479] [log] << 0
+[54545479] [log] >> 1
+[54670479] [log] << 1
+[54795479] [log] >> 1
+[54920479] [log] << 0
+[55045479] [log] >> 1
+[55170479] [log] << 0
+[55295479] [log] >> 1
+[55420479] [log] << 1
+[55545479] [log] >> 1
+[55670479] [log] << 0
+[55795479] [log] >> 1
+[55920480] [log] << 0
+[56045479] [log] >> 1
+[56052629] [log] Receive buffer is full!
+[56052654] [-->] setSendBackData(0x3ffb4202)
+[56052687] [log] SPI set sendback byte: Z
+[56052761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[56058490] [<--] spiSetTransmitBuffer() : <null>
+[56062831] [<--] setSendBackData() : OKE
+[56066476] [-->] setReceiveByteBuff(0x3ffb4203)
+[56070730] [log] SPI set sendback byte: ?
+[56074462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[56080105] [<--] spiSetReceiveBuffer() : OKE
+[56084098] [<--] setReceiveByteBuff() : OKE
+[56170479] [log] CS rising edge
+[58210439] [log] CS falling edge
+[58335439] [log] >> 1
+[58460439] [log] << 0
+[58585439] [log] >> 1
+[58710440] [log] << 1
+[58835439] [log] >> 1
+[58960440] [log] << 0
+[59085439] [log] >> 1
+[59210440] [log] << 1
+[59335439] [log] >> 1
+[59460440] [log] << 1
+[59585439] [log] >> 1
+[59710440] [log] << 0
+[59835439] [log] >> 1
+[59960440] [log] << 1
+[60085439] [log] >> 1
+[60092629] [log] Receive buffer is full!
+[60092654] [-->] setSendBackData(0x3ffb4202)
+[60092687] [log] SPI set sendback byte: #
+[60092761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[60098490] [<--] spiSetTransmitBuffer() : <null>
+[60102831] [<--] setSendBackData() : OKE
+[60106476] [-->] setReceiveByteBuff(0x3ffb4203)
+[60110730] [log] SPI set sendback byte: +
+[60114462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[60120105] [<--] spiSetReceiveBuffer() : OKE
+[60124098] [<--] setReceiveByteBuff() : OKE
+[60210440] [log] CS rising edge
+[62250420] [log] CS falling edge
+[62375420] [log] >> 1
+[62500421] [log] << 0
+[62625420] [log] >> 1
+[62750421] [log] << 0
+[62875420] [log] >> 1
+[63000421] [log] << 1
+[63125420] [log] >> 1
+[63250421] [log] << 0
+[63375420] [log] >> 1
+[63500421] [log] << 0
+[63625420] [log] >> 1
+[63750421] [log] << 0
+[63875420] [log] >> 1
+[64000421] [log] << 1
+[64125421] [log] >> 1
+[64132629] [log] Receive buffer is full!
+[64132654] [-->] setSendBackData(0x3ffb4202)
+[64132687] [log] SPI set sendback byte: u
+[64132761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[64138490] [<--] spiSetTransmitBuffer() : <null>
+[64142831] [<--] setSendBackData() : OKE
+[64146476] [-->] setReceiveByteBuff(0x3ffb4203)
+[64150730] [log] SPI set sendback byte: l
+[64154462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[64160105] [<--] spiSetReceiveBuffer() : OKE
+[64164098] [<--] setReceiveByteBuff() : OKE
+[64250421] [log] CS rising edge
+[66290431] [log] CS falling edge
+[66415431] [log] >> 1
+[66540432] [log] << 0
+[66665431] [log] >> 1
+[66790432] [log] << 1
+[66915431] [log] >> 1
+[67040432] [log] << 1
+[67165432] [log] >> 1
+[67290432] [log] << 1
+[67415432] [log] >> 1
+[67540432] [log] << 0
+[67665432] [log] >> 1
+[67790432] [log] << 1
+[67915432] [log] >> 1
+[68040432] [log] << 0
+[68165432] [log] >> 1
+[68172629] [log] Receive buffer is full!
+[68172654] [-->] setSendBackData(0x3ffb4202)
+[68172687] [log] SPI set sendback byte: h
+[68172761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[68178490] [<--] spiSetTransmitBuffer() : <null>
+[68182831] [<--] setSendBackData() : OKE
+[68186476] [-->] setReceiveByteBuff(0x3ffb4203)
+[68190730] [log] SPI set sendback byte: @
+[68194462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[68200105] [<--] spiSetReceiveBuffer() : OKE
+[68204098] [<--] setReceiveByteBuff() : OKE
+[68290432] [log] CS rising edge
+[70330356] [log] CS falling edge
+[70455357] [log] >> 1
+[70580357] [log] << 0
+[70705357] [log] >> 1
+[70830357] [log] << 1
+[70955357] [log] >> 1
+[71080357] [log] << 1
+[71205357] [log] >> 1
+[71330357] [log] << 0
+[71455357] [log] >> 1
+[71580357] [log] << 1
+[71705357] [log] >> 1
+[71830357] [log] << 0
+[71955357] [log] >> 1
+[72080357] [log] << 0
+[72205357] [log] >> 1
+[72212629] [log] Receive buffer is full!
+[72212654] [-->] setSendBackData(0x3ffb4202)
+[72212687] [log] SPI set sendback byte: ,
+[72212761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[72218490] [<--] spiSetTransmitBuffer() : <null>
+[72222831] [<--] setSendBackData() : OKE
+[72226476] [-->] setReceiveByteBuff(0x3ffb4203)
+[72230730] [log] SPI set sendback byte: y
+[72234462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[72240105] [<--] spiSetReceiveBuffer() : OKE
+[72244098] [<--] setReceiveByteBuff() : OKE
+[72330357] [log] CS rising edge
+[74370347] [log] CS falling edge
+[74495347] [log] >> 1
+[74620347] [log] << 0
+[74745347] [log] >> 1
+[74870347] [log] << 0
+[74995347] [log] >> 1
+[75120347] [log] << 1
+[75245347] [log] >> 1
+[75370348] [log] << 0
+[75495347] [log] >> 1
+[75620348] [log] << 1
+[75745347] [log] >> 1
+[75870348] [log] << 1
+[75995347] [log] >> 1
+[76120348] [log] << 0
+[76245347] [log] >> 1
+[76252629] [log] Receive buffer is full!
+[76252654] [-->] setSendBackData(0x3ffb4202)
+[76252687] [log] SPI set sendback byte: =
+[76252761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[76258490] [<--] spiSetTransmitBuffer() : <null>
+[76262831] [<--] setSendBackData() : OKE
+[76266476] [-->] setReceiveByteBuff(0x3ffb4203)
+[76270730] [log] SPI set sendback byte: l
+[76274462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[76280105] [<--] spiSetReceiveBuffer() : OKE
+[76284098] [<--] setReceiveByteBuff() : OKE
+[76370348] [log] CS rising edge
+[78410304] [log] CS falling edge
+[78535304] [log] >> 1
+[78660305] [log] << 0
+[78785305] [log] >> 1
+[78910305] [log] << 0
+[79035305] [log] >> 1
+[79160305] [log] << 1
+[79285305] [log] >> 1
+[79410305] [log] << 1
+[79535305] [log] >> 1
+[79660305] [log] << 1
+[79785305] [log] >> 1
+[79910305] [log] << 1
+[80035305] [log] >> 1
+[80160305] [log] << 0
+[80285305] [log] >> 1
+[80292629] [log] Receive buffer is full!
+[80292654] [-->] setSendBackData(0x3ffb4202)
+[80292687] [log] SPI set sendback byte: I
+[80292761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[80298490] [<--] spiSetTransmitBuffer() : <null>
+[80302831] [<--] setSendBackData() : OKE
+[80306476] [-->] setReceiveByteBuff(0x3ffb4203)
+[80310730] [log] SPI set sendback byte: u
+[80314462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[80320105] [<--] spiSetReceiveBuffer() : OKE
+[80324098] [<--] setReceiveByteBuff() : OKE
+[80410305] [log] CS rising edge
+[82450312] [log] CS falling edge
+[82575312] [log] >> 1
+[82700312] [log] << 0
+[82825312] [log] >> 1
+[82950312] [log] << 1
+[83075312] [log] >> 1
+[83200313] [log] << 0
+[83325312] [log] >> 1
+[83450313] [log] << 0
+[83575312] [log] >> 1
+[83700313] [log] << 1
+[83825312] [log] >> 1
+[83950313] [log] << 0
+[84075312] [log] >> 1
+[84200313] [log] << 0
+[84325312] [log] >> 1
+[84332629] [log] Receive buffer is full!
+[84332654] [-->] setSendBackData(0x3ffb4202)
+[84332687] [log] SPI set sendback byte: "
+[84332761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[84338490] [<--] spiSetTransmitBuffer() : <null>
+[84342831] [<--] setSendBackData() : OKE
+[84346476] [-->] setReceiveByteBuff(0x3ffb4203)
+[84350730] [log] SPI set sendback byte: G
+[84354462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[84360105] [<--] spiSetReceiveBuffer() : OKE
+[84364098] [<--] setReceiveByteBuff() : OKE
+[84450313] [log] CS rising edge
+[86490319] [log] CS falling edge
+[86615320] [log] >> 1
+[86740320] [log] << 0
+[86865320] [log] >> 1
+[86990320] [log] << 0
+[87115320] [log] >> 1
+[87240320] [log] << 1
+[87365320] [log] >> 1
+[87490320] [log] << 0
+[87615320] [log] >> 1
+[87740320] [log] << 0
+[87865320] [log] >> 1
+[87990320] [log] << 0
+[88115320] [log] >> 1
+[88240320] [log] << 1
+[88365320] [log] >> 1
+[88372629] [log] Receive buffer is full!
+[88372654] [-->] setSendBackData(0x3ffb4202)
+[88372687] [log] SPI set sendback byte: e
+[88372761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[88378490] [<--] spiSetTransmitBuffer() : <null>
+[88382831] [<--] setSendBackData() : OKE
+[88386476] [-->] setReceiveByteBuff(0x3ffb4203)
+[88390730] [log] SPI set sendback byte: @
+[88394462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[88400105] [<--] spiSetReceiveBuffer() : OKE
+[88404098] [<--] setReceiveByteBuff() : OKE
+[88490320] [log] CS rising edge
+[90530222] [log] CS falling edge
+[90655222] [log] >> 1
+[90780222] [log] << 0
+[90905222] [log] >> 1
+[91030222] [log] << 1
+[91155222] [log] >> 1
+[91280222] [log] << 1
+[91405222] [log] >> 1
+[91530222] [log] << 0
+[91655222] [log] >> 1
+[91780222] [log] << 0
+[91905222] [log] >> 1
+[92030222] [log] << 1
+[92155222] [log] >> 1
+[92280223] [log] << 0
+[92405222] [log] >> 1
+[92412629] [log] Receive buffer is full!
+[92412654] [-->] setSendBackData(0x3ffb4202)
+[92412687] [log] SPI set sendback byte: 1
+[92412761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[92418490] [<--] spiSetTransmitBuffer() : <null>
+[92422831] [<--] setSendBackData() : OKE
+[92426476] [-->] setReceiveByteBuff(0x3ffb4203)
+[92430730] [log] SPI set sendback byte: |
+[92434462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[92440105] [<--] spiSetReceiveBuffer() : OKE
+[92444098] [<--] setReceiveByteBuff() : OKE
+[92530222] [log] CS rising edge
+[94570221] [log] CS falling edge
+[94695221] [log] >> 1
+[94820222] [log] << 0
+[94945221] [log] >> 1
+[95070222] [log] << 0
+[95195221] [log] >> 1
+[95320222] [log] << 1
+[95445221] [log] >> 1
+[95570222] [log] << 1
+[95695221] [log] >> 1
+[95820222] [log] << 0
+[95945222] [log] >> 1
+[96070222] [log] << 0
+[96195222] [log] >> 1
+[96320222] [log] << 0
+[96445222] [log] >> 1
+[96452629] [log] Receive buffer is full!
+[96452654] [-->] setSendBackData(0x3ffb4202)
+[96452687] [log] SPI set sendback byte: e
+[96452761] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[96458490] [<--] spiSetTransmitBuffer() : <null>
+[96462831] [<--] setSendBackData() : OKE
+[96466476] [-->] setReceiveByteBuff(0x3ffb4203)
+[96470730] [log] SPI set sendback byte: }
+[96474462] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[96480105] [<--] spiSetReceiveBuffer() : OKE
+[96484098] [<--] setReceiveByteBuff() : OKE
+[96570222] [log] CS rising edge
+[98610202] [log] CS falling edge
+[98735203] [log] >> 1
+[98860203] [log] << 0
+[98985203] [log] >> 1
+[99110203] [log] << 1
+[99235203] [log] >> 1
+[99360203] [log] << 1
+[99485203] [log] >> 1
+[99610203] [log] << 0
+[99735203] [log] >> 1
+[99860203] [log] << 0
+[99985203] [log] >> 1
+[100110203] [log] << 1
+[100235203] [log] >> 1
+[100360203] [log] << 0
+[100485203] [log] >> 1
+[100492629] [log] Receive buffer is full!
+[100492655] [-->] setSendBackData(0x3ffb4202)
+[100492689] [log] SPI set sendback byte: k
+[100493021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[100498837] [<--] spiSetTransmitBuffer() : <null>
+[100503265] [<--] setSendBackData() : OKE
+[100506997] [-->] setReceiveByteBuff(0x3ffb4203)
+[100511337] [log] SPI set sendback byte: =
+[100515157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[100520886] [<--] spiSetReceiveBuffer() : OKE
+[100524966] [<--] setReceiveByteBuff() : OKE
+[100610203] [log] CS rising edge
+[102650166] [log] CS falling edge
+[102775166] [log] >> 1
+[102900167] [log] << 0
+[103025166] [log] >> 1
+[103150167] [log] << 1
+[103275166] [log] >> 1
+[103400167] [log] << 1
+[103525166] [log] >> 1
+[103650167] [log] << 0
+[103775166] [log] >> 1
+[103900167] [log] << 1
+[104025166] [log] >> 1
+[104150167] [log] << 0
+[104275166] [log] >> 1
+[104400167] [log] << 1
+[104525166] [log] >> 1
+[104532629] [log] Receive buffer is full!
+[104532655] [-->] setSendBackData(0x3ffb4202)
+[104532689] [log] SPI set sendback byte: /
+[104533021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[104538837] [<--] spiSetTransmitBuffer() : <null>
+[104543265] [<--] setSendBackData() : OKE
+[104546997] [-->] setReceiveByteBuff(0x3ffb4203)
+[104551337] [log] SPI set sendback byte: u
+[104555157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[104560886] [<--] spiSetReceiveBuffer() : OKE
+[104564966] [<--] setReceiveByteBuff() : OKE
+[104650167] [log] CS rising edge
+[106690184] [log] CS falling edge
+[106815184] [log] >> 1
+[106940184] [log] << 0
+[107065184] [log] >> 1
+[107190184] [log] << 0
+[107315184] [log] >> 1
+[107440184] [log] << 1
+[107565184] [log] >> 1
+[107690184] [log] << 0
+[107815184] [log] >> 1
+[107940185] [log] << 1
+[108065184] [log] >> 1
+[108190185] [log] << 1
+[108315184] [log] >> 1
+[108440185] [log] << 1
+[108565184] [log] >> 1
+[108572629] [log] Receive buffer is full!
+[108572655] [-->] setSendBackData(0x3ffb4202)
+[108572689] [log] SPI set sendback byte: C
+[108573021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[108578837] [<--] spiSetTransmitBuffer() : <null>
+[108583265] [<--] setSendBackData() : OKE
+[108586997] [-->] setReceiveByteBuff(0x3ffb4203)
+[108591337] [log] SPI set sendback byte: S
+[108595157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[108600886] [<--] spiSetReceiveBuffer() : OKE
+[108604966] [<--] setReceiveByteBuff() : OKE
+[108690185] [log] CS rising edge
+[110730161] [log] CS falling edge
+[110855162] [log] >> 1
+[110980162] [log] << 0
+[111105162] [log] >> 1
+[111230162] [log] << 1
+[111355162] [log] >> 1
+[111480162] [log] << 0
+[111605162] [log] >> 1
+[111730162] [log] << 0
+[111855162] [log] >> 1
+[111980162] [log] << 0
+[112105162] [log] >> 1
+[112230162] [log] << 0
+[112355162] [log] >> 1
+[112480163] [log] << 1
+[112605162] [log] >> 1
+[112612629] [log] Receive buffer is full!
+[112612655] [-->] setSendBackData(0x3ffb4202)
+[112612689] [log] SPI set sendback byte: ^
+[112613021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[112618837] [<--] spiSetTransmitBuffer() : <null>
+[112623265] [<--] setSendBackData() : OKE
+[112626997] [-->] setReceiveByteBuff(0x3ffb4203)
+[112631337] [log] SPI set sendback byte: C
+[112635157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[112640886] [<--] spiSetReceiveBuffer() : OKE
+[112644966] [<--] setReceiveByteBuff() : OKE
+[112730162] [log] CS rising edge
+[114770135] [log] CS falling edge
+[114895135] [log] >> 1
+[115020136] [log] << 0
+[115145135] [log] >> 1
+[115270136] [log] << 1
+[115395135] [log] >> 1
+[115520136] [log] << 0
+[115645135] [log] >> 1
+[115770136] [log] << 1
+[115895135] [log] >> 1
+[116020136] [log] << 1
+[116145135] [log] >> 1
+[116270136] [log] << 1
+[116395135] [log] >> 1
+[116520136] [log] << 1
+[116645136] [log] >> 1
+[116652629] [log] Receive buffer is full!
+[116652655] [-->] setSendBackData(0x3ffb4202)
+[116652689] [log] SPI set sendback byte: O
+[116653021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[116658837] [<--] spiSetTransmitBuffer() : <null>
+[116663265] [<--] setSendBackData() : OKE
+[116666997] [-->] setReceiveByteBuff(0x3ffb4203)
+[116671337] [log] SPI set sendback byte: F
+[116675157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[116680886] [<--] spiSetReceiveBuffer() : OKE
+[116684966] [<--] setReceiveByteBuff() : OKE
+[116770136] [log] CS rising edge
+[118810118] [log] CS falling edge
+[118935118] [log] >> 1
+[119060119] [log] << 0
+[119185118] [log] >> 1
+[119310119] [log] << 1
+[119435119] [log] >> 1
+[119560119] [log] << 0
+[119685119] [log] >> 1
+[119810119] [log] << 0
+[119935119] [log] >> 1
+[120060119] [log] << 1
+[120185119] [log] >> 1
+[120310119] [log] << 1
+[120435119] [log] >> 1
+[120560119] [log] << 1
+[120685119] [log] >> 1
+[120692629] [log] Receive buffer is full!
+[120692655] [-->] setSendBackData(0x3ffb4202)
+[120692689] [log] SPI set sendback byte: (
+[120693021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[120698837] [<--] spiSetTransmitBuffer() : <null>
+[120703265] [<--] setSendBackData() : OKE
+[120706997] [-->] setReceiveByteBuff(0x3ffb4203)
+[120711337] [log] SPI set sendback byte: S
+[120715157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[120720886] [<--] spiSetReceiveBuffer() : OKE
+[120724966] [<--] setReceiveByteBuff() : OKE
+[120810119] [log] CS rising edge
+[122850093] [log] CS falling edge
+[122975093] [log] >> 1
+[123100093] [log] << 0
+[123225093] [log] >> 1
+[123350093] [log] << 0
+[123475093] [log] >> 1
+[123600093] [log] << 1
+[123725093] [log] >> 1
+[123850093] [log] << 0
+[123975093] [log] >> 1
+[124100093] [log] << 1
+[124225093] [log] >> 1
+[124350094] [log] << 0
+[124475093] [log] >> 1
+[124600094] [log] << 0
+[124725093] [log] >> 1
+[124732629] [log] Receive buffer is full!
+[124732655] [-->] setSendBackData(0x3ffb4202)
+[124732689] [log] SPI set sendback byte: k
+[124733021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[124738837] [<--] spiSetTransmitBuffer() : <null>
+[124743265] [<--] setSendBackData() : OKE
+[124746997] [-->] setReceiveByteBuff(0x3ffb4203)
+[124751337] [log] SPI set sendback byte: N
+[124755157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[124760886] [<--] spiSetReceiveBuffer() : OKE
+[124764966] [<--] setReceiveByteBuff() : OKE
+[124850093] [log] CS rising edge
+[126890062] [log] CS falling edge
+[127015062] [log] >> 1
+[127140063] [log] << 0
+[127265062] [log] >> 1
+[127390063] [log] << 1
+[127515062] [log] >> 1
+[127640063] [log] << 1
+[127765062] [log] >> 1
+[127890063] [log] << 0
+[128015062] [log] >> 1
+[128140063] [log] << 1
+[128265062] [log] >> 1
+[128390063] [log] << 0
+[128515062] [log] >> 1
+[128640063] [log] << 1
+[128765063] [log] >> 1
+[128772629] [log] Receive buffer is full!
+[128772655] [-->] setSendBackData(0x3ffb4202)
+[128772689] [log] SPI set sendback byte: $
+[128773021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[128778837] [<--] spiSetTransmitBuffer() : <null>
+[128783265] [<--] setSendBackData() : OKE
+[128786997] [-->] setReceiveByteBuff(0x3ffb4203)
+[128791337] [log] SPI set sendback byte: h
+[128795157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[128800886] [<--] spiSetReceiveBuffer() : OKE
+[128804966] [<--] setReceiveByteBuff() : OKE
+[128890063] [log] CS rising edge
+[130930016] [log] CS falling edge
+[131055016] [log] >> 1
+[131180016] [log] << 0
+[131305016] [log] >> 1
+[131430017] [log] << 0
+[131555016] [log] >> 1
+[131680017] [log] << 1
+[131805016] [log] >> 1
+[131930017] [log] << 0
+[132055016] [log] >> 1
+[132180017] [log] << 0
+[132305016] [log] >> 1
+[132430017] [log] << 1
+[132555016] [log] >> 1
+[132680017] [log] << 0
+[132805016] [log] >> 1
+[132812629] [log] Receive buffer is full!
+[132812655] [-->] setSendBackData(0x3ffb4202)
+[132812689] [log] SPI set sendback byte: .
+[132813021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[132818837] [<--] spiSetTransmitBuffer() : <null>
+[132823265] [<--] setSendBackData() : OKE
+[132826997] [-->] setReceiveByteBuff(0x3ffb4203)
+[132831337] [log] SPI set sendback byte: !
+[132835157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[132840886] [<--] spiSetReceiveBuffer() : OKE
+[132844966] [<--] setReceiveByteBuff() : OKE
+[132930017] [log] CS rising edge
+[134969999] [log] CS falling edge
+[135094999] [log] >> 1
+[135220000] [log] << 0
+[135344999] [log] >> 1
+[135470000] [log] << 0
+[135594999] [log] >> 1
+[135720000] [log] << 1
+[135844999] [log] >> 1
+[135970000] [log] << 0
+[136094999] [log] >> 1
+[136220000] [log] << 1
+[136344999] [log] >> 1
+[136470000] [log] << 1
+[136594999] [log] >> 1
+[136720000] [log] << 1
+[136844999] [log] >> 1
+[136852629] [log] Receive buffer is full!
+[136852655] [-->] setSendBackData(0x3ffb4202)
+[136852689] [log] SPI set sendback byte: 8
+[136853021] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[136858837] [<--] spiSetTransmitBuffer() : <null>
+[136863265] [<--] setSendBackData() : OKE
+[136866997] [-->] setReceiveByteBuff(0x3ffb4203)
+[136871337] [log] SPI set sendback byte: n
+[136875157] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[136880886] [<--] spiSetReceiveBuffer() : OKE
+[136884966] [<--] setReceiveByteBuff() : OKE
+[136970000] [log] CS rising edge
+[139010019] [log] CS falling edge
+[139135019] [log] >> 1
+[139260019] [log] << 0
+[139385019] [log] >> 1
+[139510020] [log] << 0

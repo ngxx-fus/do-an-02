@@ -127,10 +127,7 @@ def setSendBackData(uint8_t *byteData){
     switch (currentSystemMode){
         case SYSTEM_MODE_SPI:            
             __log("SPI set sendback byte: %c", *byteData);
-
-            spiDev_t * spi = (spiDev_t *) comObject;
-
-            ret = spiSetTransmitBuffer(spi, byteData, 1);
+            ret = spiSetTransmitBuffer((spiDev_t *) comObject, byteData, 1);
             if(ret!=OKE) goto setSendBackData_ReturnERR;
 
         break;
@@ -161,17 +158,14 @@ def setSendBackData(uint8_t *byteData){
         return ERR;
 }
 
-def setReceiveByteBuff(uint8_t *byteData){
+def setReceiveByteBuff(uint8_t *byteData, size_t buffBize){
     __entry("setReceiveByteBuff(%p)", byteData);
     def ret;
 
     switch (currentSystemMode){
         case SYSTEM_MODE_SPI:            
             __log("SPI set sendback byte: %c", *byteData);
-
-            spiDev_t * spi = (spiDev_t *) comObject;
-
-            ret = spiSetReceiveBuffer(spi, byteData, 5);
+            ret = spiSetReceiveBuffer((spiDev_t *) comObject, byteData, buffBize);
             if(ret!=OKE) goto setReceiveByteBuff_ReturnERR;
 
         break;
@@ -211,7 +205,7 @@ def checkNewData(){
 
     switch (currentSystemMode){
         case SYSTEM_MODE_SPI:            
-            return (((spiDev_t *) comObject)->rxdByteInd);
+            return __hasFlagBitSet(((spiDev_t *) comObject)->stat, SPISTAT_RBUFF_FULL);
         
         case SYSTEM_MODE_I2C:
             __log("I2C not available!");
@@ -233,6 +227,10 @@ def checkNewData(){
     checkNewData_ReturnERR:
         // __exit("checkNewData() : [%d]", ret);
         return ret;
+}
+
+def resetReceiveBuff(){
+    return OKE;
 }
 
 /// @brief Random printable character
@@ -375,7 +373,7 @@ def modeSwitch(){
                 ret = createSPIDevice(&spi);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
                 
-                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, 10, SPI_11_SLAVE);
+                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, COM_SPI_FREQ, COM_SPI_CONF);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
 
                 ret = startupSPIDevice(spi);

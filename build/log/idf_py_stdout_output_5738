@@ -1,0 +1,437 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  8 2025 17:02:46[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5a4h ( 46500) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b5cc vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dc1c vaddr=40080000 size=023fch (  9212) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16094h ( 90260) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=000360bc vaddr=400823fc size=08e2ch ( 36396) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003eef0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      fe5eb5e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  8 2025 17:04:09[0m
+[0;32mI (209) app_init: ELF file SHA256:  1dfad34c0...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B228 len 00014DD8 (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[43922] [-->] app_main()
+[43957] [log] Set systemStage = SYSTEM_INIT
+[44344] [log] Start up OLED screen
+[152569] [log] [+] oledTask()
+[160144] [log] [oledTask] Wait for the initializing have been done!
+[160209] [log] [+] prepairByteDataTask()
+[167944] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[168021] [log] [+] modeControlTask()
+[176410] [log] [modeControlTask] Wait for the initializing have been done!
+[176482] [log] Set systemStage = SYSTEM_RUNNING
+[186966] [-->] oledTest()
+[187023] [-->] prepairByteDataTask(0x00000000)
+[187123] [-->] modeControlTask(0x00000000)
+[191065] [log] [modeControlTask] Default mode: 0
+[194315] [-->] modeSwitch(-1 --> 0)
+[197535] [err] EXIT MODE: systemMode is not valid! --> Abort!
+[202996] [log] ENTRY MODE: SYSTEM_MODE_SPI
+[206819] [-->] createSPIDevice(spiDev_t ** pDev)
+[211171] [<--] createSPIDevice() : OKE
+[214624] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 5, CS: 17, freq: 4, config: 0x0007)
+[224106] [<--] configSPIDevice() : OKE
+[227558] [-->] startupSPIDevice(0x3ffb6de4)
+[231476] [log] [startupSPIDevice] Config for SLAVE mode
+[1;31mE (496) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[243567] [log] gpio_install_isr_service(): already installed, continue...
+[249984] [log] CLK ISR attached to GPIO 4
+[253686] [<--] startupSPIDevice() : OKE
+[257257] [<--] modeControl() : OKE
+[282609] [-->] setSendBackData(0x3ffb4202)
+[282656] [log] SPI set sendback byte: g
+[282694] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[284335] [<--] spiSetTransmitBuffer() : <null>
+[288486] [<--] setSendBackData() : OKE
+[291954] [-->] setReceiveByteBuff(0x3ffb4203)
+[296034] [log] SPI set sendback byte: 
+[299593] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[305074] [<--] spiSetReceiveBuffer() : OKE
+[308885] [<--] setReceiveByteBuff() : OKE
+[3076931] [log] [app_main] Has new data!
+[3076962] [-->] setSendBackData(0x3ffb4202)
+[3076994] [log] SPI set sendback byte: [
+[3077018] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[3082535] [<--] spiSetTransmitBuffer() : <null>
+[3086789] [<--] setSendBackData() : OKE
+[3090347] [-->] setReceiveByteBuff(0x3ffb4203)
+[3094514] [log] SPI set sendback byte:  
+[3098160] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[3103716] [<--] spiSetReceiveBuffer() : OKE
+[3107622] [<--] setReceiveByteBuff() : OKE
+[7066946] [log] [app_main] Has new data!
+[7066970] [-->] setSendBackData(0x3ffb4202)
+[7067002] [log] SPI set sendback byte: l
+[7067027] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[7072547] [<--] spiSetTransmitBuffer() : <null>
+[7076800] [<--] setSendBackData() : OKE
+[7080359] [-->] setReceiveByteBuff(0x3ffb4203)
+[7084526] [log] SPI set sendback byte: ?
+[7088171] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[7093727] [<--] spiSetReceiveBuffer() : OKE
+[7097633] [<--] setReceiveByteBuff() : OKE
+[11166936] [log] [app_main] Has new data!
+[11166961] [-->] setSendBackData(0x3ffb4202)
+[11166994] [log] SPI set sendback byte: @
+[11167154] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[11172883] [<--] spiSetTransmitBuffer() : <null>
+[11177224] [<--] setSendBackData() : OKE
+[11180869] [-->] setReceiveByteBuff(0x3ffb4203)
+[11185123] [log] SPI set sendback byte: f
+[11188855] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[11194498] [<--] spiSetReceiveBuffer() : OKE
+[11198491] [<--] setReceiveByteBuff() : OKE
+[15156989] [log] [app_main] Has new data!
+[15157014] [-->] setSendBackData(0x3ffb4202)
+[15157047] [log] SPI set sendback byte: M
+[15157207] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[15162936] [<--] spiSetTransmitBuffer() : <null>
+[15167276] [<--] setSendBackData() : OKE
+[15170922] [-->] setReceiveByteBuff(0x3ffb4203)
+[15175176] [log] SPI set sendback byte: B
+[15178908] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[15184551] [<--] spiSetReceiveBuffer() : OKE
+[15188544] [<--] setReceiveByteBuff() : OKE
+[19256981] [log] [app_main] Has new data!
+[19257006] [-->] setSendBackData(0x3ffb4202)
+[19257039] [log] SPI set sendback byte: +
+[19257199] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[19262929] [<--] spiSetTransmitBuffer() : <null>
+[19267269] [<--] setSendBackData() : OKE
+[19270914] [-->] setReceiveByteBuff(0x3ffb4203)
+[19275168] [log] SPI set sendback byte: @
+[19278900] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[19284543] [<--] spiSetReceiveBuffer() : OKE
+[19288536] [<--] setReceiveByteBuff() : OKE
+[23246920] [log] [app_main] Has new data!
+[23246945] [-->] setSendBackData(0x3ffb4202)
+[23246978] [log] SPI set sendback byte: {
+[23247138] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[23252867] [<--] spiSetTransmitBuffer() : <null>
+[23257207] [<--] setSendBackData() : OKE
+[23260853] [-->] setReceiveByteBuff(0x3ffb4203)
+[23265107] [log] SPI set sendback byte: ~
+[23268839] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[23274482] [<--] spiSetReceiveBuffer() : OKE
+[23278475] [<--] setReceiveByteBuff() : OKE
+[27346927] [log] [app_main] Has new data!
+[27346952] [-->] setSendBackData(0x3ffb4202)
+[27346985] [log] SPI set sendback byte: h
+[27347146] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[27352875] [<--] spiSetTransmitBuffer() : <null>
+[27357215] [<--] setSendBackData() : OKE
+[27360861] [-->] setReceiveByteBuff(0x3ffb4203)
+[27365114] [log] SPI set sendback byte: `
+[27368847] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[27374490] [<--] spiSetReceiveBuffer() : OKE
+[27378482] [<--] setReceiveByteBuff() : OKE
+[31336927] [log] [app_main] Has new data!
+[31336952] [-->] setSendBackData(0x3ffb4202)
+[31336985] [log] SPI set sendback byte: %
+[31337145] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[31342874] [<--] spiSetTransmitBuffer() : <null>
+[31347215] [<--] setSendBackData() : OKE
+[31350860] [-->] setReceiveByteBuff(0x3ffb4203)
+[31355114] [log] SPI set sendback byte: o
+[31358846] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[31364489] [<--] spiSetReceiveBuffer() : OKE
+[31368482] [<--] setReceiveByteBuff() : OKE
+[35326967] [log] [app_main] Has new data!
+[35326992] [-->] setSendBackData(0x3ffb4202)
+[35327025] [log] SPI set sendback byte: .
+[35327185] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[35332914] [<--] spiSetTransmitBuffer() : <null>
+[35337255] [<--] setSendBackData() : OKE
+[35340900] [-->] setReceiveByteBuff(0x3ffb4203)
+[35345154] [log] SPI set sendback byte: G
+[35348886] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[35354529] [<--] spiSetReceiveBuffer() : OKE
+[35358522] [<--] setReceiveByteBuff() : OKE
+[39426954] [log] [app_main] Has new data!
+[39426979] [-->] setSendBackData(0x3ffb4202)
+[39427012] [log] SPI set sendback byte: \
+[39427173] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[39432902] [<--] spiSetTransmitBuffer() : <null>
+[39437242] [<--] setSendBackData() : OKE
+[39440888] [-->] setReceiveByteBuff(0x3ffb4203)
+[39445141] [log] SPI set sendback byte: Z
+[39448874] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[39454516] [<--] spiSetReceiveBuffer() : OKE
+[39458509] [<--] setReceiveByteBuff() : OKE
+[43416969] [log] [app_main] Has new data!
+[43416994] [-->] setSendBackData(0x3ffb4202)
+[43417027] [log] SPI set sendback byte: Z
+[43417188] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[43422917] [<--] spiSetTransmitBuffer() : <null>
+[43427257] [<--] setSendBackData() : OKE
+[43430903] [-->] setReceiveByteBuff(0x3ffb4203)
+[43435156] [log] SPI set sendback byte: &
+[43438889] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[43444531] [<--] spiSetReceiveBuffer() : OKE
+[43448524] [<--] setReceiveByteBuff() : OKE
+[47516963] [log] [app_main] Has new data!
+[47516988] [-->] setSendBackData(0x3ffb4202)
+[47517021] [log] SPI set sendback byte: w
+[47517181] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[47522911] [<--] spiSetTransmitBuffer() : <null>
+[47527251] [<--] setSendBackData() : OKE
+[47530897] [-->] setReceiveByteBuff(0x3ffb4203)
+[47535150] [log] SPI set sendback byte: q
+[47538883] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[47544525] [<--] spiSetReceiveBuffer() : OKE
+[47548518] [<--] setReceiveByteBuff() : OKE
+[51506923] [log] [app_main] Has new data!
+[51506948] [-->] setSendBackData(0x3ffb4202)
+[51506981] [log] SPI set sendback byte: H
+[51507141] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[51512871] [<--] spiSetTransmitBuffer() : <null>
+[51517211] [<--] setSendBackData() : OKE
+[51520857] [-->] setReceiveByteBuff(0x3ffb4203)
+[51525110] [log] SPI set sendback byte: w
+[51528843] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[51534485] [<--] spiSetReceiveBuffer() : OKE
+[51538478] [<--] setReceiveByteBuff() : OKE
+[55606962] [log] [app_main] Has new data!
+[55606987] [-->] setSendBackData(0x3ffb4202)
+[55607020] [log] SPI set sendback byte: Z
+[55607180] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[55612910] [<--] spiSetTransmitBuffer() : <null>
+[55617250] [<--] setSendBackData() : OKE
+[55620895] [-->] setReceiveByteBuff(0x3ffb4203)
+[55625149] [log] SPI set sendback byte: K
+[55628881] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[55634524] [<--] spiSetReceiveBuffer() : OKE
+[55638517] [<--] setReceiveByteBuff() : OKE
+[59596964] [log] [app_main] Has new data!
+[59596989] [-->] setSendBackData(0x3ffb4202)
+[59597022] [log] SPI set sendback byte: #
+[59597183] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[59602912] [<--] spiSetTransmitBuffer() : <null>
+[59607252] [<--] setSendBackData() : OKE
+[59610898] [-->] setReceiveByteBuff(0x3ffb4203)
+[59615151] [log] SPI set sendback byte: 3
+[59618884] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[59624526] [<--] spiSetReceiveBuffer() : OKE
+[59628519] [<--] setReceiveByteBuff() : OKE
+[63696952] [log] [app_main] Has new data!
+[63696977] [-->] setSendBackData(0x3ffb4202)
+[63697010] [log] SPI set sendback byte: u
+[63697170] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[63702900] [<--] spiSetTransmitBuffer() : <null>
+[63707240] [<--] setSendBackData() : OKE
+[63710885] [-->] setReceiveByteBuff(0x3ffb4203)
+[63715139] [log] SPI set sendback byte: 1
+[63718871] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[63724514] [<--] spiSetReceiveBuffer() : OKE
+[63728507] [<--] setReceiveByteBuff() : OKE
+[67686943] [log] [app_main] Has new data!
+[67686968] [-->] setSendBackData(0x3ffb4202)
+[67687001] [log] SPI set sendback byte: h
+[67687161] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[67692891] [<--] spiSetTransmitBuffer() : <null>
+[67697231] [<--] setSendBackData() : OKE
+[67700877] [-->] setReceiveByteBuff(0x3ffb4203)
+[67705130] [log] SPI set sendback byte: P
+[67708863] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[67714505] [<--] spiSetReceiveBuffer() : OKE
+[67718498] [<--] setReceiveByteBuff() : OKE
+[71786943] [log] [app_main] Has new data!
+[71786968] [-->] setSendBackData(0x3ffb4202)
+[71787002] [log] SPI set sendback byte: |
+[71787162] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[71792891] [<--] spiSetTransmitBuffer() : <null>
+[71797231] [<--] setSendBackData() : OKE
+[71800877] [-->] setReceiveByteBuff(0x3ffb4203)
+[71805130] [log] SPI set sendback byte: 7
+[71808863] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[71814505] [<--] spiSetReceiveBuffer() : OKE
+[71818498] [<--] setReceiveByteBuff() : OKE
+[75776893] [log] [app_main] Has new data!
+[75776918] [-->] setSendBackData(0x3ffb4202)
+[75776951] [log] SPI set sendback byte: l
+[75777111] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[75782841] [<--] spiSetTransmitBuffer() : <null>
+[75787181] [<--] setSendBackData() : OKE
+[75790827] [-->] setReceiveByteBuff(0x3ffb4203)
+[75795080] [log] SPI set sendback byte: z
+[75798813] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[75804455] [<--] spiSetReceiveBuffer() : OKE
+[75808448] [<--] setReceiveByteBuff() : OKE
+[79766951] [log] [app_main] Has new data!
+[79766976] [-->] setSendBackData(0x3ffb4202)
+[79767009] [log] SPI set sendback byte: ~
+[79767169] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[79772898] [<--] spiSetTransmitBuffer() : <null>
+[79777239] [<--] setSendBackData() : OKE
+[79780884] [-->] setReceiveByteBuff(0x3ffb4203)
+[79785138] [log] SPI set sendback byte: =
+[79788870] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[79794513] [<--] spiSetReceiveBuffer() : OKE
+[79798506] [<--] setReceiveByteBuff() : OKE
+[83866918] [log] [app_main] Has new data!
+[83866943] [-->] setSendBackData(0x3ffb4202)
+[83866976] [log] SPI set sendback byte: ^
+[83867136] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[83872866] [<--] spiSetTransmitBuffer() : <null>
+[83877206] [<--] setSendBackData() : OKE
+[83880852] [-->] setReceiveByteBuff(0x3ffb4203)
+[83885105] [log] SPI set sendback byte: J
+[83888838] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[83894480] [<--] spiSetReceiveBuffer() : OKE
+[83898473] [<--] setReceiveByteBuff() : OKE
+[87856928] [log] [app_main] Has new data!
+[87856954] [-->] setSendBackData(0x3ffb4202)
+[87856987] [log] SPI set sendback byte: H
+[87857147] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[87862876] [<--] spiSetTransmitBuffer() : <null>
+[87867216] [<--] setSendBackData() : OKE
+[87870862] [-->] setReceiveByteBuff(0x3ffb4203)
+[87875116] [log] SPI set sendback byte: u
+[87878848] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[87884491] [<--] spiSetReceiveBuffer() : OKE
+[87888483] [<--] setReceiveByteBuff() : OKE
+[91956977] [log] [app_main] Has new data!
+[91957002] [-->] setSendBackData(0x3ffb4202)
+[91957035] [log] SPI set sendback byte: L
+[91957195] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[91962925] [<--] spiSetTransmitBuffer() : <null>
+[91967265] [<--] setSendBackData() : OKE
+[91970910] [-->] setReceiveByteBuff(0x3ffb4203)
+[91975164] [log] SPI set sendback byte: W
+[91978896] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[91984539] [<--] spiSetReceiveBuffer() : OKE
+[91988532] [<--] setReceiveByteBuff() : OKE
+[95946968] [log] [app_main] Has new data!
+[95946994] [-->] setSendBackData(0x3ffb4202)
+[95947027] [log] SPI set sendback byte: %
+[95947187] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[95952916] [<--] spiSetTransmitBuffer() : <null>
+[95957256] [<--] setSendBackData() : OKE
+[95960902] [-->] setReceiveByteBuff(0x3ffb4203)
+[95965155] [log] SPI set sendback byte: b
+[95968888] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[95974531] [<--] spiSetReceiveBuffer() : OKE
+[95978523] [<--] setReceiveByteBuff() : OKE
+[100046946] [log] [app_main] Has new data!
+[100046972] [-->] setSendBackData(0x3ffb4202)
+[100047006] [log] SPI set sendback byte: x
+[100047425] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[100053241] [<--] spiSetTransmitBuffer() : <null>
+[100057668] [<--] setSendBackData() : OKE
+[100061401] [-->] setReceiveByteBuff(0x3ffb4203)
+[100065741] [log] SPI set sendback byte: :
+[100069560] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[100075289] [<--] spiSetReceiveBuffer() : OKE
+[100079369] [<--] setReceiveByteBuff() : OKE
+[104046929] [log] [app_main] Has new data!
+[104046956] [-->] setSendBackData(0x3ffb4202)
+[104046990] [log] SPI set sendback byte: &
+[104047408] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[104053224] [<--] spiSetTransmitBuffer() : <null>
+[104057651] [<--] setSendBackData() : OKE
+[104061384] [-->] setReceiveByteBuff(0x3ffb4203)
+[104065724] [log] SPI set sendback byte: x
+[104069543] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[104075273] [<--] spiSetReceiveBuffer() : OKE
+[104079352] [<--] setReceiveByteBuff() : OKE
+[108046957] [log] [app_main] Has new data!
+[108046983] [-->] setSendBackData(0x3ffb4202)
+[108047017] [log] SPI set sendback byte: :
+[108047435] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[108053252] [<--] spiSetTransmitBuffer() : <null>
+[108057678] [<--] setSendBackData() : OKE
+[108061411] [-->] setReceiveByteBuff(0x3ffb4203)
+[108065751] [log] SPI set sendback byte: #
+[108069571] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[108075300] [<--] spiSetReceiveBuffer() : OKE
+[108079380] [<--] setReceiveByteBuff() : OKE
+[112156944] [log] [app_main] Has new data!
+[112156970] [-->] setSendBackData(0x3ffb4202)
+[112157005] [log] SPI set sendback byte: 4
+[112157423] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[112163239] [<--] spiSetTransmitBuffer() : <null>
+[112167666] [<--] setSendBackData() : OKE
+[112171399] [-->] setReceiveByteBuff(0x3ffb4203)
+[112175739] [log] SPI set sendback byte: S
+[112179558] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[112185288] [<--] spiSetReceiveBuffer() : OKE
+[112189367] [<--] setReceiveByteBuff() : OKE
+[116156940] [log] [app_main] Has new data!
+[116156967] [-->] setSendBackData(0x3ffb4202)
+[116157001] [log] SPI set sendback byte: t
+[116157419] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[116163235] [<--] spiSetTransmitBuffer() : <null>
+[116167662] [<--] setSendBackData() : OKE
+[116171395] [-->] setReceiveByteBuff(0x3ffb4203)
+[116175735] [log] SPI set sendback byte: 3
+[116179554] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[116185284] [<--] spiSetReceiveBuffer() : OKE
+[116189364] [<--] setReceiveByteBuff() : OKE
+[120266931] [log] [app_main] Has new data!
+[120266957] [-->] setSendBackData(0x3ffb4202)
+[120266992] [log] SPI set sendback byte: (
+[120267410] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[120273226] [<--] spiSetTransmitBuffer() : <null>
+[120277653] [<--] setSendBackData() : OKE
+[120281386] [-->] setReceiveByteBuff(0x3ffb4203)
+[120285726] [log] SPI set sendback byte: L
+[120289545] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[120295275] [<--] spiSetReceiveBuffer() : OKE
+[120299354] [<--] setReceiveByteBuff() : OKE
+[124266942] [log] [app_main] Has new data!
+[124266968] [-->] setSendBackData(0x3ffb4202)
+[124267003] [log] SPI set sendback byte: k
+[124267421] [-->] spiSetTransmitBuffer(0x3ffb6de4, 0x3ffb4202, 1)
+[124273237] [<--] spiSetTransmitBuffer() : <null>
+[124277664] [<--] setSendBackData() : OKE
+[124281397] [-->] setReceiveByteBuff(0x3ffb4203)
+[124285737] [log] SPI set sendback byte: +
+[124289556] [-->] spiSetReceiveBuffer(0x3ffb6de4, 0x3ffb4203, 1)
+[124295286] [<--] spiSetReceiveBuffer() : OKE
+[124299365] [<--] setReceiveByteBuff() : OKE

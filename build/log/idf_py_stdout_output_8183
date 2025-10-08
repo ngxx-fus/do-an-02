@@ -1,0 +1,1603 @@
+Command: /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB1 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/fus/Documents/DO-AN-02/build/do-an-02.elf /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf -m '/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/fus/.fus/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b504h ( 46340) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b52c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001db7c vaddr=40080000 size=0249ch (  9372) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15f20h ( 89888) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035f48 vaddr=4008249c size=08e44h ( 36420) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ed94 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      ad9cb9e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:28:53[0m
+[0;32mI (209) app_init: ELF file SHA256:  c2c8b89e9...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2E0 len 00014D20 (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (279) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44060] [-->] app_main()
+[44098] [log] Set systemStage = SYSTEM_INIT
+[44325] [log] Start up OLED screen
+[1052640] [log] [+] oledTask()
+[1063845] [log] [oledTask] Wait for the initializing have been done!
+[1063940] [log] [+] prepairByteDataTask()
+[1075454] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075559] [log] [+] modeControlTask()
+[1086967] [log] [modeControlTask] Wait for the initializing have been done!
+[1087070] [log] Set systemStage = SYSTEM_RUNNING
+[1098037] [-->] oledTest()
+[1098101] [-->] prepairByteDataTask(0x00000000)
+[1098216] [-->] modeControlTask(0x00000000)
+[1099698] [--1099etS] [log] [mo(0xonfb420as)
+[ef02l03] [err] MODE: sys] [-->e isdeSwivalid! --> 0)
+t10[617] [err] EX] setSendBystemMo() :s not v1111! --> A->] se
+Rece13229] [uff(0x3ffb420b) S1STEM_0] [err]
+ODE: s22] [-->] ireateSPIDev! --> Abor_t *[1120v)7][1121673] [eceivereteBuff(evicERR
+ OKE
+[1125208] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 17, CS: 5, freq: 10, config: 0x0006)
+[1134847] [<--] configSPIDevice() : OKE
+[1138398] [-->] startupSPIDevice(0x3ffb6de4)
+[1142822] [<--] startupSPIDevice() : OKE
+[1146045] [<--] modeControl() : OKE
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b504h ( 46340) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b52c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001db7c vaddr=40080000 size=0249ch (  9372) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15f20h ( 89888) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035f48 vaddr=4008249c size=08e44h ( 36420) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ed94 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      ad9cb9e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:28:53[0m
+[0;32mI (209) app_init: ELF file SHA256:  c2c8b89e9...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2E0 len 00014D20 (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (279) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44059] [-->] app_main()
+[44098] [log] Set systemStage = SYSTEM_INIT
+[44325] [log] Start up OLED screen
+[1052640] [log] [+] oledTask()
+[1063844] [log] [oledTask] Wait for the initializing have been done!
+[1063939] [log] [+] prepairByteDataTask()
+[1075453] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075559] [log] [+] modeControlTask()
+[1086967] [log] [modeControlTask] Wait for the initializing have been done!
+[1087069] [log] Set systemStage = SYSTEM_RUNNING
+[1098036] [-->] oledTest()
+[1098101] [-->] prepairByteDataTask(0x00000000)
+[1098216] [-->] modeControlTask(0x00000000)
+[1099697] [-[>] s934endBackDatadeC3ftrolTask] D11aul02] [err] MODE: sys] [-->e isdeSwivalid! --> 0)
+t10[617] [err] EX] setSendBystemMo() :s not v1111! --> A->] se
+Rece13228] [uff(0x3ffb420b) S1STEM_0] [err]
+ODE: s21] [-->] ireateSPIDev! --> Abor_t *[1120v)7][1121672] [eceivereteBuff(evicERR
+ OKE
+[1125207] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 17, CS: 5, freq: 10, config: 0x0006)
+[1134846] [<--] configSPIDevice() : OKE
+[1138397] [-->] startupSPIDevice(0x3ffb6de4)
+[1142822] [<--] startupSPIDevice() : OKE
+[1146044] [<--] modeControl() : OKE
+[39242668] [log] Detected 1 shorts pressed --> Changed mode!
+[39242739] [-->] modeSwitch(0 --> 1)
+[39242788] [log] EXIT MODE: SYSTEM_MODE_SPI
+[39244031] [-->] destroySPIDevice(0x3ffb2d34)
+[39248246] [<--] destroySPIDevice() : OKE
+[39251852] [log] ENTRY: SYSTEM_MODE_I2C
+[1;31mE (39516) gpio: gpio_install_isr_service(528): GPIO isr service already installed[0m
+[39262802] [<--] modeControl() : OKE
+[39265922] [log] I2C not available!
+[39269118] [log] I2C not available!
+[39272330] [-->] setSendBackData(0x3ffb420a)
+[39276323] [log] I2C not available!
+[39279531] [<--] setSendBackData() : OKE
+[39283177] [-->] setReceiveByteBuff(0x3ffb420b)
+[39287434] [log] I2C not available!
+[39290642] [<--] setReceiveByteBuff() : OKE
+[39316051] [log] I2C not available!
+[39316085] [log] I2C not available!
+[39316118] [-->] setSendBackData(0x3ffb420a)
+[39316167] [log] I2C not available!
+[39318440] [<--] setSendBackData() : OKE
+[39322086] [-->] setReceiveByteBuff(0x3ffb420b)
+[39326340] [log] I2C not available!
+[39329551] [<--] setReceiveByteBuff() : OKE
+[39354636] [log] I2C not available!
+[39354670] [log] I2C not available!
+[39354703] [-->] setSendBackData(0x3ffb420a)
+[39354751] [log] I2C not available!
+[39357025] [<--] setSendBackData() : OKE
+[39360671] [-->] setReceiveByteBuff(0x3ffb420b)
+[39364925] [log] I2C not available!
+[39368136] [<--] setReceiveByteBuff() : OKE
+[39393282] [log] I2C not available!
+[39393315] [log] I2C not available!
+[39393349] [-->] setSendBackData(0x3ffb420a)
+[39393397] [log] I2C not available!
+[39395671] [<--] setSendBackData() : OKE
+[39399317] [-->] setReceiveByteBuff(0x3ffb420b)
+[39403570] [log] I2C not available!
+[39406782] [<--] setReceiveByteBuff() : OKE
+[39431867] [log] I2C not available!
+[39431900] [log] I2C not available!
+[39431934] [-->] setSendBackData(0x3ffb420a)
+[39431982] [log] I2C not available!
+[39434256] [<--] setSendBackData() : OKE
+[39437902] [-->] setReceiveByteBuff(0x3ffb420b)
+[39442155] [log] I2C not available!
+[39445367] [<--] setReceiveByteBuff() : OKE
+[39470452] [log] I2C not available!
+[39470485] [log] I2C not available!
+[39470518] [-->] setSendBackData(0x3ffb420a)
+[39470567] [log] I2C not available!
+[39472841] [<--] setSendBackData() : OKE
+[39476487] [-->] setReceiveByteBuff(0x3ffb420b)
+[39480740] [log] I2C not available!
+[39483952] [<--] setReceiveByteBuff() : OKE
+[39509037] [log] I2C not available!
+[39509070] [log] I2C not available!
+[39509103] [-->] setSendBackData(0x3ffb420a)
+[39509152] [log] I2C not available!
+[39511425] [<--] setSendBackData() : OKE
+[39515072] [-->] setReceiveByteBuff(0x3ffb420b)
+[39519325] [log] I2C not available!
+[39522537] [<--] setReceiveByteBuff() : OKE
+[39547622] [log] I2C not available!
+[39547655] [log] I2C not available!
+[39547688] [-->] setSendBackData(0x3ffb420a)
+[39547737] [log] I2C not available!
+[39550010] [<--] setSendBackData() : OKE
+[39553657] [-->] setReceiveByteBuff(0x3ffb420b)
+[39557910] [log] I2C not available!
+[39561122] [<--] setReceiveByteBuff() : OKE
+[39586208] [log] I2C not available!
+[39586242] [log] I2C not available!
+[39586275] [-->] setSendBackData(0x3ffb420a)
+[39586323] [log] I2C not available!
+[39588597] [<--] setSendBackData() : OKE
+[39592243] [-->] setReceiveByteBuff(0x3ffb420b)
+[39596497] [log] I2C not available!
+[39599708] [<--] setReceiveByteBuff() : OKE
+[39624793] [log] I2C not available!
+[39624827] [log] I2C not available!
+[39624860] [-->] setSendBackData(0x3ffb420a)
+[39624908] [log] I2C not available!
+[39627182] [<--] setSendBackData() : OKE
+[39630828] [-->] setReceiveByteBuff(0x3ffb420b)
+[39635081] [log] I2C not available!
+[39638293] [<--] setReceiveByteBuff() : OKE
+[39663430] [log] I2C not available!
+[39663463] [log] I2C not available!
+[39663496] [-->] setSendBackData(0x3ffb420a)
+[39663545] [log] I2C not available!
+[39665819] [<--] setSendBackData() : OKE
+[39669465] [-->] setReceiveByteBuff(0x3ffb420b)
+[39673718] [log] I2C not available!
+[39676930] [<--] setReceiveByteBuff() : OKE
+[39702015] [log] I2C not available!
+[39702048] [log] I2C not available!
+[39702081] [-->] setSendBackData(0x3ffb420a)
+[39702130] [log] I2C not available!
+[39704404] [<--] setSendBackData() : OKE
+[39708050] [-->] setReceiveByteBuff(0x3ffb420b)
+[39712303] [log] I2C not available!
+[39715515] [<--] setReceiveByteBuff() : OKE
+[39740599] [log] I2C not available!
+[39740633] [log] I2C not available!
+[39740666] [-->] setSendBackData(0x3ffb420a)
+[39740715] [log] I2C not available!
+[39742989] [<--] setSendBackData() : OKE
+[39746634] [-->] setReceiveByteBuff(0x3ffb420b)
+[39750888] [log] I2C not available!
+[39754100] [<--] setReceiveByteBuff() : OKE
+[39779184] [log] I2C not available!
+[39779218] [log] I2C not available!
+[39779251] [-->] setSendBackData(0x3ffb420a)
+[39779300] [log] I2C not available!
+[39781573] [<--] setSendBackData() : OKE
+[39785220] [-->] setReceiveByteBuff(0x3ffb420b)
+[39789473] [log] I2C not available!
+[39792685] [<--] setReceiveByteBuff() : OKE
+[39817769] [log] I2C not available!
+[39817803] [log] I2C not available!
+[39817836] [-->] setSendBackData(0x3ffb420a)
+[39817884] [log] I2C not available!
+[39820158] [<--] setSendBackData() : OKE
+[39823804] [-->] setReceiveByteBuff(0x3ffb420b)
+[39828058] [log] I2C not available!
+[39831269] [<--] setReceiveByteBuff() : OKE
+[39856354] [log] I2C not available!
+[39856388] [log] I2C not available!
+[39856421] [-->] setSendBackData(0x3ffb420a)
+[39856469] [log] I2C not available!
+[39858743] [<--] setSendBackData() : OKE
+[39862389] [-->] setReceiveByteBuff(0x3ffb420b)
+[39866643] [log] I2C not available!
+[39869854] [<--] setReceiveByteBuff() : OKE
+[39894939] [log] I2C not available!
+[39894973] [log] I2C not available!
+[39895006] [-->] setSendBackData(0x3ffb420a)
+[39895054] [log] I2C not available!
+[39897328] [<--] setSendBackData() : OKE
+[39900974] [-->] setReceiveByteBuff(0x3ffb420b)
+[39905228] [log] I2C not available!
+[39908439] [<--] setReceiveByteBuff() : OKE
+[39933585] [log] I2C not available!
+[39933618] [log] I2C not available!
+[39933652] [-->] setSendBackData(0x3ffb420a)
+[39933700] [log] I2C not available!
+[39935974] [<--] setSendBackData() : OKE
+[39939620] [-->] setReceiveByteBuff(0x3ffb420b)
+[39943873] [log] I2C not available!
+[39947085] [<--] setReceiveByteBuff() : OKE
+[39972170] [log] I2C not available!
+[39972203] [log] I2C not available!
+[39972236] [-->] setSendBackData(0x3ffb420a)
+[39972285] [log] I2C not available!
+[39974559] [<--] setSendBackData() : OKE
+[39978205] [-->] setReceiveByteBuff(0x3ffb420b)
+[39982458] [log] I2C not available!
+[39985670] [<--] setReceiveByteBuff() : OKE
+[40010755] [log] I2C not available!
+[40010788] [log] I2C not available!
+[40010821] [-->] setSendBackData(0x3ffb420a)
+[40010870] [log] I2C not available!
+[40013144] [<--] setSendBackData() : OKE
+[40016790] [-->] setReceiveByteBuff(0x3ffb420b)
+[40021043] [log] I2C not available!
+[40024255] [<--] setReceiveByteBuff() : OKE
+[40049339] [log] I2C not available!
+[40049373] [log] I2C not available!
+[40049406] [-->] setSendBackData(0x3ffb420a)
+[40049455] [log] I2C not available!
+[40051728] [<--] setSendBackData() : OKE
+[40055375] [-->] setReceiveByteBuff(0x3ffb420b)
+[40059628] [log] I2C not available!
+[40062840] [<--] setReceiveByteBuff() : OKE
+[40087924] [log] I2C not available!
+[40087958] [log] I2C not available!
+[40087991] [-->] setSendBackData(0x3ffb420a)
+[40088040] [log] I2C not available!
+[40090313] [<--] setSendBackData() : OKE
+[40093960] [-->] setReceiveByteBuff(0x3ffb420b)
+[40098213] [log] I2C not available!
+[40101424] [<--] setReceiveByteBuff() : OKE
+[40126509] [log] I2C not available!
+[40126543] [log] I2C not available!
+[40126576] [-->] setSendBackData(0x3ffb420a)
+[40126625] [log] I2C not available!
+[40128898] [<--] setSendBackData() : OKE
+[40132544] [-->] setReceiveByteBuff(0x3ffb420b)
+[40136798] [log] I2C not available!
+[40140009] [<--] setReceiveByteBuff() : OKE
+[40165094] [log] I2C not available!
+[40165128] [log] I2C not available!
+[40165161] [-->] setSendBackData(0x3ffb420a)
+[40165210] [log] I2C not available!
+[40167483] [<--] setSendBackData() : OKE
+[40171129] [-->] setReceiveByteBuff(0x3ffb420b)
+[40175383] [log] I2C not available!
+[40178594] [<--] setReceiveByteBuff() : OKE
+[40203745] [log] I2C not available!
+[40203779] [log] I2C not available!
+[40203812] [-->] setSendBackData(0x3ffb420a)
+[40203861] [log] I2C not available!
+[40206134] [<--] setSendBackData() : OKE
+[40209780] [-->] setReceiveByteBuff(0x3ffb420b)
+[40214034] [log] I2C not available!
+[40217245] [<--] setReceiveByteBuff() : OKE
+[40242330] [log] I2C not available!
+[40242364] [log] I2C not available!
+[40242397] [-->] setSendBackData(0x3ffb420a)
+[40242446] [log] I2C not available!
+[40244719] [<--] setSendBackData() : OKE
+[40248365] [-->] setReceiveByteBuff(0x3ffb420b)
+[40252619] [log] I2C not available!
+[40255830] [<--] setReceiveByteBuff() : OKE
+[40280915] [log] I2C not available!
+[40280949] [log] I2C not available!
+[40280982] [-->] setSendBackData(0x3ffb420a)
+[40281030] [log] I2C not available!
+[40283304] [<--] setSendBackData() : OKE
+[40286950] [-->] setReceiveByteBuff(0x3ffb420b)
+[40291203] [log] I2C not available!
+[40294415] [<--] setReceiveByteBuff() : OKE
+[40319500] [log] I2C not available!
+[40319534] [log] I2C not available!
+[40319567] [-->] setSendBackData(0x3ffb420a)
+[40319615] [log] I2C not available!
+[40321889] [<--] setSendBackData() : OKE
+[40325535] [-->] setReceiveByteBuff(0x3ffb420b)
+[40329788] [log] I2C not available!
+[40333000] [<--] setReceiveByteBuff() : OKE
+[40358085] [log] I2C not available!
+[40358118] [log] I2C not available!
+[40358152] [-->] setSendBackData(0x3ffb420a)
+[40358200] [log] I2C not available!
+[40360474] [<--] setSendBackData() : OKE
+[40364120] [-->] setReceiveByteBuff(0x3ffb420b)
+[40368373] [log] I2C not available!
+[40371585] [<--] setReceiveByteBuff() : OKE
+[40396670] [log] I2C not available!
+[40396703] [log] I2C not available!
+[40396737] [-->] setSendBackData(0x3ffb420a)
+[40396785] [log] I2C not available!
+[40399059] [<--] setSendBackData() : OKE
+[40402706] [-->] setReceiveByteBuff(0x3ffb420b)
+[40406958] [log] I2C not available!
+[40410170] [<--] setReceiveByteBuff() : OKE
+[40435255] [log] I2C not available!
+[40435288] [log] I2C not available!
+[40435322] [-->] setSendBackData(0x3ffb420a)
+[40435370] [log] I2C not available!
+[40437644] [<--] setSendBackData() : OKE
+[40441290] [-->] setReceiveByteBuff(0x3ffb420b)
+[40445543] [log] I2C not available!
+[40448755] [<--] setReceiveByteBuff() : OKE
+[40473862] [log] I2C not available!
+[40473895] [log] I2C not available!
+[40473928] [-->] setSendBackData(0x3ffb420a)
+[40473977] [log] I2C not available!
+[40476251] [<--] setSendBackData() : OKE
+[40479897] [-->] setReceiveByteBuff(0x3ffb420b)
+[40484150] [log] I2C not available!
+[40487362] [<--] setReceiveByteBuff() : OKE
+[40512447] [log] I2C not available!
+[40512480] [log] I2C not available!
+[40512513] [-->] setSendBackData(0x3ffb420a)
+[40512562] [log] I2C not available!
+[40514836] [<--] setSendBackData() : OKE
+[40518482] [-->] setReceiveByteBuff(0x3ffb420b)
+[40522735] [log] I2C not available!
+[40525947] [<--] setReceiveByteBuff() : OKE
+[40551032] [log] I2C not available!
+[40551065] [log] I2C not available!
+[40551098] [-->] setSendBackData(0x3ffb420a)
+[40551147] [log] I2C not available!
+[40553421] [<--] setSendBackData() : OKE
+[40557067] [-->] setReceiveByteBuff(0x3ffb420b)
+[40561320] [log] I2C not available!
+[40564532] [<--] setReceiveByteBuff() : OKE
+[40589616] [log] I2C not available!
+[40589650] [log] I2C not available!
+[40589683] [-->] setSendBackData(0x3ffb420a)
+[40589732] [log] I2C not available!
+[40592005] [<--] setSendBackData() : OKE
+[40595652] [-->] setReceiveByteBuff(0x3ffb420b)
+[40599905] [log] I2C not available!
+[40603116] [<--] setReceiveByteBuff() : OKE
+[40628201] [log] I2C not available!
+[40628235] [log] I2C not available!
+[40628268] [-->] setSendBackData(0x3ffb420a)
+[40628316] [log] I2C not available!
+[40630590] [<--] setSendBackData() : OKE
+[40634236] [-->] setReceiveByteBuff(0x3ffb420b)
+[40638489] [log] I2C not available!
+[40641701] [<--] setReceiveByteBuff() : OKE
+[40666786] [log] I2C not available!
+[40666820] [log] I2C not available!
+[40666853] [-->] setSendBackData(0x3ffb420a)
+[40666901] [log] I2C not available!
+[40669175] [<--] setSendBackData() : OKE
+[40672821] [-->] setReceiveByteBuff(0x3ffb420b)
+[40677074] [log] I2C not available!
+[40680286] [<--] setReceiveByteBuff() : OKE
+[40705371] [log] I2C not available!
+[40705405] [log] I2C not available!
+[40705438] [-->] setSendBackData(0x3ffb420a)
+[40705486] [log] I2C not available!
+[40707760] [<--] setSendBackData() : OKE
+[40711406] [-->] setReceiveByteBuff(0x3ffb420b)
+[40715659] [log] I2C not available!
+[40718871] [<--] setReceiveByteBuff() : OKE
+[40743956] [log] I2C not available!
+[40743990] [log] I2C not available!
+[40744023] [-->] setSendBackData(0x3ffb420a)
+[40744072] [log] I2C not available!
+[40746345] [<--] setSendBackData() : OKE
+[40749991] [-->] setReceiveByteBuff(0x3ffb420b)
+[40754245] [log] I2C not available!
+[40757456] [<--] setReceiveByteBuff() : OKE
+[40782541] [log] I2C not available!
+[40782575] [log] I2C not available!
+[40782608] [-->] setSendBackData(0x3ffb420a)
+[40782716] [log] I2C not available!
+[40784930] [<--] setSendBackData() : OKE
+[40788576] [-->] setReceiveByteBuff(0x3ffb420b)
+[40792830] [log] I2C not available!
+[40796041] [<--] setReceiveByteBuff() : OKE
+[40821126] [log] I2C not available!
+[40821160] [log] I2C not available!
+[40821193] [-->] setSendBackData(0x3ffb420a)
+[40821241] [log] I2C not available!
+[40823515] [<--] setSendBackData() : OKE
+[40827161] [-->] setReceiveByteBuff(0x3ffb420b)
+[40831414] [log] I2C not available!
+[40834626] [<--] setReceiveByteBuff() : OKE
+[40859711] [log] I2C not available!
+[40859744] [log] I2C not available!
+[40859778] [-->] setSendBackData(0x3ffb420a)
+[40859826] [log] I2C not available!
+[40862100] [<--] setSendBackData() : OKE
+[40865746] [-->] setReceiveByteBuff(0x3ffb420b)
+[40869999] [log] I2C not available!
+[40873211] [<--] setReceiveByteBuff() : OKE
+[40898296] [log] I2C not available!
+[40898329] [log] I2C not available!
+[40898362] [-->] setSendBackData(0x3ffb420a)
+[40898411] [log] I2C not available!
+[40900685] [<--] setSendBackData() : OKE
+[40904331] [-->] setReceiveByteBuff(0x3ffb420b)
+[40908584] [log] I2C not available!
+[40911796] [<--] setReceiveByteBuff() : OKE
+[40936881] [log] I2C not available!
+[40936914] [log] I2C not available!
+[40936947] [-->] setSendBackData(0x3ffb420a)
+[40936996] [log] I2C not available!
+[40939270] [<--] setSendBackData() : OKE
+[40942916] [-->] setReceiveByteBuff(0x3ffb420b)
+[40947169] [log] I2C not available!
+[40950381] [<--] setReceiveByteBuff() : OKE
+[40975466] [log] I2C not available!
+[40975499] [log] I2C not available!
+[40975533] [-->] setSendBackData(0x3ffb420a)
+[40975581] [log] I2C not available!
+[40977855] [<--] setSendBackData() : OKE
+[40981501] [-->] setReceiveByteBuff(0x3ffb420b)
+[40985754] [log] I2C not available!
+[40988966] [<--] setReceiveByteBuff() : OKE
+[41014052] [log] I2C not available!
+[41014086] [log] I2C not available!
+[41014119] [-->] setSendBackData(0x3ffb420a)
+[41014168] [log] I2C not available!
+[41016441] [<--] setSendBackData() : OKE
+[41020087] [-->] setReceiveByteBuff(0x3ffb420b)
+[41024341] [log] I2C not available!
+[41027552] [<--] setReceiveByteBuff() : OKE
+[41052680] [log] I2C not available!
+[41052713] [log] I2C not available!
+[41052747] [-->] setSendBackData(0x3ffb420a)
+[41052795] [log] I2C not available!
+[41055069] [<--] setSendBackData() : OKE
+[41058715] [-->] setReceiveByteBuff(0x3ffb420b)
+[41062968] [log] I2C not available!
+[41066180] [<--] setReceiveByteBuff() : OKE
+[41091265] [log] I2C not available!
+[41091298] [log] I2C not available!
+[41091331] [-->] setSendBackData(0x3ffb420a)
+[41091380] [log] I2C not available!
+[41093654] [<--] setSendBackData() : OKE
+[41097300] [-->] setReceiveByteBuff(0x3ffb420b)
+[41101553] [log] I2C not available!
+[41104765] [<--] setReceiveByteBuff() : OKE
+[41129853] [log] I2C not available!
+[41129887] [log] I2C not available!
+[41129920] [-->] setSendBackData(0x3ffb420a)
+[41129969] [log] I2C not available!
+[41132242] [<--] setSendBackData() : OKE
+[41135889] [-->] setReceiveByteBuff(0x3ffb420b)
+[41140142] [log] I2C not available!
+[41143354] [<--] setReceiveByteBuff() : OKE
+[41168447] [log] I2C not available!
+[41168481] [log] I2C not available!
+[41168514] [-->] setSendBackData(0x3ffb420a)
+[41168563] [log] I2C not available!
+[41170836] [<--] setSendBackData() : OKE
+[41174482] [-->] setReceiveByteBuff(0x3ffb420b)
+[41178735] [log] I2C not available!
+[41181947] [<--] setReceiveByteBuff() : OKE
+[41207041] [log] I2C not available!
+[41207075] [log] I2C not available!
+[41207108] [-->] setSendBackData(0x3ffb420a)
+[41207157] [log] I2C not available!
+[41209430] [<--] setSendBackData() : OKE
+[41213076] [-->] setReceiveByteBuff(0x3ffb420b)
+[41217329] [log] I2C not available!
+[41220541] [<--] setReceiveByteBuff() : OKE
+[41245635] [log] I2C not available!
+[41245668] [log] I2C not available!
+[41245702] [-->] setSendBackData(0x3ffb420a)
+[41245750] [log] I2C not available!
+[41248024] [<--] setSendBackData() : OKE
+[41251670] [-->] setReceiveByteBuff(0x3ffb420b)
+[41255923] [log] I2C not available!
+[41259135] [<--] setReceiveByteBuff() : OKE
+[41284229] [log] I2C not available!
+[41284263] [log] I2C not available!
+[41284296] [-->] setSendBackData(0x3ffb420a)
+[41284345] [log] I2C not available!
+[41286618] [<--] setSendBackData() : OKE
+[41290264] [-->] setReceiveByteBuff(0x3ffb420b)
+[41294518] [log] I2C not available!
+[41297729] [<--] setReceiveByteBuff() : OKE
+[41322883] [log] I2C not available!
+[41322916] [log] I2C not available!
+[41322950] [-->] setSendBackData(0x3ffb420a)
+[41322998] [log] I2C not available!
+[41325272] [<--] setSendBackData() : OKE
+[41328918] [-->] setReceiveByteBuff(0x3ffb420b)
+[41333171] [log] I2C not available!
+[41336383] [<--] setReceiveByteBuff() : OKE
+[41361477] [log] I2C not available!
+[41361510] [log] I2C not available!
+[41361543] [-->] setSendBackData(0x3ffb420a)
+[41361592] [log] I2C not available!
+[41363866] [<--] setSendBackData() : OKE
+[41367511] [-->] setReceiveByteBuff(0x3ffb420b)
+[41371765] [log] I2C not available!
+[41374977] [<--] setReceiveByteBuff() : OKE
+[41400070] [log] I2C not available!
+[41400104] [log] I2C not available!
+[41400137] [-->] setSendBackData(0x3ffb420a)
+[41400186] [log] I2C not available!
+[41402459] [<--] setSendBackData() : OKE
+[41406105] [-->] setReceiveByteBuff(0x3ffb420b)
+[41410359] [log] I2C not available!
+[41413570] [<--] setReceiveByteBuff() : OKE
+[41438664] [log] I2C not available!
+[41438698] [log] I2C not available!
+[41438731] [-->] setSendBackData(0x3ffb420a)
+[41438780] [log] I2C not available!
+[41441053] [<--] setSendBackData() : OKE
+[41444699] [-->] setReceiveByteBuff(0x3ffb420b)
+[41448952] [log] I2C not available!
+[41452164] [<--] setReceiveByteBuff() : OKE
+[41477258] [log] I2C not available!
+[41477291] [log] I2C not available!
+[41477325] [-->] setSendBackData(0x3ffb420a)
+[41477373] [log] I2C not available!
+[41479647] [<--] setSendBackData() : OKE
+[41483293] [-->] setReceiveByteBuff(0x3ffb420b)
+[41487546] [log] I2C not available!
+[41490758] [<--] setReceiveByteBuff() : OKE
+[41515852] [log] I2C not available!
+[41515885] [log] I2C not available!
+[41515918] [-->] setSendBackData(0x3ffb420a)
+[41515967] [log] I2C not available!
+[41518241] [<--] setSendBackData() : OKE
+[41521887] [-->] setReceiveByteBuff(0x3ffb420b)
+[41526140] [log] I2C not available!
+[41529352] [<--] setReceiveByteBuff() : OKE
+[41554446] [log] I2C not available!
+[41554479] [log] I2C not available!
+[41554512] [-->] setSendBackData(0x3ffb420a)
+[41554561] [log] I2C not available!
+[41556835] [<--] setSendBackData() : OKE
+[41560480] [-->] setReceiveByteBuff(0x3ffb420b)
+[41564734] [log] I2C not available!
+[41567946] [<--] setReceiveByteBuff() : OKE
+[41593043] [log] I2C not available!
+[41593077] [log] I2C not available!
+[41593110] [-->] setSendBackData(0x3ffb420a)
+[41593159] [log] I2C not available!
+[41595432] [<--] setSendBackData() : OKE
+[41599078] [-->] setReceiveByteBuff(0x3ffb420b)
+[41603332] [log] I2C not available!
+[41606543] [<--] setReceiveByteBuff() : OKE
+[41631637] [log] I2C not available!
+[41631670] [log] I2C not available!
+[41631704] [-->] setSendBackData(0x3ffb420a)
+[41631752] [log] I2C not available!
+[41634026] [<--] setSendBackData() : OKE
+[41637672] [-->] setReceiveByteBuff(0x3ffb420b)
+[41641925] [log] I2C not available!
+[41645137] [<--] setReceiveByteBuff() : OKE
+[41670231] [log] I2C not available!
+[41670264] [log] I2C not available!
+[41670297] [-->] setSendBackData(0x3ffb420a)
+[41670346] [log] I2C not available!
+[41672620] [<--] setSendBackData() : OKE
+[41676266] [-->] setReceiveByteBuff(0x3ffb420b)
+[41680519] [log] I2C not available!
+[41683731] [<--] setReceiveByteBuff() : OKE
+[41708824] [log] I2C not available!
+[41708858] [log] I2C not available!
+[41708891] [-->] setSendBackData(0x3ffb420a)
+[41708940] [log] I2C not available!
+[41711213] [<--] setSendBackData() : OKE
+[41714859] [-->] setReceiveByteBuff(0x3ffb420b)
+[41719113] [log] I2C not available!
+[41722324] [<--] setReceiveByteBuff() : OKE
+[41747418] [log] I2C not available!
+[41747452] [log] I2C not available!
+[41747485] [-->] setSendBackData(0x3ffb420a)
+[41747534] [log] I2C not available!
+[41749807] [<--] setSendBackData() : OKE
+[41753453] [-->] setReceiveByteBuff(0x3ffb420b)
+[41757706] [log] I2C not available!
+[41760918] [<--] setReceiveByteBuff() : OKE
+[41786012] [log] I2C not available!
+[41786045] [log] I2C not available!
+[41786079] [-->] setSendBackData(0x3ffb420a)
+[41786127] [log] I2C not available!
+[41788401] [<--] setSendBackData() : OKE
+[41792047] [-->] setReceiveByteBuff(0x3ffb420b)
+[41796300] [log] I2C not available!
+[41799512] [<--] setReceiveByteBuff() : OKE
+[41824606] [log] I2C not available!
+[41824639] [log] I2C not available!
+[41824673] [-->] setSendBackData(0x3ffb420a)
+[41824721] [log] I2C not available!
+[41826995] [<--] setSendBackData() : OKE
+[41830641] [-->] setReceiveByteBuff(0x3ffb420b)
+[41834894] [log] I2C not available!
+[41838106] [<--] setReceiveByteBuff() : OKE
+[41863260] [log] I2C not available!
+[41863294] [log] I2C not available!
+[41863327] [-->] setSendBackData(0x3ffb420a)
+[41863376] [log] I2C not available!
+[41865649] [<--] setSendBackData() : OKE
+[41869295] [-->] setReceiveByteBuff(0x3ffb420b)
+[41873549] [log] I2C not available!
+[41876760] [<--] setReceiveByteBuff() : OKE
+[41901854] [log] I2C not available!
+[41901888] [log] I2C not available!
+[41901921] [-->] setSendBackData(0x3ffb420a)
+[41901970] [log] I2C not available!
+[41904243] [<--] setSendBackData() : OKE
+[41907889] [-->] setReceiveByteBuff(0x3ffb420b)
+[41912142] [log] I2C not available!
+[41915354] [<--] setReceiveByteBuff() : OKE
+[41940448] [log] I2C not available!
+[41940481] [log] I2C not available!
+[41940515] [-->] setSendBackData(0x3ffb420a)
+[41940563] [log] I2C not available!
+[41942837] [<--] setSendBackData() : OKE
+[41946483] [-->] setReceiveByteBuff(0x3ffb420b)
+[41950736] [log] I2C not available!
+[41953948] [<--] setReceiveByteBuff() : OKE
+[41979042] [log] I2C not available!
+[41979075] [log] I2C not available!
+[41979108] [-->] setSendBackData(0x3ffb420a)
+[41979157] [log] I2C not available!
+[41981430] [<--] setSendBackData() : OKE
+[41985077] [-->] setReceiveByteBuff(0x3ffb420b)
+[41989330] [log] I2C not available!
+[41992542] [<--] setReceiveByteBuff() : OKE
+[42017635] [log] I2C not available!
+[42017669] [log] I2C not available!
+[42017702] [-->] setSendBackData(0x3ffb420a)
+[42017751] [log] I2C not available!
+[42020024] [<--] setSendBackData() : OKE
+[42023671] [-->] setReceiveByteBuff(0x3ffb420b)
+[42027924] [log] I2C not available!
+[42031135] [<--] setReceiveByteBuff() : OKE
+[42056235] [log] I2C not available!
+[42056268] [log] I2C not available!
+[42056301] [-->] setSendBackData(0x3ffb420a)
+[42056350] [log] I2C not available!
+[42058624] [<--] setSendBackData() : OKE
+[42062269] [-->] setReceiveByteBuff(0x3ffb420b)
+[42066523] [log] I2C not available!
+[42069735] [<--] setReceiveByteBuff() : OKE
+[42094968] [log] I2C not available!
+[42095001] [log] I2C not available!
+[42095034] [-->] setSendBackData(0x3ffb420a)
+[42095083] [log] I2C not available!
+[42097356] [<--] setSendBackData() : OKE
+[42101002] [-->] setReceiveByteBuff(0x3ffb420b)
+[42105256] [log] I2C not available!
+[42108468] [<--] setReceiveByteBuff() : OKE
+[42133625] [log] I2C not available!
+[42133659] [log] I2C not available!
+[42133692] [-->] setSendBackData(0x3ffb420a)
+[42133741] [log] I2C not available!
+[42136014] [<--] setSendBackData() : OKE
+[42139660] [-->] setReceiveByteBuff(0x3ffb420b)
+[42143913] [log] I2C not available!
+[42147125] [<--] setReceiveByteBuff() : OKE
+[42172219] [log] I2C not available!
+[42172252] [log] I2C not available!
+[42172286] [-->] setSendBackData(0x3ffb420a)
+[42172334] [log] I2C not available!
+[42174608] [<--] setSendBackData() : OKE
+[42178254] [-->] setReceiveByteBuff(0x3ffb420b)
+[42182507] [log] I2C not available!
+[42185719] [<--] setReceiveByteBuff() : OKE
+[42210812] [log] I2C not available!
+[42210846] [log] I2C not available!
+[42210879] [-->] setSendBackData(0x3ffb420a)
+[42210928] [log] I2C not available!
+[42213202] [<--] setSendBackData() : OKE
+[42216847] [-->] setReceiveByteBuff(0x3ffb420b)
+[42221101] [log] I2C not available!
+[42224313] [<--] setReceiveByteBuff() : OKE
+[42249406] [log] I2C not available!
+[42249440] [log] I2C not available!
+[42249473] [-->] setSendBackData(0x3ffb420a)
+[42249522] [log] I2C not available!
+[42251795] [<--] setSendBackData() : OKE
+[42255441] [-->] setReceiveByteBuff(0x3ffb420b)
+[42259694] [log] I2C not available!
+[42262906] [<--] setReceiveByteBuff() : OKE
+[42288000] [log] I2C not available!
+[42288033] [log] I2C not available!
+[42288067] [-->] setSendBackData(0x3ffb420a)
+[42288115] [log] I2C not available!
+[42290389] [<--] setSendBackData() : OKE
+[42294035] [-->] setReceiveByteBuff(0x3ffb420b)
+[42298288] [log] I2C not available!
+[42301500] [<--] setReceiveByteBuff() : OKE
+[42326594] [log] I2C not available!
+[42326627] [log] I2C not available!
+[42326661] [-->] setSendBackData(0x3ffb420a)
+[42326709] [log] I2C not available!
+[42328983] [<--] setSendBackData() : OKE
+[42332682] [-->] setReceiveByteBuff(0x3ffb420b)
+[42336882] [log] I2C not available!
+[42340094] [<--] setReceiveByteBuff() : OKE
+[42365188] [log] I2C not available!
+[42365221] [log] I2C not available!
+[42365254] [-->] setSendBackData(0x3ffb420a)
+[42365303] [log] I2C not available!
+[42367577] [<--] setSendBackData() : OKE
+[42371222] [-->] setReceiveByteBuff(0x3ffb420b)
+[42375476] [log] I2C not available!
+[42378688] [<--] setReceiveByteBuff() : OKE
+[42403843] [log] I2C not available!
+[42403876] [log] I2C not available!
+[42403910] [-->] setSendBackData(0x3ffb420a)
+[42403958] [log] I2C not available!
+[42406232] [<--] setSendBackData() : OKE
+[42409878] [-->] setReceiveByteBuff(0x3ffb420b)
+[42414131] [log] I2C not available!
+[42417343] [<--] setReceiveByteBuff() : OKE
+[42442437] [log] I2C not available!
+[42442470] [log] I2C not available!
+[42442503] [-->] setSendBackData(0x3ffb420a)
+[42442552] [log] I2C not available!
+[42444826] [<--] setSendBackData() : OKE
+[42448472] [-->] setReceiveByteBuff(0x3ffb420b)
+[42452725] [log] I2C not available!
+[42455937] [<--] setReceiveByteBuff() : OKE
+[42481030] [log] I2C not available!
+[42481064] [log] I2C not available!
+[42481097] [-->] setSendBackData(0x3ffb420a)
+[42481146] [log] I2C not available!
+[42483419] [<--] setSendBackData() : OKE
+[42487065] [-->] setReceiveByteBuff(0x3ffb420b)
+[42491319] [log] I2C not available!
+[42494530] [<--] setReceiveByteBuff() : OKE
+[42519624] [log] I2C not available!
+[42519658] [log] I2C not available!
+[42519691] [-->] setSendBackData(0x3ffb420a)
+[42519740] [log] I2C not available!
+[42522013] [<--] setSendBackData() : OKE
+[42525659] [-->] setReceiveByteBuff(0x3ffb420b)
+[42529912] [log] I2C not available!
+[42533124] [<--] setReceiveByteBuff() : OKE
+[42558218] [log] I2C not available!
+[42558251] [log] I2C not available!
+[42558285] [-->] setSendBackData(0x3ffb420a)
+[42558333] [log] I2C not available!
+[42560607] [<--] setSendBackData() : OKE
+[42564253] [-->] setReceiveByteBuff(0x3ffb420b)
+[42568506] [log] I2C not available!
+[42571718] [<--] setReceiveByteBuff() : OKE
+[42596812] [log] I2C not available!
+[42596845] [log] I2C not available!
+[42596878] [-->] setSendBackData(0x3ffb420a)
+[42596927] [log] I2C not available!
+[42599200] [<--] setSendBackData() : OKE
+[42602847] [-->] setReceiveByteBuff(0x3ffb420b)
+[42607100] [log] I2C not available!
+[42610312] [<--] setReceiveByteBuff() : OKE
+[42635405] [log] I2C not available!
+[42635439] [log] I2C not available!
+[42635472] [-->] setSendBackData(0x3ffb420a)
+[42635521] [log] I2C not available!
+[42637794] [<--] setSendBackData() : OKE
+[42641440] [-->] setReceiveByteBuff(0x3ffb420b)
+[42645694] [log] I2C not available!
+[42648905] [<--] setReceiveByteBuff() : OKE
+[42674000] [log] I2C not available!
+[42674033] [log] I2C not available!
+[42674066] [-->] setSendBackData(0x3ffb420a)
+[42674115] [log] I2C not available!
+[42676389] [<--] setSendBackData() : OKE
+[42680034] [-->] setReceiveByteBuff(0x3ffb420b)
+[42684288] [log] I2C not available!
+[42687500] [<--] setReceiveByteBuff() : OKE
+[42712593] [log] I2C not available!
+[42712687] [log] I2C not available!
+[42712720] [-->] setSendBackData(0x3ffb420a)
+[42712769] [log] I2C not available!
+[42714982] [<--] setSendBackData() : OKE
+[42718628] [-->] setReceiveByteBuff(0x3ffb420b)
+[42722882] [log] I2C not available!
+[42726093] [<--] setReceiveByteBuff() : OKE
+[42751187] [log] I2C not available!
+[42751221] [log] I2C not available!
+[42751254] [-->] setSendBackData(0x3ffb420a)
+[42751303] [log] I2C not available!
+[42753576] [<--] setSendBackData() : OKE
+[42757222] [-->] setReceiveByteBuff(0x3ffb420b)
+[42761475] [log] I2C not available!
+[42764687] [<--] setReceiveByteBuff() : OKE
+[42789781] [log] I2C not available!
+[42789814] [log] I2C not available!
+[42789848] [-->] setSendBackData(0x3ffb420a)
+[42789896] [log] I2C not available!
+[42792170] [<--] setSendBackData() : OKE
+[42795816] [-->] setReceiveByteBuff(0x3ffb420b)
+[42800069] [log] I2C not available!
+[42803281] [<--] setReceiveByteBuff() : OKE
+[42828374] [log] I2C not available!
+[42828408] [log] I2C not available!
+[42828441] [-->] setSendBackData(0x3ffb420a)
+[42828490] [log] I2C not available!
+[42830763] [<--] setSendBackData() : OKE
+[42834410] [-->] setReceiveByteBuff(0x3ffb420b)
+[42838663] [log] I2C not available!
+[42841874] [<--] setReceiveByteBuff() : OKE
+[42866968] [log] I2C not available!
+[42867002] [log] I2C not available!
+[42867035] [-->] setSendBackData(0x3ffb420a)
+[42867084] [log] I2C not available!
+[42869357] [<--] setSendBackData() : OKE
+[42873003] [-->] setReceiveByteBuff(0x3ffb420b)
+[42877257] [log] I2C not available!
+[42880468] [<--] setReceiveByteBuff() : OKE
+[42905562] [log] I2C not available!
+[42905596] [log] I2C not available!
+[42905629] [-->] setSendBackData(0x3ffb420a)
+[42905678] [log] I2C not available!
+[42907951] [<--] setSendBackData() : OKE
+[42911597] [-->] setReceiveByteBuff(0x3ffb420b)
+[42915851] [log] I2C not available!
+[42919062] [<--] setReceiveByteBuff() : OKE
+[42944156] [log] I2C not available!
+[42944190] [log] I2C not available!
+[42944223] [-->] setSendBackData(0x3ffb420a)
+[42944272] [log] I2C not available!
+[42946545] [<--] setSendBackData() : OKE
+[42950191] [-->] setReceiveByteBuff(0x3ffb420b)
+[42954444] [log] I2C not available!
+[42957656] [<--] setReceiveByteBuff() : OKE
+[42982810] [log] I2C not available!
+[42982843] [log] I2C not available!
+[42982877] [-->] setSendBackData(0x3ffb420a)
+[42982925] [log] I2C not available!
+[42985199] [<--] setSendBackData() : OKE
+[42988844] [-->] setReceiveByteBuff(0x3ffb420b)
+[42993098] [log] I2C not available!
+[42996310] [<--] setReceiveByteBuff() : OKE
+[43021403] [log] I2C not available!
+[43021437] [log] I2C not available!
+[43021470] [-->] setSendBackData(0x3ffb420a)
+[43021519] [log] I2C not available!
+[43023792] [<--] setSendBackData() : OKE
+[43027438] [-->] setReceiveByteBuff(0x3ffb420b)
+[43031692] [log] I2C not available!
+[43034903] [<--] setReceiveByteBuff() : OKE
+[43059997] [log] I2C not available!
+[43060031] [log] I2C not available!
+[43060064] [-->] setSendBackData(0x3ffb420a)
+[43060113] [log] I2C not available!
+[43062386] [<--] setSendBackData() : OKE
+[43066032] [-->] setReceiveByteBuff(0x3ffb420b)
+[43070285] [log] I2C not available!
+[43073497] [<--] setReceiveByteBuff() : OKE
+[43098591] [log] I2C not available!
+[43098624] [log] I2C not available!
+[43098658] [-->] setSendBackData(0x3ffb420a)
+[43098706] [log] I2C not available!
+[43100980] [<--] setSendBackData() : OKE
+[43104626] [-->] setReceiveByteBuff(0x3ffb420b)
+[43108879] [log] I2C not available!
+[43112091] [<--] setReceiveByteBuff() : OKE
+[43137185] [log] I2C not available!
+[43137218] [log] I2C not available!
+[43137251] [-->] setSendBackData(0x3ffb420a)
+[43137300] [log] I2C not available!
+[43139573] [<--] setSendBackData() : OKE
+[43143220] [-->] setReceiveByteBuff(0x3ffb420b)
+[43147473] [log] I2C not available!
+[43150685] [<--] setReceiveByteBuff() : OKE
+[43175795] [log] I2C not available!
+[43175828] [log] I2C not available!
+[43175862] [-->] setSendBackData(0x3ffb420a)
+[43175910] [log] I2C not available!
+[43178184] [<--] setSendBackData() : OKE
+[43181830] [-->] setReceiveByteBuff(0x3ffb420b)
+[43186083] [log] I2C not available!
+[43189295] [<--] setReceiveByteBuff() : OKE
+[43214405] [log] I2C not available!
+[43214439] [log] I2C not available!
+[43214472] [-->] setSendBackData(0x3ffb420a)
+[43214521] [log] I2C not available!
+[43216794] [<--] setSendBackData() : OKE
+[43220440] [-->] setReceiveByteBuff(0x3ffb420b)
+[43224693] [log] I2C not available!
+[43227905] [<--] setReceiveByteBuff() : OKE
+[43253043] [log] I2C not available!
+[43253076] [log] I2C not available!
+[43253110] [-->] setSendBackData(0x3ffb420a)
+[43253158] [log] I2C not available!
+[43255432] [<--] setSendBackData() : OKE
+[43259078] [-->] setReceiveByteBuff(0x3ffb420b)
+[43263331] [log] I2C not available!
+[43266543] [<--] setReceiveByteBuff() : OKE
+[43291653] [log] I2C not available!
+[43291686] [log] I2C not available!
+[43291720] [-->] setSendBackData(0x3ffb420a)
+[43291768] [log] I2C not available!
+[43294042] [<--] setSendBackData() : OKE
+[43297688] [-->] setReceiveByteBuff(0x3ffb420b)
+[43301941] [log] I2C not available!
+[43305153] [<--] setReceiveByteBuff() : OKE
+[43330263] [log] I2C not available!
+[43330296] [log] I2C not available!
+[43330330] [-->] setSendBackData(0x3ffb420a)
+[43330378] [log] I2C not available!
+[43332682] [<--] setSendBackData() : OKE
+[43336298] [-->] setReceiveByteBuff(0x3ffb420b)
+[43340551] [log] I2C not available!
+[43343763] [<--] setReceiveByteBuff() : OKE
+[43368873] [log] I2C not available!
+[43368906] [log] I2C not available!
+[43368940] [-->] setSendBackData(0x3ffb420a)
+[43368989] [log] I2C not available!
+[43371262] [<--] setSendBackData() : OKE
+[43374908] [-->] setReceiveByteBuff(0x3ffb420b)
+[43379161] [log] I2C not available!
+[43382373] [<--] setReceiveByteBuff() : OKE
+[43407483] [log] I2C not available!
+[43407517] [log] I2C not available!
+[43407550] [-->] setSendBackData(0x3ffb420a)
+[43407599] [log] I2C not available!
+[43409872] [<--] setSendBackData() : OKE
+[43413518] [-->] setReceiveByteBuff(0x3ffb420b)
+[43417771] [log] I2C not available!
+[43420983] [<--] setReceiveByteBuff() : OKE
+[43446093] [log] I2C not available!
+[43446127] [log] I2C not available!
+[43446160] [-->] setSendBackData(0x3ffb420a)
+[43446209] [log] I2C not available!
+[43448482] [<--] setSendBackData() : OKE
+[43452128] [-->] setReceiveByteBuff(0x3ffb420b)
+[43456382] [log] I2C not available!
+[43459593] [<--] setReceiveByteBuff() : OKE
+[43484704] [log] I2C not available!
+[43484737] [log] I2C not available!
+[43484771] [-->] setSendBackData(0x3ffb420a)
+[43484819] [log] I2C not available!
+[43487093] [<--] setSendBackData() : OKE
+[43490739] [-->] setReceiveByteBuff(0x3ffb420b)
+[43494992] [log] I2C not available!
+[43498204] [<--] setReceiveByteBuff() : OKE
+[43523375] [log] I2C not available!
+[43523408] [log] I2C not available!
+[43523442] [-->] setSendBackData(0x3ffb420a)
+[43523490] [log] I2C not available!
+[43525764] [<--] setSendBackData() : OKE
+[43529410] [-->] setReceiveByteBuff(0x3ffb420b)
+[43533663] [log] I2C not available!
+[43536875] [<--] setReceiveByteBuff() : OKE
+[43561985] [log] I2C not available!
+[43562018] [log] I2C not available!
+[43562052] [-->] setSendBackData(0x3ffb420a)
+[43562100] [log] I2C not available!
+[43564374] [<--] setSendBackData() : OKE
+[43568020] [-->] setReceiveByteBuff(0x3ffb420b)
+[43572273] [log] I2C not available!
+[43575485] [<--] setReceiveByteBuff() : OKE
+[43600595] [log] I2C not available!
+[43600629] [log] I2C not available!
+[43600662] [-->] setSendBackData(0x3ffb420a)
+[43600711] [log] I2C not available!
+[43602984] [<--] setSendBackData() : OKE
+[43606630] [-->] setReceiveByteBuff(0x3ffb420b)
+[43610883] [log] I2C not available!
+[43614095] [<--] setReceiveByteBuff() : OKE
+[43639205] [log] I2C not available!
+[43639239] [log] I2C not available!
+[43639272] [-->] setSendBackData(0x3ffb420a)
+[43639321] [log] I2C not available!
+[43641594] [<--] setSendBackData() : OKE
+[43645240] [-->] setReceiveByteBuff(0x3ffb420b)
+[43649493] [log] I2C not available!
+[43652706] [<--] setReceiveByteBuff() : OKE
+[43677815] [log] I2C not available!
+[43677849] [log] I2C not available!
+[43677882] [-->] setSendBackData(0x3ffb420a)
+[43677931] [log] I2C not available!
+[43680204] [<--] setSendBackData() : OKE
+[43683850] [-->] setReceiveByteBuff(0x3ffb420b)
+[43688103] [log] I2C not available!
+[43691315] [<--] setReceiveByteBuff() : OKE
+[43716425] [log] I2C not available!
+[43716459] [log] I2C not available!
+[43716492] [-->] setSendBackData(0x3ffb420a)
+[43716541] [log] I2C not available!
+[43718814] [<--] setSendBackData() : OKE
+[43722460] [-->] setReceiveByteBuff(0x3ffb420b)
+[43726714] [log] I2C not available!
+[43729925] [<--] setReceiveByteBuff() : OKE
+[43755036] [log] I2C not available!
+[43755069] [log] I2C not available!
+[43755103] [-->] setSendBackData(0x3ffb420a)
+[43755151] [log] I2C not available!
+[43757425] [<--] setSendBackData() : OKE
+[43761071] [-->] setReceiveByteBuff(0x3ffb420b)
+[43765324] [log] I2C not available!
+[43768536] [<--] setReceiveByteBuff() : OKE
+[43793707] [log] I2C not available!
+[43793740] [log] I2C not available!
+[43793773] [-->] setSendBackData(0x3ffb420a)
+[43793822] [log] I2C not available!
+[43796095] [<--] setSendBackData() : OKE
+[43799741] [-->] setReceiveByteBuff(0x3ffb420b)
+[43803995] [log] I2C not available!
+[43807207] [<--] setReceiveByteBuff() : OKE
+[43832317] [log] I2C not available!
+[43832350] [log] I2C not available!
+[43832384] [-->] setSendBackData(0x3ffb420a)
+[43832432] [log] I2C not available!
+[43834706] [<--] setSendBackData() : OKE
+[43838352] [-->] setReceiveByteBuff(0x3ffb420b)
+[43842605] [log] I2C not available!
+[43845817] [<--] setReceiveByteBuff() : OKE
+[43870927] [log] I2C not available!
+[43870960] [log] I2C not available!
+[43870994] [-->] setSendBackData(0x3ffb420a)
+[43871042] [log] I2C not available!
+[43873316] [<--] setSendBackData() : OKE
+[43876962] [-->] setReceiveByteBuff(0x3ffb420b)
+[43881215] [log] I2C not available!
+[43884427] [<--] setReceiveByteBuff() : OKE
+[43909537] [log] I2C not available!
+[43909570] [log] I2C not available!
+[43909604] [-->] setSendBackData(0x3ffb420a)
+[43909652] [log] I2C not available!
+[43911926] [<--] setSendBackData() : OKE
+[43915572] [-->] setReceiveByteBuff(0x3ffb420b)
+[43919825] [log] I2C not available!
+[43923037] [<--] setReceiveByteBuff() : OKE
+[43948147] [log] I2C not available!
+[43948180] [log] I2C not available!
+[43948214] [-->] setSendBackData(0x3ffb420a)
+[43948263] [log] I2C not available!
+[43950536] [<--] setSendBackData() : OKE
+[43954182] [-->] setReceiveByteBuff(0x3ffb420b)
+[43958435] [log] I2C not available!
+[43961647] [<--] setReceiveByteBuff() : OKE
+[43986757] [log] I2C not available!
+[43986791] [log] I2C not available!
+[43986824] [-->] setSendBackData(0x3ffb420a)
+[43986873] [log] I2C not available!
+[43989146] [<--] setSendBackData() : OKE
+[43992793] [-->] setReceiveByteBuff(0x3ffb420b)
+[43997045] [log] I2C not available!
+[44000257] [<--] setReceiveByteBuff() : OKE
+[44025367] [log] I2C not available!
+[44025401] [log] I2C not available!
+[44025434] [-->] setSendBackData(0x3ffb420a)
+[44025483] [log] I2C not available!
+[44027756] [<--] setSendBackData() : OKE
+[44031402] [-->] setReceiveByteBuff(0x3ffb420b)
+[44035656] [log] I2C not available!
+[44038867] [<--] setReceiveByteBuff() : OKE
+[44063978] [log] I2C not available!
+[44064011] [log] I2C not available!
+[44064045] [-->] setSendBackData(0x3ffb420a)
+[44064094] [log] I2C not available!
+[44066367] [<--] setSendBackData() : OKE
+[44070013] [-->] setReceiveByteBuff(0x3ffb420b)
+[44074266] [log] I2C not available!
+[44077478] [<--] setReceiveByteBuff() : OKE
+[44102588] [log] I2C not available!
+[44102681] [log] I2C not available!
+[44102714] [-->] setSendBackData(0x3ffb420a)
+[44102763] [log] I2C not available!
+[44104977] [<--] setSendBackData() : OKE
+[44108623] [-->] setReceiveByteBuff(0x3ffb420b)
+[44112876] [log] I2C not available!
+[44116088] [<--] setReceiveByteBuff() : OKE
+[44141198] [log] I2C not available!
+[44141232] [log] I2C not available!
+[44141265] [-->] setSendBackData(0x3ffb420a)
+[44141314] [log] I2C not available!
+[44143587] [<--] setSendBackData() : OKE
+[44147233] [-->] setReceiveByteBuff(0x3ffb420b)
+[44151486] [log] I2C not available!
+[44154698] [<--] setReceiveByteBuff() : OKE
+[44179808] [log] I2C not available!
+[44179842] [log] I2C not available!
+[44179875] [-->] setSendBackData(0x3ffb420a)
+[44179924] [log] I2C not available!
+[44182197] [<--] setSendBackData() : OKE
+[44185843] [-->] setReceiveByteBuff(0x3ffb420b)
+[44190097] [log] I2C not available!
+[44193308] [<--] setReceiveByteBuff() : OKE
+[44218418] [log] I2C not available!
+[44218452] [log] I2C not available!
+[44218485] [-->] setSendBackData(0x3ffb420a)
+[44218534] [log] I2C not available!
+[44220807] [<--] setSendBackData() : OKE
+[44224453] [-->] setReceiveByteBuff(0x3ffb420b)
+[44228707] [log] I2C not available!
+[44231918] [<--] setReceiveByteBuff() : OKE
+[1;31mE (44506) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (44506) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (44506) task_wdt: Tasks currently running:[0m
+[1;31mE (44506) task_wdt: CPU 0: main[0m
+[1;31mE (44506) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (44506) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DC092:0x3FFB10C0 0x400DC464:0x3FFB10E0 0x400829C9:0x3FFB1110 0x4000BFED:0x3FFB4120 0x4008558A:0x3FFB4130 0x400D9348:0x3FFB4150 0x400D9707:0x3FFB4180 0x400D9909:0x3FFB41B0 0x400D72E0:0x3FFB41E0 0x400D3972:0x3FFB4230 0x400E3CD9:0x3FFB4260
+
+[44296704] [log] I2C not available!
+[44296737] [log] I2C not available!
+[44296771] [-->] setSendBackData(0x3ffb420a)
+[44296819] [log] I2C not available!
+[44299886] [<--] setSendBackData() : OKE
+[44303533] [-->] setReceiveByteBuff(0x3ffb420b)
+[44307786] [log] I2C not available!
+[44310997] [<--] setReceiveByteBuff() : OKE
+[44336151] [log] I2C not available!
+[44336185] [log] I2C not available!
+[44336218] [-->] setSendBackData(0x3ffb420a)
+[44336267] [log] I2C not available!
+[44338540] [<--] setSendBackData() : OKE
+[44342186] [-->] setReceiveByteBuff(0x3ffb420b)
+[44346439] [log] I2C not available!
+[44349651] [<--] setReceiveByteBuff() : OKE
+[44374761] [log] I2C not available!
+[44374795] [log] I2C not available!
+[44374828] [-->] setSendBackData(0x3ffb420a)
+[44374877] [log] I2C not available!
+[44377150] [<--] setSendBackData() : OKE
+[44380796] [-->] setReceiveByteBuff(0x3ffb420b)
+[44385050] [log] I2C not available!
+[44388261] [<--] setReceiveByteBuff() : OKE
+[44413426] [log] I2C not available!
+[44413460] [log] I2C not available!
+[44413493] [-->] setSendBackData(0x3ffb420a)
+[44413542] [log] I2C not available!
+[44415815] [<--] setSendBackData() : OKE
+[44419461] [-->] setReceiveByteBuff(0x3ffb420b)
+[44423715] [log] I2C not available!
+[44426926] [<--] setReceiveByteBuff() : OKE
+[44452036] [log] I2C not available!
+[44452070] [log] I2C not available!
+[44452103] [-->] setSendBackData(0x3ffb420a)
+[44452152] [log] I2C not available!
+[44454425] [<--] setSendBackData() : OKE
+[44458071] [-->] setReceiveByteBuff(0x3ffb420b)
+[44462325] [log] I2C not available!
+[44465536] [<--] setReceiveByteBuff() : OKE
+[44490646] [log] I2C not available!
+[44490680] [log] I2C not available!
+[44490713] [-->] setSendBackData(0x3ffb420a)
+[44490762] [log] I2C not available!
+[44493035] [<--] setSendBackData() : OKE
+[44496681] [-->] setReceiveByteBuff(0x3ffb420b)
+[44500935] [log] I2C not available!
+[44504147] [<--] setReceiveByteBuff() : OKE
+[44529257] [log] I2C not available!
+[44529290] [log] I2C not available!
+[44529323] [-->] setSendBackData(0x3ffb420a)
+[44529372] [log] I2C not available!
+[44531645] [<--] setSendBackData() : OKE
+[44535292] [-->] setReceiveByteBuff(0x3ffb420b)
+[44539545] [log] I2C not available!
+[44542757] [<--] setReceiveByteBuff() : OKE
+[44567867] [log] I2C not available!
+[44567900] [log] I2C not available!
+[44567933] [-->] setSendBackData(0x3ffb420a)
+[44567982] [log] I2C not available!
+[44570256] [<--] setSendBackData() : OKE
+[44573902] [-->] setReceiveByteBuff(0x3ffb420b)
+[44578155] [log] I2C not available!
+[44581367] [<--] setReceiveByteBuff() : OKE
+[44606477] [log] I2C not available!
+[44606511] [log] I2C not available!
+[44606544] [-->] setSendBackData(0x3ffb420a)
+[44606593] [log] I2C not available!
+[44608866] [<--] setSendBackData() : OKE
+[44612512] [-->] setReceiveByteBuff(0x3ffb420b)
+[44616765] [log] I2C not available!
+[44619977] [<--] setReceiveByteBuff() : OKE
+[44645087] [log] I2C not available!
+[44645121] [log] I2C not available!
+[44645154] [-->] setSendBackData(0x3ffb420a)
+[44645203] [log] I2C not available!
+[44647476] [<--] setSendBackData() : OKE
+[44651122] [-->] setReceiveByteBuff(0x3ffb420b)
+[44655376] [log] I2C not available!
+[44658587] [<--] setReceiveByteBuff() : OKE
+[44683764] [log] I2C not available!
+[44683798] [log] I2C not available!
+[44683831] [-->] setSendBackData(0x3ffb420a)
+[44683880] [log] I2C not available!
+[44686153] [<--] setSendBackData() : OKE
+[44689799] [-->] setReceiveByteBuff(0x3ffb420b)
+[44694053] [log] I2C not available!
+[44697264] [<--] setReceiveByteBuff() : OKE
+[44722375] [log] I2C not available!
+[44722408] [log] I2C not available!
+[44722441] [-->] setSendBackData(0x3ffb420a)
+[44722490] [log] I2C not available!
+[44724764] [<--] setSendBackData() : OKE
+[44728410] [-->] setReceiveByteBuff(0x3ffb420b)
+[44732683] [log] I2C not available!
+[44735875] [<--] setReceiveByteBuff() : OKE
+[44760985] [log] I2C not available!
+[44761018] [log] I2C not available!
+[44761052] [-->] setSendBackData(0x3ffb420a)
+[44761100] [log] I2C not available!
+[44763374] [<--] setSendBackData() : OKE
+[44767020] [-->] setReceiveByteBuff(0x3ffb420b)
+[44771273] [log] I2C not available!
+[44774485] [<--] setReceiveByteBuff() : OKE
+[44799595] [log] I2C not available!
+[44799628] [log] I2C not available!
+[44799662] [-->] setSendBackData(0x3ffb420a)
+[44799710] [log] I2C not available!
+[44801984] [<--] setSendBackData() : OKE
+[44805630] [-->] setReceiveByteBuff(0x3ffb420b)
+[44809883] [log] I2C not available!
+[44813095] [<--] setReceiveByteBuff() : OKE
+[44838205] [log] I2C not available!
+[44838238] [log] I2C not available!
+[44838272] [-->] setSendBackData(0x3ffb420a)
+[44838320] [log] I2C not available!
+[44840594] [<--] setSendBackData() : OKE
+[44844240] [-->] setReceiveByteBuff(0x3ffb420b)
+[44848493] [log] I2C not available!
+[44851705] [<--] setReceiveByteBuff() : OKE
+[44876815] [log] I2C not available!
+[44876849] [log] I2C not available!
+[44876882] [-->] setSendBackData(0x3ffb420a)
+[44876931] [log] I2C not available!
+[44879204] [<--] setSendBackData() : OKE
+[44882850] [-->] setReceiveByteBuff(0x3ffb420b)
+[44887103] [log] I2C not available!
+[44890315] [<--] setReceiveByteBuff() : OKE
+[44915425] [log] I2C not available!
+[44915459] [log] I2C not available!
+[44915492] [-->] setSendBackData(0x3ffb420a)
+[44915541] [log] I2C not available!
+[44917814] [<--] setSendBackData() : OKE
+[44921460] [-->] setReceiveByteBuff(0x3ffb420b)
+[44925714] [log] I2C not available!
+[44928925] [<--] setReceiveByteBuff() : OKE
+[44954035] [log] I2C not available!
+[44954069] [log] I2C not available!
+[44954102] [-->] setSendBackData(0x3ffb420a)
+[44954151] [log] I2C not available!
+[44956424] [<--] setSendBackData() : OKE
+[44960070] [-->] setReceiveByteBuff(0x3ffb420b)
+[44964324] [log] I2C not available!
+[44967535] [<--] setReceiveByteBuff() : OKE
+[44992681] [log] I2C not available!
+[44992715] [log] I2C not available!
+[44992748] [-->] setSendBackData(0x3ffb420a)
+[44992797] [log] I2C not available!
+[44995070] [<--] setSendBackData() : OKE
+[44998716] [-->] setReceiveByteBuff(0x3ffb420b)
+[45002970] [log] I2C not available!
+[45006181] [<--] setReceiveByteBuff() : OKE
+[45031292] [log] I2C not available!
+[45031325] [log] I2C not available!
+[45031358] [-->] setSendBackData(0x3ffb420a)
+[45031407] [log] I2C not available!
+[45033681] [<--] setSendBackData() : OKE
+[45037327] [-->] setReceiveByteBuff(0x3ffb420b)
+[45041580] [log] I2C not available!
+[45044792] [<--] setReceiveByteBuff() : OKE
+[45069902] [log] I2C not available!
+[45069935] [log] I2C not available!
+[45069969] [-->] setSendBackData(0x3ffb420a)
+[45070017] [log] I2C not available!
+[45072291] [<--] setSendBackData() : OKE
+[45075937] [-->] setReceiveByteBuff(0x3ffb420b)
+[45080190] [log] I2C not available!
+[45083402] [<--] setReceiveByteBuff() : OKE
+[45108512] [log] I2C not available!
+[45108545] [log] I2C not available!
+[45108579] [-->] setSendBackData(0x3ffb420a)
+[4ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b504h ( 46340) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b52c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001db7c vaddr=40080000 size=0249ch (  9372) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15f20h ( 89888) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035f48 vaddr=4008249c size=08e44h ( 36420) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ed94 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      ad9cb9e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:28:53[0m
+[0;32mI (209) app_init: ELF file SHA256:  c2c8b89e9...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2E0 len 00014D20 (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (279) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44060] [-->] app_main()
+[44098] [log] Set systemStage = SYSTEM_INIT
+[44325] [log] Start up OLED screen
+[1052640] [log] [+] oledTask()
+[1063845] [log] [oledTask] Wait for the initializing have been done!
+[1063940] [log] [+] prepairByteDataTask()
+[1075454] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075559] [log] [+] modeControlTask()
+[1086967] [log] [modeControlTask] Wait for the initializing have been done!
+[1087070] [log] Set systemStage = SYSTEM_RUNNING
+[1098037] [-->] oledTest()
+[1098101] [-->] prepairByteDataTask(0x00000000)
+[1098216] [-->] modeControlTask(0x00000000)
+[1099698] [-[>]9993SendBackD[modeControlTask
+Defau903] [err0
+[DE: 379] [-->e modeSwival(-1 --> 0)rt10[617] [err]<--] setSen systemMo(e is not v1lid! --> Abort!
+[ece132ByteBuff(0x3ffb4MODE: SYSTEM_0] E_SPI
+[1117222] [-ode create valid! -->piDev_t **112ev)7][11216 setR<--] creaeeuff(evice()
+ OKE
+[1125208] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 17, CS: 5, freq: 10, config: 0x0006)
+[1134847] [<--] configSPIDevice() : OKE
+[1138398] [-->] startupSPIDevice(0x3ffb6de4)
+[1142823] [<--] startupSPIDevice() : OKE
+[1146045] [<--] modeControl() : OKE
+[2130684] [-->] sendDataFrame([, 0x3ffb0388)
+[2130736] [log] SPI Send: [
+[2130775] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb41a0, 1)
+[2131613] [<--] spiSetTransmitBuffer() : <null>
+[2135859] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[2141422] [<--] spiSetReceiveBuffer() : OKE
+[2145320] [-->] spiStartTransaction(0x3ffb6dd4)
+[2950046] [<--] spiStartTransaction() : 1
+[2950104] [<--] sendDataFrame() : [1]
+[4970681] [-->] sendDataFrame(a, 0x3ffb0388)
+[4970733] [log] SPI Send: a
+[4970761] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb41a0, 1)
+[4971598] [<--] spiSetTransmitBuffer() : <null>
+[4975852] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[4981407] [<--] spiSetReceiveBuffer() : OKE
+[4985313] [-->] spiStartTransaction(0x3ffb6dd4)
+[5789952] [<--] spiStartTransaction() : 1
+[5789998] [<--] sendDataFrame() : [1]
+[7810667] [-->] sendDataFrame(l, 0x3ffb0388)
+[7810719] [log] SPI Send: l
+[7810747] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb41a0, 1)
+[7811585] [<--] spiSetTransmitBuffer() : <null>
+[7815838] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[7821394] [<--] spiSetReceiveBuffer() : OKE
+[7825300] [-->] spiStartTransaction(0x3ffb6dd4)
+[8629959] [<--] spiStartTransaction() : 1
+[8630001] [<--] sendDataFrame() : [1]
+[10650712] [-->] sendDataFrame(@, 0x3ffb0388)
+[10650765] [log] SPI Send: @
+[10650795] [-->] spiSetTransmitBuffer(0x3ffb6dd4, 0x3ffb41a0, 1)
+[10651889] [<--] spiSetTransmitBuffer() : <null>
+[10656230] [-->] spiSetReceiveBuffer(0x3ffb6dd4, 0x3ffb0388, 1)
+[10661872] [<--] spiSetReceiveBuffer() : OKE
+[10665865] [-->] spiStartTransaction(0x3ffb6dd4)
+[11470585] [<--] spiStartTransaction() : 1
+[11470633] [<--] sendDataFrame() : [1]
+[1052640] [log] [+] oledTask()
+[1063845] [log] [oledTask] Wait for the initializing have been done!
+[1063940] [log] [+] prepairByteDataTask()
+[1075454] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075559] [log] [+] modeControlTask()
+[1086967] [log] [modeControlTask] Wait for the initializing have been done!
+[1087070] [log] Set systemStage = SYSTEM_RUNNING
+[1098037] [-->] oledTest()
+[1098101] [-->] prepairByteDataTask(0x00000000)
+[1098216] [-->] modeControlTask(0x00000000)
+[1099698] [--1099etS] [log] [mo(0xonfb420as)
+[ef02l03] [err] MODE: sys] [-->e isdeSwivalid! --> 0)
+t10[617] [err] EX] setSendBystemMo() :s not v1111! --> A->] se
+Rece13229] [uff(0x3ffb420b) S1STEM_0] [err]
+ODE: s22] [-->] ireateSPIDev! --> Abor_t *[1120v)7][1121673] [eceivereteBuff(evicERR
+ OKE
+[1125208] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 17, CS: 5, freq: 10, config: 0x0006)
+[1134847] [<--] configSPIDevice() : OKE
+[1138398] [-->] startupSPIDevice(0x3ffb6de4)
+[1142822] [<--] startupSPIDevice() : OKE
+[1146045] [<--] modeControl() : OKE
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6376
+load:0x40078000,len:15864
+load:0x40080400,len:3908
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dev-2039-g2044fba6e7 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct  5 2025 13:54:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b504h ( 46340) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b52c vaddr=3ffb0000 size=02648h (  9800) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001db7c vaddr=40080000 size=0249ch (  9372) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15f20h ( 89888) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00035f48 vaddr=4008249c size=08e44h ( 36420) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003ed94 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (195) app_init: Project name:     do-an-02[0m
+[0;32mI (199) app_init: App version:      ad9cb9e-dirty[0m
+[0;32mI (204) app_init: Compile time:     Oct  7 2025 14:28:53[0m
+[0;32mI (209) app_init: ELF file SHA256:  c2c8b89e9...[0m
+[0;32mI (213) app_init: ESP-IDF:          v6.0-dev-2039-g2044fba6e7[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2F40 len 0002D0C0 (180 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008B2E0 len 00014D20 (83 KiB): IRAM[0m
+[0;33mW (264) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (279) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[44059] [-->] app_main()
+[44098] [log] Set systemStage = SYSTEM_INIT
+[44325] [log] Start up OLED screen
+[1052640] [log] [+] oledTask()
+[1063844] [log] [oledTask] Wait for the initializing have been done!
+[1063939] [log] [+] prepairByteDataTask()
+[1075453] [log] [prepairByteDataTask] Wait for the initializing have been done!
+[1075559] [log] [+] modeControlTask()
+[1086967] [log] [modeControlTask] Wait for the initializing have been done!
+[1087070] [log] Set systemStage = SYSTEM_RUNNING
+[1098036] [-->] oledTest()
+[1098101] [-->] prepairByteDataTask(0x00000000)
+[1098216] [-->] modeControlTask(0x00000000)
+[1099697] [-->] set4] [lockData(0x3ffb420as)
+[efaul02] [e: 0
+[D104378] [--d] modeSwivch(-1 --> Abort!107617] [e] [<--] setDE: systemMade is not
+valid! -->[-bort!
+Rece13228]eBuff(0x3ffb420bE: SYSTEM_0] [erPI
+[DE:7221] [-->e createSPIlid! --> Abev_t *[1120v)7][1121672]tR<--] creaeeuff(evice()
+ OKE
+[1125207] [-->] configSPIDevice(dev: 0x3ffb6de4, CLK: 4, MOSI: 16, MISO: 17, CS: 5, freq: 10, config: 0x0006)
+[1134846] [<--] configSPIDevice() : OKE
+[1138397] [-->] startupSPIDevice(0x3ffb6de4)
+[1142822] [<--] startupSPIDevice() : OKE
+[1146045] [<--] modeControl() : OKE
