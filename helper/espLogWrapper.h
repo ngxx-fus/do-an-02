@@ -6,31 +6,74 @@
 #include "esp_timer.h"          /// for esp_timer_get_time()
 #include "esp_system.h"         /// for basic ESP system APIs (optional, common include)
 
+#include "../config/generalConfig.h"
 
-#ifndef __entry
-    /// Print entry log with timestamp and "-->"
-    #define __entry(fmt, ...)   ets_printf("[%lld] [-->] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
-#endif
-
-#ifndef __exit
-    /// Print exit log with timestamp and "<--"
-    #define __exit(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
-#endif
-
-#ifndef __log
-    /// Print general log with timestamp and "log"
-    #define __log(fmt, ...)     ets_printf("[%lld] [log] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
-#endif
-
-#ifndef __tag_log
-    /// Print log with timestamp and custom tag
-    #define __tag_log(tag, fmt, ...)     ets_printf("[%lld] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
+#ifndef SYSTEM_LOG_LEVEL
+    #define SYSTEM_LOG_LEVEL 1
 #endif
 
 #ifndef __err
-    /// Print error log with timestamp and "err"
-    #define __err(fmt, ...)     ets_printf("[%lld] [err] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #if SYSTEM_LOG_LEVEL >= 1
+        /// Print error log with timestamp and "err"
+        #define __err(fmt, ...)     ets_printf("[%lld] [err] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #else
+        #define __err(fmt, ...)
+    #endif
 #endif
 
+#ifndef __entry
+    #if SYSTEM_LOG_LEVEL >= 2
+        /// Print entry log with timestamp and "-->"
+        #define __entry(fmt, ...)   ets_printf("[%lld] [-->] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #else 
+        #define __entry(fmt, ...)
+    #endif
+#endif
+
+#ifndef __exit
+    #if SYSTEM_LOG_LEVEL >= 2
+        /// Print exit log with timestamp and "<--"
+        #define __exit(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #else 
+        #define __exit(fmt, ...)
+    #endif
+
+#endif
+
+#ifndef __log
+    #if SYSTEM_LOG_LEVEL >= 3
+        /// Print general log with timestamp and "log"
+        #define __log(fmt, ...)     ets_printf("[%lld] [log] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #else
+        #define __log(fmt, ...)
+    #endif
+#endif
+
+#ifndef __tag_log
+    #if SYSTEM_LOG_LEVEL >= 3
+        /// Print log with timestamp and custom tag
+        #define __tag_log(tag, fmt, ...)     ets_printf("[%lld] [log] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
+    #else
+        #define __tag_log(tag, fmt, ...)
+    #endif
+#endif
+
+#ifndef __log1
+    #if SYSTEM_LOG_LEVEL >= 4
+        /// Print general log with timestamp and "log" (for log more details)
+        #define __log1(fmt, ...)     ets_printf("[%lld] [log] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #else
+        #define __log1(fmt, ...)
+    #endif
+#endif
+
+#ifndef __tag_log1
+    #if SYSTEM_LOG_LEVEL >= 4
+        /// Print log with timestamp and custom tag
+        #define __tag_log(tag, fmt, ...)     ets_printf("[%lld] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
+    #else
+        #define __tag_log1(tag, fmt, ...)
+    #endif
+#endif
 
 #endif 

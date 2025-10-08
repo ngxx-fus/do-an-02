@@ -97,6 +97,7 @@ esp-idf/i2c/CMakeFiles/__idf_i2c.dir/i2c.c.obj: \
  /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espLogWrapper.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
+ /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/../config/generalConfig.h \
  /home/fus/Documents/DO-AN-02/comDriver/i2c/../../helper/espRTOSWrapper.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \

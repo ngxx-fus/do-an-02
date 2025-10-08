@@ -123,8 +123,8 @@ def oledResetView(oled128x64Dev_t *oled) {
         SSD1306_SET_COM_SCAN_INC,
         SSD1306_SET_DISPLAY_OFFSET, 0x00,
         // SSD1306_NORMAL_DISPLAY,
-        // SSD1306_ENTIRE_DISPLAY_RESUME,
-        // SSD1306_DISPLAY_ON
+        SSD1306_ENTIRE_DISPLAY_RESUME,
+        SSD1306_DISPLAY_ON
     };
 
     def ret;

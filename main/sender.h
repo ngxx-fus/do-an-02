@@ -1,212 +1,247 @@
 #include "../helper/general.h"
 
+#if ESP32_DEVICE_MODE == SENDER
+
 #include "../comDriver/spi/spi.h"
 #include "../comDriver/oled128x64/oled128x64.h"
 
-/// LOCAL /////////////////////////////////////////////////////////////////////////////////////////
+/// DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////
+
+/// Enumeration defining the system operation stages.
+enum ENUM_SYSTEM_STAGE {
+    SYSTEM_INIT    = 0, /// System is initializing.
+    SYSTEM_RUNNING = 1, /// System is currently running.
+    SYSTEM_STOPPED = 2, /// System has been stopped or halted.
+    SYSTEM_STAGE_COUNT,
+};
+
+/// Global system stage flag used to represent the overall runtime state.
+/// Access to this variable must be protected by `systemStageMutex`.
+volatile flag_t systemStage = SYSTEM_INIT;
+
+/// Mutex for synchronizing access to the system stage flag.
+portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
+
+/// Enumeration defining OLED operation request types.
+enum ENUM_OLED_FLAG {
+    OLED_REQ_FLUSH       = 0, /// Request to flush (update) the OLED display.
+    OLED_REQ_CLR_CANVAS  = 1, /// Request to clear the OLED display canvas.
+    OLED_REQ_COUNT,
+};
+
+/// OLED control flag for requesting display operations.
+/// Access to this variable must be protected by `oledFlagMutex`.
+volatile flag_t oledFlag = 0;
+
+/// Mutex for synchronizing access to the OLED flag.
+portMUX_TYPE oledFlagMutex = portMUX_INITIALIZER_UNLOCKED;
+
+/// Enumeration defining supported system communication modes.
+enum ENUM_SYSTEM_MODE {
+    SYSTEM_MODE_SPI    = 0, /// SPI communication mode.
+    SYSTEM_MODE_I2C    = 1, /// I2C communication mode.
+    SYSTEM_MODE_UART   = 2, /// UART communication mode
+    SYSTEM_MODE_1WIRE  = 3, /// 1-Wire communication mode.
+    SYSTEM_MODE_COUNT       /// Number of system modes
+};
+
+/// Global system mode flag representing active communication mode.
+/// Access to this variable must be protected by `systemModeMutex`.
+volatile flag_t systemMode = SYSTEM_MODE_SPI;
+
+/// Current protocol mode
+volatile flag_t currentSystemMode = -1;
+
+/// Mutex for synchronizing access to the system mode flag.
+portMUX_TYPE systemModeMutex = portMUX_INITIALIZER_UNLOCKED;
 
 
-/// TEXT //////////////////////////////////////////////////////////////////////////////////////////
+/// Communication object
+/// It can be assigned as I2C, SPI, ...
+void* comObject = NULL;
 
-// /// @brief Clear canvas then draw new text then show. 
-// /// @param oled 
-// /// @param line 
-// /// @param text 
-// void drawLineText(oled128x64Dev_t * oled, uint8_t line, const char * text, uint8_t lineH){
-//     oledResetView(oled);
-//     oledShowRAMContent(oled);
-//     oledFillScreen(oled, 0);
-//     oledDrawText(oled, (line+1)*lineH + line*2, 0, text, 1, 1, lineH);
-//     oledFlush(oled);
-// }
+/// Contain 8-bit data frame 
+volatile uint8_t byteData = '?';
 
-/// LED TEST MODE /////////////////////////////////////////////////////////////////////////////////
+/// Random 8-bit char (printable)
+volatile uint8_t receivedByteData = '?';
 
-void IRAM_ATTR buttonISR(void* pv){
-    int64_t* testModeVariable = (int64_t*) pv;
-    int64_t entryButtonISR =  esp_timer_get_time();
-    if((GPIO.in & __mask32(BTN0)) == LOW){
-        __log("Button is pressed!");
-        __log("entryButtonISR = %ld", entryButtonISR);
-        if(entryButtonISR - testModeVariable[1] < 100000){
-            __log("testModeVariable[1] = %ld", testModeVariable[1]);
-            __log("Button is pressed lesthan than 100000us, break test mode!");
-            testModeVariable[0] = 0;
-        }
-        testModeVariable[1] = entryButtonISR;
-    }else{
-        __log("Button is released!");
-    }
-}
+/// Mutex for synchronizing access to the sendControlMutex.
+portMUX_TYPE     sendControlMutex;
 
-void ledTest(void *pv){
-    __entry("ledTest()");
-    
-    /// Output
-    gpio_config_t outPin = {
-        .intr_type = GPIO_INTR_DISABLE,
-        .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = __mask32(PIN0) | __mask32(PIN1) |  
-                        __mask32(PIN2) | __mask32(PIN3),
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-    };
-    gpio_config(&outPin);
+/// Send control flag
+volatile flag_t  byteDataGenCtrlFlag;
 
-    /// Input + Int
-    gpio_config_t inPin = {
-        .intr_type      = GPIO_INTR_ANYEDGE,
-        .mode           = GPIO_MODE_INPUT,
-        .pin_bit_mask   = __mask32(BTN0),
-        .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en     = GPIO_PULLUP_DISABLE
-    };
-    gpio_config(&inPin);
+/// Enumeration defining SEND operation request types.
+enum BYTE_DATA_CONTROL_FLAG {
+    BDCTRL_PLAYPAUSE      = 0,        /// 0: Play / 1: Pause
+    BDCTRL_SEND_NOW       = 1,        /// 1: Immediately send data frame
+    BDCTRL_REPEAT_SEND    = 2,        /// 0: Random / 1: Stop random data frame
+    BYTE_DATA_CONTROL_FLAG_NUM
+};
 
-    /// Status variable 
-    /// testModeVariable[0] : Control the test state, Set 0 to stop test mode
-    /// testModeVariable[1] : Save last pressed
-    int64_t testModeVariable[2] = {2, 0};
+/// LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////
 
-    /// Enable all interrupt
-    gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-    gpio_isr_handler_add(BTN0, buttonISR, (void*) testModeVariable);
+#define IS_SYSTEM_INIT          (systemStage == SYSTEM_INIT)
+#define IS_SYSTEM_RUNNING       (systemStage == SYSTEM_RUNNING)
+#define IS_SYSTEM_STOPPED       (systemStage == SYSTEM_STOPPED)
 
-    /// Running test mode
-    while(testModeVariable[0]-- != 0){
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = (__mask32(PIN0));
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts =  __mask32(PIN1);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = __mask32(PIN2);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1ts = __mask32(PIN3);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = (__mask32(PIN0));
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc =  __mask32(PIN1);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = __mask32(PIN2);
-        vTaskDelay(50/portTICK_PERIOD_MS);
-        GPIO.out_w1tc = __mask32(PIN3);
-    };
+/// Flag operation with MUTEX! 
+#define FLAG_OP_W_MUTEX(p2mutex, flagOp, flag, bitOrder)        \
+        do {                                                    \
+            vPortEnterCritical(p2mutex);                        \
+            flagOp(flag, bitOrder);                             \
+            vPortExitCritical(p2mutex);                         \
+        } while (0)
 
-    gpio_uninstall_isr_service();
-    gpio_reset_pin(PIN0);
-    gpio_reset_pin(PIN1);
-    gpio_reset_pin(PIN2);
-    gpio_reset_pin(PIN3);
+/// Wrap a piece of code in a MUTEX!
+#define DO_WITH_MUTEX(p2mutex, anythingYouWantToDo)             \
+        do {                                                    \
+            vPortEnterCritical(p2mutex);                        \
+            anythingYouWantToDo;                                \
+            vPortExitCritical(p2mutex);                         \
+        } while (0)
 
-    __exit("ledTest()");
-}
-
-/// OLED TASK /////////////////////////////////////////////////////////////////////////////////////
-
-void oledTask(void *pv){
-
-    __log("[oledTask] Wait for the initializing have been done!");
-    /// Wait for the initializing done
-    for( ; systemStage == SYSTEM_INIT; vTaskDelay(1));
-
-    __entry("oledTest()");
-
-    oled128x64Dev_t *oled = (oled128x64Dev_t*)pv;
-
-    while (systemStage != SYSTEM_STOPPED){
-        if(__hasFlagBitSet(oledFlag, OLED_REQ_FLUSH)){
-            // __log("[oledTask] Receive flush request!");
-
-            // __log("[oledTask] Clear flush request!");
-            vPortEnterCritical(&oledFlagMutex);
-            __clearFlagBit(oledFlag, OLED_REQ_FLUSH);
-            vPortExitCritical(&oledFlagMutex);
-
-            // __log("[oledTask] Oled flush ...");
-            oledFlush(oled);
-        }
-        vTaskDelay(1);
-    }
-    
-    __exit("oledTest()");
-}
 
 /// PREPAIR AND SEND DATA TASK ////////////////////////////////////////////////////////////////////
 
-/// @brief Send data frame with corresponding com descriptor
-/// @return Default return state
-def sendDataFrame(uint8_t byteData, uint8_t * rcvdByteData){
-    __entry("sendDataFrame(%c, %p)", byteData, rcvdByteData);
-    
-    def ret;
-    
+def setTransmitBuff(uint8_t* byteArr, size_t size){
+    __entry("setTransmitBuff(%p, %d)", byteArr, size);
+
+    def ret = OKE;
+
     switch (currentSystemMode){
         case SYSTEM_MODE_SPI:            
-            __log("SPI Send: %c", byteData);
+            ret = spiSetTransmitBuffer((spiDev_t*)comObject, byteArr, size);
+            goto ReturnRET;
+        
+        case SYSTEM_MODE_I2C:
+            __tag_log(STR(setTransmitBuff), "Mode I2C not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        case SYSTEM_MODE_UART:
+            __tag_log(STR(setTransmitBuff), "Mode UART not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        case SYSTEM_MODE_1WIRE:
+            __tag_log(STR(setTransmitBuff), "Mode 1WIRE not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        default:
+            __err("EXIT MODE: systemMode is not valid! --> Abort!");
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+    }
 
-            spiDev_t * spi = (spiDev_t *) comObject;
+    ReturnRET:
+        __exit("setTransmitBuff() : %s", getDefRetStat_Str(ret));
+        return ret;
 
-            ret = spiSetTransmitBuffer(spi, &byteData, 1);
-            if(ret!=OKE) goto sendDataFrame_ReturnERR;
+}
 
-            ret = spiSetReceiveBuffer(spi, rcvdByteData, 1);
-            if(ret!=OKE) goto sendDataFrame_ReturnERR;
+def setReceiveBuff(uint8_t* byteArr, size_t size){
+    __entry("setReceiveBuff(%p, %d)", byteArr, size);
 
-            ret = spiStartTransaction(spi);
-            if(ret!=OKE) goto sendDataFrame_ReturnERR;
+    def ret = OKE;
 
+    switch (currentSystemMode){
+        case SYSTEM_MODE_SPI:            
+            ret = spiSetReceiveBuffer((spiDev_t*)comObject, byteArr, size);
+            goto ReturnRET;
         break;
         
         case SYSTEM_MODE_I2C:
-            __log("I2C Send: %c", byteData);
-            __log("I2C not available!");
+            __tag_log(STR(setReceiveBuff), "Mode I2C not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
         break;
         
         case SYSTEM_MODE_UART:
-            __log("UART Send: %c", byteData);
-            __log("UART not available!");
+            __tag_log(STR(setReceiveBuff), "Mode UART not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
         break;
         
         case SYSTEM_MODE_1WIRE:
-            __log("1-WIRE Send: %c", byteData);
-            __log("UART not available!");
+            __tag_log(STR(setReceiveBuff), "Mode 1WIRE not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
         break;
         
         default:
-            __err("MODE: systemMode is not valid! --> Abort!");
-            ret = ERR;
-            goto sendDataFrame_ReturnERR;
+            __err("EXIT MODE: systemMode is not valid! --> Abort!");
+            ret = ERR_NOT_FOUND; goto ReturnRET;
     }
-    
 
-    __exit("sendDataFrame()");
-    return OKE;
-
-    sendDataFrame_ReturnERR:
-        __exit("sendDataFrame() : [%d]", ret);
+    ReturnRET:
+        __exit("setReceiveBuff() : %s", getDefRetStat_Str(ret));
         return ret;
+
+}
+
+def sendDataBuff(){
+    __entry("sendDataBuff()");
+
+    def ret = OKE;
+
+    switch (currentSystemMode){
+        case SYSTEM_MODE_SPI:            
+            ret = spiStartTransaction((spiDev_t*)comObject);
+            goto ReturnRET;
+        
+        case SYSTEM_MODE_I2C:
+            __tag_log(STR(sendDataBuff), "Mode I2C not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        case SYSTEM_MODE_UART:
+            __tag_log(STR(sendDataBuff), "Mode UART not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        case SYSTEM_MODE_1WIRE:
+            __tag_log(STR(sendDataBuff), "Mode 1WIRE not found!");
+            /// TODO: Add mode!
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+        
+        default:
+            __err("EXIT MODE: systemMode is not valid! --> Abort!");
+            ret = ERR_NOT_FOUND; goto ReturnRET;
+    }
+
+    ReturnRET:
+        __exit("sendDataBuff() : %s", getDefRetStat_Str(ret));
+        return ret;
+}
+
+
+def hasNewData(){
+
+    return OKE;
 }
 
 /// @brief Random printable character
 /// @param pv As required from. Pls pass NULL ptr!
-void prepairNSendDataTask(void *pv){    
+void generateByteDataTask(void *pv){    
     /// Wait for the initializing done
-    __log("[prepairNSendDataTask] Wait for the initializing have been done!");
-    for( ; systemStage == SYSTEM_INIT; vTaskDelay(1));
+    __tag_log(STR(generateByteDataTask), "Wait for the initializing have been done!");
+    while(IS_SYSTEM_INIT) vTaskDelay(1);
 
-    __entry("prepairNSendDataTask(%p)", pv);
+    __entry("generateByteDataTask(%p)", pv);
 
-    while (systemStage != SYSTEM_STOPPED){
-        if(__hasFlagBitSet(sendControlFlag, SENDCTRL_REPEAT_SEND)) {
+    while (! IS_SYSTEM_STOPPED){
+        if(__hasFlagBitSet(byteDataGenCtrlFlag, BDCTRL_REPEAT_SEND)) {
             vTaskDelay(1);
         }else{
-            sendByteData = ((generateRandom(0)) % (126-32+1)) + 32;
-            // __log("[prepairNSendDataTask] Generated : %c", sendByteData);
+            byteData = ((generateRandom(0)) % (126-32+1)) + 32;
+            __tag_log1(STR(generateByteDataTask), "Generated : %c", byteData);
             vTaskDelay(DATAFR_INTERVAL);
         }
     }
     
-    __exit("prepairNSendDataTask()");
+    __exit("generateByteDataTask()");
 }
 
 /// MODE CONTROL TASK /////////////////////////////////////////////////////////////////////////////
@@ -375,8 +410,8 @@ def modeSwitch(){
 void modeControlTask(void * pv){
     
     /// Wait for the initializing done
-    __log("[modeControlTask] Wait for the initializing have been done!");
-    for( ; systemStage == SYSTEM_INIT; vTaskDelay(1));
+    __tag_log("modeControlTask", "Wait for the initializing have been done!");
+    for( ; IS_SYSTEM_INIT; vTaskDelay(1));
 
     __entry("modeControlTask(%p)", pv);
     
@@ -405,7 +440,7 @@ void modeControlTask(void * pv){
     __log("[modeControlTask] Default mode: %d", systemMode);
     if(modeSwitch() != OKE) __err("[modeControlTask] Can not switch mode!");
 
-    while( systemStage != SYSTEM_STOPPED ){
+    while( ! IS_SYSTEM_STOPPED ){
         if((*longPressedNum) > 0 ){
 
             __log("Detected %d shorts pressed --> Changed mode!", (*longPressedNum));
@@ -428,3 +463,8 @@ void modeControlTask(void * pv){
 }
 
 /// OTHERS ////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+#endif

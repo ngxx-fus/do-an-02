@@ -82,6 +82,14 @@
 /// To config font, check fontUtils.c in fonts/
 /// Currently, the font is: TomThumb
 
+/// System log level set-up
+/// - [1] : Only error can be logged 
+/// - [2] : Error, entry, exit, can be logged 
+/// - [3] : Error, entry, exit, message can be logged 
+/// - [4] : Detail log
+/// See code in espLogWrapper.h
+#define SYSTEM_LOG_LEVEL 3
+
 /// To config the com protocol at begin,
 /// See ENUM_SYSTEM_MODE enum in helper/general.h.
 #define STARTUP_COM_MODE 0

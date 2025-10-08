@@ -74,6 +74,8 @@
         "tuple": "c",
         "type_traits": "c",
         "utility": "c",
-        "variant": "c"
+        "variant": "c",
+        "expected": "c",
+        "optional": "c"
     }
 }

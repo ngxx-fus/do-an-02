@@ -451,11 +451,11 @@ def spiSetTransmitBuffer(spiDev_t * dev, void * tBuff, size_t size){
             spiSetMISO_SlaveMode(dev, UINT8_ARRAY(dev->tBuff, dev->tBuffIndex) & 0x80);
     }
 
-    __spiExit("spiSetTransmitBuffer() : %s", OKE);
+    __spiExit("spiSetTransmitBuffer() : %s", STR(OKE));
     return OKE;
 
     spiSetTransmitBuffer_ReturnERR_NULL:
-    __spiExit("spiSetTransmitBuffer() : %s", ERR_NULL);
+    __spiExit("spiSetTransmitBuffer() : %s", STR(ERR_NULL));
     return ERR_NULL;
 }
 
@@ -463,17 +463,17 @@ def spiSetReceiveBuffer(spiDev_t * dev, void * rBuff, size_t size){
     __spiEntry("spiSetReceiveBuffer(%p, %p, %d)", dev, rBuff, size);
 
     if(__is_null(dev)){
-        __spiErr("dev = %p is invalid!", dev);
+        __spiErr("[spiSetReceiveBuffer] dev = %p is invalid!", dev);
         goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
     if(__is_null(rBuff)){
-        __spiErr("rBuff = %p is invalid!", rBuff);
+        __spiErr("[spiSetReceiveBuffer] rBuff = %p is invalid!", rBuff);
         goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
     if(__isnot_positive(size)){
-        __spiErr("size = %d is invalid!", size);
+        __spiErr("[spiSetReceiveBuffer] size = %d is invalid!", size);
         goto spiSetReceiveBuffer_ReturnERR_NULL;
     }
 
@@ -497,17 +497,17 @@ def spiStartTransaction(spiDev_t * dev) {
 
     /// NULL check
     if (__is_null(dev)) {
-        __spiErr("dev is null!");
+        __spiErr("[spiStartTransaction] dev is null!");
         ret = ERR_NULL; goto spiStartTransaction_ReturnERR1; 
     }
     /// Safety checks
     if (__isnot_positive(dev->tBuffSize) || __is_null(dev->tBuff)) {
-        __spiErr("tx buffer invalid (ptr=%p size=%d)", dev->tBuff, dev->tBuffSize);
+        __spiErr("[spiStartTransaction] tx buffer invalid (ptr=%p size=%d)", dev->tBuff, dev->tBuffSize);
         ret = ERR_INVALID_ARG; goto spiStartTransaction_ReturnERR1;
     }
     /// Check mode: only master supported
     if (__hasFlagBitSet(dev->conf, SPI_MODE) != SPI_MASTER) {
-        __spiErr("Wrong mode or Function!");
+        __spiErr("[spiStartTransaction] Wrong mode or Function!");
         ret = ERR_INVALID_ARG; goto spiStartTransaction_ReturnERR1;
     }
 
@@ -540,7 +540,7 @@ def spiStartTransaction(spiDev_t * dev) {
                 spiSetCLKState(dev, SPICLK_ACTIVE);
                 /// Sample MISO
                 if (ableToReceive) 
-                spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
+                    spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
                 /// Delay for a half of CLK period
                 __spiDelay(500000/(dev->freq));
                 /// Make 2nd edge
@@ -569,7 +569,7 @@ def spiStartTransaction(spiDev_t * dev) {
             spiSetCLKState(dev, SPICLK_IDLE);
             /// Sample MISO
             if (ableToReceive) 
-            spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
+                spiReceiveBuffPushBit(dev, GPIO.in & __mask32(dev->miso));
             /// Delay for a half of CLK period
             __spiDelay(500000/(dev->freq));
         }
@@ -588,7 +588,7 @@ def spiStartTransaction(spiDev_t * dev) {
     // spiStartTransaction_ReturnERR0:
         // vPortExitCritical(&(dev->mutex));
     spiStartTransaction_ReturnERR1:
-        __spiExit("spiStartTransaction() : %d", getDefRetStat_Str(ret));
+        __spiExit("spiStartTransaction() : %s", getDefRetStat_Str(ret));
         return ret;
 }
 

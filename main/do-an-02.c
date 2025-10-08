@@ -5,118 +5,69 @@
     #include "receiver.h"
 #endif
 
-
-/// System Stage 
-volatile flag_t systemStage = SYSTEM_INIT;
-portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
-
-/// OLED Flags
-volatile flag_t oledFlag = OLED_REQ_COUNT;
-portMUX_TYPE oledFlagMutex = portMUX_INITIALIZER_UNLOCKED;
-
-/// System Mode
-volatile flag_t systemMode = SYSTEM_MODE_SPI;
-volatile flag_t currentSystemMode = -1;
-portMUX_TYPE systemModeMutex = portMUX_INITIALIZER_UNLOCKED;
-
-/// Communication Object
-void* comObject = NULL;
-
-/// Random 8-bit char (printable)
-volatile uint8_t sendByteData = '?';
-
-/// Random 8-bit char (printable)
-volatile uint8_t receivedByteData = '?';
-
-volatile flag_t  sendControlFlag = 0;
-
 void app_main(void){
     __entry("app_main()");
 
-    __log("Set systemStage = SYSTEM_INIT");
+    __tag_log(STR(app_main), "Set systemStage = SYSTEM_INIT");
     systemStage = SYSTEM_INIT;
     
-    __log("Start up OLED screen");
+    __tag_log(STR(app_main), "Start up OLED screen");
     oled128x64Dev_t *oled;
     createOLEDDevice(&oled);
     configOLEDDevice(oled, OLED_SCL, OLED_SDA, I2C_INFINITY_MODE);
     startupOLEDDevice(oled);
-    __log("Start up...");
+    __tag_log(STR(app_main), "Start up...");
     drawLineText(oled, "Start up ...", 0xF00 | 0x00 );
-    
-    // __log("Enter test mode!");
-    // drawLineText(oled, "Test mode", 0xF00 | 0x00 );
-    // ledTest(NULL);
 
-    __log("[+] oledTask()");
-    drawLineText(oled, "[+] oledTask()", 0xF00 | 0x00 );
-    xTaskCreate(oledTask, "oledTask", 2048, oled, 7, NULL);
+    __tag_log(STR(app_main), "[+] generateByteDataTask()");
+    drawLineText(oled, "[+] generateByteDataTask()", 0xF00 | 0x00 );
+    xTaskCreate(generateByteDataTask, "generateByteDataTask", 2048, NULL, 7, NULL);
 
-    __log("[+] prepairNSendDataTask()");
-    drawLineText(oled, "[+] prepairNSendDataTask()", 0xF00 | 0x00 );
-    xTaskCreate(prepairNSendDataTask, "prepairNSendDataTask", 2048, NULL, 7, NULL);
-
-    __log("[+] modeControlTask()");
+    __tag_log(STR(app_main), "[+] modeControlTask()");
     drawLineText(oled, "[+] modeControlTask()", 0xF00 | 0x00 );
     xTaskCreate(modeControlTask, "modeControlTask", 2048, NULL, 7, NULL);
 
-    __log("Set systemStage = SYSTEM_RUNNING");
+    __tag_log(STR(app_main), "Set systemStage = SYSTEM_RUNNING");
     systemStage = SYSTEM_RUNNING;
 
-    char mode[] = /*2*/ "M: "  /*6*/ "1-WIRE" /*1*/;
-    char send[] = /*10*/ "> 000 : c";
-    char rcvd[] = /*10*/ "< 000 : c";
+    char buff[64] = {};
 
     drawLineText(oled, "Running...", 0xF00 | 0x00 );
 
-    uint8_t currentDataFrame = sendByteData;
+    uint8_t currentDataFrame = byteData;
+    uint8_t receivedDataFrame = '0';
+
+    setTransmitBuff(&currentDataFrame, 1);
+    setReceiveBuff(&receivedDataFrame, 1);
 
     while (systemStage != SYSTEM_STOPPED){
-        /// Catch current sendByteData
-        currentDataFrame = sendByteData;
+        /// Catch current byteData
+        currentDataFrame = byteData;
+        setTransmitBuff(&currentDataFrame, 1);
+        setReceiveBuff(&receivedDataFrame, 1);
+
+        oledFillScreen(oled, 0);
 
         /// Display mode and dataframe
         switch (currentSystemMode){
-            case SYSTEM_MODE_SPI:
-                mode[3] = 'S'; mode[4] = 'P'; mode[5] = 'I'; mode[6] = ' '; mode[7] = ' '; mode[8] = ' ';
-                break;
-            case SYSTEM_MODE_I2C:
-                mode[3] = 'I'; mode[4] = '2'; mode[5] = 'C'; mode[6] = ' '; mode[7] = ' '; mode[8] = ' ';
-                break;
-            case SYSTEM_MODE_UART:
-                mode[3] = 'U'; mode[4] = 'A'; mode[5] = 'R'; mode[6] = 'T'; mode[7] = ' '; mode[8] = ' ';
-                break;
-            case SYSTEM_MODE_1WIRE:
-                mode[3] = '1'; mode[4] = '-'; mode[5] = 'W'; mode[6] = 'I'; mode[7] = 'R'; mode[8] = 'E';
-                break;
+            case SYSTEM_MODE_SPI: snprintf(buff, sizeof(buff), "M: SPI"); break;
+            case SYSTEM_MODE_I2C: snprintf(buff, sizeof(buff), "M: I2C"); break;
+            case SYSTEM_MODE_UART:snprintf(buff, sizeof(buff), "M: UART");break;
+            case SYSTEM_MODE_1WIRE:snprintf(buff, sizeof(buff), "M: 1-WIRE");break;
         }
+        oledDrawText(oled, 20, 0, buff, 1, 1, 20);
+        /// Display send byte data
+        snprintf(buff, sizeof(buff), "> %02XH : %c", currentDataFrame, currentDataFrame);
+        oledDrawText(oled, 40, 0, buff, 1, 1, 20);
 
-        mode[9] = '\0';
-        send[2] = '0' + (currentDataFrame / 100);
-        send[3] = '0' + ((currentDataFrame % 100) / 10);
-        send[4] = '0' + (currentDataFrame  % 10);
-        send[5] = ' ';
-        send[6] = ':';
-        send[7] = ' ';
-        send[8] = currentDataFrame;
-        send[9] = '\0';
+        oledFlush(oled);
 
-        drawLineText(oled, mode, __masks32(19) | 0xF00 | 0x00 );
-        drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x01 );
+        sendDataBuff();
 
-        /// Send byte data frame
-        sendDataFrame(currentDataFrame, &receivedByteData);
+        snprintf(buff, sizeof(buff), "< %02XH : %c", receivedDataFrame, receivedDataFrame);
+        oledDrawText(oled, 60, 0, buff, 1, 1, 20);
 
-        /// Display data frame if success
-        rcvd[2] = '0' + (receivedByteData / 100);
-        rcvd[3] = '0' + ((receivedByteData % 100) / 10);
-        rcvd[4] = '0' + (receivedByteData  % 10);
-        rcvd[5] = ' ';
-        rcvd[6] = ':';
-        rcvd[7] = ' ';
-        rcvd[8] = receivedByteData;
-        rcvd[9] = '\0';
-        drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x02 );
+        oledFlush(oled);
 
         vTaskDelay(DATAFR_INTERVAL);
     }
