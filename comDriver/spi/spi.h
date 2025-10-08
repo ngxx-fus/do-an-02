@@ -98,6 +98,12 @@ typedef struct spiDev_t {
     size_t      rBuffIndex;
     size_t      rBuffMask;
 
+    /// Private:
+
+    uint8_t     __cpha;             /// NOTE: Only can be set via config function!
+    uint8_t     __cpol;             /// NOTE: Only can be set via config function!
+    uint8_t     __master_slave;     /// 0: Master | 1: Slave. NOTE: Only can be set via config function!
+
     portMUX_TYPE mutex;
 } spiDev_t;
 
@@ -187,7 +193,7 @@ def createSPIDevice(spiDev_t ** pDev);
 /// @param config Set MODE, CPOL, CPHA bit.
 /// @return Default return status
 /// @note - Config flag: MSB<[31]-[30]-...-[2:CPHA]-[1:CPOL]-[0:MODE]>LSB
-/// @note - In slave mode, txdPtr, txdSize, rxdPtr, rxdSize have to be set before any transaction!
+/// @note - In slave mode, tBuff, tBuffSize, rBuff, rBuffSize have to be set before any transaction!
 def configSPIDevice(spiDev_t * dev,pin_t CLK, pin_t MOSI, pin_t MISO, pin_t CS,uint32_t freq, flag_t config);
 
 /// @brief Startup (init gpio, ...) base on the config of spiDev
@@ -217,17 +223,17 @@ def spiResetReceiveIndex(spiDev_t * dev);
 
 /// @brief Set SPI transmit buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
-/// @param txdPtr The pointer to transmit buffer
+/// @param tBuff The pointer to transmit buffer
 /// @param size Size of the transmit buffer (in byte)
 /// @return Default return status
-def spiSetTransmitBuffer(spiDev_t * dev, void * txdPtr, size_t size);
+def spiSetTransmitBuffer(spiDev_t * dev, void * tBuff, size_t size);
 
 /// @brief Set SPI receive buffer
 /// @param dev A pointer to the place which is storing the spiDev_t
-/// @param rxdPtr The pointer to receive buffer
+/// @param rBuff The pointer to receive buffer
 /// @param size Size of the receive buffer (in byte)
 /// @return Default return status
-def spiSetReceiveBuffer(spiDev_t * dev, void * rxdPtr, size_t size);
+def spiSetReceiveBuffer(spiDev_t * dev, void * rBuff, size_t size);
 
 /// @brief Start the spi transaction (Master only)
 /// @param dev Pointer to spiDev_t

@@ -56,17 +56,17 @@ def startupI2CDevice(i2cDev_t * dev);
 
 /// @brief Set transmit buffer for I2C
 /// @param dev Pointer to i2cDev_t
-/// @param txdPtr Pointer to transmit buffer
+/// @param tBuff Pointer to transmit buffer
 /// @param size Size of transmit buffer (in bytes)
 /// @return Default return status
-def i2cSetTransmitBuffer(i2cDev_t * dev, void * txdPtr, size_t size);
+def i2cSetTransmitBuffer(i2cDev_t * dev, void * tBuff, size_t size);
 
 /// @brief Set receive buffer for I2C
 /// @param dev Pointer to i2cDev_t
-/// @param rxdPtr Pointer to receive buffer
+/// @param rBuff Pointer to receive buffer
 /// @param size Size of transmit buffer (in bytes)
 /// @return Default return status
-def i2cSetReceiveBuffer(i2cDev_t * dev, void * rxdPtr, size_t size);
+def i2cSetReceiveBuffer(i2cDev_t * dev, void * rBuff, size_t size);
 
 /// @brief Send a specified byte 
 /// @param dev Pointer to i2cDev_t

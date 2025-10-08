@@ -316,7 +316,7 @@ def modeSwitch(){
                 ret = createSPIDevice(&spi);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
                 
-                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, COM_SPI_FREQ, SPI_10_MASTER);
+                ret = configSPIDevice(spi, PIN0, PIN1, PIN2, PIN3, COM_SPI_FREQ, COM_SPI_CONF);
                 if(ret!=OKE) goto modeSwitch_ReturnERR;
 
                 ret = startupSPIDevice(spi);

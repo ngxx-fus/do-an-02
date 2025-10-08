@@ -64,8 +64,8 @@ void app_main(void){
     systemStage = SYSTEM_RUNNING;
 
     char mode[] = /*2*/ "M: "  /*6*/ "1-WIRE" /*1*/;
-    char send[] = /*3*/ "> ?";
-    char rcvd[] = /*2*/ "< ?";
+    char send[] = /*10*/ "> 000 : c";
+    char rcvd[] = /*10*/ "< 000 : c";
 
     drawLineText(oled, "Running...", 0xF00 | 0x00 );
 
@@ -91,9 +91,15 @@ void app_main(void){
                 break;
         }
 
-        send[2] = currentDataFrame;
         mode[9] = '\0';
-        send[3] = '\0';
+        send[2] = '0' + (currentDataFrame / 100);
+        send[3] = '0' + ((currentDataFrame % 100) / 10);
+        send[4] = '0' + (currentDataFrame  % 10);
+        send[5] = ' ';
+        send[6] = ':';
+        send[7] = ' ';
+        send[8] = currentDataFrame;
+        send[9] = '\0';
 
         drawLineText(oled, mode, __masks32(19) | 0xF00 | 0x00 );
         drawLineText(oled, send, __masks32(16, 17, 18) | 0xF00 | 0x01 );
@@ -102,8 +108,14 @@ void app_main(void){
         sendDataFrame(currentDataFrame, &receivedByteData);
 
         /// Display data frame if success
-        rcvd[2] = receivedByteData;
-        rcvd[3] = '\0';
+        rcvd[2] = '0' + (receivedByteData / 100);
+        rcvd[3] = '0' + ((receivedByteData % 100) / 10);
+        rcvd[4] = '0' + (receivedByteData  % 10);
+        rcvd[5] = ' ';
+        rcvd[6] = ':';
+        rcvd[7] = ' ';
+        rcvd[8] = receivedByteData;
+        rcvd[9] = '\0';
         drawLineText(oled, rcvd, __masks32(16, 17, 18) | 0xF00 | 0x02 );
 
         vTaskDelay(DATAFR_INTERVAL);
