@@ -84,7 +84,6 @@ def shifByteLeft(uint8_t *arr, size_t size, uint8_t newByte) {
 /// @param size    Number of bytes in the array
 /// @param newByte The new byte to insert at the beginning
 /// @return Default return status
-
 def shiftByteRight(uint8_t *arr, size_t size, uint8_t newByte) {
     if (__is_null(arr)) {
         __spiErr("[shiftByteRight] arr = %p is invalid!", arr);
@@ -115,7 +114,7 @@ static inline __attribute__((always_inline))
 void spiResetRBuff(spiDev_t *dev){
     dev->rBuffIndex = 0;
     dev->rBuffMask  = 0x80;
-    memset(dev->rBuff, 0, dev->rBuffSize);
+    // memset(dev->rBuff, 0, dev->rBuffSize);
     __setFlagBit(dev->stat, SPISTAT_RBUFF_EMPTY);
     __clearFlagBit(dev->stat, SPISTAT_RBUFF_FULL);
 }
@@ -203,6 +202,8 @@ static
 void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;
 
+    if (__is_positive(GPIO.in & __mask32(dev->cs))) return;
+    
     uint8_t clkLevel = __is_positive(GPIO.in & __mask32(dev->clk));
 
     uint8_t isRising = (dev->__cpol) ? !clkLevel : clkLevel;
@@ -211,14 +212,14 @@ void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     uint8_t outBit       = 0;
 
     if (isSampleEdge) {
-        __spiLog1(">> %d", clkLevel);
+        // __spiLog1(">> %d", clkLevel);
         // Sample MOSI
         spiReceiveBuffPushBit(dev, __is_positive(GPIO.in & __mask32(dev->mosi)));
-    } else if (isShiftEdge) {
+    } else {
         // Export MISO
         spiTransmitBuffGetNextBit(dev, &outBit);
         spiSetMISO_SlaveMode(dev, outBit);
-        __spiLog1("<< %d", outBit);
+        // __spiLog1("<< %d", outBit);
     }
 }
 
@@ -229,12 +230,12 @@ void IRAM_ATTR spiHandleCSIsr(void* pv) {
     if (__is_positive(GPIO.in & __mask32(dev->cs))) {
         __spiLog1("CS rising edge");
         /// CS rising edge — end of transaction
-        gpio_intr_disable(dev->clk);
+        // gpio_intr_disable(dev->clk);
         
     } else {
         __spiLog1("CS falling edge");
         /// CS falling edge — start of transaction
-        gpio_intr_enable(dev->clk);
+        // gpio_intr_enable(dev->clk);
 
 
         /// For CPHA = 0, export the first MSB bit immediately (before 1st clock edge)
@@ -409,11 +410,11 @@ def startupSPIDevice(spiDev_t * dev){
             __spiLog1("CLK ISR attached to GPIO %d", dev->clk);
         }
 
-        if (__isnot_negative(dev->cs)) {
-            gpio_set_intr_type(dev->cs, GPIO_INTR_ANYEDGE);
-            gpio_isr_handler_add(dev->cs, spiHandleCSIsr, dev);
-            __spiLog1("CS ISR attached to GPIO %d", dev->cs);
-        }
+        // if (__isnot_negative(dev->cs)) {
+        //     gpio_set_intr_type(dev->cs, GPIO_INTR_ANYEDGE);
+        //     gpio_isr_handler_add(dev->cs, spiHandleCSIsr, dev);
+        //     __spiLog1("CS ISR attached to GPIO %d", dev->cs);
+        // }
     }
 
     __spiExit("startupSPIDevice() : %s", STR(OKE));

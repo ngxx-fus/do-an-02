@@ -48,7 +48,7 @@ Data is receiving from MSB to LSB in a byte, and fill from 0 in a buffer.
  *      3 : Log state inside the function, ...
  *      4 : The lowest level of logs, it log all things, includes every byte will be sent!
 */
-#define SPI_LOG_LEVEL 4
+#define SPI_LOG_LEVEL 3
 
 #if SPI_LOG_LEVEL >= 1
     #define __spiErr(...)       __err( __VA_ARGS__ )

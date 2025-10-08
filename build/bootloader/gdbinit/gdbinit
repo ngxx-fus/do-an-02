@@ -1,0 +1,2 @@
+source /home/fus/Documents/DO-AN-02/build/bootloader/gdbinit/symbols
+source /home/fus/Documents/DO-AN-02/build/bootloader/gdbinit/connect
