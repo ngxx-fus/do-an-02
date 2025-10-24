@@ -1,6 +1,6 @@
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/stack_check.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_system/stack_check.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
@@ -41,6 +41,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/stack_check.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_random.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h

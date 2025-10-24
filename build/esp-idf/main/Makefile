@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles /home/fus/Documents/DO-AN-02/build/esp-idf/main//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/main/CMakeFiles/__idf_main.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/CMakeFiles/__idf_main.dir/rule
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/main/CMakeFiles/__idf_main.dir/rule
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/rule
 
 # Convenience name for target.
@@ -172,32 +172,32 @@ __idf_main: esp-idf/main/CMakeFiles/__idf_main.dir/rule
 
 # fast build rule for target.
 __idf_main/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
 .PHONY : __idf_main/fast
 
-do-an-02.obj: do-an-02.c.obj
-.PHONY : do-an-02.obj
+myApp.obj: myApp.c.obj
+.PHONY : myApp.obj
 
 # target to build an object file
-do-an-02.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj
-.PHONY : do-an-02.c.obj
+myApp.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj
+.PHONY : myApp.c.obj
 
-do-an-02.i: do-an-02.c.i
-.PHONY : do-an-02.i
+myApp.i: myApp.c.i
+.PHONY : myApp.i
 
 # target to preprocess a source file
-do-an-02.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.i
-.PHONY : do-an-02.c.i
+myApp.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.i
+.PHONY : myApp.c.i
 
-do-an-02.s: do-an-02.c.s
-.PHONY : do-an-02.s
+myApp.s: myApp.c.s
+.PHONY : myApp.s
 
 # target to generate assembly for a file
-do-an-02.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.s
-.PHONY : do-an-02.c.s
+myApp.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.s
+.PHONY : myApp.c.s
 
 # Help Target
 help:
@@ -212,9 +212,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... __idf_main"
-	@echo "... do-an-02.obj"
-	@echo "... do-an-02.i"
-	@echo "... do-an-02.s"
+	@echo "... myApp.obj"
+	@echo "... myApp.i"
+	@echo "... myApp.s"
 .PHONY : help
 
 
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

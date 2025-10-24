@@ -63,26 +63,25 @@ esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: /home/fus/.fus/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
-/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
+/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
 
@@ -159,8 +158,6 @@ config/sdkconfig.h:
 /home/fus/.fus/esp-idf/components/log/include/esp_log.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
 

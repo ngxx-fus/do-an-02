@@ -1,7 +1,7 @@
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/flockfile.c.obj: \
  /home/fus/.fus/esp-idf/components/newlib/src/flockfile.c \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \

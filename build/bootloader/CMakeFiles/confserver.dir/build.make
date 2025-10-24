@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for confserver.
 
@@ -67,8 +67,8 @@ include CMakeFiles/confserver.dir/compiler_depend.make
 include CMakeFiles/confserver.dir/progress.make
 
 CMakeFiles/confserver:
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfserver --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02/sdkconfig
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config.env
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfserver --env-file /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config.env --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02-LCD/sdkconfig
 
 CMakeFiles/confserver.dir/codegen:
 .PHONY : CMakeFiles/confserver.dir/codegen
@@ -86,6 +86,6 @@ CMakeFiles/confserver.dir/clean:
 .PHONY : CMakeFiles/confserver.dir/clean
 
 CMakeFiles/confserver.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/confserver.dir/depend
 

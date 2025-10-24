@@ -82,8 +82,8 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/rmt_legacy.c.obj: /home/fu
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/gpio_ll.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/rmt_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpio_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/rmt_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/rmt_hal.h \
@@ -110,35 +110,34 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/rmt_legacy.c.obj: /home/fu
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rmt_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rmt_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_reg.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/rmt_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -208,6 +207,7 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c.c.obj: /home/fus/.fus/esp-idf
   /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h \
   /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/esp_private/gpio.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/clk_ctrl_os.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
@@ -239,8 +239,8 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c.c.obj: /home/fus/.fus/esp-idf
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/gpio_ll.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/i2c_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpio_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/i2c_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/hal_utils.h \
@@ -268,36 +268,35 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c.c.obj: /home/fus/.fus/esp-idf
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/i2c_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/i2c_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/i2c_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/i2c_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_reg.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/i2c_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -311,7 +310,7 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c.c.obj: /home/fus/.fus/esp-idf
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
   config/sdkconfig.h
 
-esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj: /home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c \
+esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32s3/touch_sensor.c.obj: /home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32s3/touch_sensor.c \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
@@ -349,7 +348,6 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h \
-  /home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32/include/driver/touch_sensor_legacy.h \
   /home/fus/.fus/esp-idf/components/driver/touch_sensor/include/driver/touch_sensor_common.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
@@ -370,12 +368,10 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/rtc_ctrl.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h \
-  /home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
-  /home/fus/.fus/esp-idf/components/esp_timer/include/esp_timer.h \
   /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
   /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h \
   /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
@@ -394,8 +390,8 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_hal.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_hal.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_io_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sens_types.h \
@@ -421,33 +417,30 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/esp32/touch_sensor.c.obj
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/sens_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/sdmmc_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/touch_sensor_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/usb_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sens_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/touch_sensor_periph.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -538,8 +531,8 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/touch_sensor_common.c.ob
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_hal.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_hal.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sens_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sensor_hal.h \
@@ -564,30 +557,30 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/touch_sensor/touch_sensor_common.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdio_slave_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/sens_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/sdmmc_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/touch_sensor_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/usb_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sens_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/touch_sensor_periph.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -684,11 +677,7 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/twai_ll.h \
-  /home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h \
-  /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/twai_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/twai_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/twai_types.h \
@@ -713,33 +702,27 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/twai_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/chip_revision.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/twai_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/twai_periph.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -754,71 +737,55 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
   config/sdkconfig.h
 
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h:
-
 /home/fus/.fus/esp-idf/components/hal/include/hal/twai_types.h:
-
-/home/fus/.fus/esp-idf/components/hal/include/hal/twai_hal.h:
-
-/home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h:
-
-/home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/twai_ll.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_gpio_reserve.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_pins.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdio_slave_pins.h:
-
 /home/fus/.fus/esp-idf/components/soc/include/soc/touch_sensor_periph.h:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sens_struct.h:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/touch_sensor_pins.h:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_pins.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/sdmmc_pins.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sensor_legacy_types.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_io_types.h:
 
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_ll.h:
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_ll.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h:
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/touch_sensor_hal.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/rtc_ctrl.h:
 
-/home/fus/.fus/esp-idf/components/esp_timer/include/esp_timer.h:
-
 /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/rtc_io.h:
 
-/home/fus/.fus/esp-idf/components/driver/touch_sensor/include/driver/touch_sensor_common.h:
-
-/home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32/include/driver/touch_sensor_legacy.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/queue.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/ctype.h:
 
+/home/fus/.fus/esp-idf/components/hal/include/hal/twai_hal.h:
+
+/home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32s3/touch_sensor.c:
+
 /home/fus/.fus/esp-idf/components/soc/include/soc/i2c_periph.h:
 
-/home/fus/.fus/esp-idf/components/hal/include/hal/twai_types_deprecated.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/i2c_struct.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/i2c_reg.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/i2c_reg.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/i2c_types.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h:
-
 /home/fus/.fus/esp-idf/components/hal/include/hal/hal_utils.h:
 
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/i2c_ll.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/twai_struct.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_struct.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/usb_pins.h:
+
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/clk_ctrl_os.h:
 
 /home/fus/.fus/esp-idf/components/driver/i2c/include/driver/i2c.h:
 
@@ -830,6 +797,8 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h:
+
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk.h:
@@ -840,15 +809,25 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h:
+
 /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h:
+/home/fus/.fus/esp-idf/components/driver/touch_sensor/include/driver/touch_sensor_common.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/i2c_struct.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
+
+/home/fus/.fus/esp-idf/components/hal/include/hal/twai_types_deprecated.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/param.h:
 
@@ -856,13 +835,11 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_reg.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk_tree_common.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h:
-
-/home/fus/.fus/esp-idf/components/soc/include/soc/chip_revision.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:
 
@@ -872,13 +849,9 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h:
-
 /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sens_types.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
-/home/fus/.fus/esp-idf/components/esp_driver_gpio/include/esp_private/gpio.h:
 
 /home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h:
 
@@ -888,10 +861,6 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h:
@@ -899,10 +868,6 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h:
-
-/home/fus/.fus/esp-idf/components/esp_pm/include/esp_pm.h:
-
-/home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h:
 
@@ -916,27 +881,13 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/sens_struct.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_check.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_struct.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/queue.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_reg.h:
-
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_clk_tree.h:
 
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/i2c_hal.h:
 
@@ -948,13 +899,13 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
 
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/touch_sensor_hal.h:
+/home/fus/.fus/esp-idf/components/log/include/esp_log_config.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h:
-
 /home/fus/.fus/esp-idf/components/heap/include/heap_memory_layout.h:
+
+/home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/fus/.fus/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
@@ -968,8 +919,6 @@ esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj: /home/fus/.fus/esp-i
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
-
 config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h:
@@ -980,8 +929,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h:
 
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/gpio_ll.h:
-
 /home/fus/.fus/esp-idf/components/driver/deprecated/rmt_legacy.c:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h:
@@ -990,13 +937,13 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
+
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/periph_ctrl.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_args.h:
 
@@ -1005,8 +952,6 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h:
 
 /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:
-
-/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
 
 /home/fus/.fus/esp-idf/components/driver/i2c/i2c.c:
 
@@ -1020,15 +965,9 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h:
 
-/home/fus/.fus/esp-idf/components/log/include/esp_log_config.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h:
 
 /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:
 
@@ -1036,9 +975,15 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h:
 
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_struct.h:
 
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h:
 
@@ -1046,19 +991,21 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h:
+/home/fus/.fus/esp-idf/components/esp_pm/include/esp_pm.h:
+
+/home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h:
+
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpio_ll.h:
+
+/home/fus/.fus/esp-idf/components/esp_driver_gpio/include/esp_private/gpio.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h:
 
 /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/twai_struct.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sensor_hal.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:
 
@@ -1074,9 +1021,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_struct.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/rmt_hal.h:
 
@@ -1098,15 +1047,13 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
+
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
 
 /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/rmt_ll.h:
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/rmt_ll.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:
 
@@ -1114,23 +1061,17 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_hal.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h:
-
-/home/fus/.fus/esp-idf/components/heap/include/soc/soc_memory_layout.h:
-
-/home/fus/.fus/esp-idf/components/hal/include/hal/rmt_types.h:
-
 /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h:
+
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/twai_ll.h:
 
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h:
+
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
-
 /home/fus/.fus/esp-idf/components/driver/touch_sensor/touch_sensor_common.c:
-
-/home/fus/.fus/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c:
 
 /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h:
 
@@ -1146,38 +1087,48 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_format.h:
 
-/home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/i2c_ll.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h:
+/home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_struct.h:
+/home/fus/.fus/esp-idf/components/hal/include/hal/rmt_types.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h:
+/home/fus/.fus/esp-idf/components/heap/include/soc/soc_memory_layout.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rmt_struct.h:
+/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/clk_ctrl_os.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
+
+/home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rmt_struct.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_reg.h:

@@ -24,6 +24,7 @@ typedef int32_t def;
 #define STR_ERR_PERMISSION     "ERR_PERMISSION"
 #define STR_ERR_CRC            "ERR_CRC"
 #define STR_ERR_INIT_FAILED    "ERR_INIT_FAILED"
+#define STR_ERR_PSRAM_FAILED   "STR_ERR_PSRAM_FAILED"
 
 /// Standardized return status codes for functions.
 enum DEFAULT_RETURN_STATUS {
@@ -44,6 +45,7 @@ enum DEFAULT_RETURN_STATUS {
     ERR_PERMISSION      = -14, /// Permission denied
     ERR_CRC             = -15, /// CRC check failed (data corrupted)
     ERR_INIT_FAILED     = -16, /// Initialization failed
+    ERR_PSRAM_FAILED    = -17, /// 
 };
 
 const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret);

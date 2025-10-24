@@ -35,8 +35,11 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/aes_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/sha_types.h \
@@ -108,7 +111,9 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -162,8 +167,11 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/timespec.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/types.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/time.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/aes_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/sha_types.h \
@@ -241,7 +249,9 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -252,15 +262,15 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m_driver_entrypoints.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/time.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_config_key_pair_types.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/types.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/signal.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m/p256-m.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/types.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cmac.h:
 
@@ -269,6 +279,8 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/chacha20.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/sha_types.h:
+
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h:
 
@@ -280,10 +292,6 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_legacy.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_psa_superset_legacy.h:
@@ -294,27 +302,29 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_ssl.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/endian.h:
 
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_timeval.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m_driver_entrypoints.h:
+
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/mbedtls_config.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
 
@@ -328,8 +338,6 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/signal.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/syslimits.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
@@ -338,7 +346,7 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+/home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h:
 
@@ -356,6 +364,12 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h:
 
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/select.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_psa.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/build_info.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecjpake.h:
@@ -370,12 +384,6 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h:
-
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h:
-
-/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/limits.h:
@@ -386,9 +394,17 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/time.h:
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_config_key_pair_types.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_legacy.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h:
 
@@ -402,7 +418,11 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/mbedtls/ecp.h:
 
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h:
+
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/poly1305.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
 
@@ -427,12 +447,6 @@ esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entry
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_compat.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_contexts_composites.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_psa.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/build_info.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/select.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h:
 
@@ -486,6 +500,10 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
 
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
+
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ccm.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h:
@@ -498,6 +516,10 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m_driver_entrypoints.c:
 
+/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/time.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/signal.h:
@@ -505,8 +527,6 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_pthreadtypes.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_sigset.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_timeval.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ripemd160.h:
 

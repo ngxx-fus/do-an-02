@@ -15,9 +15,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/cstdlib
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -62,12 +62,12 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Partition.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/SPI_Flash.cpp
@@ -83,9 +83,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/cstdlib
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -134,13 +134,13 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_flash.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/SPI_Flash.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/WL_Ext_Perf.cpp
@@ -156,9 +156,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/cstdlib
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -203,8 +203,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Partition.h
@@ -213,7 +213,7 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Flash.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_State.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/WL_Ext_Safe.cpp
@@ -229,9 +229,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/cstdlib
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -276,8 +276,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Partition.h
@@ -287,7 +287,7 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Ext_Safe.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Flash.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_State.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/WL_Flash.cpp
@@ -303,9 +303,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/cstdlib
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -351,8 +351,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/wear_levelling/crc32.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
@@ -360,7 +360,7 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Config.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Flash.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_State.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/crc32.cpp.obj
  /home/fus/.fus/esp-idf/components/wear_levelling/crc32.cpp
@@ -391,9 +391,9 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.ob
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/new
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/pstl/pstl_config.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/stdlib.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/c++config.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/cpu_defines.h
- /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32/no-rtti/bits/os_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/c++config.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/cpu_defines.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.1.0/xtensa-esp-elf/esp32s3/no-rtti/bits/os_defines.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
@@ -438,8 +438,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.ob
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
  /home/fus/.fus/esp-idf/components/wear_levelling/include/wear_levelling.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/Flash_Access.h
@@ -451,5 +451,5 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.ob
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Ext_Safe.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_Flash.h
  /home/fus/.fus/esp-idf/components/wear_levelling/private_include/WL_State.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 

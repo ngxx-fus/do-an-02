@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_context.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_context.S.obj"
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_intr_asm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_intr_asm.S.obj"
-  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_vectors.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_context.S" "/home/fus/Documents/DO-AN-02-LCD/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_context.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_intr_asm.S" "/home/fus/Documents/DO-AN-02-LCD/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_intr_asm.S.obj"
+  "/home/fus/.fus/esp-idf/components/xtensa/xtensa_vectors.S" "/home/fus/Documents/DO-AN-02-LCD/build/esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xtensa_vectors.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -29,7 +29,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "config"
-  "/home/fus/.fus/esp-idf/components/xtensa/esp32/include"
+  "/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/xtensa/include"
   "/home/fus/.fus/esp-idf/components/xtensa/deprecated_include"
   "/home/fus/.fus/esp-idf/components/newlib/platform_include"
@@ -49,22 +49,25 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/power_supply/include"
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/."
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/include/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/heap/include"
   "/home/fus/.fus/esp-idf/components/heap/tlsf"
   "/home/fus/.fus/esp-idf/components/log/include"
   "/home/fus/.fus/esp-idf/components/soc/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/register"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/register"
   "/home/fus/.fus/esp-idf/components/hal/platform_port/include"
-  "/home/fus/.fus/esp-idf/components/hal/esp32/include"
+  "/home/fus/.fus/esp-idf/components/hal/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/hal/include"
   "/home/fus/.fus/esp-idf/components/esp_rom/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3"
   "/home/fus/.fus/esp-idf/components/esp_common/include"
   "/home/fus/.fus/esp-idf/components/esp_system/include"
   "/home/fus/.fus/esp-idf/components/esp_system/port/soc"

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for partition-table.
 
@@ -67,10 +67,10 @@ include esp-idf/partition_table/CMakeFiles/partition-table.dir/compiler_depend.m
 include esp-idf/partition_table/CMakeFiles/partition-table.dir/progress.make
 
 esp-idf/partition_table/CMakeFiles/partition-table:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table binary generated. Contents:"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --primary-bootloader-offset 0x1000 --flash-size 2MB -- /home/fus/Documents/DO-AN-02/build/partition_table/partition-table.bin
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table binary generated. Contents:"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --primary-bootloader-offset 0x0 --flash-size 2MB -- /home/fus/Documents/DO-AN-02-LCD/build/partition_table/partition-table.bin
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
 
 esp-idf/partition_table/CMakeFiles/partition-table.dir/codegen:
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table.dir/codegen
@@ -84,10 +84,10 @@ esp-idf/partition_table/CMakeFiles/partition-table.dir/build: partition-table
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table.dir/build
 
 esp-idf/partition_table/CMakeFiles/partition-table.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition-table.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition-table.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table.dir/clean
 
 esp-idf/partition_table/CMakeFiles/partition-table.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/partition_table /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table/CMakeFiles/partition-table.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/partition_table /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table/CMakeFiles/partition-table.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for efuse_custom_table.
 
@@ -67,8 +67,8 @@ include esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/compiler_depend.make
 include esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Warning: command \"efuse_custom_table\" is deprecated. Have you wanted to run \"efuse-custom-table\" instead?"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/efuse && /usr/bin/cmake -E echo 
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Warning: command \"efuse_custom_table\" is deprecated. Have you wanted to run \"efuse-custom-table\" instead?"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/efuse && /usr/bin/cmake -E echo 
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/codegen:
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/codegen
@@ -82,10 +82,10 @@ esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build: efuse_custom_table
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/efuse_custom_table.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/efuse_custom_table.dir/cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/clean
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/efuse /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/efuse /home/fus/Documents/DO-AN-02/build/esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/efuse /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/efuse /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/depend
 

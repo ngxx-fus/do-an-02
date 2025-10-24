@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles /home/fus/Documents/DO-AN-02/build/esp-idf/usb//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/usb//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,18 +148,200 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+esp-idf/usb/CMakeFiles/__idf_usb.dir/rule:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
+.PHONY : esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
+
+# Convenience name for target.
+__idf_usb: esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
+.PHONY : __idf_usb
+
+# fast build rule for target.
+__idf_usb/fast:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/build
+.PHONY : __idf_usb/fast
+
+enum.obj: enum.c.obj
+.PHONY : enum.obj
+
+# target to build an object file
+enum.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/enum.c.obj
+.PHONY : enum.c.obj
+
+enum.i: enum.c.i
+.PHONY : enum.i
+
+# target to preprocess a source file
+enum.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/enum.c.i
+.PHONY : enum.c.i
+
+enum.s: enum.c.s
+.PHONY : enum.s
+
+# target to generate assembly for a file
+enum.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/enum.c.s
+.PHONY : enum.c.s
+
+hcd_dwc.obj: hcd_dwc.c.obj
+.PHONY : hcd_dwc.obj
+
+# target to build an object file
+hcd_dwc.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd_dwc.c.obj
+.PHONY : hcd_dwc.c.obj
+
+hcd_dwc.i: hcd_dwc.c.i
+.PHONY : hcd_dwc.i
+
+# target to preprocess a source file
+hcd_dwc.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd_dwc.c.i
+.PHONY : hcd_dwc.c.i
+
+hcd_dwc.s: hcd_dwc.c.s
+.PHONY : hcd_dwc.s
+
+# target to generate assembly for a file
+hcd_dwc.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd_dwc.c.s
+.PHONY : hcd_dwc.c.s
+
+hub.obj: hub.c.obj
+.PHONY : hub.obj
+
+# target to build an object file
+hub.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj
+.PHONY : hub.c.obj
+
+hub.i: hub.c.i
+.PHONY : hub.i
+
+# target to preprocess a source file
+hub.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.i
+.PHONY : hub.c.i
+
+hub.s: hub.c.s
+.PHONY : hub.s
+
+# target to generate assembly for a file
+hub.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.s
+.PHONY : hub.c.s
+
+usb_helpers.obj: usb_helpers.c.obj
+.PHONY : usb_helpers.obj
+
+# target to build an object file
+usb_helpers.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj
+.PHONY : usb_helpers.c.obj
+
+usb_helpers.i: usb_helpers.c.i
+.PHONY : usb_helpers.i
+
+# target to preprocess a source file
+usb_helpers.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.i
+.PHONY : usb_helpers.c.i
+
+usb_helpers.s: usb_helpers.c.s
+.PHONY : usb_helpers.s
+
+# target to generate assembly for a file
+usb_helpers.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.s
+.PHONY : usb_helpers.c.s
+
+usb_host.obj: usb_host.c.obj
+.PHONY : usb_host.obj
+
+# target to build an object file
+usb_host.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj
+.PHONY : usb_host.c.obj
+
+usb_host.i: usb_host.c.i
+.PHONY : usb_host.i
+
+# target to preprocess a source file
+usb_host.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.i
+.PHONY : usb_host.c.i
+
+usb_host.s: usb_host.c.s
+.PHONY : usb_host.s
+
+# target to generate assembly for a file
+usb_host.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.s
+.PHONY : usb_host.c.s
+
+usb_private.obj: usb_private.c.obj
+.PHONY : usb_private.obj
+
+# target to build an object file
+usb_private.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj
+.PHONY : usb_private.c.obj
+
+usb_private.i: usb_private.c.i
+.PHONY : usb_private.i
+
+# target to preprocess a source file
+usb_private.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.i
+.PHONY : usb_private.c.i
+
+usb_private.s: usb_private.c.s
+.PHONY : usb_private.s
+
+# target to generate assembly for a file
+usb_private.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.s
+.PHONY : usb_private.c.s
+
+usbh.obj: usbh.c.obj
+.PHONY : usbh.obj
+
+# target to build an object file
+usbh.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj
+.PHONY : usbh.c.obj
+
+usbh.i: usbh.c.i
+.PHONY : usbh.i
+
+# target to preprocess a source file
+usbh.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.i
+.PHONY : usbh.c.i
+
+usbh.s: usbh.c.s
+.PHONY : usbh.s
+
+# target to generate assembly for a file
+usbh.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.s
+.PHONY : usbh.c.s
 
 # Help Target
 help:
@@ -173,6 +355,28 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... __idf_usb"
+	@echo "... enum.obj"
+	@echo "... enum.i"
+	@echo "... enum.s"
+	@echo "... hcd_dwc.obj"
+	@echo "... hcd_dwc.i"
+	@echo "... hcd_dwc.s"
+	@echo "... hub.obj"
+	@echo "... hub.i"
+	@echo "... hub.s"
+	@echo "... usb_helpers.obj"
+	@echo "... usb_helpers.i"
+	@echo "... usb_helpers.s"
+	@echo "... usb_host.obj"
+	@echo "... usb_host.i"
+	@echo "... usb_host.s"
+	@echo "... usb_private.obj"
+	@echo "... usb_private.i"
+	@echo "... usb_private.s"
+	@echo "... usbh.obj"
+	@echo "... usbh.i"
+	@echo "... usbh.s"
 .PHONY : help
 
 
@@ -184,6 +388,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -69,8 +69,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
@@ -187,11 +187,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -203,13 +202,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -291,8 +290,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
@@ -418,11 +417,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -434,13 +432,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -526,8 +524,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
@@ -656,11 +654,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -671,13 +668,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -761,8 +758,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -851,11 +848,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.h \
@@ -874,13 +870,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -962,7 +958,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -1032,11 +1029,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -1045,13 +1041,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1063,6 +1059,67 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
+  config/sdkconfig.h
+
+esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/fastpsk.c.obj: /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.c \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
+  /home/fus/.fus/esp-idf/components/hal/include/hal/sha_types.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_args.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_buffer.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_color.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_format.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_timestamp.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_log_write.h \
+  /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h \
+  /home/fus/.fus/esp-idf/components/mbedtls/port/include/sha/sha_core.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+  /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.h \
   config/sdkconfig.h
 
 esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/tls_mbedtls.c.obj: /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c \
@@ -1137,8 +1194,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
@@ -1284,11 +1341,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -1305,13 +1361,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/cr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1393,7 +1449,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -1445,11 +1501,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_rrm.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wnm.h \
@@ -1474,13 +1529,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1566,8 +1621,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
@@ -1698,11 +1753,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_eap_client.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client_i.h \
@@ -1735,13 +1789,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/state_machine.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1823,7 +1877,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -1872,11 +1926,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -1907,13 +1960,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1995,7 +2048,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2044,11 +2097,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_owe_i.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -2064,13 +2116,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -2188,7 +2240,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2238,11 +2290,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -2264,13 +2315,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -2352,7 +2403,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2404,11 +2455,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_eap_client.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wps.h \
@@ -2452,13 +2502,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -2540,7 +2590,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2592,11 +2642,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.h \
@@ -2613,13 +2662,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -2701,7 +2750,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2753,11 +2802,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_dpp.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wps.h \
@@ -2789,13 +2837,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/es
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -2878,7 +2926,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/eloop.c.obj: /ho
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -2928,11 +2976,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/eloop.c.obj: /ho
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -2943,13 +2990,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/eloop.c.obj: /ho
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/eloop.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3108,11 +3155,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/os_xtensa.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/time.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -3120,13 +3166,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/os_xtensa.c.obj:
   /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3208,7 +3254,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ap_config.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -3257,11 +3303,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ap_config.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -3281,13 +3326,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ap_config.c.ob
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3369,7 +3414,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/comeback_token
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -3418,11 +3463,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/comeback_token
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -3440,13 +3484,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/comeback_token
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3528,7 +3572,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_11.c.o
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -3577,11 +3621,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_11.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -3607,13 +3650,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_11.c.o
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3695,7 +3738,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_1x.c.o
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -3744,11 +3787,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_1x.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -3775,13 +3817,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_1x.c.o
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/eloop.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -3863,7 +3905,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/pmksa_cache_au
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -3912,11 +3954,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/pmksa_cache_au
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -3935,13 +3976,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/pmksa_cache_au
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/eloop.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4023,7 +4064,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/sta_info.c.obj
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4072,11 +4113,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/sta_info.c.obj
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -4103,13 +4143,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/sta_info.c.obj
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4191,7 +4231,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth.c.obj
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4243,11 +4283,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth.c.obj
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -4282,13 +4321,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth.c.obj
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/state_machine.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4370,7 +4409,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth_ie.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4419,11 +4458,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth_ie.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -4442,13 +4480,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth_ie.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4530,7 +4568,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/dragonfly.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4579,11 +4617,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/dragonfly.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -4595,13 +4632,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/dragonfly.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/const_time.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4683,7 +4720,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/ieee802_11
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4732,11 +4769,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/ieee802_11
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -4752,13 +4788,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/ieee802_11
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -4840,7 +4876,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae.c.obj:
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -4889,11 +4925,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -4913,13 +4948,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae.c.obj:
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/const_time.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5001,7 +5036,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae_pk.c.o
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5050,11 +5085,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae_pk.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_common_i.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -5076,13 +5110,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae_pk.c.o
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5164,7 +5198,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/wpa_common
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5213,11 +5247,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/wpa_common
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -5239,13 +5272,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/wpa_common
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5327,7 +5360,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-ccm.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5376,11 +5409,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-ccm.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -5391,13 +5423,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-ccm.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5479,7 +5511,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-gcm.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5528,11 +5560,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-gcm.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -5543,13 +5574,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-gcm.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5631,7 +5662,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5680,11 +5711,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -5696,13 +5726,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5784,7 +5814,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-unwrap
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5833,11 +5863,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-unwrap
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -5848,13 +5877,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-unwrap
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -5936,7 +5965,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-wrap.c
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -5985,11 +6014,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-wrap.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6000,13 +6028,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-wrap.c
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6088,7 +6116,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ccmp.c.obj
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -6137,11 +6165,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ccmp.c.obj
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6153,13 +6180,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ccmp.c.obj
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6290,11 +6317,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_ops
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wpa.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -6310,13 +6336,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_ops
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/crypto/sha256.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6398,7 +6424,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/des-intern
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -6447,11 +6473,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/des-intern
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6462,13 +6487,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/des-intern
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6550,7 +6575,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -6599,11 +6624,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6614,13 +6638,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6702,7 +6726,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -6751,11 +6775,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6767,13 +6790,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -6855,7 +6878,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-intern
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -6904,11 +6927,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-intern
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -6918,13 +6940,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-intern
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7006,7 +7028,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ms_funcs.c
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7055,11 +7077,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ms_funcs.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7071,13 +7092,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ms_funcs.c
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7159,7 +7180,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/rc4.c.obj:
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7208,11 +7229,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/rc4.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7222,13 +7242,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/rc4.c.obj:
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7310,7 +7330,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-prf.c
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7359,11 +7379,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-prf.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7374,13 +7393,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-prf.c
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7462,7 +7481,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tlspr
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7511,11 +7530,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tlspr
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7526,13 +7544,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tlspr
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7614,7 +7632,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tprf.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7663,11 +7681,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tprf.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7678,13 +7695,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tprf.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7766,7 +7783,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-kdf
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7815,11 +7832,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-kdf
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7829,13 +7845,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-kdf
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -7917,7 +7933,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-prf
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -7966,11 +7982,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-prf
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -7981,13 +7996,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-prf
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8069,7 +8084,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-tls
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8118,11 +8133,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-tls
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -8132,13 +8146,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-tls
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8220,7 +8234,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-prf
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8269,11 +8283,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-prf
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -8284,13 +8297,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-prf
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8372,7 +8385,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-tls
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8421,11 +8434,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-tls
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -8435,13 +8447,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-tls
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8523,7 +8535,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common/eap_ws
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8572,11 +8584,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common/eap_ws
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -8591,13 +8602,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common/eap_ws
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8679,7 +8690,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/chap.c.o
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8728,11 +8739,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/chap.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -8743,13 +8753,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/chap.c.o
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -8831,7 +8841,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -8880,11 +8890,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_eap_client.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -8913,13 +8922,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap.c.ob
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/state_machine.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9001,7 +9010,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_comm
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9050,11 +9059,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_comm
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -9065,13 +9073,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_comm
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9153,7 +9161,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9202,11 +9210,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -9229,13 +9236,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9317,7 +9324,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9366,11 +9373,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -9384,13 +9390,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9472,7 +9478,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9521,11 +9527,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -9542,13 +9547,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9630,7 +9635,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_msch
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9679,11 +9684,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_msch
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -9709,13 +9713,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_msch
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9797,7 +9801,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -9846,11 +9850,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -9871,13 +9874,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -9959,7 +9962,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10008,11 +10011,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -10023,13 +10025,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10111,7 +10113,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10160,11 +10162,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -10182,13 +10183,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10270,7 +10271,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls_
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10319,11 +10320,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls_
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -10342,13 +10342,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls_
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10430,7 +10430,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10479,11 +10479,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -10506,13 +10505,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10594,7 +10593,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/mschapv2
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10643,11 +10642,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/mschapv2
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -10658,13 +10656,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/mschapv2
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10746,7 +10744,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/pmksa_ca
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10795,11 +10793,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/pmksa_ca
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -10817,13 +10814,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/pmksa_ca
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/eloop.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -10905,7 +10902,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -10954,11 +10951,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_common_i.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client_i.h \
@@ -10991,13 +10987,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa.c.ob
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/eloop.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11079,7 +11075,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11128,11 +11124,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -11149,13 +11144,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11237,7 +11232,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/base64.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11275,23 +11270,22 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/base64.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/os.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/base64.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11373,7 +11367,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/bitfield.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11422,11 +11416,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/bitfield.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -11436,13 +11429,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/bitfield.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11528,7 +11521,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/common.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11578,11 +11571,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/common.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -11592,13 +11584,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/common.c.ob
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11680,7 +11672,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/ext_passwor
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11729,11 +11721,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/ext_passwor
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -11744,13 +11735,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/ext_passwor
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/ext_password_i.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11832,7 +11823,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/json.c.obj:
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -11881,11 +11872,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/json.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -11896,13 +11886,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/json.c.obj:
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/json.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -11984,7 +11974,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/uuid.c.obj:
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12033,11 +12023,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/uuid.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12047,13 +12036,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/uuid.c.obj:
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/uuid.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12135,7 +12124,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpa_debug.c
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12184,11 +12173,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpa_debug.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12197,13 +12185,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpa_debug.c
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12285,7 +12273,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpabuf.c.ob
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12334,11 +12322,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpabuf.c.ob
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12347,13 +12334,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpabuf.c.ob
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/includes.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/list.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12435,7 +12422,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps.c.obj: /h
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12484,11 +12471,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps.c.obj: /h
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12504,13 +12490,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps.c.obj: /h
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12592,7 +12578,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_buil
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12641,11 +12627,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_buil
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12664,13 +12649,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_buil
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12752,7 +12737,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_pars
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12801,11 +12786,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_pars
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12818,13 +12802,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_pars
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -12906,7 +12890,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_proc
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -12955,11 +12939,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_proc
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -12974,13 +12957,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_proc
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -13062,7 +13045,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_common.c.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -13111,11 +13094,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_common.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
@@ -13139,13 +13121,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_common.c.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -13227,7 +13209,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_dev_attr.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -13276,11 +13258,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_dev_attr.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
@@ -13295,13 +13276,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_dev_attr.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -13383,7 +13364,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_defaults.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
   /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_types.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -13432,11 +13413,10 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/include/esp_wps.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wifi_driver.h \
@@ -13458,13 +13438,13 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h \
   /home/fus/.fus/esp-idf/components/wpa_supplicant/src/wps/wps_i.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -13557,6 +13537,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/ieee802_11_common.c:
 
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.c:
+
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/sta_info.c:
@@ -13576,6 +13558,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_random.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/unistd.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/unistd.h:
 
@@ -13637,11 +13621,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/eap_peer/eap_i.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/eap_peer/eap_config.h:
-
 /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.h:
-
-/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_err.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client_i.h:
 
@@ -13693,13 +13673,9 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/ssl_ciphersuites_internal.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/pmksa_cache_auth.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/psa_util_internal.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/pk_internal.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/debug_internal.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/alignment.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
@@ -13712,6 +13688,12 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/eap_server/eap_methods.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_err.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.c:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:
 
@@ -13746,10 +13728,6 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/sae.c:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/unistd.h:
-
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
 
@@ -13825,8 +13803,6 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_private.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/sha512_alt.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa_i.h:
@@ -13841,8 +13817,6 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h:
 
-/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/aes/esp_aes_gcm.h:
 
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h:
@@ -13852,10 +13826,6 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h:
-
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h:
-
-/home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h:
 
 /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:
 
@@ -13875,6 +13845,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
 
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h:
+
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/ap_config.c:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
@@ -13884,6 +13856,8 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/nist_kw.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/rsn_supp/pmksa_cache.h:
 
@@ -13959,23 +13933,19 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.
 
 config/sdkconfig.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/alignment.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_sizes.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_args.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
+
 /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_owe_i.h:
 
 /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/errno.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:
 
@@ -14037,8 +14007,6 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.h:
-
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
@@ -14051,6 +14019,8 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_timespec.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
+
 /home/fus/.fus/esp-idf/components/esp_wifi/include/local/esp_wifi_types_native.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/wpa_supplicant_i.h:
@@ -14058,6 +14028,12 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.h:
+
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/poly1305.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_timestamp.h:
 
@@ -14073,6 +14049,8 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/queue.h:
 
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/esp_mem.h:
@@ -14087,11 +14065,15 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_compat.h:
-
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_i.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/sta_info.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ccm.h:
+
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha3.h:
 
@@ -14102,6 +14084,8 @@ config/sdkconfig.h:
 /home/fus/.fus/esp-idf/components/esp_event/include/esp_event.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h:
 
@@ -14116,8 +14100,6 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/poly1305.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/crypto/rc4.c:
 
@@ -14185,8 +14167,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_color.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/port/include/mbedtls/gcm.h:
@@ -14219,15 +14199,19 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_compat.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs5.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/dpp.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h:
+
+/home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h:
 
@@ -14247,27 +14231,31 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/utils/common.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.c:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c:
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/pk_internal.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h:
+/home/fus/.fus/esp-idf/components/mbedtls/port/include/sha/sha_core.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.h:
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/pmksa_cache_auth.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/ap/sta_info.h:
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/psa_util_internal.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ccm.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
 
-/home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h:
+/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/src/eap_peer/eap_config.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
@@ -14321,12 +14309,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h:
 
-/home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/dpp.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h:
-
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h:
-
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h:
@@ -14351,11 +14333,7 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/time.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdatomic.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/src/common/defs.h:
 
@@ -14369,11 +14347,15 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/des.h:
 
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/nist_kw.h:
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
+
+/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs5.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_timeval.h:
 
 /home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.h:
+
+/home/fus/.fus/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:
 

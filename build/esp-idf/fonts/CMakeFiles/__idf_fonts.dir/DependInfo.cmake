@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/Documents/DO-AN-02/fonts/fontUtils.c" "esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj" "gcc" "esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj.d"
+  "/home/fus/Documents/DO-AN-02-LCD/fonts/fontUtils.c" "esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj" "gcc" "esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for gen_bootloader_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_bootloader_binary.dir/progress.make
 CMakeFiles/gen_bootloader_binary: .bin_timestamp
 
 .bin_timestamp: bootloader.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --min-rev-full 0 --max-rev-full 399 -o /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.bin /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.elf
-	/usr/bin/cmake -E echo "Generated /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.bin"
-	/usr/bin/cmake -E md5sum /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.bin > /home/fus/Documents/DO-AN-02/build/bootloader/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s3 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --min-rev-full 0 --max-rev-full 99 -o /home/fus/Documents/DO-AN-02-LCD/build/bootloader/bootloader.bin /home/fus/Documents/DO-AN-02-LCD/build/bootloader/bootloader.elf
+	/usr/bin/cmake -E echo "Generated /home/fus/Documents/DO-AN-02-LCD/build/bootloader/bootloader.bin"
+	/usr/bin/cmake -E md5sum /home/fus/Documents/DO-AN-02-LCD/build/bootloader/bootloader.bin > /home/fus/Documents/DO-AN-02-LCD/build/bootloader/.bin_timestamp
 
 CMakeFiles/gen_bootloader_binary.dir/codegen:
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/gen_bootloader_binary.dir/clean:
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/clean
 
 CMakeFiles/gen_bootloader_binary.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/gen_bootloader_binary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles/gen_bootloader_binary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gen_bootloader_binary.dir/depend
 

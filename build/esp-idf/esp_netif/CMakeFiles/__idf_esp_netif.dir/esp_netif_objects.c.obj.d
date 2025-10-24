@@ -8,7 +8,7 @@ esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/esp_netif_objects.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/endian.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -45,8 +45,8 @@ esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/esp_netif_objects.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \

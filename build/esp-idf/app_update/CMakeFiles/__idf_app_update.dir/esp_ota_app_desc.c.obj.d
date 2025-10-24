@@ -1,7 +1,7 @@
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_app_desc.c.obj: \
  /home/fus/.fus/esp-idf/components/app_update/esp_ota_app_desc.c \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
@@ -47,5 +47,5 @@ esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_app_desc.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_bootloader_format/include/esp_bootloader_desc.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h

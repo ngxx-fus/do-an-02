@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Include any dependencies generated for this target.
 include esp-idf/main/CMakeFiles/__idf_main.dir/depend.make
@@ -72,43 +72,43 @@ include esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/codegen:
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/codegen
 
-esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
-esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: /home/fus/Documents/DO-AN-02/main/do-an-02.c
-esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj -MF CMakeFiles/__idf_main.dir/do-an-02.c.obj.d -o CMakeFiles/__idf_main.dir/do-an-02.c.obj -c /home/fus/Documents/DO-AN-02/main/do-an-02.c
+esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: /home/fus/Documents/DO-AN-02-LCD/main/myApp.c
+esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj -MF CMakeFiles/__idf_main.dir/myApp.c.obj.d -o CMakeFiles/__idf_main.dir/myApp.c.obj -c /home/fus/Documents/DO-AN-02-LCD/main/myApp.c
 
-esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/do-an-02.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02/main/do-an-02.c > CMakeFiles/__idf_main.dir/do-an-02.c.i
+esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/myApp.c.i"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02-LCD/main/myApp.c > CMakeFiles/__idf_main.dir/myApp.c.i
 
-esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/do-an-02.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02/main/do-an-02.c -o CMakeFiles/__idf_main.dir/do-an-02.c.s
+esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/myApp.c.s"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02-LCD/main/myApp.c -o CMakeFiles/__idf_main.dir/myApp.c.s
 
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
-"CMakeFiles/__idf_main.dir/do-an-02.c.obj"
+"CMakeFiles/__idf_main.dir/myApp.c.obj"
 
 # External object files for target __idf_main
 __idf_main_EXTERNAL_OBJECTS =
 
-esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/do-an-02.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libmain.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libmain.a"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/main/CMakeFiles/__idf_main.dir/build: esp-idf/main/libmain.a
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/build
 
 esp-idf/main/CMakeFiles/__idf_main.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean.cmake
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/clean
 
 esp-idf/main/CMakeFiles/__idf_main.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/main /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/main /home/fus/Documents/DO-AN-02/build/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/main /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/depend
 

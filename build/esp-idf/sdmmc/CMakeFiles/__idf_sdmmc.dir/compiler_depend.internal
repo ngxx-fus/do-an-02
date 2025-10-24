@@ -59,10 +59,10 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sd_pwr_ctrl/sd_pwr_ctrl.c.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl_interface.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_cmd.c
@@ -166,19 +166,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_types.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -190,7 +189,7 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_common.c
@@ -296,19 +295,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_types.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -320,7 +318,7 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_init.c
@@ -425,19 +423,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl_by_on_chip_ldo.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -449,7 +446,7 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_io.c
@@ -553,19 +550,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_types.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -577,7 +573,7 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_mmc.c
@@ -694,19 +690,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_types.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -718,7 +713,7 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/sdmmc_sd.c
@@ -825,19 +820,18 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_types.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_pwr_ctrl.h
  /home/fus/.fus/esp-idf/components/sdmmc/include/sdmmc_cmd.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h
@@ -849,5 +843,5 @@ esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 

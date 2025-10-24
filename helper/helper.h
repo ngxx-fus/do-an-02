@@ -58,26 +58,130 @@
 /// Convert x to 1 (true) or 0 (false)
 #define boolCast(x) (((x) != 0) ? (0x1) : (0x0))
 
-#define __mask_or1(f,a)        (f(a))
-#define __mask_or2(f,a,b)      (f(a) | f(b))
-#define __mask_or3(f,a,b,c)    (f(a) | f(b) | f(c))
-#define __mask_or4(f,a,b,c,d)  (f(a) | f(b) | f(c) | f(d))
-#define __mask_or5(f,a,b,c,d,e) (f(a) | f(b) | f(c) | f(d) | f(e))
-#define __mask_or6(f,a,b,c,d,e,f2) (f(a) | f(b) | f(c) | f(d) | f(e) | f(f2))
-#define __mask_or7(f,a,b,c,d,e,f2,g) (f(a) | f(b) | f(c) | f(d) | f(e) | f(f2) | f(g))
-#define __mask_or8(f,a,b,c,d,e,f2,g,h) (f(a) | f(b) | f(c) | f(d) | f(e) | f(f2) | f(g) | f(h))
+#define __mask_or1(f,a0) \
+    (f(a0))
 
-#define __mask_overload(_1,_2,_3,_4,_5,_6,_7,_8,NAME,...) NAME
+#define __mask_or2(f,a0,a1) \
+    (f(a0) | f(a1))
+
+#define __mask_or3(f,a0,a1,a2) \
+    (f(a0) | f(a1) | f(a2))
+
+#define __mask_or4(f,a0,a1,a2,a3) \
+    (f(a0) | f(a1) | f(a2) | f(a3))
+
+#define __mask_or5(f,a0,a1,a2,a3,a4) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4))
+
+#define __mask_or6(f,a0,a1,a2,a3,a4,a5) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5))
+
+#define __mask_or7(f,a0,a1,a2,a3,a4,a5,a6) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6))
+
+#define __mask_or8(f,a0,a1,a2,a3,a4,a5,a6,a7) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7))
+
+#define __mask_or9(f,a0,a1,a2,a3,a4,a5,a6,a7,a8) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8))
+
+#define __mask_or10(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9))
+
+#define __mask_or11(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10))
+
+#define __mask_or12(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11))
+
+#define __mask_or13(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12))
+
+#define __mask_or14(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13))
+
+#define __mask_or15(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14))
+
+#define __mask_or16(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15))
+
+#define __mask_or17(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16))
+
+#define __mask_or18(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17))
+
+#define __mask_or19(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18))
+
+#define __mask_or20(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19))
+
+#define __mask_or21(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20))
+
+#define __mask_or22(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21))
+
+#define __mask_or23(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22))
+
+#define __mask_or24(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23))
+
+#define __mask_or25(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24))
+
+#define __mask_or26(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25))
+
+#define __mask_or27(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26))
+
+#define __mask_or28(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26) | f(a27))
+
+#define __mask_or29(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26) | f(a27) | f(a28))
+
+#define __mask_or30(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26) | f(a27) | f(a28) | f(a29))
+
+#define __mask_or31(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26) | f(a27) | f(a28) | f(a29) | f(a30))
+
+#define __mask_or32(f,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31) \
+    (f(a0) | f(a1) | f(a2) | f(a3) | f(a4) | f(a5) | f(a6) | f(a7) | f(a8) | f(a9) | f(a10) | f(a11) | f(a12) | f(a13) | f(a14) | f(a15) | f(a16) | f(a17) | f(a18) | f(a19) | f(a20) | f(a21) | f(a22) | f(a23) | f(a24) | f(a25) | f(a26) | f(a27) | f(a28) | f(a29) | f(a30) | f(a31))
+
+#define __mask_overload( \
+    _1,_2,_3,_4,_5,_6,_7,_8,_9,_10,_11,_12,_13,_14,_15,_16, \
+    _17,_18,_19,_20,_21,_22,_23,_24,_25,_26,_27,_28,_29,_30,_31,_32, NAME, ...) NAME
+
 
 #define __masks_generic(f, ...) \
     (__mask_overload(__VA_ARGS__, \
-        __mask_or8, __mask_or7, __mask_or6, __mask_or5, \
-        __mask_or4, __mask_or3, __mask_or2, __mask_or1)(f, __VA_ARGS__))
+        __mask_or32, __mask_or31, __mask_or30, __mask_or29, \
+        __mask_or28, __mask_or27, __mask_or26, __mask_or25, \
+        __mask_or24, __mask_or23, __mask_or22, __mask_or21, \
+        __mask_or20, __mask_or19, __mask_or18, __mask_or17, \
+        __mask_or16, __mask_or15, __mask_or14, __mask_or13, \
+        __mask_or12, __mask_or11, __mask_or10, __mask_or9,  \
+        __mask_or8,  __mask_or7,  __mask_or6,  __mask_or5,  \
+        __mask_or4,  __mask_or3,  __mask_or2,  __mask_or1)(f, __VA_ARGS__))
 
 #define __masks8(...)   __masks_generic(__mask8,  __VA_ARGS__)
 #define __masks16(...)  __masks_generic(__mask16, __VA_ARGS__)
 #define __masks32(...)  __masks_generic(__mask32, __VA_ARGS__)
 #define __masks64(...)  __masks_generic(__mask64, __VA_ARGS__)
+
+/// The pointer of `what`
+#define PTR(what)       what *
+/// Access the stored data from ptr
+#define DATA(ptr)       (*(ptr))   
+/// Get the address of the variable
+#define ADDR(obj)       (&(obj))     
+
 
 /// @brief Generates a pseudo-random number in the range [0, 9999].
 ///        If the input seed is negative or repeated, the function reuses the last known random state.
@@ -86,7 +190,6 @@
 ///        If seed_input < 0 or equals the previous seed, the last valid random state is used instead.
 /// @return A pseudo-random integer in the range [0, 9999].
 int generateRandom(int seed_input);
-
 
 
 #endif

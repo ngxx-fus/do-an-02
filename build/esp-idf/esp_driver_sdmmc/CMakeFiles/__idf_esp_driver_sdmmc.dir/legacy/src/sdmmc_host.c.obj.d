@@ -10,7 +10,7 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -40,8 +40,8 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
@@ -71,12 +71,12 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
@@ -85,7 +85,7 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
@@ -93,15 +93,14 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h \
@@ -131,9 +130,9 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.fus/esp-idf/components/esp_driver_sdmmc/legacy/include/driver/sdmmc_default_configs.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h \
  /home/fus/.fus/esp-idf/components/esp_driver_sdmmc/include/driver/sd_host_sdmmc.h \
@@ -141,22 +140,22 @@ esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/legacy/src/sdmmc_
  /home/fus/.fus/esp-idf/components/esp_driver_sd_intf/include/driver/sd_host.h \
  /home/fus/.fus/esp-idf/components/esp_driver_sdmmc/legacy/src/sdmmc_internal.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/sdmmc_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdio_slave_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/sdmmc_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/sdmmc_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/sdmmc_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/usb_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/sdmmc_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/touch_sensor_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sdmmc_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sdmmc_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
  /home/fus/.fus/esp-idf/components/esp_driver_sdmmc/include/esp_private/sd_host_private.h \
  /home/fus/.fus/esp-idf/components/esp_pm/include/esp_pm.h \
  /home/fus/.fus/esp-idf/components/esp_mm/include/esp_cache.h \
  /home/fus/.fus/esp-idf/components/esp_driver_sd_intf/include/esp_private/sd_driver_interface.h \
  /home/fus/.fus/esp-idf/components/sdmmc/include/sd_protocol_defs.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/sdmmc_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/sdmmc_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/sdmmc_ll.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h

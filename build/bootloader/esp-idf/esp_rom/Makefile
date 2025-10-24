@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/esp_rom//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/esp_rom//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 .PHONY : esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 
 # Convenience name for target.
@@ -127,15 +127,47 @@ __idf_esp_rom: esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/rule
 
 # fast build rule for target.
 __idf_esp_rom/fast:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build
 .PHONY : __idf_esp_rom/fast
+
+patches/esp_rom_cache_esp32s2_esp32s3.obj: patches/esp_rom_cache_esp32s2_esp32s3.c.obj
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.obj
+
+# target to build an object file
+patches/esp_rom_cache_esp32s2_esp32s3.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.obj
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.c.obj
+
+patches/esp_rom_cache_esp32s2_esp32s3.i: patches/esp_rom_cache_esp32s2_esp32s3.c.i
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.i
+
+# target to preprocess a source file
+patches/esp_rom_cache_esp32s2_esp32s3.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.i
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.c.i
+
+patches/esp_rom_cache_esp32s2_esp32s3.s: patches/esp_rom_cache_esp32s2_esp32s3.c.s
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.s
+
+# target to generate assembly for a file
+patches/esp_rom_cache_esp32s2_esp32s3.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.s
+.PHONY : patches/esp_rom_cache_esp32s2_esp32s3.c.s
+
+patches/esp_rom_cache_writeback_esp32s3.obj: patches/esp_rom_cache_writeback_esp32s3.S.obj
+.PHONY : patches/esp_rom_cache_writeback_esp32s3.obj
+
+# target to build an object file
+patches/esp_rom_cache_writeback_esp32s3.S.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_writeback_esp32s3.S.obj
+.PHONY : patches/esp_rom_cache_writeback_esp32s3.S.obj
 
 patches/esp_rom_crc.obj: patches/esp_rom_crc.c.obj
 .PHONY : patches/esp_rom_crc.obj
 
 # target to build an object file
 patches/esp_rom_crc.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
 .PHONY : patches/esp_rom_crc.c.obj
 
 patches/esp_rom_crc.i: patches/esp_rom_crc.c.i
@@ -143,7 +175,7 @@ patches/esp_rom_crc.i: patches/esp_rom_crc.c.i
 
 # target to preprocess a source file
 patches/esp_rom_crc.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.i
 .PHONY : patches/esp_rom_crc.c.i
 
 patches/esp_rom_crc.s: patches/esp_rom_crc.c.s
@@ -151,7 +183,7 @@ patches/esp_rom_crc.s: patches/esp_rom_crc.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_crc.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.s
 .PHONY : patches/esp_rom_crc.c.s
 
 patches/esp_rom_efuse.obj: patches/esp_rom_efuse.c.obj
@@ -159,7 +191,7 @@ patches/esp_rom_efuse.obj: patches/esp_rom_efuse.c.obj
 
 # target to build an object file
 patches/esp_rom_efuse.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
 .PHONY : patches/esp_rom_efuse.c.obj
 
 patches/esp_rom_efuse.i: patches/esp_rom_efuse.c.i
@@ -167,7 +199,7 @@ patches/esp_rom_efuse.i: patches/esp_rom_efuse.c.i
 
 # target to preprocess a source file
 patches/esp_rom_efuse.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.i
 .PHONY : patches/esp_rom_efuse.c.i
 
 patches/esp_rom_efuse.s: patches/esp_rom_efuse.c.s
@@ -175,7 +207,7 @@ patches/esp_rom_efuse.s: patches/esp_rom_efuse.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_efuse.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.s
 .PHONY : patches/esp_rom_efuse.c.s
 
 patches/esp_rom_gpio.obj: patches/esp_rom_gpio.c.obj
@@ -183,7 +215,7 @@ patches/esp_rom_gpio.obj: patches/esp_rom_gpio.c.obj
 
 # target to build an object file
 patches/esp_rom_gpio.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.obj
 .PHONY : patches/esp_rom_gpio.c.obj
 
 patches/esp_rom_gpio.i: patches/esp_rom_gpio.c.i
@@ -191,7 +223,7 @@ patches/esp_rom_gpio.i: patches/esp_rom_gpio.c.i
 
 # target to preprocess a source file
 patches/esp_rom_gpio.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.i
 .PHONY : patches/esp_rom_gpio.c.i
 
 patches/esp_rom_gpio.s: patches/esp_rom_gpio.c.s
@@ -199,7 +231,7 @@ patches/esp_rom_gpio.s: patches/esp_rom_gpio.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_gpio.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.s
 .PHONY : patches/esp_rom_gpio.c.s
 
 patches/esp_rom_longjmp.obj: patches/esp_rom_longjmp.S.obj
@@ -207,7 +239,7 @@ patches/esp_rom_longjmp.obj: patches/esp_rom_longjmp.S.obj
 
 # target to build an object file
 patches/esp_rom_longjmp.S.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj
 .PHONY : patches/esp_rom_longjmp.S.obj
 
 patches/esp_rom_print.obj: patches/esp_rom_print.c.obj
@@ -215,7 +247,7 @@ patches/esp_rom_print.obj: patches/esp_rom_print.c.obj
 
 # target to build an object file
 patches/esp_rom_print.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.obj
 .PHONY : patches/esp_rom_print.c.obj
 
 patches/esp_rom_print.i: patches/esp_rom_print.c.i
@@ -223,7 +255,7 @@ patches/esp_rom_print.i: patches/esp_rom_print.c.i
 
 # target to preprocess a source file
 patches/esp_rom_print.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.i
 .PHONY : patches/esp_rom_print.c.i
 
 patches/esp_rom_print.s: patches/esp_rom_print.c.s
@@ -231,7 +263,7 @@ patches/esp_rom_print.s: patches/esp_rom_print.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_print.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.s
 .PHONY : patches/esp_rom_print.c.s
 
 patches/esp_rom_serial_output.obj: patches/esp_rom_serial_output.c.obj
@@ -239,7 +271,7 @@ patches/esp_rom_serial_output.obj: patches/esp_rom_serial_output.c.obj
 
 # target to build an object file
 patches/esp_rom_serial_output.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj
 .PHONY : patches/esp_rom_serial_output.c.obj
 
 patches/esp_rom_serial_output.i: patches/esp_rom_serial_output.c.i
@@ -247,7 +279,7 @@ patches/esp_rom_serial_output.i: patches/esp_rom_serial_output.c.i
 
 # target to preprocess a source file
 patches/esp_rom_serial_output.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.i
 .PHONY : patches/esp_rom_serial_output.c.i
 
 patches/esp_rom_serial_output.s: patches/esp_rom_serial_output.c.s
@@ -255,7 +287,7 @@ patches/esp_rom_serial_output.s: patches/esp_rom_serial_output.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_serial_output.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.s
 .PHONY : patches/esp_rom_serial_output.c.s
 
 patches/esp_rom_spiflash.obj: patches/esp_rom_spiflash.c.obj
@@ -263,7 +295,7 @@ patches/esp_rom_spiflash.obj: patches/esp_rom_spiflash.c.obj
 
 # target to build an object file
 patches/esp_rom_spiflash.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
 .PHONY : patches/esp_rom_spiflash.c.obj
 
 patches/esp_rom_spiflash.i: patches/esp_rom_spiflash.c.i
@@ -271,7 +303,7 @@ patches/esp_rom_spiflash.i: patches/esp_rom_spiflash.c.i
 
 # target to preprocess a source file
 patches/esp_rom_spiflash.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.i
 .PHONY : patches/esp_rom_spiflash.c.i
 
 patches/esp_rom_spiflash.s: patches/esp_rom_spiflash.c.s
@@ -279,7 +311,7 @@ patches/esp_rom_spiflash.s: patches/esp_rom_spiflash.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_spiflash.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.s
 .PHONY : patches/esp_rom_spiflash.c.s
 
 patches/esp_rom_sys.obj: patches/esp_rom_sys.c.obj
@@ -287,7 +319,7 @@ patches/esp_rom_sys.obj: patches/esp_rom_sys.c.obj
 
 # target to build an object file
 patches/esp_rom_sys.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
 .PHONY : patches/esp_rom_sys.c.obj
 
 patches/esp_rom_sys.i: patches/esp_rom_sys.c.i
@@ -295,7 +327,7 @@ patches/esp_rom_sys.i: patches/esp_rom_sys.c.i
 
 # target to preprocess a source file
 patches/esp_rom_sys.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.i
 .PHONY : patches/esp_rom_sys.c.i
 
 patches/esp_rom_sys.s: patches/esp_rom_sys.c.s
@@ -303,8 +335,56 @@ patches/esp_rom_sys.s: patches/esp_rom_sys.c.s
 
 # target to generate assembly for a file
 patches/esp_rom_sys.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.s
 .PHONY : patches/esp_rom_sys.c.s
+
+patches/esp_rom_systimer.obj: patches/esp_rom_systimer.c.obj
+.PHONY : patches/esp_rom_systimer.obj
+
+# target to build an object file
+patches/esp_rom_systimer.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj
+.PHONY : patches/esp_rom_systimer.c.obj
+
+patches/esp_rom_systimer.i: patches/esp_rom_systimer.c.i
+.PHONY : patches/esp_rom_systimer.i
+
+# target to preprocess a source file
+patches/esp_rom_systimer.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.i
+.PHONY : patches/esp_rom_systimer.c.i
+
+patches/esp_rom_systimer.s: patches/esp_rom_systimer.c.s
+.PHONY : patches/esp_rom_systimer.s
+
+# target to generate assembly for a file
+patches/esp_rom_systimer.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.s
+.PHONY : patches/esp_rom_systimer.c.s
+
+patches/esp_rom_wdt.obj: patches/esp_rom_wdt.c.obj
+.PHONY : patches/esp_rom_wdt.obj
+
+# target to build an object file
+patches/esp_rom_wdt.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj
+.PHONY : patches/esp_rom_wdt.c.obj
+
+patches/esp_rom_wdt.i: patches/esp_rom_wdt.c.i
+.PHONY : patches/esp_rom_wdt.i
+
+# target to preprocess a source file
+patches/esp_rom_wdt.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.i
+.PHONY : patches/esp_rom_wdt.c.i
+
+patches/esp_rom_wdt.s: patches/esp_rom_wdt.c.s
+.PHONY : patches/esp_rom_wdt.s
+
+# target to generate assembly for a file
+patches/esp_rom_wdt.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/build.make esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.s
+.PHONY : patches/esp_rom_wdt.c.s
 
 # Help Target
 help:
@@ -315,6 +395,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... __idf_esp_rom"
+	@echo "... patches/esp_rom_cache_esp32s2_esp32s3.obj"
+	@echo "... patches/esp_rom_cache_esp32s2_esp32s3.i"
+	@echo "... patches/esp_rom_cache_esp32s2_esp32s3.s"
+	@echo "... patches/esp_rom_cache_writeback_esp32s3.obj"
 	@echo "... patches/esp_rom_crc.obj"
 	@echo "... patches/esp_rom_crc.i"
 	@echo "... patches/esp_rom_crc.s"
@@ -337,6 +421,12 @@ help:
 	@echo "... patches/esp_rom_sys.obj"
 	@echo "... patches/esp_rom_sys.i"
 	@echo "... patches/esp_rom_sys.s"
+	@echo "... patches/esp_rom_systimer.obj"
+	@echo "... patches/esp_rom_systimer.i"
+	@echo "... patches/esp_rom_systimer.s"
+	@echo "... patches/esp_rom_wdt.obj"
+	@echo "... patches/esp_rom_wdt.i"
+	@echo "... patches/esp_rom_wdt.s"
 .PHONY : help
 
 
@@ -348,6 +438,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

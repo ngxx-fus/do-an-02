@@ -84,7 +84,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_cap.c.o
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
@@ -108,29 +108,28 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_cap.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -219,7 +218,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_cmpr.c.
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
   /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
@@ -242,26 +241,25 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_cmpr.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -353,7 +351,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_com.c.o
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
   /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
@@ -376,26 +374,25 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_com.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -490,7 +487,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_fault.c
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
@@ -514,29 +511,28 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_fault.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -632,7 +628,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_gen.c.o
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
@@ -656,29 +652,28 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_gen.c.o
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -767,7 +762,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_oper.c.
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
   /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
@@ -790,26 +785,25 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_oper.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -904,7 +898,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_sync.c.
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
@@ -928,29 +922,28 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_sync.c.
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1040,7 +1033,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
   /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
   /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
   /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h \
   /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
@@ -1063,26 +1056,25 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1105,17 +1097,15 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_sync.c:
 
-/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_oper.h:
-
 /home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_oper.c:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_gpio_reserve.h:
 
 /home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_gen.c:
 
-/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_fault.c:
+/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_fault.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/periph_ctrl.h:
+/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_fault.c:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk_tree_common.h:
 
@@ -1133,11 +1123,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
-/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_fault.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
 
 /home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_gen.h:
 
@@ -1149,11 +1135,7 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:
 
-/home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h:
 
@@ -1185,6 +1167,10 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_check.h:
 
+/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_private.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/rtc_clk.h:
@@ -1199,8 +1185,6 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/limits.h:
@@ -1211,11 +1195,11 @@ esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_timer.c
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
-
 config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/mcpwm_struct.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h:
 
@@ -1231,11 +1215,9 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h:
-
-/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_cmpr.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_args.h:
 
@@ -1247,11 +1229,11 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/mcpwm_struct.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h:
 
 /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h:
 
 /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
 
@@ -1289,11 +1271,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h:
+
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h:
 
@@ -1301,15 +1283,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_pm/include/esp_pm.h:
 
-/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
-
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h:
 
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h:
 
 /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h:
 
@@ -1331,9 +1309,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_oper.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h:
 
@@ -1353,21 +1333,25 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
+
 /home/fus/.fus/esp-idf/components/hal/include/hal/mcpwm_types.h:
 
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h:
+
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
-
 /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mcpwm_ll.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
+
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mcpwm_ll.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_color.h:
 
@@ -1379,40 +1363,46 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
 
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/periph_ctrl.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
+
 /home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h:
-
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h:
+
+/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/include/driver/mcpwm_cmpr.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h:
+/home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
 /home/fus/.fus/esp-idf/components/soc/include/soc/mcpwm_periph.h:
 
 /home/fus/.fus/esp-idf/components/soc/include/soc/regdma.h:
 
-/home/fus/.fus/esp-idf/components/esp_driver_mcpwm/src/mcpwm_private.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
+/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:

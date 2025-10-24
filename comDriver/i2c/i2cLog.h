@@ -14,7 +14,7 @@
 #define I2C_LOG_LEVEL 1
 
 #if I2C_LOG_LEVEL >= 1
-    #define __i2cErr(...)       __err( __VA_ARGS__ )
+    #define __i2cErr(...)       __sys_err( __VA_ARGS__ )
 #else 
     #define __i2cErr(...)
 #endif
@@ -26,12 +26,12 @@
     #define __i2cExit(...)
 #endif 
 #if I2C_LOG_LEVEL >= 3
-    #define __i2cLog(...)      __log( __VA_ARGS__ )
+    #define __i2cLog(...)      __sys_log( __VA_ARGS__ )
 #else 
     #define __i2cLog(...)
 #endif 
 #if I2C_LOG_LEVEL >= 4
-    #define __i2cLog1(...)      __log( __VA_ARGS__ )
+    #define __i2cLog1(...)      __sys_log( __VA_ARGS__ )
 #else 
     #define __i2cLog1(...)
 #endif 

@@ -49,10 +49,11 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj: /home/
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
   /home/fus/.fus/esp-idf/components/esp_partition/include/esp_partition.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_hal.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/esp_flash_err.h \
@@ -74,14 +75,13 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj: /home/
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/spi_flash/include/esp_flash.h \
@@ -136,9 +136,10 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
   /home/fus/.fus/esp-idf/components/esp_partition/include/esp_partition.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_md5.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
-  /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
+  /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/esp_flash_err.h \
   /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_types.h \
   /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
@@ -158,14 +159,13 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/spi_flash/include/esp_flash.h \
@@ -173,8 +173,6 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
   /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_mmap.h \
   config/sdkconfig.h
 
-
-/home/fus/.fus/esp-idf/components/bootloader_support/include/esp_app_format.h:
 
 /home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_common.h:
 
@@ -184,23 +182,27 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
 
 /home/fus/.fus/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
 
@@ -216,9 +218,9 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h:
+/home/fus/.fus/esp-idf/components/log/include/esp_log.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
 
@@ -228,6 +230,10 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h:
 
+/home/fus/.fus/esp-idf/components/bootloader_support/include/esp_app_format.h:
+
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h:
 
 /home/fus/.fus/esp-idf/components/spi_flash/include/esp_flash.h:
@@ -235,8 +241,6 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h:
 
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h:
 
@@ -246,11 +250,7 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
-
 /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
 
@@ -263,8 +263,6 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h:
-
-/home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h:
 
 /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_image_format.h:
 
@@ -286,8 +284,6 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:
 
-/home/fus/.fus/esp-idf/components/log/include/esp_log.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h:
@@ -306,8 +302,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
-/home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/queue.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
@@ -325,6 +319,8 @@ config/sdkconfig.h:
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h:
+
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h:
 
 /home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_util.h:
 
@@ -355,6 +351,10 @@ config/sdkconfig.h:
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
 /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_types.h:
+
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h:
+
+/home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_hal.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h:
 

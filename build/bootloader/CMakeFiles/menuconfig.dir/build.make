@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for menuconfig.
 
@@ -67,11 +67,11 @@ include CMakeFiles/menuconfig.dir/compiler_depend.make
 include CMakeFiles/menuconfig.dir/progress.make
 
 CMakeFiles/menuconfig:
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_TOOLCHAIN=gcc --env IDF_ENV_FPGA= --env IDF_INIT_VERSION=6.0.0 --dont-write-deprecated --output header /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h --output cmake /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.cmake --output json /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.json --output json_menus /home/fus/Documents/DO-AN-02/build/bootloader/config/kconfig_menus.json
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config.env
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02-LCD/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config.env --env IDF_TARGET=esp32s3 --env IDF_TOOLCHAIN=gcc --env IDF_ENV_FPGA= --env IDF_INIT_VERSION=6.0.0 --dont-write-deprecated --output header /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h --output cmake /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.cmake --output json /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.json --output json_menus /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/kconfig_menus.json
 	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/tools/check_term.py
-	/usr/bin/cmake -E env COMPONENT_KCONFIGS_SOURCE_FILE=/home/fus/Documents/DO-AN-02/build/bootloader/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/home/fus/Documents/DO-AN-02/build/bootloader/kconfigs_projbuild.in KCONFIG_CONFIG=/home/fus/Documents/DO-AN-02/sdkconfig IDF_TARGET=esp32 IDF_TOOLCHAIN=gcc IDF_ENV_FPGA= IDF_INIT_VERSION=6.0.0 IDF_MINIMAL_BUILD=n /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m menuconfig /home/fus/.fus/esp-idf/Kconfig
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02/build/bootloader/config.env --env IDF_TARGET=esp32 --env IDF_TOOLCHAIN=gcc --env IDF_ENV_FPGA= --env IDF_INIT_VERSION=6.0.0 --output header /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h --output cmake /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.cmake --output json /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.json --output json_menus /home/fus/Documents/DO-AN-02/build/bootloader/config/kconfig_menus.json
+	/usr/bin/cmake -E env COMPONENT_KCONFIGS_SOURCE_FILE=/home/fus/Documents/DO-AN-02-LCD/build/bootloader/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/home/fus/Documents/DO-AN-02-LCD/build/bootloader/kconfigs_projbuild.in KCONFIG_CONFIG=/home/fus/Documents/DO-AN-02-LCD/sdkconfig IDF_TARGET=esp32s3 IDF_TOOLCHAIN=gcc IDF_ENV_FPGA= IDF_INIT_VERSION=6.0.0 IDF_MINIMAL_BUILD=n /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m menuconfig /home/fus/.fus/esp-idf/Kconfig
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -m kconfgen --list-separator=semicolon --kconfig /home/fus/.fus/esp-idf/Kconfig --sdkconfig-rename /home/fus/.fus/esp-idf/sdkconfig.rename --config /home/fus/Documents/DO-AN-02-LCD/sdkconfig --env IDF_MINIMAL_BUILD=n --env-file /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config.env --env IDF_TARGET=esp32s3 --env IDF_TOOLCHAIN=gcc --env IDF_ENV_FPGA= --env IDF_INIT_VERSION=6.0.0 --output header /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h --output cmake /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.cmake --output json /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.json --output json_menus /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/kconfig_menus.json
 
 CMakeFiles/menuconfig.dir/codegen:
 .PHONY : CMakeFiles/menuconfig.dir/codegen
@@ -89,6 +89,6 @@ CMakeFiles/menuconfig.dir/clean:
 .PHONY : CMakeFiles/menuconfig.dir/clean
 
 CMakeFiles/menuconfig.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/menuconfig.dir/depend
 

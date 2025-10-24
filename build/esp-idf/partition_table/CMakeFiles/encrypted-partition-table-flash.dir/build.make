@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for encrypted-partition-table-flash.
 
@@ -67,9 +67,9 @@ include esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/c
 include esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/progress.make
 
 esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Error: The target encrypted-partition-table-flash requires"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled."
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/fus/.fus/esp-idf/tools/cmake/scripts/fail.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Error: The target encrypted-partition-table-flash requires"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled."
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && /usr/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /usr/bin/cmake -P /home/fus/.fus/esp-idf/tools/cmake/scripts/fail.cmake
 
 esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/codegen:
 .PHONY : esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/codegen
@@ -83,10 +83,10 @@ esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/build: en
 .PHONY : esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/build
 
 esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/encrypted-partition-table-flash.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/encrypted-partition-table-flash.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/clean
 
 esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/partition_table /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table /home/fus/Documents/DO-AN-02/build/esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/partition_table /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/partition_table/CMakeFiles/encrypted-partition-table-flash.dir/depend
 

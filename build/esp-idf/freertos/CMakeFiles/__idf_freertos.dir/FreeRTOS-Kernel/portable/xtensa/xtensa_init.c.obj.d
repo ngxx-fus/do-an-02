@@ -1,7 +1,7 @@
 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj: \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_rtos.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
@@ -12,12 +12,12 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/x
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
@@ -42,5 +42,4 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/x
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
- /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_timer.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for erase_flash.
 
@@ -67,7 +67,7 @@ include CMakeFiles/erase_flash.dir/compiler_depend.make
 include CMakeFiles/erase_flash.dir/progress.make
 
 CMakeFiles/erase_flash:
-	cd /home/fus/.fus/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "SERIAL_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;;/home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D SERIAL_TOOL_ARGS=erase_flash -P run_serial_tool.cmake
+	cd /home/fus/.fus/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "SERIAL_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;;/home/fus/.fus/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D SERIAL_TOOL_ARGS=erase_flash -P run_serial_tool.cmake
 
 CMakeFiles/erase_flash.dir/codegen:
 .PHONY : CMakeFiles/erase_flash.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/erase_flash.dir/clean:
 .PHONY : CMakeFiles/erase_flash.dir/clean
 
 CMakeFiles/erase_flash.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/erase_flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/erase_flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/erase_flash.dir/depend
 

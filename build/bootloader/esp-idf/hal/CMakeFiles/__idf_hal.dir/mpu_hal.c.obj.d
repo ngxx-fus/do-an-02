@@ -9,7 +9,7 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -35,18 +35,18 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/mpu_hal.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/mpu_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mpu_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mpu_ll.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h

@@ -46,8 +46,8 @@ esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h
  /home/fus/.fus/esp-idf/components/xtensa/include/eri.h
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa-debug-module.h
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h
 

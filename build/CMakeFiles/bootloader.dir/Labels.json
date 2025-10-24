@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

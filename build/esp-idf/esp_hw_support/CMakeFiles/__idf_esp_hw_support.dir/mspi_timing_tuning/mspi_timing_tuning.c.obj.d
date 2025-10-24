@@ -9,7 +9,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/ms
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -42,8 +42,8 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/ms
  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
@@ -58,21 +58,23 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/ms
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpspi_flash_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/spi_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_reg.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_types.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/esp_flash_err.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h \
@@ -81,7 +83,10 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/ms
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/param.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mspi_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spimem_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mspi_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/syscon_struct.h \
  /home/fus/.fus/esp-idf/components/esp_mm/include/esp_private/esp_cache_private.h \
  /home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h \
@@ -89,5 +94,8 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning/ms
  /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/include/esp_private/mspi_timing_config.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/include/esp_private/mspi_timing_types.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include/esp_private/mspi_timing_by_mspi_delay.h \
+ /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include/esp_private/mspi_timing_impl_types.h \
+ /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/./mspi_timing_tuning_configs.h \
+ /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include/esp_private/mspi_timing_by_dqs.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include/esp_private/mspi_timing_by_flash_delay.h

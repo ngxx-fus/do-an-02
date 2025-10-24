@@ -13,7 +13,7 @@ esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
@@ -42,8 +42,8 @@ esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
@@ -61,15 +61,15 @@ esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_gpio_reserve.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h \
  /home/fus/.fus/esp-idf/components/esp_phy/include/esp_phy_init.h \
  /home/fus/.fus/esp-idf/components/esp_phy/include/esp_private/phy.h \

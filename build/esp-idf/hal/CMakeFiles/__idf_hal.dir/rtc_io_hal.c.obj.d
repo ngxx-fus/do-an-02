@@ -10,7 +10,7 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/rtc_io_hal.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
@@ -34,25 +34,27 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/rtc_io_hal.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/rtc_io_channel.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/rtc_io_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/rtc_io_ll.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_reg.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sens_struct.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_io_types.h

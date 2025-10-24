@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/depend.make
@@ -75,30 +75,30 @@ esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/codegen:
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/flags.make
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj: /home/fus/.fus/esp-idf/components/esp_partition/partition.c
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj -MF CMakeFiles/__idf_esp_partition.dir/partition.c.obj.d -o CMakeFiles/__idf_esp_partition.dir/partition.c.obj -c /home/fus/.fus/esp-idf/components/esp_partition/partition.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj -MF CMakeFiles/__idf_esp_partition.dir/partition.c.obj.d -o CMakeFiles/__idf_esp_partition.dir/partition.c.obj -c /home/fus/.fus/esp-idf/components/esp_partition/partition.c
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_partition.dir/partition.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_partition/partition.c > CMakeFiles/__idf_esp_partition.dir/partition.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_partition/partition.c > CMakeFiles/__idf_esp_partition.dir/partition.c.i
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_partition.dir/partition.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_partition/partition.c -o CMakeFiles/__idf_esp_partition.dir/partition.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_partition/partition.c -o CMakeFiles/__idf_esp_partition.dir/partition.c.s
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/flags.make
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj: /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj -MF CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj.d -o CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj -c /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj -MF CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj.d -o CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj -c /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp_partition.dir/partition_target.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c > CMakeFiles/__idf_esp_partition.dir/partition_target.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c > CMakeFiles/__idf_esp_partition.dir/partition_target.c.i
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp_partition.dir/partition_target.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c -o CMakeFiles/__idf_esp_partition.dir/partition_target.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/esp_partition/partition_target.c -o CMakeFiles/__idf_esp_partition.dir/partition_target.c.s
 
 # Object files for target __idf_esp_partition
 __idf_esp_partition_OBJECTS = \
@@ -112,19 +112,19 @@ esp-idf/esp_partition/libesp_partition.a: esp-idf/esp_partition/CMakeFiles/__idf
 esp-idf/esp_partition/libesp_partition.a: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj
 esp-idf/esp_partition/libesp_partition.a: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/build.make
 esp-idf/esp_partition/libesp_partition.a: esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libesp_partition.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_partition.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_partition.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libesp_partition.a"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_partition.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_partition.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/build: esp-idf/esp_partition/libesp_partition.a
 .PHONY : esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/build
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_partition.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_partition.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/clean
 
 esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/esp_partition /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition /home/fus/Documents/DO-AN-02/build/esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/esp_partition /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/depend
 

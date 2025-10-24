@@ -10,7 +10,7 @@ esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
@@ -32,12 +32,12 @@ esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj: \
  /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
@@ -48,17 +48,17 @@ esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
@@ -72,16 +72,15 @@ esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h \
@@ -104,4 +103,18 @@ esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj: \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h \
  /home/fus/.fus/esp-idf/components/esp_lcd/priv_include/esp_lcd_common.h \
- /home/fus/.fus/esp-idf/components/hal/include/hal/dma_types.h
+ /home/fus/.fus/esp-idf/components/hal/include/hal/dma_types.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/lcd_hal.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/hal_utils.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/lcd_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/lcd_cam_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/lcd_cam_struct.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/lcd_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/color_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h

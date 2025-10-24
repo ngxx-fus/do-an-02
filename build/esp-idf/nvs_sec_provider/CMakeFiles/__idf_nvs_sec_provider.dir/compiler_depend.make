@@ -32,6 +32,9 @@ esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
+  /home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_random.h \
+  /home/fus/.fus/esp-idf/components/efuse/esp32s3/include/esp_efuse_chip.h \
+  /home/fus/.fus/esp-idf/components/efuse/include/esp_efuse.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
@@ -42,9 +45,12 @@ esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_fault.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_random.h \
   /home/fus/.fus/esp-idf/components/esp_partition/include/esp_partition.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_security/include/esp_hmac.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/startup_internal.h \
+  /home/fus/.fus/esp-idf/components/hal/include/hal/hmac_types.h \
   /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
   /home/fus/.fus/esp-idf/components/log/include/esp_log_args.h \
   /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h \
@@ -64,16 +70,16 @@ esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.
   /home/fus/.fus/esp-idf/components/nvs_flash/include/nvs_flash.h \
   /home/fus/.fus/esp-idf/components/nvs_sec_provider/include/nvs_sec_provider.h \
   /home/fus/.fus/esp-idf/components/nvs_sec_provider/include/private/nvs_sec_provider_private.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -87,6 +93,8 @@ esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.
   config/sdkconfig.h
 
 
+config/sdkconfig.h:
+
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
@@ -99,17 +107,15 @@ esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
-config/sdkconfig.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
 /home/fus/.fus/esp-idf/components/nvs_sec_provider/include/nvs_sec_provider.h:
 
@@ -117,17 +123,33 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/nvs_flash/include/nvs.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
+
+/home/fus/.fus/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
+
+/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
+
+/home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
+
+/home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h:
+
+/home/fus/.fus/esp-idf/components/efuse/esp32s3/include/esp_efuse_chip.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
 
+/home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/fus/.fus/esp-idf/components/esp_security/include/esp_hmac.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_color.h:
-
-/home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h:
 
@@ -139,9 +161,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
-
 /home/fus/.fus/esp-idf/components/nvs_sec_provider/nvs_sec_provider.c:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
+
+/home/fus/.fus/esp-idf/components/efuse/include/esp_efuse.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h:
 
@@ -149,11 +173,11 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h:
 
+/home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h:
-
-/home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h:
 
@@ -167,11 +191,15 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h:
 
+/home/fus/.fus/esp-idf/components/hal/include/hal/hmac_types.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
+
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_random.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h:
 
@@ -181,13 +209,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
+/home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_random.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
@@ -207,13 +233,13 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h:
 
-/home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
 
@@ -231,6 +257,8 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/esp_partition/include/esp_partition.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
+
 /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h:
@@ -239,18 +267,8 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h:
 
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_timestamp.h:
-
-/home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
-
-/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
-
-/home/fus/.fus/esp-idf/components/nvs_flash/include/nvs_flash.h:
-
-/home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:

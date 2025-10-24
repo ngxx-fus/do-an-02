@@ -44,15 +44,15 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/abort.c.obj: /home/fus/.fus/esp-i
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -114,10 +114,9 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/assert.c.obj: /home/fus/.fus/esp-
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   /home/fus/.fus/esp-idf/components/spi_flash/include/esp_private/cache_utils.h \
   config/sdkconfig.h
@@ -284,15 +283,15 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/init.c.obj: /home/fus/.fus/esp-id
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -350,7 +349,7 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/locks.c.obj: /home/fus/.fus/esp-i
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/esp_rom_caps.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -379,19 +378,18 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/locks.c.obj: /home/fus/.fus/esp-i
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -457,8 +455,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/newlib_init.c.obj: /home/fus/.fus
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/time.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/unistd.h \
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/esp_rom_caps.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/libc_stubs.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/libc_stubs.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
@@ -468,7 +466,7 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/newlib_init.c.obj: /home/fus/.fus
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -571,9 +569,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/port/esp_time_impl.c.obj: /home/f
   /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_rtc_time.h \
-  /home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
-  /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/rtc.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include/soc/rtc.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/rtc.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/system_internal.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
@@ -585,20 +582,112 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/port/esp_time_impl.c.obj: /home/f
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/time.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
   /home/fus/.fus/esp-idf/components/newlib/priv_include/esp_time_impl.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+  config/sdkconfig.h
+
+esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/port/xtensa/stdatomic_s32c1i.c.obj: /home/fus/.fus/esp-idf/components/newlib/src/port/xtensa/stdatomic_s32c1i.c \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/syslimits.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/limits.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stdio.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
+  /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h \
+  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
+  /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
+  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h \
+  /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h \
+  /home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
+  /home/fus/.fus/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
+  /home/fus/.fus/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
+  /home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h \
+  /home/fus/.fus/esp-idf/components/heap/include/multi_heap.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
+  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
+  /home/fus/.fus/esp-idf/components/newlib/priv_include/esp_stdatomic.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h \
+  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
   config/sdkconfig.h
 
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/pthread.c.obj: /home/fus/.fus/esp-idf/components/newlib/src/pthread.c \
@@ -675,8 +764,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/pthread.c.obj: /home/fus/.fus/esp
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/time.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -748,8 +837,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/random.c.obj: /home/fus/.fus/esp-
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/random.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -978,8 +1067,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/scandir.c.obj: /home/fus/.fus/esp
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -1060,19 +1149,18 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/stdatomic.c.obj: /home/fus/.fus/e
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/priv_include/esp_stdatomic.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1222,8 +1310,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/sysconf.c.obj: /home/fus/.fus/esp
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/select.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
   config/sdkconfig.h
 
@@ -1337,7 +1425,7 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
   /home/fus/.fus/esp-idf/components/esp_hw_support/include/spinlock.h \
-  /home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h \
+  /home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include/soc/rtc.h \
   /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
   /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/system_internal.h \
@@ -1373,27 +1461,19 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
   /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h \
   /home/fus/.fus/esp-idf/components/newlib/platform_include/time.h \
   /home/fus/.fus/esp-idf/components/newlib/priv_include/esp_time_impl.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
-  /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h \
-  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
   /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
-  /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
   /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -1412,8 +1492,6 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/termios.h:
 
-/home/fus/.fus/esp-idf/components/newlib/src/termios.c:
-
 /home/fus/.fus/esp-idf/components/newlib/src/sysconf.c:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/statvfs.h:
@@ -1427,6 +1505,8 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/fcntl.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_default_fcntl.h:
+
+/home/fus/.fus/esp-idf/components/newlib/src/reent_init.c:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/dirent.h:
 
@@ -1454,25 +1534,17 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.fus/esp-idf/components/newlib/src/pthread.c:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h:
+/home/fus/.fus/esp-idf/components/newlib/src/port/xtensa/stdatomic_s32c1i.c:
 
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/time.h:
 
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/rtc.h:
-
-/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h:
+/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include/soc/rtc.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/time.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_write.h:
-
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h:
 
 /home/fus/.fus/esp-idf/components/newlib/src/port/esp_time_impl.c:
 
@@ -1480,7 +1552,7 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/libc_stubs.h:
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/libc_stubs.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/unistd.h:
 
@@ -1488,43 +1560,13 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/unistd.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stat.h:
-
-/home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/signal.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_rtc_time.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/time.h:
 
-/home/fus/.fus/esp-idf/components/newlib/src/newlib_init.c:
-
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h:
-
-/home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:
-
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h:
-
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
-
-/home/fus/.fus/esp-idf/components/newlib/src/realpath.c:
-
-/home/fus/.fus/esp-idf/components/newlib/src/getentropy.c:
-
-/home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h:
-
-/home/fus/.fus/esp-idf/components/newlib/priv_include/esp_time_impl.h:
-
-/home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/times.h:
 
@@ -1536,21 +1578,43 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h:
+/home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h:
 
-/home/fus/.fus/esp-idf/components/newlib/src/abort.c:
+/home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h:
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
 
-/home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h:
+/home/fus/.fus/esp-idf/components/newlib/src/newlib_init.c:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
+
+/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h:
 
+/home/fus/.fus/esp-idf/components/newlib/src/abort.c:
+
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
+
+/home/fus/.fus/esp-idf/components/newlib/src/realpath.c:
+
+/home/fus/.fus/esp-idf/components/heap/include/esp_heap_caps.h:
+
+/home/fus/.fus/esp-idf/components/newlib/src/getentropy.c:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/stat.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
+
 /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h:
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h:
 
@@ -1570,17 +1634,15 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_compiler.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h:
 
 /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h:
-
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:
 
 /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h:
 
@@ -1598,13 +1660,11 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h:
 
+/home/fus/.fus/esp-idf/components/newlib/priv_include/esp_time_impl.h:
+
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h:
-
-/home/fus/.fus/esp-idf/components/newlib/src/reent_init.c:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h:
 
@@ -1614,15 +1674,13 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/time.c.obj: /home/fus/.fus/esp-id
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h:
 
+/home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/timespec.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/limits.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h:
-
-config/sdkconfig.h:
-
-/home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h:
 
@@ -1630,11 +1688,15 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
+
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h:
+
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h:
 
@@ -1646,11 +1708,17 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h:
 
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
+
 /home/fus/.fus/esp-idf/components/log/include/esp_log_buffer.h:
 
 /home/fus/.fus/esp-idf/components/spi_flash/include/esp_private/cache_utils.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h:
+
+/home/fus/.fus/esp-idf/components/newlib/src/termios.c:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
 
@@ -1680,8 +1748,6 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h:
 
-/home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h:
-
 /home/fus/.fus/esp-idf/components/heap/include/heap_memory_layout.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
@@ -1698,11 +1764,21 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/types.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h:
+/home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h:
+
+config/sdkconfig.h:
+
+/home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h:
 
 /home/fus/.fus/esp-idf/components/newlib/src/assert.c:
+
+/home/fus/.fus/esp-idf/components/newlib/priv_include/esp_stdatomic.h:
+
+/home/fus/.fus/esp-idf/components/heap/include/soc/soc_memory_layout.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h:
 
 /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h:
 
@@ -1718,19 +1794,11 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
 
-/home/fus/.fus/esp-idf/components/newlib/priv_include/esp_stdatomic.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h:
-
-/home/fus/.fus/esp-idf/components/heap/include/soc/soc_memory_layout.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h:
-
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h:
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_pthreadtypes.h:
+
+/home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/select.h:
 
@@ -1756,8 +1824,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h:
-
 /home/fus/.fus/esp-idf/components/newlib/src/flockfile.c:
 
 /home/fus/.fus/esp-idf/components/newlib/src/heap.c:
@@ -1782,17 +1848,9 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h:
 
-/home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_macros.h:
 
-/home/fus/.fus/esp-idf/components/esp_rom/esp32/esp_rom_caps.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
-
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h:
-
-/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h:
+/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/rtc.h:
 
 /home/fus/.fus/esp-idf/components/newlib/src/init.c:
 
@@ -1802,8 +1860,6 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
 
-/home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
-
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:
@@ -1812,4 +1868,14 @@ config/sdkconfig.h:
 
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h:
 
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h:
+
+/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h:
+
+/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
+
 /home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
+
+/home/fus/.fus/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:

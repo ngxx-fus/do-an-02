@@ -1,6 +1,6 @@
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_port.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_port.c \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
@@ -10,7 +10,7 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
@@ -29,19 +29,24 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/system_intr.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/system_intr.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/dport_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupt_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/interrupt_core0_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/interrupt_core1_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sensitive_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/dport_access.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \

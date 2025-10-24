@@ -32,5 +32,6 @@
 #include "espGPIOWrapper.h"
 #include "espLogWrapper.h"
 #include "espRTOSWrapper.h"
+#include "esp_heap_caps.h"
 
 #endif

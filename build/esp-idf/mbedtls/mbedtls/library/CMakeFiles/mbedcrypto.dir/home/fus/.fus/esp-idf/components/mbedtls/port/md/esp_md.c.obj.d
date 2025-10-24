@@ -1,7 +1,7 @@
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/fus/.fus/esp-idf/components/mbedtls/port/md/esp_md.c.obj: \
  /home/fus/.fus/esp-idf/components/mbedtls/port/md/esp_md.c \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
@@ -39,7 +39,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/fus/.fus/esp-idf/
  /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/build_info.h \
  /home/fus/.fus/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/mbedtls_config.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/mbedtls/port/include/esp_mem.h \
  /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_psa.h \

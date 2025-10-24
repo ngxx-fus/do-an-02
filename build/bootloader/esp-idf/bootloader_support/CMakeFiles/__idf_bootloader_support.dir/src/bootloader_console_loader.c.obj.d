@@ -8,7 +8,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/private_include/bootloader_console.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_serial_output.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
@@ -20,6 +20,10 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/usb/chip_usb_dw_wrapper.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/usb/usb_dc.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/usb/cdc_acm.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/usb/usb_persist.h

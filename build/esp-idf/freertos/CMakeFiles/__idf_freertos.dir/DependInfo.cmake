@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S" "/home/fus/Documents/DO-AN-02/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/portasm.S.obj"
+  "/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S" "/home/fus/Documents/DO-AN-02-LCD/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/portasm.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -47,27 +47,30 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/power_supply/include"
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/."
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/include/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/heap/include"
   "/home/fus/.fus/esp-idf/components/heap/tlsf"
   "/home/fus/.fus/esp-idf/components/log/include"
   "/home/fus/.fus/esp-idf/components/soc/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/register"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/register"
   "/home/fus/.fus/esp-idf/components/hal/platform_port/include"
-  "/home/fus/.fus/esp-idf/components/hal/esp32/include"
+  "/home/fus/.fus/esp-idf/components/hal/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/hal/include"
   "/home/fus/.fus/esp-idf/components/esp_rom/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3"
   "/home/fus/.fus/esp-idf/components/esp_common/include"
   "/home/fus/.fus/esp-idf/components/esp_system/include"
   "/home/fus/.fus/esp-idf/components/esp_system/port/soc"
   "/home/fus/.fus/esp-idf/components/esp_system/port/include/private"
-  "/home/fus/.fus/esp-idf/components/xtensa/esp32/include"
+  "/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/xtensa/include"
   "/home/fus/.fus/esp-idf/components/xtensa/deprecated_include"
   "/home/fus/.fus/esp-idf/components/lwip/include"
@@ -79,6 +82,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/fus/.fus/esp-idf/components/lwip/port/esp32xx/include"
   "/home/fus/.fus/esp-idf/components/lwip/port/esp32xx/include/arch"
   "/home/fus/.fus/esp-idf/components/lwip/port/esp32xx/include/sys"
+  "/home/fus/.fus/esp-idf/components/esp_psram/include"
+  "/home/fus/.fus/esp-idf/components/esp_psram/xip_impl/include"
   )
 
 # The set of dependency files which are needed:

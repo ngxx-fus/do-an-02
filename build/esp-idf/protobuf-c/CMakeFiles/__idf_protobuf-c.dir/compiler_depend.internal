@@ -36,5 +36,5 @@ esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c/protobuf-c/protobu
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
  /home/fus/.fus/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 

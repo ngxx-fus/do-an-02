@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for bootloader_check_size.
 
@@ -67,7 +67,7 @@ include CMakeFiles/bootloader_check_size.dir/compiler_depend.make
 include CMakeFiles/bootloader_check_size.dir/progress.make
 
 CMakeFiles/bootloader_check_size:
-	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/fus/Documents/DO-AN-02/build/bootloader/bootloader.bin
+	/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fus/Documents/DO-AN-02-LCD/build/bootloader/bootloader.bin
 
 CMakeFiles/bootloader_check_size.dir/codegen:
 .PHONY : CMakeFiles/bootloader_check_size.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/bootloader_check_size.dir/clean:
 .PHONY : CMakeFiles/bootloader_check_size.dir/clean
 
 CMakeFiles/bootloader_check_size.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/bootloader_check_size.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles/bootloader_check_size.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bootloader_check_size.dir/depend
 

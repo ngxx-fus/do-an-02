@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for gen_project_binary.
 
@@ -84,6 +84,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

@@ -14,7 +14,7 @@ esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -28,39 +28,35 @@ esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/uart_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/uart_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
- /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/uart_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/uart_types.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/uart_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/uart_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/dport_access.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_hal.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/esp_rom_caps.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/uart.h \
- /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/uart_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/uart_pins.h
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/uart.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h

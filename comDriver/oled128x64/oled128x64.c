@@ -391,3 +391,4 @@ void drawLineText(oled128x64Dev_t * oled, const char * text, flag_t conf){
     oledDrawText(oled, ((conf&0xFF)+1)*((conf>>8)&0xFF) + (conf&0xFF)*1, 0, text, 1, 1, ((conf>>8)&0xFF));
     if(__hasFlagBitClr(conf, 19)) oledFlush(oled);
 }
+

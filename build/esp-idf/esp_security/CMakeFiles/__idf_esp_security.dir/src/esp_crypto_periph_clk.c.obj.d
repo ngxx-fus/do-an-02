@@ -1,8 +1,7 @@
 esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_crypto_lock_internal.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/periph_ctrl.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
@@ -12,8 +11,10 @@ esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/aes_ll.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/periph_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/aes_ll.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
@@ -37,20 +38,25 @@ esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/hwcrypto_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_struct.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/aes_types.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/sha_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/sha_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/dport_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupt_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/interrupt_core0_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/interrupt_core1_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/system_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sensitive_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/dport_access.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/sha_types.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/sha.h \
- /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/mpi_ll.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/sha.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/ets_sys.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/mpi_ll.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/syslimits.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/endian.h \
@@ -59,4 +65,8 @@ esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/mpi_types.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/hwcrypto_periph.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/mpi_periph.h
+ /home/fus/.fus/esp-idf/components/soc/include/soc/mpi_periph.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/hmac_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/hmac_types.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/ds_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/include/hal/ds_types.h

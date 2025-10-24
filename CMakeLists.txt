@@ -9,10 +9,8 @@ set(EXTRA_COMPONENT_DIRS
     # "helper"
     "fonts"
     "helper"
-    "comDriver/i2c"
-    "comDriver/oled128x64"
-    "comDriver/spi"
+    "comDriver/lcd32"
 )
 
 # Define the project name
-project(do-an-02)
+project(myApp)

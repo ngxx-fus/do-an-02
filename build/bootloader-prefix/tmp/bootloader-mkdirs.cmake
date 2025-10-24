@@ -10,18 +10,18 @@ if(NOT EXISTS "/home/fus/.fus/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "/home/fus/.fus/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/home/fus/Documents/DO-AN-02/build/bootloader"
-  "/home/fus/Documents/DO-AN-02/build/bootloader-prefix"
-  "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/tmp"
-  "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src"
-  "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/tmp"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src"
+  "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

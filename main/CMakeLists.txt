@@ -1,4 +1,4 @@
-idf_component_register(SRCS "do-an-02.c"
+idf_component_register(SRCS "myApp.c"
                     INCLUDE_DIRS ".")
 
 target_include_directories(${COMPONENT_TARGET}

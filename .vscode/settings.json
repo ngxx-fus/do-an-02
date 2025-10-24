@@ -76,6 +76,13 @@
         "utility": "c",
         "variant": "c",
         "expected": "c",
-        "optional": "c"
+        "optional": "c",
+        "lcd32def.h": "c",
+        "monitor.h": "c",
+        "cstdlib": "cpp",
+        "lcd32.h": "c",
+        "lcd32helper.h": "c",
+        "esp_heap_caps.h": "c",
+        "lcd32cmd.h": "c"
     }
 }

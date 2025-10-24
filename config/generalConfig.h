@@ -76,8 +76,10 @@
 
 #define SENDER              0x0
 #define RECEIVER            0x1
+#define MONITOR             0x2
 
-#define ESP32_DEVICE_MODE   SENDER
+/// Mode of source code
+#define ESP32_DEVICE_MODE   MONITOR
 
 /// To config font, check fontUtils.c in fonts/
 /// Currently, the font is: TomThumb

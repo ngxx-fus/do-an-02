@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 # Utility rule file for show-efuse-table.
 
@@ -67,7 +67,7 @@ include esp-idf/efuse/CMakeFiles/show-efuse-table.dir/compiler_depend.make
 include esp-idf/efuse/CMakeFiles/show-efuse-table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/show-efuse-table:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/efuse && /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/efuse/efuse_table_gen.py /home/fus/.fus/esp-idf/components/efuse/esp32/esp_efuse_table.csv -t esp32 --max_blk_len 192 --info
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/efuse && /home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/fus/.fus/esp-idf/components/efuse/efuse_table_gen.py /home/fus/.fus/esp-idf/components/efuse/esp32s3/esp_efuse_table.csv -t esp32s3 --max_blk_len 256 --info
 
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/codegen:
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/codegen
@@ -81,10 +81,10 @@ esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build: show-efuse-table
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build
 
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show-efuse-table.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show-efuse-table.dir/cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/clean
 
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/efuse /home/fus/Documents/DO-AN-02/build/bootloader /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/efuse /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/efuse/CMakeFiles/show-efuse-table.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/.fus/esp-idf/components/bootloader/subproject /home/fus/.fus/esp-idf/components/efuse /home/fus/Documents/DO-AN-02-LCD/build/bootloader /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/efuse /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/efuse/CMakeFiles/show-efuse-table.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/depend
 

@@ -1,10 +1,10 @@
 esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.fus/esp-idf/components/efuse/src/esp_efuse_startup.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/chip_revision.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_hal.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
@@ -13,10 +13,10 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/assert.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
@@ -37,19 +37,18 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/efuse.h \
  /home/fus/.fus/esp-idf/components/efuse/include/esp_efuse.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
@@ -60,7 +59,7 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_color.h \
@@ -74,12 +73,12 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h \
- /home/fus/.fus/esp-idf/components/efuse/esp32/include/esp_efuse_chip.h \
- /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
- /home/fus/.fus/esp-idf/components/efuse/esp32/include/esp_efuse_table.h \
+ /home/fus/.fus/esp-idf/components/efuse/esp32s3/include/esp_efuse_chip.h \
+ /home/fus/.fus/esp-idf/components/efuse/esp32s3/include/esp_efuse_table.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_check.h \
  /home/fus/.fus/esp-idf/components/efuse/private_include/esp_efuse_utility.h \
- /home/fus/.fus/esp-idf/components/efuse/esp32/private_include/esp_efuse_utility.h \
+ /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
+ /home/fus/.fus/esp-idf/components/efuse/esp32s3/private_include/esp_efuse_utility.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_system.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/startup_internal.h \
@@ -87,17 +86,17 @@ esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj: \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \

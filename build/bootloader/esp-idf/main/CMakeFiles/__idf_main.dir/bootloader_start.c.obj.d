@@ -17,10 +17,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stddef.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
@@ -64,9 +64,8 @@ esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: \
  /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_app_format.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/private_include/bootloader_utility.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/private_include/bootloader_config.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_common.h \
  /home/fus/.fus/esp-idf/components/bootloader/subproject/main/bootloader_hooks.h

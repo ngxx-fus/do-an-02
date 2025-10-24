@@ -1,6 +1,6 @@
 esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj: \
  /home/fus/.fus/esp-idf/components/unity/unity_utils_cache.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/unity/unity/src/unity.h \
  /home/fus/.fus/esp-idf/components/unity/unity/src/unity_internals.h \
  /home/fus/.fus/esp-idf/components/unity/include/unity_config.h \
@@ -48,13 +48,12 @@ esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj: \
  /home/fus/.fus/esp-idf/components/unity/include/unity_test_utils_cache.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/spi_flash/include/esp_private/spi_flash_os.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_spiflash.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_spiflash_defs.h \
@@ -63,15 +62,18 @@ esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj: \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/esp_flash_err.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpspi_flash_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/spi_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_reg.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/param.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/endian.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_endian.h \
@@ -80,4 +82,6 @@ esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spimem_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h

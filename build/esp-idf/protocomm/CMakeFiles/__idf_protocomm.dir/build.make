@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Include any dependencies generated for this target.
 include esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/depend.make
@@ -75,156 +75,156 @@ esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/codegen:
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c > CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c > CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c -o CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/common/protocomm.c -o CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj: /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/constants.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj: /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec0.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj: /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec1.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj: /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/sec2.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj: /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj -MF CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj.d -o CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c > CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/proto-c/session.pb-c.c -o CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c > CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c > CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_console.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c > CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c > CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/transports/protocomm_httpd.c -o CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/security/security2.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c > CMakeFiles/__idf_protocomm.dir/src/security/security2.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c > CMakeFiles/__idf_protocomm.dir/src/security/security2.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/security/security2.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c -o CMakeFiles/__idf_protocomm.dir/src/security/security2.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/security/security2.c -o CMakeFiles/__idf_protocomm.dir/src/security/security2.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c > CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c > CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.s
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/flags.make
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj: /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj -MF CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj.d -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj -c /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c > CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c > CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.i
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/.fus/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c -o CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.s
 
 # Object files for target __idf_protocomm
 __idf_protocomm_OBJECTS = \
@@ -256,19 +256,19 @@ esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.d
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make
 esp-idf/protocomm/libprotocomm.a: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libprotocomm.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_protocomm.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_protocomm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libprotocomm.a"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_protocomm.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_protocomm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build: esp-idf/protocomm/libprotocomm.a
 .PHONY : esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_protocomm.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm && $(CMAKE_COMMAND) -P CMakeFiles/__idf_protocomm.dir/cmake_clean.cmake
 .PHONY : esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/clean
 
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/protocomm /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm /home/fus/Documents/DO-AN-02/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/protocomm /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/depend
 

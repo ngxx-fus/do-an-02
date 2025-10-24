@@ -43,7 +43,7 @@ esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 
 esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
  /home/fus/.fus/esp-idf/components/json/cJSON/cJSON_Utils.c
@@ -88,5 +88,5 @@ esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/lock.h
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h
 

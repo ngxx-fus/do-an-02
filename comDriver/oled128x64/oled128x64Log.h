@@ -12,7 +12,7 @@
 #define OLED_LOG_LEVEL 1
 
 #if OLED_LOG_LEVEL >= 1
-    #define __oledErr(...)       __err(  __VA_ARGS__ )
+    #define __oledErr(...)       __sys_err(  __VA_ARGS__ )
 #else 
     #define __oledErr(...)
 #endif
@@ -24,12 +24,12 @@
     #define __oledExit(...)
 #endif 
 #if OLED_LOG_LEVEL >= 3
-    #define __oledLog(...)      __log(  __VA_ARGS__ )
+    #define __oledLog(...)      __sys_log(  __VA_ARGS__ )
 #else 
     #define __oledLog(...)
 #endif 
 #if OLED_LOG_LEVEL >= 4
-    #define __oledLog1(...)      __log(  __VA_ARGS__ )
+    #define __oledLog1(...)      __sys_log(  __VA_ARGS__ )
 #else 
     #define __oledLog1(...)
 #endif 

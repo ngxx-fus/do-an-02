@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for _project_elf_src.
 
@@ -66,17 +66,17 @@ include CMakeFiles/_project_elf_src.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/_project_elf_src.dir/progress.make
 
-CMakeFiles/_project_elf_src: project_elf_src_esp32.c
+CMakeFiles/_project_elf_src: project_elf_src_esp32s3.c
 
-project_elf_src_esp32.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32.c"
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/project_elf_src_esp32.c
+project_elf_src_esp32s3.c:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32s3.c"
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/project_elf_src_esp32s3.c
 
 CMakeFiles/_project_elf_src.dir/codegen:
 .PHONY : CMakeFiles/_project_elf_src.dir/codegen
 
 _project_elf_src: CMakeFiles/_project_elf_src
-_project_elf_src: project_elf_src_esp32.c
+_project_elf_src: project_elf_src_esp32s3.c
 _project_elf_src: CMakeFiles/_project_elf_src.dir/build.make
 .PHONY : _project_elf_src
 
@@ -89,6 +89,6 @@ CMakeFiles/_project_elf_src.dir/clean:
 .PHONY : CMakeFiles/_project_elf_src.dir/clean
 
 CMakeFiles/_project_elf_src.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/_project_elf_src.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/_project_elf_src.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/_project_elf_src.dir/depend
 

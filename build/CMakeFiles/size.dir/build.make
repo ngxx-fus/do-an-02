@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for size.
 
@@ -66,8 +66,8 @@ include CMakeFiles/size.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/size.dir/progress.make
 
-CMakeFiles/size: do-an-02.map
-	/usr/bin/cmake -D "IDF_SIZE_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;-m;esp_idf_size" -D MAP_FILE=/home/fus/Documents/DO-AN-02/build/do-an-02.map -D OUTPUT_JSON= -P /home/fus/.fus/esp-idf/tools/cmake/run_size_tool.cmake
+CMakeFiles/size: myApp.map
+	/usr/bin/cmake -D "IDF_SIZE_TOOL=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;-m;esp_idf_size" -D MAP_FILE=/home/fus/Documents/DO-AN-02-LCD/build/myApp.map -D OUTPUT_JSON= -P /home/fus/.fus/esp-idf/tools/cmake/run_size_tool.cmake
 
 CMakeFiles/size.dir/codegen:
 .PHONY : CMakeFiles/size.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/size.dir/clean:
 .PHONY : CMakeFiles/size.dir/clean
 
 CMakeFiles/size.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/size.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/size.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/size.dir/depend
 

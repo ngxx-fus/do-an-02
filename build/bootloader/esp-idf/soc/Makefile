@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/fus/.fus/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build/bootloader
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles /home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/soc//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/bootloader/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/soc//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 .PHONY : esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ __idf_soc: esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 
 # fast build rule for target.
 __idf_soc/fast:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
 .PHONY : __idf_soc/fast
 
 dport_access_common.obj: dport_access_common.c.obj
@@ -135,7 +135,7 @@ dport_access_common.obj: dport_access_common.c.obj
 
 # target to build an object file
 dport_access_common.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
 .PHONY : dport_access_common.c.obj
 
 dport_access_common.i: dport_access_common.c.i
@@ -143,7 +143,7 @@ dport_access_common.i: dport_access_common.c.i
 
 # target to preprocess a source file
 dport_access_common.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.i
 .PHONY : dport_access_common.c.i
 
 dport_access_common.s: dport_access_common.c.s
@@ -151,615 +151,639 @@ dport_access_common.s: dport_access_common.c.s
 
 # target to generate assembly for a file
 dport_access_common.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.s
 .PHONY : dport_access_common.c.s
 
-esp32/adc_periph.obj: esp32/adc_periph.c.obj
-.PHONY : esp32/adc_periph.obj
+esp32s3/adc_periph.obj: esp32s3/adc_periph.c.obj
+.PHONY : esp32s3/adc_periph.obj
 
 # target to build an object file
-esp32/adc_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.obj
-.PHONY : esp32/adc_periph.c.obj
+esp32s3/adc_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.obj
+.PHONY : esp32s3/adc_periph.c.obj
 
-esp32/adc_periph.i: esp32/adc_periph.c.i
-.PHONY : esp32/adc_periph.i
+esp32s3/adc_periph.i: esp32s3/adc_periph.c.i
+.PHONY : esp32s3/adc_periph.i
 
 # target to preprocess a source file
-esp32/adc_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.i
-.PHONY : esp32/adc_periph.c.i
+esp32s3/adc_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.i
+.PHONY : esp32s3/adc_periph.c.i
 
-esp32/adc_periph.s: esp32/adc_periph.c.s
-.PHONY : esp32/adc_periph.s
+esp32s3/adc_periph.s: esp32s3/adc_periph.c.s
+.PHONY : esp32s3/adc_periph.s
 
 # target to generate assembly for a file
-esp32/adc_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.s
-.PHONY : esp32/adc_periph.c.s
+esp32s3/adc_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.s
+.PHONY : esp32s3/adc_periph.c.s
 
-esp32/dac_periph.obj: esp32/dac_periph.c.obj
-.PHONY : esp32/dac_periph.obj
+esp32s3/cam_periph.obj: esp32s3/cam_periph.c.obj
+.PHONY : esp32s3/cam_periph.obj
 
 # target to build an object file
-esp32/dac_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.obj
-.PHONY : esp32/dac_periph.c.obj
+esp32s3/cam_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/cam_periph.c.obj
+.PHONY : esp32s3/cam_periph.c.obj
 
-esp32/dac_periph.i: esp32/dac_periph.c.i
-.PHONY : esp32/dac_periph.i
+esp32s3/cam_periph.i: esp32s3/cam_periph.c.i
+.PHONY : esp32s3/cam_periph.i
 
 # target to preprocess a source file
-esp32/dac_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.i
-.PHONY : esp32/dac_periph.c.i
+esp32s3/cam_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/cam_periph.c.i
+.PHONY : esp32s3/cam_periph.c.i
 
-esp32/dac_periph.s: esp32/dac_periph.c.s
-.PHONY : esp32/dac_periph.s
+esp32s3/cam_periph.s: esp32s3/cam_periph.c.s
+.PHONY : esp32s3/cam_periph.s
 
 # target to generate assembly for a file
-esp32/dac_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.s
-.PHONY : esp32/dac_periph.c.s
+esp32s3/cam_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/cam_periph.c.s
+.PHONY : esp32s3/cam_periph.c.s
 
-esp32/dport_access.obj: esp32/dport_access.c.obj
-.PHONY : esp32/dport_access.obj
+esp32s3/dedic_gpio_periph.obj: esp32s3/dedic_gpio_periph.c.obj
+.PHONY : esp32s3/dedic_gpio_periph.obj
 
 # target to build an object file
-esp32/dport_access.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dport_access.c.obj
-.PHONY : esp32/dport_access.c.obj
+esp32s3/dedic_gpio_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.obj
+.PHONY : esp32s3/dedic_gpio_periph.c.obj
 
-esp32/dport_access.i: esp32/dport_access.c.i
-.PHONY : esp32/dport_access.i
+esp32s3/dedic_gpio_periph.i: esp32s3/dedic_gpio_periph.c.i
+.PHONY : esp32s3/dedic_gpio_periph.i
 
 # target to preprocess a source file
-esp32/dport_access.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dport_access.c.i
-.PHONY : esp32/dport_access.c.i
+esp32s3/dedic_gpio_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.i
+.PHONY : esp32s3/dedic_gpio_periph.c.i
 
-esp32/dport_access.s: esp32/dport_access.c.s
-.PHONY : esp32/dport_access.s
+esp32s3/dedic_gpio_periph.s: esp32s3/dedic_gpio_periph.c.s
+.PHONY : esp32s3/dedic_gpio_periph.s
 
 # target to generate assembly for a file
-esp32/dport_access.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dport_access.c.s
-.PHONY : esp32/dport_access.c.s
+esp32s3/dedic_gpio_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.s
+.PHONY : esp32s3/dedic_gpio_periph.c.s
 
-esp32/emac_periph.obj: esp32/emac_periph.c.obj
-.PHONY : esp32/emac_periph.obj
+esp32s3/gdma_periph.obj: esp32s3/gdma_periph.c.obj
+.PHONY : esp32s3/gdma_periph.obj
 
 # target to build an object file
-esp32/emac_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/emac_periph.c.obj
-.PHONY : esp32/emac_periph.c.obj
+esp32s3/gdma_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gdma_periph.c.obj
+.PHONY : esp32s3/gdma_periph.c.obj
 
-esp32/emac_periph.i: esp32/emac_periph.c.i
-.PHONY : esp32/emac_periph.i
+esp32s3/gdma_periph.i: esp32s3/gdma_periph.c.i
+.PHONY : esp32s3/gdma_periph.i
 
 # target to preprocess a source file
-esp32/emac_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/emac_periph.c.i
-.PHONY : esp32/emac_periph.c.i
+esp32s3/gdma_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gdma_periph.c.i
+.PHONY : esp32s3/gdma_periph.c.i
 
-esp32/emac_periph.s: esp32/emac_periph.c.s
-.PHONY : esp32/emac_periph.s
+esp32s3/gdma_periph.s: esp32s3/gdma_periph.c.s
+.PHONY : esp32s3/gdma_periph.s
 
 # target to generate assembly for a file
-esp32/emac_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/emac_periph.c.s
-.PHONY : esp32/emac_periph.c.s
+esp32s3/gdma_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gdma_periph.c.s
+.PHONY : esp32s3/gdma_periph.c.s
 
-esp32/gpio_periph.obj: esp32/gpio_periph.c.obj
-.PHONY : esp32/gpio_periph.obj
+esp32s3/gpio_periph.obj: esp32s3/gpio_periph.c.obj
+.PHONY : esp32s3/gpio_periph.obj
 
 # target to build an object file
-esp32/gpio_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj
-.PHONY : esp32/gpio_periph.c.obj
+esp32s3/gpio_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gpio_periph.c.obj
+.PHONY : esp32s3/gpio_periph.c.obj
 
-esp32/gpio_periph.i: esp32/gpio_periph.c.i
-.PHONY : esp32/gpio_periph.i
+esp32s3/gpio_periph.i: esp32s3/gpio_periph.c.i
+.PHONY : esp32s3/gpio_periph.i
 
 # target to preprocess a source file
-esp32/gpio_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.i
-.PHONY : esp32/gpio_periph.c.i
+esp32s3/gpio_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gpio_periph.c.i
+.PHONY : esp32s3/gpio_periph.c.i
 
-esp32/gpio_periph.s: esp32/gpio_periph.c.s
-.PHONY : esp32/gpio_periph.s
+esp32s3/gpio_periph.s: esp32s3/gpio_periph.c.s
+.PHONY : esp32s3/gpio_periph.s
 
 # target to generate assembly for a file
-esp32/gpio_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.s
-.PHONY : esp32/gpio_periph.c.s
+esp32s3/gpio_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gpio_periph.c.s
+.PHONY : esp32s3/gpio_periph.c.s
 
-esp32/i2c_periph.obj: esp32/i2c_periph.c.obj
-.PHONY : esp32/i2c_periph.obj
+esp32s3/i2c_periph.obj: esp32s3/i2c_periph.c.obj
+.PHONY : esp32s3/i2c_periph.obj
 
 # target to build an object file
-esp32/i2c_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.obj
-.PHONY : esp32/i2c_periph.c.obj
+esp32s3/i2c_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2c_periph.c.obj
+.PHONY : esp32s3/i2c_periph.c.obj
 
-esp32/i2c_periph.i: esp32/i2c_periph.c.i
-.PHONY : esp32/i2c_periph.i
+esp32s3/i2c_periph.i: esp32s3/i2c_periph.c.i
+.PHONY : esp32s3/i2c_periph.i
 
 # target to preprocess a source file
-esp32/i2c_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.i
-.PHONY : esp32/i2c_periph.c.i
+esp32s3/i2c_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2c_periph.c.i
+.PHONY : esp32s3/i2c_periph.c.i
 
-esp32/i2c_periph.s: esp32/i2c_periph.c.s
-.PHONY : esp32/i2c_periph.s
+esp32s3/i2c_periph.s: esp32s3/i2c_periph.c.s
+.PHONY : esp32s3/i2c_periph.s
 
 # target to generate assembly for a file
-esp32/i2c_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.s
-.PHONY : esp32/i2c_periph.c.s
+esp32s3/i2c_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2c_periph.c.s
+.PHONY : esp32s3/i2c_periph.c.s
 
-esp32/i2s_periph.obj: esp32/i2s_periph.c.obj
-.PHONY : esp32/i2s_periph.obj
+esp32s3/i2s_periph.obj: esp32s3/i2s_periph.c.obj
+.PHONY : esp32s3/i2s_periph.obj
 
 # target to build an object file
-esp32/i2s_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.obj
-.PHONY : esp32/i2s_periph.c.obj
+esp32s3/i2s_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2s_periph.c.obj
+.PHONY : esp32s3/i2s_periph.c.obj
 
-esp32/i2s_periph.i: esp32/i2s_periph.c.i
-.PHONY : esp32/i2s_periph.i
+esp32s3/i2s_periph.i: esp32s3/i2s_periph.c.i
+.PHONY : esp32s3/i2s_periph.i
 
 # target to preprocess a source file
-esp32/i2s_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.i
-.PHONY : esp32/i2s_periph.c.i
+esp32s3/i2s_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2s_periph.c.i
+.PHONY : esp32s3/i2s_periph.c.i
 
-esp32/i2s_periph.s: esp32/i2s_periph.c.s
-.PHONY : esp32/i2s_periph.s
+esp32s3/i2s_periph.s: esp32s3/i2s_periph.c.s
+.PHONY : esp32s3/i2s_periph.s
 
 # target to generate assembly for a file
-esp32/i2s_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.s
-.PHONY : esp32/i2s_periph.c.s
+esp32s3/i2s_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2s_periph.c.s
+.PHONY : esp32s3/i2s_periph.c.s
 
-esp32/interrupts.obj: esp32/interrupts.c.obj
-.PHONY : esp32/interrupts.obj
+esp32s3/interrupts.obj: esp32s3/interrupts.c.obj
+.PHONY : esp32s3/interrupts.obj
 
 # target to build an object file
-esp32/interrupts.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.obj
-.PHONY : esp32/interrupts.c.obj
+esp32s3/interrupts.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/interrupts.c.obj
+.PHONY : esp32s3/interrupts.c.obj
 
-esp32/interrupts.i: esp32/interrupts.c.i
-.PHONY : esp32/interrupts.i
+esp32s3/interrupts.i: esp32s3/interrupts.c.i
+.PHONY : esp32s3/interrupts.i
 
 # target to preprocess a source file
-esp32/interrupts.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.i
-.PHONY : esp32/interrupts.c.i
+esp32s3/interrupts.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/interrupts.c.i
+.PHONY : esp32s3/interrupts.c.i
 
-esp32/interrupts.s: esp32/interrupts.c.s
-.PHONY : esp32/interrupts.s
+esp32s3/interrupts.s: esp32s3/interrupts.c.s
+.PHONY : esp32s3/interrupts.s
 
 # target to generate assembly for a file
-esp32/interrupts.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.s
-.PHONY : esp32/interrupts.c.s
+esp32s3/interrupts.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/interrupts.c.s
+.PHONY : esp32s3/interrupts.c.s
 
-esp32/lcd_periph.obj: esp32/lcd_periph.c.obj
-.PHONY : esp32/lcd_periph.obj
+esp32s3/lcd_periph.obj: esp32s3/lcd_periph.c.obj
+.PHONY : esp32s3/lcd_periph.obj
 
 # target to build an object file
-esp32/lcd_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/lcd_periph.c.obj
-.PHONY : esp32/lcd_periph.c.obj
+esp32s3/lcd_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/lcd_periph.c.obj
+.PHONY : esp32s3/lcd_periph.c.obj
 
-esp32/lcd_periph.i: esp32/lcd_periph.c.i
-.PHONY : esp32/lcd_periph.i
+esp32s3/lcd_periph.i: esp32s3/lcd_periph.c.i
+.PHONY : esp32s3/lcd_periph.i
 
 # target to preprocess a source file
-esp32/lcd_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/lcd_periph.c.i
-.PHONY : esp32/lcd_periph.c.i
+esp32s3/lcd_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/lcd_periph.c.i
+.PHONY : esp32s3/lcd_periph.c.i
 
-esp32/lcd_periph.s: esp32/lcd_periph.c.s
-.PHONY : esp32/lcd_periph.s
+esp32s3/lcd_periph.s: esp32s3/lcd_periph.c.s
+.PHONY : esp32s3/lcd_periph.s
 
 # target to generate assembly for a file
-esp32/lcd_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/lcd_periph.c.s
-.PHONY : esp32/lcd_periph.c.s
+esp32s3/lcd_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/lcd_periph.c.s
+.PHONY : esp32s3/lcd_periph.c.s
 
-esp32/ledc_periph.obj: esp32/ledc_periph.c.obj
-.PHONY : esp32/ledc_periph.obj
+esp32s3/ledc_periph.obj: esp32s3/ledc_periph.c.obj
+.PHONY : esp32s3/ledc_periph.obj
 
 # target to build an object file
-esp32/ledc_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.obj
-.PHONY : esp32/ledc_periph.c.obj
+esp32s3/ledc_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/ledc_periph.c.obj
+.PHONY : esp32s3/ledc_periph.c.obj
 
-esp32/ledc_periph.i: esp32/ledc_periph.c.i
-.PHONY : esp32/ledc_periph.i
+esp32s3/ledc_periph.i: esp32s3/ledc_periph.c.i
+.PHONY : esp32s3/ledc_periph.i
 
 # target to preprocess a source file
-esp32/ledc_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.i
-.PHONY : esp32/ledc_periph.c.i
+esp32s3/ledc_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/ledc_periph.c.i
+.PHONY : esp32s3/ledc_periph.c.i
 
-esp32/ledc_periph.s: esp32/ledc_periph.c.s
-.PHONY : esp32/ledc_periph.s
+esp32s3/ledc_periph.s: esp32s3/ledc_periph.c.s
+.PHONY : esp32s3/ledc_periph.s
 
 # target to generate assembly for a file
-esp32/ledc_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.s
-.PHONY : esp32/ledc_periph.c.s
+esp32s3/ledc_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/ledc_periph.c.s
+.PHONY : esp32s3/ledc_periph.c.s
 
-esp32/mcpwm_periph.obj: esp32/mcpwm_periph.c.obj
-.PHONY : esp32/mcpwm_periph.obj
+esp32s3/mcpwm_periph.obj: esp32s3/mcpwm_periph.c.obj
+.PHONY : esp32s3/mcpwm_periph.obj
 
 # target to build an object file
-esp32/mcpwm_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mcpwm_periph.c.obj
-.PHONY : esp32/mcpwm_periph.c.obj
+esp32s3/mcpwm_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mcpwm_periph.c.obj
+.PHONY : esp32s3/mcpwm_periph.c.obj
 
-esp32/mcpwm_periph.i: esp32/mcpwm_periph.c.i
-.PHONY : esp32/mcpwm_periph.i
+esp32s3/mcpwm_periph.i: esp32s3/mcpwm_periph.c.i
+.PHONY : esp32s3/mcpwm_periph.i
 
 # target to preprocess a source file
-esp32/mcpwm_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mcpwm_periph.c.i
-.PHONY : esp32/mcpwm_periph.c.i
+esp32s3/mcpwm_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mcpwm_periph.c.i
+.PHONY : esp32s3/mcpwm_periph.c.i
 
-esp32/mcpwm_periph.s: esp32/mcpwm_periph.c.s
-.PHONY : esp32/mcpwm_periph.s
+esp32s3/mcpwm_periph.s: esp32s3/mcpwm_periph.c.s
+.PHONY : esp32s3/mcpwm_periph.s
 
 # target to generate assembly for a file
-esp32/mcpwm_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mcpwm_periph.c.s
-.PHONY : esp32/mcpwm_periph.c.s
+esp32s3/mcpwm_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mcpwm_periph.c.s
+.PHONY : esp32s3/mcpwm_periph.c.s
 
-esp32/mpi_periph.obj: esp32/mpi_periph.c.obj
-.PHONY : esp32/mpi_periph.obj
+esp32s3/mpi_periph.obj: esp32s3/mpi_periph.c.obj
+.PHONY : esp32s3/mpi_periph.obj
 
 # target to build an object file
-esp32/mpi_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mpi_periph.c.obj
-.PHONY : esp32/mpi_periph.c.obj
+esp32s3/mpi_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.obj
+.PHONY : esp32s3/mpi_periph.c.obj
 
-esp32/mpi_periph.i: esp32/mpi_periph.c.i
-.PHONY : esp32/mpi_periph.i
+esp32s3/mpi_periph.i: esp32s3/mpi_periph.c.i
+.PHONY : esp32s3/mpi_periph.i
 
 # target to preprocess a source file
-esp32/mpi_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mpi_periph.c.i
-.PHONY : esp32/mpi_periph.c.i
+esp32s3/mpi_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.i
+.PHONY : esp32s3/mpi_periph.c.i
 
-esp32/mpi_periph.s: esp32/mpi_periph.c.s
-.PHONY : esp32/mpi_periph.s
+esp32s3/mpi_periph.s: esp32s3/mpi_periph.c.s
+.PHONY : esp32s3/mpi_periph.s
 
 # target to generate assembly for a file
-esp32/mpi_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mpi_periph.c.s
-.PHONY : esp32/mpi_periph.c.s
+esp32s3/mpi_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.s
+.PHONY : esp32s3/mpi_periph.c.s
 
-esp32/pcnt_periph.obj: esp32/pcnt_periph.c.obj
-.PHONY : esp32/pcnt_periph.obj
+esp32s3/pcnt_periph.obj: esp32s3/pcnt_periph.c.obj
+.PHONY : esp32s3/pcnt_periph.obj
 
 # target to build an object file
-esp32/pcnt_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.obj
-.PHONY : esp32/pcnt_periph.c.obj
+esp32s3/pcnt_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/pcnt_periph.c.obj
+.PHONY : esp32s3/pcnt_periph.c.obj
 
-esp32/pcnt_periph.i: esp32/pcnt_periph.c.i
-.PHONY : esp32/pcnt_periph.i
+esp32s3/pcnt_periph.i: esp32s3/pcnt_periph.c.i
+.PHONY : esp32s3/pcnt_periph.i
 
 # target to preprocess a source file
-esp32/pcnt_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.i
-.PHONY : esp32/pcnt_periph.c.i
+esp32s3/pcnt_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/pcnt_periph.c.i
+.PHONY : esp32s3/pcnt_periph.c.i
 
-esp32/pcnt_periph.s: esp32/pcnt_periph.c.s
-.PHONY : esp32/pcnt_periph.s
+esp32s3/pcnt_periph.s: esp32s3/pcnt_periph.c.s
+.PHONY : esp32s3/pcnt_periph.s
 
 # target to generate assembly for a file
-esp32/pcnt_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.s
-.PHONY : esp32/pcnt_periph.c.s
+esp32s3/pcnt_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/pcnt_periph.c.s
+.PHONY : esp32s3/pcnt_periph.c.s
 
-esp32/power_supply_periph.obj: esp32/power_supply_periph.c.obj
-.PHONY : esp32/power_supply_periph.obj
+esp32s3/power_supply_periph.obj: esp32s3/power_supply_periph.c.obj
+.PHONY : esp32s3/power_supply_periph.obj
 
 # target to build an object file
-esp32/power_supply_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/power_supply_periph.c.obj
-.PHONY : esp32/power_supply_periph.c.obj
+esp32s3/power_supply_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/power_supply_periph.c.obj
+.PHONY : esp32s3/power_supply_periph.c.obj
 
-esp32/power_supply_periph.i: esp32/power_supply_periph.c.i
-.PHONY : esp32/power_supply_periph.i
+esp32s3/power_supply_periph.i: esp32s3/power_supply_periph.c.i
+.PHONY : esp32s3/power_supply_periph.i
 
 # target to preprocess a source file
-esp32/power_supply_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/power_supply_periph.c.i
-.PHONY : esp32/power_supply_periph.c.i
+esp32s3/power_supply_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/power_supply_periph.c.i
+.PHONY : esp32s3/power_supply_periph.c.i
 
-esp32/power_supply_periph.s: esp32/power_supply_periph.c.s
-.PHONY : esp32/power_supply_periph.s
+esp32s3/power_supply_periph.s: esp32s3/power_supply_periph.c.s
+.PHONY : esp32s3/power_supply_periph.s
 
 # target to generate assembly for a file
-esp32/power_supply_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/power_supply_periph.c.s
-.PHONY : esp32/power_supply_periph.c.s
+esp32s3/power_supply_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/power_supply_periph.c.s
+.PHONY : esp32s3/power_supply_periph.c.s
 
-esp32/rmt_periph.obj: esp32/rmt_periph.c.obj
-.PHONY : esp32/rmt_periph.obj
+esp32s3/rmt_periph.obj: esp32s3/rmt_periph.c.obj
+.PHONY : esp32s3/rmt_periph.obj
 
 # target to build an object file
-esp32/rmt_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.obj
-.PHONY : esp32/rmt_periph.c.obj
+esp32s3/rmt_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rmt_periph.c.obj
+.PHONY : esp32s3/rmt_periph.c.obj
 
-esp32/rmt_periph.i: esp32/rmt_periph.c.i
-.PHONY : esp32/rmt_periph.i
+esp32s3/rmt_periph.i: esp32s3/rmt_periph.c.i
+.PHONY : esp32s3/rmt_periph.i
 
 # target to preprocess a source file
-esp32/rmt_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.i
-.PHONY : esp32/rmt_periph.c.i
+esp32s3/rmt_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rmt_periph.c.i
+.PHONY : esp32s3/rmt_periph.c.i
 
-esp32/rmt_periph.s: esp32/rmt_periph.c.s
-.PHONY : esp32/rmt_periph.s
+esp32s3/rmt_periph.s: esp32s3/rmt_periph.c.s
+.PHONY : esp32s3/rmt_periph.s
 
 # target to generate assembly for a file
-esp32/rmt_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.s
-.PHONY : esp32/rmt_periph.c.s
+esp32s3/rmt_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rmt_periph.c.s
+.PHONY : esp32s3/rmt_periph.c.s
 
-esp32/rtc_io_periph.obj: esp32/rtc_io_periph.c.obj
-.PHONY : esp32/rtc_io_periph.obj
+esp32s3/rtc_io_periph.obj: esp32s3/rtc_io_periph.c.obj
+.PHONY : esp32s3/rtc_io_periph.obj
 
 # target to build an object file
-esp32/rtc_io_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.obj
-.PHONY : esp32/rtc_io_periph.c.obj
+esp32s3/rtc_io_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rtc_io_periph.c.obj
+.PHONY : esp32s3/rtc_io_periph.c.obj
 
-esp32/rtc_io_periph.i: esp32/rtc_io_periph.c.i
-.PHONY : esp32/rtc_io_periph.i
+esp32s3/rtc_io_periph.i: esp32s3/rtc_io_periph.c.i
+.PHONY : esp32s3/rtc_io_periph.i
 
 # target to preprocess a source file
-esp32/rtc_io_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.i
-.PHONY : esp32/rtc_io_periph.c.i
+esp32s3/rtc_io_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rtc_io_periph.c.i
+.PHONY : esp32s3/rtc_io_periph.c.i
 
-esp32/rtc_io_periph.s: esp32/rtc_io_periph.c.s
-.PHONY : esp32/rtc_io_periph.s
+esp32s3/rtc_io_periph.s: esp32s3/rtc_io_periph.c.s
+.PHONY : esp32s3/rtc_io_periph.s
 
 # target to generate assembly for a file
-esp32/rtc_io_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.s
-.PHONY : esp32/rtc_io_periph.c.s
+esp32s3/rtc_io_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rtc_io_periph.c.s
+.PHONY : esp32s3/rtc_io_periph.c.s
 
-esp32/sdio_slave_periph.obj: esp32/sdio_slave_periph.c.obj
-.PHONY : esp32/sdio_slave_periph.obj
+esp32s3/sdm_periph.obj: esp32s3/sdm_periph.c.obj
+.PHONY : esp32s3/sdm_periph.obj
 
 # target to build an object file
-esp32/sdio_slave_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj
-.PHONY : esp32/sdio_slave_periph.c.obj
+esp32s3/sdm_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdm_periph.c.obj
+.PHONY : esp32s3/sdm_periph.c.obj
 
-esp32/sdio_slave_periph.i: esp32/sdio_slave_periph.c.i
-.PHONY : esp32/sdio_slave_periph.i
+esp32s3/sdm_periph.i: esp32s3/sdm_periph.c.i
+.PHONY : esp32s3/sdm_periph.i
 
 # target to preprocess a source file
-esp32/sdio_slave_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.i
-.PHONY : esp32/sdio_slave_periph.c.i
+esp32s3/sdm_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdm_periph.c.i
+.PHONY : esp32s3/sdm_periph.c.i
 
-esp32/sdio_slave_periph.s: esp32/sdio_slave_periph.c.s
-.PHONY : esp32/sdio_slave_periph.s
+esp32s3/sdm_periph.s: esp32s3/sdm_periph.c.s
+.PHONY : esp32s3/sdm_periph.s
 
 # target to generate assembly for a file
-esp32/sdio_slave_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.s
-.PHONY : esp32/sdio_slave_periph.c.s
+esp32s3/sdm_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdm_periph.c.s
+.PHONY : esp32s3/sdm_periph.c.s
 
-esp32/sdm_periph.obj: esp32/sdm_periph.c.obj
-.PHONY : esp32/sdm_periph.obj
+esp32s3/sdmmc_periph.obj: esp32s3/sdmmc_periph.c.obj
+.PHONY : esp32s3/sdmmc_periph.obj
 
 # target to build an object file
-esp32/sdm_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdm_periph.c.obj
-.PHONY : esp32/sdm_periph.c.obj
+esp32s3/sdmmc_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdmmc_periph.c.obj
+.PHONY : esp32s3/sdmmc_periph.c.obj
 
-esp32/sdm_periph.i: esp32/sdm_periph.c.i
-.PHONY : esp32/sdm_periph.i
+esp32s3/sdmmc_periph.i: esp32s3/sdmmc_periph.c.i
+.PHONY : esp32s3/sdmmc_periph.i
 
 # target to preprocess a source file
-esp32/sdm_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdm_periph.c.i
-.PHONY : esp32/sdm_periph.c.i
+esp32s3/sdmmc_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdmmc_periph.c.i
+.PHONY : esp32s3/sdmmc_periph.c.i
 
-esp32/sdm_periph.s: esp32/sdm_periph.c.s
-.PHONY : esp32/sdm_periph.s
+esp32s3/sdmmc_periph.s: esp32s3/sdmmc_periph.c.s
+.PHONY : esp32s3/sdmmc_periph.s
 
 # target to generate assembly for a file
-esp32/sdm_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdm_periph.c.s
-.PHONY : esp32/sdm_periph.c.s
+esp32s3/sdmmc_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdmmc_periph.c.s
+.PHONY : esp32s3/sdmmc_periph.c.s
 
-esp32/sdmmc_periph.obj: esp32/sdmmc_periph.c.obj
-.PHONY : esp32/sdmmc_periph.obj
+esp32s3/spi_periph.obj: esp32s3/spi_periph.c.obj
+.PHONY : esp32s3/spi_periph.obj
 
 # target to build an object file
-esp32/sdmmc_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj
-.PHONY : esp32/sdmmc_periph.c.obj
+esp32s3/spi_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/spi_periph.c.obj
+.PHONY : esp32s3/spi_periph.c.obj
 
-esp32/sdmmc_periph.i: esp32/sdmmc_periph.c.i
-.PHONY : esp32/sdmmc_periph.i
+esp32s3/spi_periph.i: esp32s3/spi_periph.c.i
+.PHONY : esp32s3/spi_periph.i
 
 # target to preprocess a source file
-esp32/sdmmc_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.i
-.PHONY : esp32/sdmmc_periph.c.i
+esp32s3/spi_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/spi_periph.c.i
+.PHONY : esp32s3/spi_periph.c.i
 
-esp32/sdmmc_periph.s: esp32/sdmmc_periph.c.s
-.PHONY : esp32/sdmmc_periph.s
+esp32s3/spi_periph.s: esp32s3/spi_periph.c.s
+.PHONY : esp32s3/spi_periph.s
 
 # target to generate assembly for a file
-esp32/sdmmc_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.s
-.PHONY : esp32/sdmmc_periph.c.s
+esp32s3/spi_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/spi_periph.c.s
+.PHONY : esp32s3/spi_periph.c.s
 
-esp32/spi_periph.obj: esp32/spi_periph.c.obj
-.PHONY : esp32/spi_periph.obj
+esp32s3/temperature_sensor_periph.obj: esp32s3/temperature_sensor_periph.c.obj
+.PHONY : esp32s3/temperature_sensor_periph.obj
 
 # target to build an object file
-esp32/spi_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj
-.PHONY : esp32/spi_periph.c.obj
+esp32s3/temperature_sensor_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/temperature_sensor_periph.c.obj
+.PHONY : esp32s3/temperature_sensor_periph.c.obj
 
-esp32/spi_periph.i: esp32/spi_periph.c.i
-.PHONY : esp32/spi_periph.i
+esp32s3/temperature_sensor_periph.i: esp32s3/temperature_sensor_periph.c.i
+.PHONY : esp32s3/temperature_sensor_periph.i
 
 # target to preprocess a source file
-esp32/spi_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.i
-.PHONY : esp32/spi_periph.c.i
+esp32s3/temperature_sensor_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/temperature_sensor_periph.c.i
+.PHONY : esp32s3/temperature_sensor_periph.c.i
 
-esp32/spi_periph.s: esp32/spi_periph.c.s
-.PHONY : esp32/spi_periph.s
+esp32s3/temperature_sensor_periph.s: esp32s3/temperature_sensor_periph.c.s
+.PHONY : esp32s3/temperature_sensor_periph.s
 
 # target to generate assembly for a file
-esp32/spi_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.s
-.PHONY : esp32/spi_periph.c.s
+esp32s3/temperature_sensor_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/temperature_sensor_periph.c.s
+.PHONY : esp32s3/temperature_sensor_periph.c.s
 
-esp32/timer_periph.obj: esp32/timer_periph.c.obj
-.PHONY : esp32/timer_periph.obj
+esp32s3/timer_periph.obj: esp32s3/timer_periph.c.obj
+.PHONY : esp32s3/timer_periph.obj
 
 # target to build an object file
-esp32/timer_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.obj
-.PHONY : esp32/timer_periph.c.obj
+esp32s3/timer_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/timer_periph.c.obj
+.PHONY : esp32s3/timer_periph.c.obj
 
-esp32/timer_periph.i: esp32/timer_periph.c.i
-.PHONY : esp32/timer_periph.i
+esp32s3/timer_periph.i: esp32s3/timer_periph.c.i
+.PHONY : esp32s3/timer_periph.i
 
 # target to preprocess a source file
-esp32/timer_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.i
-.PHONY : esp32/timer_periph.c.i
+esp32s3/timer_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/timer_periph.c.i
+.PHONY : esp32s3/timer_periph.c.i
 
-esp32/timer_periph.s: esp32/timer_periph.c.s
-.PHONY : esp32/timer_periph.s
+esp32s3/timer_periph.s: esp32s3/timer_periph.c.s
+.PHONY : esp32s3/timer_periph.s
 
 # target to generate assembly for a file
-esp32/timer_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.s
-.PHONY : esp32/timer_periph.c.s
+esp32s3/timer_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/timer_periph.c.s
+.PHONY : esp32s3/timer_periph.c.s
 
-esp32/touch_sensor_periph.obj: esp32/touch_sensor_periph.c.obj
-.PHONY : esp32/touch_sensor_periph.obj
+esp32s3/touch_sensor_periph.obj: esp32s3/touch_sensor_periph.c.obj
+.PHONY : esp32s3/touch_sensor_periph.obj
 
 # target to build an object file
-esp32/touch_sensor_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.obj
-.PHONY : esp32/touch_sensor_periph.c.obj
+esp32s3/touch_sensor_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/touch_sensor_periph.c.obj
+.PHONY : esp32s3/touch_sensor_periph.c.obj
 
-esp32/touch_sensor_periph.i: esp32/touch_sensor_periph.c.i
-.PHONY : esp32/touch_sensor_periph.i
+esp32s3/touch_sensor_periph.i: esp32s3/touch_sensor_periph.c.i
+.PHONY : esp32s3/touch_sensor_periph.i
 
 # target to preprocess a source file
-esp32/touch_sensor_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.i
-.PHONY : esp32/touch_sensor_periph.c.i
+esp32s3/touch_sensor_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/touch_sensor_periph.c.i
+.PHONY : esp32s3/touch_sensor_periph.c.i
 
-esp32/touch_sensor_periph.s: esp32/touch_sensor_periph.c.s
-.PHONY : esp32/touch_sensor_periph.s
+esp32s3/touch_sensor_periph.s: esp32s3/touch_sensor_periph.c.s
+.PHONY : esp32s3/touch_sensor_periph.s
 
 # target to generate assembly for a file
-esp32/touch_sensor_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.s
-.PHONY : esp32/touch_sensor_periph.c.s
+esp32s3/touch_sensor_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/touch_sensor_periph.c.s
+.PHONY : esp32s3/touch_sensor_periph.c.s
 
-esp32/twai_periph.obj: esp32/twai_periph.c.obj
-.PHONY : esp32/twai_periph.obj
+esp32s3/twai_periph.obj: esp32s3/twai_periph.c.obj
+.PHONY : esp32s3/twai_periph.obj
 
 # target to build an object file
-esp32/twai_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/twai_periph.c.obj
-.PHONY : esp32/twai_periph.c.obj
+esp32s3/twai_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/twai_periph.c.obj
+.PHONY : esp32s3/twai_periph.c.obj
 
-esp32/twai_periph.i: esp32/twai_periph.c.i
-.PHONY : esp32/twai_periph.i
+esp32s3/twai_periph.i: esp32s3/twai_periph.c.i
+.PHONY : esp32s3/twai_periph.i
 
 # target to preprocess a source file
-esp32/twai_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/twai_periph.c.i
-.PHONY : esp32/twai_periph.c.i
+esp32s3/twai_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/twai_periph.c.i
+.PHONY : esp32s3/twai_periph.c.i
 
-esp32/twai_periph.s: esp32/twai_periph.c.s
-.PHONY : esp32/twai_periph.s
+esp32s3/twai_periph.s: esp32s3/twai_periph.c.s
+.PHONY : esp32s3/twai_periph.s
 
 # target to generate assembly for a file
-esp32/twai_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/twai_periph.c.s
-.PHONY : esp32/twai_periph.c.s
+esp32s3/twai_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/twai_periph.c.s
+.PHONY : esp32s3/twai_periph.c.s
 
-esp32/uart_periph.obj: esp32/uart_periph.c.obj
-.PHONY : esp32/uart_periph.obj
+esp32s3/uart_periph.obj: esp32s3/uart_periph.c.obj
+.PHONY : esp32s3/uart_periph.obj
 
 # target to build an object file
-esp32/uart_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.obj
-.PHONY : esp32/uart_periph.c.obj
+esp32s3/uart_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/uart_periph.c.obj
+.PHONY : esp32s3/uart_periph.c.obj
 
-esp32/uart_periph.i: esp32/uart_periph.c.i
-.PHONY : esp32/uart_periph.i
+esp32s3/uart_periph.i: esp32s3/uart_periph.c.i
+.PHONY : esp32s3/uart_periph.i
 
 # target to preprocess a source file
-esp32/uart_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.i
-.PHONY : esp32/uart_periph.c.i
+esp32s3/uart_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/uart_periph.c.i
+.PHONY : esp32s3/uart_periph.c.i
 
-esp32/uart_periph.s: esp32/uart_periph.c.s
-.PHONY : esp32/uart_periph.s
+esp32s3/uart_periph.s: esp32s3/uart_periph.c.s
+.PHONY : esp32s3/uart_periph.s
 
 # target to generate assembly for a file
-esp32/uart_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.s
-.PHONY : esp32/uart_periph.c.s
+esp32s3/uart_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/uart_periph.c.s
+.PHONY : esp32s3/uart_periph.c.s
 
-esp32/wdt_periph.obj: esp32/wdt_periph.c.obj
-.PHONY : esp32/wdt_periph.obj
+esp32s3/usb_dwc_periph.obj: esp32s3/usb_dwc_periph.c.obj
+.PHONY : esp32s3/usb_dwc_periph.obj
 
 # target to build an object file
-esp32/wdt_periph.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/wdt_periph.c.obj
-.PHONY : esp32/wdt_periph.c.obj
+esp32s3/usb_dwc_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/usb_dwc_periph.c.obj
+.PHONY : esp32s3/usb_dwc_periph.c.obj
 
-esp32/wdt_periph.i: esp32/wdt_periph.c.i
-.PHONY : esp32/wdt_periph.i
+esp32s3/usb_dwc_periph.i: esp32s3/usb_dwc_periph.c.i
+.PHONY : esp32s3/usb_dwc_periph.i
 
 # target to preprocess a source file
-esp32/wdt_periph.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/wdt_periph.c.i
-.PHONY : esp32/wdt_periph.c.i
+esp32s3/usb_dwc_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/usb_dwc_periph.c.i
+.PHONY : esp32s3/usb_dwc_periph.c.i
 
-esp32/wdt_periph.s: esp32/wdt_periph.c.s
-.PHONY : esp32/wdt_periph.s
+esp32s3/usb_dwc_periph.s: esp32s3/usb_dwc_periph.c.s
+.PHONY : esp32s3/usb_dwc_periph.s
 
 # target to generate assembly for a file
-esp32/wdt_periph.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/wdt_periph.c.s
-.PHONY : esp32/wdt_periph.c.s
+esp32s3/usb_dwc_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/usb_dwc_periph.c.s
+.PHONY : esp32s3/usb_dwc_periph.c.s
+
+esp32s3/wdt_periph.obj: esp32s3/wdt_periph.c.obj
+.PHONY : esp32s3/wdt_periph.obj
+
+# target to build an object file
+esp32s3/wdt_periph.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/wdt_periph.c.obj
+.PHONY : esp32s3/wdt_periph.c.obj
+
+esp32s3/wdt_periph.i: esp32s3/wdt_periph.c.i
+.PHONY : esp32s3/wdt_periph.i
+
+# target to preprocess a source file
+esp32s3/wdt_periph.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/wdt_periph.c.i
+.PHONY : esp32s3/wdt_periph.c.i
+
+esp32s3/wdt_periph.s: esp32s3/wdt_periph.c.s
+.PHONY : esp32s3/wdt_periph.s
+
+# target to generate assembly for a file
+esp32s3/wdt_periph.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/wdt_periph.c.s
+.PHONY : esp32s3/wdt_periph.c.s
 
 lldesc.obj: lldesc.c.obj
 .PHONY : lldesc.obj
 
 # target to build an object file
 lldesc.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
 .PHONY : lldesc.c.obj
 
 lldesc.i: lldesc.c.i
@@ -767,7 +791,7 @@ lldesc.i: lldesc.c.i
 
 # target to preprocess a source file
 lldesc.c.i:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.i
 .PHONY : lldesc.c.i
 
 lldesc.s: lldesc.c.s
@@ -775,7 +799,7 @@ lldesc.s: lldesc.c.s
 
 # target to generate assembly for a file
 lldesc.c.s:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.s
 .PHONY : lldesc.c.s
 
 # Help Target
@@ -790,81 +814,84 @@ help:
 	@echo "... dport_access_common.obj"
 	@echo "... dport_access_common.i"
 	@echo "... dport_access_common.s"
-	@echo "... esp32/adc_periph.obj"
-	@echo "... esp32/adc_periph.i"
-	@echo "... esp32/adc_periph.s"
-	@echo "... esp32/dac_periph.obj"
-	@echo "... esp32/dac_periph.i"
-	@echo "... esp32/dac_periph.s"
-	@echo "... esp32/dport_access.obj"
-	@echo "... esp32/dport_access.i"
-	@echo "... esp32/dport_access.s"
-	@echo "... esp32/emac_periph.obj"
-	@echo "... esp32/emac_periph.i"
-	@echo "... esp32/emac_periph.s"
-	@echo "... esp32/gpio_periph.obj"
-	@echo "... esp32/gpio_periph.i"
-	@echo "... esp32/gpio_periph.s"
-	@echo "... esp32/i2c_periph.obj"
-	@echo "... esp32/i2c_periph.i"
-	@echo "... esp32/i2c_periph.s"
-	@echo "... esp32/i2s_periph.obj"
-	@echo "... esp32/i2s_periph.i"
-	@echo "... esp32/i2s_periph.s"
-	@echo "... esp32/interrupts.obj"
-	@echo "... esp32/interrupts.i"
-	@echo "... esp32/interrupts.s"
-	@echo "... esp32/lcd_periph.obj"
-	@echo "... esp32/lcd_periph.i"
-	@echo "... esp32/lcd_periph.s"
-	@echo "... esp32/ledc_periph.obj"
-	@echo "... esp32/ledc_periph.i"
-	@echo "... esp32/ledc_periph.s"
-	@echo "... esp32/mcpwm_periph.obj"
-	@echo "... esp32/mcpwm_periph.i"
-	@echo "... esp32/mcpwm_periph.s"
-	@echo "... esp32/mpi_periph.obj"
-	@echo "... esp32/mpi_periph.i"
-	@echo "... esp32/mpi_periph.s"
-	@echo "... esp32/pcnt_periph.obj"
-	@echo "... esp32/pcnt_periph.i"
-	@echo "... esp32/pcnt_periph.s"
-	@echo "... esp32/power_supply_periph.obj"
-	@echo "... esp32/power_supply_periph.i"
-	@echo "... esp32/power_supply_periph.s"
-	@echo "... esp32/rmt_periph.obj"
-	@echo "... esp32/rmt_periph.i"
-	@echo "... esp32/rmt_periph.s"
-	@echo "... esp32/rtc_io_periph.obj"
-	@echo "... esp32/rtc_io_periph.i"
-	@echo "... esp32/rtc_io_periph.s"
-	@echo "... esp32/sdio_slave_periph.obj"
-	@echo "... esp32/sdio_slave_periph.i"
-	@echo "... esp32/sdio_slave_periph.s"
-	@echo "... esp32/sdm_periph.obj"
-	@echo "... esp32/sdm_periph.i"
-	@echo "... esp32/sdm_periph.s"
-	@echo "... esp32/sdmmc_periph.obj"
-	@echo "... esp32/sdmmc_periph.i"
-	@echo "... esp32/sdmmc_periph.s"
-	@echo "... esp32/spi_periph.obj"
-	@echo "... esp32/spi_periph.i"
-	@echo "... esp32/spi_periph.s"
-	@echo "... esp32/timer_periph.obj"
-	@echo "... esp32/timer_periph.i"
-	@echo "... esp32/timer_periph.s"
-	@echo "... esp32/touch_sensor_periph.obj"
-	@echo "... esp32/touch_sensor_periph.i"
-	@echo "... esp32/touch_sensor_periph.s"
-	@echo "... esp32/twai_periph.obj"
-	@echo "... esp32/twai_periph.i"
-	@echo "... esp32/twai_periph.s"
-	@echo "... esp32/uart_periph.obj"
-	@echo "... esp32/uart_periph.i"
-	@echo "... esp32/uart_periph.s"
-	@echo "... esp32/wdt_periph.obj"
-	@echo "... esp32/wdt_periph.i"
-	@echo "... esp32/wdt_periph.s"
+	@echo "... esp32s3/adc_periph.obj"
+	@echo "... esp32s3/adc_periph.i"
+	@echo "... esp32s3/adc_periph.s"
+	@echo "... esp32s3/cam_periph.obj"
+	@echo "... esp32s3/cam_periph.i"
+	@echo "... esp32s3/cam_periph.s"
+	@echo "... esp32s3/dedic_gpio_periph.obj"
+	@echo "... esp32s3/dedic_gpio_periph.i"
+	@echo "... esp32s3/dedic_gpio_periph.s"
+	@echo "... esp32s3/gdma_periph.obj"
+	@echo "... esp32s3/gdma_periph.i"
+	@echo "... esp32s3/gdma_periph.s"
+	@echo "... esp32s3/gpio_periph.obj"
+	@echo "... esp32s3/gpio_periph.i"
+	@echo "... esp32s3/gpio_periph.s"
+	@echo "... esp32s3/i2c_periph.obj"
+	@echo "... esp32s3/i2c_periph.i"
+	@echo "... esp32s3/i2c_periph.s"
+	@echo "... esp32s3/i2s_periph.obj"
+	@echo "... esp32s3/i2s_periph.i"
+	@echo "... esp32s3/i2s_periph.s"
+	@echo "... esp32s3/interrupts.obj"
+	@echo "... esp32s3/interrupts.i"
+	@echo "... esp32s3/interrupts.s"
+	@echo "... esp32s3/lcd_periph.obj"
+	@echo "... esp32s3/lcd_periph.i"
+	@echo "... esp32s3/lcd_periph.s"
+	@echo "... esp32s3/ledc_periph.obj"
+	@echo "... esp32s3/ledc_periph.i"
+	@echo "... esp32s3/ledc_periph.s"
+	@echo "... esp32s3/mcpwm_periph.obj"
+	@echo "... esp32s3/mcpwm_periph.i"
+	@echo "... esp32s3/mcpwm_periph.s"
+	@echo "... esp32s3/mpi_periph.obj"
+	@echo "... esp32s3/mpi_periph.i"
+	@echo "... esp32s3/mpi_periph.s"
+	@echo "... esp32s3/pcnt_periph.obj"
+	@echo "... esp32s3/pcnt_periph.i"
+	@echo "... esp32s3/pcnt_periph.s"
+	@echo "... esp32s3/power_supply_periph.obj"
+	@echo "... esp32s3/power_supply_periph.i"
+	@echo "... esp32s3/power_supply_periph.s"
+	@echo "... esp32s3/rmt_periph.obj"
+	@echo "... esp32s3/rmt_periph.i"
+	@echo "... esp32s3/rmt_periph.s"
+	@echo "... esp32s3/rtc_io_periph.obj"
+	@echo "... esp32s3/rtc_io_periph.i"
+	@echo "... esp32s3/rtc_io_periph.s"
+	@echo "... esp32s3/sdm_periph.obj"
+	@echo "... esp32s3/sdm_periph.i"
+	@echo "... esp32s3/sdm_periph.s"
+	@echo "... esp32s3/sdmmc_periph.obj"
+	@echo "... esp32s3/sdmmc_periph.i"
+	@echo "... esp32s3/sdmmc_periph.s"
+	@echo "... esp32s3/spi_periph.obj"
+	@echo "... esp32s3/spi_periph.i"
+	@echo "... esp32s3/spi_periph.s"
+	@echo "... esp32s3/temperature_sensor_periph.obj"
+	@echo "... esp32s3/temperature_sensor_periph.i"
+	@echo "... esp32s3/temperature_sensor_periph.s"
+	@echo "... esp32s3/timer_periph.obj"
+	@echo "... esp32s3/timer_periph.i"
+	@echo "... esp32s3/timer_periph.s"
+	@echo "... esp32s3/touch_sensor_periph.obj"
+	@echo "... esp32s3/touch_sensor_periph.i"
+	@echo "... esp32s3/touch_sensor_periph.s"
+	@echo "... esp32s3/twai_periph.obj"
+	@echo "... esp32s3/twai_periph.i"
+	@echo "... esp32s3/twai_periph.s"
+	@echo "... esp32s3/uart_periph.obj"
+	@echo "... esp32s3/uart_periph.i"
+	@echo "... esp32s3/uart_periph.s"
+	@echo "... esp32s3/usb_dwc_periph.obj"
+	@echo "... esp32s3/usb_dwc_periph.i"
+	@echo "... esp32s3/usb_dwc_periph.s"
+	@echo "... esp32s3/wdt_periph.obj"
+	@echo "... esp32s3/wdt_periph.i"
+	@echo "... esp32s3/wdt_periph.s"
 	@echo "... lldesc.obj"
 	@echo "... lldesc.i"
 	@echo "... lldesc.s"
@@ -879,6 +906,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

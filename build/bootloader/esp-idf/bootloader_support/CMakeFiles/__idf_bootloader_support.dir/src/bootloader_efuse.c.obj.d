@@ -7,7 +7,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
- /home/fus/Documents/DO-AN-02/build/bootloader/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/bootloader/config/sdkconfig.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/include/bootloader_common.h \
  /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_err.h \
@@ -41,23 +41,23 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloade
  /home/fus/.fus/esp-idf/components/bootloader_support/include/esp_app_format.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/efuse_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
- /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/efuse_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/efuse_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/efuse_defs.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/efuse_struct.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/efuse_hal.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/efuse.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/efuse_hal.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/efuse_hal.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/ecdsa_types.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h

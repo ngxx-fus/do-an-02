@@ -1,6 +1,6 @@
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/newlib_init.c.obj: \
  /home/fus/.fus/esp-idf/components/newlib/src/newlib_init.c \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
@@ -57,10 +57,10 @@ esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/newlib_init.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/signal.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_attr.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/esp_rom_caps.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/libc_stubs.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
+ /home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3/rom/libc_stubs.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdio.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdarg.h \

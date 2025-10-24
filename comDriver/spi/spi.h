@@ -51,7 +51,7 @@ Data is receiving from MSB to LSB in a byte, and fill from 0 in a buffer.
 #define SPI_LOG_LEVEL 3
 
 #if SPI_LOG_LEVEL >= 1
-    #define __spiErr(...)       __err( __VA_ARGS__ )
+    #define __spiErr(...)       __sys_err( __VA_ARGS__ )
 #else 
     #define __spiErr(...)
 #endif
@@ -63,12 +63,12 @@ Data is receiving from MSB to LSB in a byte, and fill from 0 in a buffer.
     #define __spiExit(...)
 #endif 
 #if SPI_LOG_LEVEL >= 3
-    #define __spiLog(...)      __log( __VA_ARGS__ )
+    #define __spiLog(...)      __sys_log( __VA_ARGS__ )
 #else 
     #define __spiLog(...)
 #endif 
 #if SPI_LOG_LEVEL >= 4
-    #define __spiLog1(...)      __log( __VA_ARGS__ )
+    #define __spiLog1(...)      __sys_log( __VA_ARGS__ )
 #else 
     #define __spiLog1(...)
 #endif 

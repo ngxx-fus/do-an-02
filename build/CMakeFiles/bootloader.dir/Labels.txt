@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader
-/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader.rule
-/home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader-complete.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader
+/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader.rule
+/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader-complete.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

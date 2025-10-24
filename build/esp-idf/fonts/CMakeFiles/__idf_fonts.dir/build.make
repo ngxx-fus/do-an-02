@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Include any dependencies generated for this target.
 include esp-idf/fonts/CMakeFiles/__idf_fonts.dir/depend.make
@@ -73,18 +73,18 @@ esp-idf/fonts/CMakeFiles/__idf_fonts.dir/codegen:
 .PHONY : esp-idf/fonts/CMakeFiles/__idf_fonts.dir/codegen
 
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/flags.make
-esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: /home/fus/Documents/DO-AN-02/fonts/fontUtils.c
+esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: /home/fus/Documents/DO-AN-02-LCD/fonts/fontUtils.c
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj -MF CMakeFiles/__idf_fonts.dir/fontUtils.c.obj.d -o CMakeFiles/__idf_fonts.dir/fontUtils.c.obj -c /home/fus/Documents/DO-AN-02/fonts/fontUtils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj -MF CMakeFiles/__idf_fonts.dir/fontUtils.c.obj.d -o CMakeFiles/__idf_fonts.dir/fontUtils.c.obj -c /home/fus/Documents/DO-AN-02-LCD/fonts/fontUtils.c
 
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_fonts.dir/fontUtils.c.i"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02/fonts/fontUtils.c > CMakeFiles/__idf_fonts.dir/fontUtils.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fus/Documents/DO-AN-02-LCD/fonts/fontUtils.c > CMakeFiles/__idf_fonts.dir/fontUtils.c.i
 
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_fonts.dir/fontUtils.c.s"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02/fonts/fontUtils.c -o CMakeFiles/__idf_fonts.dir/fontUtils.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fus/Documents/DO-AN-02-LCD/fonts/fontUtils.c -o CMakeFiles/__idf_fonts.dir/fontUtils.c.s
 
 # Object files for target __idf_fonts
 __idf_fonts_OBJECTS = \
@@ -96,19 +96,19 @@ __idf_fonts_EXTERNAL_OBJECTS =
 esp-idf/fonts/libfonts.a: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj
 esp-idf/fonts/libfonts.a: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build.make
 esp-idf/fonts/libfonts.a: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libfonts.a"
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && $(CMAKE_COMMAND) -P CMakeFiles/__idf_fonts.dir/cmake_clean_target.cmake
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_fonts.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libfonts.a"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && $(CMAKE_COMMAND) -P CMakeFiles/__idf_fonts.dir/cmake_clean_target.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_fonts.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build: esp-idf/fonts/libfonts.a
 .PHONY : esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build
 
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/fonts && $(CMAKE_COMMAND) -P CMakeFiles/__idf_fonts.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts && $(CMAKE_COMMAND) -P CMakeFiles/__idf_fonts.dir/cmake_clean.cmake
 .PHONY : esp-idf/fonts/CMakeFiles/__idf_fonts.dir/clean
 
 esp-idf/fonts/CMakeFiles/__idf_fonts.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/fonts /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/fonts /home/fus/Documents/DO-AN-02/build/esp-idf/fonts/CMakeFiles/__idf_fonts.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/fonts /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/fonts/CMakeFiles/__idf_fonts.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/fonts/CMakeFiles/__idf_fonts.dir/depend
 

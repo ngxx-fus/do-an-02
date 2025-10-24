@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S" "/home/fus/Documents/DO-AN-02/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_cache_writeback_esp32s3.S" "/home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_writeback_esp32s3.S.obj"
+  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S" "/home/fus/Documents/DO-AN-02-LCD/build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -29,9 +30,9 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "config"
   "/home/fus/.fus/esp-idf/components/esp_rom/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32"
-  "/home/fus/.fus/esp-idf/components/esp_rom/esp32"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3/include/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_rom/esp32s3"
   "/home/fus/.fus/esp-idf/components/log/include"
   "/home/fus/.fus/esp-idf/components/esp_common/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/include"
@@ -43,23 +44,27 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include"
   "/home/fus/.fus/esp-idf/components/esp_hw_support/power_supply/include"
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/."
-  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/include/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/port/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/."
+  "/home/fus/.fus/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/newlib/platform_include"
-  "/home/fus/.fus/esp-idf/components/xtensa/esp32/include"
+  "/home/fus/.fus/esp-idf/components/xtensa/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/xtensa/include"
   "/home/fus/.fus/esp-idf/components/xtensa/deprecated_include"
   "/home/fus/.fus/esp-idf/components/soc/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/include"
-  "/home/fus/.fus/esp-idf/components/soc/esp32/register"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/include"
+  "/home/fus/.fus/esp-idf/components/soc/esp32s3/register"
   "/home/fus/.fus/esp-idf/components/hal/platform_port/include"
-  "/home/fus/.fus/esp-idf/components/hal/esp32/include"
+  "/home/fus/.fus/esp-idf/components/hal/esp32s3/include"
   "/home/fus/.fus/esp-idf/components/hal/include"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_cache_esp32s2_esp32s3.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_crc.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_efuse.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_gpio.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.obj.d"
@@ -67,6 +72,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_serial_output.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_sys.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj.d"
+  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_systimer.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj.d"
+  "/home/fus/.fus/esp-idf/components/esp_rom/patches/esp_rom_wdt.c" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj" "gcc" "esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

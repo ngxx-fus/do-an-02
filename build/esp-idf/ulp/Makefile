@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles /home/fus/Documents/DO-AN-02/build/esp-idf/ulp//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/ulp//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,17 +148,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/ulp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -184,6 +184,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

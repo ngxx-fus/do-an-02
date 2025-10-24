@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/fus/.fus/esp-idf")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/fus/Documents/DO-AN-02/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/fus/Documents/DO-AN-02-LCD/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

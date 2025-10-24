@@ -8,7 +8,7 @@
 #include <stdarg.h>     /// for variadic arguments (va_list, va_start, va_end)
 
 /// Type of a GPIO
-typedef int32_t pin_t;
+typedef int8_t pin_t;
 
 #if ESP32_DEVICE_MODE == SENDER
 
@@ -37,6 +37,38 @@ typedef int32_t pin_t;
     #define OLED_SDA ((pin_t)0)
 
 #endif 
+
+#if ESP32_DEVICE_MODE == MONITOR
+
+    #define LCD32_DB0       18    
+    #define LCD32_DB1       12
+    #define LCD32_DB2       17
+    #define LCD32_DB3       11
+    #define LCD32_DB4       16
+    #define LCD32_DB5       10
+    #define LCD32_DB6       15
+    #define LCD32_DB7       9
+    #define LCD32_DB8       7
+    #define LCD32_DB9       3
+    #define LCD32_DB10      6
+    #define LCD32_DB11      20
+    #define LCD32_DB12      5
+    #define LCD32_DB13      19
+    #define LCD32_DB14      4
+    #define LCD32_DB15      8
+
+
+    #define LCD32_RST       1
+    #define LCD32_WR        2
+    #define LCD32_RD        14
+    #define LCD32_RS        21
+    #define LCD32_CS        13
+    
+    #define LCD32_MAX_ROW   240
+    #define LCD32_MAX_COL   320
+
+#endif
+
 
 /// @brief States of pin
 enum PIN_STATE {

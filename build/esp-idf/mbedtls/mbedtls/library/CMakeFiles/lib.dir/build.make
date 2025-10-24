@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for lib.
 
@@ -82,10 +82,10 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/build: lib
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/build
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/clean:
-	cd /home/fus/Documents/DO-AN-02/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
+	cd /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/clean
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/esp-idf/mbedtls/mbedtls/library /home/fus/Documents/DO-AN-02/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/mbedtls/mbedtls/library /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/lib.dir/depend
 

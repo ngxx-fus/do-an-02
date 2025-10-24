@@ -371,7 +371,7 @@ def i2cReceiveBuffer(i2cDev_t * dev, uint8_t addr7, uint8_t rw, flag_t extConf){
         receivedByte = i2cReceiveByte(dev);
         __i2cLog1("Received [0x%04x]", receivedByte);
         if(receivedByte < 0){
-            __err("[i2cReceiveBuffer] The i2cReceiveByte has returned [%d]", receivedByte);
+            __sys_err("[i2cReceiveBuffer] The i2cReceiveByte has returned [%d]", receivedByte);
             __i2cSetSDA(dev, I2C_NACK);
             /// Mono SCL pulse (9th pulse)
             __i2cDelay(500000/__i2cFreq(dev));

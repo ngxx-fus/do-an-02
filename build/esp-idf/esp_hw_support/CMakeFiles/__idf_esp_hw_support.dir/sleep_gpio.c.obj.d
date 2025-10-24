@@ -9,7 +9,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
  /home/fus/.fus/esp-idf/components/newlib/platform_include/sys/reent.h \
- /home/fus/Documents/DO-AN-02/build/config/sdkconfig.h \
+ /home/fus/Documents/DO-AN-02-LCD/build/config/sdkconfig.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
@@ -46,14 +46,14 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj: \
  /home/fus/.fus/esp-idf/components/hal/include/hal/touch_sensor_legacy_types.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/stdbool.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/soc_caps_eval.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_types.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_num.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/inttypes.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_sys.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/reset_reasons.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_config.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_level.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h \
@@ -68,58 +68,41 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj: \
  /home/fus/.fus/esp-idf/components/log/include/esp_log_attr.h \
  /home/fus/.fus/esp-idf/components/log/include/esp_private/log_attr.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/interrupts.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/reg_base.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/uart_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/io_mux_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/reg_base.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/uart_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/io_mux_reg.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
  /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/driver/gpio_etm.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/etm/include/esp_etm.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/gpio_hal.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/gpio_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_struct.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/gpio_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/gpio_ll.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_reg.h \
- /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/gpio_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpio_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_reg.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_io_hal.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_io_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/rtc_io_channel.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/rtc_io_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/rtc_io_channel.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/rtc_io_ll.h \
  /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/assert.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_io_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_io_reg.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_periph.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/rtc_cntl_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/usb_serial_jtag_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/sens_struct.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_io_types.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/rtc_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/rtc_cntl_ll.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/clk_tree_ll.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/dport_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/syscon_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/timer_group_struct.h \
- /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/regi2c_ctrl.h \
- /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/regi2c_ctrl.h \
- /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_regi2c.h \
- /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/periph_ctrl.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/regi2c_ctrl_ll.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/regi2c_defs.h \
- /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/esp_clk_tree_common.h \
- /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_clk_tree.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/regi2c_bbpll.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/regi2c_apll.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/rtc.h \
- /home/fus/.fus/esp-idf/components/esp_rom/esp32/include/esp32/rom/ets_sys.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/rtc_cntl_ll.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/syscon_reg.h \
  /home/fus/.fus/esp-idf/components/esp_driver_gpio/include/esp_private/gpio.h \
  /home/fus/.fus/esp-idf/components/esp_common/include/esp_types.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_private/sleep_gpio.h \
@@ -130,30 +113,36 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj: \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_types.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/esp_flash_err.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_flash_hal.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spi_flash_ll.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/gpspi_flash_ll.h \
  /home/fus/.fus/esp-idf/components/soc/include/soc/spi_periph.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_reg.h \
- /home/fus/.fus/esp-idf/components/soc/esp32/register/soc/spi_struct.h \
- /home/fus/.fus/esp-idf/components/hal/esp32/include/hal/spi_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/spi_pins.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/interrupts.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_reg.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_struct.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/register/soc/spi_mem_reg.h \
  /home/fus/.fus/esp-idf/components/hal/include/hal/spi_types.h \
+ /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+ /home/fus/.fus/esp-idf/components/hal/platform_port/include/hal/misc.h \
+ /home/fus/.fus/esp-idf/components/hal/esp32s3/include/hal/spimem_flash_ll.h \
  /home/fus/.fus/esp-idf/components/spi_flash/include/spi_flash_override.h \
  /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/startup_internal.h \
  /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_cpu.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_api.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/hal.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/corebits.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_utils.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
- /home/fus/.fus/esp-idf/components/xtensa/esp32/include/xtensa/config/xt_specreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+ /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/fus/.fus/esp-idf/components/xtensa/include/xt_instr_macros.h \

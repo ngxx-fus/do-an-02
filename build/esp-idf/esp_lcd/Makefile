@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles /home/fus/Documents/DO-AN-02/build/esp-idf/esp_lcd//CMakeFiles/progress.marks
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02/build/CMakeFiles 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles /home/fus/Documents/DO-AN-02-LCD/build/esp-idf/esp_lcd//CMakeFiles/progress.marks
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/clean
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 .PHONY : esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_esp_lcd: esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 
 # fast build rule for target.
 __idf_esp_lcd/fast:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build
 .PHONY : __idf_esp_lcd/fast
 
 i2c/esp_lcd_panel_io_i2c_v1.obj: i2c/esp_lcd_panel_io_i2c_v1.c.obj
@@ -180,7 +180,7 @@ i2c/esp_lcd_panel_io_i2c_v1.obj: i2c/esp_lcd_panel_io_i2c_v1.c.obj
 
 # target to build an object file
 i2c/esp_lcd_panel_io_i2c_v1.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.obj
 .PHONY : i2c/esp_lcd_panel_io_i2c_v1.c.obj
 
 i2c/esp_lcd_panel_io_i2c_v1.i: i2c/esp_lcd_panel_io_i2c_v1.c.i
@@ -188,7 +188,7 @@ i2c/esp_lcd_panel_io_i2c_v1.i: i2c/esp_lcd_panel_io_i2c_v1.c.i
 
 # target to preprocess a source file
 i2c/esp_lcd_panel_io_i2c_v1.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.i
 .PHONY : i2c/esp_lcd_panel_io_i2c_v1.c.i
 
 i2c/esp_lcd_panel_io_i2c_v1.s: i2c/esp_lcd_panel_io_i2c_v1.c.s
@@ -196,7 +196,7 @@ i2c/esp_lcd_panel_io_i2c_v1.s: i2c/esp_lcd_panel_io_i2c_v1.c.s
 
 # target to generate assembly for a file
 i2c/esp_lcd_panel_io_i2c_v1.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.s
 .PHONY : i2c/esp_lcd_panel_io_i2c_v1.c.s
 
 i2c/esp_lcd_panel_io_i2c_v2.obj: i2c/esp_lcd_panel_io_i2c_v2.c.obj
@@ -204,7 +204,7 @@ i2c/esp_lcd_panel_io_i2c_v2.obj: i2c/esp_lcd_panel_io_i2c_v2.c.obj
 
 # target to build an object file
 i2c/esp_lcd_panel_io_i2c_v2.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.obj
 .PHONY : i2c/esp_lcd_panel_io_i2c_v2.c.obj
 
 i2c/esp_lcd_panel_io_i2c_v2.i: i2c/esp_lcd_panel_io_i2c_v2.c.i
@@ -212,7 +212,7 @@ i2c/esp_lcd_panel_io_i2c_v2.i: i2c/esp_lcd_panel_io_i2c_v2.c.i
 
 # target to preprocess a source file
 i2c/esp_lcd_panel_io_i2c_v2.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.i
 .PHONY : i2c/esp_lcd_panel_io_i2c_v2.c.i
 
 i2c/esp_lcd_panel_io_i2c_v2.s: i2c/esp_lcd_panel_io_i2c_v2.c.s
@@ -220,39 +220,63 @@ i2c/esp_lcd_panel_io_i2c_v2.s: i2c/esp_lcd_panel_io_i2c_v2.c.s
 
 # target to generate assembly for a file
 i2c/esp_lcd_panel_io_i2c_v2.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v2.c.s
 .PHONY : i2c/esp_lcd_panel_io_i2c_v2.c.s
 
-i80/esp_lcd_panel_io_i2s.obj: i80/esp_lcd_panel_io_i2s.c.obj
-.PHONY : i80/esp_lcd_panel_io_i2s.obj
+i80/esp_lcd_panel_io_i80.obj: i80/esp_lcd_panel_io_i80.c.obj
+.PHONY : i80/esp_lcd_panel_io_i80.obj
 
 # target to build an object file
-i80/esp_lcd_panel_io_i2s.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i2s.c.obj
-.PHONY : i80/esp_lcd_panel_io_i2s.c.obj
+i80/esp_lcd_panel_io_i80.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i80.c.obj
+.PHONY : i80/esp_lcd_panel_io_i80.c.obj
 
-i80/esp_lcd_panel_io_i2s.i: i80/esp_lcd_panel_io_i2s.c.i
-.PHONY : i80/esp_lcd_panel_io_i2s.i
+i80/esp_lcd_panel_io_i80.i: i80/esp_lcd_panel_io_i80.c.i
+.PHONY : i80/esp_lcd_panel_io_i80.i
 
 # target to preprocess a source file
-i80/esp_lcd_panel_io_i2s.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i2s.c.i
-.PHONY : i80/esp_lcd_panel_io_i2s.c.i
+i80/esp_lcd_panel_io_i80.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i80.c.i
+.PHONY : i80/esp_lcd_panel_io_i80.c.i
 
-i80/esp_lcd_panel_io_i2s.s: i80/esp_lcd_panel_io_i2s.c.s
-.PHONY : i80/esp_lcd_panel_io_i2s.s
+i80/esp_lcd_panel_io_i80.s: i80/esp_lcd_panel_io_i80.c.s
+.PHONY : i80/esp_lcd_panel_io_i80.s
 
 # target to generate assembly for a file
-i80/esp_lcd_panel_io_i2s.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i2s.c.s
-.PHONY : i80/esp_lcd_panel_io_i2s.c.s
+i80/esp_lcd_panel_io_i80.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i80.c.s
+.PHONY : i80/esp_lcd_panel_io_i80.c.s
+
+rgb/esp_lcd_panel_rgb.obj: rgb/esp_lcd_panel_rgb.c.obj
+.PHONY : rgb/esp_lcd_panel_rgb.obj
+
+# target to build an object file
+rgb/esp_lcd_panel_rgb.c.obj:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rgb/esp_lcd_panel_rgb.c.obj
+.PHONY : rgb/esp_lcd_panel_rgb.c.obj
+
+rgb/esp_lcd_panel_rgb.i: rgb/esp_lcd_panel_rgb.c.i
+.PHONY : rgb/esp_lcd_panel_rgb.i
+
+# target to preprocess a source file
+rgb/esp_lcd_panel_rgb.c.i:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rgb/esp_lcd_panel_rgb.c.i
+.PHONY : rgb/esp_lcd_panel_rgb.c.i
+
+rgb/esp_lcd_panel_rgb.s: rgb/esp_lcd_panel_rgb.c.s
+.PHONY : rgb/esp_lcd_panel_rgb.s
+
+# target to generate assembly for a file
+rgb/esp_lcd_panel_rgb.c.s:
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rgb/esp_lcd_panel_rgb.c.s
+.PHONY : rgb/esp_lcd_panel_rgb.c.s
 
 spi/esp_lcd_panel_io_spi.obj: spi/esp_lcd_panel_io_spi.c.obj
 .PHONY : spi/esp_lcd_panel_io_spi.obj
 
 # target to build an object file
 spi/esp_lcd_panel_io_spi.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj
 .PHONY : spi/esp_lcd_panel_io_spi.c.obj
 
 spi/esp_lcd_panel_io_spi.i: spi/esp_lcd_panel_io_spi.c.i
@@ -260,7 +284,7 @@ spi/esp_lcd_panel_io_spi.i: spi/esp_lcd_panel_io_spi.c.i
 
 # target to preprocess a source file
 spi/esp_lcd_panel_io_spi.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.i
 .PHONY : spi/esp_lcd_panel_io_spi.c.i
 
 spi/esp_lcd_panel_io_spi.s: spi/esp_lcd_panel_io_spi.c.s
@@ -268,7 +292,7 @@ spi/esp_lcd_panel_io_spi.s: spi/esp_lcd_panel_io_spi.c.s
 
 # target to generate assembly for a file
 spi/esp_lcd_panel_io_spi.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.s
 .PHONY : spi/esp_lcd_panel_io_spi.c.s
 
 src/esp_lcd_common.obj: src/esp_lcd_common.c.obj
@@ -276,7 +300,7 @@ src/esp_lcd_common.obj: src/esp_lcd_common.c.obj
 
 # target to build an object file
 src/esp_lcd_common.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
 .PHONY : src/esp_lcd_common.c.obj
 
 src/esp_lcd_common.i: src/esp_lcd_common.c.i
@@ -284,7 +308,7 @@ src/esp_lcd_common.i: src/esp_lcd_common.c.i
 
 # target to preprocess a source file
 src/esp_lcd_common.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.i
 .PHONY : src/esp_lcd_common.c.i
 
 src/esp_lcd_common.s: src/esp_lcd_common.c.s
@@ -292,7 +316,7 @@ src/esp_lcd_common.s: src/esp_lcd_common.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_common.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.s
 .PHONY : src/esp_lcd_common.c.s
 
 src/esp_lcd_panel_io.obj: src/esp_lcd_panel_io.c.obj
@@ -300,7 +324,7 @@ src/esp_lcd_panel_io.obj: src/esp_lcd_panel_io.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
 .PHONY : src/esp_lcd_panel_io.c.obj
 
 src/esp_lcd_panel_io.i: src/esp_lcd_panel_io.c.i
@@ -308,7 +332,7 @@ src/esp_lcd_panel_io.i: src/esp_lcd_panel_io.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.i
 .PHONY : src/esp_lcd_panel_io.c.i
 
 src/esp_lcd_panel_io.s: src/esp_lcd_panel_io.c.s
@@ -316,7 +340,7 @@ src/esp_lcd_panel_io.s: src/esp_lcd_panel_io.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.s
 .PHONY : src/esp_lcd_panel_io.c.s
 
 src/esp_lcd_panel_nt35510.obj: src/esp_lcd_panel_nt35510.c.obj
@@ -324,7 +348,7 @@ src/esp_lcd_panel_nt35510.obj: src/esp_lcd_panel_nt35510.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_nt35510.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
 .PHONY : src/esp_lcd_panel_nt35510.c.obj
 
 src/esp_lcd_panel_nt35510.i: src/esp_lcd_panel_nt35510.c.i
@@ -332,7 +356,7 @@ src/esp_lcd_panel_nt35510.i: src/esp_lcd_panel_nt35510.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_nt35510.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.i
 .PHONY : src/esp_lcd_panel_nt35510.c.i
 
 src/esp_lcd_panel_nt35510.s: src/esp_lcd_panel_nt35510.c.s
@@ -340,7 +364,7 @@ src/esp_lcd_panel_nt35510.s: src/esp_lcd_panel_nt35510.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_nt35510.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.s
 .PHONY : src/esp_lcd_panel_nt35510.c.s
 
 src/esp_lcd_panel_ops.obj: src/esp_lcd_panel_ops.c.obj
@@ -348,7 +372,7 @@ src/esp_lcd_panel_ops.obj: src/esp_lcd_panel_ops.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_ops.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
 .PHONY : src/esp_lcd_panel_ops.c.obj
 
 src/esp_lcd_panel_ops.i: src/esp_lcd_panel_ops.c.i
@@ -356,7 +380,7 @@ src/esp_lcd_panel_ops.i: src/esp_lcd_panel_ops.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_ops.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.i
 .PHONY : src/esp_lcd_panel_ops.c.i
 
 src/esp_lcd_panel_ops.s: src/esp_lcd_panel_ops.c.s
@@ -364,7 +388,7 @@ src/esp_lcd_panel_ops.s: src/esp_lcd_panel_ops.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_ops.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.s
 .PHONY : src/esp_lcd_panel_ops.c.s
 
 src/esp_lcd_panel_ssd1306.obj: src/esp_lcd_panel_ssd1306.c.obj
@@ -372,7 +396,7 @@ src/esp_lcd_panel_ssd1306.obj: src/esp_lcd_panel_ssd1306.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_ssd1306.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
 .PHONY : src/esp_lcd_panel_ssd1306.c.obj
 
 src/esp_lcd_panel_ssd1306.i: src/esp_lcd_panel_ssd1306.c.i
@@ -380,7 +404,7 @@ src/esp_lcd_panel_ssd1306.i: src/esp_lcd_panel_ssd1306.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_ssd1306.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.i
 .PHONY : src/esp_lcd_panel_ssd1306.c.i
 
 src/esp_lcd_panel_ssd1306.s: src/esp_lcd_panel_ssd1306.c.s
@@ -388,7 +412,7 @@ src/esp_lcd_panel_ssd1306.s: src/esp_lcd_panel_ssd1306.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_ssd1306.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.s
 .PHONY : src/esp_lcd_panel_ssd1306.c.s
 
 src/esp_lcd_panel_st7789.obj: src/esp_lcd_panel_st7789.c.obj
@@ -396,7 +420,7 @@ src/esp_lcd_panel_st7789.obj: src/esp_lcd_panel_st7789.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_st7789.c.obj:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
 .PHONY : src/esp_lcd_panel_st7789.c.obj
 
 src/esp_lcd_panel_st7789.i: src/esp_lcd_panel_st7789.c.i
@@ -404,7 +428,7 @@ src/esp_lcd_panel_st7789.i: src/esp_lcd_panel_st7789.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_st7789.c.i:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.i
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.i
 .PHONY : src/esp_lcd_panel_st7789.c.i
 
 src/esp_lcd_panel_st7789.s: src/esp_lcd_panel_st7789.c.s
@@ -412,7 +436,7 @@ src/esp_lcd_panel_st7789.s: src/esp_lcd_panel_st7789.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_st7789.c.s:
-	cd /home/fus/Documents/DO-AN-02/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.s
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.s
 .PHONY : src/esp_lcd_panel_st7789.c.s
 
 # Help Target
@@ -434,9 +458,12 @@ help:
 	@echo "... i2c/esp_lcd_panel_io_i2c_v2.obj"
 	@echo "... i2c/esp_lcd_panel_io_i2c_v2.i"
 	@echo "... i2c/esp_lcd_panel_io_i2c_v2.s"
-	@echo "... i80/esp_lcd_panel_io_i2s.obj"
-	@echo "... i80/esp_lcd_panel_io_i2s.i"
-	@echo "... i80/esp_lcd_panel_io_i2s.s"
+	@echo "... i80/esp_lcd_panel_io_i80.obj"
+	@echo "... i80/esp_lcd_panel_io_i80.i"
+	@echo "... i80/esp_lcd_panel_io_i80.s"
+	@echo "... rgb/esp_lcd_panel_rgb.obj"
+	@echo "... rgb/esp_lcd_panel_rgb.i"
+	@echo "... rgb/esp_lcd_panel_rgb.s"
 	@echo "... spi/esp_lcd_panel_io_spi.obj"
 	@echo "... spi/esp_lcd_panel_io_spi.i"
 	@echo "... spi/esp_lcd_panel_io_spi.s"
@@ -469,6 +496,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

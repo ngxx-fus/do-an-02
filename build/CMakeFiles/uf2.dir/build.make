@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for uf2.
 
@@ -67,7 +67,7 @@ include CMakeFiles/uf2.dir/compiler_depend.make
 include CMakeFiles/uf2.dir/progress.make
 
 CMakeFiles/uf2:
-	/usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "UF2_CMD=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;/home/fus/.fus/esp-idf/tools/mkuf2.py;write;--chip;esp32" -D "UF2_ARGS=--json;/home/fus/Documents/DO-AN-02/build/flasher_args.json;-o;/home/fus/Documents/DO-AN-02/build/uf2.bin" -P /home/fus/.fus/esp-idf/tools/cmake/run_uf2_cmds.cmake
+	/usr/bin/cmake -D IDF_PATH=/home/fus/.fus/esp-idf -D "UF2_CMD=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python;/home/fus/.fus/esp-idf/tools/mkuf2.py;write;--chip;esp32s3" -D "UF2_ARGS=--json;/home/fus/Documents/DO-AN-02-LCD/build/flasher_args.json;-o;/home/fus/Documents/DO-AN-02-LCD/build/uf2.bin" -P /home/fus/.fus/esp-idf/tools/cmake/run_uf2_cmds.cmake
 
 CMakeFiles/uf2.dir/codegen:
 .PHONY : CMakeFiles/uf2.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/uf2.dir/clean:
 .PHONY : CMakeFiles/uf2.dir/clean
 
 CMakeFiles/uf2.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/uf2.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/uf2.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uf2.dir/depend
 

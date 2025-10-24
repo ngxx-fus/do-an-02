@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/__idf_main.dir/do-an-02.c.obj"
-  "CMakeFiles/__idf_main.dir/do-an-02.c.obj.d"
+  "CMakeFiles/__idf_main.dir/myApp.c.obj"
+  "CMakeFiles/__idf_main.dir/myApp.c.obj.d"
   "libmain.a"
   "libmain.pdb"
 )

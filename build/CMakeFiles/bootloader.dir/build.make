@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02
+CMAKE_SOURCE_DIR = /home/fus/Documents/DO-AN-02-LCD
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02/build
+CMAKE_BINARY_DIR = /home/fus/Documents/DO-AN-02-LCD/build
 
 # Utility rule file for bootloader.
 
@@ -76,10 +76,10 @@ CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloade
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-configure
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-build
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bootloader'"
-	/usr/bin/cmake -E make_directory /home/fus/Documents/DO-AN-02/build/CMakeFiles
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader-complete
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bootloader'"
+	/usr/bin/cmake -E make_directory /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader-complete
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-done
 
 bootloader-prefix/src/bootloader-stamp/bootloader-install:
 .PHONY : bootloader-prefix/src/bootloader-stamp/bootloader-install
@@ -91,44 +91,44 @@ bootloader-prefix/src/bootloader-stamp/bootloader-install:
 .PHONY : bootloader-prefix/src/bootloader-stamp/bootloader-install
 
 bootloader-prefix/src/bootloader-stamp/bootloader-build: bootloader-prefix/src/bootloader-stamp/bootloader-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'bootloader'"
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && $(MAKE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'bootloader'"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && $(MAKE)
 
 bootloader-prefix/src/bootloader-stamp/bootloader-configure: bootloader-prefix/tmp/bootloader-cfgcmd.txt
 bootloader-prefix/src/bootloader-stamp/bootloader-configure: bootloader-prefix/src/bootloader-stamp/bootloader-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'bootloader'"
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && /usr/bin/cmake -DSDKCONFIG=/home/fus/Documents/DO-AN-02/sdkconfig -DIDF_PATH=/home/fus/.fus/esp-idf -DIDF_TARGET=esp32 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -DEXTRA_COMPONENT_DIRS=/home/fus/.fus/esp-idf/components/bootloader -DPROJECT_SOURCE_DIR=/home/fus/Documents/DO-AN-02 -DIGNORE_EXTRA_COMPONENT= "-GUnix Makefiles" -S /home/fus/.fus/esp-idf/components/bootloader/subproject -B /home/fus/Documents/DO-AN-02/build/bootloader
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && /usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'bootloader'"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && /usr/bin/cmake -DSDKCONFIG=/home/fus/Documents/DO-AN-02-LCD/sdkconfig -DIDF_PATH=/home/fus/.fus/esp-idf -DIDF_TARGET=esp32s3 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/fus/.espressif/python_env/idf6.0_py3.13_env/bin/python -DEXTRA_COMPONENT_DIRS=/home/fus/.fus/esp-idf/components/bootloader -DPROJECT_SOURCE_DIR=/home/fus/Documents/DO-AN-02-LCD -DIGNORE_EXTRA_COMPONENT= "-GUnix Makefiles" -S /home/fus/.fus/esp-idf/components/bootloader/subproject -B /home/fus/Documents/DO-AN-02-LCD/build/bootloader
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && /usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure
 
 bootloader-prefix/src/bootloader-stamp/bootloader-download: bootloader-prefix/src/bootloader-stamp/bootloader-source_dirinfo.txt
 bootloader-prefix/src/bootloader-stamp/bootloader-download: bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bootloader'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-download
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-download
 
 bootloader-prefix/src/bootloader-stamp/bootloader-install: bootloader-prefix/src/bootloader-stamp/bootloader-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'bootloader'"
-	cd /home/fus/Documents/DO-AN-02/build/bootloader && /usr/bin/cmake -E echo_append
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'bootloader'"
+	cd /home/fus/Documents/DO-AN-02-LCD/build/bootloader && /usr/bin/cmake -E echo_append
 
 bootloader-prefix/src/bootloader-stamp/bootloader-build:
 .PHONY : bootloader-prefix/src/bootloader-stamp/bootloader-build
 
 bootloader-prefix/src/bootloader-stamp/bootloader-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'bootloader'"
-	/usr/bin/cmake -Dcfgdir= -P /home/fus/Documents/DO-AN-02/build/bootloader-prefix/tmp/bootloader-mkdirs.cmake
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'bootloader'"
+	/usr/bin/cmake -Dcfgdir= -P /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/tmp/bootloader-mkdirs.cmake
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
 
 bootloader-prefix/src/bootloader-stamp/bootloader-patch: bootloader-prefix/src/bootloader-stamp/bootloader-patch-info.txt
 bootloader-prefix/src/bootloader-stamp/bootloader-patch: bootloader-prefix/src/bootloader-stamp/bootloader-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'bootloader'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch
 
 bootloader-prefix/src/bootloader-stamp/bootloader-update: bootloader-prefix/src/bootloader-stamp/bootloader-update-info.txt
 bootloader-prefix/src/bootloader-stamp/bootloader-update: bootloader-prefix/src/bootloader-stamp/bootloader-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'bootloader'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02/build/bootloader-prefix/src/bootloader-stamp/bootloader-update
+	/usr/bin/cmake -E touch /home/fus/Documents/DO-AN-02-LCD/build/bootloader-prefix/src/bootloader-stamp/bootloader-update
 
 CMakeFiles/bootloader.dir/codegen:
 .PHONY : CMakeFiles/bootloader.dir/codegen
@@ -154,6 +154,6 @@ CMakeFiles/bootloader.dir/clean:
 .PHONY : CMakeFiles/bootloader.dir/clean
 
 CMakeFiles/bootloader.dir/depend:
-	cd /home/fus/Documents/DO-AN-02/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02 /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build /home/fus/Documents/DO-AN-02/build/CMakeFiles/bootloader.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/fus/Documents/DO-AN-02-LCD/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build /home/fus/Documents/DO-AN-02-LCD/build/CMakeFiles/bootloader.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bootloader.dir/depend
 

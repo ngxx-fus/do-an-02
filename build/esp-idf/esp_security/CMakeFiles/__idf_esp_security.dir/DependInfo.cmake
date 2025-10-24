@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_lock.c" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj" "gcc" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj" "gcc" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj.d"
+  "/home/fus/.fus/esp-idf/components/esp_security/src/esp_ds.c" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_ds.c.obj" "gcc" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_ds.c.obj.d"
+  "/home/fus/.fus/esp-idf/components/esp_security/src/esp_hmac.c" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_hmac.c.obj" "gcc" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_hmac.c.obj.d"
   "/home/fus/.fus/esp-idf/components/esp_security/src/init.c" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj" "gcc" "esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj.d"
   )
 
