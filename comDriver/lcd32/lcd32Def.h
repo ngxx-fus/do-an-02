@@ -36,10 +36,11 @@ typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
 
     lcd32DataPin_t      dataPin;    /// Data pin
     lcd32ControlPin_t   controlPin; /// Control pin
-    portMUX_TYPE        mutex;      /// Mutex
     lcd32Canvas_t       canvas;     /// Canvas           
+    portMUX_TYPE        mutex;      /// Mutex
     uint32_t            transLevel; /// Transaction level, to skill dup CS
-
+    uint64_t            dataPinMask;
+    uint64_t            controlPinMask;
 } lcd32Dev_t;
 
 

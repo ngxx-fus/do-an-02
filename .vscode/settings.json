@@ -83,6 +83,7 @@
         "lcd32.h": "c",
         "lcd32helper.h": "c",
         "esp_heap_caps.h": "c",
-        "lcd32cmd.h": "c"
+        "lcd32cmd.h": "c",
+        "freertos.h": "c"
     }
 }

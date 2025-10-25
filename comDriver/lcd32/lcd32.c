@@ -1,168 +1,220 @@
 #include "lcd32.h"
 
-def __lcd32DeleteCanvas(lcd32Canvas_t **canvasPtr){
-    lcd32Entry("__lcd32DeleteCanvas(%p)", canvasPtr);
+/// LOCAL HELPERS ////////////////////////////////////////////////////////////////////////////////
 
-    lcd32NULLCheck(canvasPtr, STR(canvasPtr), STR(__lcd32DeleteCanvas), goto returnErr;);
-    lcd32NULLCheck(*canvasPtr, STR(*canvasPtr), STR(__lcd32DeleteCanvas), goto returnErr;);
+/// @brief [Internal] Configure GPIO pins as `output` based on a 64-bit mask.
+esp_err_t __lcd32GPIOConfigOutputM(uint64_t mask){
+    gpio_config_t io_conf = {
+        .intr_type = GPIO_INTR_DISABLE,
+        .mode = GPIO_MODE_OUTPUT,
+        .pin_bit_mask = mask,          // 64-bit pin mask
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+    };
 
-    for (dim_t r = 0; r < DATA(canvasPtr)->maxRow; ++r) {
-        if (__isnot_null(DATA(canvasPtr)->buff[r])) {
-            lcd32Log("[__lcd32DeleteCanvas] Free existed: DATA(canvasPtr)->buff[%d]", r);
+    return gpio_config(&io_conf);
+}
+
+/// @brief [Internal] Configure GPIO pins as `input` based on a 64-bit mask.
+esp_err_t __lcd32GPIOConfigInputM(uint64_t mask){
+    gpio_config_t io_conf = {
+        .intr_type = GPIO_INTR_DISABLE,
+        .mode = GPIO_MODE_INPUT,
+        .pin_bit_mask = mask,          // 64-bit pin mask
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+    };
+
+    return gpio_config(&io_conf);
+}
+
+/// @brief [Internal] [Fast] Configure GPIO pins as `output` based on a 64-bit mask
+void __lcd32FastSetDataBusInputM(uint64_t mask) {
+    uint32_t low = (uint32_t)(mask & 0xFFFFFFFFULL);
+    uint32_t high = (uint32_t)(mask >> 32);
+
+    if (low)  REG_WRITE(GPIO_ENABLE_W1TC_REG, low);
+    if (high) REG_WRITE(GPIO_ENABLE1_W1TC_REG, high);
+}
+
+/// @brief [Internal] [Fast] Configure GPIO pins as `input` based on a 64-bit mask 
+void __lcd32FastSetDataBusOutputM(uint64_t mask) {
+    uint32_t low = (uint32_t)(mask & 0xFFFFFFFFULL);
+    uint32_t high = (uint32_t)(mask >> 32);
+
+    if (low)  REG_WRITE(GPIO_ENABLE_W1TS_REG, low);
+    if (high) REG_WRITE(GPIO_ENABLE1_W1TS_REG, high);
+}
+
+
+/// OTHER FUNCTIONS /////////////////////////////////////////////////////////////////////////////////
+
+/// @brief [Internal] Delete canvas buffer
+def __lcd32DeleteCanvasBuffer(lcd32Canvas_t *canvas){
+    lcd32Log1("__lcd32DeleteCanvasBuffer(%p)", canvas);
+    lcd32NULLCheck(canvas, STR(*canvas), STR(__lcd32DeleteCanvasBuffer), goto returnErr;);
+
+    for (dim_t r = 0; r < canvas->maxRow; ++r) {
+        if (__isnot_null(canvas->buff[r])) {
+            lcd32Log1("[__lcd32DeleteCanvasBuffer] Free existed: canvas->buff[%d]", r);
             // free(canvas->buff[r]);
             /// TODO: Fix bug
         }
     }
-    lcd32Log("[__lcd32DeleteCanvas] Free existed: canvas->buff");
+    lcd32Log1("[__lcd32DeleteCanvasBuffer] Free existed: canvas->buff");
     // free(canvas->buff);
     /// TODO: Fix bug
-    DATA(canvasPtr)->buff = NULL;
+    canvas->buff = NULL;
     
-    lcd32Exit("__lcd32DeleteCanvas() : OKE");
+    lcd32Exit("__lcd32DeleteCanvasBuffer() : OKE");
     return OKE;
 returnErr:
-    lcd32Exit("__lcd32DeleteCanvas() : ERR");
+    lcd32Exit("__lcd32DeleteCanvasBuffer() : ERR");
     return ERR;
 }
 
-def __lcd32CreateCanvas(lcd32Canvas_t **canvasPtr, dim_t maxRow, dim_t maxCol) {
-    lcd32Entry("__lcd32CreateCanvas(%p, %d, %d)", *canvasPtr, maxRow, maxCol);
-    lcd32NULLCheck(DATA(canvasPtr), STR(DATA(canvasPtr)), STR(__lcd32CreateCanvas), return ERR_NULL;);
+/// @brief [Internal] Config LCD 3.2" canvas (allocate buffer, set-up maxRow, maxCol)
+def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
+    lcd32Entry("__lcd32ConfigCanvas(%p, %d, %d)", canvas, maxRow, maxCol);
+    lcd32NULLCheck(canvas, STR(canvas), STR(__lcd32ConfigCanvas), return ERR_NULL;);
 
-    DATA(canvasPtr)->maxRow = maxRow;
-    DATA(canvasPtr)->maxCol = maxCol;
+    canvas->maxRow = maxRow;
+    canvas->maxCol = maxCol;
 
     // Free old buffer if it exists
-    if (DATA(canvasPtr)->buff) {
-        __lcd32DeleteCanvas(ADDR(DATA(canvasPtr)->buff));
+    if (__isnot_null(canvas->buff)) {
+        lcd32Warn("[__lcd32ConfigCanvas] canvas->buff = %p", canvas->buff);
+        __lcd32DeleteCanvasBuffer(canvas);
     }
 
     // Allocate array of row pointers
-    DATA(canvasPtr)->buff = (color_t **) heap_caps_malloc(sizeof(color_t *) * maxRow, MALLOC_CAP_SPIRAM);
-    if (!DATA(canvasPtr)->buff) {
+    canvas->buff = (color_t **) heap_caps_malloc(sizeof(color_t *) * maxRow, MALLOC_CAP_SPIRAM);
+    if (!canvas->buff) {
         lcd32Err("lcd32", "PSRAM allocation failed for row pointers array!");
         return ERR_PSRAM_FAILED;
     }
 
     // Allocate each row buffer
     for (dim_t r = 0; r < maxRow; ++r) {
-        DATA(canvasPtr)->buff[r] = (color_t *) heap_caps_malloc(sizeof(color_t) * maxCol, MALLOC_CAP_SPIRAM);
-        if (!DATA(canvasPtr)->buff[r]) {
+        canvas->buff[r] = (color_t *) heap_caps_malloc(sizeof(color_t) * maxCol, MALLOC_CAP_SPIRAM);
+        if (!canvas->buff[r]) {
             // Free previously allocated rows
-            for (dim_t i = 0; i < r; ++i) free(DATA(canvasPtr)->buff[i]);
-            free(DATA(canvasPtr)->buff);
-            DATA(canvasPtr)->buff = NULL;
+            for (dim_t i = 0; i < r; ++i) free(canvas->buff[i]);
+            free(canvas->buff);
+            canvas->buff = NULL;
             lcd32Err("lcd32", "PSRAM allocation failed for row %d!", r);
             return ERR_PSRAM_FAILED;
         }
-        memset(DATA(canvasPtr)->buff[r], 0, sizeof(color_t) * maxCol);
+        memset(canvas->buff[r], 0, sizeof(color_t) * maxCol);
     }
 
     lcd32Log("Canvas created successfully in PSRAM (%d x %d).", maxRow, maxCol);
-    lcd32Exit("__lcd32CreateCanvas -> OKE");
+    lcd32Exit("__lcd32ConfigCanvas -> OKE");
     return OKE;
 }
 
+/// @brief [Internal] Config Control/Data pin
 def __lcd32SetupPin(lcd32Dev_t *dev){
     lcd32Entry("__lcd32SetupPin(%p)", dev);
     lcd32NULLCheck(dev, STR(dev), STR(__lcd32SetupPin), return ERR_NULL;);
 
-    uint64_t pinMask = 0;
+    lcd32Log("[__lcd32SetupPin] dataPin : %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | ", 
+        dev->dataPin.__0, dev->dataPin.__1, dev->dataPin.__2, dev->dataPin.__3, 
+        dev->dataPin.__4, dev->dataPin.__5, dev->dataPin.__6, dev->dataPin.__7, 
+        dev->dataPin.__8, dev->dataPin.__9, dev->dataPin.__10, dev->dataPin.__11, 
+        dev->dataPin.__12, dev->dataPin.__13, dev->dataPin.__14, dev->dataPin.__15
+    );
+
+    dev->dataPinMask = 0;
 
     lcd32Log("[__lcd32SetupPin] Config dataPin!");
     // Data pins
-    lcd32AddGPIO(pinMask, dev->dataPin.__0);
-    lcd32AddGPIO(pinMask, dev->dataPin.__1);
-    lcd32AddGPIO(pinMask, dev->dataPin.__2);
-    lcd32AddGPIO(pinMask, dev->dataPin.__3);
-    lcd32AddGPIO(pinMask, dev->dataPin.__4);
-    lcd32AddGPIO(pinMask, dev->dataPin.__5);
-    lcd32AddGPIO(pinMask, dev->dataPin.__6);
-    lcd32AddGPIO(pinMask, dev->dataPin.__7);
-    lcd32AddGPIO(pinMask, dev->dataPin.__8);
-    lcd32AddGPIO(pinMask, dev->dataPin.__9);
-    lcd32AddGPIO(pinMask, dev->dataPin.__10);
-    lcd32AddGPIO(pinMask, dev->dataPin.__11);
-    lcd32AddGPIO(pinMask, dev->dataPin.__12);
-    lcd32AddGPIO(pinMask, dev->dataPin.__13);
-    lcd32AddGPIO(pinMask, dev->dataPin.__14);
-    lcd32AddGPIO(pinMask, dev->dataPin.__15);
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__0, lcd32Err("GPIO_Err: %d", dev->dataPin.__0));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__1, lcd32Err("GPIO_Err: %d", dev->dataPin.__1));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__2, lcd32Err("GPIO_Err: %d", dev->dataPin.__2));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__3, lcd32Err("GPIO_Err: %d", dev->dataPin.__3));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__4, lcd32Err("GPIO_Err: %d", dev->dataPin.__4));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__5, lcd32Err("GPIO_Err: %d", dev->dataPin.__5));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__6, lcd32Err("GPIO_Err: %d", dev->dataPin.__6));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__7, lcd32Err("GPIO_Err: %d", dev->dataPin.__7));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__8, lcd32Err("GPIO_Err: %d", dev->dataPin.__8));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__9, lcd32Err("GPIO_Err: %d", dev->dataPin.__9));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__10, lcd32Err("GPIO_Err: %d", dev->dataPin.__10));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__11, lcd32Err("GPIO_Err: %d", dev->dataPin.__11));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__12, lcd32Err("GPIO_Err: %d", dev->dataPin.__12));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__13, lcd32Err("GPIO_Err: %d", dev->dataPin.__13));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__14, lcd32Err("GPIO_Err: %d", dev->dataPin.__14));
+    lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__15, lcd32Err("GPIO_Err: %d", dev->dataPin.__15));
 
-    /// Config all data pin as IN/OUTput
-    gpio_config_t dataPin = {
-        .intr_type = GPIO_INTR_DISABLE,
-        .mode = GPIO_MODE_INPUT_OUTPUT,
-        .pin_bit_mask = pinMask,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-    };
-    esp_err_t ret = gpio_config(&dataPin);
+    lcd32Log("[__lcd32SetupPin] dataPin | pinMask = %p", dev->dataPinMask);
+
+    esp_err_t ret = __lcd32GPIOConfigOutputM(dev->dataPinMask);
     if (ret != ESP_OK) {
         lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
-    pinMask = 0;
+    dev->controlPinMask = 0;
 
     lcd32Log("[__lcd32SetupPin] Config controlPin!");
     // Control pins
-    lcd32AddGPIO(pinMask, dev->controlPin.r);
-    lcd32AddGPIO(pinMask, dev->controlPin.w);
-    lcd32AddGPIO(pinMask, dev->controlPin.rs);
-    lcd32AddGPIO(pinMask, dev->controlPin.cs);
-    lcd32AddGPIO(pinMask, dev->controlPin.rst);
-    lcd32AddGPIO(pinMask, dev->controlPin.bl);
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.r, lcd32Err("GPIO_Err: %d", dev->controlPin.r));
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.w, lcd32Err("GPIO_Err: %d", dev->controlPin.w));
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.rs, lcd32Err("GPIO_Err: %d", dev->controlPin.rs));
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.cs, lcd32Err("GPIO_Err: %d", dev->controlPin.cs));
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.rst, lcd32Err("GPIO_Err: %d", dev->controlPin.rst));
+    lcd32AddGPIO(dev->controlPinMask, dev->controlPin.bl, lcd32Err("GPIO_Err: %d", dev->controlPin.bl));
+    lcd32Log("[__lcd32SetupPin] controlPin | dev->controlPinMask = %p", dev->controlPinMask);
 
-    // Config all control pin as OUTPUT
-    gpio_config_t controlPin = {
-        .intr_type = GPIO_INTR_DISABLE,
-        .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = pinMask,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-    };
-
-    ret = gpio_config(&controlPin);
+    ret = __lcd32GPIOConfigOutputM(dev->controlPinMask);
     if (ret != ESP_OK) {
         lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
-    __lcd32SetChipSelPin(dev, LOW);
-    __lcd32SetResetPin(dev, LOW);
+    __lcd32SetChipSelPin(dev, HIGH);
+    __lcd32SetResetPin(dev, HIGH);
     __lcd32SetRegSelPin(dev, LOW);
-    __lcd32SetReadPin(dev, LOW);
-    __lcd32SetWritePin(dev, LOW);
+    __lcd32SetReadPin(dev, HIGH);
+    __lcd32SetWritePin(dev, HIGH);
     __lcd32SetParallelData(dev, LOW);
     __lcd32SetBrightnessLightPin(dev, HIGH);
 
     return OKE;
 }
 
+/// @brief [Global] Create new LCD 3.2" object then store to devPtr.
 def lcd32CreateDevice(lcd32Dev_t **devPtr){
-    lcd32Entry("cd32CreateDev(%p)", devPtr);
+    lcd32Entry("lcd32CreateDevice(%p)", devPtr);
     lcd32NULLCheck(devPtr, "devPtr", "lcd32CreateDev", goto ReturnERR_NULL;);
 
-    if(__isnot_nullDATA(devPtr)){
+    if(__isnot_null(DATA(devPtr))){
         lcd32Warn("[lcd32CreateDevice] The (*dev) is not null!");
-        __lcd32DeleteCanvas(&(DATA(devPtr)->canvas))
+        __lcd32DeleteCanvasBuffer(ADDR(DATA(devPtr)->canvas));
     }
 
+    lcd32Log1("[lcd32CreateDevice] Create new LCD32 object!");
     /// Allocate the device
     DATA(devPtr) = (lcd32Dev_t *)malloc(sizeof(lcd32Dev_t));
     lcd32NULLCheck(*devPtr, "DATA(devPtr)", "lcd32CreateDev", goto ReturnERR_NULL;);
     
+    lcd32Log1("[lcd32CreateDevice] Fill Zero to LCD32 object!");
     /// Fill zero
-    lcd32AssignZeroDATA(devPtr);
+    lcd32AssignZero(DATA(devPtr));
 
-    lcd32Exit("cd32CreateDev() : OKE");
+    /// Manual reset object
+    DATA(devPtr)->canvas.buff = NULL;
+
+
+    lcd32Exit("lcd32CreateDevice() : OKE");
     return OKE;
 
     ReturnERR_NULL:
-        lcd32Exit("cd32CreateDev() : ERR_NULL");
+        lcd32Exit("lcd32CreateDevice() : ERR_NULL");
         return ERR_NULL;
 }
 
+/// @brief [Global] Config new LCD 3.2".
 def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_t *controlPin, dim_t maxRow, dim_t maxCol){
     lcd32Entry("lcd32ConfigDev(%p, %p, %p, %d, %d)", dev, dataPin, controlPin, maxRow, maxCol);
     lcd32NULLCheck(dev, "dev", "lcd32ConfigDev", goto returnERR_NULL;);
@@ -170,7 +222,6 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     lcd32NULLCheck(controlPin, "controlPin", "lcd32ConfigDev", goto returnERR_NULL;);
     
     /// Record data pin value
-    
     dev->dataPin.__0 = dataPin->__0;
     dev->dataPin.__1 = dataPin->__1;
     dev->dataPin.__2 = dataPin->__2;
@@ -187,7 +238,7 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     dev->dataPin.__13 = dataPin->__13;
     dev->dataPin.__14 = dataPin->__14;
     dev->dataPin.__15 = dataPin->__15;
-    
+
     /// Record control pin value
     dev->controlPin.r   = controlPin->r;
     dev->controlPin.w   = controlPin->w;
@@ -197,7 +248,7 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     dev->controlPin.rst = controlPin->rst;
 
     /// Create canvas
-    __lcd32CreateCanvas(&(dev->canvas), maxRow, maxCol);
+    __lcd32ConfigCanvas(&(dev->canvas), maxRow, maxCol);
 
     /// Set-up config pin
     __lcd32SetupPin(dev);
@@ -217,131 +268,191 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     return ERR_NULL;
 }
 
+/// @brief [Global] Start up LCD 3.2".
 def lcd32StartUpDevice(lcd32Dev_t *dev) {
     lcd32Entry("lcd32StartUpDevice(%p)", dev);
-    lcd32NULLCheck(dev, STR(dev), STR(lcd32StartUpDevice), return ERR_NULL;);
 
-    // --- Hardware Reset ---
-    lcd32Log("Performing hardware reset...");
+    // Reset cứng (RESX)
     __lcd32SetResetPin(dev, 0);
-    esp_rom_delay_us(50);  // Min 10us
+    esp_rom_delay_us(10000);    // tRW ≥ 10µs
     __lcd32SetResetPin(dev, 1);
-    esp_rom_delay_us(120); // Min 5ms (or 120ms if exiting sleep)
+    esp_rom_delay_us(120000);   // tRT ≥ 120ms
 
-    // --- Initialization Sequence (Revised) ---
-    lcd32Log("Sending initialization sequence...");
+    def devId = 0;
+    devId = __lcd32ContReadRegisterStart(dev, ILI9341_READ_ID4) & 0xFF; 
+    lcd32Log("Device ID (1st read): 0x%4x", devId);
 
-    // 1. Software Reset
-    __lcd32WriteCommand(dev, ILI9341_SWRESET); // 0x01
-    vTaskDelay(pdMS_TO_TICKS(120)); // Must wait >5ms, 120ms recommended after sleep out
+    devId = __lcd32ContReadRegister(dev) & 0xFF;
+    lcd32Log("Device ID (2nd read): 0x%4x", devId);
 
-    // 2. Display OFF
-    __lcd32WriteCommand(dev, ILI9341_DISPLAY_OFF); // 0x28
+    devId = __lcd32ContReadRegister(dev) & 0xFF;
+    lcd32Log("Device ID (3rd read): 0x%4x", devId);
 
-    // --- Extended Commands (Often module-specific, trying defaults first) ---
+    devId = (devId << 8) | (__lcd32ContReadRegister(dev) & 0xFF);
+    lcd32Log("Device ID (Final read) : 0x%04x", devId);
 
-    // 3. Power Control A (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_A); // 0xCB
-    __lcd32WriteData(dev, 0x39); // Default
-    __lcd32WriteData(dev, 0x2C); // Default
-    __lcd32WriteData(dev, 0x00); // Default
-    __lcd32WriteData(dev, 0x34); // Default, Vcore = 1.6V
-    __lcd32WriteData(dev, 0x02); // Default, DDVDH = 5.6V
+    __lcd32ContReadRegisterStop(dev);
 
-    // 4. Power Control B (Using Datasheet Default - 0x81 might be safer than 0xA2)
-    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_B); // 0xCF
-    __lcd32WriteData(dev, 0x00); // Default
-    __lcd32WriteData(dev, 0x81); // Default is 0x81 or 0xA2, trying 0x81
-    __lcd32WriteData(dev, 0x30); // Default
+    if( devId == 0x9341 ){
+        lcd32Log("[lcd32StartUpDevice] Detected ILI9341 LCD controller.");
+    } else {
+        lcd32Err("lcd32", "[lcd32StartUpDevice] Unsupported LCD controller: 0x%04x", devId);
+        lcd32Exit("lcd32StartUpDevice -> ERR_UNSUPPORTED");
+        return ERR_UNSUPPORTED;
+    }
 
-    // 5. Driver Timing Control A (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_DRIVER_TIMING_CTRL_A_INT); // 0xE8
-    __lcd32WriteData(dev, 0x84); // Default (Note: datasheet typo, should be 85h? Let's try 84h first)
-    __lcd32WriteData(dev, 0x11); // Default
-    __lcd32WriteData(dev, 0x7A); // Default
+    // --- 4. ILI9341 Initialization Sequence (based on datasheet) ---
+    __lcd32WriteCommand(dev, ILI9341_PIXEL_FORMAT_SET);
+    __lcd32WriteData(dev, 0x55);     // 16-bit RGB565
 
-    // 6. Driver Timing Control B (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_DRIVER_TIMING_CTRL_B); // 0xEA
-    __lcd32WriteData(dev, 0x66); // Datasheet default, maybe 0x00? Trying 66h.
-    __lcd32WriteData(dev, 0x00); // Default
+    __lcd32WriteCommand(dev, ILI9341_BLANKING_PORCH_CTRL);
+    __lcd32WriteData(dev, 0x04);
+    __lcd32WriteData(dev, 0x04);
+    __lcd32WriteData(dev, 0x0A);
+    __lcd32WriteData(dev, 0x14);
 
-    // 7. Power On Sequence Control (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_POWER_ON_SEQ_CTRL); // 0xED
-    __lcd32WriteData(dev, 0x55); // Default
-    __lcd32WriteData(dev, 0x01); // Default
-    __lcd32WriteData(dev, 0x23); // Default
-    __lcd32WriteData(dev, 0x01); // Default
+    __lcd32WriteCommand(dev, ILI9341_TEARING_LINE_ON);
+    __lcd32WriteData(dev, 0x00);
 
-    // 8. Pump Ratio Control (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_PUMP_RATIO_CONTROL); // 0xF7
-    __lcd32WriteData(dev, 0x10); // Default (DDVDH=2xVCI) (User code used 0x20 also means DDVDH=2xVCI)
+    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_B);
+    __lcd32WriteData(dev, 0x00);
+    __lcd32WriteData(dev, 0xEA);
+    __lcd32WriteData(dev, 0xF0);
 
-    // --- Standard Level 2 Commands ---
+    __lcd32WriteCommand(dev, ILI9341_POWER_ON_SEQ_CTRL);
+    __lcd32WriteData(dev, 0x64);
+    __lcd32WriteData(dev, 0x03);
+    __lcd32WriteData(dev, 0x12);
+    __lcd32WriteData(dev, 0x81);
 
-    // 9. Power Control 1 (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_1); // 0xC0
-    __lcd32WriteData(dev, 0x21); // Default VRH[5:0] (User code used 0x23)
+    __lcd32WriteCommand(dev, ILI9341_DRIVER_TIMING_CTRL_A_INT);
+    __lcd32WriteData(dev, 0x85);
+    __lcd32WriteData(dev, 0x10);
+    __lcd32WriteData(dev, 0x78);
 
-    // 10. Power Control 2 (Using Datasheet Default equivalent)
-    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_2); // 0xC1
-    __lcd32WriteData(dev, 0x00); // Default BT[2:0]=0 (User code used 0x10 also means BT=0)
+    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_A);
+    __lcd32WriteData(dev, 0x39);
+    __lcd32WriteData(dev, 0x2C);
+    __lcd32WriteData(dev, 0x00);
+    __lcd32WriteData(dev, 0x33);
+    __lcd32WriteData(dev, 0x06);
 
-    // 11. VCOM Control 1 (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_VCOM_CONTROL_1); // 0xC5
-    __lcd32WriteData(dev, 0x31); // Default VMH (User code used 0x3E)
-    __lcd32WriteData(dev, 0x3C); // Default VML (User code used 0x28)
+    __lcd32WriteCommand(dev, ILI9341_PUMP_RATIO_CONTROL);
+    __lcd32WriteData(dev, 0x20);
 
-    // 12. VCOM Control 2 (Using Datasheet Default)
-    __lcd32WriteCommand(dev, ILI9341_VCOM_CONTROL_2); // 0xC7
-    __lcd32WriteData(dev, 0xC0); // Default VMF (User code used 0x86)
+    __lcd32WriteCommand(dev, ILI9341_DRIVER_TIMING_CTRL_B);
+    __lcd32WriteData(dev, 0x00);
+    __lcd32WriteData(dev, 0x00);
 
-    // --- Standard Level 1 Configuration ---
+    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_1);
+    __lcd32WriteData(dev, 0x21);
 
-    // 13. Memory Access Control (MADCTL) (Using user's common setting)
-    __lcd32WriteCommand(dev, ILI9341_MEMORY_ACCESS_CONTROL); // 0x36
-    __lcd32WriteData(dev, 0x48); // MX=1, BGR=1 common for landscape (Keep user's setting)
+    __lcd32WriteCommand(dev, ILI9341_POWER_CONTROL_2);
+    __lcd32WriteData(dev, 0x10);
 
-    // 14. Pixel Format Set (COLMOD) (Using user's common setting)
-    __lcd32WriteCommand(dev, ILI9341_PIXEL_FORMAT_SET); // 0x3A
-    __lcd32WriteData(dev, 0x55); // 16 bits/pixel (Keep user's setting)
+    __lcd32WriteCommand(dev, ILI9341_VCOM_CONTROL_1);
+    __lcd32WriteData(dev, 0x4F);
+    __lcd32WriteData(dev, 0x38);
 
-    // 15. Frame Rate Control (Normal Mode) (Adding default)
-    __lcd32WriteCommand(dev, ILI9341_FRAME_RATE_NORMAL); // 0xB1
-    __lcd32WriteData(dev, 0x00); // Default DIVA=0
-    __lcd32WriteData(dev, 0x1B); // Default RTNA=1Bh (~70Hz)
+    __lcd32WriteCommand(dev, ILI9341_VCOM_CONTROL_2);
+    __lcd32WriteData(dev, 0xB7);
 
-    // (Optional but recommended) Display Function Control (Default GS=0, SS=0, SM=0 are often ok)
-    // __lcd32WriteCommand(dev, ILI9341_DISPLAY_FUNCTION_CTRL); // 0xB6
-    // __lcd32WriteData(dev, 0x0A); // Default PTG=Interval, PT=V63/V0
-    // __lcd32WriteData(dev, 0x82); // Default REV=NW, GS=0, SS=0, SM=0, ISC=5 frames
-    // __lcd32WriteData(dev, 0x27); // Default NL=320 lines
+    __lcd32WriteCommand(dev, ILI9341_MEMORY_ACCESS_CONTROL);
+#if DISP_ORIENTATION == 0
+    __lcd32WriteData(dev, 0x08 | 0x00);
+#elif DISP_ORIENTATION == 90
+    __lcd32WriteData(dev, 0x08 | 0xA0);
+#elif DISP_ORIENTATION == 180
+    __lcd32WriteData(dev, 0x08 | 0xC0);
+#else
+    __lcd32WriteData(dev, 0x08 | 0x60);
+#endif
 
-    // (Optional but recommended) Gamma Set (Selects default curve)
-    __lcd32WriteCommand(dev, ILI9341_GAMMA_SET); // 0x26
-    __lcd32WriteData(dev, 0x01); // Select Gamma Curve 1 (G2.2)
+    __lcd32WriteCommand(dev, ILI9341_FRAME_RATE_NORMAL);
+    __lcd32WriteData(dev, 0x00);
+    __lcd32WriteData(dev, 0x13);
 
-    // (Gamma Correction - E0h, E1h usually not needed if using default curve 1)
-    // __lcd32WriteCommand(dev, ILI9341_POSITIVE_GAMMA_CORR); // 0xE0
-    // ... send 15 default bytes ...
-    // __lcd32WriteCommand(dev, ILI9341_NEGATIVE_GAMMA_CORR); // 0xE1
-    // ... send 15 default bytes ...
+    __lcd32WriteCommand(dev, ILI9341_DISPLAY_FUNCTION_CTRL);
+    __lcd32WriteData(dev, 0x0A);
+    __lcd32WriteData(dev, 0xA2);
 
-    // --- Exit Sleep and Turn On ---
+    __lcd32WriteCommand(dev, ILI9341_ENABLE_3G);
+    __lcd32WriteData(dev, 0x02);
 
-    // 16. Sleep Out
-    __lcd32WriteCommand(dev, ILI9341_SLEEP_OUT); // 0x11
-    vTaskDelay(pdMS_TO_TICKS(120)); // MUST wait 120ms after sleep out
+    __lcd32WriteCommand(dev, ILI9341_GAMMA_SET);
+    __lcd32WriteData(dev, 0x01);
 
-    // 17. Display ON
-    __lcd32WriteCommand(dev, ILI9341_DISPLAY_ON); // 0x29
-    vTaskDelay(pdMS_TO_TICKS(50)); // Short delay after display on
+    __lcd32WriteCommand(dev, ILI9341_POSITIVE_GAMMA_CORR);
+    __lcd32WriteData(dev, 0x0F);
+    __lcd32WriteData(dev, 0x27);
+    __lcd32WriteData(dev, 0x24);
+    __lcd32WriteData(dev, 0x0C);
+    __lcd32WriteData(dev, 0x10);
+    __lcd32WriteData(dev, 0x08);
+    __lcd32WriteData(dev, 0x55);
+    __lcd32WriteData(dev, 0x87);
+    __lcd32WriteData(dev, 0x45);
+    __lcd32WriteData(dev, 0x08);
+    __lcd32WriteData(dev, 0x14);
+    __lcd32WriteData(dev, 0x07);
+    __lcd32WriteData(dev, 0x13);
+    __lcd32WriteData(dev, 0x08);
+    __lcd32WriteData(dev, 0x00);
 
-    // 18. Turn on Backlight
-    lcd32Log("Turning on backlight.");
+    __lcd32WriteCommand(dev, ILI9341_NEGATIVE_GAMMA_CORR);
+    __lcd32WriteData(dev, 0x00);
+    __lcd32WriteData(dev, 0x0F);
+    __lcd32WriteData(dev, 0x12);
+    __lcd32WriteData(dev, 0x05);
+    __lcd32WriteData(dev, 0x11);
+    __lcd32WriteData(dev, 0x06);
+    __lcd32WriteData(dev, 0x25);
+    __lcd32WriteData(dev, 0x34);
+    __lcd32WriteData(dev, 0x37);
+    __lcd32WriteData(dev, 0x01);
+    __lcd32WriteData(dev, 0x08);
+    __lcd32WriteData(dev, 0x07);
+    __lcd32WriteData(dev, 0x2B);
+    __lcd32WriteData(dev, 0x34);
+    __lcd32WriteData(dev, 0x0F);
+
+    __lcd32WriteCommand(dev, ILI9341_SLEEP_OUT);
+    esp_rom_delay_us(120000);
+
+    __lcd32WriteCommand(dev, ILI9341_DISPLAY_ON);
+    esp_rom_delay_us(50000);
+
+    // --- 5. Backlight ON ---
     __lcd32SetBrightnessLightPin(dev, 1);
 
-    lcd32Log("Initialization complete.");
+    lcd32Log("[lcd32StartUpDevice] ILI9341 initialized successfully.");
     lcd32Exit("lcd32StartUpDevice -> OKE");
+    return OKE;
+}
+
+def __lcd32SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height, dim_t width) {
+    lcd32Entry("__lcd32SetAddressWindow(%p, r=%u, c=%u, h=%u, w=%u)", dev, row, col, height, width);
+
+    dim_t row1 = row;
+    dim_t row2 = row + height - 1;
+    dim_t col1 = col;
+    dim_t col2 = col + width - 1;
+
+    //--- Column Address Set (0x2A) ---
+    __lcd32WriteCommand(dev, ILI9341_COLUMN_ADDRESS_SET);
+    __lcd32WriteData(dev, col1 >> 8);
+    __lcd32WriteData(dev, col1 & 0xFF);
+    __lcd32WriteData(dev, col2 >> 8);
+    __lcd32WriteData(dev, col2 & 0xFF);
+
+    //--- Page Address Set (0x2B) ---
+    __lcd32WriteCommand(dev, ILI9341_PAGE_ADDRESS_SET);
+    __lcd32WriteData(dev, row1 >> 8);
+    __lcd32WriteData(dev, row1 & 0xFF);
+    __lcd32WriteData(dev, row2 >> 8);
+    __lcd32WriteData(dev, row2 & 0xFF);
+
+    lcd32Exit("__lcd32SetAddressWindow -> OKE");
     return OKE;
 }
 
@@ -356,70 +467,53 @@ def lcd32FillCanvas(lcd32Dev_t *dev, color_t color){
     return OKE;
 }
 
-def lcd32FlushCanvas(lcd32Dev_t *dev){
+/// @brief [Global] Flush the entire canvas to the LCD.
+def lcd32FlushCanvas(lcd32Dev_t *dev) {
     lcd32Entry("lcd32FlushCanvas(%p)", dev);
 
+    // Check for null pointer
     lcd32NULLCheck(dev, STR(dev), STR(lcd32FlushCanvas), return ERR_NULL;);
     lcd32Canvas_t *canvas = &dev->canvas;
 
-    __lcd32WriteCommand(dev, 0x2A); // Column address set
-    __lcd32WriteData(dev, 0x00);
-    __lcd32WriteData(dev, 0x00);
-    __lcd32WriteData(dev, (canvas->maxCol - 1) >> 8);
-    __lcd32WriteData(dev, (canvas->maxCol - 1) & 0xFF);
+    //--- Configure write region: full-screen area ---
+    // Reuse the address window API to set the region (0,0) → (maxRow,maxCol)
+    __lcd32SetAddressWindow(dev, 0, 0, canvas->maxRow, canvas->maxCol);
 
-    __lcd32WriteCommand(dev, 0x2B); // Page address set
-    __lcd32WriteData(dev, 0x00);
-    __lcd32WriteData(dev, 0x00);
-    __lcd32WriteData(dev, (canvas->maxRow - 1) >> 8);
-    __lcd32WriteData(dev, (canvas->maxRow - 1) & 0xFF);
+    //--- Send command to start memory write ---
+    __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
 
-    __lcd32WriteCommand(dev, 0x2C); // Memory Write
-
-    __lcd32SetRegSelPin(dev, 1);  // RS = 1 → Data
-    __lcd32SetChipSelPin(dev, 0); // CS low
-
+    //--- Flush the entire canvas buffer to the LCD ---
+    __lcd32SetDataTransaction(dev);
+    __lcd32StartTransaction(dev);
+    __lcd32SetReadPin(dev, 1);
     for (dim_t r = 0; r < canvas->maxRow; ++r) {
         for (dim_t c = 0; c < canvas->maxCol; ++c) {
-            color_t color = canvas->buff[r][c];
-            __lcd32SetParallelData(dev, color >> 8);
-            __lcd32SetWritePin(dev, 0);
-            __lcd32SetWritePin(dev, 1);
-            __lcd32SetParallelData(dev, color & 0xFF);
+            __lcd32SetParallelData(dev, canvas->buff[r][c]);
             __lcd32SetWritePin(dev, 0);
             __lcd32SetWritePin(dev, 1);
         }
     }
-
-    __lcd32SetChipSelPin(dev, 1); // CS high
+    __lcd32StopTransaction(dev);
+    lcd32Exit("lcd32FlushCanvas() : OKE");
     return OKE;
 }
 
-void lcd32DirectWritePixel(lcd32Dev_t *dev, dim_t r, dim_t c, color_t color){
-    lcd32Log1("lcd32FlushCanvas(%p, %d, %d, 0x%04x)", dev, r, c, color);
-    // --- Set column address ---
-    __lcd32WriteCommand(dev, 0x2A);
-    __lcd32WriteData(dev, (c >> 8) & 0xFF);
-    __lcd32WriteData(dev, c & 0xFF);
-    __lcd32WriteData(dev, ((c + 1) >> 8) & 0xFF);
-    __lcd32WriteData(dev, (c + 1) & 0xFF);
+/// @brief [Global] Write a single pixel directly to the LCD.
+def lcd32DirectlyWritePixel(lcd32Dev_t *dev, dim_t r, dim_t c, color_t color) {
+    lcd32Log1("lcd32DirectlyWritePixel(%p, r=%d, c=%d, color=0x%04x)", dev, r, c, color);
 
-    // --- Set page address ---
-    __lcd32WriteCommand(dev, 0x2B);
-    __lcd32WriteData(dev, (r >> 8) & 0xFF);
-    __lcd32WriteData(dev, r & 0xFF);
-    __lcd32WriteData(dev, ((r + 1) >> 8) & 0xFF);
-    __lcd32WriteData(dev, (r + 1) & 0xFF);
+    // Set write region to one pixel at (r, c)
+    __lcd32SetAddressWindow(dev, r, c, 1, 1);
 
-    // --- Memory write ---
-    __lcd32WriteCommand(dev, 0x2C);
+    // Write pixel color
+    __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
     __lcd32WriteData(dev, color);
+
+    return OKE;
 }
 
-def lcd32DrawEmptyRect(lcd32Dev_t *lcd,
-                       dim_t rTopLeft, dim_t cTopLeft,
-                       dim_t rBottomRight, dim_t cBottomRight,
-                       dim_t edgeSize, color_t color){
+
+def lcd32DrawEmptyRect(lcd32Dev_t *lcd, dim_t rTopLeft, dim_t cTopLeft, dim_t rBottomRight, dim_t cBottomRight, dim_t edgeSize, color_t color){
     if (edgeSize < 1) return OKE;
 
     if (rTopLeft < 0 || rTopLeft >= lcd->canvas.maxRow ||
@@ -436,14 +530,14 @@ def lcd32DrawEmptyRect(lcd32Dev_t *lcd,
 
     // Draw vertical edges
     for (dim_t x = rTopLeft; x <= rBottomRight; ++x) {
-        lcd32SetPixel(lcd, x, cTopLeft, color);
-        lcd32SetPixel(lcd, x, cBottomRight, color);
+        __lcd32SetPixel(lcd, x, cTopLeft, color);
+        __lcd32SetPixel(lcd, x, cBottomRight, color);
     }
 
     // Draw horizontal edges
     for (dim_t y = cTopLeft; y <= cBottomRight; ++y) {
-        lcd32SetPixel(lcd, rTopLeft, y, color);
-        lcd32SetPixel(lcd, rBottomRight, y, color);
+        __lcd32SetPixel(lcd, rTopLeft, y, color);
+        __lcd32SetPixel(lcd, rBottomRight, y, color);
     }
 
     // Recursive shrink for thicker borders
@@ -453,10 +547,7 @@ def lcd32DrawEmptyRect(lcd32Dev_t *lcd,
                               edgeSize - 1, color);
 }
 
-def lcd32FillRect(lcd32Dev_t *lcd,
-                  dim_t rTopLeft, dim_t cTopLeft,
-                  dim_t rBottomRight, dim_t cBottomRight,
-                  color_t color){
+def lcd32FillRect(lcd32Dev_t *lcd, dim_t rTopLeft, dim_t cTopLeft, dim_t rBottomRight, dim_t cBottomRight, color_t color){
     if (rTopLeft < 0 || cTopLeft < 0 ||
         rBottomRight >= lcd->canvas.maxRow ||
         cBottomRight >= lcd->canvas.maxCol)
@@ -464,17 +555,7 @@ def lcd32FillRect(lcd32Dev_t *lcd,
 
     for (dim_t r = rTopLeft; r <= rBottomRight; ++r)
         for (dim_t c = cTopLeft; c <= cBottomRight; ++c)
-            lcd32SetPixelNC(lcd, r, c, color);
-
-    return OKE;
-}
-
-def lcd32ClearCanvas(lcd32Dev_t *lcd, color_t color)
-{
-    if (!lcd || !lcd->canvas.buff) return ERR_NULL;
-
-    for (dim_t r = 0; r < lcd->canvas.maxRow; ++r)
-        memset(lcd->canvas.buff[r], color, sizeof(color_t) * lcd->canvas.maxCol);
+            __lcd32SetPixelNC(lcd, r, c, color);
 
     return OKE;
 }

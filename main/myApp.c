@@ -10,6 +10,10 @@
     #include "monitor.h"
 #endif
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 void app_main(void){
     __entry("app_main()");
 
@@ -20,6 +24,7 @@ void app_main(void){
 
     __tag_log(STR(app_main), "Set systemStage = SYSTEM_RUNNING");
     systemStage = SYSTEM_RUNNING;
+    
 
     while (!IS_SYSTEM_STOPPED){
 

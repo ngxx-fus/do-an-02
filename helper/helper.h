@@ -177,19 +177,37 @@
 
 /// The pointer of `what`
 #define PTR(what)       what *
-/// Access the stored data from ptr
-#define DATA(ptr)       (*(ptr))   
-/// Get the address of the variable
-#define ADDR(obj)       (&(obj))     
 
+/// Access the stored data from ptr
+#define DATA(ptr)       (*(ptr))
+
+/// Access the stored data from ptr to pointer
+#define DATA2(ptr)       (*(*(ptr)))
+
+/// Access the stored data from ptr
+#define REF(ptr)        (*(ptr))
+
+/// Access the stored data from pointer to pointer
+#define REF2(ptr)        (*(*(ptr)))
+
+/// Get the address of the variable
+#define ADDR(obj)       (&(obj))    
+
+/// Get the address of the variable
+#define ADDR2(obj)       (&(&(obj)))    
+
+/// Get the address of the variable
+#define DEREF(obj)      (&(obj))
+
+#define DEREF2(obj)    (&(&(obj)))
 
 /// @brief Generates a pseudo-random number in the range [0, 9999].
 ///        If the input seed is negative or repeated, the function reuses the last known random state.
 ///        Otherwise, it generates a new pseudo-random value based on the input seed.
 /// @param seed_input The input seed used to initialize randomness. 
 ///        If seed_input < 0 or equals the previous seed, the last valid random state is used instead.
-/// @return A pseudo-random integer in the range [0, 9999].
-int generateRandom(int seed_input);
+/// @return A pseudo-random integer in the range [0, MAXINT].
+unsigned int genRandNum(unsigned int seed_input);
 
 
 #endif

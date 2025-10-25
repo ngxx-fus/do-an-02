@@ -58,7 +58,7 @@ typedef int8_t pin_t;
     #define LCD32_DB15      8
 
 
-    #define LCD32_RST       1
+    #define LCD32_RST       0
     #define LCD32_WR        2
     #define LCD32_RD        14
     #define LCD32_RS        21

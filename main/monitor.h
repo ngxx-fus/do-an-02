@@ -50,8 +50,22 @@ lcd32Dev_t * lcd;
 void lcdTestTask(void * pv){
     __entry("lcdTestTask()");
 
+    uint64_t all_pins_mask = lcd->dataPinMask | lcd->controlPinMask;
+
+    __sys_log("[lcdTestTask] all_pins_mask = 0x%08x", all_pins_mask);
+
+    const uint32_t mask_low  = (uint32_t)(all_pins_mask);
+    const uint32_t mask_high = (uint32_t)(all_pins_mask >> 32);
+
+    uint16_t mask = 1;
+
     while(!IS_SYSTEM_STOPPED){
-        vTaskDelay(1);
+        
+        lcd32FillCanvas(lcd, genRandNum(esp_timer_get_time())%65536);
+        lcd32FlushCanvas(lcd);
+
+        // vTaskDelay(50);
+        __sys_log("[lcdTestTask] Running...\n\n");
     }
     __exit("lcdTestTask()");
 }
@@ -74,7 +88,7 @@ void lcdInit(){
     };
     lcd32ConfigDevice(lcd, &dataPin, &ctlPin, LCD32_MAX_ROW, LCD32_MAX_COL);
     lcd32StartUpDevice(lcd);
-    lcd32FillCanvas(lcd, 134);
+    lcd32FillCanvas(lcd, 15);
     lcd32FlushCanvas(lcd);
 
     __exit("lcdInit()");

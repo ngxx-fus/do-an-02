@@ -118,4 +118,6 @@
 #define COM_SPI_FREQ   100000
 #define COM_SPI_CONF   SPI_11_MASTER
 
+#define DISP_ORIENTATION 1   /// 0, 1, 2, 3
+
 #endif
