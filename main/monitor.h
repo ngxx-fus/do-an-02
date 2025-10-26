@@ -47,6 +47,23 @@ lcd32Dev_t * lcd;
 
 /// TASK //////////////////////////////////////////////////////////////////////////////////////////
 
+void lcdTestTask1(void * pv){
+    __entry("lcdTestTask0()");
+
+    while(!IS_SYSTEM_STOPPED){
+
+        dim_t r = genRandNum(esp_timer_get_time())%LCD32_MAX_ROW;
+        dim_t c = genRandNum(esp_timer_get_time())%LCD32_MAX_COL;
+        color_t color = genRandNum(esp_timer_get_time())%65536;
+
+        lcd32GetCanvasPixel(lcd, r, c ) = color;
+
+        taskYIELD();
+        esp_rom_delay_us(10);
+    }
+    __exit("lcdTestTask0()");
+}
+
 void lcdTestTask(void * pv){
     __entry("lcdTestTask()");
 
@@ -62,10 +79,20 @@ void lcdTestTask(void * pv){
     while(!IS_SYSTEM_STOPPED){
         
         lcd32FillCanvas(lcd, genRandNum(esp_timer_get_time())%65536);
-        lcd32FlushCanvas(lcd);
 
-        // vTaskDelay(50);
-        __sys_log("[lcdTestTask] Running...\n\n");
+        int64_t tStart = esp_timer_get_time();
+        REP(i, 0, 50) {lcd32FlushCanvas(lcd); taskYIELD();}
+        int64_t tStop = esp_timer_get_time();
+        __sys_log("[lcdTestTask] 50x Flush time: %lld us", (tStop - tStart));
+        
+        __sys_log("[lcdTestTask] Sleep...\n\n");
+        vTaskDelay(50);
+
+        // lcd32DirectlyWritePixel(lcd, genRandNum(esp_timer_get_time())%LCD32_MAX_ROW, genRandNum(esp_timer_get_time())%LCD32_MAX_COL, genRandNum(esp_timer_get_time())%65536);
+        // __lcd32SetLowData15Pin(lcd);
+        // vTaskDelay(10);
+        // __lcd32SetHighData15Pin(lcd);
+        // vTaskDelay(10);
     }
     __exit("lcdTestTask()");
 }
@@ -84,7 +111,7 @@ void lcdInit(){
     lcd32ControlPin_t ctlPin = {
         .r = LCD32_RD,  .w = LCD32_WR,
         .rs= LCD32_RS,  .cs= LCD32_CS,
-        .rst=LCD32_RST
+        .rst=LCD32_RST, .bl= LCD32_BL
     };
     lcd32ConfigDevice(lcd, &dataPin, &ctlPin, LCD32_MAX_ROW, LCD32_MAX_COL);
     lcd32StartUpDevice(lcd);
@@ -100,6 +127,9 @@ void systemInit(){
 
     __tag_log(STR(app_main), "[+] lcdTestTask()");
     xTaskCreate(lcdTestTask, "lcdTestTask", 2048, NULL, 7, NULL);
+
+    __tag_log(STR(app_main), "[+] [CPU1] lcdTestTask1()");
+    xTaskCreatePinnedToCore(lcdTestTask1,"lcdTestTask1",2048, NULL,7, NULL, 1);
 
     __exit("systemInit()");
 }

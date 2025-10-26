@@ -39,6 +39,8 @@ typedef int8_t pin_t;
 #endif 
 
 #if ESP32_DEVICE_MODE == MONITOR
+    /// LCD 3.2" PIN CONFIGURATION
+    /// NOTE: Only accepts GPIO which GPIO number less than 32
 
     #define LCD32_DB0       18    
     #define LCD32_DB1       12
@@ -63,9 +65,7 @@ typedef int8_t pin_t;
     #define LCD32_RD        14
     #define LCD32_RS        21
     #define LCD32_CS        13
-    
-    #define LCD32_MAX_ROW   240
-    #define LCD32_MAX_COL   320
+    #define LCD32_BL        1
 
 #endif
 

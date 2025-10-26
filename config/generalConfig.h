@@ -115,9 +115,8 @@
 /// Unit: micro-sec
 #define LONGPRESS_TIME 2000000
 
-#define COM_SPI_FREQ   100000
-#define COM_SPI_CONF   SPI_11_MASTER
-
-#define DISP_ORIENTATION 1   /// 0, 1, 2, 3
-
+#define LCD32_MAX_ROW   240
+#define LCD32_MAX_COL   320
+#define LCD32_DISP_ORIENTATION 2   /// 0, 1, 2, 3
+#define LCD32_USE_PSRAM_FOR_LCD_CANVAS 1  /// 1: use PSRAM, 0: use SRAM
 #endif

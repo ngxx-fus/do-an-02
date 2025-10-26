@@ -1,6 +1,62 @@
-#include "helper.h"
-#include "stdint.h"
-#include "return.h"
+#include "general.h"
+
+#pragma message("helper.c: Compling helper.c")
+
+/// @brief Configure GPIO pins as output based on a 64-bit mask.
+def GPIOConfigOutputMask(uint64_t mask) {
+    __entry("GPIOConfigOutputMask(%p)", mask);
+    
+    gpio_config_t io_conf = {
+        .intr_type = GPIO_INTR_DISABLE,
+        .mode = GPIO_MODE_OUTPUT,
+        .pin_bit_mask = mask,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+    };
+    def ret = gpio_config(&io_conf);
+    __exit("GPIOConfigOutputMask() : %s", getDefRetStat_Str(ret)); 
+    return ret;
+}
+
+/// @brief Configure GPIO pins as input based on a 64-bit mask.
+def GPIOConfigInputMask(uint64_t mask) {
+    __sys_log1("GPIOConfigInputMask(%p)", mask);
+
+    gpio_config_t io_conf = {
+        .intr_type = GPIO_INTR_DISABLE,
+        .mode = GPIO_MODE_INPUT,
+        .pin_bit_mask = mask,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+    };
+
+    def ret = gpio_config(&io_conf);
+    __exit("GPIOConfigOutputMask() : %s", getDefRetStat_Str(ret)); 
+    return ret;
+}
+
+/// @brief [Fast] Configure GPIO pins as input (disable output) based on a 64-bit mask.
+void GPIOFastConfigInputMask(uint64_t mask) {
+    __sys_log1("GPIOFastConfigInputMask(%p)", mask);
+
+    uint32_t low = (uint32_t)(mask & 0xFFFFFFFFULL);
+    uint32_t high = (uint32_t)(mask >> 32);
+
+    if (low)  REG_WRITE(GPIO_ENABLE_W1TC_REG, low);
+    if (high) REG_WRITE(GPIO_ENABLE1_W1TC_REG, high);
+}
+
+/// @brief [Fast] Configure GPIO pins as output (enable output) based on a 64-bit mask.
+void GPIOFastConfigOutputMask(uint64_t mask) {
+    __sys_log1("GPIOFastConfigOutputMask(%p)", mask);
+
+    uint32_t low = (uint32_t)(mask & 0xFFFFFFFFULL);
+    uint32_t high = (uint32_t)(mask >> 32);
+
+    if (low)  REG_WRITE(GPIO_ENABLE_W1TS_REG, low);
+    if (high) REG_WRITE(GPIO_ENABLE1_W1TS_REG, high);
+}
+
 
 unsigned int genRandNum(unsigned int seed_input) {
     // --- 1. Persistent state ---

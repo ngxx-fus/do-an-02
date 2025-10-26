@@ -8,14 +8,14 @@ typedef int16_t     dim_t;          /// 16-bit signed for dimension
 
 /// CANVAS ////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas
+typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas (only accepts GPIO number less than 32)
     color_t **buff;                 /// 1D array to store buffer
     dim_t   maxRow, maxCol;         /// Dim info
 } lcd32Canvas_t;
 
 /// CONTROL/DATA PIN //////////////////////////////////////////////////////////////////////////////
 
-typedef struct lcd32DataPin_t{       /// Struct for data pin
+typedef struct lcd32DataPin_t{       /// Struct for data pin (only accepts GPIO number less than 32)
     /// 16-bit data pin
     pin_t       __0, __1, __2,  __3,  __4,  __5,  __6,  __7, 
                 __8, __9, __10, __11, __12, __13, __14, __15;
@@ -42,6 +42,5 @@ typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
     uint64_t            dataPinMask;
     uint64_t            controlPinMask;
 } lcd32Dev_t;
-
 
 #endif

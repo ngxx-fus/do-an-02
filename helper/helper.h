@@ -1,6 +1,8 @@
 #ifndef __HELPER_H__
 #define __HELPER_H__
 
+#include "return.h"
+
 /// @brief Loop forward from `a` to `b-1`.
 /// @param type Loop variable type.
 /// @param i Loop variable.
@@ -201,6 +203,25 @@
 
 #define DEREF2(obj)    (&(&(obj)))
 
+/// @brief Configure GPIO pins as output based on a 64-bit mask.
+/// @param mask 64-bit mask representing GPIO pins to configure as output.
+/// @return esp_err_t ESP_OK on success, error code otherwise.
+def GPIOConfigOutputMask(uint64_t mask);
+
+/// @brief Configure GPIO pins as input based on a 64-bit mask.
+/// @param mask 64-bit mask representing GPIO pins to configure as input.
+/// @return esp_err_t ESP_OK on success, error code otherwise.
+def GPIOConfigInputMask(uint64_t mask);
+
+/// @brief [Fast] Configure GPIO pins as input (disable output) based on a 64-bit mask.
+/// @param mask 64-bit mask representing GPIO pins to disable output.
+void GPIOFastConfigInputMask(uint64_t mask);
+
+/// @brief [Fast] Configure GPIO pins as output (enable output) based on a 64-bit mask.
+/// @param mask 64-bit mask representing GPIO pins to enable output.
+void GPIOFastConfigOutputMask(uint64_t mask);
+
+
 /// @brief Generates a pseudo-random number in the range [0, 9999].
 ///        If the input seed is negative or repeated, the function reuses the last known random state.
 ///        Otherwise, it generates a new pseudo-random value based on the input seed.
@@ -208,6 +229,7 @@
 ///        If seed_input < 0 or equals the previous seed, the last valid random state is used instead.
 /// @return A pseudo-random integer in the range [0, MAXINT].
 unsigned int genRandNum(unsigned int seed_input);
+
 
 
 #endif

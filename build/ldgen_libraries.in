@@ -175,3 +175,4 @@ $<TARGET_FILE:idf::main>
 $<TARGET_FILE:idf::fonts>
 $<TARGET_FILE:idf::helper>
 $<TARGET_FILE:idf::lcd32>
+$<TARGET_FILE:__idf_helper>
