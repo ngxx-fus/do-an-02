@@ -22,7 +22,7 @@ The image below describe the blocks diagram of the device.
 
 
 ```
-    . Current reposistory
+    . Current reposistory / Root directory (rootDir)
     |
     ├── CMakeLists.txt              [01] Main CMake build configuration file
     ├── comDriver                   [02] Communication drivers (SPI, I2C, LCD, etc.)
