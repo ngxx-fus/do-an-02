@@ -178,6 +178,11 @@ The example below demonstrates a typical configuration:
 **Fun note**: Normally, all global variables declared in a header file should be marked as static or extern.
 However, since the header file in this directory is included only once (by myApp.c), you may declare regular global variables directly for simplicity and readability.
 
+The diagram below describe flow to add new component.
+
+<img src="imgs/DevGuideAddComponents.png" style="width:700px">
+
+
 ### Full working-tree
 
 ```
