@@ -16,120 +16,39 @@ enum ENUM_SYSTEM_STAGE {
 volatile flag_t systemStage = SYSTEM_INIT;
 
 /// Mutex for synchronizing access to the system stage flag.
-portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
+volatile portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
 /// LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////
 
 #define IS_SYSTEM_INIT          (systemStage == SYSTEM_INIT)
 #define IS_SYSTEM_RUNNING       (systemStage == SYSTEM_RUNNING)
 #define IS_SYSTEM_STOPPED       (systemStage == SYSTEM_STOPPED)
+#define ADD_NEW_TASK_TO_CPU0(tagName, taskFunc, taskName, stackSize, params, priority, taskHandle)  \
+    __sys_log("[%s] [CPU0 +] %s", tagName, taskName);                                               \
+    xTaskCreatePinnedToCore(taskFunc, taskName, stackSize, params, priority, taskHandle, 0)
+    
+#define ADD_NEW_TASK_TO_CPU1(tagName, taskFunc, taskName, stackSize, params, priority, taskHandle)  \
+    __sys_log("[%s] [CPU1 +] %s", tagName, taskName);                                               \
+    xTaskCreatePinnedToCore(taskFunc, taskName, stackSize, params, priority, taskHandle, 1)
 
-/// Flag operation with MUTEX! 
-#define FLAG_OP_W_MUTEX(p2mutex, flagOp, flag, bitOrder)        \
-        do {                                                    \
-            vPortEnterCritical(p2mutex);                        \
-            flagOp(flag, bitOrder);                             \
-            vPortExitCritical(p2mutex);                         \
-        } while (0)
+#define WAIT_SYSTEM_INIT_COMPLETED() \
+    while (IS_SYSTEM_INIT) { vTaskDelay(1); }
 
-/// Wrap a piece of code in a MUTEX!
-#define DO_WITH_MUTEX(p2mutex, anythingYouWantToDo)             \
-        do {                                                    \
-            vPortEnterCritical(p2mutex);                        \
-            anythingYouWantToDo;                                \
-            vPortExitCritical(p2mutex);                         \
-        } while (0)
+/// TASKS /////////////////////////////////////////////////////////////////////////////////////////
 
-
-/// LCD 3.2" //////////////////////////////////////////////////////////////////////////////////////
-
-lcd32Dev_t * lcd;
-
-/// TASK //////////////////////////////////////////////////////////////////////////////////////////
-
-void lcdTestTask1(void * pv){
-    __entry("lcdTestTask0()");
-
-    while(!IS_SYSTEM_STOPPED){
-
-        dim_t r = genRandNum(esp_timer_get_time())%LCD32_MAX_ROW;
-        dim_t c = genRandNum(esp_timer_get_time())%LCD32_MAX_COL;
-        color_t color = genRandNum(esp_timer_get_time())%65536;
-
-        lcd32GetCanvasPixel(lcd, r, c ) = color;
-
-        taskYIELD();
-        esp_rom_delay_us(10);
-    }
-    __exit("lcdTestTask0()");
-}
-
-void lcdTestTask(void * pv){
-    __entry("lcdTestTask()");
-
-    uint64_t all_pins_mask = lcd->dataPinMask | lcd->controlPinMask;
-
-    __sys_log("[lcdTestTask] all_pins_mask = 0x%08x", all_pins_mask);
-
-    const uint32_t mask_low  = (uint32_t)(all_pins_mask);
-    const uint32_t mask_high = (uint32_t)(all_pins_mask >> 32);
-
-    uint16_t mask = 1;
-
-    while(!IS_SYSTEM_STOPPED){
-        
-        lcd32FillCanvas(lcd, genRandNum(esp_timer_get_time())%65536);
-
-        int64_t tStart = esp_timer_get_time();
-        REP(i, 0, 50) {lcd32FlushCanvas(lcd); taskYIELD();}
-        int64_t tStop = esp_timer_get_time();
-        __sys_log("[lcdTestTask] 50x Flush time: %lld us", (tStop - tStart));
-        
-        __sys_log("[lcdTestTask] Sleep...\n\n");
-        vTaskDelay(50);
-
-        // lcd32DirectlyWritePixel(lcd, genRandNum(esp_timer_get_time())%LCD32_MAX_ROW, genRandNum(esp_timer_get_time())%LCD32_MAX_COL, genRandNum(esp_timer_get_time())%65536);
-        // __lcd32SetLowData15Pin(lcd);
-        // vTaskDelay(10);
-        // __lcd32SetHighData15Pin(lcd);
-        // vTaskDelay(10);
-    }
-    __exit("lcdTestTask()");
-}
+#include "ui.h"
 
 /// INIT //////////////////////////////////////////////////////////////////////////////////////////
 
-void lcdInit(){
-    __entry("lcdInit()");
-    lcd32CreateDevice(&lcd);
-    lcd32DataPin_t dataPin = {
-        .__0 = LCD32_DB0,   .__1 = LCD32_DB1,   .__2 = LCD32_DB2,   .__3 = LCD32_DB3,
-        .__4 = LCD32_DB4,   .__5 = LCD32_DB5,   .__6 = LCD32_DB6,   .__7 = LCD32_DB7,
-        .__8 = LCD32_DB8,   .__9 = LCD32_DB9,   .__10 = LCD32_DB10, .__11 = LCD32_DB11,
-        .__12 = LCD32_DB12, .__13 = LCD32_DB13, .__14 = LCD32_DB14, .__15 = LCD32_DB15
-    };
-    lcd32ControlPin_t ctlPin = {
-        .r = LCD32_RD,  .w = LCD32_WR,
-        .rs= LCD32_RS,  .cs= LCD32_CS,
-        .rst=LCD32_RST, .bl= LCD32_BL
-    };
-    lcd32ConfigDevice(lcd, &dataPin, &ctlPin, LCD32_MAX_ROW, LCD32_MAX_COL);
-    lcd32StartUpDevice(lcd);
-    lcd32FillCanvas(lcd, 15);
-    lcd32FlushCanvas(lcd);
-
-    __exit("lcdInit()");
-}
-
 void systemInit(){
     __entry("systemInit()");
+
     lcdInit();
 
-    __tag_log(STR(app_main), "[+] lcdTestTask()");
-    xTaskCreate(lcdTestTask, "lcdTestTask", 2048, NULL, 7, NULL);
+    lcdShowIntroScreen();
 
-    __tag_log(STR(app_main), "[+] [CPU1] lcdTestTask1()");
-    xTaskCreatePinnedToCore(lcdTestTask1,"lcdTestTask1",2048, NULL,7, NULL, 1);
+    // ADD_NEW_TASK_TO_CPU0("systemInit", lcdTestTask0, "lcdTestTask0", 2048, NULL, 7, NULL);
+    ADD_NEW_TASK_TO_CPU1("systemInit", screenControlTask, "screenControlTask", 2048, NULL, 7, NULL);
 
     __exit("systemInit()");
 }

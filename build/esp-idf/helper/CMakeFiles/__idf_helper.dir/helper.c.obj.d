@@ -40,8 +40,12 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: \
  /home/fus/Documents/DO-AN-02-LCD/helper/../config/generalConfig.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/fontUtils.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/gfxfont.h \
- /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic24pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/../gfxfont.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic18pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic12pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic9pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerif9pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/flag.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/helper.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/return.h \

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "myApp",
-    "project_version":    "1e456e6-dirty",
+    "project_version":    "e9d92b0-dirty",
     "project_path":       "/home/fus/Documents/DO-AN-02-LCD",
     "idf_path":           "/home/fus/.fus/esp-idf",
     "build_dir":          "/home/fus/Documents/DO-AN-02-LCD/build",

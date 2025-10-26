@@ -1,5 +1,8 @@
+#ifndef __FreeSansBold10pt7b__
+#define __FreeSansBold10pt7b__
+
 #include "../gfxfont.h"
-const uint8_t FreeSansBold10pt7bBitmaps[] PROGMEM = {
+static const uint8_t FreeSansBold10pt7bBitmaps[] PROGMEM = {
   0x18, 0x31, 0x7B, 0xF3, 0x85, 0x89, 0x00, 0x0C, 0x03, 0x00, 0xC3, 0xFF,
   0xFF, 0xFF, 0xF0, 0xC0, 0x30, 0x0C, 0x00, 0xFF, 0x93, 0x80, 0xFF, 0xFE,
   0xFF, 0x80, 0x08, 0x21, 0x84, 0x10, 0x43, 0x08, 0x21, 0x84, 0x10, 0x43,
@@ -18,7 +21,7 @@ const uint8_t FreeSansBold10pt7bBitmaps[] PROGMEM = {
   0x83, 0x38, 0xE7, 0xFC, 0x7F, 0x00, 0x7E, 0x7F, 0xB8, 0xF8, 0x7C, 0x3E,
   0x1F, 0x8F, 0xFF, 0x7D, 0x81, 0xC0, 0xFC, 0x7F, 0xF3, 0xF0 };
 
-const GFXglyph FreeSansBold10pt7bGlyphs[] PROGMEM = {
+static const GFXglyph FreeSansBold10pt7bGlyphs[] PROGMEM = {
   {     0,   7,   7,   8,    0,  -14 },   // 0x2A '*'
   {     7,  10,   9,  12,    1,   -8 },   // 0x2B '+'
   {    19,   3,   6,   6,    1,   -2 },   // 0x2C ','
@@ -36,9 +39,10 @@ const GFXglyph FreeSansBold10pt7bGlyphs[] PROGMEM = {
   {   166,  11,  14,  11,    0,  -13 },   // 0x38 '8'
   {   186,   9,  14,  11,    1,  -13 } }; // 0x39 '9'
 
-const GFXfont FreeSansBold10pt7b PROGMEM = {
+static const GFXfont FreeSansBold10pt7b PROGMEM = {
   (uint8_t  *)FreeSansBold10pt7bBitmaps,
   (GFXglyph *)FreeSansBold10pt7bGlyphs,
   0x2A, 0x39, 35 };
 
 // Approx. 321 bytes
+#endif

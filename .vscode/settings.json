@@ -85,6 +85,22 @@
         "esp_heap_caps.h": "c",
         "lcd32cmd.h": "c",
         "freertos.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "bebasneue_bold23pt7b.h": "c",
+        "freesansbold12pt7b.h": "c",
+        "freesansbold18pt7b.h": "c",
+        "freesansbold10pt7b.h": "c",
+        "freesansbold24pt7b.h": "c",
+        "portmacro.h": "c",
+        "ui.h": "c",
+        "freemono12pt7b.h": "c",
+        "freemono9pt7b.h": "c",
+        "freemono18pt7b.h": "c",
+        "freemonobold24pt7b.h": "c",
+        "freemono24pt7b.h": "c",
+        "freeserifbolditalic12pt7b.h": "c",
+        "freeserifbolditalic9pt7b.h": "c",
+        "freeserifbolditalic18pt7b.h": "c",
+        "freeserifbolditalic24pt7b.h": "c"
     }
 }

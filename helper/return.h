@@ -7,24 +7,25 @@
 /// Default return type
 typedef int32_t def;
 
-#define STR_OKE                "OKE"
-#define STR_ERR                "ERR"
-#define STR_ERR_NULL           "ERR_NULL"
-#define STR_ERR_MALLOC_FAILED  "ERR_MALLOC_FAILED"
-#define STR_ERR_TIMEOUT        "ERR_TIMEOUT"
-#define STR_ERR_BUSY           "ERR_BUSY"
-#define STR_ERR_INVALID_ARG    "ERR_INVALID_ARG"
-#define STR_ERR_OVERFLOW       "ERR_OVERFLOW"
-#define STR_ERR_UNDERFLOW      "ERR_UNDERFLOW"
-#define STR_ERR_NOT_FOUND      "ERR_NOT_FOUND"
-#define STR_ERR_ALREADY_EXISTS "ERR_ALREADY_EXISTS"
+/// String representations for errors
+#define STR_OKE                 "OKE"
+#define STR_ERR                 "ERR"
+#define STR_ERR_NULL            "ERR_NULL"
+#define STR_ERR_MALLOC_FAILED   "ERR_MALLOC_FAILED"
+#define STR_ERR_TIMEOUT         "ERR_TIMEOUT"
+#define STR_ERR_BUSY            "ERR_BUSY"
+#define STR_ERR_INVALID_ARG     "ERR_INVALID_ARG"
+#define STR_ERR_OVERFLOW        "ERR_OVERFLOW"
+#define STR_ERR_UNDERFLOW       "ERR_UNDERFLOW"
+#define STR_ERR_NOT_FOUND       "ERR_NOT_FOUND"
+#define STR_ERR_ALREADY_EXISTS  "ERR_ALREADY_EXISTS"
 #define STR_ERR_NOT_IMPLEMENTED "ERR_NOT_IMPLEMENTED"
-#define STR_ERR_UNSUPPORTED    "ERR_UNSUPPORTED"
-#define STR_ERR_IO             "ERR_IO"
-#define STR_ERR_PERMISSION     "ERR_PERMISSION"
-#define STR_ERR_CRC            "ERR_CRC"
-#define STR_ERR_INIT_FAILED    "ERR_INIT_FAILED"
-#define STR_ERR_PSRAM_FAILED   "STR_ERR_PSRAM_FAILED"
+#define STR_ERR_UNSUPPORTED     "ERR_UNSUPPORTED"
+#define STR_ERR_IO              "ERR_IO"
+#define STR_ERR_PERMISSION      "ERR_PERMISSION"
+#define STR_ERR_CRC             "ERR_CRC"
+#define STR_ERR_INIT_FAILED     "ERR_INIT_FAILED"
+#define STR_ERR_PSRAM_FAILED    "ERR_PSRAM_FAILED"
 
 /// Standardized return status codes for functions.
 enum DEFAULT_RETURN_STATUS {
@@ -45,9 +46,13 @@ enum DEFAULT_RETURN_STATUS {
     ERR_PERMISSION      = -14, /// Permission denied
     ERR_CRC             = -15, /// CRC check failed (data corrupted)
     ERR_INIT_FAILED     = -16, /// Initialization failed
-    ERR_PSRAM_FAILED    = -17, /// 
+    ERR_PSRAM_FAILED    = -17, /// PSRAM initialization failed
 };
 
+/// @brief Map ESP-IDF error codes to internal standardized codes
+def esp_to_def_err(int esp_err);
+
+/// @brief Get string for a default return status
 const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret);
 
-#endif
+#endif /* __RETURN_H__ */

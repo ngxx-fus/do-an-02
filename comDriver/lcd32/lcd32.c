@@ -1,8 +1,6 @@
 #include "lcd32.h"
 
-/// OTHER FUNCTIONS /////////////////////////////////////////////////////////////////////////////////
 
-/// @brief [Internal] Delete canvas buffer
 def __lcd32DeleteCanvasBuffer(lcd32Canvas_t *canvas){
     lcd32Log1("__lcd32DeleteCanvasBuffer(%p)", canvas);
     __lcd32NULLCheck(canvas, STR(*canvas), STR(__lcd32DeleteCanvasBuffer), goto returnErr;);
@@ -26,8 +24,7 @@ returnErr:
     return ERR;
 }
 
-#ifdef LCD32_USE_PSRAM_FOR_LCD_CANVAS == 1
-/// @brief [Internal] Config LCD 3.2" canvas (allocate buffer, set-up maxRow, maxCol)
+#if (LCD32_USE_PSRAM_FOR_LCD_CANVAS == 1)
 def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
     __lcd32Entry("__lcd32ConfigCanvas(%p, %d, %d)", canvas, maxRow, maxCol);
     __lcd32NULLCheck(canvas, STR(canvas), STR(__lcd32ConfigCanvas), return ERR_NULL;);
@@ -108,7 +105,6 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
 }
 #endif
 
-/// @brief [Internal] Config Control/Data pin
 def __lcd32SetupPin(lcd32Dev_t *dev){
     __lcd32Entry("__lcd32SetupPin(%p)", dev);
     __lcd32NULLCheck(dev, STR(dev), STR(__lcd32SetupPin), return ERR_NULL;);
@@ -179,7 +175,57 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
     return OKE;
 }
 
-/// @brief [Global] Create new LCD 3.2" object then store to devPtr.
+def __lcd32SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height, dim_t width) {
+    __lcd32Entry("__lcd32SetAddressWindow(%p, r=%u, c=%u, h=%u, w=%u)", dev, row, col, height, width);
+
+    dim_t x1 = col;
+    dim_t y1 = row;
+    dim_t x2 = col + width - 1;
+    dim_t y2 = row + height - 1;
+
+#if LCD32_DISP_ORIENTATION == 0
+    // Portrait - no change
+#elif LCD32_DISP_ORIENTATION == 1
+    // Rotate 90° CW
+    x1 = dev->canvas.maxCol - 1 - (row + height - 1);
+    x2 = dev->canvas.maxCol - 1 - row;
+    y1 = col;
+    y2 = col + width - 1;
+#elif LCD32_DISP_ORIENTATION == 2
+    // Rotate 180°
+    x1 = dev->canvas.maxCol - 1 - (col + width - 1);
+    x2 = dev->canvas.maxCol - 1 - col;
+    y1 = dev->canvas.maxRow - 1 - (row + height - 1);
+    y2 = dev->canvas.maxRow - 1 - row;
+#elif LCD32_DISP_ORIENTATION == 3
+    // Rotate 270° CW
+    x1 = row;
+    x2 = row + height - 1;
+    y1 = dev->canvas.maxRow - 1 - (col + width - 1);
+    y2 = dev->canvas.maxRow - 1 - col;
+#endif
+
+    // --- Column Address Set (0x2A) ---
+    __lcd32WriteCommand(dev, ILI9341_COLUMN_ADDRESS_SET);
+    __lcd32WriteData(dev, (x1 >> 8) & 0xFF);
+    __lcd32WriteData(dev, x1 & 0xFF);
+    __lcd32WriteData(dev, (x2 >> 8) & 0xFF);
+    __lcd32WriteData(dev, x2 & 0xFF);
+
+    // --- Page Address Set (0x2B) ---
+    __lcd32WriteCommand(dev, ILI9341_PAGE_ADDRESS_SET);
+    __lcd32WriteData(dev, (y1 >> 8) & 0xFF);
+    __lcd32WriteData(dev, y1 & 0xFF);
+    __lcd32WriteData(dev, (y2 >> 8) & 0xFF);
+    __lcd32WriteData(dev, y2 & 0xFF);
+
+    // --- Memory Write (0x2C) ---
+    __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
+
+    __lcd32Exit("__lcd32SetAddressWindow -> OKE");
+    return OKE;
+}
+
 def lcd32CreateDevice(lcd32Dev_t **devPtr){
     __lcd32Entry("lcd32CreateDevice(%p)", devPtr);
     __lcd32NULLCheck(devPtr, "devPtr", "lcd32CreateDev", goto ReturnERR_NULL;);
@@ -210,7 +256,6 @@ def lcd32CreateDevice(lcd32Dev_t **devPtr){
         return ERR_NULL;
 }
 
-/// @brief [Global] Config new LCD 3.2".
 def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_t *controlPin, dim_t maxRow, dim_t maxCol){
     __lcd32Entry("lcd32ConfigDev(%p, %p, %p, %d, %d)", dev, dataPin, controlPin, maxRow, maxCol);
     __lcd32NULLCheck(dev, "dev", "lcd32ConfigDev", goto returnERR_NULL;);
@@ -270,7 +315,6 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     return ERR_NULL;
 }
 
-/// @brief [Global] Initialize and start up the LCD 3.2" (ILI9341 controller).
 def lcd32StartUpDevice(lcd32Dev_t *dev) {
     __lcd32Entry("lcd32StartUpDevice(%p)", dev);
 
@@ -502,54 +546,74 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
     return OKE;
 }
 
-def __lcd32SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height, dim_t width) {
-    __lcd32Entry("__lcd32SetAddressWindow(%p, r=%u, c=%u, h=%u, w=%u)", dev, row, col, height, width);
+def lcd32PutToSleep(lcd32Dev_t *dev) {
+    __lcd32Entry("lcd32TurnOff(%p)", dev);
 
-    dim_t x1 = col;
-    dim_t y1 = row;
-    dim_t x2 = col + width - 1;
-    dim_t y2 = row + height - 1;
+    // --- Input Validation ---
+    if (!dev) {
+        __sys_err("[lcd32TurnOff] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
 
-#if LCD32_DISP_ORIENTATION == 0
-    // Portrait - no change
-#elif LCD32_DISP_ORIENTATION == 1
-    // Rotate 90° CW
-    x1 = dev->canvas.maxCol - 1 - (row + height - 1);
-    x2 = dev->canvas.maxCol - 1 - row;
-    y1 = col;
-    y2 = col + width - 1;
-#elif LCD32_DISP_ORIENTATION == 2
-    // Rotate 180°
-    x1 = dev->canvas.maxCol - 1 - (col + width - 1);
-    x2 = dev->canvas.maxCol - 1 - col;
-    y1 = dev->canvas.maxRow - 1 - (row + height - 1);
-    y2 = dev->canvas.maxRow - 1 - row;
-#elif LCD32_DISP_ORIENTATION == 3
-    // Rotate 270° CW
-    x1 = row;
-    x2 = row + height - 1;
-    y1 = dev->canvas.maxRow - 1 - (col + width - 1);
-    y2 = dev->canvas.maxRow - 1 - col;
-#endif
+    __lcd32StartTransaction(dev);
 
-    // --- Column Address Set (0x2A) ---
-    __lcd32WriteCommand(dev, ILI9341_COLUMN_ADDRESS_SET);
-    __lcd32WriteData(dev, (x1 >> 8) & 0xFF);
-    __lcd32WriteData(dev, x1 & 0xFF);
-    __lcd32WriteData(dev, (x2 >> 8) & 0xFF);
-    __lcd32WriteData(dev, x2 & 0xFF);
+    // 1. Turn off backlight immediately
+    __lcd32SetLowBrightLightPin(dev);
+    __lcd32Log("Backlight turned OFF");
 
-    // --- Page Address Set (0x2B) ---
-    __lcd32WriteCommand(dev, ILI9341_PAGE_ADDRESS_SET);
-    __lcd32WriteData(dev, (y1 >> 8) & 0xFF);
-    __lcd32WriteData(dev, y1 & 0xFF);
-    __lcd32WriteData(dev, (y2 >> 8) & 0xFF);
-    __lcd32WriteData(dev, y2 & 0xFF);
+    // 2. Send Display OFF command (0x28) [cite: 13]
+    __lcd32WriteCommand(dev, ILI9341_DISPLAY_OFF);
+    __lcd32Log("Sent CMD: DISPLAY_OFF (0x%02X)", ILI9341_DISPLAY_OFF);
+    // Datasheet doesn't mandate a delay here, but a small one might be safe
+    esp_rom_delay_us(1000); // 1ms delay (optional)
 
-    // --- Memory Write (0x2C) ---
-    __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
+    // 3. Send Enter Sleep Mode command (0x10) [cite: 13]
+    __lcd32WriteCommand(dev, ILI9341_ENTER_SLEEP);
+    __lcd32Log("Sent CMD: ENTER_SLEEP (0x%02X)", ILI9341_ENTER_SLEEP);
+    // It takes time to enter sleep, but we don't need to wait here unless
+    // we immediately power down VCI/VDDI. Delay is needed *after* waking up.
 
-    __lcd32Exit("__lcd32SetAddressWindow -> OKE");
+    __lcd32StopTransaction(dev);
+
+    __lcd32Exit("lcd32TurnOff -> OKE");
+    return OKE;
+}
+
+def lcd32WakeFromSleep(lcd32Dev_t *dev) {
+    __lcd32Entry("lcd32TurnOn(%p)", dev);
+
+    // --- Input Validation ---
+    if (!dev) {
+        __sys_err("[lcd32TurnOn] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
+
+    __lcd32StartTransaction(dev);
+
+    // 1. Send Sleep Out command (0x11) [cite: 13]
+    __lcd32WriteCommand(dev, ILI9341_SLEEP_OUT);
+    __lcd32Log("Sent CMD: SLEEP_OUT (0x%02X)", ILI9341_SLEEP_OUT);
+
+    // 2. Wait for stabilization after Sleep Out [cite: 1314, 1329]
+    // The datasheet mentions 5ms minimum before the *next command*,
+    // but 120ms is needed *after SLEEP OUT* before SLEEP IN can be sent again.
+    // The startup sequence waits 120ms after SLEEP_OUT, let's follow that for safety.
+    esp_rom_delay_us(120000); // 120ms delay
+
+    // 3. Send Display ON command (0x29) [cite: 13]
+    __lcd32WriteCommand(dev, ILI9341_DISPLAY_ON);
+    __lcd32Log("Sent CMD: DISPLAY_ON (0x%02X)", ILI9341_DISPLAY_ON);
+
+    // 4. Wait briefly after Display ON (matching startup sequence)
+    esp_rom_delay_us(50000); // 50ms delay
+
+    // 5. Turn on backlight
+    __lcd32SetHighBrightLightPin(dev);
+    __lcd32Log("Backlight turned ON");
+
+    __lcd32StopTransaction(dev);
+
+    __lcd32Exit("lcd32TurnOn -> OKE");
     return OKE;
 }
 
@@ -566,7 +630,6 @@ def lcd32FillCanvas(lcd32Dev_t *dev, color_t color){
     return OKE;
 }
 
-/// @brief [Global] Flush the entire canvas to the LCD (optimized inline window setup)
 def lcd32FlushCanvas(lcd32Dev_t *dev) {
     // __lcd32Entry("lcd32FlushCanvas(%p)", dev);
 
@@ -576,6 +639,7 @@ def lcd32FlushCanvas(lcd32Dev_t *dev) {
 
     // --- Begin LCD bus transaction (assert CS, prepare write mode) ---
     __lcd32StartTransaction(dev);
+    vPortEnterCritical(ADDR(dev->mutex));
 
     // --- Inline address window setup (merged from __lcd32SetAddressWindow) ---
     dim_t row = 0, col = 0;
@@ -638,12 +702,12 @@ def lcd32FlushCanvas(lcd32Dev_t *dev) {
 
     // --- End LCD bus transaction (release CS) ---
     __lcd32StopTransaction(dev);
+    vPortExitCritical(ADDR(dev->mutex));
 
     // __lcd32Exit("lcd32FlushCanvas() : OKE");
     return OKE;
 }
 
-/// @brief [Global] Write a single pixel directly to the LCD.
 def lcd32DirectlyWritePixel(lcd32Dev_t *dev, dim_t r, dim_t c, color_t color) {
     lcd32Log1("lcd32DirectlyWritePixel(%p, r=%d, c=%d, color=0x%04x)", dev, r, c, color);
 
@@ -693,4 +757,235 @@ def lcd32DrawEmptyRect(lcd32Dev_t *lcd, dim_t rTopLeft, dim_t cTopLeft, dim_t rB
                               rTopLeft + 1, cTopLeft + 1,
                               rBottomRight - 1, cBottomRight - 1,
                               edgeSize - 1, color);
+}
+
+def lcd32DrawChar(lcd32Dev_t *dev, dim_t r, dim_t c, char ch, GFXfont *f, color_t color){
+    // --- Input Validation ---
+    if (!dev) {
+        __sys_err("[lcd32DrawChar] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (!f) {
+        __sys_err("[lcd32DrawChar] f (font) is NULL");
+        return ERR_INVALID_ARG;
+    }
+
+    // Check if char is supported by the font
+    if (ch < f->first || ch > f->last) {
+        // This log can be noisy if a string contains many unsupported chars.
+        // __sys_err("[lcd32DrawChar] Char '0x%X' out of font range (0x%X-0x%X)", (unsigned int)ch, f->first, f->last);
+        return ERR_INVALID_ARG; // Character not supported
+    }
+
+    // --- Get Glyph Info ---
+    
+    // Get glyph metadata for the specific char
+    GFXglyph *glyph = &(f->glyph[ch - f->first]);
+    
+    // Get pointer to the font's shared bitmap data
+    uint8_t  *bitmap = f->bitmap;
+
+    // Get glyph-specific properties
+    uint16_t  bo     = glyph->bitmapOffset; // Bitmap offset in the shared bitmap
+    dim_t     w      = glyph->width;        // Glyph width (pixels)
+    dim_t     h      = glyph->height;       // Glyph height (pixels)
+    dim_t     xo     = glyph->xOffset;      // X offset from cursor
+    dim_t     yo     = glyph->yOffset;      // Y offset from cursor (baseline)
+
+    // --- Calculate Pixel Coordinates ---
+
+    // (r, c) is the cursor origin (top-left of the char cell).
+    // bitmap_top_r/c is the top-left corner where actual plotting starts.
+    dim_t bitmap_top_r  = r + yo;
+    dim_t bitmap_left_c = c + xo;
+
+    uint8_t bits = 0;       // Current byte being processed from bitmap
+    uint8_t bitCount = 0;   // Number of bits left in the 'bits' variable
+
+    // --- Plotting Loop (Iterate through glyph pixels) ---
+    
+    // Loop over glyph height (Y-axis)
+    for (dim_t yy = 0; yy < h; yy++) {
+        // Loop over glyph width (X-axis)
+        for (dim_t xx = 0; xx < w; xx++) {
+            
+            // Read a new byte from bitmap if current one is used up
+            if (bitCount == 0) {
+                bits = bitmap[bo++]; // Read next byte
+                bitCount = 8;        // Reset bit counter
+            }
+
+            // Check if the highest bit (MSB) is set (pixel is ON)
+            if (bits & 0x80) {
+                // Calculate final pixel location on canvas
+                dim_t pixel_r = bitmap_top_r + yy;
+                dim_t pixel_c = bitmap_left_c + xx;
+
+                // Boundary check (CRITICAL, as SetCanvasPixel has no check)
+                if (pixel_r >= 0 && pixel_r < dev->canvas.maxRow &&
+                    pixel_c >= 0 && pixel_c < dev->canvas.maxCol)
+                {
+                    // Plot the pixel
+                    lcd32SetCanvasPixel(dev, pixel_r, pixel_c, color);
+                }
+            }
+            
+            bits <<= 1; // Move to the next bit
+            bitCount--;
+        }
+    }
+    
+    return OKE;
+}
+
+def lcd32DrawText(lcd32Dev_t *dev, dim_t r, dim_t c, const char *str, GFXfont *f, color_t color) {
+    
+    // --- Input Validation ---
+    if (!dev) {
+        __sys_err("[lcd32DrawText] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (!f) {
+        __sys_err("[lcd32DrawText] f (font) is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (!str) {
+        __sys_err("[lcd32DrawText] str is NULL");
+        return ERR_INVALID_ARG;
+    }
+
+    // --- Handle Empty String ---
+    if (*str == '\0') {
+        return OKE; // Not an error, just nothing to draw
+    }
+
+    dim_t cursor_r = r;
+    dim_t cursor_c = c;
+
+    // --- Iterate through string ---
+    while (*str) {
+        char ch = *str++;
+
+        // Handle newline
+        if (ch == '\n') {
+            cursor_c = c; // Reset column
+            cursor_r += f->yAdvance; // Move to next line
+            continue;
+        }
+
+        // Filter unsupported characters
+        if (ch < f->first || ch > f->last) {
+            continue;
+        }
+        
+        GFXglyph *glyph = &(f->glyph[ch - f->first]);
+
+        // Handle horizontal wrapping
+        if (cursor_c + glyph->xAdvance >= dev->canvas.maxCol) {
+            cursor_c = c; // Reset column
+            cursor_r += f->yAdvance; // Move to next line
+        }
+
+        // Draw the character (relies on lcd32DrawChar)
+        lcd32DrawChar(dev, cursor_r, cursor_c, ch, f, color);
+        
+        // Advance cursor
+        cursor_c += glyph->xAdvance;
+    }
+
+    return OKE;
+}
+
+def lcd32DrawLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, color_t color) {
+    
+    // --- Input Validation ---
+    if (!dev) {
+        __sys_err("[lcd32DrawLine] dev is NULL"); 
+        return ERR_INVALID_ARG;
+    }
+
+    // --- Bresenham setup ---
+    dim_t dx = abs(c1 - c0);
+    dim_t sx = c0 < c1 ? 1 : -1;
+    dim_t dy = -abs(r1 - r0);
+    dim_t sy = r0 < r1 ? 1 : -1;
+    dim_t err = dx + dy; // Error value e_xy
+
+    // --- Plotting loop ---
+    while (true) {
+        
+        // Plot pixel with boundary check
+        if (r0 >= 0 && r0 < dev->canvas.maxRow && c0 >= 0 && c0 < dev->canvas.maxCol) {
+            lcd32SetCanvasPixel(dev, r0, c0, color);
+        }
+        
+        // Check stop condition
+        if (c0 == c1 && r0 == r1) break;
+        
+        // Bresenham iteration
+        dim_t e2 = err << 1; // Optimized (e2 = 2 * err)
+        if (e2 >= dy) {
+            err += dy;
+            c0 += sx;
+        }
+        if (e2 <= dx) {
+            err += dx;
+            r0 += sy;
+        }
+    }
+    return OKE;
+}
+
+def lcd32DrawThickLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, color_t color, dim_t thickness) {
+    if (thickness <= 0) {
+    }
+    if (thickness == 1) {
+        return lcd32DrawLine(dev, r0, c0, r1, c1, color);
+    }
+
+    dim_t dx = abs(c1 - c0);
+    dim_t sx = c0 < c1 ? 1 : -1;
+    dim_t dy = -abs(r1 - r0);
+    dim_t sy = r0 < r1 ? 1 : -1;
+    dim_t err = dx + dy;
+
+    dim_t t_start = -(thickness - 1) / 2;
+    dim_t t_end = thickness / 2;
+    
+    const dim_t max_r = dev->canvas.maxRow;
+    const dim_t max_c = dev->canvas.maxCol;
+
+    const bool is_steep = abs(dy) > dx;
+
+    while (true) {
+        
+        if (is_steep) {
+            for (dim_t i = t_start; i <= t_end; i++) {
+                dim_t current_c = c0 + i;
+                if (current_c >= 0 && current_c < max_c && r0 >= 0 && r0 < max_r) {
+                    lcd32SetCanvasPixel(dev, r0, current_c, color);
+                }
+            }
+        } else {
+            for (dim_t i = t_start; i <= t_end; i++) {
+                dim_t current_r = r0 + i;
+                if (current_r >= 0 && current_r < max_r && c0 >= 0 && c0 < max_c) {
+                    lcd32SetCanvasPixel(dev, current_r, c0, color);
+                }
+            }
+        }
+        
+        if (c0 == c1 && r0 == r1) break;
+
+        dim_t e2 = err << 1; 
+        if (e2 >= dy) {
+            err += dy;
+            c0 += sx;
+        }
+        if (e2 <= dx) {
+            err += dx;
+            r0 += sy;
+        }
+    }
+    return OKE;
 }

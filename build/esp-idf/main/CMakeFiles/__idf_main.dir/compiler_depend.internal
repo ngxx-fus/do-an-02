@@ -142,6 +142,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj
  /home/fus/Documents/DO-AN-02-LCD/fonts/gfxfont.h
  /home/fus/Documents/DO-AN-02-LCD/fonts/gfxfont.h
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerif9pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic12pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espLogWrapper.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espRTOSWrapper.h
@@ -151,4 +155,5 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj
  /home/fus/Documents/DO-AN-02-LCD/helper/param.h
  /home/fus/Documents/DO-AN-02-LCD/helper/return.h
  /home/fus/Documents/DO-AN-02-LCD/main/monitor.h
+ /home/fus/Documents/DO-AN-02-LCD/main/ui.h
 

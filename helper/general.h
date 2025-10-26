@@ -8,6 +8,9 @@
 /// @note This file should be included **before** any hardware driver headers to ensure all 
 /// shared types and macros are available.
 
+/// @note This header CAN NOT BE INCLUDED IN ANY .H file in this directory. Because it will make 
+/// an infinity include loop!
+
 /// @author Ngxx-Fus
 
 #ifndef __GENERAL_HEADER_H__

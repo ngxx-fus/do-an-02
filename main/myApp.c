@@ -25,9 +25,10 @@ void app_main(void){
     __tag_log(STR(app_main), "Set systemStage = SYSTEM_RUNNING");
     systemStage = SYSTEM_RUNNING;
     
+    lcdDrawCaro(); 
 
     while (!IS_SYSTEM_STOPPED){
-
+        
         vTaskDelay(1);
     }
     

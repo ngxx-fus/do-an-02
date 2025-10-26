@@ -102,7 +102,38 @@ unsigned int genRandNum(unsigned int seed_input) {
     return last_known_random_state;
 }
 
-const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret) {
+def esp_to_def_err(int esp_err){
+    switch (esp_err) {
+        case 0:                     return OKE;
+        case -1:                    return ERR;                // ESP_FAIL
+        case 0x101:                 return ERR_MALLOC_FAILED;  // ESP_ERR_NO_MEM
+        case 0x102:                 return ERR_INVALID_ARG;    // ESP_ERR_INVALID_ARG
+        case 0x103:                 return ERR_INIT_FAILED;    // ESP_ERR_INVALID_STATE
+        case 0x104:                 return ERR_OVERFLOW;       // ESP_ERR_INVALID_SIZE
+        case 0x105:                 return ERR_NOT_FOUND;      // ESP_ERR_NOT_FOUND
+        case 0x106:                 return ERR_UNSUPPORTED;    // ESP_ERR_NOT_SUPPORTED
+        case 0x107:                 return ERR_TIMEOUT;        // ESP_ERR_TIMEOUT
+        case 0x108:                 return ERR_IO;             // ESP_ERR_INVALID_RESPONSE
+        case 0x109:                 return ERR_CRC;            // ESP_ERR_INVALID_CRC
+        case 0x10A:                 return ERR_INVALID_ARG;    // ESP_ERR_INVALID_VERSION
+        case 0x10B:                 return ERR_INVALID_ARG;    // ESP_ERR_INVALID_MAC
+        case 0x10C:                 return ERR_BUSY;           // ESP_ERR_NOT_FINISHED
+        default:
+            if (esp_err >= 0x3000 && esp_err < 0x4000)
+                return ERR_IO;             // WiFi-related errors
+            if (esp_err >= 0x4000 && esp_err < 0x6000)
+                return ERR_UNSUPPORTED;    // Mesh-related
+            if (esp_err >= 0x6000 && esp_err < 0xc000)
+                return ERR_IO;             // Flash-related
+            if (esp_err >= 0xc000 && esp_err < 0xd000)
+                return ERR_UNSUPPORTED;    // Crypto-related
+            if (esp_err >= 0xd000)
+                return ERR_PERMISSION;     // Mem protection-related
+            return ERR;
+    }
+}
+
+const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret){
     switch (ret) {
         case OKE:                 return STR_OKE;
         case ERR:                 return STR_ERR;
@@ -121,7 +152,7 @@ const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret) {
         case ERR_PERMISSION:      return STR_ERR_PERMISSION;
         case ERR_CRC:             return STR_ERR_CRC;
         case ERR_INIT_FAILED:     return STR_ERR_INIT_FAILED;
-        
-        default:                  return "UNKNOWN_RETURN_CODE";
+        case ERR_PSRAM_FAILED:    return STR_ERR_PSRAM_FAILED;
+        default:                  return "UNKNOWN";
     }
 }

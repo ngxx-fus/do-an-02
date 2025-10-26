@@ -141,6 +141,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: /home/fus/Documents/DO-AN-02
   /home/fus/Documents/DO-AN-02-LCD/fonts/gfxfont.h \
   /home/fus/Documents/DO-AN-02-LCD/fonts/gfxfont.h \
   /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerif9pt7b.h \
+  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic12pt7b.h \
+  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h \
+  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h \
+  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espLogWrapper.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espRTOSWrapper.h \
@@ -149,8 +153,11 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: /home/fus/Documents/DO-AN-02
   /home/fus/Documents/DO-AN-02-LCD/helper/helper.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/param.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/return.h \
-  /home/fus/Documents/DO-AN-02-LCD/main/monitor.h
+  /home/fus/Documents/DO-AN-02-LCD/main/monitor.h \
+  /home/fus/Documents/DO-AN-02-LCD/main/ui.h
 
+
+/home/fus/Documents/DO-AN-02-LCD/main/ui.h:
 
 /home/fus/Documents/DO-AN-02-LCD/main/monitor.h:
 
@@ -163,6 +170,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: /home/fus/Documents/DO-AN-02
 /home/fus/Documents/DO-AN-02-LCD/helper/espLogWrapper.h:
 
 /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h:
+
+/home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h:
+
+/home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic12pt7b.h:
 
 /home/fus/Documents/DO-AN-02-LCD/config/generalConfig.h:
 
@@ -296,6 +307,8 @@ config/sdkconfig.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h:
 
+/home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
@@ -403,6 +416,8 @@ config/sdkconfig.h:
 /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h:
 
 /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/gpio_sig_map.h:
+
+/home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h:
 
 /home/fus/.fus/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
 

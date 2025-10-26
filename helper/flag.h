@@ -18,4 +18,20 @@ typedef uint32_t        flag_t;
 #define __hasFlagBitSet(flag, i)   (((flag) & __mask32(i)) != 0U)      /// Check if bit at position i is set in 32-bit flag (nonzero if true).
 #define __hasFlagBitClr(flag, i) (((flag) & __mask32(i)) == 0U)      /// Check if bit at position i is clear in 32-bit flag (nonzero if true).
 
+/// Flag operation with MUTEX! 
+#define FLAG_OP_W_MUTEX(p2mutex, flagOp, flag, bitOrder)        \
+        do {                                                    \
+            vPortEnterCritical(p2mutex);                        \
+            flagOp(flag, bitOrder);                             \
+            vPortExitCritical(p2mutex);                         \
+        } while (0)
+
+/// Wrap a piece of code in a MUTEX!
+#define PERFORM_IN_CRITICAL(p_mux, ...)                         \
+        do {                                                    \
+            vPortEnterCritical(p_mux);                          \
+            __VA_OPT__(__VA_ARGS__)                             \
+            vPortExitCritical(p_mux);                           \
+        } while (0)
+
 #endif
