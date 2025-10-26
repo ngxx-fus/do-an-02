@@ -182,6 +182,23 @@ The diagram below describe flow to add new component.
 
 <img src="imgs/DevGuideAddComponents.png" style="width:700px">
 
+**Identify error due to forget to add REQUIRES in CMaskLists.txt**:
+
+```
+In file included from /home/fus/Documents/DO-AN-02-LCD/helper/general.h:32,
+                 from /home/fus/Documents/DO-AN-02-LCD/helper/helper.c:1:
+/home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h:9:10: fatal error: driver/gpio.h: No such file or directory
+    9 | #include "driver/gpio.h"        /// high-level GPIO driver (gpio_set_level, gpio_get_level, gpio_config)
+      |          ^~~~~~~~~~~~~~~
+
+...
+
+make: *** [Makefile:136: all] Error 2
+Compilation failed because espGPIOWrapper.h (in "helper" component) includes driver/gpio.h, provided by esp_driver_gpio component(s).
+However, esp_driver_gpio component(s) is not in the requirements list of "helper".
+To fix this, add esp_driver_gpio to REQUIRES list of idf_component_register call in /home/fus/Documents/DO-AN-02-LCD/helper/CMakeLists.txt.
+make failed with exit code 2, output of the command is in the /home/fus/Documents/DO-AN-02-LCD/build/log/idf_py_stderr_output_5978 and /home/fus/Documents/DO-AN-02-LCD/build/log/idf_py_stdout_output_5978
+```
 
 ### Full working-tree
 
