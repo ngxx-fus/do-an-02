@@ -36,7 +36,7 @@ The image below describe the blocks diagram of the device.
     └── sdkconfig.old               [10] Backup of previous sdkconfig
 ```
 
-### 2nd-level/ [06] helper
+### 2nd-level | [06] helper
 
 This directory provides a collection of helper modules and utility functions that support system-wide consistency and simplify hardware communication components.
 
@@ -78,7 +78,7 @@ Simplified maintenance — other libraries only need to include `helper/general.
 In short, [06] helper/ acts as the foundation layer that unifies all components and guarantees reliable, modular system integration.
 
 
-### 2nd-level/ [02] comDriver
+### 2nd-level | [02] comDriver
 
 This directory contains hardware communication modules (components). To maintain a consistent and standardized header inclusion order, all common headers (FreeRTOS, GPIO, helper utilities) are defined under [06] helper. These shared headers are then included by other libraries through helper/general.h, which guarantees proper initialization order — so regardless of how or where a function is called later within components, the inclusion sequence remains correct and reliable.
 
@@ -149,6 +149,34 @@ The CMakeLists.txt for each component look like:
         REQUIRES esp_driver_gpio esp_driver_spi esp_timer
     )
 ```
+
+### 2nd-level | [07] main
+
+This directory represents the entry point of the application. It contains the main source file that initializes and runs the core system logic. The diagram below illustrates its internal structure.
+
+```
+    .
+    ├── CMakeLists.txt              [07.01] — CMake build configuration for the main application
+    ├── monitor.h                   [07.02] — Main header file for system monitoring or debugging utilities
+    └── myApp.c                     [07.03] — Main application source file containing app_main() and core logic
+```
+
+To use user-defined components, you need to add the `target_include_directories` command to the CMakeLists.txt [07.01].
+The example below demonstrates a typical configuration:
+
+```
+    idf_component_register(SRCS "myApp.c"
+                        INCLUDE_DIRS ".")
+
+    target_include_directories(${COMPONENT_TARGET}
+        PUBLIC
+            ../config
+            ../helper
+    )
+```
+
+**Fun note**: Normally, all global variables declared in a header file should be marked as static or extern.
+However, since the header file in this directory is included only once (by myApp.c), you may declare regular global variables directly for simplicity and readability.
 
 ### Full working-tree
 
