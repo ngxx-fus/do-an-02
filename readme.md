@@ -150,66 +150,10 @@ The CMakeLists.txt for each component look like:
     )
 ```
 
-### 
 
-```
-├── CMakeLists.txt
-├── comDriver
-│   ├── i2c
-│   │   ├── CMakeLists.txt
-│   │   ├── i2c.c
-│   │   ├── i2c.h
-│   │   ├── i2cDefinition.h
-│   │   ├── i2cHelper.h
-│   │   └── i2cLog.h
-│   ├── lcd32
-│   │   ├── CMakeLists.txt
-│   │   ├── lcd32.c
-│   │   ├── lcd32.h
-│   │   ├── lcd32Cmd.h
-│   │   ├── lcd32Def.h
-│   │   └── lcd32Helper.h
-│   ├── oled128x64
-│   │   ├── CMakeLists.txt
-│   │   ├── oled128x64.c
-│   │   ├── oled128x64.h
-│   │   ├── oled128x64Commands.h
-│   │   ├── oled128x64Definitions.h
-│   │   ├── oled128x64Helpers.h
-│   │   └── oled128x64Log.h
-│   └── spi
-│       ├── CMakeLists.txt
-│       ├── spi.c
-│       └── spi.h
-├── config
-│   ├── CMakeLists.txt
-│   ├── generalConfig.h
-│   └── pinConfig.h
-├── diagram
-│   ├── diagram01.drawio
-│   └── diagram02.drawio
-├── fonts
-│   ├── CMakeLists.txt
-│   ├── fontUtils.c
-│   ├── fontUtils.h
-│   └── gfxfont.h
-├── helper
-│   ├── CMakeLists.txt
-│   ├── espGPIOWrapper.h
-│   ├── espLogWrapper.h
-│   ├── espRTOSWrapper.h
-│   ├── flag.h
-│   ├── general.h
-│   ├── helper.c
-│   ├── helper.h
-│   ├── param.h
-│   └── return.h
-├── main
-│   ├── CMakeLists.txt
-│   ├── monitor.h
-│   └── myApp.c
-├── readme.md
-├── sdkconfig
-└── sdkconfig.old
-```
 
+# Useful links
+
+- [ESP32-S3 N16R8 DevKitC Module ](https://www.lazada.vn/products/diymore-esp32-s3-n16r8-bang-mach-phat-trien-lap-trinh-hoi-dong-quan-tri-xiaozhi-ai-giong-noi-thong-minh-may-voi-091-inch-oled-bo-ket-hop-i3051811347.html)
+
+- [3.2inch 320x240 Touch LCD (D)](https://www.waveshare.com/wiki/3.2inch_320x240_Touch_LCD_(D))
