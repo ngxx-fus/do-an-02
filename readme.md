@@ -82,6 +82,74 @@ In short, [06] helper/ acts as the foundation layer that unifies all components 
 
 This directory contains hardware communication modules (components). To ensure a consistent and standardized header inclusion order, all common headers (FreeRTOS, GPIO, helpers, utilities) are defined in [06] helper. These shared headers are then included by other libraries through helper/general.h, which guarantees proper initialization order — so regardless of how or where a function is called later within components, the inclusion sequence remains correct and reliable.
 
+```
+    .
+    ├── i2c                         [02.01]
+    │   ├── CMakeLists.txt                  [02.01.01]
+    │   ├── i2c.c                           [02.01.02]
+    │   ├── i2c.h                           [02.01.03]
+    │   ├── i2cDefinition.h                 [02.01.04]
+    │   ├── i2cHelper.h                     [02.01.05]
+    │   └── i2cLog.h                        [02.01.06]
+    ├── lcd32                       [02.02]
+    │   ├── CMakeLists.txt
+    │   ├── lcd32.c
+    │   ├── lcd32.h
+    │   ├── lcd32Cmd.h
+    │   ├── lcd32Def.h
+    │   └── lcd32Helper.h
+    ├── oled128x64                  [02.03]
+    │   ├── CMakeLists.txt
+    │   ├── oled128x64.c
+    │   ├── oled128x64.h
+    │   ├── oled128x64Commands.h
+    │   ├── oled128x64Definitions.h
+    │   ├── oled128x64Helpers.h
+    │   └── oled128x64Log.h
+    └── spi                         [02.04]
+        ├── CMakeLists.txt
+        ├── spi.c
+        └── spi.h
+```
+
+| ID        | Description |
+| :--       | :--         |
+| [02.01]	| I2C communication driver directory containing all I2C-related implementations |
+| [02.01.01]| 	CMake build configuration file for I2C module |
+| [02.01.02]| 	Main I2C driver implementation source file |
+| [02.01.03]| 	Main I2C driver header file with public interfaces |
+| [02.01.04]| 	I2C protocol definitions and constants |
+| [02.01.05]| 	Helper functions and utilities specific to I2C operations |
+| [02.01.06]| 	Logging functionality specific to I2C module |
+| [02.02]	| LCD32 driver directory for 3.2" ILI9341 LCD display |
+| [02.03]	| OLED128x64 driver directory for 128x64 OLED display |
+| [02.04]	| SPI communication driver directory containing SPI protocol implementations |
+
+To add new components, you should follow the existing directory structure — or at least make sure each component contains a header file (header.h) and a CMakeLists.txt file. Below is the standard structure of a CMakeLists.txt file inside each component.
+
+Afterward, to make your new components functional, you need to ensure two things:
+1. All required components are properly listed (required) in your component’s CMakeLists.txt.
+2. You have added the component’s path in the main CMakeLists.txt [1] (see the example code below) so that ESP-IDF can detect and include it during the build process.
+
+```CMakeList.txt
+    # Tell CMake to look for additional components in the 'comDriver',  directory
+    set(EXTRA_COMPONENT_DIRS
+        "fonts"
+        "helper"
+        "comDriver/lcd32"
+    )
+```
+
+The CMakeLists.txt for each component look like:
+
+```CMakeList.txt
+    idf_component_register(
+        SRCS "lcd32.c"
+        INCLUDE_DIRS "."
+        REQUIRES esp_driver_gpio esp_driver_spi esp_timer
+    )
+```
+
 ### 
 
 ```
