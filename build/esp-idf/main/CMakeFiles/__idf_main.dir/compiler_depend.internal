@@ -153,6 +153,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj
  /workspaces/do-an-02/helper/helper.h
  /workspaces/do-an-02/helper/param.h
  /workspaces/do-an-02/helper/return.h
+ /workspaces/do-an-02/main/__dataStorage.h
+ /workspaces/do-an-02/main/__userInterface.h
  /workspaces/do-an-02/main/monitor.h
- /workspaces/do-an-02/main/ui.h
 

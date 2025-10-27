@@ -34,14 +34,14 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
 
     // Free old buffer if it exists
     if (__isnot_null(canvas->buff)) {
-        lcd32Warn("[__lcd32ConfigCanvas] canvas->buff = %p", canvas->buff);
+        __lcd32Warn("[__lcd32ConfigCanvas] canvas->buff = %p", canvas->buff);
         __lcd32DeleteCanvasBuffer(canvas);
     }
 
     // Allocate array of row pointers
     canvas->buff = (color_t **) heap_caps_malloc(sizeof(color_t *) * maxRow, MALLOC_CAP_SPIRAM);
     if (!canvas->buff) {
-        lcd32Err("[__lcd32ConfigCanvas] PSRAM allocation failed for row pointers array!");
+        __lcd32Err("[__lcd32ConfigCanvas] PSRAM allocation failed for row pointers array!");
         return ERR_PSRAM_FAILED;
     }
 
@@ -53,7 +53,7 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
             for (dim_t i = 0; i < r; ++i) free(canvas->buff[i]);
             free(canvas->buff);
             canvas->buff = NULL;
-            lcd32Err("[__lcd32ConfigCanvas] PSRAM allocation failed for row %d!", r);
+            __lcd32Err("[__lcd32ConfigCanvas] PSRAM allocation failed for row %d!", r);
             return ERR_PSRAM_FAILED;
         }
         memset(canvas->buff[r], 0, sizeof(color_t) * maxCol);
@@ -74,14 +74,14 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
 
     // Free old buffer if it exists
     if (__isnot_null(canvas->buff)) {
-        lcd32Warn("[__lcd32ConfigCanvas] canvas->buff = %p", canvas->buff);
+        __lcd32Warn("[__lcd32ConfigCanvas] canvas->buff = %p", canvas->buff);
         __lcd32DeleteCanvasBuffer(canvas);
     }
 
     // Allocate array of row pointers (use normal malloc)
     canvas->buff = (color_t **) malloc(sizeof(color_t *) * maxRow);
     if (!canvas->buff) {
-        lcd32Err("[__lcd32ConfigCanvas] DRAM allocation failed for row pointers array!");
+        __lcd32Err("[__lcd32ConfigCanvas] DRAM allocation failed for row pointers array!");
         return ERR_MALLOC_FAILED;
     }
 
@@ -93,7 +93,7 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
             for (dim_t i = 0; i < r; ++i) free(canvas->buff[i]);
             free(canvas->buff);
             canvas->buff = NULL;
-            lcd32Err("[__lcd32ConfigCanvas] DRAM allocation failed for row %d!", r);
+            __lcd32Err("[__lcd32ConfigCanvas] DRAM allocation failed for row %d!", r);
             return ERR_MALLOC_FAILED;
         }
         memset(canvas->buff[r], 0, sizeof(color_t) * maxCol);
@@ -141,7 +141,7 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
 
     def ret = GPIOConfigOutputMask(dev->dataPinMask);
     if (ret != ESP_OK) {
-        lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
+        __lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
@@ -160,7 +160,7 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
 
     ret = GPIOConfigOutputMask(dev->controlPinMask);
     if (ret != ESP_OK) {
-        lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
+        __lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
@@ -231,7 +231,7 @@ def lcd32CreateDevice(lcd32Dev_t **devPtr){
     __lcd32NULLCheck(devPtr, "devPtr", "lcd32CreateDev", goto ReturnERR_NULL;);
 
     if(__isnot_null(DATA(devPtr))){
-        lcd32Warn("[lcd32CreateDevice] The (*dev) is not null!");
+        __lcd32Warn("[lcd32CreateDevice] The (*dev) is not null!");
         __lcd32DeleteCanvasBuffer(ADDR(DATA(devPtr)->canvas));
     }
 
@@ -381,7 +381,7 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
     if (devId == 0x9341) {
         __lcd32Log("[lcd32StartUpDevice] Detected ILI9341 LCD controller.");
     } else {
-        lcd32Err("[__lcd32ConfigCanvas] [lcd32StartUpDevice] Unsupported LCD controller: 0x%04x", devId);
+        __lcd32Err("[__lcd32ConfigCanvas] [lcd32StartUpDevice] Unsupported LCD controller: 0x%04x", devId);
         __lcd32Exit("lcd32StartUpDevice -> ERR_UNSUPPORTED");
         return ERR_UNSUPPORTED;
     }

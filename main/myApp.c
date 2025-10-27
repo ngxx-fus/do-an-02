@@ -19,7 +19,6 @@ void app_main(void){
 
     __tag_log(STR(app_main), "Set systemStage = SYSTEM_INIT");
     systemStage = SYSTEM_INIT;
-
     systemInit();
 
     __tag_log(STR(app_main), "Set systemStage = SYSTEM_RUNNING");

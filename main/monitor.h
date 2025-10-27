@@ -44,12 +44,10 @@ volatile portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 void systemInit(){
     __entry("systemInit()");
 
-    __userInterfaceInitilize();
-    lcdInit();
-
-    lcdShowIntroScreen();
-
-    // ADD_NEW_TASK_TO_CPU0("systemInit", lcdTestTask0, "lcdTestTask0", 2048, NULL, 7, NULL);
+    userInterfaceInitilize();
+    dataStorageInitilize();
+    
+    ADD_NEW_TASK_TO_CPU1("systemInit", dataControlTask, "dataControlTask", 2048, NULL, 7, NULL);
     ADD_NEW_TASK_TO_CPU1("systemInit", screenControlTask, "screenControlTask", 2048, NULL, 7, NULL);
 
     __exit("systemInit()");

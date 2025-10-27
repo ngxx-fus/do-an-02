@@ -25,20 +25,20 @@
 #endif
 
 #if LCD32_LOG_LEVEL >= 1
-    #define lcd32Err(...)       __sys_err(  __VA_ARGS__ )
+    #define __lcd32Err(...)       __sys_err(  __VA_ARGS__ )
 #else 
-    #define lcd32Err(...)
+    #define __lcd32Err(...)
 #endif
 #if LCD32_LOG_LEVEL >= 2
     /// Log warnings with timestamps
-    #define lcd32Warn(...)     __sys_warn(  __VA_ARGS__ )
+    #define __lcd32Warn(...)     __sys_warn(  __VA_ARGS__ )
     /// Log entry function with param (if any)
     #define __lcd32Entry(...)     __entry(  __VA_ARGS__ )
     /// Log exit function with return value (if any)
     #define __lcd32Exit(...)      __exit(  __VA_ARGS__ )
 #else 
     /// Log warnings with timestamps
-    #define lcd32Warn(...)
+    #define __lcd32Warn(...)
     /// Log entry function with params (if any)
     #define __lcd32Entry(...)
     /// Log exit function with return value (if any)
@@ -148,7 +148,7 @@
     if(__isnot_negative(pin) && (pin < 32))                 \
         destBitMask |= __mask64(pin);                       \
     else {                                                  \
-        lcd32Err("GPIO_Err: %d", pin);                      \
+        __lcd32Err("GPIO_Err: %d", pin);                      \
         __VA_OPT__(__VA_ARGS__)                             \
     }
 
@@ -156,7 +156,7 @@
 #define __lcd32NULLCheck(obj, objName, funcName, ...)         \
     do {                                                    \
         if (__is_null(obj)) {                               \
-            lcd32Err("[%s] %s is NULL!", funcName, objName); \
+            __lcd32Err("[%s] %s is NULL!", funcName, objName); \
             __VA_OPT__(__VA_ARGS__)                         \
         }                                                   \
     } while (0)

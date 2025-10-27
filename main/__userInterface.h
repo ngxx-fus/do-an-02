@@ -26,7 +26,7 @@ enum SCREEN_FLAG_BIT_ORDER {
 void userInterfaceInitilize();
 
 /// @brief Displays the introductory screen with author information.
-void drawInfoAuthor();
+void drawAuthorInfo();
 
 /// @brief Draws a Caro (Gomoku) grid on the LCD screen. (By defautt 10x10)
 void drawCaro();
@@ -56,13 +56,17 @@ void userInterfaceInitilize(){
     };
     lcd32ConfigDevice(lcd, &dataPin, &ctlPin, LCD32_MAX_ROW, LCD32_MAX_COL);
     lcd32StartUpDevice(lcd);
-    // lcd32FillCanvas(lcd, 15);
-    // lcd32FlushCanvas(lcd);
+
+    lcd32FillCanvas(lcd, 0xFFFF);
+
+    drawAuthorInfo();
+
+    vTaskDelay(pdMS_TO_TICKS(2000)); // Display for 2 seconds
 
     __exit("__userInterfaceInitilize()");
 }
 
-void drawInfoAuthor(){
+void drawAuthorInfo(){
     __entry("lcdShowIntroScreen()");
 
     lcd32FillCanvas(lcd, 0xFFFF); // Black background
@@ -70,10 +74,6 @@ void drawInfoAuthor(){
     lcd32DrawText(lcd, 40, 5, "DO AN 02", &fontHeading01, 0x0152);
     lcd32DrawText(lcd, 80, 5, "[1] Nguyen Thanh Phu - 22119211", &fontHeading03, 0x2925);
     lcd32DrawText(lcd, 100, 5, "[2] Nguyen Van Quoc  - 22119222", &fontHeading03, 0x2925);
-
-    lcd32FlushCanvas(lcd);
-
-    vTaskDelay(pdMS_TO_TICKS(2000)); // Display for 2 seconds
 
     __exit("lcdShowIntroScreen()");
 }

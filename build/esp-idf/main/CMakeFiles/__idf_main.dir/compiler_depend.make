@@ -152,9 +152,14 @@ esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj: /workspaces/do-an-02/main/my
   /workspaces/do-an-02/helper/helper.h \
   /workspaces/do-an-02/helper/param.h \
   /workspaces/do-an-02/helper/return.h \
-  /workspaces/do-an-02/main/monitor.h \
-  /workspaces/do-an-02/main/ui.h
+  /workspaces/do-an-02/main/__dataStorage.h \
+  /workspaces/do-an-02/main/__userInterface.h \
+  /workspaces/do-an-02/main/monitor.h
 
+
+/workspaces/do-an-02/main/__userInterface.h:
+
+/workspaces/do-an-02/main/__dataStorage.h:
 
 /workspaces/do-an-02/helper/param.h:
 
@@ -409,8 +414,6 @@ config/sdkconfig.h:
 /home/codespace/esp-idf/components/xtensa/include/xt_utils.h:
 
 /home/codespace/esp-idf/components/newlib/platform_include/sys/reent.h:
-
-/workspaces/do-an-02/main/ui.h:
 
 /home/codespace/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h:
 
