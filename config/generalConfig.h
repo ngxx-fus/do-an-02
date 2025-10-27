@@ -117,6 +117,9 @@
 
 #define LCD32_MAX_ROW   240
 #define LCD32_MAX_COL   320
-#define LCD32_DISP_ORIENTATION 2   /// 0, 1, 2, 3
-#define LCD32_USE_PSRAM_FOR_LCD_CANVAS 1  /// 1: use PSRAM, 0: use SRAM
+#define LCD32_DISP_ORIENTATION 2                    /// 0, 1, 2, 3
+#define LCD32_USE_PSRAM_FOR_LCD_CANVAS      1       /// 1: use PSRAM, 0: use SRAM
+
+#define CBUFF_MAX_SIZE                      4096    /// Max size of circular buffer in bytes
+#define CBUFF_USE_PSRAM_FOR_CIRCULAR_BUFF   0       /// 1: use PSRAM, 0: use SRAM
 #endif

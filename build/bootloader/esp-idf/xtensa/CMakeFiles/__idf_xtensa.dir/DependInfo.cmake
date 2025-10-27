@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/.fus/esp-idf/components/xtensa/eri.c" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj" "gcc" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj.d"
-  "/home/fus/.fus/esp-idf/components/xtensa/xt_trax.c" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj" "gcc" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj.d"
+  "/home/codespace/esp-idf/components/xtensa/eri.c" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj" "gcc" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj.d"
+  "/home/codespace/esp-idf/components/xtensa/xt_trax.c" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj" "gcc" "esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

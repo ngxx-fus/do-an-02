@@ -36,13 +36,15 @@ volatile portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
 /// TASKS /////////////////////////////////////////////////////////////////////////////////////////
 
-#include "ui.h"
+#include "__userInterface.h"
+#include "__dataStorage.h"
 
 /// INIT //////////////////////////////////////////////////////////////////////////////////////////
 
 void systemInit(){
     __entry("systemInit()");
 
+    __userInterfaceInitilize();
     lcdInit();
 
     lcdShowIntroScreen();

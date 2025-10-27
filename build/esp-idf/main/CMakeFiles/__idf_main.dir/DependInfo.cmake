@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fus/Documents/DO-AN-02-LCD/main/myApp.c" "esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj.d"
+  "/workspaces/do-an-02/main/myApp.c" "esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/myApp.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/__idf_soc.dir/dport_access_common.c.obj.d"
   "CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.obj"
   "CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.obj.d"
-  "CMakeFiles/__idf_soc.dir/esp32s3/cam_periph.c.obj"
-  "CMakeFiles/__idf_soc.dir/esp32s3/cam_periph.c.obj.d"
   "CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.obj"
   "CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.obj.d"
   "CMakeFiles/__idf_soc.dir/esp32s3/gdma_periph.c.obj"

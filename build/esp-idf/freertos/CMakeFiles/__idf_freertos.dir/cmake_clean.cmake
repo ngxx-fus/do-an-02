@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.obj.d"
   "CMakeFiles/__idf_freertos.dir/app_startup.c.obj"
   "CMakeFiles/__idf_freertos.dir/app_startup.c.obj.d"
+  "CMakeFiles/__idf_freertos.dir/esp_additions/freertos_compatibility.c.obj"
+  "CMakeFiles/__idf_freertos.dir/esp_additions/freertos_compatibility.c.obj.d"
   "CMakeFiles/__idf_freertos.dir/esp_additions/idf_additions.c.obj"
   "CMakeFiles/__idf_freertos.dir/esp_additions/idf_additions.c.obj.d"
   "CMakeFiles/__idf_freertos.dir/esp_additions/idf_additions_event_groups.c.obj"

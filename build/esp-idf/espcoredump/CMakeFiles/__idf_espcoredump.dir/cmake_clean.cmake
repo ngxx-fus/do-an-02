@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj"
+  "CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj.d"
   "CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj"
   "CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj.d"
+  "CMakeFiles/__idf_espcoredump.dir/src/core_dump_crc.c.obj"
+  "CMakeFiles/__idf_espcoredump.dir/src/core_dump_crc.c.obj.d"
   "CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj"
   "CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj.d"
   "CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj"

@@ -1,9 +1,18 @@
+#ifndef __userInterface_H__
+#define __userInterface_H__
+
 #include "../helper/general.h"
 #include "../comDriver/lcd32/lcd32.h"
 
+/// GLOBAL VARIABLES /////////////////////////////////////////////////////////////////////////////
+
+/// @brief  Pointer to the LCD 3.2" device structure
 lcd32Dev_t * lcd;
+/// @brief  Global screen flag for controlling screen operations
 volatile flag_t screenFlag = SYSTEM_INIT;
+/// @brief Mutex for synchronizing access to the screen flag
 portMUX_TYPE screenFlagMutex = portMUX_INITIALIZER_UNLOCKED;
+/// @brief Enumeration defining the bit order for screen flags
 enum SCREEN_FLAG_BIT_ORDER {
     SCREEN_RENDER = 0,                          /// 0: Ignore,      1: Render
     SCREEN_TURN_ON = 0,                         /// 0: Ignore,      1: ON
@@ -11,8 +20,28 @@ enum SCREEN_FLAG_BIT_ORDER {
     SCREEN_FLAG_BIT_ORDER_NUMBER,
 };
 
-void lcdInit(){
-    __entry("lcdInit()");
+/// FUNCTION DEFINITIONS //////////////////////////////////////////////////////////////////////////
+
+/// @brief Initializes the user interface components, including the LCD device.
+void userInterfaceInitilize();
+
+/// @brief Displays the introductory screen with author information.
+void drawInfoAuthor();
+
+/// @brief Draws a Caro (Gomoku) grid on the LCD screen. (By defautt 10x10)
+void drawCaro();
+
+/// @brief Task function for testing the LCD functionality.
+void lcdTestTask0(void * pv);
+
+/// @brief Pooling task to control screen operations based on the screenFlag.
+/// @param pv Unused parameter.
+void screenControlTask(void * pv);
+
+/// FUNCTION DECLARATIONS /////////////////////////////////////////////////////////////////////////
+
+void userInterfaceInitilize(){
+    __entry("__userInterfaceInitilize()");
     lcd32CreateDevice(&lcd);
     lcd32DataPin_t dataPin = {
         .__0 = LCD32_DB0,   .__1 = LCD32_DB1,   .__2 = LCD32_DB2,   .__3 = LCD32_DB3,
@@ -30,29 +59,10 @@ void lcdInit(){
     // lcd32FillCanvas(lcd, 15);
     // lcd32FlushCanvas(lcd);
 
-    __exit("lcdInit()");
+    __exit("__userInterfaceInitilize()");
 }
 
-// void lcdTestTask1(void * pv){
-//     WAIT_SYSTEM_INIT_COMPLETED();
-
-//     __entry("lcdTestTask0()");
-
-//     while(!IS_SYSTEM_STOPPED){
-
-//         dim_t r = genRandNum(esp_timer_get_time())%LCD32_MAX_ROW;
-//         dim_t c = genRandNum(esp_timer_get_time())%LCD32_MAX_COL;
-//         color_t color = genRandNum(esp_timer_get_time())%65536;
-
-//         lcd32GetCanvasPixel(lcd, r, c ) = color;
-
-//         taskYIELD();
-//         esp_rom_delay_us(400);
-//     }
-//     __exit("lcdTestTask0()");
-// }
-
-void lcdShowIntroScreen(){
+void drawInfoAuthor(){
     __entry("lcdShowIntroScreen()");
 
     lcd32FillCanvas(lcd, 0xFFFF); // Black background
@@ -68,35 +78,24 @@ void lcdShowIntroScreen(){
     __exit("lcdShowIntroScreen()");
 }
 
-void lcdDrawCaro() {
-    // 1. Fill the canvas background with white
-    lcd32FillCanvas(lcd, 0xFFFF); 
-
-    // Define the color for the grid lines (black)
+void drawCaro() {
     color_t gridColor = 0x0000; 
 
-    // 2. Calculate the step size for rows and columns to divide into 10 sections
-    // Assuming LCD32_MAX_ROW is height and LCD32_MAX_COL is width
     dim_t rowStep = LCD32_MAX_ROW / 10;
     dim_t colStep = LCD32_MAX_COL / 10;
 
-    // 3. Draw 9 horizontal lines
     for (int i = 1; i < 10; i++) {
         dim_t current_row = i * rowStep;
         // Draw line across the full width (from column 0 to max column - 1)
         lcd32DrawLine(lcd, current_row, 0, current_row, LCD32_MAX_COL - 1, gridColor);
     }
 
-    // 4. Draw 9 vertical lines
     for (int i = 1; i < 10; i++) {
         dim_t current_col = i * colStep;
         // Draw line across the full height (from row 0 to max row - 1)
         lcd32DrawLine(lcd, 0, current_col, LCD32_MAX_ROW - 1, current_col, gridColor);
     }
     
-    // Optional: If you need to signal that the screen needs updating, do it here
-    // For example:
-    __setFlagBit(screenFlag, SCREEN_RENDER); 
 }
 
 void lcdTestTask0(void * pv){
@@ -142,30 +141,35 @@ void lcdTestTask0(void * pv){
 
 void screenControlTask(void * pv){
     WAIT_SYSTEM_INIT_COMPLETED();
-
     __entry("screenControlTask()");
     
     flag_t localScreenFlag;
     while(!IS_SYSTEM_STOPPED){
+        /// Get and clear screenFlag atomically (get one time only)
         PERFORM_IN_CRITICAL(&screenFlagMutex,
             localScreenFlag = screenFlag;
             screenFlag = 0;
         );
 
+        /// Process screen operations based on the retrieved flags
+        /// until all flags are handled. 
         while (__isnot_zero(localScreenFlag)){
             if(__hasFlagBitSet(localScreenFlag, SCREEN_RENDER)){
                 __clearFlagBit(localScreenFlag, SCREEN_RENDER);
                 lcd32FlushCanvas(lcd);
             }
+            portYIELD(); // Yield to allow other tasks to run between operations
             if(__hasFlagBitSet(localScreenFlag, SCREEN_TURN_ON)){
                 __clearFlagBit(localScreenFlag, SCREEN_TURN_ON);
                 lcd32WakeFromSleep(lcd);
             }
+            portYIELD(); // Yield to allow other tasks to run between operations
             if(__hasFlagBitSet(localScreenFlag, SCREEN_TURN_OFF)){
                 __clearFlagBit(localScreenFlag, SCREEN_TURN_OFF);
                 lcd32PutToSleep(lcd);
             }
-            if(!__isnot_zero(localScreenFlag)){
+            portYIELD(); // Yield to allow other tasks to run between operations
+            if(__isnot_zero(localScreenFlag)){
                 __sys_err("[screenControlTask] Warning: Unrecognized screenFlag bits: 0x%08x", localScreenFlag);
                 localScreenFlag = 0;
             }
@@ -177,3 +181,4 @@ void screenControlTask(void * pv){
     __exit("screenControlTask()");
 }
 
+#endif
