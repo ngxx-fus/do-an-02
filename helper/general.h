@@ -28,7 +28,7 @@
 #include <string.h>             /// memset, strlen
 
 #include "../config/pinConfig.h"
-#include "../fonts/fontUtils.h"
+#include "../font/fontUtils.h"
 #include "flag.h"
 #include "param.h"
 #include "return.h"

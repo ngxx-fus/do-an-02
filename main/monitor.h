@@ -1,5 +1,5 @@
 #include "../helper/general.h"
-#include "../comDriver/lcd32/lcd32.h"
+#include "../intercon/lcd32/lcd32.h"
 
 /// DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////
 

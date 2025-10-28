@@ -20,7 +20,7 @@
     Directory tree:
     .
     ├── CMakeLists.txt
-    ├── comDriver
+    ├── intercon
     │   ├── i2c
     │   │   ├── CMakeLists.txt
     │   │   ├── i2c.c
@@ -47,7 +47,7 @@
     ├── diagram
     │   ├── diagram01.drawio
     │   └── diagram02.drawio
-    ├── fonts
+    ├── font
     │   ├── CMakeLists.txt
     │   ├── fontUtils.c
     │   ├── fontUtils.h
@@ -81,7 +81,7 @@
 /// Mode of source code
 #define ESP32_DEVICE_MODE   MONITOR
 
-/// To config font, check fontUtils.c in fonts/
+/// To config font, check fontUtils.c in font/
 /// Currently, the font is: TomThumb
 
 /// System log level set-up
@@ -122,4 +122,6 @@
 
 #define CBUFF_MAX_SIZE                      4096    /// Max size of circular buffer in bytes
 #define CBUFF_USE_PSRAM_FOR_CIRCULAR_BUFF   0       /// 1: use PSRAM, 0: use SRAM
+#define CIRCULAR_BUFFER_EN                  1
+#define LINEAR_BUFFER_EN                    0       
 #endif

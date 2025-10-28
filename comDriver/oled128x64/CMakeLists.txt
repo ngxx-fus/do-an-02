@@ -1,5 +1,0 @@
-idf_component_register(
-    SRCS "oled128x64.c"
-    INCLUDE_DIRS "."
-    REQUIRES i2c fonts
-)

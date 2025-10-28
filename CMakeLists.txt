@@ -4,12 +4,11 @@ cmake_minimum_required(VERSION 3.22)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
-# Tell CMake to look for additional components in the 'comDriver',  directory
+# Tell CMake to look for additional components in the 'intercon',  directory
 set(EXTRA_COMPONENT_DIRS
-    # "helper"
-    "fonts"
+    "font"
     "helper"
-    "comDriver/lcd32"
+    "intercon/lcd32"
 )
 
 # Define the project name

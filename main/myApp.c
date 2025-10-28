@@ -33,3 +33,12 @@ void app_main(void){
     
     __exit("app_main()");
 }
+
+
+/// NOTE //////////////////////////////////////////////////////////////////////////////////////////
+
+/// CODESPACE
+/// source /home/codespace/esp-idf/export.sh
+/// idf.py build
+
+/// LOCAL
