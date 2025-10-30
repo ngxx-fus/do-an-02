@@ -125,3 +125,6 @@
 #define CIRCULAR_BUFFER_EN                  1
 #define LINEAR_BUFFER_EN                    0       
 #endif
+
+
+/// https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitm-1/user_guide.html#hardware-reference

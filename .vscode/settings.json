@@ -107,10 +107,16 @@
         "soc.h": "c",
         "portable.h": "c",
         "projdefs.h": "c",
-        "task.h": "c",
-        "freertosconfig.h": "c",
-        "freertosconfig_arch.h": "c",
-        "xtensa_config.h": "c"
+        "parallel16.h": "c",
+        "param.h": "c"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    
+    "editor.folding": true,
+    "editor.foldingStrategy": "auto",
+    "autoFoldPlus.enable": true,
+    "autoFoldPlus.defaultFoldFunction": true,   // Fold hàm khi mở file
+    "autoFoldPlus.defaultFoldBlock": false,     // Không fold #ifdef, macro
+    "autoFoldPlus.defaultFoldComment": false,   // Không fold comment
+    "autoFoldPlus.defaultFoldRegion": false,    // Không fold #region
 }

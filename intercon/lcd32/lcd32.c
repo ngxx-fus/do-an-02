@@ -105,11 +105,11 @@ def __lcd32ConfigCanvas(lcd32Canvas_t *canvas, dim_t maxRow, dim_t maxCol) {
 }
 #endif
 
-def __lcd32SetupPin(lcd32Dev_t *dev){
-    __lcd32Entry("__lcd32SetupPin(%p)", dev);
-    __lcd32NULLCheck(dev, STR(dev), STR(__lcd32SetupPin), return ERR_NULL;);
+def __p16SetupPin(lcd32Dev_t *dev){
+    __lcd32Entry("__p16SetupPin(%p)", dev);
+    __lcd32NULLCheck(dev, STR(dev), STR(__p16SetupPin), return ERR_NULL;);
 
-    __lcd32Log("[__lcd32SetupPin] dataPin : %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | ", 
+    __lcd32Log("[__p16SetupPin] dataPin : %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | %d | ", 
         dev->dataPin.__0, dev->dataPin.__1, dev->dataPin.__2, dev->dataPin.__3, 
         dev->dataPin.__4, dev->dataPin.__5, dev->dataPin.__6, dev->dataPin.__7, 
         dev->dataPin.__8, dev->dataPin.__9, dev->dataPin.__10, dev->dataPin.__11, 
@@ -118,7 +118,7 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
 
     dev->dataPinMask = 0;
 
-    __lcd32Log("[__lcd32SetupPin] Config dataPin!");
+    __lcd32Log("[__p16SetupPin] Config dataPin!");
     // Data pins
     __lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__0, return ERR_UNSUPPORTED;);
     __lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__1, return ERR_UNSUPPORTED;);
@@ -137,17 +137,17 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
     __lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__14, return ERR_UNSUPPORTED;);
     __lcd32AddGPIO(dev->dataPinMask, dev->dataPin.__15, return ERR_UNSUPPORTED;);
 
-    __lcd32Log("[__lcd32SetupPin] dataPin | pinMask = %p", dev->dataPinMask);
+    __lcd32Log("[__p16SetupPin] dataPin | pinMask = %p", dev->dataPinMask);
 
     def ret = GPIOConfigOutputMask(dev->dataPinMask);
     if (ret != ESP_OK) {
-        __lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
+        __lcd32Err("[%s] gpio_config() failed: %s", STR(__p16SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
     dev->controlPinMask = 0;
 
-    __lcd32Log("[__lcd32SetupPin] Config controlPin!");
+    __lcd32Log("[__p16SetupPin] Config controlPin!");
     // Control pins
     __lcd32AddGPIO(dev->controlPinMask, dev->controlPin.r,   return ERR_UNSUPPORTED;);
     __lcd32AddGPIO(dev->controlPinMask, dev->controlPin.w,   return ERR_UNSUPPORTED;);
@@ -156,27 +156,27 @@ def __lcd32SetupPin(lcd32Dev_t *dev){
     __lcd32AddGPIO(dev->controlPinMask, dev->controlPin.rst, return ERR_UNSUPPORTED;);
     __lcd32AddGPIO(dev->controlPinMask, dev->controlPin.bl,  return ERR_UNSUPPORTED;);
 
-    __lcd32Log("[__lcd32SetupPin] controlPin | dev->controlPinMask = %p", dev->controlPinMask);
+    __lcd32Log("[__p16SetupPin] controlPin | dev->controlPinMask = %p", dev->controlPinMask);
 
     ret = GPIOConfigOutputMask(dev->controlPinMask);
     if (ret != ESP_OK) {
-        __lcd32Err("[%s] gpio_config() failed: %s", STR(__lcd32SetupPin), esp_err_to_name(ret));
+        __lcd32Err("[%s] gpio_config() failed: %s", STR(__p16SetupPin), esp_err_to_name(ret));
         return ERR;
     }
 
-    __lcd32SetHighChipSelPin(dev);
-    __lcd32SetHighResetPin(dev);
-    __lcd32SetLowRegSelPin(dev);
-    __lcd32SetHighReadPin(dev);
-    __lcd32SetHighWritePin(dev);
-    __lcd32SetParallelData(dev, 0);
-    __lcd32SetHighBrightLightPin(dev);
+    __p16SetHighChipSelPin(dev);
+    __p16SetHighResetPin(dev);
+    __p16SetLowRegSelPin(dev);
+    __p16SetHighReadPin(dev);
+    __p16SetHighWritePin(dev);
+    __p16SetParallelData(dev, 0);
+    __p16SetHighBrightLightPin(dev);
 
     return OKE;
 }
 
-def __lcd32SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height, dim_t width) {
-    __lcd32Entry("__lcd32SetAddressWindow(%p, r=%u, c=%u, h=%u, w=%u)", dev, row, col, height, width);
+def __p16SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height, dim_t width) {
+    __lcd32Entry("__p16SetAddressWindow(%p, r=%u, c=%u, h=%u, w=%u)", dev, row, col, height, width);
 
     dim_t x1 = col;
     dim_t y1 = row;
@@ -222,7 +222,7 @@ def __lcd32SetAddressWindow(lcd32Dev_t *dev, dim_t row, dim_t col, dim_t height,
     // --- Memory Write (0x2C) ---
     __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
 
-    __lcd32Exit("__lcd32SetAddressWindow -> OKE");
+    __lcd32Exit("__p16SetAddressWindow -> OKE");
     return OKE;
 }
 
@@ -247,7 +247,6 @@ def lcd32CreateDevice(lcd32Dev_t **devPtr){
     /// Manual reset object
     DATA(devPtr)->canvas.buff = NULL;
 
-
     __lcd32Exit("lcd32CreateDevice() : OKE");
     return OKE;
 
@@ -256,7 +255,7 @@ def lcd32CreateDevice(lcd32Dev_t **devPtr){
         return ERR_NULL;
 }
 
-def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_t *controlPin, dim_t maxRow, dim_t maxCol){
+def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin,  dim_t maxCol){
     __lcd32Entry("lcd32ConfigDev(%p, %p, %p, %d, %d)", dev, dataPin, controlPin, maxRow, maxCol);
     __lcd32NULLCheck(dev, "dev", "lcd32ConfigDev", goto returnERR_NULL;);
     __lcd32NULLCheck(dataPin, "dataPin", "lcd32ConfigDev", goto returnERR_NULL;);
@@ -292,11 +291,11 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
     __lcd32ConfigCanvas(&(dev->canvas), maxRow, maxCol);
 
     /// Set-up config pin
-    __lcd32SetupPin(dev);
+    __p16SetupPin(dev);
 
     __lcd32Log("[lcd32ConfigDev] Set data pin to input then output mode!");
-    __lcd32SetInputData16(dev);
-    __lcd32SetOutputData16(dev);
+    __p16SetInputData16(dev);
+    __p16SetOutputData16(dev);
 
 
     /// Set-up mutex
@@ -318,17 +317,20 @@ def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_
 def lcd32StartUpDevice(lcd32Dev_t *dev) {
     __lcd32Entry("lcd32StartUpDevice(%p)", dev);
 
+    parallel16Dev_t *p16DevPtr = &(dev->p16Dev);
+
     __lcd32SetLowBrightLightPin(dev);
 
     /// Hardware reset (RESX)
-    __lcd32SetLowResetPin(dev);
+    __p16SetLowResetPin(p16DevPtr);
     esp_rom_delay_us(10000);    /// tRW ≥ 10µs
-    __lcd32SetHighResetPin(dev);
+    __p16SetHighResetPin(p16DevPtr);
     esp_rom_delay_us(120000);   /// tRT ≥ 120ms after release
 
+    /// Set idle state
     __lcd32SetHighBrightLightPin(dev);
-    __lcd32SetHighReadPin(dev);
-    __lcd32SetHighWritePin(dev);
+    __p16SetHighReadPin(dev);
+    __p16SetHighWritePin(dev);
 
     /// Read LCD ID (should be 0x9341 for ILI9341)
     uint16_t devId = 0, readVal;
@@ -337,11 +339,11 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
 
     /// Write command to read ID1
 
-    __lcd32SetOutputData16(dev);
+    __p16SetOutputData16(dev);
     __lcd32WriteCommand(dev, 0);
     __lcd32Log("Write : 0x%04x", 0);
 
-    __lcd32SetInputData16(dev);
+    __p16SetInputData16(dev);
     __lcd32ReadData(dev, readVal); // dummy
     __lcd32Log("Device ID (dummy read) : 0x%04x", readVal);
 
@@ -350,11 +352,11 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
 
     /// Write command to read ID4
 
-    __lcd32SetOutputData16(dev);
+    __p16SetOutputData16(dev);
     __lcd32WriteCommand(dev, ILI9341_READ_ID4);
     __lcd32Log("Write : 0x%04x", ILI9341_READ_ID4);
 
-    __lcd32SetInputData16(dev);
+    __p16SetInputData16(dev);
     __lcd32ReadData(dev, readVal);
     __lcd32Log("Read (1st) : 0x%04x", readVal);
 
@@ -376,7 +378,7 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
     __lcd32Log("Device ID (Final read) : 0x%04x", devId);
 
     __lcd32StopTransaction(dev);
-    __lcd32SetOutputData16(dev); // Set data pins back to output
+    __p16SetOutputData16(dev); // Set data pins back to output
 
     if (devId == 0x9341) {
         __lcd32Log("[lcd32StartUpDevice] Detected ILI9341 LCD controller.");
@@ -537,7 +539,7 @@ def lcd32StartUpDevice(lcd32Dev_t *dev) {
     esp_rom_delay_us(50000);
 
     /// Turn on backlight
-    __lcd32SetHighBrightLightPin(dev);
+    __p16SetHighBrightLightPin(dev);
 
     __lcd32StopTransaction(dev);
 
@@ -558,7 +560,7 @@ def lcd32PutToSleep(lcd32Dev_t *dev) {
     __lcd32StartTransaction(dev);
 
     // 1. Turn off backlight immediately
-    __lcd32SetLowBrightLightPin(dev);
+    __p16SetLowBrightLightPin(dev);
     __lcd32Log("Backlight turned OFF");
 
     // 2. Send Display OFF command (0x28) [cite: 13]
@@ -608,7 +610,7 @@ def lcd32WakeFromSleep(lcd32Dev_t *dev) {
     esp_rom_delay_us(50000); // 50ms delay
 
     // 5. Turn on backlight
-    __lcd32SetHighBrightLightPin(dev);
+    __p16SetHighBrightLightPin(dev);
     __lcd32Log("Backlight turned ON");
 
     __lcd32StopTransaction(dev);
@@ -641,7 +643,7 @@ def lcd32FlushCanvas(lcd32Dev_t *dev) {
     __lcd32StartTransaction(dev);
     vPortEnterCritical(ADDR(dev->mutex));
 
-    // --- Inline address window setup (merged from __lcd32SetAddressWindow) ---
+    // --- Inline address window setup (merged from __p16SetAddressWindow) ---
     dim_t row = 0, col = 0;
     dim_t height = canvas->maxRow, width = canvas->maxCol;
 
@@ -688,11 +690,11 @@ def lcd32FlushCanvas(lcd32Dev_t *dev) {
 
     // --- Flush pixel data over 16-bit parallel bus ---
     // int64_t tStart = esp_timer_get_time();
-    __lcd32SetDataTransaction(dev);
+    __p16SetDataTransaction(dev);
 
     for (dim_t r = 0; r < canvas->maxRow; ++r) {
         for (dim_t c = 0; c < canvas->maxCol; ++c) {
-            __lcd32SetParallelData(dev, canvas->buff[r][c]);
+            __p16SetParallelData(dev, canvas->buff[r][c]);
             __LCD32_WRITE_SIG(dev);   // toggle WR pin to latch data
         }
     }
@@ -714,7 +716,7 @@ def lcd32DirectlyWritePixel(lcd32Dev_t *dev, dim_t r, dim_t c, color_t color) {
     __lcd32StartTransaction(dev);
 
     // Set write region to one pixel at (r, c)
-    __lcd32SetAddressWindow(dev, r, c, 1, 1);
+    __p16SetAddressWindow(dev, r, c, 1, 1);
 
     // Write pixel color
     __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);

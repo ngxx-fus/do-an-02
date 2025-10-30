@@ -13,34 +13,15 @@ typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas (only accepts
     dim_t   maxRow, maxCol;         /// Dim info
 } lcd32Canvas_t;
 
-/// CONTROL/DATA PIN //////////////////////////////////////////////////////////////////////////////
-
-typedef struct lcd32DataPin_t{       /// Struct for data pin (only accepts GPIO number less than 32)
-    /// 16-bit data pin
-    pin_t       __0, __1, __2,  __3,  __4,  __5,  __6,  __7, 
-                __8, __9, __10, __11, __12, __13, __14, __15;
-} lcd32DataPin_t;
-
-typedef struct lcd32ControlPin_t{   /// Struct for data pint
-    pin_t       r;                      /// Read 
-    pin_t       w;                      /// Write
-    pin_t       cs;                     /// Chip select
-    pin_t       rs;                     /// Register select
-    pin_t       rst;                    /// Reset
-    pin_t       bl;                     /// Brightness light
-} lcd32ControlPin_t;
-
 /// LCD DEVICE ////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
+#include "../parallel16/parallel16.h"
 
-    lcd32DataPin_t      dataPin;    /// Data pin
-    lcd32ControlPin_t   controlPin; /// Control pin
+typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
+    pin_t               BLPin;
+    parallel16Dev_t     p16;        /// Parallel comunication device
     lcd32Canvas_t       canvas;     /// Canvas           
     portMUX_TYPE        mutex;      /// Mutex
-    uint32_t            transLevel; /// Transaction level, to skill dup CS
-    uint64_t            dataPinMask;
-    uint64_t            controlPinMask;
 } lcd32Dev_t;
 
 #endif

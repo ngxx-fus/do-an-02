@@ -12,4 +12,9 @@ enum BIN_LEVEL{
     HIGH = 1
 };
 
+enum ENABLE_DISABLE{
+    DISABLE = 0,
+    ENABLE = 1,
+};
+
 #endif 

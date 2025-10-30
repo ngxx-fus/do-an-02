@@ -29,6 +29,8 @@
 /// @param b End value (exclusive).
 #define REV(i, a, b) for(size_t i = (a); (i) > (b); --(i))
 
+#define __forn(i, n)    for(size_t i = 0; (i) < (n); ++(i))
+#define __for(i, a, b)  for(size_t i = (a); (i) < (b); ++(i))
 
 #define __max(a, b) ((a) > (b) ? (a) : (b))  /// Return max(a,b).
 #define __min(a, b) ((a) < (b) ? (a) : (b))  /// Return min(a,b).

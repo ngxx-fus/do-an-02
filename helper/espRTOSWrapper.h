@@ -8,12 +8,12 @@
 
 #ifndef __enterCriticalSection
     /// Enter critical section with given mutex (disable interrupts for this region)
-    #define __enterCriticalSection(mutex_ptr) taskENTER_CRITICAL(mutex_ptr)
+    #define __enterCriticalSection(mutex_ptr) vPortEnterCritical(mutex_ptr)
 #endif
 
 #ifndef __exitCriticalSection
     /// Exit critical section with given mutex (restore interrupts after region)
-    #define __exitCriticalSection(mutex_ptr) taskEXIT_CRITICAL(mutex_ptr)
+    #define __exitCriticalSection(mutex_ptr) vPortExitCritical(mutex_ptr)
 #endif
 
 #endif 

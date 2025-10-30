@@ -1,2 +1,0 @@
-source /workspaces/do-an-02/build/bootloader/gdbinit/symbols
-source /workspaces/do-an-02/build/bootloader/gdbinit/connect
