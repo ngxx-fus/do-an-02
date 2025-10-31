@@ -3,6 +3,8 @@
 
 /// DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////
 
+/// SYSTEM STAGE //////////////////////////////////////////////////////////////////////////////////
+
 /// Enumeration defining the system operation stages.
 enum ENUM_SYSTEM_STAGE {
     SYSTEM_INIT    = 0, /// System is initializing.
@@ -18,6 +20,7 @@ volatile flag_t systemStage = SYSTEM_INIT;
 /// Mutex for synchronizing access to the system stage flag.
 volatile portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
+/// SYSTEM MODE ///////////////////////////////////////////////////////////////////////////////////
 
 enum ENUM_SYSTEM_MODE {
     SYSTEM_MODE_DEMO_OSC_CAP        = 0, /// Sample analog signal

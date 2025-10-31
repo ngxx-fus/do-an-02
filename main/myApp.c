@@ -44,7 +44,7 @@ void app_main(void){
         
         default:
             lcd32FillCanvas(lcd, 0xFFFF);
-            sprintf(buff, "This mode %s is not available now! (%ld)", SYSTEM_MODE_STR[systemMode], currentModeRepeat);
+            sprintf(buff, "This mode \n%s\nis not available now! (%ld)", SYSTEM_MODE_STR[systemMode], currentModeRepeat);
             lcd32DrawText(lcd, 50, 5, buff, &fontHeading03,COLOR_ERROR);
             __setFlagBit(screenFlag, SCREEN_RENDER);
             break;
