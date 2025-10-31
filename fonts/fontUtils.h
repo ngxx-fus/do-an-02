@@ -7,6 +7,7 @@
 #include "localFonts/FreeSerifBoldItalic12pt7b.h"
 #include "localFonts/FreeSerifBoldItalic9pt7b.h"
 #include "localFonts/FreeSerif9pt7b.h"
+#include "localFonts/Picopixel.h"
 
 #ifndef defaultTextH
     #define defaultTextH(__GFXfont) (__GFXfont.yAdvance)
@@ -18,5 +19,6 @@ extern GFXfont    fontBody;
 extern GFXfont    fontHeading01;
 extern GFXfont    fontHeading02;
 extern GFXfont    fontHeading03;
+extern GFXfont    fontNote;
 
 #endif 

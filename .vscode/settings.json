@@ -101,6 +101,7 @@
         "freeserifbolditalic12pt7b.h": "c",
         "freeserifbolditalic9pt7b.h": "c",
         "freeserifbolditalic18pt7b.h": "c",
-        "freeserifbolditalic24pt7b.h": "c"
+        "freeserifbolditalic24pt7b.h": "c",
+        "string.h": "c"
     }
 }

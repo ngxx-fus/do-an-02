@@ -36,6 +36,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/string.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/strings.h \
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/string.h \
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/math.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../config/pinConfig.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../config/generalConfig.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/fontUtils.h \
@@ -46,6 +47,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic12pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerifBoldItalic9pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/helper/../fonts/localFonts/Picopixel.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/flag.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/helper.h \
  /home/fus/Documents/DO-AN-02-LCD/helper/return.h \

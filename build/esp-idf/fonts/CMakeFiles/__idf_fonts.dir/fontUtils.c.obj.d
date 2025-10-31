@@ -14,4 +14,5 @@ esp-idf/fonts/CMakeFiles/__idf_fonts.dir/fontUtils.c.obj: \
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic12pt7b.h \
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h \
- /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerif9pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerif9pt7b.h \
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/Picopixel.h

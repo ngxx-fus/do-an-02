@@ -18,6 +18,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: /home/fus/Documents/DO-
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h \
+  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/math.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h \
   /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
@@ -139,6 +140,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: /home/fus/Documents/DO-
   /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h \
   /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h \
   /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h \
+  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/Picopixel.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espLogWrapper.h \
   /home/fus/Documents/DO-AN-02-LCD/helper/espRTOSWrapper.h \
@@ -161,21 +163,25 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: /home/fus/Documents/DO-
 
 /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h:
 
+/home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/Picopixel.h:
+
 /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h:
 
 /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic12pt7b.h:
 
 /home/fus/Documents/DO-AN-02-LCD/config/generalConfig.h:
 
-/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
-
-/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:
+/home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h:
 
 /home/fus/.fus/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/esp32s3/include/xtensa/config/xt_specreg.h:
 
 /home/fus/.fus/esp-idf/components/esp_rom/include/esp_rom_gpio.h:
+
+/home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:
+
+/home/fus/.fus/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
 
 /home/fus/.fus/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
 
@@ -227,6 +233,8 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj: /home/fus/Documents/DO-
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h:
 
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h:
+
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/limits.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h:
@@ -275,8 +283,6 @@ config/sdkconfig.h:
 
 /home/fus/Documents/DO-AN-02-LCD/helper/helper.c:
 
-/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h:
-
 /home/fus/.fus/esp-idf/components/esp_common/include/esp_assert.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h:
@@ -292,6 +298,8 @@ config/sdkconfig.h:
 /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.1.0/include/limits.h:
+
+/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/math.h:
 
 /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h:
 
@@ -436,5 +444,3 @@ config/sdkconfig.h:
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 
 /home/fus/.fus/esp-idf/components/xtensa/include/xtensa_config.h:
-
-/home/fus/.fus/esp-idf/components/xtensa/include/xtensa_context.h:

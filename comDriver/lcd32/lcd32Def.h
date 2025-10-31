@@ -5,6 +5,18 @@
 
 typedef uint16_t    color_t;        /// 16-bit color for a pixel
 typedef int16_t     dim_t;          /// 16-bit signed for dimension
+/// POINT /////////////////////////////////////////////////////////////////////////////////////////
+
+typedef union lcdPoint_t 
+{
+    uint32_t data;
+    struct {
+        int16_t row;
+        int16_t col;
+    };
+} lcdPoint_t;
+
+
 
 /// CANVAS ////////////////////////////////////////////////////////////////////////////////////////
 

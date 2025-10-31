@@ -551,7 +551,7 @@ def lcd32PutToSleep(lcd32Dev_t *dev) {
 
     // --- Input Validation ---
     if (!dev) {
-        __sys_err("[lcd32TurnOff] dev is NULL");
+        lcd32Err("[lcd32TurnOff] dev is NULL");
         return ERR_INVALID_ARG;
     }
 
@@ -584,7 +584,7 @@ def lcd32WakeFromSleep(lcd32Dev_t *dev) {
 
     // --- Input Validation ---
     if (!dev) {
-        __sys_err("[lcd32TurnOn] dev is NULL");
+        lcd32Err("[lcd32TurnOn] dev is NULL");
         return ERR_INVALID_ARG;
     }
 
@@ -708,6 +708,81 @@ def lcd32FlushCanvas(lcd32Dev_t *dev) {
     return OKE;
 }
 
+def lcd32FlushExternalCanvas(lcd32Dev_t *dev, lcd32Canvas_t *canvas){
+    // --- Null check ---
+    __lcd32NULLCheck(dev, STR(dev), STR(lcd32FlushExternalCanvas), return ERR_NULL;);
+
+    // --- Begin LCD bus transaction (assert CS, prepare write mode) ---
+    __lcd32StartTransaction(dev);
+    vPortEnterCritical(ADDR(dev->mutex));
+
+    // --- Inline address window setup (merged from __lcd32SetAddressWindow) ---
+    dim_t row = 0, col = 0;
+    dim_t height = canvas->maxRow, width = canvas->maxCol;
+
+    dim_t x1 = col;
+    dim_t y1 = row;
+    dim_t x2 = col + width - 1;
+    dim_t y2 = row + height - 1;
+
+    #if LCD32_DISP_ORIENTATION == 0
+        // Portrait - no change
+    #elif LCD32_DISP_ORIENTATION == 1
+        x1 = dev->canvas.maxCol - 1 - (row + height - 1);
+        x2 = dev->canvas.maxCol - 1 - row;
+        y1 = col;
+        y2 = col + width - 1;
+    #elif LCD32_DISP_ORIENTATION == 2
+        x1 = dev->canvas.maxCol - 1 - (col + width - 1);
+        x2 = dev->canvas.maxCol - 1 - col;
+        y1 = dev->canvas.maxRow - 1 - (row + height - 1);
+        y2 = dev->canvas.maxRow - 1 - row;
+    #elif LCD32_DISP_ORIENTATION == 3
+        x1 = row;
+        x2 = row + height - 1;
+        y1 = dev->canvas.maxRow - 1 - (col + width - 1);
+        y2 = dev->canvas.maxRow - 1 - col;
+    #endif
+
+    // --- Column Address Set (0x2A) ---
+    __lcd32WriteCommand(dev, ILI9341_COLUMN_ADDRESS_SET);
+    __lcd32WriteData(dev, (x1 >> 8) & 0xFF);
+    __lcd32WriteData(dev, x1 & 0xFF);
+    __lcd32WriteData(dev, (x2 >> 8) & 0xFF);
+    __lcd32WriteData(dev, x2 & 0xFF);
+
+    // --- Page Address Set (0x2B) ---
+    __lcd32WriteCommand(dev, ILI9341_PAGE_ADDRESS_SET);
+    __lcd32WriteData(dev, (y1 >> 8) & 0xFF);
+    __lcd32WriteData(dev, y1 & 0xFF);
+    __lcd32WriteData(dev, (y2 >> 8) & 0xFF);
+    __lcd32WriteData(dev, y2 & 0xFF);
+
+    // --- Memory Write (0x2C) ---
+    __lcd32WriteCommand(dev, ILI9341_MEMORY_WRITE);
+
+    // --- Flush pixel data over 16-bit parallel bus ---
+    // int64_t tStart = esp_timer_get_time();
+    __lcd32SetDataTransaction(dev);
+
+    for (dim_t r = 0; r < canvas->maxRow; ++r) {
+        for (dim_t c = 0; c < canvas->maxCol; ++c) {
+            __lcd32SetParallelData(dev, canvas->buff[r][c]);
+            __LCD32_WRITE_SIG(dev);   // toggle WR pin to latch data
+        }
+    }
+
+    // int64_t tStop = esp_timer_get_time();
+    // __lcd32Log("[lcd32FlushCanvas] Parallel write time: %lld us", (tStop - tStart));
+
+    // --- End LCD bus transaction (release CS) ---
+    __lcd32StopTransaction(dev);
+    vPortExitCritical(ADDR(dev->mutex));
+
+    // __lcd32Exit("lcd32FlushExternalCanvas() : OKE");
+    return OKE;
+}
+
 def lcd32DirectlyWritePixel(lcd32Dev_t *dev, dim_t r, dim_t c, color_t color) {
     lcd32Log1("lcd32DirectlyWritePixel(%p, r=%d, c=%d, color=0x%04x)", dev, r, c, color);
 
@@ -762,18 +837,18 @@ def lcd32DrawEmptyRect(lcd32Dev_t *lcd, dim_t rTopLeft, dim_t cTopLeft, dim_t rB
 def lcd32DrawChar(lcd32Dev_t *dev, dim_t r, dim_t c, char ch, GFXfont *f, color_t color){
     // --- Input Validation ---
     if (!dev) {
-        __sys_err("[lcd32DrawChar] dev is NULL");
+        lcd32Err("[lcd32DrawChar] dev is NULL");
         return ERR_INVALID_ARG;
     }
     if (!f) {
-        __sys_err("[lcd32DrawChar] f (font) is NULL");
+        lcd32Err("[lcd32DrawChar] f (font) is NULL");
         return ERR_INVALID_ARG;
     }
 
     // Check if char is supported by the font
     if (ch < f->first || ch > f->last) {
         // This log can be noisy if a string contains many unsupported chars.
-        // __sys_err("[lcd32DrawChar] Char '0x%X' out of font range (0x%X-0x%X)", (unsigned int)ch, f->first, f->last);
+        // lcd32Err("[lcd32DrawChar] Char '0x%X' out of font range (0x%X-0x%X)", (unsigned int)ch, f->first, f->last);
         return ERR_INVALID_ARG; // Character not supported
     }
 
@@ -842,15 +917,15 @@ def lcd32DrawText(lcd32Dev_t *dev, dim_t r, dim_t c, const char *str, GFXfont *f
     
     // --- Input Validation ---
     if (!dev) {
-        __sys_err("[lcd32DrawText] dev is NULL");
+        lcd32Err("[lcd32DrawText] dev is NULL");
         return ERR_INVALID_ARG;
     }
     if (!f) {
-        __sys_err("[lcd32DrawText] f (font) is NULL");
+        lcd32Err("[lcd32DrawText] f (font) is NULL");
         return ERR_INVALID_ARG;
     }
     if (!str) {
-        __sys_err("[lcd32DrawText] str is NULL");
+        lcd32Err("[lcd32DrawText] str is NULL");
         return ERR_INVALID_ARG;
     }
 
@@ -900,7 +975,7 @@ def lcd32DrawLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, color
     
     // --- Input Validation ---
     if (!dev) {
-        __sys_err("[lcd32DrawLine] dev is NULL"); 
+        lcd32Err("[lcd32DrawLine] dev is NULL"); 
         return ERR_INVALID_ARG;
     }
 
@@ -987,5 +1062,255 @@ def lcd32DrawThickLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, 
             r0 += sy;
         }
     }
+    return OKE;
+}
+
+def lcd32DrawPolygon(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color) {
+
+    // --- Input Validation ---
+    if (!dev) {
+        lcd32Err("[lcd32DrawPolygon] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (!points) {
+        lcd32Err("[lcd32DrawPolygon] points is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (n < 2) {
+        lcd32Err("[lcd32DrawPolygon] need at least 2 points");
+        return ERR_INVALID_ARG;
+    }
+
+    
+    // --- Draw edges (no auto-close) ---
+    for (size_t i = 0; i < n - 1; i++) {
+        // __lcd32Log("lcd32DrawLine | (%d,%d)<->(%d,%d)", points[i].row, points[i].col, points[i + 1].row, points[i + 1].col);
+        lcd32DrawLine(dev,
+            points[i].row, points[i].col,
+            points[i + 1].row, points[i + 1].col,
+            color);
+    }
+
+    return OKE;
+}
+
+// def lcd32DrawFilledPolygon(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color) {
+//     if (!dev || !points || n < 3)
+//         return ERR_INVALID_ARG;
+
+//     // --- Tìm minRow và maxRow ---
+//     dim_t minRow = points[0].row;
+//     dim_t maxRow = points[0].row;
+//     for (size_t i = 1; i < n; i++) {
+//         if (points[i].row < minRow) minRow = points[i].row;
+//         if (points[i].row > maxRow) maxRow = points[i].row;
+//     }
+
+//     // --- Scanline Fill ---
+//     for (dim_t y = minRow; y <= maxRow; y++) {
+//         // lưu các điểm giao cột (x-intersections)
+//         float interX[64]; // đủ cho polygon nhỏ
+//         size_t interCount = 0;
+
+//         // Duyệt qua từng cạnh (edge)
+//         for (size_t i = 0; i < n; i++) {
+//             size_t j = (i + 1) % n; // nối về điểm đầu
+//             dim_t y0 = points[i].row;
+//             dim_t y1 = points[j].row;
+//             dim_t x0 = points[i].col;
+//             dim_t x1 = points[j].col;
+
+//             // bỏ qua nếu dòng scan không cắt
+//             if ((y < y0 && y < y1) || (y > y0 && y > y1) || (y0 == y1))
+//                 continue;
+
+//             // tính điểm giao X
+//             float x = x0 + (float)(x1 - x0) * (float)(y - y0) / (float)(y1 - y0);
+//             if (interCount < 64)
+//                 interX[interCount++] = x;
+//         }
+
+//         // --- Sắp xếp giao điểm tăng dần ---
+//         for (size_t i = 0; i < interCount - 1; i++) {
+//             for (size_t j = i + 1; j < interCount; j++) {
+//                 if (interX[i] > interX[j]) {
+//                     float t = interX[i];
+//                     interX[i] = interX[j];
+//                     interX[j] = t;
+//                 }
+//             }
+//         }
+
+//         // --- Tô xen kẽ từng cặp ---
+//         for (size_t k = 0; k + 1 < interCount; k += 2) {
+//             dim_t xStart = (dim_t)ceilf(interX[k]);
+//             dim_t xEnd   = (dim_t)floorf(interX[k + 1]);
+
+//             if (xEnd < xStart)
+//                 continue;
+
+//             // Tô đoạn từ xStart → xEnd
+//             for (dim_t x = xStart; x <= xEnd; x++) {
+//                 if (y >= 0 && y < dev->canvas.maxRow &&
+//                     x >= 0 && x < dev->canvas.maxCol)
+//                 {
+//                     lcd32SetCanvasPixel(dev, y, x, color);
+//                 }
+//             }
+//         }
+//     }
+
+//     return OKE;
+// }
+
+def lcd32DrawFilledPolygon(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color) {
+    if (!dev || !points || n < 3)
+        return ERR_INVALID_ARG;
+
+    // --- Tìm minRow và maxRow ---
+    dim_t minRow = points[0].row;
+    dim_t maxRow = points[0].row;
+    for (size_t i = 1; i < n; i++) {
+        if (points[i].row < minRow) minRow = points[i].row;
+        if (points[i].row > maxRow) maxRow = points[i].row;
+    }
+
+    // TỐI ƯU: Clipping (cắt xén) theo chiều Y ngay từ đầu
+    if (minRow < 0) minRow = 0;
+    if (maxRow >= dev->canvas.maxRow) maxRow = dev->canvas.maxRow - 1;
+
+    // TỐI ƯU: Giả định đa giác không quá 128 đỉnh.
+    // Nếu 'n' có thể lớn hơn, bạn cần cấp phát động (malloc) hoặc tăng kích thước này.
+    int32_t interX[128]; 
+
+    // --- Scanline Fill ---
+    for (dim_t y = minRow; y <= maxRow; y++) {
+        size_t interCount = 0;
+
+        // --- Duyệt qua từng cạnh ---
+        for (size_t i = 0; i < n; i++) {
+            size_t j = (i + 1) % n;
+
+            // TỐI ƯU: Sử dụng int32_t, không dùng float
+            int32_t x0 = points[i].col;
+            int32_t y0 = points[i].row;
+            int32_t x1 = points[j].col;
+            int32_t y1 = points[j].row;
+
+            // Bỏ qua cạnh ngang
+            if (y0 == y1) continue;
+
+            // Đảm bảo y0 < y1
+            if (y0 > y1) {
+                int32_t tx = x0; x0 = x1; x1 = tx;
+                int32_t ty = y0; y0 = y1; y1 = ty;
+            }
+
+            // Chỉ xét giao điểm khi y nằm trong [y0, y1)
+            // (Rule này xử lý chính xác các đỉnh y_min và y_max)
+            if (y >= y0 && y < y1) {
+                // TỐI ƯU: Tính toán giao điểm bằng toán số nguyên
+                int32_t dx = x1 - x0;
+                int32_t dy = y1 - y0;
+                int32_t num = dx * (y - y0);
+
+                // Kỹ thuật làm tròn (rounding) bằng số nguyên
+                // Tương đương với roundf((float)num / (float)dy)
+                int32_t x = x0 + (num >= 0 ? (num + (dy / 2)) / dy : (num - (dy / 2)) / dy);
+
+                if (interCount < 128)
+                    interX[interCount++] = x;
+            }
+        }
+
+        // --- Sắp xếp giao điểm ---
+        // (Logic của 'sortIntersections' đã được gộp vào đây)
+        // TỐI ƯU: Dùng Insertion Sort (thay vì Bubble Sort)
+        for (size_t i = 1; i < interCount; i++) {
+            int32_t key = interX[i];
+            int32_t j = i - 1;
+            while (j >= 0 && interX[j] > key) {
+                interX[j + 1] = interX[j];
+                j = j - 1;
+            }
+            interX[j + 1] = key;
+        }
+
+        // --- Tô xen kẽ từng cặp ---
+        for (size_t k = 0; k + 1 < interCount; k += 2) {
+            // TỐI ƯU: Không cần roundf, vì đã là số nguyên
+            dim_t xStart = (dim_t)interX[k];
+            dim_t xEnd   = (dim_t)interX[k + 1] - 1;
+
+            if (xEnd < xStart)
+                continue;
+
+            // --- Logic vẽ HLine (từ 'lcd32DrawFastHLine') gộp vào đây ---
+            // 'y' đã có từ vòng lặp scanline
+            dim_t hline_x = xStart;
+            dim_t hline_w = xEnd - xStart + 1; // Chiều rộng (width)
+
+            // Giới hạn 'x' và 'w' (Clipping X)
+            if (hline_x < 0) {
+                hline_w += hline_x;
+                hline_x = 0;
+            }
+            if (hline_x + hline_w > dev->canvas.maxCol) {
+                hline_w = dev->canvas.maxCol - hline_x;
+            }
+            if (hline_w <= 0) continue;
+
+            // --- Phiên bản Fallback (chậm) ---
+            // (Thay thế bằng hàm tối ưu của bạn ở đây nếu có)
+            for (dim_t i = 0; i < hline_w; i++) {
+                lcd32SetCanvasPixel(dev, y, hline_x + i, color);
+            }
+            // --- Hết logic HLine ---
+        }
+    }
+
+    return OKE;
+}
+
+
+def lcd32DrawLineChart(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color) {
+
+    // --- Input Validation ---
+    if (!dev) {
+        lcd32Err("[lcd32DrawPolygon] dev is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (!points) {
+        lcd32Err("[lcd32DrawPolygon] points is NULL");
+        return ERR_INVALID_ARG;
+    }
+    if (n < 2) {
+        lcd32Err("[lcd32DrawPolygon] need at least 2 points");
+        return ERR_INVALID_ARG;
+    }
+
+    
+    // --- Draw edges (no auto-close) ---
+    for (size_t i = 0; i < n - 1; i++) {
+        // __lcd32Log("lcd32DrawLine | (%d,%d)<->(%d,%d)", points[i].row, points[i].col, points[i + 1].row, points[i + 1].col);
+        lcd32DrawLine(dev,
+            points[i].row, points[i].col,
+            points[i + 1].row, points[i + 1].col,
+            color);
+        /// Draw point
+        lcd32SetCanvasPixelWrap(dev, points[i].row - 1, points[i].col - 1, color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row - 1, points[i].col,     color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row - 1, points[i].col + 1, color);
+
+        lcd32SetCanvasPixelWrap(dev, points[i].row,     points[i].col - 1, color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row,     points[i].col,     color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row,     points[i].col + 1, color);
+
+        lcd32SetCanvasPixelWrap(dev, points[i].row + 1, points[i].col - 1, color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row + 1, points[i].col,     color);
+        lcd32SetCanvasPixelWrap(dev, points[i].row + 1, points[i].col + 1, color);
+
+    }
+
     return OKE;
 }

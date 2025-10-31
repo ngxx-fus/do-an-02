@@ -25,11 +25,38 @@ void app_main(void){
     __tag_log(STR(app_main), "Set systemStage = SYSTEM_RUNNING");
     systemStage = SYSTEM_RUNNING;
     
-    lcdDrawCaro(); 
+    int64_t startTime = 0;
+    int32_t currentModeRepeat = 0;
+    
+    char buff[64];
 
     while (!IS_SYSTEM_STOPPED){
+        startTime = esp_timer_get_time();
+        __sys_log("[main_app] running...");    
+
+
+        switch (systemMode){
+        case SYSTEM_MODE_DEMO_I2C_CAP:
+            lcd32FillCanvas(lcd, 0xFFFF);
+            oscDemo();
+            __setFlagBit(screenFlag, SCREEN_RENDER);
+            break;
         
-        vTaskDelay(1);
+        default:
+            lcd32FillCanvas(lcd, 0xFFFF);
+            sprintf(buff, "This mode %s is not available now! (%ld)", SYSTEM_MODE_STR[systemMode], currentModeRepeat);
+            lcd32DrawText(lcd, 50, 5, buff, &fontHeading03,COLOR_ERROR);
+            __setFlagBit(screenFlag, SCREEN_RENDER);
+            break;
+        }
+
+        if(++currentModeRepeat > 10){
+            systemMode = (systemMode+1)%SYSTEM_MODE_COUNT;
+            currentModeRepeat = 0;
+        }
+
+        __sys_log("[main_app] sleeping...");    
+        while(esp_timer_get_time() - startTime < 800U*1000U) portYIELD();/// pdMS_TO_TICKS(500)
     }
     
     __exit("app_main()");

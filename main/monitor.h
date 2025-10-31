@@ -18,6 +18,24 @@ volatile flag_t systemStage = SYSTEM_INIT;
 /// Mutex for synchronizing access to the system stage flag.
 volatile portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
+
+enum ENUM_SYSTEM_MODE {
+    SYSTEM_MODE_DEMO_OSC_CAP        = 0, /// Sample analog signal
+    SYSTEM_MODE_DEMO_SPI_CAP        = 1, /// Capture pakages on SPI bus
+    SYSTEM_MODE_DEMO_I2C_CAP        = 2, /// Capture pakages on SPI bus
+    SYSTEM_MODE_COUNT,
+};
+
+
+static const char* SYSTEM_MODE_STR[] = {
+    "SYSTEM_MODE_DEMO_OSC_CAP",
+    "SYSTEM_MODE_DEMO_SPI_CAP",
+    "SYSTEM_MODE_DEMO_I2C_CAP",
+};
+
+volatile flag_t systemMode = SYSTEM_MODE_DEMO_OSC_CAP;
+
+
 /// LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////
 
 #define IS_SYSTEM_INIT          (systemStage == SYSTEM_INIT)

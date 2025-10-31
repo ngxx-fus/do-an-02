@@ -19,6 +19,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h
+ /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/math.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/reent.h
  /home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h
@@ -140,6 +141,7 @@ esp-idf/helper/CMakeFiles/__idf_helper.dir/helper.c.obj
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic18pt7b.h
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic24pt7b.h
  /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/FreeSerifBoldItalic9pt7b.h
+ /home/fus/Documents/DO-AN-02-LCD/fonts/localFonts/Picopixel.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espGPIOWrapper.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espLogWrapper.h
  /home/fus/Documents/DO-AN-02-LCD/helper/espRTOSWrapper.h

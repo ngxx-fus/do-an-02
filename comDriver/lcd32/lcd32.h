@@ -52,4 +52,10 @@ def lcd32DrawLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, color
 
 def lcd32DrawThickLine(lcd32Dev_t *dev, dim_t r0, dim_t c0, dim_t r1, dim_t c1, color_t color, dim_t thickness);
 
+def lcd32DrawPolygon(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color);
+
+def lcd32DrawLineChart(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color);
+
+def lcd32DrawFilledPolygon(lcd32Dev_t *dev, const lcdPoint_t *points, size_t n, color_t color);
+
 #endif

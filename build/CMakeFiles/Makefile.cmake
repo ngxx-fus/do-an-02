@@ -222,7 +222,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/fus/.fus/esp-idf/tools/kconfig_new/confgen.py"
   "/home/fus/.fus/esp-idf/tools/kconfig_new/config.env.in"
   "/home/fus/Documents/DO-AN-02-LCD/.git/HEAD"
-  "/home/fus/Documents/DO-AN-02-LCD/.git/refs/heads/lcd"
+  "/home/fus/Documents/DO-AN-02-LCD/.git/refs/heads/lcd1"
   "/home/fus/Documents/DO-AN-02-LCD/CMakeLists.txt"
   "CMakeFiles/4.1.2/CMakeASMCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeCCompiler.cmake"
