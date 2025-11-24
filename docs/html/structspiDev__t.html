@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('structspiDev__t.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>SPI device descriptor.  
+<p>SPI device descriptor structure.  
  <a href="structspiDev__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="spi_8h_source.html">spi.h</a>&gt;</code></p>
@@ -105,59 +105,67 @@ $(document).ready(function(){initNavTree('structspiDev__t.html',''); initResizab
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aad10b69cfe12d651f088e3ad25b3f8b5" id="r_aad10b69cfe12d651f088e3ad25b3f8b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#aad10b69cfe12d651f088e3ad25b3f8b5">clk</a></td></tr>
+<tr class="memdesc:aad10b69cfe12d651f088e3ad25b3f8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock pin.  <br /></td></tr>
 <tr class="separator:aad10b69cfe12d651f088e3ad25b3f8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a382926aa35469841066b74dd84e25e3a" id="r_a382926aa35469841066b74dd84e25e3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a382926aa35469841066b74dd84e25e3a">mosi</a></td></tr>
-<tr class="memdesc:a382926aa35469841066b74dd84e25e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock pin.  <br /></td></tr>
+<tr class="memdesc:a382926aa35469841066b74dd84e25e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">MOSI pin.  <br /></td></tr>
 <tr class="separator:a382926aa35469841066b74dd84e25e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8123fd4480d794f3663c002524a947" id="r_a7c8123fd4480d794f3663c002524a947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a7c8123fd4480d794f3663c002524a947">miso</a></td></tr>
-<tr class="memdesc:a7c8123fd4480d794f3663c002524a947"><td class="mdescLeft">&#160;</td><td class="mdescRight">MOSI pin.  <br /></td></tr>
+<tr class="memdesc:a7c8123fd4480d794f3663c002524a947"><td class="mdescLeft">&#160;</td><td class="mdescRight">MISO pin.  <br /></td></tr>
 <tr class="separator:a7c8123fd4480d794f3663c002524a947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8edd0283b4fb043f25ca54988bfb05e" id="r_ae8edd0283b4fb043f25ca54988bfb05e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#ae8edd0283b4fb043f25ca54988bfb05e">cs</a></td></tr>
-<tr class="memdesc:ae8edd0283b4fb043f25ca54988bfb05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MISO pin.  <br /></td></tr>
+<tr class="memdesc:ae8edd0283b4fb043f25ca54988bfb05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip select pin.  <br /></td></tr>
 <tr class="separator:ae8edd0283b4fb043f25ca54988bfb05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbb0904d78d1e8b2c1eb76d90c66f7a" id="r_a5bbb0904d78d1e8b2c1eb76d90c66f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="flag_8h.html#a8160d63762fcd20f57ecf37f5a0474c8">flag_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a5bbb0904d78d1e8b2c1eb76d90c66f7a">conf</a></td></tr>
-<tr class="memdesc:a5bbb0904d78d1e8b2c1eb76d90c66f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip select pin.  <br /></td></tr>
+<tr class="memdesc:a5bbb0904d78d1e8b2c1eb76d90c66f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration flags (mode, CPOL, CPHA)  <br /></td></tr>
 <tr class="separator:a5bbb0904d78d1e8b2c1eb76d90c66f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61a8a97a5e7cad8fc83c47a02be3da5" id="r_ab61a8a97a5e7cad8fc83c47a02be3da5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#ab61a8a97a5e7cad8fc83c47a02be3da5">freq</a></td></tr>
-<tr class="memdesc:ab61a8a97a5e7cad8fc83c47a02be3da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration flags (mode, CPOL, CPHA)  <br /></td></tr>
+<tr class="memdesc:ab61a8a97a5e7cad8fc83c47a02be3da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency in Hz.  <br /></td></tr>
 <tr class="separator:ab61a8a97a5e7cad8fc83c47a02be3da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e427502019710d1034e7f4a0324f72" id="r_a36e427502019710d1034e7f4a0324f72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="flag_8h.html#a8160d63762fcd20f57ecf37f5a0474c8">flag_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a36e427502019710d1034e7f4a0324f72">stat</a></td></tr>
-<tr class="memdesc:a36e427502019710d1034e7f4a0324f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency in Hz.  <br /></td></tr>
+<tr class="memdesc:a36e427502019710d1034e7f4a0324f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status flags (buffer states)  <br /></td></tr>
 <tr class="separator:a36e427502019710d1034e7f4a0324f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba8220d9abd65fb7cae1faf7b910e6b1" id="r_aba8220d9abd65fb7cae1faf7b910e6b1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#aba8220d9abd65fb7cae1faf7b910e6b1">tBuff</a></td></tr>
-<tr class="memdesc:aba8220d9abd65fb7cae1faf7b910e6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status flags ()  <br /></td></tr>
+<tr class="memdesc:aba8220d9abd65fb7cae1faf7b910e6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to transmit buffer.  <br /></td></tr>
 <tr class="separator:aba8220d9abd65fb7cae1faf7b910e6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6daea8e3128cd4edc838a155e16444b9" id="r_a6daea8e3128cd4edc838a155e16444b9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a6daea8e3128cd4edc838a155e16444b9">tBuffSize</a></td></tr>
+<tr class="memdesc:a6daea8e3128cd4edc838a155e16444b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of transmit buffer.  <br /></td></tr>
 <tr class="separator:a6daea8e3128cd4edc838a155e16444b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ec4ee89ef6e7379ac1051e94ef0af04" id="r_a7ec4ee89ef6e7379ac1051e94ef0af04"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a7ec4ee89ef6e7379ac1051e94ef0af04">tBuffIndex</a></td></tr>
+<tr class="memdesc:a7ec4ee89ef6e7379ac1051e94ef0af04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current index in transmit buffer.  <br /></td></tr>
 <tr class="separator:a7ec4ee89ef6e7379ac1051e94ef0af04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5ee12f48e537708178ffe8ca38ab8e" id="r_a0e5ee12f48e537708178ffe8ca38ab8e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a0e5ee12f48e537708178ffe8ca38ab8e">tBuffMask</a></td></tr>
+<tr class="memdesc:a0e5ee12f48e537708178ffe8ca38ab8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current bit mask for transmission.  <br /></td></tr>
 <tr class="separator:a0e5ee12f48e537708178ffe8ca38ab8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab111a755003355686e66b70c608bba81" id="r_ab111a755003355686e66b70c608bba81"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#ab111a755003355686e66b70c608bba81">rBuff</a></td></tr>
+<tr class="memdesc:ab111a755003355686e66b70c608bba81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to receive buffer.  <br /></td></tr>
 <tr class="separator:ab111a755003355686e66b70c608bba81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e400884f5db2cdac3636f0dce53ba3" id="r_ad7e400884f5db2cdac3636f0dce53ba3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#ad7e400884f5db2cdac3636f0dce53ba3">rBuffSize</a></td></tr>
+<tr class="memdesc:ad7e400884f5db2cdac3636f0dce53ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of receive buffer.  <br /></td></tr>
 <tr class="separator:ad7e400884f5db2cdac3636f0dce53ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e99dbc99dc0550ae693557d9e96e1f0" id="r_a5e99dbc99dc0550ae693557d9e96e1f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a5e99dbc99dc0550ae693557d9e96e1f0">rBuffIndex</a></td></tr>
+<tr class="memdesc:a5e99dbc99dc0550ae693557d9e96e1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current index in receive buffer.  <br /></td></tr>
 <tr class="separator:a5e99dbc99dc0550ae693557d9e96e1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e3e80e657fee46aba017c15b8d2e0ce" id="r_a0e3e80e657fee46aba017c15b8d2e0ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a0e3e80e657fee46aba017c15b8d2e0ce">rBuffMask</a></td></tr>
+<tr class="memdesc:a0e3e80e657fee46aba017c15b8d2e0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current bit mask for reception.  <br /></td></tr>
 <tr class="separator:a0e3e80e657fee46aba017c15b8d2e0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc0a7e5c46f7b1a66e1e14cc79434151" id="r_acc0a7e5c46f7b1a66e1e14cc79434151"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#acc0a7e5c46f7b1a66e1e14cc79434151">__cpha</a></td></tr>
-<tr class="memdesc:acc0a7e5c46f7b1a66e1e14cc79434151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private:  <br /></td></tr>
+<tr class="memdesc:acc0a7e5c46f7b1a66e1e14cc79434151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private members:  <br /></td></tr>
 <tr class="separator:acc0a7e5c46f7b1a66e1e14cc79434151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7020e75fad852495c331070d0822e8" id="r_a3e7020e75fad852495c331070d0822e8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a3e7020e75fad852495c331070d0822e8">__cpol</a></td></tr>
-<tr class="memdesc:a3e7020e75fad852495c331070d0822e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE: Only can be set via config function!  <br /></td></tr>
+<tr class="memdesc:a3e7020e75fad852495c331070d0822e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock polarity (0 or 1). Set via config function.  <br /></td></tr>
 <tr class="separator:a3e7020e75fad852495c331070d0822e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873da46ac07253d86a502c16f47c0594" id="r_a873da46ac07253d86a502c16f47c0594"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#a873da46ac07253d86a502c16f47c0594">__master_slave</a></td></tr>
-<tr class="memdesc:a873da46ac07253d86a502c16f47c0594"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE: Only can be set via config function!  <br /></td></tr>
+<tr class="memdesc:a873da46ac07253d86a502c16f47c0594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode (0: Master | 1: Slave). Set via config function.  <br /></td></tr>
 <tr class="separator:a873da46ac07253d86a502c16f47c0594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaa7a89fe01fce2672a8ab0c53c9dcb7" id="r_aaaa7a89fe01fce2672a8ab0c53c9dcb7"><td class="memItemLeft" align="right" valign="top">portMUX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspiDev__t.html#aaaa7a89fe01fce2672a8ab0c53c9dcb7">mutex</a></td></tr>
-<tr class="memdesc:aaaa7a89fe01fce2672a8ab0c53c9dcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">0: Master | 1: Slave. NOTE: Only can be set via config function!  <br /></td></tr>
+<tr class="memdesc:aaaa7a89fe01fce2672a8ab0c53c9dcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex for thread safety.  <br /></td></tr>
 <tr class="separator:aaaa7a89fe01fce2672a8ab0c53c9dcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>SPI device descriptor. </p>
+<div class="textblock"><p>SPI device descriptor structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00081">81</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00084">84</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="acc0a7e5c46f7b1a66e1e14cc79434151" name="acc0a7e5c46f7b1a66e1e14cc79434151"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc0a7e5c46f7b1a66e1e14cc79434151">&#9670;&#160;</a></span>__cpha</h2>
@@ -171,9 +179,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Private: </p>
+<p>Private members: </p>
+<p>Clock phase (0 or 1). Set via config function. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00103">103</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00105">105</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -189,9 +198,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>NOTE: Only can be set via config function! </p>
+<p>Clock polarity (0 or 1). Set via config function. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00104">104</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00106">106</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -207,9 +216,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>NOTE: Only can be set via config function! </p>
+<p>Mode (0: Master | 1: Slave). Set via config function. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00105">105</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00107">107</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +234,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00082">82</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Clock pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00085">85</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -241,9 +252,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Chip select pin. </p>
+<p>Configuration flags (mode, CPOL, CPHA) </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00086">86</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00089">89</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -259,9 +270,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>MISO pin. </p>
+<p>Chip select pin. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00085">85</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00088">88</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -277,9 +288,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Configuration flags (mode, CPOL, CPHA) </p>
+<p>Frequency in Hz. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00087">87</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00090">90</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -295,9 +306,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>MOSI pin. </p>
+<p>MISO pin. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00084">84</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00087">87</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -313,9 +324,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clock pin. </p>
+<p>MOSI pin. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00083">83</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00086">86</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -331,9 +342,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>0: Master | 1: Slave. NOTE: Only can be set via config function! </p>
+<p>Mutex for thread safety. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00107">107</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00109">109</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +360,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00096">96</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Pointer to receive buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00099">99</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -365,7 +378,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00098">98</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Current index in receive buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00101">101</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +396,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00099">99</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Current bit mask for reception. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00102">102</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +414,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00097">97</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Size of receive buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00100">100</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -413,9 +432,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Frequency in Hz. </p>
+<p>Status flags (buffer states) </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00089">89</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00092">92</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -431,9 +450,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Status flags () </p>
+<p>Pointer to transmit buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00091">91</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00094">94</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +468,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00093">93</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Current index in transmit buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00096">96</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +486,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00094">94</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Current bit mask for transmission. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00097">97</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +504,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00092">92</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
+<p>Size of transmit buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi_8h_source.html#l00095">95</a> of file <a class="el" href="spi_8h_source.html">spi.h</a>.</p>
 
 </div>
 </div>

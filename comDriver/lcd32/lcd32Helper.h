@@ -6,7 +6,9 @@
 
 #include "../../helper/general.h"
 
+/// @cond
 /// LOG ///////////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 #ifndef LCD32_LOG_LEVEL
     /*
@@ -58,7 +60,9 @@
     #define lcd32Log1(...)
 #endif 
 
+/// @cond
 /// SET-UP GPIO MACROS ////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 #include "lcd32Def.h"
 
@@ -74,7 +78,9 @@ void __lcd32FastSetDataBusInputM(uint64_t mask);
 /// @brief [Internal] [Fast] Configure GPIO pins as `input` based on a 64-bit mask 
 void __lcd32FastSetDataBusOutputM(uint64_t mask);
 
+/// @cond
 /// SET GPIO STATE MACROS /////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 #define __lcd32SetDataTransaction(dev)              \
     __lcd32SetRegSelPin(dev, 1);
@@ -331,7 +337,9 @@ void __lcd32ContReadRegisterStop(lcd32Dev_t *dev){
     __lcd32GPIOConfigOutputM(dev->dataPinMask);
 }
 
+/// @cond
 /// CANVAS UTILS //////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 /// @brief [Internal] Perform zero assign using memset
 #define lcd32AssignZero(ptr)                memset(ptr, 0, sizeof(ptr))

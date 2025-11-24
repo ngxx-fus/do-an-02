@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"oled128x64_8c.html#ab1a90b56cdc1a95da2c65757ddb5890a":[2,0,0,2,0,5],
+"oled128x64_8c.html#ae2f144fde5c113fedc049795ce450f3a":[2,0,0,2,0,6],
 "oled128x64_8c_source.html":[2,0,0,2,0],
 "oled128x64_8h.html":[2,0,0,2,1],
 "oled128x64_8h.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2":[2,0,0,2,1,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "structlcd32DataPin__t.html#ad3e1a5d059cf97fff174c48ba0a6b139":[1,0,5,9],
 "structlcd32DataPin__t.html#ad4945cdbbeaff34908dcbee1a00841ce":[1,0,5,0],
 "structlcd32DataPin__t.html#ad5f30c082c220dfcd617b2780c83d9ee":[1,0,5,7],
-"structlcd32DataPin__t.html#aff1d234033d77d9acf117c311a4e7aca":[1,0,5,14],
-"structlcd32Dev__t.html":[1,0,6],
-"structlcd32Dev__t.html#a3be5bcb78be1a1166b933889c3621491":[1,0,6,4]
+"structlcd32DataPin__t.html#aff1d234033d77d9acf117c311a4e7aca":[1,0,5,14]
 };

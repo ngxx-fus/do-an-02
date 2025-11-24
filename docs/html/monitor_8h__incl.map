@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="1009,5,1131,31"/>
 <area shape="rect" id="Node000002" href="$general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="1071,313,1211,339"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1067,32,1049,73,1032,133,1027,166,1027,200,1032,233,1044,264,1066,288,1093,305,1091,310,1062,292,1040,267,1027,235,1021,201,1022,166,1027,132,1044,71,1062,30"/>
-<area shape="rect" id="Node000035" href="$lcd32_8h.html" title="LCD 3.2&quot; driver; Provides APIs to create, configure, start&#45;up, and control the LCD device,..." alt="" coords="1079,79,1221,119"/>
+<area shape="rect" id="Node000035" href="$lcd32_8h.html" title="LCD 3.2&quot; driver interface; Provides APIs for creating, configuring, and controlling the LCD device,..." alt="" coords="1079,79,1221,119"/>
 <area shape="poly" id="edge55_Node000001_Node000035" title=" " alt="" coords="1084,29,1123,67,1119,71,1080,33"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="547,533,614,559"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1071,338,952,355,812,381,745,398,686,417,638,438,605,462,596,475,590,490,584,520,579,519,585,488,591,472,601,458,635,434,684,412,744,393,811,376,951,349,1070,333"/>

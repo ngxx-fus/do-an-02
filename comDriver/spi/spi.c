@@ -1,6 +1,8 @@
 #include "spi.h"
 
+/// @cond
 /// HELPER FUNCTIONS //////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 #define UINT8_ARRAY(pv, index) (((uint8_t*)(pv))[index])
 
@@ -197,7 +199,10 @@ def spiReceiveBuffPushBit(spiDev_t * dev, uint8_t inBit){
         return ret;
 }
 
+/// @cond
 /// SLAVE INTERRUPT ///////////////////////////////////////////////////////////////////////////////
+/// @endcond
+
 static 
 void IRAM_ATTR spiHandleCLKIsr(void* pv) {
     spiDev_t *dev = (spiDev_t*) pv;

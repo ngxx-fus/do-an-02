@@ -1,6 +1,6 @@
 <map id="comDriver/spi/spi.c" name="comDriver/spi/spi.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1067,5,1214,31"/>
-<area shape="rect" id="Node000002" href="$spi_8h.html" title=" " alt="" coords="1114,79,1167,104"/>
+<area shape="rect" id="Node000001" title="SPI Driver Implementation; Manages software SPI (bit&#45;banging) for Master mode and ISR&#45;based Slave mod..." alt="" coords="1067,5,1214,31"/>
+<area shape="rect" id="Node000002" href="$spi_8h.html" title="SPI Driver Definitions; Defines structs, enums, macros, and interfaces for software SPI (Master/Slave..." alt="" coords="1114,79,1167,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1143,31,1143,65,1138,65,1138,31"/>
 <area shape="rect" id="Node000003" href="$general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="1065,152,1217,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1143,104,1143,138,1138,138,1138,104"/>

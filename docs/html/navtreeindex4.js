@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"structlcd32Dev__t.html":[1,0,6],
+"structlcd32Dev__t.html#a3be5bcb78be1a1166b933889c3621491":[1,0,6,4],
 "structlcd32Dev__t.html#a4fca563876f479f621058a9253de7fbe":[1,0,6,1],
 "structlcd32Dev__t.html#a738fa0b9828b27e6ba992d5000d01f7f":[1,0,6,5],
 "structlcd32Dev__t.html#a8ab53d4d2d378875e5aadc6dda955246":[1,0,6,0],

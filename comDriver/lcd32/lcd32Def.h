@@ -9,14 +9,18 @@
 typedef uint16_t    color_t;        /// 16-bit color for a pixel
 typedef int16_t     dim_t;          /// 16-bit signed for dimension
 
+/// @cond
 /// CANVAS ////////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas
     color_t **buff;                 /// 1D array to store buffer
     dim_t   maxRow, maxCol;         /// Dim info
 } lcd32Canvas_t;
 
+/// @cond
 /// CONTROL/DATA PIN //////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 typedef struct lcd32DataPin_t{       /// Struct for data pin
     /// 16-bit data pin
@@ -33,7 +37,9 @@ typedef struct lcd32ControlPin_t{   /// Struct for data pint
     pin_t       bl;                     /// Brightness light
 } lcd32ControlPin_t;
 
+/// @cond
 /// LCD DEVICE ////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
 typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
 
