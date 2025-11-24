@@ -1,0 +1,13 @@
+<map id="i2cSendDoubleByte" name="i2cSendDoubleByte">
+<area shape="rect" id="Node000001" title="Send a specified double byte." alt="" coords="376,80,525,105"/>
+<area shape="rect" id="Node000002" href="$oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,5,279,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,77,327,45,279,29,280,24,329,39,410,72"/>
+<area shape="rect" id="Node000003" href="$oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,55,279,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="362,84,279,74,279,69,363,79"/>
+<area shape="rect" id="Node000004" href="$oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,104,328,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="363,106,329,110,328,104,362,100"/>
+<area shape="rect" id="Node000006" href="$oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,153,320,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="407,113,329,143,290,156,289,151,327,138,405,108"/>
+<area shape="rect" id="Node000005" href="$oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="147,119,114,119,114,114,147,114"/>
+</map>

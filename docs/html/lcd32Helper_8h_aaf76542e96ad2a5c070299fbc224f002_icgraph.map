@@ -1,0 +1,27 @@
+<map id="__lcd32GPIOSetState" name="__lcd32GPIOSetState">
+<area shape="rect" id="Node000001" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="533,153,692,179"/>
+<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aef7608ff0e893a296a4322e62c3de397" title="[Internal] Set state of BL (brightnessLight) pin" alt="" coords="272,5,485,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="592,144,547,93,517,66,484,44,457,33,459,28,487,40,520,62,551,89,596,140"/>
+<area shape="rect" id="Node000003" href="$lcd32Helper_8h.html#a60cfbcea0dd506d126425dbcc4b92637" title="[Internal] Set state of CS (chip select) pin" alt="" coords="298,55,459,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="581,148,537,120,484,94,449,83,451,78,486,89,539,115,584,143"/>
+<area shape="rect" id="Node000004" href="$lcd32Helper_8h.html#af2bb32a580a854fc6c446766df75ad31" title="[Internal] Set state of 16 parallel data/command pins" alt="" coords="293,104,464,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="538,153,439,132,440,127,539,148"/>
+<area shape="rect" id="Node000010" href="$lcd32Helper_8h.html#a75fbee488e5b73450728382af0d3b45b" title="[Internal] Set state of READ pin" alt="" coords="306,153,451,179"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="519,169,452,169,452,163,519,163"/>
+<area shape="rect" id="Node000011" href="$lcd32Helper_8h.html#ab0ded6c1657526c5f4888d479a83d767" title="[Internal] Set state of RS (register select) pin" alt="" coords="300,203,457,228"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="539,184,440,205,439,200,538,179"/>
+<area shape="rect" id="Node000012" href="$lcd32Helper_8h.html#a5eb093d28d4a2ef12ea787073a02a935" title="[Internal] Set state of RST (reset) pin" alt="" coords="304,252,453,277"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="584,189,539,217,486,243,451,254,449,249,484,238,537,212,581,184"/>
+<area shape="rect" id="Node000013" href="$lcd32Helper_8h.html#a4429e88a9e152b5c05418f802cb53bb2" title="[Internal] Set state of WRITE pin" alt="" coords="305,301,452,327"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="596,192,551,243,520,270,487,292,453,306,451,301,484,288,517,266,547,239,592,188"/>
+<area shape="rect" id="Node000005" href="$lcd32Helper_8h.html#a8efa1f19519e1dbfa55b90c958a1b9b9" title="[Internal] Start continue reading 16bit from LCD (keep transaction open, keep input mode)" alt="" coords="5,5,224,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="288,102,271,94,255,81,246,68,237,56,223,44,196,33,199,28,225,40,241,52,250,65,259,78,273,89,290,97"/>
+<area shape="rect" id="Node000006" href="$lcd32Helper_8h.html#a56f3f91d0d93ce5de141c42d555194ef" title="[Internal] Send a commend the read 16bit from LCD" alt="" coords="35,55,194,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="296,104,183,83,184,77,297,99"/>
+<area shape="rect" id="Node000007" href="$lcd32Helper_8h.html#a87d6b33eeb3cee4be698d19f3cf264ca" title="[Internal] Write command to LCD" alt="" coords="28,104,201,129"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="280,119,202,119,202,114,280,114"/>
+<area shape="rect" id="Node000008" href="$lcd32Helper_8h.html#a5b16fe702d37053854a2d5c9f8a65fca" title="[Internal] Write 16 bits data to LCD" alt="" coords="46,153,183,179"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="297,135,184,156,183,151,296,129"/>
+<area shape="rect" id="Node000009" href="$lcd32Helper_8h.html#ac5a35c3c180b431e4d00a6c1922b0c65" title="[Internal] Send a command with 16bit data to LCD" alt="" coords="35,203,195,228"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="287,136,273,143,259,154,250,167,241,180,225,192,195,205,193,200,223,188,237,176,246,164,255,151,271,138,284,132"/>
+</map>

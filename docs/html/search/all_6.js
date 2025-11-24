@@ -12,7 +12,7 @@ var searchData=
   ['deref_9',['DEREF',['../helper_8h.html#a40066334cf70ed7025b9c18838d997e8',1,'helper.h']]],
   ['deref2_10',['DEREF2',['../helper_8h.html#a3a7af5d85011a77216a70177c5098f42',1,'helper.h']]],
   ['destroyi2cdevice_11',['destroyi2cdevice',['../i2c_8c.html#ac48c51428c3a8ff80f10d630d7586ca8',1,'destroyI2CDevice(i2cDev_t *dev):&#160;i2c.c'],['../i2c_8h.html#ac48c51428c3a8ff80f10d630d7586ca8',1,'destroyI2CDevice(i2cDev_t *dev):&#160;i2c.c']]],
-  ['destroyspidevice_12',['destroyspidevice',['../lcd32_8c.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;lcd32.c'],['../spi_8c.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;spi.c'],['../spi_8h.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;lcd32.c']]],
+  ['destroyspidevice_12',['destroyspidevice',['../lcd32_8c.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;lcd32.c'],['../spi_8h.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;lcd32.c'],['../spi_8c.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8',1,'destroySPIDevice(spiDev_t **pDev):&#160;spi.c']]],
   ['device_13',['About device',['../index.html#autotoc_md2',1,'']]],
   ['dim_5ft_14',['dim_t',['../lcd32Def_8h.html#a98d4c62e3c30c1da563382e86f96ef6a',1,'lcd32Def.h']]],
   ['disp_5forientation_15',['DISP_ORIENTATION',['../projectConfig_8h.html#a98196e12b9d822ab5713cfebce3725a5',1,'projectConfig.h']]],

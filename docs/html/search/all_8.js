@@ -58,6 +58,6 @@ var searchData=
   ['freeserifitalic18pt7b_2eh_55',['FreeSerifItalic18pt7b.h',['../FreeSerifItalic18pt7b_8h.html',1,'']]],
   ['freeserifitalic24pt7b_2eh_56',['FreeSerifItalic24pt7b.h',['../FreeSerifItalic24pt7b_8h.html',1,'']]],
   ['freeserifitalic9pt7b_2eh_57',['FreeSerifItalic9pt7b.h',['../FreeSerifItalic9pt7b_8h.html',1,'']]],
-  ['freq_58',['freq',['../structspiDev__t.html#ab61a8a97a5e7cad8fc83c47a02be3da5',1,'spiDev_t::freq'],['../structi2cDev__t.html#aee91389807779c5943bd789cbded456d',1,'i2cDev_t::freq']]],
+  ['freq_58',['freq',['../structi2cDev__t.html#aee91389807779c5943bd789cbded456d',1,'i2cDev_t::freq'],['../structspiDev__t.html#ab61a8a97a5e7cad8fc83c47a02be3da5',1,'spiDev_t::freq']]],
   ['full_20working_20tree_59',['Full working-tree',['../index.html#autotoc_md10',1,'']]]
 ];

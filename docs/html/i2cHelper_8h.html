@@ -553,6 +553,74 @@ Functions</h2></td></tr>
 <div class="ttc" id="ai2cHelper_8h_html_a96bf70f241f8de130c773ab5d3156cf0"><div class="ttname"><a href="i2cHelper_8h.html#a96bf70f241f8de130c773ab5d3156cf0">__I2C_ASSERT_PIN_OK</a></div><div class="ttdeci">#define __I2C_ASSERT_PIN_OK(funcName, pinValue, pinName)</div><div class="ttdoc">Assert that the I2C pin configuration is valid.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00044">i2cHelper.h:44</a></div></div>
 <div class="ttc" id="astructi2cDev__t_html_aee91389807779c5943bd789cbded456d"><div class="ttname"><a href="structi2cDev__t.html#aee91389807779c5943bd789cbded456d">i2cDev_t::freq</a></div><div class="ttdeci">uint32_t freq</div><div class="ttdoc">Configuration flags. Note: conf[1:0] = speed mode; conf[2] = mode (0: master / 1: slave)</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00015">i2cDefinition.h:15</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00015">i2cDev_t::freq</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2cHelper_8h_source.html#l00239">i2cGetReturnBit()</a>, <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2cHelper_8h_source.html#l00318">i2cReceiveByte()</a>, <a class="el" href="i2cHelper_8h_source.html#l00187">i2cSendAddressFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00216">i2cSendDataFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00137">i2cStartCondition()</a>, and <a class="el" href="i2cHelper_8h_source.html#l00161">i2cStopCondition()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a76dcf35abb43dd39010bd67a72de8c0a_icgraph.png" border="0" usemap="#ai2cHelper_8h_a76dcf35abb43dd39010bd67a72de8c0a_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a76dcf35abb43dd39010bd67a72de8c0a_icgraph" id="ai2cHelper_8h_a76dcf35abb43dd39010bd67a72de8c0a_icgraph">
+<area shape="rect" title="Get I2C bus frequency of a given device." alt="" coords="788,156,871,181"/>
+<area shape="rect" href="i2cHelper_8h.html#a58419d2cac69e3f1f36256fa61897abd" title="Release SDA, then get return bit." alt="" coords="594,255,719,280"/>
+<area shape="poly" title=" " alt="" coords="808,194,778,221,741,246,715,257,712,252,739,241,775,216,805,190"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,107,517,132"/>
+<area shape="poly" title=" " alt="" coords="807,147,777,119,739,96,706,87,672,83,603,84,539,95,489,109,487,104,538,90,602,79,672,77,707,82,741,92,780,115,811,143"/>
+<area shape="rect" href="i2cHelper_8h.html#ab9d0044dbe08aa6b7bb32e19c9b63b73" title="Just receive 8 bit from SDA (without start/stop condition and send anything)" alt="" coords="595,5,718,31"/>
+<area shape="poly" title=" " alt="" coords="813,145,782,98,762,74,738,52,703,33,705,28,742,48,766,70,787,95,817,142"/>
+<area shape="rect" href="i2cHelper_8h.html#a7869476049e0b21a7975eea55d0bd529" title="Send I2C address frame with R/W bit." alt="" coords="573,107,740,132"/>
+<area shape="poly" title=" " alt="" coords="774,156,701,135,703,130,775,151"/>
+<area shape="rect" href="i2cHelper_8h.html#a54d43e3e9cc2b33a70a74f388703017f" title="Send one I2C data frame (8&#45;bit)" alt="" coords="584,304,729,329"/>
+<area shape="poly" title=" " alt="" coords="819,195,789,246,767,272,742,295,720,306,718,302,738,290,763,268,784,243,814,192"/>
+<area shape="rect" href="i2cHelper_8h.html#a10c9a416f548d63a0a1ec2cb4b107c5e" title="Generate I2C START condition." alt="" coords="589,156,724,181"/>
+<area shape="poly" title=" " alt="" coords="774,171,725,171,725,166,774,166"/>
+<area shape="rect" href="i2cHelper_8h.html#ac6753f1f3022a2d26c354409028a0274" title="Generate I2C STOP condition." alt="" coords="591,205,723,231"/>
+<area shape="poly" title=" " alt="" coords="775,187,703,208,701,203,774,182"/>
+<area shape="poly" title=" " alt="" coords="580,252,572,245,560,233,553,220,547,194,541,169,534,157,524,145,506,134,509,130,527,141,539,154,546,167,552,193,558,218,564,230,575,241,583,247"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,205,507,231"/>
+<area shape="poly" title=" " alt="" coords="589,254,504,233,505,228,590,249"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,156,502,181"/>
+<area shape="poly" title=" " alt="" coords="584,252,572,246,556,233,547,220,538,208,524,196,498,184,500,179,527,192,542,205,551,217,560,229,575,241,586,247"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,255,525,280"/>
+<area shape="poly" title=" " alt="" coords="580,270,526,270,526,265,580,265"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,107,287,132"/>
+<area shape="poly" title=" " alt="" coords="385,202,374,196,359,183,350,170,341,158,327,146,286,129,288,124,329,141,345,154,354,167,363,180,378,192,388,197"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,156,304,181"/>
+<area shape="poly" title=" " alt="" coords="383,205,298,184,299,179,384,200"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,205,319,231"/>
+<area shape="poly" title=" " alt="" coords="381,221,319,221,319,215,381,215"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,156,113,181"/>
+<area shape="poly" title=" " alt="" coords="190,137,108,159,107,153,188,131"/>
+<area shape="poly" title=" " alt="" coords="171,171,113,171,113,166,171,166"/>
+<area shape="poly" title=" " alt="" coords="385,156,287,132,288,127,386,151"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,304,279,329"/>
+<area shape="poly" title=" " alt="" coords="384,286,280,311,279,306,383,281"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,353,279,379"/>
+<area shape="poly" title=" " alt="" coords="422,290,379,318,329,344,280,361,278,356,327,340,377,313,419,286"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,403,328,428"/>
+<area shape="poly" title=" " alt="" coords="434,293,390,344,361,371,329,394,305,405,302,400,327,389,358,366,387,340,430,289"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,255,320,280"/>
+<area shape="poly" title=" " alt="" coords="362,270,320,270,320,265,362,265"/>
+<area shape="poly" title=" " alt="" coords="165,398,160,393,136,369,116,340,87,280,69,223,60,182,65,181,74,221,92,278,121,338,140,365,163,389,169,394"/>
+<area shape="poly" title=" " alt="" coords="608,38,575,52,473,109,471,104,572,48,606,33"/>
+<area shape="poly" title=" " alt="" coords="559,122,517,122,517,117,559,117"/>
+<area shape="poly" title=" " alt="" coords="586,140,575,146,560,158,551,170,542,183,527,196,504,208,501,203,524,192,538,180,547,167,556,154,572,141,583,135"/>
+<area shape="poly" title=" " alt="" coords="590,138,503,159,501,154,589,133"/>
+<area shape="poly" title=" " alt="" coords="581,141,575,145,564,157,558,169,552,194,546,219,539,233,527,245,509,257,506,252,524,241,534,229,541,218,547,192,553,167,560,154,572,141,577,137"/>
+<area shape="poly" title=" " alt="" coords="584,301,572,295,556,282,547,270,538,258,524,246,498,233,500,228,527,241,542,254,551,267,560,279,575,290,586,296"/>
+<area shape="poly" title=" " alt="" coords="578,300,572,295,560,282,553,270,546,244,540,220,534,208,524,196,501,182,504,178,527,192,539,205,545,218,552,243,558,268,564,279,575,291,581,295"/>
+<area shape="poly" title=" " alt="" coords="589,303,504,283,505,277,590,298"/>
+<area shape="poly" title=" " alt="" coords="589,155,504,135,505,129,590,150"/>
+<area shape="poly" title=" " alt="" coords="590,187,505,208,504,203,589,182"/>
+<area shape="poly" title=" " alt="" coords="576,171,502,171,502,166,576,166"/>
+<area shape="poly" title=" " alt="" coords="589,189,575,196,560,208,551,220,542,233,527,246,503,257,501,252,524,241,538,229,547,217,557,204,572,192,586,184"/>
+<area shape="poly" title=" " alt="" coords="583,202,572,196,556,183,547,170,538,158,524,146,501,135,504,130,527,141,542,154,551,167,560,180,575,192,586,198"/>
+<area shape="poly" title=" " alt="" coords="577,221,507,221,507,215,577,215"/>
+<area shape="poly" title=" " alt="" coords="589,205,501,183,503,178,590,200"/>
+<area shape="poly" title=" " alt="" coords="590,236,505,257,504,252,589,231"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a8945ac065eb916d241f211e7a21c5b9e" name="a8945ac065eb916d241f211e7a21c5b9e"></a>
@@ -599,6 +667,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="ai2cHelper_8h_html_a8945ac065eb916d241f211e7a21c5b9e"><div class="ttname"><a href="i2cHelper_8h.html#a8945ac065eb916d241f211e7a21c5b9e">__i2cGetSCL</a></div><div class="ttdeci">static def __i2cGetSCL(i2cDev_t *dev)</div><div class="ttdoc">Read the current logic level of SCL line.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00129">i2cHelper.h:129</a></div></div>
 <div class="ttc" id="astructi2cDev__t_html_acd1c8c01e02dd28e4b7f3ea35deea114"><div class="ttname"><a href="structi2cDev__t.html#acd1c8c01e02dd28e4b7f3ea35deea114">i2cDev_t::scl</a></div><div class="ttdeci">pin_t scl</div><div class="ttdoc">Slave mode.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00012">i2cDefinition.h:12</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00012">i2cDev_t::scl</a>.</p>
+
 </div>
 </div>
 <a id="a43f86ea81faaf0e2e97a8561e3914d33" name="a43f86ea81faaf0e2e97a8561e3914d33"></a>
@@ -642,6 +712,48 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  122</span>}</div>
 <div class="ttc" id="astructi2cDev__t_html_ac242feaf2840ff6e8ea8dc0f863792d1"><div class="ttname"><a href="structi2cDev__t.html#ac242feaf2840ff6e8ea8dc0f863792d1">i2cDev_t::sda</a></div><div class="ttdeci">pin_t sda</div><div class="ttdoc">Clock pin.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00013">i2cDefinition.h:13</a></div></div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="i2cHelper_8h_source.html#l00239">i2cGetReturnBit()</a>, and <a class="el" href="i2cHelper_8h_source.html#l00318">i2cReceiveByte()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a43f86ea81faaf0e2e97a8561e3914d33_icgraph.png" border="0" usemap="#ai2cHelper_8h_a43f86ea81faaf0e2e97a8561e3914d33_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a43f86ea81faaf0e2e97a8561e3914d33_icgraph" id="ai2cHelper_8h_a43f86ea81faaf0e2e97a8561e3914d33_icgraph">
+<area shape="rect" title="Read the current logic level of SDA line." alt="" coords="747,31,852,56"/>
+<area shape="rect" href="i2cHelper_8h.html#a58419d2cac69e3f1f36256fa61897abd" title="Release SDA, then get return bit." alt="" coords="573,55,699,80"/>
+<area shape="poly" title=" " alt="" coords="733,56,699,61,699,55,733,50"/>
+<area shape="rect" href="i2cHelper_8h.html#ab9d0044dbe08aa6b7bb32e19c9b63b73" title="Just receive 8 bit from SDA (without start/stop condition and send anything)" alt="" coords="575,5,697,31"/>
+<area shape="poly" title=" " alt="" coords="732,36,697,30,698,25,733,30"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="574,54,499,33,500,28,575,49"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,104,507,129"/>
+<area shape="poly" title=" " alt="" coords="575,86,500,106,499,101,574,81"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,55,502,80"/>
+<area shape="poly" title=" " alt="" coords="560,70,503,70,503,65,560,65"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,252,525,277"/>
+<area shape="poly" title=" " alt="" coords="615,92,466,254,462,250,611,89"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="383,103,287,80,289,75,384,98"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,104,304,129"/>
+<area shape="poly" title=" " alt="" coords="381,119,304,119,304,114,381,114"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="384,135,299,156,298,151,383,130"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" title=" " alt="" coords="190,85,108,107,107,101,188,79"/>
+<area shape="poly" title=" " alt="" coords="171,119,113,119,113,114,171,114"/>
+<area shape="poly" title=" " alt="" coords="385,70,287,70,287,65,385,65"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="383,251,279,226,280,221,384,246"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,252,279,277"/>
+<area shape="poly" title=" " alt="" coords="362,267,279,267,279,262,362,262"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,301,328,327"/>
+<area shape="poly" title=" " alt="" coords="384,283,299,304,298,299,383,278"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,351,320,376"/>
+<area shape="poly" title=" " alt="" coords="422,288,379,315,329,342,298,353,297,348,327,337,377,311,419,283"/>
+<area shape="poly" title=" " alt="" coords="167,297,160,292,122,253,93,207,74,163,62,131,67,129,79,161,98,204,126,249,163,288,170,293"/>
+<area shape="poly" title=" " alt="" coords="561,21,517,21,517,15,561,15"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="acbdfafb9270b6e7fd1a1c65c394ce59f" name="acbdfafb9270b6e7fd1a1c65c394ce59f"></a>
@@ -685,6 +797,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>}</div>
 <div class="ttc" id="ai2cHelper_8h_html_acbdfafb9270b6e7fd1a1c65c394ce59f"><div class="ttname"><a href="i2cHelper_8h.html#acbdfafb9270b6e7fd1a1c65c394ce59f">__i2cSCL</a></div><div class="ttdeci">static pin_t __i2cSCL(i2cDev_t *dev)</div><div class="ttdoc">Get the SCL (clock) pin of a given I2C device.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00073">i2cHelper.h:73</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00012">i2cDev_t::scl</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00013">i2cDev_t::sda</a>.</p>
+
 </div>
 </div>
 <a id="a8d527f09c94133f3c265f5763cfed0a1" name="a8d527f09c94133f3c265f5763cfed0a1"></a>
@@ -728,6 +842,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   86</span>}</div>
 <div class="ttc" id="ai2cHelper_8h_html_a8d527f09c94133f3c265f5763cfed0a1"><div class="ttname"><a href="i2cHelper_8h.html#a8d527f09c94133f3c265f5763cfed0a1">__i2cSDA</a></div><div class="ttdeci">static pin_t __i2cSDA(i2cDev_t *dev)</div><div class="ttdoc">Get the SDA (data) pin of a given I2C device.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00083">i2cHelper.h:83</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00012">i2cDev_t::scl</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00013">i2cDev_t::sda</a>.</p>
+
 </div>
 </div>
 <a id="a19893d34640a8b31cc00b0a260ebd7bb" name="a19893d34640a8b31cc00b0a260ebd7bb"></a>
@@ -784,6 +900,74 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  112</span>}</div>
 <div class="ttc" id="ai2cHelper_8h_html_a19893d34640a8b31cc00b0a260ebd7bb"><div class="ttname"><a href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb">__i2cSetSCL</a></div><div class="ttdeci">static void __i2cSetSCL(i2cDev_t *dev, def level)</div><div class="ttdoc">Set logic level for SCL line of an I2C device.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00106">i2cHelper.h:106</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00012">i2cDev_t::scl</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2cHelper_8h_source.html#l00239">i2cGetReturnBit()</a>, <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2cHelper_8h_source.html#l00318">i2cReceiveByte()</a>, <a class="el" href="i2cHelper_8h_source.html#l00187">i2cSendAddressFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00216">i2cSendDataFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00137">i2cStartCondition()</a>, and <a class="el" href="i2cHelper_8h_source.html#l00161">i2cStopCondition()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a19893d34640a8b31cc00b0a260ebd7bb_icgraph.png" border="0" usemap="#ai2cHelper_8h_a19893d34640a8b31cc00b0a260ebd7bb_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a19893d34640a8b31cc00b0a260ebd7bb_icgraph" id="ai2cHelper_8h_a19893d34640a8b31cc00b0a260ebd7bb_icgraph">
+<area shape="rect" title="Set logic level for SCL line of an I2C device." alt="" coords="788,156,888,181"/>
+<area shape="rect" href="i2cHelper_8h.html#a58419d2cac69e3f1f36256fa61897abd" title="Release SDA, then get return bit." alt="" coords="594,255,719,280"/>
+<area shape="poly" title=" " alt="" coords="815,193,782,220,741,246,713,257,711,252,739,241,779,216,812,189"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,107,517,132"/>
+<area shape="poly" title=" " alt="" coords="814,148,781,119,739,96,706,88,672,84,604,86,541,96,490,109,489,104,540,91,603,80,673,79,707,83,741,92,784,115,817,144"/>
+<area shape="rect" href="i2cHelper_8h.html#ab9d0044dbe08aa6b7bb32e19c9b63b73" title="Just receive 8 bit from SDA (without start/stop condition and send anything)" alt="" coords="595,5,718,31"/>
+<area shape="poly" title=" " alt="" coords="820,146,786,98,764,74,739,52,701,33,704,28,741,48,767,70,790,95,824,143"/>
+<area shape="rect" href="i2cHelper_8h.html#a7869476049e0b21a7975eea55d0bd529" title="Send I2C address frame with R/W bit." alt="" coords="573,107,740,132"/>
+<area shape="poly" title=" " alt="" coords="776,155,704,135,705,130,778,150"/>
+<area shape="rect" href="i2cHelper_8h.html#a54d43e3e9cc2b33a70a74f388703017f" title="Send one I2C data frame (8&#45;bit)" alt="" coords="584,304,729,329"/>
+<area shape="poly" title=" " alt="" coords="826,195,792,245,769,272,741,295,719,306,717,302,739,290,765,268,788,242,822,192"/>
+<area shape="rect" href="i2cHelper_8h.html#a10c9a416f548d63a0a1ec2cb4b107c5e" title="Generate I2C START condition." alt="" coords="589,156,724,181"/>
+<area shape="poly" title=" " alt="" coords="774,171,724,171,724,166,774,166"/>
+<area shape="rect" href="i2cHelper_8h.html#ac6753f1f3022a2d26c354409028a0274" title="Generate I2C STOP condition." alt="" coords="591,205,723,231"/>
+<area shape="poly" title=" " alt="" coords="778,188,705,208,704,203,776,183"/>
+<area shape="poly" title=" " alt="" coords="580,252,572,245,560,233,553,220,547,194,541,169,534,157,524,145,506,134,509,130,527,141,539,154,546,167,552,193,558,218,564,230,575,241,583,247"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,205,507,231"/>
+<area shape="poly" title=" " alt="" coords="589,254,504,233,505,228,590,249"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,156,502,181"/>
+<area shape="poly" title=" " alt="" coords="584,252,572,246,556,233,547,220,538,208,524,196,498,184,500,179,527,192,542,205,551,217,560,229,575,241,586,247"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,255,525,280"/>
+<area shape="poly" title=" " alt="" coords="580,270,526,270,526,265,580,265"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,107,287,132"/>
+<area shape="poly" title=" " alt="" coords="385,202,374,196,359,183,350,170,341,158,327,146,286,129,288,124,329,141,345,154,354,167,363,180,378,192,388,197"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,156,304,181"/>
+<area shape="poly" title=" " alt="" coords="383,205,298,184,299,179,384,200"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,205,319,231"/>
+<area shape="poly" title=" " alt="" coords="381,221,319,221,319,215,381,215"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,156,113,181"/>
+<area shape="poly" title=" " alt="" coords="190,137,108,159,107,153,188,131"/>
+<area shape="poly" title=" " alt="" coords="171,171,113,171,113,166,171,166"/>
+<area shape="poly" title=" " alt="" coords="385,156,287,132,288,127,386,151"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,304,279,329"/>
+<area shape="poly" title=" " alt="" coords="384,286,280,311,279,306,383,281"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,353,279,379"/>
+<area shape="poly" title=" " alt="" coords="422,290,379,318,329,344,280,361,278,356,327,340,377,313,419,286"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,403,328,428"/>
+<area shape="poly" title=" " alt="" coords="434,293,390,344,361,371,329,394,305,405,302,400,327,389,358,366,387,340,430,289"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,255,320,280"/>
+<area shape="poly" title=" " alt="" coords="362,270,320,270,320,265,362,265"/>
+<area shape="poly" title=" " alt="" coords="165,398,160,393,136,369,116,340,87,280,69,223,60,182,65,181,74,221,92,278,121,338,140,365,163,389,169,394"/>
+<area shape="poly" title=" " alt="" coords="608,38,575,52,473,109,471,104,572,48,606,33"/>
+<area shape="poly" title=" " alt="" coords="559,122,517,122,517,117,559,117"/>
+<area shape="poly" title=" " alt="" coords="586,140,575,146,560,158,551,170,542,183,527,196,504,208,501,203,524,192,538,180,547,167,556,154,572,141,583,135"/>
+<area shape="poly" title=" " alt="" coords="590,138,503,159,501,154,589,133"/>
+<area shape="poly" title=" " alt="" coords="581,141,575,145,564,157,558,169,552,194,546,219,539,233,527,245,509,257,506,252,524,241,534,229,541,218,547,192,553,167,560,154,572,141,577,137"/>
+<area shape="poly" title=" " alt="" coords="584,301,572,295,556,282,547,270,538,258,524,246,498,233,500,228,527,241,542,254,551,267,560,279,575,290,586,296"/>
+<area shape="poly" title=" " alt="" coords="578,300,572,295,560,282,553,270,546,244,540,220,534,208,524,196,501,182,504,178,527,192,539,205,545,218,552,243,558,268,564,279,575,291,581,295"/>
+<area shape="poly" title=" " alt="" coords="589,303,504,283,505,277,590,298"/>
+<area shape="poly" title=" " alt="" coords="589,155,504,135,505,129,590,150"/>
+<area shape="poly" title=" " alt="" coords="590,187,505,208,504,203,589,182"/>
+<area shape="poly" title=" " alt="" coords="576,171,502,171,502,166,576,166"/>
+<area shape="poly" title=" " alt="" coords="589,189,575,196,560,208,551,220,542,233,527,246,503,257,501,252,524,241,538,229,547,217,557,204,572,192,586,184"/>
+<area shape="poly" title=" " alt="" coords="583,202,572,196,556,183,547,170,538,158,524,146,501,135,504,130,527,141,542,154,551,167,560,180,575,192,586,198"/>
+<area shape="poly" title=" " alt="" coords="577,221,507,221,507,215,577,215"/>
+<area shape="poly" title=" " alt="" coords="589,205,501,183,503,178,590,200"/>
+<area shape="poly" title=" " alt="" coords="590,236,505,257,504,252,589,231"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a8f204c74fbf2ffc97dcdf5d121e160b0" name="a8f204c74fbf2ffc97dcdf5d121e160b0"></a>
@@ -840,6 +1024,71 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   99</span>}</div>
 <div class="ttc" id="ai2cHelper_8h_html_a8f204c74fbf2ffc97dcdf5d121e160b0"><div class="ttname"><a href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0">__i2cSetSDA</a></div><div class="ttdeci">static void __i2cSetSDA(i2cDev_t *dev, def level)</div><div class="ttdoc">Set logic level for SDA line of an I2C device.</div><div class="ttdef"><b>Definition</b> <a href="i2cHelper_8h_source.html#l00093">i2cHelper.h:93</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cDefinition_8h_source.html#l00013">i2cDev_t::sda</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2cHelper_8h_source.html#l00239">i2cGetReturnBit()</a>, <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2cHelper_8h_source.html#l00187">i2cSendAddressFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00216">i2cSendDataFrame()</a>, <a class="el" href="i2cHelper_8h_source.html#l00137">i2cStartCondition()</a>, and <a class="el" href="i2cHelper_8h_source.html#l00161">i2cStopCondition()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a8f204c74fbf2ffc97dcdf5d121e160b0_icgraph.png" border="0" usemap="#ai2cHelper_8h_a8f204c74fbf2ffc97dcdf5d121e160b0_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a8f204c74fbf2ffc97dcdf5d121e160b0_icgraph" id="ai2cHelper_8h_a8f204c74fbf2ffc97dcdf5d121e160b0_icgraph">
+<area shape="rect" title="Set logic level for SDA line of an I2C device." alt="" coords="788,111,891,136"/>
+<area shape="rect" href="i2cHelper_8h.html#a58419d2cac69e3f1f36256fa61897abd" title="Release SDA, then get return bit." alt="" coords="594,36,719,61"/>
+<area shape="poly" title=" " alt="" coords="803,106,739,75,706,64,708,59,741,70,806,101"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,36,517,61"/>
+<area shape="poly" title=" " alt="" coords="821,101,787,60,764,40,739,26,706,15,672,10,602,12,537,23,486,38,485,33,536,18,601,6,672,5,707,10,741,21,767,36,791,56,825,97"/>
+<area shape="rect" href="i2cHelper_8h.html#a7869476049e0b21a7975eea55d0bd529" title="Send I2C address frame with R/W bit." alt="" coords="573,85,740,111"/>
+<area shape="poly" title=" " alt="" coords="774,117,740,112,741,107,775,112"/>
+<area shape="rect" href="i2cHelper_8h.html#a54d43e3e9cc2b33a70a74f388703017f" title="Send one I2C data frame (8&#45;bit)" alt="" coords="584,233,729,259"/>
+<area shape="poly" title=" " alt="" coords="822,149,788,187,741,224,717,236,714,231,739,220,784,184,818,145"/>
+<area shape="rect" href="i2cHelper_8h.html#a10c9a416f548d63a0a1ec2cb4b107c5e" title="Generate I2C START condition." alt="" coords="589,135,724,160"/>
+<area shape="poly" title=" " alt="" coords="775,134,724,141,724,136,774,129"/>
+<area shape="rect" href="i2cHelper_8h.html#ac6753f1f3022a2d26c354409028a0274" title="Generate I2C STOP condition." alt="" coords="591,184,723,209"/>
+<area shape="poly" title=" " alt="" coords="805,145,741,175,708,186,706,181,739,170,802,140"/>
+<area shape="poly" title=" " alt="" coords="580,51,517,51,517,46,580,46"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,135,507,160"/>
+<area shape="poly" title=" " alt="" coords="586,69,575,75,560,87,551,99,542,111,527,124,500,137,498,132,524,120,538,108,547,95,556,83,572,70,584,64"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,85,502,111"/>
+<area shape="poly" title=" " alt="" coords="590,67,503,88,501,83,589,62"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,184,525,209"/>
+<area shape="poly" title=" " alt="" coords="583,69,575,75,564,86,558,98,552,123,546,149,539,162,527,175,509,186,506,182,524,171,534,159,541,147,547,122,553,96,560,83,572,71,580,64"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,36,287,61"/>
+<area shape="poly" title=" " alt="" coords="388,132,374,124,359,111,350,99,341,87,327,75,286,59,288,54,329,70,345,83,354,95,363,108,378,120,391,127"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,85,304,111"/>
+<area shape="poly" title=" " alt="" coords="383,134,298,113,299,108,384,129"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,135,319,160"/>
+<area shape="poly" title=" " alt="" coords="381,150,319,150,319,145,381,145"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,85,113,111"/>
+<area shape="poly" title=" " alt="" coords="190,66,108,88,107,83,188,61"/>
+<area shape="poly" title=" " alt="" coords="171,101,113,101,113,95,171,95"/>
+<area shape="poly" title=" " alt="" coords="385,85,287,61,288,56,386,80"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,233,279,259"/>
+<area shape="poly" title=" " alt="" coords="384,215,280,240,279,235,383,210"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,283,279,308"/>
+<area shape="poly" title=" " alt="" coords="422,220,379,247,329,274,280,290,278,285,327,269,377,243,419,215"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,332,328,357"/>
+<area shape="poly" title=" " alt="" coords="434,222,390,273,361,300,329,323,305,334,302,329,327,318,358,296,387,269,430,219"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,184,320,209"/>
+<area shape="poly" title=" " alt="" coords="362,199,320,199,320,194,362,194"/>
+<area shape="poly" title=" " alt="" coords="165,327,160,323,136,298,116,270,87,209,69,152,60,111,65,110,74,151,92,207,121,267,140,295,163,319,169,323"/>
+<area shape="poly" title=" " alt="" coords="589,85,504,64,505,59,590,79"/>
+<area shape="poly" title=" " alt="" coords="590,116,505,137,504,132,589,111"/>
+<area shape="poly" title=" " alt="" coords="560,101,502,101,502,95,560,95"/>
+<area shape="poly" title=" " alt="" coords="586,118,575,124,560,136,551,149,542,162,527,175,504,186,501,181,524,170,538,158,547,146,556,133,572,120,583,114"/>
+<area shape="poly" title=" " alt="" coords="584,231,572,224,556,212,547,199,538,187,524,175,498,162,500,158,527,170,542,183,551,196,560,208,575,220,586,226"/>
+<area shape="poly" title=" " alt="" coords="577,228,572,224,560,211,553,198,547,173,541,148,534,136,524,124,501,111,504,106,527,120,539,133,546,146,552,172,558,196,564,208,575,220,581,224"/>
+<area shape="poly" title=" " alt="" coords="589,233,504,212,505,207,590,227"/>
+<area shape="poly" title=" " alt="" coords="586,132,572,124,557,112,547,99,538,87,524,75,501,64,503,59,527,70,542,83,551,96,560,108,575,120,589,127"/>
+<area shape="poly" title=" " alt="" coords="576,150,507,150,507,145,576,145"/>
+<area shape="poly" title=" " alt="" coords="589,134,501,113,503,108,590,129"/>
+<area shape="poly" title=" " alt="" coords="590,166,505,186,504,181,589,161"/>
+<area shape="poly" title=" " alt="" coords="577,179,572,175,560,162,553,149,547,123,541,98,534,86,524,75,506,64,509,59,527,71,539,83,546,97,552,122,558,147,564,159,575,171,581,175"/>
+<area shape="poly" title=" " alt="" coords="589,183,504,163,505,157,590,178"/>
+<area shape="poly" title=" " alt="" coords="583,181,572,175,556,162,547,149,538,136,524,124,501,113,503,108,527,120,542,133,551,146,560,158,575,170,586,176"/>
+<area shape="poly" title=" " alt="" coords="577,199,525,199,525,194,577,194"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a85ad2b593ec4c0fdaf267d09624a28db" name="a85ad2b593ec4c0fdaf267d09624a28db"></a>
@@ -893,6 +1142,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructi2cDev__t_html_a7c3d811bfabeafb6654c39eee9fef11a"><div class="ttname"><a href="structi2cDev__t.html#a7c3d811bfabeafb6654c39eee9fef11a">i2cDev_t::rxPtr</a></div><div class="ttdeci">void * rxPtr</div><div class="ttdoc">TX bit index within current byte.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00020">i2cDefinition.h:20</a></div></div>
 <div class="ttc" id="astructi2cDev__t_html_a9cb231962f4226ebde2a960e77ae94f2"><div class="ttname"><a href="structi2cDev__t.html#a9cb231962f4226ebde2a960e77ae94f2">i2cDev_t::rxIndBit</a></div><div class="ttdeci">uint8_t rxIndBit</div><div class="ttdoc">Current RX byte index.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00023">i2cDefinition.h:23</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="i2cDefinition_8h_source.html#l00023">i2cDev_t::rxIndBit</a>, <a class="el" href="i2cDefinition_8h_source.html#l00022">i2cDev_t::rxIndByte</a>, <a class="el" href="i2cDefinition_8h_source.html#l00020">i2cDev_t::rxPtr</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00021">i2cDev_t::rxSize</a>.</p>
+
 </div>
 </div>
 <a id="a4135215787f945394f1bc76898c15175" name="a4135215787f945394f1bc76898c15175"></a>
@@ -944,6 +1195,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructi2cDev__t_html_ad106f41581be92213181f8261a36dd05"><div class="ttname"><a href="structi2cDev__t.html#ad106f41581be92213181f8261a36dd05">i2cDev_t::txPtr</a></div><div class="ttdeci">void * txPtr</div><div class="ttdoc">The freq of CLK, is set automatically via [speed mode].</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00016">i2cDefinition.h:16</a></div></div>
 <div class="ttc" id="astructi2cDev__t_html_ad59b04f89153af541ae8a995dcb43e83"><div class="ttname"><a href="structi2cDev__t.html#ad59b04f89153af541ae8a995dcb43e83">i2cDev_t::txIndBit</a></div><div class="ttdeci">uint8_t txIndBit</div><div class="ttdoc">Current TX byte index.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00019">i2cDefinition.h:19</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="i2cDefinition_8h_source.html#l00019">i2cDev_t::txIndBit</a>, <a class="el" href="i2cDefinition_8h_source.html#l00018">i2cDev_t::txIndByte</a>, <a class="el" href="i2cDefinition_8h_source.html#l00016">i2cDev_t::txPtr</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00017">i2cDev_t::txSize</a>.</p>
+
 </div>
 </div>
 <a id="a58419d2cac69e3f1f36256fa61897abd" name="a58419d2cac69e3f1f36256fa61897abd"></a>
@@ -1004,6 +1257,61 @@ Functions</h2></td></tr>
 <div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdeci">@ LOW</div><div class="ttdef"><b>Definition</b> <a href="param_8h_source.html#l00014">param.h:14</a></div></div>
 <div class="ttc" id="areturn_8h_html_a9a544c1d669c13779fb62f3ec21ad4c7"><div class="ttname"><a href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a></div><div class="ttdeci">int32_t def</div><div class="ttdoc">Default return type.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00011">return.h:11</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00119">__i2cGetSDA()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="i2cHelper_8h_source.html#l00093">__i2cSetSDA()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00220">i2cSendByte()</a>, and <a class="el" href="i2c_8c_source.html#l00252">i2cSendDoubleByte()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_cgraph.png" border="0" usemap="#ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_cgraph" id="ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_cgraph">
+<area shape="rect" title="Release SDA, then get return bit." alt="" coords="5,80,131,105"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="190,5,273,31"/>
+<area shape="poly" title=" " alt="" coords="96,77,189,34,192,39,98,82"/>
+<area shape="rect" href="i2cHelper_8h.html#a43f86ea81faaf0e2e97a8561e3914d33" title="Read the current logic level of SDA line." alt="" coords="179,55,284,80"/>
+<area shape="poly" title=" " alt="" coords="131,80,164,75,165,80,131,86"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="181,104,281,129"/>
+<area shape="poly" title=" " alt="" coords="131,99,168,105,167,110,131,105"/>
+<area shape="rect" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="180,153,283,179"/>
+<area shape="poly" title=" " alt="" coords="98,103,190,145,188,150,96,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_icgraph.png" border="0" usemap="#ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_icgraph" id="ai2cHelper_8h_a58419d2cac69e3f1f36256fa61897abd_icgraph">
+<area shape="rect" title="Release SDA, then get return bit." alt="" coords="573,80,699,105"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="596,76,524,44,493,33,495,28,526,40,598,72"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,104,507,129"/>
+<area shape="poly" title=" " alt="" coords="560,105,507,112,506,107,560,100"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,55,502,80"/>
+<area shape="poly" title=" " alt="" coords="559,85,502,77,503,72,560,80"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,252,525,277"/>
+<area shape="poly" title=" " alt="" coords="613,117,468,254,464,250,609,113"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="383,103,287,80,289,75,384,98"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,104,304,129"/>
+<area shape="poly" title=" " alt="" coords="381,119,304,119,304,114,381,114"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="384,135,299,156,298,151,383,130"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" title=" " alt="" coords="190,85,108,107,107,101,188,79"/>
+<area shape="poly" title=" " alt="" coords="171,119,113,119,113,114,171,114"/>
+<area shape="poly" title=" " alt="" coords="385,70,287,70,287,65,385,65"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="383,251,279,226,280,221,384,246"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,252,279,277"/>
+<area shape="poly" title=" " alt="" coords="362,267,279,267,279,262,362,262"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,301,328,327"/>
+<area shape="poly" title=" " alt="" coords="384,283,299,304,298,299,383,278"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,351,320,376"/>
+<area shape="poly" title=" " alt="" coords="422,288,379,315,329,342,298,353,297,348,327,337,377,311,419,283"/>
+<area shape="poly" title=" " alt="" coords="167,297,160,292,122,253,93,207,74,163,62,131,67,129,79,161,98,204,126,249,163,288,170,293"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="ab9d0044dbe08aa6b7bb32e19c9b63b73" name="ab9d0044dbe08aa6b7bb32e19c9b63b73"></a>
@@ -1055,6 +1363,34 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  330</span>}</div>
 <div class="ttc" id="ahelper_8h_html_a7ed813e267ef0d1f2a79cc976242e9f8"><div class="ttname"><a href="helper_8h.html#a7ed813e267ef0d1f2a79cc976242e9f8">REP</a></div><div class="ttdeci">#define REP(i, a, b)</div><div class="ttdoc">Loop forward using size_t (Standard for array indexing).</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00032">helper.h:32</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00119">__i2cGetSDA()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_cgraph.png" border="0" usemap="#ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_cgraph" id="ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_cgraph">
+<area shape="rect" title="Just receive 8 bit from SDA (without start/stop condition and send anything)" alt="" coords="5,55,128,80"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="187,5,270,31"/>
+<area shape="poly" title=" " alt="" coords="108,52,173,32,175,37,110,57"/>
+<area shape="rect" href="i2cHelper_8h.html#a43f86ea81faaf0e2e97a8561e3914d33" title="Read the current logic level of SDA line." alt="" coords="176,55,281,80"/>
+<area shape="poly" title=" " alt="" coords="128,65,162,65,162,70,128,70"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="179,104,279,129"/>
+<area shape="poly" title=" " alt="" coords="110,77,173,97,172,102,108,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_icgraph.png" border="0" usemap="#ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_icgraph" id="ai2cHelper_8h_ab9d0044dbe08aa6b7bb32e19c9b63b73_icgraph">
+<area shape="rect" title="Just receive 8 bit from SDA (without start/stop condition and send anything)" alt="" coords="185,5,308,31"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="5,5,137,31"/>
+<area shape="poly" title=" " alt="" coords="171,21,137,21,137,15,171,15"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a0a4eff2d661ae645540dc04f95fcfd6a" name="a0a4eff2d661ae645540dc04f95fcfd6a"></a>
@@ -1101,6 +1437,31 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  281</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
 <div class="line"><span class="lineno">  282</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="i2cDefinition_8h_source.html#l00023">i2cDev_t::rxIndBit</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00022">i2cDev_t::rxIndByte</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, and <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a0a4eff2d661ae645540dc04f95fcfd6a_icgraph.png" border="0" usemap="#ai2cHelper_8h_a0a4eff2d661ae645540dc04f95fcfd6a_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a0a4eff2d661ae645540dc04f95fcfd6a_icgraph" id="ai2cHelper_8h_a0a4eff2d661ae645540dc04f95fcfd6a_icgraph">
+<area shape="rect" title="Reset I2C receive buffer index (bit/byte) to zero." alt="" coords="537,31,743,56"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="357,5,489,31"/>
+<area shape="poly" title=" " alt="" coords="524,32,489,28,490,23,524,27"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="367,55,479,80"/>
+<area shape="poly" title=" " alt="" coords="524,59,480,64,479,59,523,54"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="193,5,278,31"/>
+<area shape="poly" title=" " alt="" coords="361,54,278,32,279,27,362,49"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="176,55,295,80"/>
+<area shape="poly" title=" " alt="" coords="353,70,295,70,295,65,353,65"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="161,104,309,129"/>
+<area shape="poly" title=" " alt="" coords="362,86,286,106,284,101,361,81"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,31,113,56"/>
+<area shape="poly" title=" " alt="" coords="180,29,114,38,113,33,179,23"/>
+<area shape="poly" title=" " alt="" coords="162,60,113,53,114,48,163,55"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a5247406b4926938eeb40efc82d215246" name="a5247406b4926938eeb40efc82d215246"></a>
@@ -1147,6 +1508,31 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  267</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
 <div class="line"><span class="lineno">  268</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="i2cDefinition_8h_source.html#l00019">i2cDev_t::txIndBit</a>, and <a class="el" href="i2cDefinition_8h_source.html#l00018">i2cDev_t::txIndByte</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, and <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a5247406b4926938eeb40efc82d215246_icgraph.png" border="0" usemap="#ai2cHelper_8h_a5247406b4926938eeb40efc82d215246_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a5247406b4926938eeb40efc82d215246_icgraph" id="ai2cHelper_8h_a5247406b4926938eeb40efc82d215246_icgraph">
+<area shape="rect" title="Reset I2C transmit buffer index (bit/byte) to zero." alt="" coords="537,31,747,56"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="357,5,489,31"/>
+<area shape="poly" title=" " alt="" coords="523,32,489,28,490,23,524,27"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="367,55,479,80"/>
+<area shape="poly" title=" " alt="" coords="524,59,480,64,479,59,523,54"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="193,5,278,31"/>
+<area shape="poly" title=" " alt="" coords="361,54,278,32,279,27,362,49"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="176,55,295,80"/>
+<area shape="poly" title=" " alt="" coords="353,70,295,70,295,65,353,65"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="161,104,309,129"/>
+<area shape="poly" title=" " alt="" coords="362,86,286,106,284,101,361,81"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,31,113,56"/>
+<area shape="poly" title=" " alt="" coords="180,29,114,38,113,33,179,23"/>
+<area shape="poly" title=" " alt="" coords="162,60,113,53,114,48,163,55"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a7869476049e0b21a7975eea55d0bd529" name="a7869476049e0b21a7975eea55d0bd529"></a>
@@ -1226,6 +1612,59 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  210</span>}</div>
 <div class="ttc" id="ai2cDefinition_8h_html_a2bf0ae6e86945ccdbe0cbd215ed1e620afd55183d005b84269d610646ac6b4bdf"><div class="ttname"><a href="i2cDefinition_8h.html#a2bf0ae6e86945ccdbe0cbd215ed1e620afd55183d005b84269d610646ac6b4bdf">I2C_WRITE_MODE</a></div><div class="ttdeci">@ I2C_WRITE_MODE</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00063">i2cDefinition.h:63</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="i2cHelper_8h_source.html#l00093">__i2cSetSDA()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, <a class="el" href="i2cDefinition_8h_source.html#l00063">I2C_WRITE_MODE</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00220">i2cSendByte()</a>, and <a class="el" href="i2c_8c_source.html#l00252">i2cSendDoubleByte()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_cgraph.png" border="0" usemap="#ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_cgraph" id="ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_cgraph">
+<area shape="rect" title="Send I2C address frame with R/W bit." alt="" coords="5,55,172,80"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="230,5,313,31"/>
+<area shape="poly" title=" " alt="" coords="136,52,216,30,218,35,137,57"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="221,55,321,80"/>
+<area shape="poly" title=" " alt="" coords="172,65,207,65,207,70,172,70"/>
+<area shape="rect" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="220,104,323,129"/>
+<area shape="poly" title=" " alt="" coords="137,77,211,98,209,103,136,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_icgraph.png" border="0" usemap="#ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_icgraph" id="ai2cHelper_8h_a7869476049e0b21a7975eea55d0bd529_icgraph">
+<area shape="rect" title="Send I2C address frame with R/W bit." alt="" coords="573,80,740,105"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="611,77,524,45,491,33,493,28,526,39,613,72"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,104,507,129"/>
+<area shape="poly" title=" " alt="" coords="560,107,507,113,507,108,559,101"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,55,502,80"/>
+<area shape="poly" title=" " alt="" coords="559,83,502,76,503,71,560,78"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,252,525,277"/>
+<area shape="poly" title=" " alt="" coords="631,116,469,254,466,250,628,112"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="383,103,287,80,289,75,384,98"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,104,304,129"/>
+<area shape="poly" title=" " alt="" coords="381,119,304,119,304,114,381,114"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="384,135,299,156,298,151,383,130"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" title=" " alt="" coords="190,85,108,107,107,101,188,79"/>
+<area shape="poly" title=" " alt="" coords="171,119,113,119,113,114,171,114"/>
+<area shape="poly" title=" " alt="" coords="385,70,287,70,287,65,385,65"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="383,251,279,226,280,221,384,246"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,252,279,277"/>
+<area shape="poly" title=" " alt="" coords="362,267,279,267,279,262,362,262"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,301,328,327"/>
+<area shape="poly" title=" " alt="" coords="384,283,299,304,298,299,383,278"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,351,320,376"/>
+<area shape="poly" title=" " alt="" coords="422,288,379,315,329,342,298,353,297,348,327,337,377,311,419,283"/>
+<area shape="poly" title=" " alt="" coords="167,297,160,292,122,253,93,207,74,163,62,131,67,129,79,161,98,204,126,249,163,288,170,293"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a54d43e3e9cc2b33a70a74f388703017f" name="a54d43e3e9cc2b33a70a74f388703017f"></a>
@@ -1292,6 +1731,57 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  232</span>    }</div>
 <div class="line"><span class="lineno">  233</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="i2cHelper_8h_source.html#l00093">__i2cSetSDA()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00220">i2cSendByte()</a>, and <a class="el" href="i2c_8c_source.html#l00252">i2cSendDoubleByte()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_cgraph.png" border="0" usemap="#ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_cgraph" id="ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_cgraph">
+<area shape="rect" title="Send one I2C data frame (8&#45;bit)" alt="" coords="5,55,151,80"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="209,5,291,31"/>
+<area shape="poly" title=" " alt="" coords="122,52,194,31,196,36,124,57"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="200,55,300,80"/>
+<area shape="poly" title=" " alt="" coords="151,65,186,65,186,70,151,70"/>
+<area shape="rect" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="199,104,301,129"/>
+<area shape="poly" title=" " alt="" coords="124,77,193,98,191,103,122,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_icgraph.png" border="0" usemap="#ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_icgraph" id="ai2cHelper_8h_a54d43e3e9cc2b33a70a74f388703017f_icgraph">
+<area shape="rect" title="Send one I2C data frame (8&#45;bit)" alt="" coords="573,55,719,80"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,55,507,80"/>
+<area shape="poly" title=" " alt="" coords="559,70,507,70,507,65,559,65"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,5,502,31"/>
+<area shape="poly" title=" " alt="" coords="581,54,501,33,502,28,583,49"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,203,525,228"/>
+<area shape="poly" title=" " alt="" coords="619,91,470,204,467,200,615,87"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,5,287,31"/>
+<area shape="poly" title=" " alt="" coords="383,54,287,31,289,26,384,49"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,55,304,80"/>
+<area shape="poly" title=" " alt="" coords="381,70,304,70,304,65,381,65"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,104,319,129"/>
+<area shape="poly" title=" " alt="" coords="384,86,299,107,298,101,383,81"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,55,113,80"/>
+<area shape="poly" title=" " alt="" coords="190,35,108,57,107,52,188,30"/>
+<area shape="poly" title=" " alt="" coords="171,70,113,70,113,65,171,65"/>
+<area shape="poly" title=" " alt="" coords="385,21,287,21,287,15,385,15"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,153,279,179"/>
+<area shape="poly" title=" " alt="" coords="383,202,279,177,280,172,384,197"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="362,218,279,218,279,213,362,213"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,252,328,277"/>
+<area shape="poly" title=" " alt="" coords="384,234,299,255,298,249,383,229"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,301,320,327"/>
+<area shape="poly" title=" " alt="" coords="422,238,379,266,329,292,298,304,297,299,327,288,377,261,419,234"/>
+<area shape="poly" title=" " alt="" coords="167,248,160,243,122,203,93,158,74,114,62,81,67,80,79,112,98,155,126,200,163,239,170,244"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a10c9a416f548d63a0a1ec2cb4b107c5e" name="a10c9a416f548d63a0a1ec2cb4b107c5e"></a>
@@ -1348,6 +1838,59 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb">__i2cSetSCL</a>(dev, <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a>);</div>
 <div class="line"><span class="lineno">  156</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="i2cHelper_8h_source.html#l00093">__i2cSetSDA()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00220">i2cSendByte()</a>, and <a class="el" href="i2c_8c_source.html#l00252">i2cSendDoubleByte()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_cgraph.png" border="0" usemap="#ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_cgraph" id="ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_cgraph">
+<area shape="rect" title="Generate I2C START condition." alt="" coords="5,55,140,80"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="198,5,281,31"/>
+<area shape="poly" title=" " alt="" coords="115,52,184,32,185,37,117,57"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="189,55,289,80"/>
+<area shape="poly" title=" " alt="" coords="140,65,176,65,176,70,140,70"/>
+<area shape="rect" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="188,104,291,129"/>
+<area shape="poly" title=" " alt="" coords="117,77,183,97,182,102,115,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_icgraph.png" border="0" usemap="#ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_icgraph" id="ai2cHelper_8h_a10c9a416f548d63a0a1ec2cb4b107c5e_icgraph">
+<area shape="rect" title="Generate I2C START condition." alt="" coords="573,80,708,105"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="599,77,524,44,492,33,494,28,526,40,601,72"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,104,507,129"/>
+<area shape="poly" title=" " alt="" coords="560,105,507,112,507,107,559,100"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,55,502,80"/>
+<area shape="poly" title=" " alt="" coords="560,85,502,77,503,71,560,79"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,252,525,277"/>
+<area shape="poly" title=" " alt="" coords="617,117,468,254,464,250,613,113"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="383,103,287,80,289,75,384,98"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,104,304,129"/>
+<area shape="poly" title=" " alt="" coords="381,119,304,119,304,114,381,114"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="384,135,299,156,298,151,383,130"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" title=" " alt="" coords="190,85,108,107,107,101,188,79"/>
+<area shape="poly" title=" " alt="" coords="171,119,113,119,113,114,171,114"/>
+<area shape="poly" title=" " alt="" coords="385,70,287,70,287,65,385,65"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="383,251,279,226,280,221,384,246"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,252,279,277"/>
+<area shape="poly" title=" " alt="" coords="362,267,279,267,279,262,362,262"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,301,328,327"/>
+<area shape="poly" title=" " alt="" coords="384,283,299,304,298,299,383,278"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,351,320,376"/>
+<area shape="poly" title=" " alt="" coords="422,288,379,315,329,342,298,353,297,348,327,337,377,311,419,283"/>
+<area shape="poly" title=" " alt="" coords="167,297,160,292,122,253,93,207,74,163,62,131,67,129,79,161,98,204,126,249,163,288,170,293"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="ac6753f1f3022a2d26c354409028a0274" name="ac6753f1f3022a2d26c354409028a0274"></a>
@@ -1404,6 +1947,59 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0">__i2cSetSDA</a>(dev, <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">HIGH</a>);</div>
 <div class="line"><span class="lineno">  180</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="i2cHelper_8h_source.html#l00063">__i2cFreq()</a>, <a class="el" href="i2cHelper_8h_source.html#l00106">__i2cSetSCL()</a>, <a class="el" href="i2cHelper_8h_source.html#l00093">__i2cSetSDA()</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, and <a class="el" href="param_8h_source.html#l00014">LOW</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="i2c_8c_source.html#l00352">i2cReceiveBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00294">i2cSendBuffer()</a>, <a class="el" href="i2c_8c_source.html#l00220">i2cSendByte()</a>, and <a class="el" href="i2c_8c_source.html#l00252">i2cSendDoubleByte()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_cgraph.png" border="0" usemap="#ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_cgraph" alt=""/></div>
+<map name="ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_cgraph" id="ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_cgraph">
+<area shape="rect" title="Generate I2C STOP condition." alt="" coords="5,55,137,80"/>
+<area shape="rect" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="195,5,278,31"/>
+<area shape="poly" title=" " alt="" coords="114,52,181,32,183,37,115,57"/>
+<area shape="rect" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="187,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="137,65,173,65,173,70,137,70"/>
+<area shape="rect" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="185,104,288,129"/>
+<area shape="poly" title=" " alt="" coords="115,77,181,97,179,102,114,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_icgraph.png" border="0" usemap="#ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_icgraph" alt=""/></div>
+<map name="ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_icgraph" id="ai2cHelper_8h_ac6753f1f3022a2d26c354409028a0274_icgraph">
+<area shape="rect" title="Generate I2C STOP condition." alt="" coords="573,80,705,105"/>
+<area shape="rect" href="i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="385,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="598,77,524,44,492,33,494,28,526,40,600,72"/>
+<area shape="rect" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="395,104,507,129"/>
+<area shape="poly" title=" " alt="" coords="560,105,507,112,506,107,559,100"/>
+<area shape="rect" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365" title="Send a specified byte." alt="" coords="399,55,502,80"/>
+<area shape="poly" title=" " alt="" coords="559,85,502,77,502,72,560,79"/>
+<area shape="rect" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e" title="Send a specified double byte." alt="" coords="376,252,525,277"/>
+<area shape="poly" title=" " alt="" coords="616,117,468,254,464,250,612,113"/>
+<area shape="rect" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="202,55,287,80"/>
+<area shape="poly" title=" " alt="" coords="383,103,287,80,289,75,384,98"/>
+<area shape="rect" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="185,104,304,129"/>
+<area shape="poly" title=" " alt="" coords="381,119,304,119,304,114,381,114"/>
+<area shape="rect" href="oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="171,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="384,135,299,156,298,151,383,130"/>
+<area shape="rect" href="oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,104,113,129"/>
+<area shape="poly" title=" " alt="" coords="190,85,108,107,107,101,188,79"/>
+<area shape="poly" title=" " alt="" coords="171,119,113,119,113,114,171,114"/>
+<area shape="poly" title=" " alt="" coords="385,70,287,70,287,65,385,65"/>
+<area shape="rect" href="oled128x64_8c.html#a99a151d093aadbda4cb7dd31f7e94e2a" title=" " alt="" coords="210,203,279,228"/>
+<area shape="poly" title=" " alt="" coords="383,251,279,226,280,221,384,246"/>
+<area shape="rect" href="oled128x64_8c.html#a40ebf8c5b45960a8e142eea3928f9ae8" title=" " alt="" coords="211,252,279,277"/>
+<area shape="poly" title=" " alt="" coords="362,267,279,267,279,262,362,262"/>
+<area shape="rect" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb" title="Display the content stored in OLED RAM (resume from “all pixels on” mode)." alt="" coords="161,301,328,327"/>
+<area shape="poly" title=" " alt="" coords="384,283,299,304,298,299,383,278"/>
+<area shape="rect" href="oled128x64_8c.html#a52636dec26bbd2c14e41b14e2ff6d89f" title="Turn on all pixels on the OLED display (override RAM content)." alt="" coords="169,351,320,376"/>
+<area shape="poly" title=" " alt="" coords="422,288,379,315,329,342,298,353,297,348,327,337,377,311,419,283"/>
+<area shape="poly" title=" " alt="" coords="167,297,160,292,122,253,93,207,74,163,62,131,67,129,79,161,98,204,126,249,163,288,170,293"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

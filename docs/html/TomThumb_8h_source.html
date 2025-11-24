@@ -98,11 +98,58 @@ $(document).ready(function(){initNavTree('TomThumb_8h_source.html',''); initResi
   <div class="headertitle"><div class="title">TomThumb.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TomThumb_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../gfxfont.h&quot;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58">   50</a></span><span class="preprocessor">#define TOMTHUMB_USE_EXTENDED 0</span></div>
+<a href="TomThumb_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../gfxfont.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/**</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment">** The original 3x5 font is licensed under the 3-clause BSD license:</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment">**</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment">** Copyright 1999 Brian J. Swetland</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment">** Copyright 1999 Vassilii Khachaturov</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment">** Portions (of vt100.c/vt100.h) copyright Dan Marks</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment">** </span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment">** All rights reserved.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment">**</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment">** Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment">** modification, are permitted provided that the following conditions</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment">** are met:</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment">** 1. Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment">**    notice, this list of conditions, and the following disclaimer.</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment">** 2. Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment">**    notice, this list of conditions, and the following disclaimer in the</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment">**    documentation and/or other materials provided with the distribution.</span></div>
+<div class="line"><span class="lineno">   19</span><span class="comment">** 3. The name of the authors may not be used to endorse or promote products</span></div>
+<div class="line"><span class="lineno">   20</span><span class="comment">**    derived from this software without specific prior written permission.</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment">**</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment">** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment">** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment">** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment">** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment">** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment">** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment">** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment">** </span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment">** Modifications to Tom Thumb for improved readability are from Robey Pointer, </span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment">** see:</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment">** http://robey.lag.net/2010/01/23/tiny-monospace-font.html</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment">** </span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment">** The original author does not have any objection to relicensing of Robey </span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment">** Pointer&#39;s modifications (in this file) in a more permissive license.  See </span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment">** the discussion at the above blog, and also here:</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment">** http://opengameart.org/forumtopic/how-to-submit-art-using-the-3-clause-bsd-license</span></div>
+<div class="line"><span class="lineno">   41</span><span class="comment">**</span></div>
+<div class="line"><span class="lineno">   42</span><span class="comment">** Feb 21, 2016: Conversion from Linux BDF --&gt; Adafruit GFX font,</span></div>
+<div class="line"><span class="lineno">   43</span><span class="comment">** with the help of this Python script:</span></div>
+<div class="line"><span class="lineno">   44</span><span class="comment">** https://gist.github.com/skelliam/322d421f028545f16f6d</span></div>
+<div class="line"><span class="lineno">   45</span><span class="comment">** William Skellenger (williamj@skellenger.net)</span></div>
+<div class="line"><span class="lineno">   46</span><span class="comment">** Twitter: @skelliam</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">** </span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58">   50</a></span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">TOMTHUMB_USE_EXTENDED</span> 0</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">   52</a></span><span class="keyword">const</span> uint8_t TomThumbBitmaps[] <a class="code hl_variable" href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">   52</a></span><span class="keyword">const</span> uint8_t TomThumbBitmaps[] <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>   0x00,                                <span class="comment">/* 0x20 space */</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   0x80, 0x80, 0x80, 0x00, 0x80,        <span class="comment">/* 0x21 exclam */</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>   0xA0, 0xA0,                          <span class="comment">/* 0x22 quotedbl */</span></div>
@@ -198,7 +245,7 @@ $(document).ready(function(){initNavTree('TomThumb_8h_source.html',''); initResi
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>   0x80, 0x80, 0x00, 0x80, 0x80,        <span class="comment">/* 0x7C bar */</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>   0xC0, 0x40, 0x20, 0x40, 0xC0,        <span class="comment">/* 0x7D braceright */</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>   0x60, 0xC0,                          <span class="comment">/* 0x7E asciitilde */</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#if (TOMTHUMB_USE_EXTENDED)</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#</span><span class="preprocessor">if</span> <span class="preprocessor">(</span><a class="code hl_define" href="TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58">TOMTHUMB_USE_EXTENDED</a><span class="preprocessor">)</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>   0x80, 0x00, 0x80, 0x80, 0x80,        <span class="comment">/* 0xA1 exclamdown */</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>   0x40, 0xE0, 0x80, 0xE0, 0x40,        <span class="comment">/* 0xA2 cent */</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>   0x60, 0x40, 0xE0, 0x40, 0xE0,        <span class="comment">/* 0xA3 sterling */</span></div>
@@ -308,13 +355,12 @@ $(document).ready(function(){initNavTree('TomThumb_8h_source.html',''); initResi
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>   0xA0,                                <span class="comment">/* 0x2026 ellipsis */</span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>   0x60, 0xE0, 0xE0, 0xC0, 0x60,        <span class="comment">/* 0x20AC Euro */</span></div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>   0xE0, 0xA0, 0xA0, 0xA0, 0xE0,        <span class="comment">/* 0xFFFD uniFFFD */</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#endif </span><span class="comment">/* (TOMTHUMB_USE_EXTENDED)  */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* (TOMTHUMB_USE_EXTENDED)  */</span></div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  };</div>
-</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">/* {offset, width, height, advance cursor, x offset, y offset} */</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keyword">const</span> <a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> TomThumbGlyphs[] <a class="code hl_variable" href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keyword">const</span> GFXglyph TomThumbGlyphs[] <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>   { 0, 8, 1, 2, 0, -5 },    <span class="comment">/* 0x20 space */</span></div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>   { 1, 8, 5, 2, 0, -5 },    <span class="comment">/* 0x21 exclam */</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>   { 6, 8, 2, 4, 0, -5 },    <span class="comment">/* 0x22 quotedbl */</span></div>
@@ -410,7 +456,7 @@ $(document).ready(function(){initNavTree('TomThumb_8h_source.html',''); initResi
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>   { 406, 8, 5, 2, 0, -5 },  <span class="comment">/* 0x7C bar */</span></div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>   { 411, 8, 5, 4, 0, -5 },  <span class="comment">/* 0x7D braceright */</span></div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>   { 416, 8, 2, 4, 0, -5 },  <span class="comment">/* 0x7E asciitilde */</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">#if (TOMTHUMB_USE_EXTENDED)</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">#</span><span class="preprocessor">if</span> <span class="preprocessor">(</span><a class="code hl_define" href="TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58">TOMTHUMB_USE_EXTENDED</a><span class="preprocessor">)</span></div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>   { 418, 8, 5, 2, 0, -5 },  <span class="comment">/* 0xA1 exclamdown */</span></div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>   { 423, 8, 5, 4, 0, -5 },  <span class="comment">/* 0xA2 cent */</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>   { 428, 8, 5, 4, 0, -5 },  <span class="comment">/* 0xA3 sterling */</span></div>
@@ -520,16 +566,15 @@ $(document).ready(function(){initNavTree('TomThumb_8h_source.html',''); initResi
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>   { 893, 8, 1, 4, 0, -1 },  <span class="comment">/* 0x2026 ellipsis */</span></div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>   { 894, 8, 5, 4, 0, -5 },  <span class="comment">/* 0x20AC Euro */</span></div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>   { 899, 8, 5, 4, 0, -5 },  <span class="comment">/* 0xFFFD uniFFFD */</span></div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="preprocessor">#endif </span><span class="comment">/* (TOMTHUMB_USE_EXTENDED) */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* (TOMTHUMB_USE_EXTENDED) */</span></div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>};</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span><span class="keyword">const</span> <a class="code hl_struct" href="structGFXfont.html">GFXfont</a> TomThumb <a class="code hl_variable" href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span><span class="keyword">const</span> GFXfont TomThumb <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>  (uint8_t  *)TomThumbBitmaps,</div>
-<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>  (<a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> *)TomThumbGlyphs,</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>  (GFXglyph *)TomThumbGlyphs,</div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>  0x20, 0x7E, 6 };</div>
-<div class="ttc" id="aTomThumb_8h_html_a2fbcc74e9fcf029507e016c73c0b3218"><div class="ttname"><a href="TomThumb_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a></div><div class="ttdeci">const uint8_t TomThumbBitmaps[] PROGMEM</div><div class="ttdef"><b>Definition</b> <a href="TomThumb_8h_source.html#l00052">TomThumb.h:52</a></div></div>
-<div class="ttc" id="astructGFXfont_html"><div class="ttname"><a href="structGFXfont.html">GFXfont</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00014">gfxfont.h:14</a></div></div>
-<div class="ttc" id="astructGFXglyph_html"><div class="ttname"><a href="structGFXglyph.html">GFXglyph</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00007">gfxfont.h:7</a></div></div>
+<div class="ttc" id="aTomThumb_8h_html_a1ad29de7c6a2941525eabc800aa8ea58"><div class="ttname"><a href="TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58">TOMTHUMB_USE_EXTENDED</a></div><div class="ttdeci">#define TOMTHUMB_USE_EXTENDED</div><div class="ttdef"><b>Definition</b> <a href="TomThumb_8h_source.html#l00050">TomThumb.h:50</a></div></div>
+<div class="ttc" id="agfxfont_8h_html_a2fbcc74e9fcf029507e016c73c0b3218"><div class="ttname"><a href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a></div><div class="ttdeci">#define PROGMEM</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00005">gfxfont.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

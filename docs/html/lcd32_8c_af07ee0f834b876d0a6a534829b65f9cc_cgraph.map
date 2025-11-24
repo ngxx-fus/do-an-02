@@ -1,0 +1,9 @@
+<map id="spiStartTransaction" name="spiStartTransaction">
+<area shape="rect" id="Node000001" title="Perform a SPI transaction (Master mode bit&#45;banging)." alt="" coords="5,55,152,80"/>
+<area shape="rect" id="Node000002" href="$lcd32_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title="Reset the receive buffer indices and flags." alt="" coords="241,5,354,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,52,227,31,228,36,136,57"/>
+<area shape="rect" id="Node000003" href="$spi_8h.html#a8a4fd62d7c73330b2162867d6b26b0d8" title="Set CLK pin level based on CPOL and desired logical state (IDLE/ACTIVE)" alt="" coords="237,55,358,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,65,223,65,223,70,153,70"/>
+<area shape="rect" id="Node000004" href="$lcd32_8c.html#afea8e89cd2dd2e5d5ddbf211855fe9a1" title="Get the next bit to transmit from the buffer." alt="" coords="200,104,395,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,77,228,98,226,104,135,83"/>
+</map>

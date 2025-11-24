@@ -966,6 +966,24 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="astructspiDev__t_html_ad7e400884f5db2cdac3636f0dce53ba3"><div class="ttname"><a href="structspiDev__t.html#ad7e400884f5db2cdac3636f0dce53ba3">spiDev_t::rBuffSize</a></div><div class="ttdeci">size_t rBuffSize</div><div class="ttdoc">Size of receive buffer.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00100">spi.h:100</a></div></div>
 <div class="ttc" id="astructspiDev__t_html_ae8edd0283b4fb043f25ca54988bfb05e"><div class="ttname"><a href="structspiDev__t.html#ae8edd0283b4fb043f25ca54988bfb05e">spiDev_t::cs</a></div><div class="ttdeci">pin_t cs</div><div class="ttdoc">Chip select pin.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00088">spi.h:88</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00105">spiDev_t::__cpha</a>, <a class="el" href="spi_8h_source.html#l00106">spiDev_t::__cpol</a>, <a class="el" href="spi_8h_source.html#l00107">spiDev_t::__master_slave</a>, <a class="el" href="spi_8h_source.html#l00085">spiDev_t::clk</a>, <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, <a class="el" href="spi_8h_source.html#l00088">spiDev_t::cs</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="spi_8h_source.html#l00090">spiDev_t::freq</a>, <a class="el" href="spi_8h_source.html#l00087">spiDev_t::miso</a>, <a class="el" href="spi_8h_source.html#l00086">spiDev_t::mosi</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="spi_8h_source.html#l00099">spiDev_t::rBuff</a>, <a class="el" href="spi_8h_source.html#l00100">spiDev_t::rBuffSize</a>, <a class="el" href="spi_8h_source.html#l00128">SPI_CPHA</a>, <a class="el" href="spi_8h_source.html#l00127">SPI_CPOL</a>, <a class="el" href="spi_8h_source.html#l00126">SPI_MODE</a>, <a class="el" href="lcd32_8c_source.html#l00123">spiResetRBuff()</a>, <a class="el" href="spi_8c_source.html#l00116">spiResetRBuff()</a>, <a class="el" href="lcd32_8c_source.html#l00113">spiResetTBuff()</a>, <a class="el" href="spi_8c_source.html#l00108">spiResetTBuff()</a>, <a class="el" href="spi_8h_source.html#l00092">spiDev_t::stat</a>, <a class="el" href="spi_8h_source.html#l00094">spiDev_t::tBuff</a>, and <a class="el" href="spi_8h_source.html#l00095">spiDev_t::tBuffSize</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spi_8h_ad41a70035cf58df521639a48693a4dc2_cgraph.png" border="0" usemap="#aspi_8h_ad41a70035cf58df521639a48693a4dc2_cgraph" alt=""/></div>
+<map name="aspi_8h_ad41a70035cf58df521639a48693a4dc2_cgraph" id="aspi_8h_ad41a70035cf58df521639a48693a4dc2_cgraph">
+<area shape="rect" title="Configure a SPI device." alt="" coords="5,80,132,105"/>
+<area shape="rect" href="lcd32_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title="Reset the receive buffer indices and flags." alt="" coords="180,5,293,31"/>
+<area shape="poly" title=" " alt="" coords="96,77,179,40,192,34,194,39,181,44,99,82"/>
+<area shape="rect" href="spi_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title=" " alt="" coords="180,55,293,80"/>
+<area shape="poly" title=" " alt="" coords="132,81,166,75,166,81,132,86"/>
+<area shape="rect" href="lcd32_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title="Reset the transmit buffer indices and flags." alt="" coords="181,104,293,129"/>
+<area shape="poly" title=" " alt="" coords="132,99,168,104,167,109,132,104"/>
+<area shape="rect" href="spi_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title=" " alt="" coords="181,153,293,179"/>
+<area shape="poly" title=" " alt="" coords="100,103,195,145,193,150,98,108"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a9e20bca89dc6ea3716eec53098308d64" name="a9e20bca89dc6ea3716eec53098308d64"></a>
@@ -1028,6 +1046,8 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2">ERR_MALLOC_FAILED</a></div><div class="ttdeci">@ ERR_MALLOC_FAILED</div><div class="ttdoc">Memory allocation failed.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00037">return.h:37</a></div></div>
 <div class="ttc" id="astructspiDev__t_html"><div class="ttname"><a href="structspiDev__t.html">spiDev_t</a></div><div class="ttdoc">SPI device descriptor structure.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00084">spi.h:84</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00037">ERR_MALLOC_FAILED</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, and <a class="el" href="return_8h_source.html#l00034">OKE</a>.</p>
+
 </div>
 </div>
 <a id="a3e7e3ce707a62db42a7e4a7a2ebbe3e8" name="a3e7e3ce707a62db42a7e4a7a2ebbe3e8"></a>
@@ -1142,6 +1162,8 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="astructspiDev__t_html_a5e99dbc99dc0550ae693557d9e96e1f0"><div class="ttname"><a href="structspiDev__t.html#a5e99dbc99dc0550ae693557d9e96e1f0">spiDev_t::rBuffIndex</a></div><div class="ttdeci">size_t rBuffIndex</div><div class="ttdoc">Current index in receive buffer.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00101">spi.h:101</a></div></div>
 <div class="ttc" id="astructspiDev__t_html_aaaa7a89fe01fce2672a8ab0c53c9dcb7"><div class="ttname"><a href="structspiDev__t.html#aaaa7a89fe01fce2672a8ab0c53c9dcb7">spiDev_t::mutex</a></div><div class="ttdeci">portMUX_TYPE mutex</div><div class="ttdoc">Mutex for thread safety.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00109">spi.h:109</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00085">spiDev_t::clk</a>, <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, <a class="el" href="spi_8h_source.html#l00088">spiDev_t::cs</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="spi_8h_source.html#l00090">spiDev_t::freq</a>, <a class="el" href="spi_8h_source.html#l00087">spiDev_t::miso</a>, <a class="el" href="spi_8h_source.html#l00086">spiDev_t::mosi</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="spi_8h_source.html#l00099">spiDev_t::rBuff</a>, <a class="el" href="spi_8h_source.html#l00101">spiDev_t::rBuffIndex</a>, <a class="el" href="spi_8h_source.html#l00102">spiDev_t::rBuffMask</a>, <a class="el" href="spi_8h_source.html#l00100">spiDev_t::rBuffSize</a>, <a class="el" href="spi_8h_source.html#l00126">SPI_MODE</a>, <a class="el" href="spi_8h_source.html#l00115">SPI_SLAVE</a>, <a class="el" href="spi_8h_source.html#l00094">spiDev_t::tBuff</a>, <a class="el" href="spi_8h_source.html#l00097">spiDev_t::tBuffMask</a>, and <a class="el" href="spi_8h_source.html#l00095">spiDev_t::tBuffSize</a>.</p>
+
 </div>
 </div>
 <a id="a3ea78cd667a66647603467460883059e" name="a3ea78cd667a66647603467460883059e"></a>
@@ -1306,6 +1328,20 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="line"><span class="lineno">  169</span>}</div>
 <div class="ttc" id="ahelper_8h_html_afd240252a70fc121b524d293b33811f2"><div class="ttname"><a href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a></div><div class="ttdeci">#define __mask32(i)</div><div class="ttdoc">Generate 32-bit mask with bit i set.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00057">helper.h:57</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00085">spiDev_t::clk</a>, <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, and <a class="el" href="spi_8h_source.html#l00127">SPI_CPOL</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lcd32_8c_source.html#l00547">spiStartTransaction()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spi_8h_a8a4fd62d7c73330b2162867d6b26b0d8_icgraph.png" border="0" usemap="#aspi_8h_a8a4fd62d7c73330b2162867d6b26b0d8_icgraph" alt=""/></div>
+<map name="aspi_8h_a8a4fd62d7c73330b2162867d6b26b0d8_icgraph" id="aspi_8h_a8a4fd62d7c73330b2162867d6b26b0d8_icgraph">
+<area shape="rect" title="Set CLK pin level based on CPOL and desired logical state (IDLE/ACTIVE)" alt="" coords="200,5,321,31"/>
+<area shape="rect" href="lcd32_8c.html#af07ee0f834b876d0a6a534829b65f9cc" title="Perform a SPI transaction (Master mode bit&#45;banging)." alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="186,21,153,21,153,15,186,15"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a599cba5d38196569bb30bc01a65d5b0a" name="a599cba5d38196569bb30bc01a65d5b0a"></a>
@@ -1448,6 +1484,20 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="line"><span class="lineno">  542</span>}</div>
 <div class="ttc" id="ahelper_8h_html_a899f2496cd49ba9b12b2ec3fe75d79e9"><div class="ttname"><a href="helper_8h.html#a899f2496cd49ba9b12b2ec3fe75d79e9">__isnot_positive</a></div><div class="ttdeci">#define __isnot_positive(x)</div><div class="ttdoc">Check if x is not positive (&lt;= 0).</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00073">helper.h:73</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="spi_8h_source.html#l00099">spiDev_t::rBuff</a>, <a class="el" href="spi_8h_source.html#l00100">spiDev_t::rBuffSize</a>, <a class="el" href="lcd32_8c_source.html#l00123">spiResetRBuff()</a>, and <a class="el" href="spi_8c_source.html#l00116">spiResetRBuff()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spi_8h_aa1298f51e81999bf486786d27bc3bd33_cgraph.png" border="0" usemap="#aspi_8h_aa1298f51e81999bf486786d27bc3bd33_cgraph" alt=""/></div>
+<map name="aspi_8h_aa1298f51e81999bf486786d27bc3bd33_cgraph" id="aspi_8h_aa1298f51e81999bf486786d27bc3bd33_cgraph">
+<area shape="rect" title="Assign receive buffer to the SPI device." alt="" coords="5,31,159,56"/>
+<area shape="rect" href="lcd32_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title="Reset the receive buffer indices and flags." alt="" coords="207,5,320,31"/>
+<area shape="poly" title=" " alt="" coords="159,30,193,25,193,30,159,35"/>
+<area shape="rect" href="spi_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title=" " alt="" coords="207,55,320,80"/>
+<area shape="poly" title=" " alt="" coords="159,51,193,55,193,61,159,56"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="ae10f60f11db164dcb2623f609a8d9a75" name="ae10f60f11db164dcb2623f609a8d9a75"></a>
@@ -1546,6 +1596,20 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="aspi_8h_html_ae99ffe7dc940f8f3d48c689a3b9e9815"><div class="ttname"><a href="spi_8h.html#ae99ffe7dc940f8f3d48c689a3b9e9815">spiSetMOSI</a></div><div class="ttdeci">#define spiSetMOSI(dev, lvl)</div><div class="ttdoc">Helper macro to set MOSI pin level.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00185">spi.h:185</a></div></div>
 <div class="ttc" id="astructspiDev__t_html_a7ec4ee89ef6e7379ac1051e94ef0af04"><div class="ttname"><a href="structspiDev__t.html#a7ec4ee89ef6e7379ac1051e94ef0af04">spiDev_t::tBuffIndex</a></div><div class="ttdeci">size_t tBuffIndex</div><div class="ttdoc">Current index in transmit buffer.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00096">spi.h:96</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="param_8h_source.html#l00014">LOW</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="spi_8h_source.html#l00128">SPI_CPHA</a>, <a class="el" href="spi_8h_source.html#l00114">SPI_MASTER</a>, <a class="el" href="spi_8h_source.html#l00126">SPI_MODE</a>, <a class="el" href="lcd32_8c_source.html#l00113">spiResetTBuff()</a>, <a class="el" href="spi_8c_source.html#l00108">spiResetTBuff()</a>, <a class="el" href="spi_8h_source.html#l00094">spiDev_t::tBuff</a>, <a class="el" href="spi_8h_source.html#l00096">spiDev_t::tBuffIndex</a>, and <a class="el" href="spi_8h_source.html#l00095">spiDev_t::tBuffSize</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spi_8h_ae10f60f11db164dcb2623f609a8d9a75_cgraph.png" border="0" usemap="#aspi_8h_ae10f60f11db164dcb2623f609a8d9a75_cgraph" alt=""/></div>
+<map name="aspi_8h_ae10f60f11db164dcb2623f609a8d9a75_cgraph" id="aspi_8h_ae10f60f11db164dcb2623f609a8d9a75_cgraph">
+<area shape="rect" title="Assign transmit buffer to the SPI device." alt="" coords="5,31,163,56"/>
+<area shape="rect" href="lcd32_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title="Reset the transmit buffer indices and flags." alt="" coords="211,5,323,31"/>
+<area shape="poly" title=" " alt="" coords="162,30,197,25,197,30,163,35"/>
+<area shape="rect" href="spi_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title=" " alt="" coords="211,55,323,80"/>
+<area shape="poly" title=" " alt="" coords="163,51,197,56,197,61,162,56"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="af07ee0f834b876d0a6a534829b65f9cc" name="af07ee0f834b876d0a6a534829b65f9cc"></a>
@@ -1722,6 +1786,26 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="aspi_8h_html_a6a99aa0512796433c2b827c27ac839af"><div class="ttname"><a href="spi_8h.html#a6a99aa0512796433c2b827c27ac839af">__spiDelay</a></div><div class="ttdeci">#define __spiDelay(us)</div><div class="ttdoc">Delay microseconds wrapper.</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00081">spi.h:81</a></div></div>
 <div class="ttc" id="aspi_8h_html_a8a4fd62d7c73330b2162867d6b26b0d8"><div class="ttname"><a href="spi_8h.html#a8a4fd62d7c73330b2162867d6b26b0d8">spiSetCLKState</a></div><div class="ttdeci">static void spiSetCLKState(spiDev_t *dev, enum SPI_CLK_STATE state)</div><div class="ttdoc">Set CLK pin level based on CPOL and desired logical state (IDLE/ACTIVE)</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00162">spi.h:162</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, <a class="el" href="return_8h_source.html#l00040">ERR_INVALID_ARG</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="spi_8h_source.html#l00090">spiDev_t::freq</a>, <a class="el" href="param_8h_source.html#l00015">HIGH</a>, <a class="el" href="param_8h_source.html#l00014">LOW</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, <a class="el" href="spi_8h_source.html#l00099">spiDev_t::rBuff</a>, <a class="el" href="spi_8h_source.html#l00100">spiDev_t::rBuffSize</a>, <a class="el" href="spi_8h_source.html#l00128">SPI_CPHA</a>, <a class="el" href="spi_8h_source.html#l00114">SPI_MASTER</a>, <a class="el" href="spi_8h_source.html#l00126">SPI_MODE</a>, <a class="el" href="spi_8h_source.html#l00121">SPICLK_ACTIVE</a>, <a class="el" href="spi_8h_source.html#l00120">SPICLK_IDLE</a>, <a class="el" href="lcd32_8c_source.html#l00123">spiResetRBuff()</a>, <a class="el" href="spi_8c_source.html#l00116">spiResetRBuff()</a>, <a class="el" href="spi_8h_source.html#l00162">spiSetCLKState()</a>, <a class="el" href="spi_8h_source.html#l00148">SPISTAT_RBUFF_FULL</a>, <a class="el" href="lcd32_8c_source.html#l00136">spiTransmitBuffGetNextBit()</a>, <a class="el" href="spi_8c_source.html#l00125">spiTransmitBuffGetNextBit()</a>, <a class="el" href="spi_8h_source.html#l00092">spiDev_t::stat</a>, <a class="el" href="spi_8h_source.html#l00094">spiDev_t::tBuff</a>, and <a class="el" href="spi_8h_source.html#l00095">spiDev_t::tBuffSize</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spi_8h_af07ee0f834b876d0a6a534829b65f9cc_cgraph.png" border="0" usemap="#aspi_8h_af07ee0f834b876d0a6a534829b65f9cc_cgraph" alt=""/></div>
+<map name="aspi_8h_af07ee0f834b876d0a6a534829b65f9cc_cgraph" id="aspi_8h_af07ee0f834b876d0a6a534829b65f9cc_cgraph">
+<area shape="rect" title="Start a SPI transaction (Master mode only)" alt="" coords="5,104,152,129"/>
+<area shape="rect" href="lcd32_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title="Reset the receive buffer indices and flags." alt="" coords="241,5,354,31"/>
+<area shape="poly" title=" " alt="" coords="95,102,141,71,199,40,226,30,228,35,201,44,144,75,98,106"/>
+<area shape="rect" href="spi_8c.html#a7f82e47aa82b28172c9092bb7c18139a" title=" " alt="" coords="241,55,354,80"/>
+<area shape="poly" title=" " alt="" coords="135,101,227,80,228,86,136,107"/>
+<area shape="rect" href="spi_8h.html#a8a4fd62d7c73330b2162867d6b26b0d8" title="Set CLK pin level based on CPOL and desired logical state (IDLE/ACTIVE)" alt="" coords="237,104,358,129"/>
+<area shape="poly" title=" " alt="" coords="153,114,223,114,223,119,153,119"/>
+<area shape="rect" href="lcd32_8c.html#afea8e89cd2dd2e5d5ddbf211855fe9a1" title="Get the next bit to transmit from the buffer." alt="" coords="200,153,395,179"/>
+<area shape="poly" title=" " alt="" coords="136,127,228,148,226,153,135,132"/>
+<area shape="rect" href="spi_8c.html#afea8e89cd2dd2e5d5ddbf211855fe9a1" title=" " alt="" coords="200,203,395,228"/>
+<area shape="poly" title=" " alt="" coords="99,127,144,157,201,188,225,196,223,201,199,192,141,162,96,132"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a1e363d88dac31b5a92c9550e59bf7c14" name="a1e363d88dac31b5a92c9550e59bf7c14"></a>
@@ -1868,6 +1952,8 @@ In slave mode, buffers must be set before any transaction!</dd></dl>
 <div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a></div><div class="ttdeci">@ ERR</div><div class="ttdoc">Generic error.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00035">return.h:35</a></div></div>
 <div class="ttc" id="aspi_8h_html_a79fd9aad2af2f9e3816946762deaa9a5"><div class="ttname"><a href="spi_8h.html#a79fd9aad2af2f9e3816946762deaa9a5">__spiLog1</a></div><div class="ttdeci">#define __spiLog1(...)</div><div class="ttdef"><b>Definition</b> <a href="spi_8h_source.html#l00073">spi.h:73</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="spi_8h_source.html#l00085">spiDev_t::clk</a>, <a class="el" href="spi_8h_source.html#l00089">spiDev_t::conf</a>, <a class="el" href="spi_8h_source.html#l00088">spiDev_t::cs</a>, <a class="el" href="return_8h_source.html#l00035">ERR</a>, <a class="el" href="return_8h_source.html#l00036">ERR_NULL</a>, <a class="el" href="spi_8h_source.html#l00087">spiDev_t::miso</a>, <a class="el" href="spi_8h_source.html#l00086">spiDev_t::mosi</a>, <a class="el" href="return_8h_source.html#l00034">OKE</a>, and <a class="el" href="spi_8h_source.html#l00126">SPI_MODE</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

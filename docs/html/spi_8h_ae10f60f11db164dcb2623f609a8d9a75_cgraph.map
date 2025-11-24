@@ -1,0 +1,7 @@
+<map id="spiSetTransmitBuffer" name="spiSetTransmitBuffer">
+<area shape="rect" id="Node000001" title="Assign transmit buffer to the SPI device." alt="" coords="5,31,163,56"/>
+<area shape="rect" id="Node000002" href="$lcd32_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title="Reset the transmit buffer indices and flags." alt="" coords="211,5,323,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,30,197,25,197,30,163,35"/>
+<area shape="rect" id="Node000003" href="$spi_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title=" " alt="" coords="211,55,323,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,51,197,56,197,61,162,56"/>
+</map>

@@ -98,12 +98,11 @@ $(document).ready(function(){initNavTree('Picopixel_8h_source.html',''); initRes
   <div class="headertitle"><div class="title">Picopixel.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Picopixel_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../gfxfont.h&quot;</span></div>
+<a href="Picopixel_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../gfxfont.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Picopixel by Sebastian Weber.  A tiny font</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// with all characters within a 6 pixel height.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="Picopixel_8h.html#ac719a8427290527216e711113b730228">    5</a></span><span class="keyword">const</span> uint8_t PicopixelBitmaps[] <a class="code hl_variable" href="Picopixel_8h.html#ac719a8427290527216e711113b730228">PROGMEM</a> = {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="Picopixel_8h.html#ac719a8427290527216e711113b730228">    5</a></span><span class="keyword">const</span> uint8_t PicopixelBitmaps[] <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  0xE8, 0xB4, 0x57, 0xD5, 0xF5, 0x00, 0x4E, 0x3E, 0x80, 0xA5, 0x4A, 0x4A,</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  0x5A, 0x50, 0xC0, 0x6A, 0x40, 0x95, 0x80, 0xAA, 0x80, 0x5D, 0x00, 0x60,</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  0xE0, 0x80, 0x25, 0x48, 0x56, 0xD4, 0x75, 0x40, 0xC5, 0x4E, 0xC5, 0x1C,</div>
@@ -119,9 +118,8 @@ $(document).ready(function(){initNavTree('Picopixel_8h_source.html',''); initRes
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  0xEA, 0xAA, 0x40, 0xD5, 0x6A, 0xD6, 0x80, 0x55, 0x00, 0xD7, 0x40, 0x75,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  0x90, 0xE8, 0x71, 0xE0, 0xBA, 0x40, 0xB5, 0x80, 0xB5, 0x00, 0x8D, 0x54,</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  0xAA, 0x80, 0xAC, 0xE0, 0xE5, 0x70, 0x6A, 0x26, 0xFC, 0xC8, 0xAC, 0x5A };</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> <a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> PicopixelGlyphs[] <a class="code hl_variable" href="Picopixel_8h.html#ac719a8427290527216e711113b730228">PROGMEM</a> = {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> GFXglyph PicopixelGlyphs[] <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  {     0,   0,   0,   2,    0,    1 },   <span class="comment">// 0x20 &#39; &#39;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  {     0,   1,   5,   2,    0,   -4 },   <span class="comment">// 0x21 &#39;!&#39;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  {     1,   3,   2,   4,    0,   -4 },   <span class="comment">// 0x22 &#39;&quot;&#39;</span></div>
@@ -218,15 +216,13 @@ $(document).ready(function(){initNavTree('Picopixel_8h_source.html',''); initRes
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  {   177,   3,   5,   4,    0,   -4 },   <span class="comment">// 0x7D &#39;}&#39;</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  {   179,   4,   2,   5,    0,   -3 } }; <span class="comment">// 0x7E &#39;~&#39;</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">const</span> <a class="code hl_struct" href="structGFXfont.html">GFXfont</a> Picopixel <a class="code hl_variable" href="Picopixel_8h.html#ac719a8427290527216e711113b730228">PROGMEM</a> = {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">const</span> GFXfont Picopixel <a class="code hl_define" href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a> = {</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  (uint8_t  *)PicopixelBitmaps,</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  (<a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> *)PicopixelGlyphs,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  (GFXglyph *)PicopixelGlyphs,</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  0x20, 0x7E, 7 };</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">// Approx. 852 bytes</span></div>
-<div class="ttc" id="aPicopixel_8h_html_ac719a8427290527216e711113b730228"><div class="ttname"><a href="Picopixel_8h.html#ac719a8427290527216e711113b730228">PROGMEM</a></div><div class="ttdeci">const uint8_t PicopixelBitmaps[] PROGMEM</div><div class="ttdef"><b>Definition</b> <a href="Picopixel_8h_source.html#l00005">Picopixel.h:5</a></div></div>
-<div class="ttc" id="astructGFXfont_html"><div class="ttname"><a href="structGFXfont.html">GFXfont</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00014">gfxfont.h:14</a></div></div>
-<div class="ttc" id="astructGFXglyph_html"><div class="ttname"><a href="structGFXglyph.html">GFXglyph</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00007">gfxfont.h:7</a></div></div>
+<div class="ttc" id="agfxfont_8h_html_a2fbcc74e9fcf029507e016c73c0b3218"><div class="ttname"><a href="gfxfont_8h.html#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a></div><div class="ttdeci">#define PROGMEM</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00005">gfxfont.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,0 +1,5 @@
+<map id="lcdTestTask" name="lcdTestTask">
+<area shape="rect" id="Node000001" title="Task to test LCD rendering by filling random colors." alt="" coords="5,5,101,31"/>
+<area shape="rect" id="Node000002" href="$lcd32_8h.html#aa9c10dee02914271f009a038a0244d93" title="[Public function] Flush cached canvas to real screen" alt="" coords="149,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,15,136,15,136,21,101,21"/>
+</map>

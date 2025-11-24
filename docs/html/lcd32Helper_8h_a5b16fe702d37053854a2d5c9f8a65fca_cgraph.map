@@ -1,0 +1,7 @@
+<map id="__lcd32WriteData" name="__lcd32WriteData">
+<area shape="rect" id="Node000001" title="[Internal] Write 16 bits data to LCD" alt="" coords="5,5,143,31"/>
+<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#af2bb32a580a854fc6c446766df75ad31" title="[Internal] Set state of 16 parallel data/command pins" alt="" coords="191,5,361,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,15,177,15,177,21,143,21"/>
+<area shape="rect" id="Node000003" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="409,5,568,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,15,396,15,396,21,362,21"/>
+</map>

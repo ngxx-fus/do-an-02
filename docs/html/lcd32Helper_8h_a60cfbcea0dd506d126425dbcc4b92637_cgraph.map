@@ -1,0 +1,5 @@
+<map id="__lcd32SetChipSelPin" name="__lcd32SetChipSelPin">
+<area shape="rect" id="Node000001" title="[Internal] Set state of CS (chip select) pin" alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="215,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,15,201,15,201,21,167,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="__lcd32GetParallelData" name="__lcd32GetParallelData">
+<area shape="rect" id="Node000001" title="[Internal] Get state of 16 parallel data/command pins" alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#a9e59a567587578fd09321ba52d8c36d7" title="[Internal] Get GPIO state via GPIO struct with range check." alt="" coords="227,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,15,213,15,213,21,179,21"/>
+</map>
