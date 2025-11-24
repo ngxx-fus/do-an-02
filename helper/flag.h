@@ -1,3 +1,6 @@
+/// @file   flag.h
+/// @brief  Bit-flag utilities; provides fast non-atomic flag ops and thread-safe atomic flag manipulation.
+
 #ifndef __FLAG_H__
 #define __FLAG_H__
 

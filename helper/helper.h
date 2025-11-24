@@ -1,7 +1,5 @@
 /// @file helper.h
 /// @brief Common helper macros for loops, bit manipulation, math, and pointer handling.
-/// @author Ngxx-Fus
-/// @version 1.0
 
 #ifndef __HELPER_H__
 #define __HELPER_H__

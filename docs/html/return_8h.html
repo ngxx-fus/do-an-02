@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('return_8h.html',''); initResizable(); 
   <div class="headertitle"><div class="title">return.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines standardized return types, macros, and DEFAULT_RETURN_STATUS enum for function error handling.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;stdio.h&quot;</code><br />
 <code>#include &quot;stdint.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -193,7 +196,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeef18c5286b8abc6e95d6adbf80feb36" id="r_aeef18c5286b8abc6e95d6adbf80feb36"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="return_8h.html#aeef18c5286b8abc6e95d6adbf80feb36">getDefRetStat_Str</a> (enum <a class="el" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78">DEFAULT_RETURN_STATUS</a> ret)</td></tr>
 <tr class="separator:aeef18c5286b8abc6e95d6adbf80feb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines standardized return types, macros, and DEFAULT_RETURN_STATUS enum for function error handling. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a992b54744f9e390fdee7fc4dfa506fdb" name="a992b54744f9e390fdee7fc4dfa506fdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a992b54744f9e390fdee7fc4dfa506fdb">&#9670;&#160;</a></span>STR_ERR</h2>
 
@@ -478,41 +483,41 @@ Functions</h2></td></tr>
 
 <p>Standardized return status codes for functions. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452" name="ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452"></a>OKE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e" name="ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e"></a>ERR&#160;</td><td class="fielddoc"><p>Success. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452" name="ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452"></a>OKE&#160;</td><td class="fielddoc"><p>Success. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a" name="ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a"></a>ERR_NULL&#160;</td><td class="fielddoc"><p>Generic error. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e" name="ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e"></a>ERR&#160;</td><td class="fielddoc"><p>Generic error. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2" name="ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2"></a>ERR_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Null pointer passed. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a" name="ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a"></a>ERR_NULL&#160;</td><td class="fielddoc"><p>Null pointer passed. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ac568baeb6407ef5e2630084ccbc34be8" name="ac87d656a4f798fa79cff22420ef38e78ac568baeb6407ef5e2630084ccbc34be8"></a>ERR_TIMEOUT&#160;</td><td class="fielddoc"><p>Memory allocation failed. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2" name="ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2"></a>ERR_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Memory allocation failed. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a8d4f409eda53a10f049dc6d5a833ccba" name="ac87d656a4f798fa79cff22420ef38e78a8d4f409eda53a10f049dc6d5a833ccba"></a>ERR_BUSY&#160;</td><td class="fielddoc"><p>Timeout occurred. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ac568baeb6407ef5e2630084ccbc34be8" name="ac87d656a4f798fa79cff22420ef38e78ac568baeb6407ef5e2630084ccbc34be8"></a>ERR_TIMEOUT&#160;</td><td class="fielddoc"><p>Timeout occurred. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da" name="ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da"></a>ERR_INVALID_ARG&#160;</td><td class="fielddoc"><p>Resource/device is busy. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a8d4f409eda53a10f049dc6d5a833ccba" name="ac87d656a4f798fa79cff22420ef38e78a8d4f409eda53a10f049dc6d5a833ccba"></a>ERR_BUSY&#160;</td><td class="fielddoc"><p>Resource/device is busy. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aa2f43f08171ac5a0c298d31ff96b6ea3" name="ac87d656a4f798fa79cff22420ef38e78aa2f43f08171ac5a0c298d31ff96b6ea3"></a>ERR_OVERFLOW&#160;</td><td class="fielddoc"><p>Invalid argument. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da" name="ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da"></a>ERR_INVALID_ARG&#160;</td><td class="fielddoc"><p>Invalid argument. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a616b7e73e06868e04254c1ea57d018ad" name="ac87d656a4f798fa79cff22420ef38e78a616b7e73e06868e04254c1ea57d018ad"></a>ERR_UNDERFLOW&#160;</td><td class="fielddoc"><p>Buffer/variable overflow. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78aa2f43f08171ac5a0c298d31ff96b6ea3" name="ac87d656a4f798fa79cff22420ef38e78aa2f43f08171ac5a0c298d31ff96b6ea3"></a>ERR_OVERFLOW&#160;</td><td class="fielddoc"><p>Buffer/variable overflow. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a3cfe3eff41c31f8283d57f835269a958" name="ac87d656a4f798fa79cff22420ef38e78a3cfe3eff41c31f8283d57f835269a958"></a>ERR_NOT_FOUND&#160;</td><td class="fielddoc"><p>Buffer/variable underflow. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a616b7e73e06868e04254c1ea57d018ad" name="ac87d656a4f798fa79cff22420ef38e78a616b7e73e06868e04254c1ea57d018ad"></a>ERR_UNDERFLOW&#160;</td><td class="fielddoc"><p>Buffer/variable underflow. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a9c045dc5fca400505c3c83c14b286142" name="ac87d656a4f798fa79cff22420ef38e78a9c045dc5fca400505c3c83c14b286142"></a>ERR_ALREADY_EXISTS&#160;</td><td class="fielddoc"><p>Resource not found. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a3cfe3eff41c31f8283d57f835269a958" name="ac87d656a4f798fa79cff22420ef38e78a3cfe3eff41c31f8283d57f835269a958"></a>ERR_NOT_FOUND&#160;</td><td class="fielddoc"><p>Resource not found. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a5bed3f42a08e195b307cf8622e913327" name="ac87d656a4f798fa79cff22420ef38e78a5bed3f42a08e195b307cf8622e913327"></a>ERR_NOT_IMPLEMENTED&#160;</td><td class="fielddoc"><p>Resource already exists. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a9c045dc5fca400505c3c83c14b286142" name="ac87d656a4f798fa79cff22420ef38e78a9c045dc5fca400505c3c83c14b286142"></a>ERR_ALREADY_EXISTS&#160;</td><td class="fielddoc"><p>Resource already exists. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ae8536bf20e6cdd510cf2ef6b92d85aa3" name="ac87d656a4f798fa79cff22420ef38e78ae8536bf20e6cdd510cf2ef6b92d85aa3"></a>ERR_UNSUPPORTED&#160;</td><td class="fielddoc"><p>Functionality not implemented. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a5bed3f42a08e195b307cf8622e913327" name="ac87d656a4f798fa79cff22420ef38e78a5bed3f42a08e195b307cf8622e913327"></a>ERR_NOT_IMPLEMENTED&#160;</td><td class="fielddoc"><p>Functionality not implemented. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a9a5eb2b9fa0b669459608e18789cee0d" name="ac87d656a4f798fa79cff22420ef38e78a9a5eb2b9fa0b669459608e18789cee0d"></a>ERR_IO&#160;</td><td class="fielddoc"><p>Unsupported operation. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ae8536bf20e6cdd510cf2ef6b92d85aa3" name="ac87d656a4f798fa79cff22420ef38e78ae8536bf20e6cdd510cf2ef6b92d85aa3"></a>ERR_UNSUPPORTED&#160;</td><td class="fielddoc"><p>Unsupported operation. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a3e8360e555ca7aa4330f20eede8fc079" name="ac87d656a4f798fa79cff22420ef38e78a3e8360e555ca7aa4330f20eede8fc079"></a>ERR_PERMISSION&#160;</td><td class="fielddoc"><p>Input/Output error. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a9a5eb2b9fa0b669459608e18789cee0d" name="ac87d656a4f798fa79cff22420ef38e78a9a5eb2b9fa0b669459608e18789cee0d"></a>ERR_IO&#160;</td><td class="fielddoc"><p>Input/Output error. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ab54d2331e1bb0b25c0c7e843b21b89f1" name="ac87d656a4f798fa79cff22420ef38e78ab54d2331e1bb0b25c0c7e843b21b89f1"></a>ERR_CRC&#160;</td><td class="fielddoc"><p>Permission denied. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a3e8360e555ca7aa4330f20eede8fc079" name="ac87d656a4f798fa79cff22420ef38e78a3e8360e555ca7aa4330f20eede8fc079"></a>ERR_PERMISSION&#160;</td><td class="fielddoc"><p>Permission denied. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a81d3b88e920e9831a7291d1a22885d2a" name="ac87d656a4f798fa79cff22420ef38e78a81d3b88e920e9831a7291d1a22885d2a"></a>ERR_INIT_FAILED&#160;</td><td class="fielddoc"><p>CRC check failed (data corrupted) </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78ab54d2331e1bb0b25c0c7e843b21b89f1" name="ac87d656a4f798fa79cff22420ef38e78ab54d2331e1bb0b25c0c7e843b21b89f1"></a>ERR_CRC&#160;</td><td class="fielddoc"><p>CRC check failed (data corrupted) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a1db00d8d6b2a3a9f01d6648b64fae0a2" name="ac87d656a4f798fa79cff22420ef38e78a1db00d8d6b2a3a9f01d6648b64fae0a2"></a>ERR_PSRAM_FAILED&#160;</td><td class="fielddoc"><p>Initialization failed. </p>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a81d3b88e920e9831a7291d1a22885d2a" name="ac87d656a4f798fa79cff22420ef38e78a81d3b88e920e9831a7291d1a22885d2a"></a>ERR_INIT_FAILED&#160;</td><td class="fielddoc"><p>Initialization failed. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ac87d656a4f798fa79cff22420ef38e78a1db00d8d6b2a3a9f01d6648b64fae0a2" name="ac87d656a4f798fa79cff22420ef38e78a1db00d8d6b2a3a9f01d6648b64fae0a2"></a>ERR_PSRAM_FAILED&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

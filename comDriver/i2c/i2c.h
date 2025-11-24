@@ -1,3 +1,6 @@
+/// @file   i2c.h
+/// @brief  I2C driver interface; Provides functions for creating, configuring, starting, transmitting/receiving, and destroying I2C devices.
+
 #ifndef __I2C_H__
 #define __I2C_H__
 

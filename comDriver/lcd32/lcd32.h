@@ -1,3 +1,6 @@
+/// @file   lcd32.h
+/// @brief  LCD 3.2" driver interface; Provides APIs for creating, configuring, and controlling the LCD device, managing canvas, and drawing pixels.
+
 #ifndef __LCD32_H__
 #define __LCD32_H__
 

@@ -1,3 +1,6 @@
+/// @file   param.h
+/// @brief  Defines logic level types and constants; includes `level_t` typedef and `BIN_LEVEL` enum (LOW/HIGH).
+
 #ifndef __PARAM_H__
 #define __PARAM_H__
 

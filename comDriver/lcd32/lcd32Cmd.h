@@ -1,3 +1,6 @@
+/// @file   lcd32Cmd.h
+/// @brief  ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3.2" LCD.
+
 #ifndef __LCD32_CMD_H__
 #define __LCD32_CMD_H__
 

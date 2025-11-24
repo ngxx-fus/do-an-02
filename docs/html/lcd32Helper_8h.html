@@ -96,6 +96,9 @@ $(document).ready(function(){initNavTree('lcd32Helper_8h.html',''); initResizabl
   <div class="headertitle"><div class="title">lcd32Helper.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper functions and macros for LCD 3.2"; Includes logging, GPIO setup, pin operations, data/command read/write, and canvas utilities.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="general_8h_source.html">../../helper/general.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lcd32Def_8h_source.html">lcd32Def.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -176,7 +179,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae28b2d2014aa1a9130945502cf48db83"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Internal] Set GPIO output state (supports GPIO0–GPIO47).  <br /></td></tr>
 <tr class="separator:ae28b2d2014aa1a9130945502cf48db83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Helper functions and macros for LCD 3.2"; Includes logging, GPIO setup, pin operations, data/command read/write, and canvas utilities. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4b65cd262f5b9c75e507c48c1fcf012d" name="a4b65cd262f5b9c75e507c48c1fcf012d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b65cd262f5b9c75e507c48c1fcf012d">&#9670;&#160;</a></span>__LCD32_READ_SIG</h2>
 
@@ -528,7 +533,7 @@ Functions</h2></td></tr>
 <div class="line">            __VA_OPT__(__VA_ARGS__)                   \</div>
 <div class="line">        }                                             \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="ahelper_8h_html_a485ab3f55b4285ed3fb801b3712168dc"><div class="ttname"><a href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a></div><div class="ttdeci">#define __is_null(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> helper.h:50</div></div>
+<div class="ttc" id="ahelper_8h_html_a485ab3f55b4285ed3fb801b3712168dc"><div class="ttname"><a href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a></div><div class="ttdeci">#define __is_null(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> helper.h:48</div></div>
 </div><!-- fragment -->
 <p>Macro for check an obj is NULL neither or not NULL with the action if NULL. </p>
 

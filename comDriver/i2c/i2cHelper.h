@@ -1,3 +1,6 @@
+/// @file   i2cHelpers.h
+/// @brief  Helper functions and macros for I2C driver; Includes pin operations, start/stop conditions, data/address frame handling, buffer management, and device assertions.
+
 #ifndef __I2C_HELPERS_H__
 #define __I2C_HELPERS_H__
 

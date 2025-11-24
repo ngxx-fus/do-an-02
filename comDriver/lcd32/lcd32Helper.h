@@ -1,3 +1,6 @@
+/// @file   lcd32Helper.h
+/// @brief  Helper functions and macros for LCD 3.2"; Includes logging, GPIO setup, pin operations, data/command read/write, and canvas utilities.
+
 #ifndef __LCD32_HELPER_H__
 #define __LCD32_HELPER_H__
 

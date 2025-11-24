@@ -1,3 +1,6 @@
+/// @file   Helper.c
+/// @brief  General utilities; includes random generator, GPIO config helpers, return-code mapping, and atomic flag operations.
+
 #include "general.h"
 
 unsigned int genRandNum(unsigned int seed_input) {

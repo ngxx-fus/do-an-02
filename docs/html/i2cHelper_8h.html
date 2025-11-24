@@ -199,7 +199,7 @@ Variables</h2></td></tr>
 <div class="line">            __builtin_unreachable();                       \</div>
 <div class="line">        }                                                  \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="ahelper_8h_html_a485ab3f55b4285ed3fb801b3712168dc"><div class="ttname"><a href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a></div><div class="ttdeci">#define __is_null(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> helper.h:50</div></div>
+<div class="ttc" id="ahelper_8h_html_a485ab3f55b4285ed3fb801b3712168dc"><div class="ttname"><a href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a></div><div class="ttdeci">#define __is_null(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> helper.h:48</div></div>
 </div><!-- fragment -->
 <p>Assert that the I2C device pointer is valid. If not, call esp_restart(). </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -251,7 +251,7 @@ Variables</h2></td></tr>
 <div class="line">            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;                               \</div>
 <div class="line">        }                                                  \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a></div><div class="ttdeci">@ ERR_NULL</div><div class="ttdoc">Generic error.</div><div class="ttdef"><b>Definition</b> return.h:33</div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a></div><div class="ttdeci">@ ERR_NULL</div><div class="ttdoc">Null pointer passed.</div><div class="ttdef"><b>Definition</b> return.h:36</div></div>
 </div><!-- fragment -->
 <p>Assert that the I2C device pointer is valid. If not, call return ERR_NULL. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -305,7 +305,7 @@ Variables</h2></td></tr>
 <div class="line">            __builtin_unreachable();                        \</div>
 <div class="line">        }                                                   \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="ahelper_8h_html_a899f2496cd49ba9b12b2ec3fe75d79e9"><div class="ttname"><a href="helper_8h.html#a899f2496cd49ba9b12b2ec3fe75d79e9">__isnot_positive</a></div><div class="ttdeci">#define __isnot_positive(x)</div><div class="ttdoc">Check if x is not positive (&lt;= 0).</div><div class="ttdef"><b>Definition</b> helper.h:75</div></div>
+<div class="ttc" id="ahelper_8h_html_a899f2496cd49ba9b12b2ec3fe75d79e9"><div class="ttname"><a href="helper_8h.html#a899f2496cd49ba9b12b2ec3fe75d79e9">__isnot_positive</a></div><div class="ttdeci">#define __isnot_positive(x)</div><div class="ttdoc">Check if x is not positive (&lt;= 0).</div><div class="ttdef"><b>Definition</b> helper.h:73</div></div>
 </div><!-- fragment -->
 <p>Assert that the I2C pin configuration is valid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -614,7 +614,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
 <div class="line">        </div>
 <div class="line">        addressFrame = (<a class="code hl_variable" href="i2cHelper_8h.html#a64dac2827a9f60b98fa2cb5e6acc85b1">addr7</a> &lt;&lt; 1) | 1U</div>
-<div class="ttc" id="ai2cHelper_8h_html_a64dac2827a9f60b98fa2cb5e6acc85b1"><div class="ttname"><a href="i2cHelper_8h.html#a64dac2827a9f60b98fa2cb5e6acc85b1">addr7</a></div><div class="ttdeci">static uint8_t addr7</div><div class="ttdef"><b>Definition</b> i2cHelper.h:184</div></div>
+<div class="ttc" id="ai2cHelper_8h_html_a64dac2827a9f60b98fa2cb5e6acc85b1"><div class="ttname"><a href="i2cHelper_8h.html#a64dac2827a9f60b98fa2cb5e6acc85b1">addr7</a></div><div class="ttdeci">static uint8_t addr7</div><div class="ttdef"><b>Definition</b> i2cHelper.h:187</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -631,8 +631,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
 <div class="line">    <a class="code hl_define" href="i2cHelper_8h.html#a96bf70f241f8de130c773ab5d3156cf0">__I2C_ASSERT_PIN_OK</a>(<a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(__i2cSetSDA), dev-&gt;sda, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(dev-&gt;sda))</div>
-<div class="ttc" id="ahelper_8h_html_a18d295a837ac71add5578860b55e5502"><div class="ttname"><a href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a></div><div class="ttdeci">#define STR(x)</div><div class="ttdoc">Convert macro argument x to string literal.</div><div class="ttdef"><b>Definition</b> helper.h:83</div></div>
-<div class="ttc" id="ai2cHelper_8h_html_a96bf70f241f8de130c773ab5d3156cf0"><div class="ttname"><a href="i2cHelper_8h.html#a96bf70f241f8de130c773ab5d3156cf0">__I2C_ASSERT_PIN_OK</a></div><div class="ttdeci">#define __I2C_ASSERT_PIN_OK(funcName, pinValue, pinName)</div><div class="ttdoc">Assert that the I2C pin configuration is valid.</div><div class="ttdef"><b>Definition</b> i2cHelper.h:41</div></div>
+<div class="ttc" id="ahelper_8h_html_a18d295a837ac71add5578860b55e5502"><div class="ttname"><a href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a></div><div class="ttdeci">#define STR(x)</div><div class="ttdoc">Convert macro argument x to string literal.</div><div class="ttdef"><b>Definition</b> helper.h:81</div></div>
+<div class="ttc" id="ai2cHelper_8h_html_a96bf70f241f8de130c773ab5d3156cf0"><div class="ttname"><a href="i2cHelper_8h.html#a96bf70f241f8de130c773ab5d3156cf0">__I2C_ASSERT_PIN_OK</a></div><div class="ttdeci">#define __I2C_ASSERT_PIN_OK(funcName, pinValue, pinName)</div><div class="ttdoc">Assert that the I2C pin configuration is valid.</div><div class="ttdef"><b>Definition</b> i2cHelper.h:44</div></div>
 </div><!-- fragment -->
 </div>
 </div>

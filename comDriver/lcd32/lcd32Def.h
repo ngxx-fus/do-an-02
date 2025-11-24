@@ -1,3 +1,6 @@
+/// @file   lcd32Def.h
+/// @brief  LCD 3.2" type definitions; Includes color/dimension types, canvas, data/control pin structs, and device structure.
+
 #ifndef __LCD32_DEF_H__
 #define __LCD32_DEF_H__
 

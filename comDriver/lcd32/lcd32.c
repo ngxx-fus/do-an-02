@@ -1,3 +1,6 @@
+/// @file   lcd32.h
+/// @brief  LCD 3.2" driver; Provides APIs to create, configure, start-up, and control the LCD device, including canvas management, GPIO setup, and pixel operations.
+
 #include "lcd32.h"
 
 /// LOCAL HELPERS ////////////////////////////////////////////////////////////////////////////////

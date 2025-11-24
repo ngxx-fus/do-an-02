@@ -130,9 +130,9 @@ Top-level</h3>
 <p>All common dependencies — including FreeRTOS headers, GPIO definitions, and shared utility functions — are centralized here. By consolidating these shared resources, the project ensures:</p>
 <ul>
 <li>A consistent and standardized include order across all components.</li>
-<li>Proper initialization sequencing, managed automatically through <code><a class="el" href="general_8h.html" title="Common system-wide header providing core includes and helper dependencies. This header centralizes st...">helper/general.h</a></code>.</li>
+<li>Proper initialization sequencing, managed automatically through <code><a class="el" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project.">helper/general.h</a></code>.</li>
 </ul>
-<p>Simplified maintenance — other libraries only need to include <code><a class="el" href="general_8h.html" title="Common system-wide header providing core includes and helper dependencies. This header centralizes st...">helper/general.h</a></code>, without worrying about dependency order or redundant includes.</p>
+<p>Simplified maintenance — other libraries only need to include <code><a class="el" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project.">helper/general.h</a></code>, without worrying about dependency order or redundant includes.</p>
 <div class="fragment"><div class="line">helper/</div>
 <div class="line">├── CMakeLists.txt                  [06.01] </div>
 <div class="line">├── espGPIOWrapper.h                [06.02]</div>
@@ -171,7 +171,7 @@ Top-level</h3>
 <p>In short, [06] helper/ acts as the foundation layer that unifies all components and guarantees reliable, modular system integration.</p>
 <h3><a class="anchor" id="autotoc_md8"></a>
 2nd-level | [02] comDriver</h3>
-<p>This directory contains hardware communication modules (components). To maintain a consistent and standardized header inclusion order, all common headers (FreeRTOS, GPIO, helper utilities) are defined under [06] helper. These shared headers are then included by other libraries through <a class="el" href="general_8h.html" title="Common system-wide header providing core includes and helper dependencies. This header centralizes st...">helper/general.h</a>, which guarantees proper initialization order — so regardless of how or where a function is called later within components, the inclusion sequence remains correct and reliable.</p>
+<p>This directory contains hardware communication modules (components). To maintain a consistent and standardized header inclusion order, all common headers (FreeRTOS, GPIO, helper utilities) are defined under [06] helper. These shared headers are then included by other libraries through <a class="el" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project.">helper/general.h</a>, which guarantees proper initialization order — so regardless of how or where a function is called later within components, the inclusion sequence remains correct and reliable.</p>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── i2c                         [02.01]</div>
 <div class="line">│   ├── CMakeLists.txt                  [02.01.01]</div>
@@ -308,7 +308,7 @@ Full working-tree</h3>
 <div class="line">├── config</div>
 <div class="line">│   ├── CMakeLists.txt</div>
 <div class="line">│   ├── projectConfig.h</div>
-<div class="line">│   └── pinConfig.h</div>
+<div class="line">│   └── pinConfig.h                         (Deprecated)</div>
 <div class="line">├── diagram</div>
 <div class="line">│   ├── diagram01.drawio</div>
 <div class="line">│   └── diagram02.drawio</div>

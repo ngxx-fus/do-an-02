@@ -98,26 +98,28 @@ $(document).ready(function(){initNavTree('param_8h_source.html',''); initResizab
   <div class="headertitle"><div class="title">param.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="param_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __PARAM_H__</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __PARAM_H__</span></div>
+<a href="param_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;stdint.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef __PARAM_H__</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define __PARAM_H__</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="param_8h.html#a87078fb10443d2f0587848267361fde6">    8</a></span><span class="keyword">typedef</span> uint8_t     <a class="code hl_typedef" href="param_8h.html#a87078fb10443d2f0587848267361fde6">level_t</a>; </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;stdint.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2e">   10</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="param_8h.html#aabece0e68a1756b282874047655a1e2e">BIN_LEVEL</a>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">   11</a></span>    <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">   13</a></span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="param_8h.html#a87078fb10443d2f0587848267361fde6">   11</a></span><span class="keyword">typedef</span> uint8_t     <a class="code hl_typedef" href="param_8h.html#a87078fb10443d2f0587848267361fde6">level_t</a>; </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2e">   13</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="param_8h.html#aabece0e68a1756b282874047655a1e2e">BIN_LEVEL</a>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">   14</a></span>    <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">   16</a></span>};</div>
 </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif </span></div>
-<div class="ttc" id="aparam_8h_html_a87078fb10443d2f0587848267361fde6"><div class="ttname"><a href="param_8h.html#a87078fb10443d2f0587848267361fde6">level_t</a></div><div class="ttdeci">uint8_t level_t</div><div class="ttdoc">Type of logic level.</div><div class="ttdef"><b>Definition</b> param.h:8</div></div>
-<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2e"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2e">BIN_LEVEL</a></div><div class="ttdeci">BIN_LEVEL</div><div class="ttdef"><b>Definition</b> param.h:10</div></div>
-<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">HIGH</a></div><div class="ttdeci">@ HIGH</div><div class="ttdef"><b>Definition</b> param.h:12</div></div>
-<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdeci">@ LOW</div><div class="ttdef"><b>Definition</b> param.h:11</div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span></div>
+<div class="ttc" id="aparam_8h_html_a87078fb10443d2f0587848267361fde6"><div class="ttname"><a href="param_8h.html#a87078fb10443d2f0587848267361fde6">level_t</a></div><div class="ttdeci">uint8_t level_t</div><div class="ttdoc">Type of logic level.</div><div class="ttdef"><b>Definition</b> param.h:11</div></div>
+<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2e"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2e">BIN_LEVEL</a></div><div class="ttdeci">BIN_LEVEL</div><div class="ttdef"><b>Definition</b> param.h:13</div></div>
+<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893">HIGH</a></div><div class="ttdeci">@ HIGH</div><div class="ttdef"><b>Definition</b> param.h:15</div></div>
+<div class="ttc" id="aparam_8h_html_aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="param_8h.html#aabece0e68a1756b282874047655a1e2ea6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdeci">@ LOW</div><div class="ttdef"><b>Definition</b> param.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
