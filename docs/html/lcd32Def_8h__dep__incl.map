@@ -1,0 +1,17 @@
+<map id="comDriver/lcd32/lcd32Def.h" name="comDriver/lcd32/lcd32Def.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="120,5,323,31"/>
+<area shape="rect" id="Node000002" href="$lcd32_8h.html" title=" " alt="" coords="131,152,311,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,42,185,59,175,79,173,99,181,119,209,150,205,154,177,121,168,100,169,78,181,56,196,38"/>
+<area shape="rect" id="Node000007" href="$lcd32Helper_8h.html" title=" " alt="" coords="185,79,407,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="245,38,286,77,282,80,241,42"/>
+<area shape="rect" id="Node000003" href="$lcd32_8c.html" title=" " alt="" coords="5,225,184,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,186,117,227,114,223,188,182"/>
+<area shape="rect" id="Node000004" href="$monitor_8h.html" title="Monitor &amp; Display Logic; Handles LCD initialization, rendering loop, and visualization demos (Oscillo..." alt="" coords="199,299,321,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="231,190,259,298,254,299,225,192"/>
+<area shape="rect" id="Node000006" href="$ui_8h.html" title=" " alt="" coords="259,225,341,251"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="246,185,289,223,285,227,242,189"/>
+<area shape="rect" id="Node000005" href="$myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="202,372,318,397"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="263,338,263,372,257,372,257,338"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="289,264,269,300,264,297,284,262"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="276,115,235,154,232,150,272,111"/>
+</map>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   oled128x64.c
+/// @brief  Implementation of OLED 128x64 driver; Includes device creation, configuration, startup, pixel/canvas operations, and text rendering.
+
+>>>>>>> master
 #include "../../helper/helper.h"
 
 #include "oled128x64Commands.h"

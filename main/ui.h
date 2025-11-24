@@ -1,48 +1,62 @@
+/// @file   monitor.h
+/// @brief  Monitor & Display Logic; Handles LCD initialization, rendering loop, and visualization demos (Oscilloscope/Charts).
+
 #include "../helper/general.h"
 #include "../comDriver/lcd32/lcd32.h"
 #include "../cds/circularBuffer/cbuff.h"
 
+/// @brief Structure defining grid layout properties for graphs.
 typedef struct gridInfo_t{
-    dim_t cellSize;
-    dim_t colNum;
-    dim_t rowNum;
-    dim_t rowStep;
-    dim_t colStep;
+    dim_t cellSize; ///< Size of a single cell in pixels.
+    dim_t colNum;   ///< Number of columns.
+    dim_t rowNum;   ///< Number of rows.
+    dim_t rowStep;  ///< Step size (pixels) between rows.
+    dim_t colStep;  ///< Step size (pixels) between columns.
 } gridInfo_t;
 
+/// @brief Lookup table for different grid density configurations.
 static const gridInfo_t gridInfoTable[] = {
-    {  1, 320, 240, 1, 1 },     /// 0
-    {  2, 160, 120, 2, 2 },     /// 1
-    {  4,  80,  60, 4, 4 },     /// 2
-    {  5,  64,  48, 5, 5 },     /// 3
-    {  8,  40,  30, 8, 8 },     /// 4
-    { 10,  32,  24,10,10 },     /// 5
-    { 16,  20,  15,16,16 },     /// 6
-    { 20,  16,  12,20,20 },     /// 7
-    { 40,   8,   6,40,40 },     /// 8
-    { 80,   4,   3,80,80 }      /// 9
+    {  1, 320, 240, 1, 1 },     ///< Config 0: 1x1 step
+    {  2, 160, 120, 2, 2 },     ///< Config 1: 2x2 step
+    {  4,  80,  60, 4, 4 },     ///< Config 2: 4x4 step
+    {  5,  64,  48, 5, 5 },     ///< Config 3: 5x5 step
+    {  8,  40,  30, 8, 8 },     ///< Config 4: 8x8 step
+    { 10,  32,  24,10,10 },     ///< Config 5: 10x10 step
+    { 16,  20,  15,16,16 },     ///< Config 6: 16x16 step
+    { 20,  16,  12,20,20 },     ///< Config 7: 20x20 step
+    { 40,   8,   6,40,40 },     ///< Config 8: 40x40 step
+    { 80,   4,   3,80,80 }      ///< Config 9: 80x80 step
 };
 
-#define COLOR_ERROR             0xc8a6
-#define COLOR_GIRD              0xef9d
-#define COLOR_AXIS              0x2104
-#define COLOR_AXIS_TEXT         0xFF
-#define COLOR_LEGEND_BG         0xef7d
-#define COLOR_CHART_01          0xd6a0
-#define COLOR_CHART_02          0xf96e
-#define COLOR_CHART_03          0x356c
-#define COLOR_CHART_04          0x449e
+/// @brief Color definitions (RGB565 format).
+#define COLOR_ERROR             0xc8a6  ///< Color for error messages.
+#define COLOR_GIRD              0xef9d  ///< Color for grid lines.
+#define COLOR_AXIS              0x2104  ///< Color for axis lines.
+#define COLOR_AXIS_TEXT         0xFF    ///< Color for axis text labels.
+#define COLOR_LEGEND_BG         0xef7d  ///< Background color for legends.
+#define COLOR_CHART_01          0xd6a0  ///< Color for chart series 1.
+#define COLOR_CHART_02          0xf96e  ///< Color for chart series 2.
+#define COLOR_CHART_03          0x356c  ///< Color for chart series 3.
+#define COLOR_CHART_04          0x449e  ///< Color for chart series 4.
 
+/// @brief Pointer to the global LCD device instance.
 lcd32Dev_t * lcd;
+
+/// @brief Global flag for screen state management.
 volatile flag_t screenFlag = SYSTEM_INIT;
+
+/// @brief Mutex for protecting screenFlag access.
 portMUX_TYPE screenFlagMutex = portMUX_INITIALIZER_UNLOCKED;
+
+/// @brief Bit definitions for screen control flags.
 enum SCREEN_FLAG_BIT_ORDER {
-    SCREEN_RENDER = 0,                          /// 0: Ignore,      1: Render
-    SCREEN_TURN_ON = 0,                         /// 0: Ignore,      1: ON
-    SCREEN_TURN_OFF = 0,                        /// 0: Ignore,      1: OFF
+    SCREEN_RENDER = 0,      ///< Flag bit to request screen rendering (Flush).
+    SCREEN_TURN_ON = 0,     ///< Flag bit to turn on the screen.
+    SCREEN_TURN_OFF = 0,    ///< Flag bit to turn off the screen.
     SCREEN_FLAG_BIT_ORDER_NUMBER,
 };
 
+/// @brief Initialize the LCD device and configure pins.
 void lcdInit(){
     __entry("lcdInit()");
     lcd32CreateDevice(&lcd);
@@ -65,6 +79,7 @@ void lcdInit(){
     __exit("lcdInit()");
 }
 
+/// @brief Display the project introduction screen.
 void lcdShowIntroScreen(){
     __entry("lcdShowIntroScreen()");
 
@@ -80,6 +95,9 @@ void lcdShowIntroScreen(){
 
     __exit("lcdShowIntroScreen()");
 }
+
+/// @cond
+/// HELPER FUNCTIONS (Internal Drawing Demos) /////////////////////////////////////////////////////
 
 void lcdDrawCaro(uint8_t type) {
     // 1. Fill the canvas background with white
@@ -243,6 +261,10 @@ void spiDemo(){
 
 }
 
+/// @endcond
+
+/// @brief Task to handle screen updates, rendering, and power states based on event flags.
+/// @param pv Task parameter (unused).
 void screenControlTask(void * pv){
     WAIT_SYSTEM_INIT_COMPLETED();
 
@@ -279,4 +301,3 @@ void screenControlTask(void * pv){
 
     __exit("screenControlTask()");
 }
-

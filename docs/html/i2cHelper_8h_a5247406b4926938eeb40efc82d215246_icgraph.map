@@ -1,0 +1,16 @@
+<map id="i2cResetIndexTransmitBuffer" name="i2cResetIndexTransmitBuffer">
+<area shape="rect" id="Node000001" title="Reset I2C transmit buffer index (bit/byte) to zero." alt="" coords="537,31,747,56"/>
+<area shape="rect" id="Node000002" href="$i2c_8c.html#a1b4c740cc33f0262081151ebe97b8b11" title="Receive all bytes in the transmit buffer." alt="" coords="357,5,489,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,32,489,28,490,23,524,27"/>
+<area shape="rect" id="Node000003" href="$i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c" title="Send all bytes in the transmit buffer." alt="" coords="367,55,479,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="524,59,480,64,479,59,523,54"/>
+<area shape="rect" id="Node000004" href="$oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="193,5,278,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="361,54,278,32,279,27,362,49"/>
+<area shape="rect" id="Node000006" href="$oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="176,55,295,80"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="353,70,295,70,295,65,353,65"/>
+<area shape="rect" id="Node000007" href="$oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="161,104,309,129"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="362,86,286,106,284,101,361,81"/>
+<area shape="rect" id="Node000005" href="$oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,31,113,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="180,29,114,38,113,33,179,23"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="162,60,113,53,114,48,163,55"/>
+</map>

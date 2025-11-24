@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   lcd32Cmd.h
+/// @brief  ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3.2" LCD.
+
+>>>>>>> master
 #ifndef __LCD32_CMD_H__
 #define __LCD32_CMD_H__
 
@@ -6,11 +12,20 @@
 /*=========================================================================
     ILI9341 COMMANDS (Datasheet: ILI9341 V1.11)
     --------------------------------------------------
+<<<<<<< HEAD
     Sources: ILI9341 Datasheet V1.11 [cite: 5]
 =========================================================================*/
 
 /*-------------------- Level 1 Commands [cite: 13] --------------------*/
 // ... (Giữ nguyên các lệnh NOP đến READ_ID3) ...
+=======
+    Sources: 
+        ILI9341 Datasheet V1.11 [cite: 5]
+        https://www.waveshare.com/wiki/3.2inch_320x240_Touch_LCD_(D)
+=========================================================================*/
+
+/*-------------------- Level 1 Commands [cite: 13] --------------------*/
+>>>>>>> master
 #define ILI9341_NOP                        0x00  // No Operation [cite: 13]
 #define ILI9341_SWRESET                    0x01  // Software Reset [cite: 13]
 #define ILI9341_READ_ID                     0x04  // Read Display Identification Information [cite: 13]
@@ -104,6 +119,9 @@
 #define ILI9341_DCX_COMMAND                0x00  // D/CX = 0 -> command
 #define ILI9341_DCX_DATA                   0x01  // D/CX = 1 -> data
 
+<<<<<<< HEAD
 /*-------------------- Notes & usage tips --------------------*/
+=======
+>>>>>>> master
 
 #endif /* __LCD32_CMD_H__ */

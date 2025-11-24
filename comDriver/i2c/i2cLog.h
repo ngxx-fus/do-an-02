@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   i2cLog.h
+/// @brief  Logging macros for I2C driver; Supports different log levels including error, entry/exit, function state, and detailed data logging.
+
+>>>>>>> master
 #ifndef __I2C_LOG_H__
 #define __I2C_LOG_H__
 

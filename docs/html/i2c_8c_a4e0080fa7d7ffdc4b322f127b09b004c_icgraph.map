@@ -1,0 +1,12 @@
+<map id="i2cSendBuffer" name="i2cSendBuffer">
+<area shape="rect" id="Node000001" title="Send all bytes in the transmit buffer." alt="" coords="357,55,469,80"/>
+<area shape="rect" id="Node000002" href="$oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="193,5,278,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,54,277,32,279,27,355,48"/>
+<area shape="rect" id="Node000004" href="$oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183" title="Reset the OLED control registers to default state (top&#45;left = (0,0))." alt="" coords="176,55,295,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,70,295,70,295,65,343,65"/>
+<area shape="rect" id="Node000005" href="$oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="161,104,309,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="354,86,283,106,282,101,353,81"/>
+<area shape="rect" id="Node000003" href="$oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,31,113,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,29,114,38,113,33,179,23"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="162,60,113,53,114,48,163,55"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="oled128x64Dev_t" name="oled128x64Dev_t">
+<area shape="rect" id="Node000001" title="Structure representing an OLED 128x64 display device." alt="" coords="5,93,141,119"/>
+<area shape="rect" id="Node000002" href="$structi2cDev__t.html" title=" " alt="" coords="34,5,113,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,45,76,93,71,93,71,45"/>
+</map>

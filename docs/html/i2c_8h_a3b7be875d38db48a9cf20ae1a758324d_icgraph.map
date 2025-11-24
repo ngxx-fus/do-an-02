@@ -1,0 +1,7 @@
+<map id="i2cHandleSCLIsr" name="i2cHandleSCLIsr">
+<area shape="rect" id="Node000001" title="Handle SCL interrupt in slave mode." alt="" coords="384,5,511,31"/>
+<area shape="rect" id="Node000002" href="$i2c_8c.html#af6e42088cdcbe7696898b9dc869c20c2" title="Startup the I2C device (initialize GPIO and configs)" alt="" coords="201,5,336,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,21,336,21,336,15,370,15"/>
+<area shape="rect" id="Node000003" href="$oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="5,5,153,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,21,154,21,154,15,188,15"/>
+</map>

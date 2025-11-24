@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   lcd32Def.h
+/// @brief  LCD 3.2" type definitions; Includes color/dimension types, canvas, data/control pin structs, and device structure.
+
+>>>>>>> master
 #ifndef __LCD32_DEF_H__
 #define __LCD32_DEF_H__
 
@@ -5,6 +11,7 @@
 
 typedef uint16_t    color_t;        /// 16-bit color for a pixel
 typedef int16_t     dim_t;          /// 16-bit signed for dimension
+<<<<<<< HEAD
 /// POINT /////////////////////////////////////////////////////////////////////////////////////////
 
 typedef union lcdPoint_t 
@@ -21,13 +28,29 @@ typedef union lcdPoint_t
 /// CANVAS ////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas (only accepts GPIO number less than 32)
+=======
+
+/// @cond
+/// CANVAS ////////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
+
+typedef struct lcd32Canvas_t{       /// Struct for LCD 3.2" canvas
+>>>>>>> master
     color_t **buff;                 /// 1D array to store buffer
     dim_t   maxRow, maxCol;         /// Dim info
 } lcd32Canvas_t;
 
+<<<<<<< HEAD
 /// CONTROL/DATA PIN //////////////////////////////////////////////////////////////////////////////
 
 typedef struct lcd32DataPin_t{       /// Struct for data pin (only accepts GPIO number less than 32)
+=======
+/// @cond
+/// CONTROL/DATA PIN //////////////////////////////////////////////////////////////////////////////
+/// @endcond
+
+typedef struct lcd32DataPin_t{       /// Struct for data pin
+>>>>>>> master
     /// 16-bit data pin
     pin_t       __0, __1, __2,  __3,  __4,  __5,  __6,  __7, 
                 __8, __9, __10, __11, __12, __13, __14, __15;
@@ -42,7 +65,13 @@ typedef struct lcd32ControlPin_t{   /// Struct for data pint
     pin_t       bl;                     /// Brightness light
 } lcd32ControlPin_t;
 
+<<<<<<< HEAD
 /// LCD DEVICE ////////////////////////////////////////////////////////////////////////////////////
+=======
+/// @cond
+/// LCD DEVICE ////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
+>>>>>>> master
 
 typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
 
@@ -55,4 +84,8 @@ typedef struct lcd32Dev_t{          /// Struct for LCD 3.2"
     uint64_t            controlPinMask;
 } lcd32Dev_t;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 #endif

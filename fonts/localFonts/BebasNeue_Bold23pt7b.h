@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 #ifndef __BebasNeue_Bold23pt7b__
 #define __BebasNeue_Bold23pt7b__
 
 #include "../gfxfont.h"
 
 static const uint8_t BebasNeue_Bold23pt7bBitmaps[] PROGMEM = {
+=======
+#include "../gfxfont.h"
+const uint8_t BebasNeue_Bold23pt7bBitmaps[] PROGMEM = {
+>>>>>>> master
   0x07, 0xE0, 0x3F, 0xF0, 0xFF, 0xF3, 0xFF, 0xE7, 0xFF, 0xEF, 0x87, 0xFF,
   0x0F, 0xFC, 0x1F, 0xF8, 0x3F, 0xF0, 0x7F, 0xE0, 0xFF, 0xC1, 0xFF, 0x83,
   0xFF, 0x07, 0xFE, 0x0F, 0xFC, 0x1F, 0xF8, 0x3F, 0xF0, 0x7F, 0xE0, 0xFF,
@@ -54,7 +59,11 @@ static const uint8_t BebasNeue_Bold23pt7bBitmaps[] PROGMEM = {
   0x1F, 0xF8, 0x3F, 0xF0, 0x7D, 0xF1, 0xFB, 0xFF, 0xF7, 0xFF, 0xC7, 0xFF,
   0x87, 0xFE, 0x03, 0xF0 };
 
+<<<<<<< HEAD
 static const GFXglyph BebasNeue_Bold23pt7bGlyphs[] PROGMEM = {
+=======
+const GFXglyph BebasNeue_Bold23pt7bGlyphs[] PROGMEM = {
+>>>>>>> master
   {     0,  15,  32,  18,    1,  -31 },   // 0x30 '0'
   {    60,   9,  32,  18,    5,  -31 },   // 0x31 '1'
   {    96,  15,  32,  18,    2,  -31 },   // 0x32 '2'
@@ -66,10 +75,17 @@ static const GFXglyph BebasNeue_Bold23pt7bGlyphs[] PROGMEM = {
   {   456,  16,  32,  18,    1,  -31 },   // 0x38 '8'
   {   520,  15,  32,  18,    1,  -31 } }; // 0x39 '9'
 
+<<<<<<< HEAD
 static const GFXfont BebasNeue_Bold23pt7b PROGMEM = {
+=======
+const GFXfont BebasNeue_Bold23pt7b PROGMEM = {
+>>>>>>> master
   (uint8_t  *)BebasNeue_Bold23pt7bBitmaps,
   (GFXglyph *)BebasNeue_Bold23pt7bGlyphs,
   0x30, 0x39, 45 };
 
 // Approx. 657 bytes
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> master

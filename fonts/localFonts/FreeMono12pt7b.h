@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 #ifndef __FreeMono12pt7b__
 #define __FreeMono12pt7b__
 
 #include "../gfxfont.h"
 static const uint8_t FreeMono12pt7bBitmaps[] PROGMEM = {
+=======
+#include "../gfxfont.h"
+const uint8_t FreeMono12pt7bBitmaps[] PROGMEM = {
+>>>>>>> master
   0x49, 0x24, 0x92, 0x48, 0x01, 0xF8, 0xE7, 0xE7, 0x67, 0x42, 0x42, 0x42,
   0x42, 0x09, 0x02, 0x41, 0x10, 0x44, 0x11, 0x1F, 0xF1, 0x10, 0x4C, 0x12,
   0x3F, 0xE1, 0x20, 0x48, 0x12, 0x04, 0x81, 0x20, 0x48, 0x04, 0x07, 0xA2,
@@ -126,7 +131,11 @@ static const uint8_t FreeMono12pt7bBitmaps[] PROGMEM = {
   0xC0, 0xFF, 0xFF, 0xC0, 0xC1, 0x08, 0x42, 0x10, 0x84, 0x10, 0x4C, 0x42,
   0x10, 0x84, 0x26, 0x00, 0x38, 0x13, 0x38, 0x38 };
 
+<<<<<<< HEAD
 static const GFXglyph FreeMono12pt7bGlyphs[] PROGMEM = {
+=======
+const GFXglyph FreeMono12pt7bGlyphs[] PROGMEM = {
+>>>>>>> master
   {     0,   0,   0,  14,    0,    1 },   // 0x20 ' '
   {     0,   3,  15,  14,    6,  -14 },   // 0x21 '!'
   {     6,   8,   7,  14,    3,  -14 },   // 0x22 '"'
@@ -223,10 +232,17 @@ static const GFXglyph FreeMono12pt7bGlyphs[] PROGMEM = {
   {  1444,   5,  18,  14,    5,  -14 },   // 0x7D '}'
   {  1456,  10,   3,  14,    2,   -7 } }; // 0x7E '~'
 
+<<<<<<< HEAD
 static const GFXfont FreeMono12pt7b PROGMEM = {
+=======
+const GFXfont FreeMono12pt7b PROGMEM = {
+>>>>>>> master
   (uint8_t  *)FreeMono12pt7bBitmaps,
   (GFXglyph *)FreeMono12pt7bGlyphs,
   0x20, 0x7E, 24 };
 
 // Approx. 2132 bytes
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> master

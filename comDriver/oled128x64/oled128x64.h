@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   oled128x64.h
+/// @brief  Header for OLED 128x64 driver; Provides device creation, configuration, pixel/canvas operations, and text rendering APIs.
+
+>>>>>>> master
 #ifndef __OLED128X64_H__
 #define __OLED128X64_H__
 

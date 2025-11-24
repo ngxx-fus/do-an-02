@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   i2cDefinitions.h
+/// @brief  Definitions for I2C driver; Includes i2cDev_t structure, device roles, speed modes, read/write modes, return bits, and extended configuration flags.
+
+>>>>>>> master
 #ifndef __I2C_DEFINITIONS_H__
 #define __I2C_DEFINITIONS_H__
 

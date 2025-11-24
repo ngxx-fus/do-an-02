@@ -1,0 +1,9 @@
+<map id="lcd32FillCanvas" name="lcd32FillCanvas">
+<area shape="rect" id="Node000001" title=" " alt="" coords="477,5,601,31"/>
+<area shape="rect" id="Node000002" href="$ui_8h.html#a8ed8bdd1e121571c2cac932e24eff15d" title="Display the project introduction screen." alt="" coords="279,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="464,21,430,21,430,15,464,15"/>
+<area shape="rect" id="Node000003" href="$monitor_8h.html#adc86b84eeabe5d8dc8445cec2314d925" title="TASKS /////////////////////////////////////////////////////////////////////////////////////////." alt="" coords="140,5,231,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,21,231,21,231,15,265,15"/>
+<area shape="rect" id="Node000004" href="$myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main application entry point." alt="" coords="5,5,92,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="126,21,92,21,92,15,126,15"/>
+</map>

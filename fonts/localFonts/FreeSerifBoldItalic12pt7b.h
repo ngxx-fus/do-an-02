@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 #ifndef __FreeSerifBoldItalic12pt7b__
 #define __FreeSerifBoldItalic12pt7b__
 
 #include "../gfxfont.h"
 static const uint8_t FreeSerifBoldItalic12pt7bBitmaps[] PROGMEM = {
+=======
+#include "../gfxfont.h"
+const uint8_t FreeSerifBoldItalic12pt7bBitmaps[] PROGMEM = {
+>>>>>>> master
   0x07, 0x07, 0x07, 0x0F, 0x0E, 0x0E, 0x0C, 0x0C, 0x08, 0x18, 0x10, 0x00,
   0x00, 0x60, 0xF0, 0xF0, 0x60, 0x61, 0xF1, 0xF8, 0xF8, 0x6C, 0x34, 0x12,
   0x08, 0x01, 0x8C, 0x06, 0x60, 0x31, 0x80, 0xCC, 0x06, 0x30, 0xFF, 0xF0,
@@ -191,7 +196,11 @@ static const uint8_t FreeSerifBoldItalic12pt7bBitmaps[] PROGMEM = {
   0x07, 0x03, 0x80, 0xE0, 0x30, 0x0C, 0x07, 0x01, 0x80, 0xE0, 0xE0, 0x00,
   0x38, 0x0F, 0xCD, 0x1F, 0x80, 0xE0 };
 
+<<<<<<< HEAD
 static const GFXglyph FreeSerifBoldItalic12pt7bGlyphs[] PROGMEM = {
+=======
+const GFXglyph FreeSerifBoldItalic12pt7bGlyphs[] PROGMEM = {
+>>>>>>> master
   {     0,   0,   0,   6,    0,    1 },   // 0x20 ' '
   {     0,   8,  17,   9,    2,  -15 },   // 0x21 '!'
   {    17,   9,   7,  13,    4,  -15 },   // 0x22 '"'
@@ -288,10 +297,17 @@ static const GFXglyph FreeSerifBoldItalic12pt7bGlyphs[] PROGMEM = {
   {  2205,  10,  21,   8,   -3,  -16 },   // 0x7D '}'
   {  2232,  11,   4,  14,    1,   -7 } }; // 0x7E '~'
 
+<<<<<<< HEAD
 static const GFXfont FreeSerifBoldItalic12pt7b PROGMEM = {
+=======
+const GFXfont FreeSerifBoldItalic12pt7b PROGMEM = {
+>>>>>>> master
   (uint8_t  *)FreeSerifBoldItalic12pt7bBitmaps,
   (GFXglyph *)FreeSerifBoldItalic12pt7bGlyphs,
   0x20, 0x7E, 29 };
 
 // Approx. 2910 bytes
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> master

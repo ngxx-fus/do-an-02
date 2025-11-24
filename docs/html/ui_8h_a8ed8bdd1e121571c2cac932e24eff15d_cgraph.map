@@ -1,0 +1,9 @@
+<map id="lcdShowIntroScreen" name="lcdShowIntroScreen">
+<area shape="rect" id="Node000001" title="Display the project introduction screen." alt="" coords="5,55,156,80"/>
+<area shape="rect" id="Node000002" href="$lcd32_8c.html#a706889aec654291e09824a52f83ba51b" title=" " alt="" coords="215,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,52,209,32,211,37,132,57"/>
+<area shape="rect" id="Node000003" href="$lcd32_8c.html#a20f580d7fb908082116ab96867a5d0c2" title=" " alt="" coords="212,55,336,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,65,198,65,198,70,156,70"/>
+<area shape="rect" id="Node000004" href="$lcd32_8c.html#aa9c10dee02914271f009a038a0244d93" title=" " alt="" coords="204,104,344,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,77,211,98,209,103,130,83"/>
+</map>

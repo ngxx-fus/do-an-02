@@ -1,0 +1,33 @@
+<map id="i2cSendByte" name="i2cSendByte">
+<area shape="rect" id="Node000001" title="Send a specified byte." alt="" coords="5,104,108,129"/>
+<area shape="rect" id="Node000002" href="$i2cHelper_8h.html#a58419d2cac69e3f1f36256fa61897abd" title="Release SDA, then get return bit." alt="" coords="177,5,302,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,102,106,71,155,40,170,33,172,38,157,44,110,75,73,106"/>
+<area shape="rect" id="Node000007" href="$i2cHelper_8h.html#a7869476049e0b21a7975eea55d0bd529" title="Send I2C address frame with R/W bit." alt="" coords="156,104,323,129"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="108,114,142,114,142,119,108,119"/>
+<area shape="rect" id="Node000008" href="$i2cHelper_8h.html#a54d43e3e9cc2b33a70a74f388703017f" title="Send one I2C data frame (8&#45;bit)" alt="" coords="167,153,312,179"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="105,127,179,147,177,152,104,132"/>
+<area shape="rect" id="Node000009" href="$i2cHelper_8h.html#a10c9a416f548d63a0a1ec2cb4b107c5e" title="Generate I2C START condition." alt="" coords="172,203,307,228"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="73,128,110,158,157,189,172,196,170,200,155,194,106,162,70,132"/>
+<area shape="rect" id="Node000010" href="$i2cHelper_8h.html#ac6753f1f3022a2d26c354409028a0274" title="Generate I2C STOP condition." alt="" coords="173,55,305,80"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="104,101,177,81,179,86,105,107"/>
+<area shape="rect" id="Node000003" href="$i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a" title="Get I2C bus frequency of a given device." alt="" coords="382,55,465,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,28,369,50,368,55,287,33"/>
+<area shape="rect" id="Node000004" href="$i2cHelper_8h.html#a43f86ea81faaf0e2e97a8561e3914d33" title="Read the current logic level of SDA line." alt="" coords="371,5,476,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="302,15,357,15,357,21,302,21"/>
+<area shape="rect" id="Node000005" href="$i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb" title="Set logic level for SCL line of an I2C device." alt="" coords="373,104,473,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="299,28,324,40,340,52,349,64,358,76,372,89,381,95,378,99,369,93,354,80,345,67,336,56,321,44,297,33"/>
+<area shape="rect" id="Node000006" href="$i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0" title="Set logic level for SDA line of an I2C device." alt="" coords="372,153,475,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="304,27,324,40,343,65,350,89,356,114,373,139,378,144,375,148,369,142,351,116,345,91,339,67,321,44,301,32"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="287,101,368,79,369,84,288,107"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="323,114,360,114,360,119,323,119"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="288,127,362,147,361,152,287,132"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="295,151,321,138,336,127,345,115,354,102,369,89,377,84,380,89,372,93,358,106,349,118,340,131,324,143,297,156"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="287,151,361,130,362,136,288,156"/>
+<area shape="poly" id="edge13_Node000008_Node000006" title=" " alt="" coords="312,163,358,163,358,169,312,169"/>
+<area shape="poly" id="edge15_Node000009_Node000003" title=" " alt="" coords="303,200,321,189,339,166,345,142,351,116,369,90,373,86,376,90,373,93,356,118,350,143,343,168,324,193,306,205"/>
+<area shape="poly" id="edge16_Node000009_Node000005" title=" " alt="" coords="298,200,321,189,336,177,345,165,354,152,369,139,377,133,380,138,372,143,358,156,349,168,340,181,324,194,300,205"/>
+<area shape="poly" id="edge17_Node000009_Node000006" title=" " alt="" coords="287,200,361,180,362,185,288,205"/>
+<area shape="poly" id="edge19_Node000010_Node000003" title=" " alt="" coords="306,65,368,65,368,70,306,70"/>
+<area shape="poly" id="edge20_Node000010_Node000005" title=" " alt="" coords="288,77,362,98,361,103,287,83"/>
+<area shape="poly" id="edge21_Node000010_Node000006" title=" " alt="" coords="299,78,324,89,340,101,349,114,358,126,372,139,381,144,378,149,369,143,354,129,345,117,336,105,321,94,297,82"/>
+</map>

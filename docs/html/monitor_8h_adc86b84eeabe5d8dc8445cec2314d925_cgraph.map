@@ -1,0 +1,28 @@
+<map id="systemInit" name="systemInit">
+<area shape="rect" id="Node000001" title="TASKS /////////////////////////////////////////////////////////////////////////////////////////." alt="" coords="5,203,96,228"/>
+<area shape="rect" id="Node000002" href="$ui_8h.html#a3004c9c4fb128520f24f4407dca4f8cf" title="Initialize the LCD device and configure pins." alt="" coords="188,80,251,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,200,188,112,191,116,71,204"/>
+<area shape="rect" id="Node000007" href="$ui_8h.html#a8ed8bdd1e121571c2cac932e24eff15d" title="Display the project introduction screen." alt="" coords="144,203,295,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="96,213,130,213,130,218,96,218"/>
+<area shape="rect" id="Node000011" href="$ui_8h.html#a1e784598bd33b661a8c2b7195031d871" title="Task to handle screen updates, rendering, and power states based on event flags." alt="" coords="149,276,290,301"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="82,226,177,268,175,273,80,231"/>
+<area shape="rect" id="Node000003" href="$lcd32_8c.html#af5a76cf17e2be75c49a3d91e492ada41" title=" " alt="" coords="352,5,495,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,77,342,41,366,32,368,37,344,46,251,82"/>
+<area shape="rect" id="Node000005" href="$lcd32_8c.html#a2703342f175daff557c568fd8ef17d9b" title=" " alt="" coords="351,55,496,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="250,86,336,75,337,81,251,92"/>
+<area shape="rect" id="Node000006" href="$lcd32_8c.html#aa8415ee7e30fbd9aa5a2a6a57fb31dae" title=" " alt="" coords="348,104,499,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="251,94,334,104,334,109,250,99"/>
+<area shape="rect" id="Node000004" href="$lcd32_8c.html#a5e822503265e9fd16f2328c6fd695fe7" title=" " alt="" coords="552,5,680,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="495,15,538,15,538,21,495,21"/>
+<area shape="rect" id="Node000008" href="$lcd32_8c.html#a706889aec654291e09824a52f83ba51b" title=" " alt="" coords="364,153,483,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="272,200,356,179,358,185,273,205"/>
+<area shape="rect" id="Node000009" href="$lcd32_8c.html#a20f580d7fb908082116ab96867a5d0c2" title=" " alt="" coords="361,203,485,228"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="295,213,348,213,348,218,295,218"/>
+<area shape="rect" id="Node000010" href="$lcd32_8c.html#aa9c10dee02914271f009a038a0244d93" title=" " alt="" coords="353,252,493,277"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="273,225,358,246,356,251,272,231"/>
+<area shape="poly" id="edge11_Node000011_Node000010" title=" " alt="" coords="290,278,339,272,340,277,291,283"/>
+<area shape="rect" id="Node000012" href="$lcd32_8c.html#a52626ad127d92f73c3f5dd9669cbff0f" title=" " alt="" coords="359,301,487,327"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="291,295,346,302,345,307,290,300"/>
+<area shape="rect" id="Node000013" href="$lcd32_8c.html#a1996b7286b52a98b154e6f0f0edfeb01" title=" " alt="" coords="343,351,504,376"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="250,299,344,337,365,344,363,349,342,342,248,304"/>
+</map>

@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 #ifndef __BebasNeue_Bold23pt7b__
 #define __BebasNeue_Bold23pt7b__
 
 
 #include "../gfxfont.h"
 static const uint8_t FreeSansBold24pt7bBitmaps[] PROGMEM = {
+=======
+#include "../gfxfont.h"
+const uint8_t FreeSansBold24pt7bBitmaps[] PROGMEM = {
+>>>>>>> master
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
   0xDF, 0x3E, 0x7C, 0xF9, 0xF3, 0xE7, 0xC7, 0x0E, 0x1C, 0x00, 0x00, 0x07,
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFC, 0xFE, 0x1F, 0xFF, 0x87, 0xFF, 0xE1,
@@ -684,7 +689,11 @@ static const uint8_t FreeSansBold24pt7bBitmaps[] PROGMEM = {
   0x03, 0xFE, 0x00, 0x1F, 0xF8, 0x0F, 0xFF, 0xF0, 0xFF, 0x0F, 0xFF, 0xF0,
   0x1F, 0xF8, 0x00, 0x7F, 0x80, 0x00, 0xF8 };
 
+<<<<<<< HEAD
 static const GFXglyph FreeSansBold24pt7bGlyphs[] PROGMEM = {
+=======
+const GFXglyph FreeSansBold24pt7bGlyphs[] PROGMEM = {
+>>>>>>> master
   {     0,   0,   0,  13,    0,    1 },   // 0x20 ' '
   {     0,   7,  34,  16,    5,  -33 },   // 0x21 '!'
   {    30,  18,  12,  22,    2,  -33 },   // 0x22 '"'
@@ -781,10 +790,17 @@ static const GFXglyph FreeSansBold24pt7bGlyphs[] PROGMEM = {
   {  8052,  13,  43,  18,    3,  -33 },   // 0x7D '}'
   {  8122,  21,   8,  23,    1,  -14 } }; // 0x7E '~'
 
+<<<<<<< HEAD
 static const GFXfont FreeSansBold24pt7b PROGMEM = {
+=======
+const GFXfont FreeSansBold24pt7b PROGMEM = {
+>>>>>>> master
   (uint8_t  *)FreeSansBold24pt7bBitmaps,
   (GFXglyph *)FreeSansBold24pt7bGlyphs,
   0x20, 0x7E, 56 };
 
 // Approx. 8815 bytes
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> master

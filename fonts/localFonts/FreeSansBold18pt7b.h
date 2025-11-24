@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 #ifndef __FreeSansBold18pt7b__
 #define __FreeSansBold18pt7b__
 
 #include "../gfxfont.h"
 static const uint8_t FreeSansBold18pt7bBitmaps[] PROGMEM = {
+=======
+#include "../gfxfont.h"
+const uint8_t FreeSansBold18pt7bBitmaps[] PROGMEM = {
+>>>>>>> master
   0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFE, 0xE7, 0x39, 0xCE, 0x73, 0x80,
   0x0F, 0xFF, 0xFF, 0xF8, 0xF8, 0xFF, 0xC7, 0xFE, 0x3F, 0xF1, 0xFF, 0x8F,
   0xFC, 0x7D, 0xC1, 0xCE, 0x0E, 0x70, 0x70, 0x03, 0xC3, 0x80, 0x3C, 0x78,
@@ -380,7 +385,11 @@ static const uint8_t FreeSansBold18pt7bBitmaps[] PROGMEM = {
   0xF0, 0xF0, 0x00, 0x3C, 0x00, 0xFE, 0x0F, 0xFE, 0x1E, 0x1F, 0xFC, 0x0F,
   0xC0, 0x0F, 0x00 };
 
+<<<<<<< HEAD
 static const GFXglyph FreeSansBold18pt7bGlyphs[] PROGMEM = {
+=======
+const GFXglyph FreeSansBold18pt7bGlyphs[] PROGMEM = {
+>>>>>>> master
   {     0,   0,   0,  10,    0,    1 },   // 0x20 ' '
   {     0,   5,  25,  12,    4,  -24 },   // 0x21 '!'
   {    16,  13,   9,  17,    2,  -25 },   // 0x22 '"'
@@ -477,10 +486,17 @@ static const GFXglyph FreeSansBold18pt7bGlyphs[] PROGMEM = {
   {  4453,   9,  33,  14,    3,  -25 },   // 0x7D '}'
   {  4491,  15,   6,  18,    1,  -10 } }; // 0x7E '~'
 
+<<<<<<< HEAD
 static const GFXfont FreeSansBold18pt7b PROGMEM = {
+=======
+const GFXfont FreeSansBold18pt7b PROGMEM = {
+>>>>>>> master
   (uint8_t  *)FreeSansBold18pt7bBitmaps,
   (GFXglyph *)FreeSansBold18pt7bGlyphs,
   0x20, 0x7E, 42 };
 
 // Approx. 5175 bytes
+<<<<<<< HEAD
 #endif 
+=======
+>>>>>>> master

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/// @file   i2c.c
+/// @brief  Implements I2C device creation, configuration, startup, transmit/receive buffers, send/receive operations, and cleanup functions.
+
+
+>>>>>>> master
 #include "i2c.h"
 
 #pragma message("i2c.c is compiling...")

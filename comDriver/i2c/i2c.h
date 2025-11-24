@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+=======
+/// @file   i2c.h
+/// @brief  I2C driver interface; Provides functions for creating, configuring, starting, transmitting/receiving, and destroying I2C devices.
+
+>>>>>>> master
 #ifndef __I2C_H__
 #define __I2C_H__
 
 #include "../../helper/general.h"
 
+<<<<<<< HEAD
 /// LOG CONTROL ///////////////////////////////////////////////////////////////////////////////////
 
 #include "i2cLog.h"
@@ -16,6 +23,29 @@
 #include "i2cHelper.h"
 
 /// MAIN FUNC /////////////////////////////////////////////////////////////////////////////////////
+=======
+/// @cond
+/// LOG CONTROL ///////////////////////////////////////////////////////////////////////////////////
+/// @endcond
+
+#include "i2cLog.h"
+
+/// @cond
+/// THE DEFINITIONS RELATED TO I2C ////////////////////////////////////////////////////////////////
+/// @endcond
+
+#include "i2cDefinition.h"
+
+/// @cond
+/// HELPER/INLINE FUNC ////////////////////////////////////////////////////////////////////////////
+/// @endcond
+
+#include "i2cHelper.h"
+
+/// @cond
+/// MAIN FUNC /////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
+>>>>>>> master
 
 /// @brief Handle SCL interrupt in slave mode
 /// @param pv Pointer to i2cDev_t

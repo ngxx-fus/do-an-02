@@ -1,3 +1,6 @@
+/// @file   espRTOSWrapper.h
+/// @brief  FreeRTOS multitasking utilities; provides critical-section helpers and task-level synchronization macros.
+
 #ifndef __ESP_MULTITASK_WRAPPER__
 #define __ESP_MULTITASK_WRAPPER__
 

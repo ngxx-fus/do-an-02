@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/// @file   oled128x64Definitions.h
+/// @brief  OLED 128x64 display definitions; Provides constants, types, and device structure for I2C communication and framebuffer handling.
+
+>>>>>>> master
 #ifndef __OLED128x64_DEFINITIONS_H__
 #define __OLED128x64_DEFINITIONS_H__
 

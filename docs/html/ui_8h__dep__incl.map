@@ -1,0 +1,7 @@
+<map id="main/ui.h" name="main/ui.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,5,107,31"/>
+<area shape="rect" id="Node000002" href="$monitor_8h.html" title="Monitor &amp; Display Logic; Handles LCD initialization, rendering loop, and visualization demos (Oscillo..." alt="" coords="5,79,127,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,44,69,79,63,79,63,44"/>
+<area shape="rect" id="Node000003" href="$myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="8,152,124,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,118,69,152,63,152,63,118"/>
+</map>
