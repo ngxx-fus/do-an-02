@@ -125,7 +125,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title="Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO,..." alt="" coords="287,5,450,31"/>
 <area shape="rect" href="espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo..." alt="" coords="457,79,635,104"/>
 <area shape="poly" title=" " alt="" coords="411,33,518,76,516,81,409,38"/>
-<area shape="rect" href="myApp_8c.html" title=" " alt="" coords="5,541,121,566"/>
+<area shape="rect" href="myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="5,541,121,566"/>
 <area shape="poly" title=" " alt="" coords="296,36,209,57,117,87,77,104,45,123,24,143,17,164,17,386,22,431,33,475,60,539,55,541,28,477,16,432,11,386,11,163,20,140,42,119,75,99,115,82,207,52,295,31"/>
 <area shape="rect" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="659,152,787,177"/>
 <area shape="poly" title=" " alt="" coords="588,107,695,149,693,154,586,112"/>
@@ -139,7 +139,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="798,177,1041,223,1040,228,797,182"/>
 <area shape="rect" href="lcd32Cmd_8h.html" title="ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3...." alt="" coords="102,299,313,324"/>
 <area shape="poly" title=" " alt="" coords="646,173,511,191,434,206,360,228,321,244,283,264,225,301,222,296,280,260,318,240,358,223,433,201,510,185,645,168"/>
-<area shape="rect" href="monitor_8h.html" title=" " alt="" coords="52,453,173,478"/>
+<area shape="rect" href="monitor_8h.html" title="Main project! For monitor/analyzer the bus!" alt="" coords="52,453,173,478"/>
 <area shape="poly" title=" " alt="" coords="646,172,502,184,334,207,253,223,183,244,127,270,107,285,92,300,83,319,79,339,82,382,95,422,108,451,104,453,90,424,77,383,73,339,78,317,88,297,103,281,124,265,181,239,252,218,333,201,502,178,645,167"/>
 <area shape="rect" href="lcd32Def_8h.html" title="LCD 3.2&quot; type definitions; Includes color/dimension types, canvas, data/control pin structs,..." alt="" coords="371,225,574,251"/>
 <area shape="poly" title=" " alt="" coords="671,184,514,228,513,223,669,179"/>
@@ -183,117 +183,160 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:afe3a5d0081166bd5e1d8c9ea00db83e5" id="r_afe3a5d0081166bd5e1d8c9ea00db83e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#afe3a5d0081166bd5e1d8c9ea00db83e5">SENDER</a>&#160;&#160;&#160;0x0</td></tr>
-<tr class="memdesc:afe3a5d0081166bd5e1d8c9ea00db83e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEVICE SETUP //////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:afe3a5d0081166bd5e1d8c9ea00db83e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device mode: Sender.  <br /></td></tr>
 <tr class="separator:afe3a5d0081166bd5e1d8c9ea00db83e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455948b8bd5f5ce920899ae1013c4b4c" id="r_a455948b8bd5f5ce920899ae1013c4b4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a455948b8bd5f5ce920899ae1013c4b4c">RECEIVER</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memdesc:a455948b8bd5f5ce920899ae1013c4b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device mode: Receiver.  <br /></td></tr>
 <tr class="separator:a455948b8bd5f5ce920899ae1013c4b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc5c6b4c2e2bc12eadd440fdb10bfd7c" id="r_abc5c6b4c2e2bc12eadd440fdb10bfd7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#abc5c6b4c2e2bc12eadd440fdb10bfd7c">MONITOR</a>&#160;&#160;&#160;0x2</td></tr>
+<tr class="memdesc:abc5c6b4c2e2bc12eadd440fdb10bfd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device mode: Monitor.  <br /></td></tr>
 <tr class="separator:abc5c6b4c2e2bc12eadd440fdb10bfd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c0f15f7fed286557d68c043857d2a7a" id="r_a0c0f15f7fed286557d68c043857d2a7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a0c0f15f7fed286557d68c043857d2a7a">ESP32_DEVICE_MODE</a>&#160;&#160;&#160;<a class="el" href="projectConfig_8h.html#abc5c6b4c2e2bc12eadd440fdb10bfd7c">MONITOR</a></td></tr>
-<tr class="memdesc:a0c0f15f7fed286557d68c043857d2a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of source code.  <br /></td></tr>
+<tr class="memdesc:a0c0f15f7fed286557d68c043857d2a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of source code (SENDER, RECEIVER, or MONITOR)  <br /></td></tr>
 <tr class="separator:a0c0f15f7fed286557d68c043857d2a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26484c595f8384d983f0d14e9ec9a59" id="r_af26484c595f8384d983f0d14e9ec9a59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#af26484c595f8384d983f0d14e9ec9a59">SYSTEM_LOG_LEVEL</a>&#160;&#160;&#160;3</td></tr>
-<tr class="memdesc:af26484c595f8384d983f0d14e9ec9a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">COMPONENT SETUP ///////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:af26484c595f8384d983f0d14e9ec9a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">System log level set-up.  <br /></td></tr>
 <tr class="separator:af26484c595f8384d983f0d14e9ec9a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f83cf56e361f2c630b8204c473dda5" id="r_a11f83cf56e361f2c630b8204c473dda5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a11f83cf56e361f2c630b8204c473dda5">SLAVE_ADDRE</a>&#160;&#160;&#160;0x39</td></tr>
-<tr class="memdesc:a11f83cf56e361f2c630b8204c473dda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slave address for I2C comunication.  <br /></td></tr>
+<tr class="memdesc:a11f83cf56e361f2c630b8204c473dda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slave address for I2C communication.  <br /></td></tr>
 <tr class="separator:a11f83cf56e361f2c630b8204c473dda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99834713028c657c88b1272cca63c06" id="r_ac99834713028c657c88b1272cca63c06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ac99834713028c657c88b1272cca63c06">DATAFR_INTERVAL</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memdesc:ac99834713028c657c88b1272cca63c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time interval of generating data frame (Unit: tick)  <br /></td></tr>
 <tr class="separator:ac99834713028c657c88b1272cca63c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00aef9e8dd001a49f8717031d84b2c6c" id="r_a00aef9e8dd001a49f8717031d84b2c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a00aef9e8dd001a49f8717031d84b2c6c">DEBOUNCE_TIME</a>&#160;&#160;&#160;10000</td></tr>
+<tr class="memdesc:a00aef9e8dd001a49f8717031d84b2c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debouncing time for button (Unit: micro-sec)  <br /></td></tr>
 <tr class="separator:a00aef9e8dd001a49f8717031d84b2c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d97b513edc0d2fdc0c1de16be4e5af5" id="r_a4d97b513edc0d2fdc0c1de16be4e5af5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a4d97b513edc0d2fdc0c1de16be4e5af5">SHORTPRESS_TIME</a>&#160;&#160;&#160;500000</td></tr>
+<tr class="memdesc:a4d97b513edc0d2fdc0c1de16be4e5af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short press threshold (Unit: micro-sec)  <br /></td></tr>
 <tr class="separator:a4d97b513edc0d2fdc0c1de16be4e5af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9588b37d541027c21d87e8e89312cca4" id="r_a9588b37d541027c21d87e8e89312cca4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a9588b37d541027c21d87e8e89312cca4">LONGPRESS_TIME</a>&#160;&#160;&#160;2000000</td></tr>
+<tr class="memdesc:a9588b37d541027c21d87e8e89312cca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Long press threshold (Unit: micro-sec)  <br /></td></tr>
 <tr class="separator:a9588b37d541027c21d87e8e89312cca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee4544a12ea7d299d799388f352529e" id="r_afee4544a12ea7d299d799388f352529e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#afee4544a12ea7d299d799388f352529e">COM_SPI_FREQ</a>&#160;&#160;&#160;100000</td></tr>
+<tr class="memdesc:afee4544a12ea7d299d799388f352529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Communication Frequency in Hz.  <br /></td></tr>
 <tr class="separator:afee4544a12ea7d299d799388f352529e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fe5cf6f00a8233a1896c74d8b35c478" id="r_a1fe5cf6f00a8233a1896c74d8b35c478"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a1fe5cf6f00a8233a1896c74d8b35c478">COM_SPI_CONF</a>&#160;&#160;&#160;<a class="el" href="spi_8h.html#af48cd22c6febb2505a0d714d2baef589a0e3be25bb986e9771b593337652b8950">SPI_11_MASTER</a></td></tr>
+<tr class="memdesc:a1fe5cf6f00a8233a1896c74d8b35c478"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Configuration Preset (Mode, CPOL, CPHA)  <br /></td></tr>
 <tr class="separator:a1fe5cf6f00a8233a1896c74d8b35c478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98196e12b9d822ab5713cfebce3725a5" id="r_a98196e12b9d822ab5713cfebce3725a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a98196e12b9d822ab5713cfebce3725a5">DISP_ORIENTATION</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a98196e12b9d822ab5713cfebce3725a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display orientation (0, 1, 2, 3)  <br /></td></tr>
 <tr class="separator:a98196e12b9d822ab5713cfebce3725a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8909e4cc8d1f05aeb73943042144abdf" id="r_a8909e4cc8d1f05aeb73943042144abdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a8909e4cc8d1f05aeb73943042144abdf">PIN0</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)4)</td></tr>
-<tr class="memdesc:a8909e4cc8d1f05aeb73943042144abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(ESP32_DEVICE_MODE == SENDER)  <br /></td></tr>
+<tr class="memdesc:a8909e4cc8d1f05aeb73943042144abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 0.  <br /></td></tr>
 <tr class="separator:a8909e4cc8d1f05aeb73943042144abdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522e24eb599eab6d1ec4b1ae5a3a12b2" id="r_a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a522e24eb599eab6d1ec4b1ae5a3a12b2">PIN1</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)16)</td></tr>
+<tr class="memdesc:a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 1.  <br /></td></tr>
 <tr class="separator:a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a903210ad84aed4458cbc75b489f9bb7e" id="r_a903210ad84aed4458cbc75b489f9bb7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a903210ad84aed4458cbc75b489f9bb7e">PIN2</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)5)</td></tr>
+<tr class="memdesc:a903210ad84aed4458cbc75b489f9bb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 2.  <br /></td></tr>
 <tr class="separator:a903210ad84aed4458cbc75b489f9bb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4b639acb4bf160a49ff3c0d8fa80fc4" id="r_ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ac4b639acb4bf160a49ff3c0d8fa80fc4">PIN3</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)17)</td></tr>
+<tr class="memdesc:ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 3.  <br /></td></tr>
 <tr class="separator:ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb86ca4e29bc982d0f07ca2a9808f9a" id="r_a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a">BTN0</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)14)</td></tr>
+<tr class="memdesc:a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button 0 input pin.  <br /></td></tr>
 <tr class="separator:a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf31d4d5bad7fd61418b8b8036df96c" id="r_afbf31d4d5bad7fd61418b8b8036df96c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#afbf31d4d5bad7fd61418b8b8036df96c">OLED_SDA</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)21)</td></tr>
+<tr class="memdesc:afbf31d4d5bad7fd61418b8b8036df96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OLED I2C SDA pin.  <br /></td></tr>
 <tr class="separator:afbf31d4d5bad7fd61418b8b8036df96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3ddbbb48cad4c34406916e199b89122" id="r_ad3ddbbb48cad4c34406916e199b89122"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ad3ddbbb48cad4c34406916e199b89122">OLED_SCL</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)22)</td></tr>
+<tr class="memdesc:ad3ddbbb48cad4c34406916e199b89122"><td class="mdescLeft">&#160;</td><td class="mdescRight">OLED I2C SCL pin.  <br /></td></tr>
 <tr class="separator:ad3ddbbb48cad4c34406916e199b89122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8909e4cc8d1f05aeb73943042144abdf" id="r_a8909e4cc8d1f05aeb73943042144abdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a8909e4cc8d1f05aeb73943042144abdf">PIN0</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
-<tr class="memdesc:a8909e4cc8d1f05aeb73943042144abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(ESP32_DEVICE_MODE == SENDER)  <br /></td></tr>
+<tr class="memdesc:a8909e4cc8d1f05aeb73943042144abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 0.  <br /></td></tr>
 <tr class="separator:a8909e4cc8d1f05aeb73943042144abdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522e24eb599eab6d1ec4b1ae5a3a12b2" id="r_a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a522e24eb599eab6d1ec4b1ae5a3a12b2">PIN1</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 1.  <br /></td></tr>
 <tr class="separator:a522e24eb599eab6d1ec4b1ae5a3a12b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a903210ad84aed4458cbc75b489f9bb7e" id="r_a903210ad84aed4458cbc75b489f9bb7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a903210ad84aed4458cbc75b489f9bb7e">PIN2</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:a903210ad84aed4458cbc75b489f9bb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 2.  <br /></td></tr>
 <tr class="separator:a903210ad84aed4458cbc75b489f9bb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4b639acb4bf160a49ff3c0d8fa80fc4" id="r_ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ac4b639acb4bf160a49ff3c0d8fa80fc4">PIN3</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">General purpose pin 3.  <br /></td></tr>
 <tr class="separator:ac4b639acb4bf160a49ff3c0d8fa80fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb86ca4e29bc982d0f07ca2a9808f9a" id="r_a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a">BTN0</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button 0 input pin.  <br /></td></tr>
 <tr class="separator:a5bb86ca4e29bc982d0f07ca2a9808f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3ddbbb48cad4c34406916e199b89122" id="r_ad3ddbbb48cad4c34406916e199b89122"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ad3ddbbb48cad4c34406916e199b89122">OLED_SCL</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:ad3ddbbb48cad4c34406916e199b89122"><td class="mdescLeft">&#160;</td><td class="mdescRight">OLED I2C SCL pin.  <br /></td></tr>
 <tr class="separator:ad3ddbbb48cad4c34406916e199b89122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf31d4d5bad7fd61418b8b8036df96c" id="r_afbf31d4d5bad7fd61418b8b8036df96c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#afbf31d4d5bad7fd61418b8b8036df96c">OLED_SDA</a>&#160;&#160;&#160;((<a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>)0)</td></tr>
+<tr class="memdesc:afbf31d4d5bad7fd61418b8b8036df96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OLED I2C SDA pin.  <br /></td></tr>
 <tr class="separator:afbf31d4d5bad7fd61418b8b8036df96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a788e6821ad3f4878731942d3a0773507" id="r_a788e6821ad3f4878731942d3a0773507"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>&#160;&#160;&#160;18</td></tr>
 <tr class="memdesc:a788e6821ad3f4878731942d3a0773507"><td class="mdescLeft">&#160;</td><td class="mdescRight">(ESP32_DEVICE_MODE == RECEIVER)  <br /></td></tr>
 <tr class="separator:a788e6821ad3f4878731942d3a0773507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ba618dcfc48fc528ca0ca4b52a03b87" id="r_a0ba618dcfc48fc528ca0ca4b52a03b87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a0ba618dcfc48fc528ca0ca4b52a03b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 1.  <br /></td></tr>
 <tr class="separator:a0ba618dcfc48fc528ca0ca4b52a03b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ccfa9d6755fa155ec0b784ecc676131" id="r_a7ccfa9d6755fa155ec0b784ecc676131"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a>&#160;&#160;&#160;17</td></tr>
+<tr class="memdesc:a7ccfa9d6755fa155ec0b784ecc676131"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 2.  <br /></td></tr>
 <tr class="separator:a7ccfa9d6755fa155ec0b784ecc676131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7a03a06529c34ac20f93d20e736b0e" id="r_adf7a03a06529c34ac20f93d20e736b0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:adf7a03a06529c34ac20f93d20e736b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 3.  <br /></td></tr>
 <tr class="separator:adf7a03a06529c34ac20f93d20e736b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0002bd43c07bf3c4d44f5312fac9c0a5" id="r_a0002bd43c07bf3c4d44f5312fac9c0a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a0002bd43c07bf3c4d44f5312fac9c0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 4.  <br /></td></tr>
 <tr class="separator:a0002bd43c07bf3c4d44f5312fac9c0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a203f3f7cdb0f1c15904a5689b6712b16" id="r_a203f3f7cdb0f1c15904a5689b6712b16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a203f3f7cdb0f1c15904a5689b6712b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 5.  <br /></td></tr>
 <tr class="separator:a203f3f7cdb0f1c15904a5689b6712b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb4f25721a4eb712b8a7014b250143f" id="r_aabb4f25721a4eb712b8a7014b250143f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:aabb4f25721a4eb712b8a7014b250143f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 6.  <br /></td></tr>
 <tr class="separator:aabb4f25721a4eb712b8a7014b250143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c9a2683c6a4e1d855ac0233ffb9acf4" id="r_a3c9a2683c6a4e1d855ac0233ffb9acf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a3c9a2683c6a4e1d855ac0233ffb9acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 7.  <br /></td></tr>
 <tr class="separator:a3c9a2683c6a4e1d855ac0233ffb9acf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c3b713895c807586a1404f0a40dc29" id="r_a24c3b713895c807586a1404f0a40dc29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a24c3b713895c807586a1404f0a40dc29"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 8.  <br /></td></tr>
 <tr class="separator:a24c3b713895c807586a1404f0a40dc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ff3b2b3273b72adba617c58656d101" id="r_a13ff3b2b3273b72adba617c58656d101"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a13ff3b2b3273b72adba617c58656d101"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 9.  <br /></td></tr>
 <tr class="separator:a13ff3b2b3273b72adba617c58656d101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823ab6d619e8f42672471192ba26c42b" id="r_a823ab6d619e8f42672471192ba26c42b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a823ab6d619e8f42672471192ba26c42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 10.  <br /></td></tr>
 <tr class="separator:a823ab6d619e8f42672471192ba26c42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af40d92c425e867615a7ad20678fbab47" id="r_af40d92c425e867615a7ad20678fbab47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memdesc:af40d92c425e867615a7ad20678fbab47"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 11.  <br /></td></tr>
 <tr class="separator:af40d92c425e867615a7ad20678fbab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2ae1d229ee2b440b6736a9a0791be5" id="r_a4e2ae1d229ee2b440b6736a9a0791be5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a4e2ae1d229ee2b440b6736a9a0791be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 12.  <br /></td></tr>
 <tr class="separator:a4e2ae1d229ee2b440b6736a9a0791be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b48bf476e1766d463f6465c2ff626e6" id="r_a8b48bf476e1766d463f6465c2ff626e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a>&#160;&#160;&#160;19</td></tr>
+<tr class="memdesc:a8b48bf476e1766d463f6465c2ff626e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 13.  <br /></td></tr>
 <tr class="separator:a8b48bf476e1766d463f6465c2ff626e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18493351e8f4ca7bc008e55a4e6dad90" id="r_a18493351e8f4ca7bc008e55a4e6dad90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a18493351e8f4ca7bc008e55a4e6dad90"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 14.  <br /></td></tr>
 <tr class="separator:a18493351e8f4ca7bc008e55a4e6dad90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1db5eca57bcab4b3ccdc8f214e4ebbe8" id="r_a1db5eca57bcab4b3ccdc8f214e4ebbe8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a1db5eca57bcab4b3ccdc8f214e4ebbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data Bit 15.  <br /></td></tr>
 <tr class="separator:a1db5eca57bcab4b3ccdc8f214e4ebbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec68a022888f9f464147a71d440936f2" id="r_aec68a022888f9f464147a71d440936f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:aec68a022888f9f464147a71d440936f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Reset pin.  <br /></td></tr>
 <tr class="separator:aec68a022888f9f464147a71d440936f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe6cecfa4bf07577a952657c24d568bb" id="r_abe6cecfa4bf07577a952657c24d568bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:abe6cecfa4bf07577a952657c24d568bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Write control pin.  <br /></td></tr>
 <tr class="separator:abe6cecfa4bf07577a952657c24d568bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac115546f885b68ebb1ddb7f986e768b6" id="r_ac115546f885b68ebb1ddb7f986e768b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a>&#160;&#160;&#160;14</td></tr>
+<tr class="memdesc:ac115546f885b68ebb1ddb7f986e768b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Read control pin.  <br /></td></tr>
 <tr class="separator:ac115546f885b68ebb1ddb7f986e768b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3df9a20cd27485d44dff7dce866b97" id="r_a1b3df9a20cd27485d44dff7dce866b97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a>&#160;&#160;&#160;21</td></tr>
+<tr class="memdesc:a1b3df9a20cd27485d44dff7dce866b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Register Select pin (Command/Data)  <br /></td></tr>
 <tr class="separator:a1b3df9a20cd27485d44dff7dce866b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe4f1ffb4b5e05de45e4ca39174b90f" id="r_acbe4f1ffb4b5e05de45e4ca39174b90f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a>&#160;&#160;&#160;13</td></tr>
+<tr class="memdesc:acbe4f1ffb4b5e05de45e4ca39174b90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Chip Select pin.  <br /></td></tr>
 <tr class="separator:acbe4f1ffb4b5e05de45e4ca39174b90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27112496a3be7c32fab594a1ac749a1c" id="r_a27112496a3be7c32fab594a1ac749a1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">LCD32_MAX_ROW</a>&#160;&#160;&#160;240</td></tr>
+<tr class="memdesc:a27112496a3be7c32fab594a1ac749a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum rows (height) of LCD.  <br /></td></tr>
 <tr class="separator:a27112496a3be7c32fab594a1ac749a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b369bfa1360055a5b83d101e791896c" id="r_a6b369bfa1360055a5b83d101e791896c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">LCD32_MAX_COL</a>&#160;&#160;&#160;320</td></tr>
+<tr class="memdesc:a6b369bfa1360055a5b83d101e791896c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum columns (width) of LCD.  <br /></td></tr>
 <tr class="separator:a6b369bfa1360055a5b83d101e791896c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a1cfef2a62ed0c60c148158e708250d2c" id="r_a1cfef2a62ed0c60c148158e708250d2c"><td class="memItemLeft" align="right" valign="top">typedef int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a></td></tr>
-<tr class="memdesc:a1cfef2a62ed0c60c148158e708250d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO CONFIG ///////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a1cfef2a62ed0c60c148158e708250d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type definition for a GPIO pin number.  <br /></td></tr>
 <tr class="separator:a1cfef2a62ed0c60c148158e708250d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -321,7 +364,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00072">72</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Button 0 input pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00078">78</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +383,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00072">72</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Button 0 input pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00078">78</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -353,7 +402,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00052">52</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>SPI Configuration Preset (Mode, CPOL, CPHA) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00055">55</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +420,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00051">51</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>SPI Communication Frequency in Hz. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00052">52</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -384,10 +437,10 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Time interval of generating data frame Unit: tick <br  />
- </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00037">37</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Time interval of generating data frame (Unit: tick) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00040">40</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -402,9 +455,10 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Debouncing time for button Unit: micro-sec </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00041">41</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Debouncing time for button (Unit: micro-sec) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00043">43</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -420,7 +474,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00054">54</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Display orientation (0, 1, 2, 3) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00058">58</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -436,9 +492,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mode of source code. </p>
+<p>Mode of source code (SENDER, RECEIVER, or MONITOR) </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00013">13</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00016">16</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +510,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00117">117</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Chip Select pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00123">123</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -471,8 +529,9 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(ESP32_DEVICE_MODE == RECEIVER) </p>
+<p>LCD Data Bit 0 </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00095">95</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00101">101</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -488,7 +547,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00096">96</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00102">102</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +565,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00105">105</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 10. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00111">111</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -520,7 +583,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00106">106</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 11. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00112">112</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -536,7 +601,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00107">107</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 12. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00113">113</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +619,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00108">108</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 13. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00114">114</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -568,7 +637,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00109">109</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 14. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00115">115</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -584,7 +655,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00110">110</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 15. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00116">116</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -600,7 +673,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00097">97</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00103">103</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +691,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00098">98</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 3. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00104">104</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +709,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00099">99</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 4. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00105">105</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -648,7 +727,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00100">100</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 5. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00106">106</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +745,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00101">101</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 6. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00107">107</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +763,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00102">102</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 7. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00108">108</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -696,7 +781,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00103">103</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 8. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00109">109</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -712,7 +799,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00104">104</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Data Bit 9. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00110">110</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -728,7 +817,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00120">120</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Maximum columns (width) of LCD. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00126">126</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -744,7 +835,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00119">119</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Maximum rows (height) of LCD. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00125">125</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +853,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00115">115</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Read control pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00121">121</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -776,7 +871,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00116">116</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Register Select pin (Command/Data) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00122">122</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -792,7 +889,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00113">113</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Reset pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00119">119</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -808,7 +907,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00114">114</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>LCD Write control pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00120">120</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -823,7 +924,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Long press thresold Unit: micro-sec </p>
+
+<p>Long press threshold (Unit: micro-sec) </p>
 
 <p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00049">49</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
@@ -841,7 +943,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00010">10</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Device mode: Monitor. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00013">13</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -857,7 +961,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00075">75</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>OLED I2C SCL pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00081">81</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -873,7 +980,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00075">75</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>OLED I2C SCL pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00081">81</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -889,7 +999,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00074">74</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>OLED I2C SDA pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00080">80</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -905,7 +1018,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00074">74</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>OLED I2C SDA pin. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00080">80</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -921,9 +1037,11 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(ESP32_DEVICE_MODE == SENDER) </p>
+<p>General purpose pin 0. </p>
+<p>(ESP32_DEVICE_MODE == SENDER)</p>
+<p>Unused/Dummy pin </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00067">67</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00073">73</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -939,9 +1057,11 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(ESP32_DEVICE_MODE == SENDER) </p>
+<p>General purpose pin 0. </p>
+<p>(ESP32_DEVICE_MODE == SENDER)</p>
+<p>Unused/Dummy pin </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00067">67</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00073">73</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -957,7 +1077,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00068">68</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 1. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00074">74</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1096,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00068">68</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 1. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00074">74</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1115,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00069">69</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 2. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00075">75</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1134,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00069">69</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 2. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00075">75</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1153,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00070">70</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 3. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00076">76</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1172,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00070">70</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>General purpose pin 3. </p>
+<p>Unused/Dummy pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00076">76</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1191,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00009">9</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Device mode: Receiver. </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00012">12</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1069,9 +1209,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>DEVICE SETUP //////////////////////////////////////////////////////////////////////////////////. </p>
+<p>Device mode: Sender. </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00008">8</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00011">11</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1086,9 +1226,10 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Short press thresold Unit: micro-sec </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00045">45</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p>Short press threshold (Unit: micro-sec) </p>
+
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00046">46</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1104,9 +1245,9 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Slave address for I2C comunication. </p>
+<p>Slave address for I2C communication. </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00033">33</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00037">37</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1122,15 +1263,17 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>COMPONENT SETUP ///////////////////////////////////////////////////////////////////////////////. </p>
-<p>To config font, check <a class="el" href="fontUtils_8c.html">fontUtils.c</a> in fonts/ Currently, the font is: TomThumb System log level set-up</p><ul>
+<p>System log level set-up. </p>
+<dl class="section note"><dt>Note</dt><dd>To config font, check <a class="el" href="fontUtils_8c.html">fontUtils.c</a> in fonts/. Currently, the font is: TomThumb<ul>
 <li>[1] : Only error can be logged</li>
 <li>[2] : Error, entry, exit, can be logged</li>
 <li>[3] : Error, entry, exit, message can be logged</li>
-<li>[4] : Detail log See code in <a class="el" href="espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo...">espLogWrapper.h</a> </li>
+<li>[4] : Detail log </li>
 </ul>
+</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo...">espLogWrapper.h</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00026">26</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00030">30</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1147,10 +1290,10 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>GPIO CONFIG ///////////////////////////////////////////////////////////////////////////////////. </p>
-<p>for printf, sprintf, etc. for fixed-width integer types (uint8_t, int32_t, etc.) for variadic arguments (va_list, va_start, va_end) Type of a GPIO </p>
+<p>Type definition for a GPIO pin number. </p>
+<p>&lt; For printf, sprintf, etc. &lt; For fixed-width integer types (uint8_t, int32_t, etc.) For variadic arguments (va_list, va_start, va_end) </p>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00063">63</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00069">69</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
 
 </div>
 </div>
@@ -1168,19 +1311,21 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(ESP32_DEVICE_MODE == MONITOR) </p>
-<p>States of pin </p>
+<p>States of pin definition </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4" name="a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"></a>UNUSED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2" name="a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"></a>INVALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4" name="a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"></a>UNUSED&#160;</td><td class="fielddoc"><p>Pin is unused. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2" name="a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"></a>INVALID&#160;</td><td class="fielddoc"><p>Pin value is invalid. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00125">125</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>               {</div>
-<div class="line"><span class="lineno">  126</span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a> = -1,</div>
-<div class="line"><span class="lineno">  127</span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a> = -2,</div>
-<div class="line"><span class="lineno">  128</span>};</div>
-<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a></div><div class="ttdeci">@ UNUSED</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00126">projectConfig.h:126</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a></div><div class="ttdeci">@ INVALID</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00127">projectConfig.h:127</a></div></div>
+<p class="definition">Definition at line <a class="el" href="projectConfig_8h_source.html#l00131">131</a> of file <a class="el" href="projectConfig_8h_source.html">projectConfig.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>               {</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a> = -1,    </div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a> = -2,   </div>
+<div class="line"><span class="lineno">  134</span>};</div>
+<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a></div><div class="ttdeci">@ UNUSED</div><div class="ttdoc">Pin is unused.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00132">projectConfig.h:132</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a></div><div class="ttdeci">@ INVALID</div><div class="ttdoc">Pin value is invalid.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00133">projectConfig.h:133</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

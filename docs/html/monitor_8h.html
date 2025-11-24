@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('monitor_8h.html',''); initResizable();
   <div class="headertitle"><div class="title">monitor.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main project! For monitor/analyzer the bus!  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="general_8h_source.html">../helper/general.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lcd32_8h_source.html">../comDriver/lcd32/lcd32.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -105,7 +108,7 @@ Include dependency graph for monitor.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="monitor_8h__incl.png" border="0" usemap="#amain_2monitor_8h" alt=""/></div>
 <map name="amain_2monitor_8h" id="amain_2monitor_8h">
-<area shape="rect" title=" " alt="" coords="1009,5,1131,31"/>
+<area shape="rect" title="Main project! For monitor/analyzer the bus!" alt="" coords="1009,5,1131,31"/>
 <area shape="rect" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="1071,313,1211,339"/>
 <area shape="poly" title=" " alt="" coords="1067,32,1049,73,1032,133,1027,166,1027,200,1032,233,1044,264,1066,288,1093,305,1091,310,1062,292,1040,267,1027,235,1021,201,1022,166,1027,132,1044,71,1062,30"/>
 <area shape="rect" href="lcd32_8h.html" title="LCD 3.2&quot; driver interface; Provides APIs for creating, configuring, and controlling the LCD device,..." alt="" coords="1079,79,1221,119"/>
@@ -212,8 +215,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="monitor_8h__dep__incl.png" border="0" usemap="#amain_2monitor_8hdep" alt=""/></div>
 <map name="amain_2monitor_8hdep" id="amain_2monitor_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,127,31"/>
-<area shape="rect" href="myApp_8c.html" title=" " alt="" coords="8,79,124,104"/>
+<area shape="rect" title="Main project! For monitor/analyzer the bus!" alt="" coords="5,5,127,31"/>
+<area shape="rect" href="myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="8,79,124,104"/>
 <area shape="poly" title=" " alt="" coords="69,44,69,79,63,79,63,44"/>
 </map>
 </div>
@@ -223,17 +226,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a1a99cb8a1aa4caaffa8243ec9352f351" id="r_a1a99cb8a1aa4caaffa8243ec9352f351"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a1a99cb8a1aa4caaffa8243ec9352f351">IS_SYSTEM_INIT</a>&#160;&#160;&#160;(<a class="el" href="monitor_8h.html#a164fb3a509c961613208714a1e41db94">systemStage</a> == <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a>)</td></tr>
-<tr class="memdesc:a1a99cb8a1aa4caaffa8243ec9352f351"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a1a99cb8a1aa4caaffa8243ec9352f351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if system is in INIT stage.  <br /></td></tr>
 <tr class="separator:a1a99cb8a1aa4caaffa8243ec9352f351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f94f7aa5b2eab7435d419c3bf1be87" id="r_ae9f94f7aa5b2eab7435d419c3bf1be87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#ae9f94f7aa5b2eab7435d419c3bf1be87">IS_SYSTEM_RUNNING</a>&#160;&#160;&#160;(<a class="el" href="monitor_8h.html#a164fb3a509c961613208714a1e41db94">systemStage</a> == <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577">SYSTEM_RUNNING</a>)</td></tr>
+<tr class="memdesc:ae9f94f7aa5b2eab7435d419c3bf1be87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if system is in RUNNING stage.  <br /></td></tr>
 <tr class="separator:ae9f94f7aa5b2eab7435d419c3bf1be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b700064466b5d5abe6f2c99e093fc2" id="r_ae7b700064466b5d5abe6f2c99e093fc2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#ae7b700064466b5d5abe6f2c99e093fc2">IS_SYSTEM_STOPPED</a>&#160;&#160;&#160;(<a class="el" href="monitor_8h.html#a164fb3a509c961613208714a1e41db94">systemStage</a> == <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a>)</td></tr>
+<tr class="memdesc:ae7b700064466b5d5abe6f2c99e093fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if system is in STOPPED stage.  <br /></td></tr>
 <tr class="separator:ae7b700064466b5d5abe6f2c99e093fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1974e9047cd0f6fa10c9c66b7658bbd5" id="r_a1974e9047cd0f6fa10c9c66b7658bbd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a1974e9047cd0f6fa10c9c66b7658bbd5">FLAG_OP_W_MUTEX</a>(p2mutex,  flagOp,  flag,  bitOrder)</td></tr>
-<tr class="memdesc:a1974e9047cd0f6fa10c9c66b7658bbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag operation with MUTEX!  <br /></td></tr>
+<tr class="memdesc:a1974e9047cd0f6fa10c9c66b7658bbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a flag operation safely within a critical section (Mutex).  <br /></td></tr>
 <tr class="separator:a1974e9047cd0f6fa10c9c66b7658bbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f8c2b6e6a84aa1efb30b3af46163ce4" id="r_a8f8c2b6e6a84aa1efb30b3af46163ce4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a8f8c2b6e6a84aa1efb30b3af46163ce4">DO_WITH_MUTEX</a>(p2mutex,  anythingYouWantToDo)</td></tr>
-<tr class="memdesc:a8f8c2b6e6a84aa1efb30b3af46163ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a piece of code in a MUTEX!  <br /></td></tr>
+<tr class="memdesc:a8f8c2b6e6a84aa1efb30b3af46163ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a block of code safely within a critical section (Mutex).  <br /></td></tr>
 <tr class="separator:a8f8c2b6e6a84aa1efb30b3af46163ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -243,32 +248,38 @@ Enumerations</h2></td></tr>
 , <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a> = 2
 , <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d">SYSTEM_STAGE_COUNT</a>
  }</td></tr>
-<tr class="memdesc:abdd1c0e87e30a8e4598fc03de0037909"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////.  <a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909">More...</a><br /></td></tr>
+<tr class="memdesc:abdd1c0e87e30a8e4598fc03de0037909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration defining the system operation stages.  <a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909">More...</a><br /></td></tr>
 <tr class="separator:abdd1c0e87e30a8e4598fc03de0037909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7f70d348006d8bd0ac44aa0653cfde50" id="r_a7f70d348006d8bd0ac44aa0653cfde50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a7f70d348006d8bd0ac44aa0653cfde50">lcdTestTask</a> (void *pv)</td></tr>
-<tr class="memdesc:a7f70d348006d8bd0ac44aa0653cfde50"><td class="mdescLeft">&#160;</td><td class="mdescRight">TASK //////////////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a7f70d348006d8bd0ac44aa0653cfde50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task to test LCD rendering by filling random colors.  <br /></td></tr>
 <tr class="separator:a7f70d348006d8bd0ac44aa0653cfde50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3004c9c4fb128520f24f4407dca4f8cf" id="r_a3004c9c4fb128520f24f4407dca4f8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf">lcdInit</a> ()</td></tr>
-<tr class="memdesc:a3004c9c4fb128520f24f4407dca4f8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIT //////////////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a3004c9c4fb128520f24f4407dca4f8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD device, configure pins, and perform startup sequence.  <br /></td></tr>
 <tr class="separator:a3004c9c4fb128520f24f4407dca4f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc86b84eeabe5d8dc8445cec2314d925" id="r_adc86b84eeabe5d8dc8445cec2314d925"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#adc86b84eeabe5d8dc8445cec2314d925">systemInit</a> ()</td></tr>
+<tr class="memdesc:adc86b84eeabe5d8dc8445cec2314d925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the entire system, including drivers and tasks.  <br /></td></tr>
 <tr class="separator:adc86b84eeabe5d8dc8445cec2314d925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a164fb3a509c961613208714a1e41db94" id="r_a164fb3a509c961613208714a1e41db94"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="flag_8h.html#a8160d63762fcd20f57ecf37f5a0474c8">flag_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a164fb3a509c961613208714a1e41db94">systemStage</a> = <a class="el" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a></td></tr>
+<tr class="memdesc:a164fb3a509c961613208714a1e41db94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global system stage flag used to represent the overall runtime state.  <br /></td></tr>
 <tr class="separator:a164fb3a509c961613208714a1e41db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac20b88f5a52c9010138c377b040e01e6" id="r_ac20b88f5a52c9010138c377b040e01e6"><td class="memItemLeft" align="right" valign="top">portMUX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#ac20b88f5a52c9010138c377b040e01e6">systemStageMutex</a> = portMUX_INITIALIZER_UNLOCKED</td></tr>
 <tr class="memdesc:ac20b88f5a52c9010138c377b040e01e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex for synchronizing access to the system stage flag.  <br /></td></tr>
 <tr class="separator:ac20b88f5a52c9010138c377b040e01e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b30be0dbeae14618a6caaa169112700" id="r_a7b30be0dbeae14618a6caaa169112700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd32Dev__t.html">lcd32Dev_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a></td></tr>
-<tr class="memdesc:a7b30be0dbeae14618a6caaa169112700"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD 3.2" //////////////////////////////////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a7b30be0dbeae14618a6caaa169112700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the LCD 3.2" device driver instance.  <br /></td></tr>
 <tr class="separator:a7b30be0dbeae14618a6caaa169112700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main project! For monitor/analyzer the bus! </p>
+
+<p class="definition">Definition in file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a8f8c2b6e6a84aa1efb30b3af46163ce4" name="a8f8c2b6e6a84aa1efb30b3af46163ce4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f8c2b6e6a84aa1efb30b3af46163ce4">&#9670;&#160;</a></span>DO_WITH_MUTEX</h2>
 
@@ -300,14 +311,21 @@ Variables</h2></td></tr>
 <div class="line">            vPortExitCritical(p2mutex);                         \</div>
 <div class="line">        } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p>Wrap a piece of code in a MUTEX! </p>
+<p>Execute a block of code safely within a critical section (Mutex). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p2mutex</td><td>Pointer to the mutex. </td></tr>
+    <tr><td class="paramname">anythingYouWantToDo</td><td>Code block or function call to execute. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00036">36</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>           {                                                    \</div>
-<div class="line"><span class="lineno">   38</span>            vPortEnterCritical(p2mutex);                        \</div>
-<div class="line"><span class="lineno">   39</span>            anythingYouWantToDo;                                \</div>
-<div class="line"><span class="lineno">   40</span>            vPortExitCritical(p2mutex);                         \</div>
-<div class="line"><span class="lineno">   41</span>        } <span class="keywordflow">while</span> (0)</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00052">52</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>           {                                                    \</div>
+<div class="line"><span class="lineno">   54</span>            vPortEnterCritical(p2mutex);                        \</div>
+<div class="line"><span class="lineno">   55</span>            anythingYouWantToDo;                                \</div>
+<div class="line"><span class="lineno">   56</span>            vPortExitCritical(p2mutex);                         \</div>
+<div class="line"><span class="lineno">   57</span>        } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -354,14 +372,23 @@ Variables</h2></td></tr>
 <div class="line">            vPortExitCritical(p2mutex);                         \</div>
 <div class="line">        } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p>Flag operation with MUTEX! </p>
+<p>Perform a flag operation safely within a critical section (Mutex). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p2mutex</td><td>Pointer to the mutex. </td></tr>
+    <tr><td class="paramname">flagOp</td><td>Flag operation macro/function (e.g., __setFlagBit). </td></tr>
+    <tr><td class="paramname">flag</td><td>The flag variable to modify. </td></tr>
+    <tr><td class="paramname">bitOrder</td><td>The bit position to operate on. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00028">28</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>           {                                                    \</div>
-<div class="line"><span class="lineno">   30</span>            vPortEnterCritical(p2mutex);                        \</div>
-<div class="line"><span class="lineno">   31</span>            flagOp(flag, bitOrder);                             \</div>
-<div class="line"><span class="lineno">   32</span>            vPortExitCritical(p2mutex);                         \</div>
-<div class="line"><span class="lineno">   33</span>        } <span class="keywordflow">while</span> (0)</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00042">42</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>           {                                                    \</div>
+<div class="line"><span class="lineno">   44</span>            vPortEnterCritical(p2mutex);                        \</div>
+<div class="line"><span class="lineno">   45</span>            flagOp(flag, bitOrder);                             \</div>
+<div class="line"><span class="lineno">   46</span>            vPortExitCritical(p2mutex);                         \</div>
+<div class="line"><span class="lineno">   47</span>        } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -377,9 +404,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////. </p>
+<p>Check if system is in INIT stage. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00023">23</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00033">33</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +422,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00024">24</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p>Check if system is in RUNNING stage. </p>
+
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00034">34</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +440,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00025">25</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p>Check if system is in STOPPED stage. </p>
+
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00035">35</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -428,29 +459,29 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////. </p>
 <p>Enumeration defining the system operation stages. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67" name="abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67"></a>SYSTEM_INIT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577" name="abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577"></a>SYSTEM_RUNNING&#160;</td><td class="fielddoc"><p>System is initializing. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67" name="abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67"></a>SYSTEM_INIT&#160;</td><td class="fielddoc"><p>System is initializing. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f" name="abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f"></a>SYSTEM_STOPPED&#160;</td><td class="fielddoc"><p>System is currently running. </p>
+<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577" name="abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577"></a>SYSTEM_RUNNING&#160;</td><td class="fielddoc"><p>System is currently running. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d" name="abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d"></a>SYSTEM_STAGE_COUNT&#160;</td><td class="fielddoc"><p>System has been stopped or halted. </p>
+<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f" name="abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f"></a>SYSTEM_STOPPED&#160;</td><td class="fielddoc"><p>System has been stopped or halted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d" name="abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d"></a>SYSTEM_STAGE_COUNT&#160;</td><td class="fielddoc"><p>Total number of defined stages. </p>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00007">7</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                       {</div>
-<div class="line"><span class="lineno">    8</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a>    = 0, </div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577">SYSTEM_RUNNING</a> = 1, </div>
-<div class="line"><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a> = 2, </div>
-<div class="line"><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d">SYSTEM_STAGE_COUNT</a>,</div>
-<div class="line"><span class="lineno">   12</span>};</div>
-<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a></div><div class="ttdeci">@ SYSTEM_INIT</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00008">monitor.h:8</a></div></div>
-<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a></div><div class="ttdeci">@ SYSTEM_STOPPED</div><div class="ttdoc">System is currently running.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00010">monitor.h:10</a></div></div>
-<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d">SYSTEM_STAGE_COUNT</a></div><div class="ttdeci">@ SYSTEM_STAGE_COUNT</div><div class="ttdoc">System has been stopped or halted.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00011">monitor.h:11</a></div></div>
-<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577">SYSTEM_RUNNING</a></div><div class="ttdeci">@ SYSTEM_RUNNING</div><div class="ttdoc">System is initializing.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00009">monitor.h:9</a></div></div>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00015">15</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                       {</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a>    = 0, </div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577">SYSTEM_RUNNING</a> = 1, </div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a> = 2, </div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d">SYSTEM_STAGE_COUNT</a>, </div>
+<div class="line"><span class="lineno">   20</span>};</div>
+<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a214ee7348007ebf0c929475451da2f67">SYSTEM_INIT</a></div><div class="ttdeci">@ SYSTEM_INIT</div><div class="ttdoc">System is initializing.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00016">monitor.h:16</a></div></div>
+<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a52140d07749c6900c7874788e002e17f">SYSTEM_STOPPED</a></div><div class="ttdeci">@ SYSTEM_STOPPED</div><div class="ttdoc">System has been stopped or halted.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00018">monitor.h:18</a></div></div>
+<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909a813c24b5047333d41b5199f27a50e38d">SYSTEM_STAGE_COUNT</a></div><div class="ttdeci">@ SYSTEM_STAGE_COUNT</div><div class="ttdoc">Total number of defined stages.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00019">monitor.h:19</a></div></div>
+<div class="ttc" id="amonitor_8h_html_abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577"><div class="ttname"><a href="monitor_8h.html#abdd1c0e87e30a8e4598fc03de0037909aefa249ca4d9ffa0e03b0cae750e57577">SYSTEM_RUNNING</a></div><div class="ttdeci">@ SYSTEM_RUNNING</div><div class="ttdoc">System is currently running.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00017">monitor.h:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -470,30 +501,30 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>INIT //////////////////////////////////////////////////////////////////////////////////////////. </p>
+<p>Initialize the LCD device, configure pins, and perform startup sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00075">75</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>              {</div>
-<div class="line"><span class="lineno">   76</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;lcdInit()&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>    <a class="code hl_function" href="lcd32_8h.html#a2703342f175daff557c568fd8ef17d9b">lcd32CreateDevice</a>(&amp;<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
-<div class="line"><span class="lineno">   78</span>    <a class="code hl_struct" href="structlcd32DataPin__t.html">lcd32DataPin_t</a> dataPin = {</div>
-<div class="line"><span class="lineno">   79</span>        .<a class="code hl_variable" href="structlcd32DataPin__t.html#ad4945cdbbeaff34908dcbee1a00841ce">__0</a> = <a class="code hl_define" href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>,   .__1 = <a class="code hl_define" href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>,   .__2 = <a class="code hl_define" href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a>,   .__3 = <a class="code hl_define" href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a>,</div>
-<div class="line"><span class="lineno">   80</span>        .__4 = <a class="code hl_define" href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a>,   .__5 = <a class="code hl_define" href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a>,   .__6 = <a class="code hl_define" href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a>,   .__7 = <a class="code hl_define" href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a>,</div>
-<div class="line"><span class="lineno">   81</span>        .__8 = <a class="code hl_define" href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a>,   .__9 = <a class="code hl_define" href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a>,   .__10 = <a class="code hl_define" href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a>, .__11 = <a class="code hl_define" href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a>,</div>
-<div class="line"><span class="lineno">   82</span>        .__12 = <a class="code hl_define" href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a>, .__13 = <a class="code hl_define" href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a>, .__14 = <a class="code hl_define" href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a>, .__15 = <a class="code hl_define" href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div>
-<div class="line"><span class="lineno">   83</span>    };</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_struct" href="structlcd32ControlPin__t.html">lcd32ControlPin_t</a> ctlPin = {</div>
-<div class="line"><span class="lineno">   85</span>        .<a class="code hl_variable" href="structlcd32ControlPin__t.html#a7e4396d5cf696ac04896a144c7f80035">r</a> = <a class="code hl_define" href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a>,  .w = <a class="code hl_define" href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a>,</div>
-<div class="line"><span class="lineno">   86</span>        .rs= <a class="code hl_define" href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a>,  .cs= <a class="code hl_define" href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a>,</div>
-<div class="line"><span class="lineno">   87</span>        .rst=<a class="code hl_define" href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a></div>
-<div class="line"><span class="lineno">   88</span>    };</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="lcd32_8h.html#af5a76cf17e2be75c49a3d91e492ada41">lcd32ConfigDevice</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, &amp;dataPin, &amp;ctlPin, <a class="code hl_define" href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">LCD32_MAX_ROW</a>, <a class="code hl_define" href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">LCD32_MAX_COL</a>);</div>
-<div class="line"><span class="lineno">   90</span>    <a class="code hl_function" href="lcd32_8h.html#aa8415ee7e30fbd9aa5a2a6a57fb31dae">lcd32StartUpDevice</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
-<div class="line"><span class="lineno">   91</span>    <a class="code hl_function" href="lcd32_8h.html#a20f580d7fb908082116ab96867a5d0c2">lcd32FillCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, 15);</div>
-<div class="line"><span class="lineno">   92</span>    <a class="code hl_function" href="lcd32_8h.html#aa9c10dee02914271f009a038a0244d93">lcd32FlushCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;lcdInit()&quot;</span>);</div>
-<div class="line"><span class="lineno">   95</span>}</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00101">101</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>              {</div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;lcdInit()&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_function" href="lcd32_8h.html#a2703342f175daff557c568fd8ef17d9b">lcd32CreateDevice</a>(&amp;<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_struct" href="structlcd32DataPin__t.html">lcd32DataPin_t</a> dataPin = {</div>
+<div class="line"><span class="lineno">  105</span>        .<a class="code hl_variable" href="structlcd32DataPin__t.html#ad4945cdbbeaff34908dcbee1a00841ce">__0</a> = <a class="code hl_define" href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>,   .__1 = <a class="code hl_define" href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>,   .__2 = <a class="code hl_define" href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a>,   .__3 = <a class="code hl_define" href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a>,</div>
+<div class="line"><span class="lineno">  106</span>        .__4 = <a class="code hl_define" href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a>,   .__5 = <a class="code hl_define" href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a>,   .__6 = <a class="code hl_define" href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a>,   .__7 = <a class="code hl_define" href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a>,</div>
+<div class="line"><span class="lineno">  107</span>        .__8 = <a class="code hl_define" href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a>,   .__9 = <a class="code hl_define" href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a>,   .__10 = <a class="code hl_define" href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a>, .__11 = <a class="code hl_define" href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a>,</div>
+<div class="line"><span class="lineno">  108</span>        .__12 = <a class="code hl_define" href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a>, .__13 = <a class="code hl_define" href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a>, .__14 = <a class="code hl_define" href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a>, .__15 = <a class="code hl_define" href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div>
+<div class="line"><span class="lineno">  109</span>    };</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_struct" href="structlcd32ControlPin__t.html">lcd32ControlPin_t</a> ctlPin = {</div>
+<div class="line"><span class="lineno">  111</span>        .<a class="code hl_variable" href="structlcd32ControlPin__t.html#a7e4396d5cf696ac04896a144c7f80035">r</a> = <a class="code hl_define" href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a>,  .w = <a class="code hl_define" href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a>,</div>
+<div class="line"><span class="lineno">  112</span>        .rs= <a class="code hl_define" href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a>,  .cs= <a class="code hl_define" href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a>,</div>
+<div class="line"><span class="lineno">  113</span>        .rst=<a class="code hl_define" href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a></div>
+<div class="line"><span class="lineno">  114</span>    };</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_function" href="lcd32_8h.html#af5a76cf17e2be75c49a3d91e492ada41">lcd32ConfigDevice</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, &amp;dataPin, &amp;ctlPin, <a class="code hl_define" href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">LCD32_MAX_ROW</a>, <a class="code hl_define" href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">LCD32_MAX_COL</a>);</div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_function" href="lcd32_8h.html#aa8415ee7e30fbd9aa5a2a6a57fb31dae">lcd32StartUpDevice</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_function" href="lcd32_8h.html#a20f580d7fb908082116ab96867a5d0c2">lcd32FillCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, 15);</div>
+<div class="line"><span class="lineno">  118</span>    <a class="code hl_function" href="lcd32_8h.html#aa9c10dee02914271f009a038a0244d93">lcd32FlushCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;lcdInit()&quot;</span>);</div>
+<div class="line"><span class="lineno">  121</span>}</div>
 <div class="ttc" id="aespLogWrapper_8h_html_a977020e86ee37b91362e9067177d11bc"><div class="ttname"><a href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a></div><div class="ttdeci">#define __entry(fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="espLogWrapper_8h_source.html#l00042">espLogWrapper.h:42</a></div></div>
 <div class="ttc" id="aespLogWrapper_8h_html_aa206926813ac6f690a60f957db10a6d4"><div class="ttname"><a href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a></div><div class="ttdeci">#define __exit(fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="espLogWrapper_8h_source.html#l00051">espLogWrapper.h:51</a></div></div>
 <div class="ttc" id="alcd32_8h_html_a20f580d7fb908082116ab96867a5d0c2"><div class="ttname"><a href="lcd32_8h.html#a20f580d7fb908082116ab96867a5d0c2">lcd32FillCanvas</a></div><div class="ttdeci">def lcd32FillCanvas(lcd32Dev_t *dev, color_t color)</div><div class="ttdoc">[Public function] Fill cached canvas with specified color</div></div>
@@ -501,30 +532,30 @@ Variables</h2></td></tr>
 <div class="ttc" id="alcd32_8h_html_aa8415ee7e30fbd9aa5a2a6a57fb31dae"><div class="ttname"><a href="lcd32_8h.html#aa8415ee7e30fbd9aa5a2a6a57fb31dae">lcd32StartUpDevice</a></div><div class="ttdeci">def lcd32StartUpDevice(lcd32Dev_t *dev)</div><div class="ttdoc">[Public function] Start-up (set-up pin, set reset-state)</div></div>
 <div class="ttc" id="alcd32_8h_html_aa9c10dee02914271f009a038a0244d93"><div class="ttname"><a href="lcd32_8h.html#aa9c10dee02914271f009a038a0244d93">lcd32FlushCanvas</a></div><div class="ttdeci">def lcd32FlushCanvas(lcd32Dev_t *dev)</div><div class="ttdoc">[Public function] Flush cached canvas to real screen</div></div>
 <div class="ttc" id="alcd32_8h_html_af5a76cf17e2be75c49a3d91e492ada41"><div class="ttname"><a href="lcd32_8h.html#af5a76cf17e2be75c49a3d91e492ada41">lcd32ConfigDevice</a></div><div class="ttdeci">def lcd32ConfigDevice(lcd32Dev_t *dev, lcd32DataPin_t *dataPin, lcd32ControlPin_t *controlPin, dim_t maxRow, dim_t maxCol)</div><div class="ttdoc">[Public function] Config new object</div></div>
-<div class="ttc" id="amonitor_8h_html_a7b30be0dbeae14618a6caaa169112700"><div class="ttname"><a href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a></div><div class="ttdeci">lcd32Dev_t * lcd</div><div class="ttdoc">LCD 3.2&quot; //////////////////////////////////////////////////////////////////////////////////////.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00046">monitor.h:46</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a0002bd43c07bf3c4d44f5312fac9c0a5"><div class="ttname"><a href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a></div><div class="ttdeci">#define LCD32_DB4</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00099">projectConfig.h:99</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a0ba618dcfc48fc528ca0ca4b52a03b87"><div class="ttname"><a href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a></div><div class="ttdeci">#define LCD32_DB1</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00096">projectConfig.h:96</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a13ff3b2b3273b72adba617c58656d101"><div class="ttname"><a href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a></div><div class="ttdeci">#define LCD32_DB9</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00104">projectConfig.h:104</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a18493351e8f4ca7bc008e55a4e6dad90"><div class="ttname"><a href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a></div><div class="ttdeci">#define LCD32_DB14</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00109">projectConfig.h:109</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a1b3df9a20cd27485d44dff7dce866b97"><div class="ttname"><a href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a></div><div class="ttdeci">#define LCD32_RS</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00116">projectConfig.h:116</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a1db5eca57bcab4b3ccdc8f214e4ebbe8"><div class="ttname"><a href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div><div class="ttdeci">#define LCD32_DB15</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00110">projectConfig.h:110</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a203f3f7cdb0f1c15904a5689b6712b16"><div class="ttname"><a href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a></div><div class="ttdeci">#define LCD32_DB5</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00100">projectConfig.h:100</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a24c3b713895c807586a1404f0a40dc29"><div class="ttname"><a href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a></div><div class="ttdeci">#define LCD32_DB8</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00103">projectConfig.h:103</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a27112496a3be7c32fab594a1ac749a1c"><div class="ttname"><a href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">LCD32_MAX_ROW</a></div><div class="ttdeci">#define LCD32_MAX_ROW</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00119">projectConfig.h:119</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a3c9a2683c6a4e1d855ac0233ffb9acf4"><div class="ttname"><a href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a></div><div class="ttdeci">#define LCD32_DB7</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00102">projectConfig.h:102</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a4e2ae1d229ee2b440b6736a9a0791be5"><div class="ttname"><a href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a></div><div class="ttdeci">#define LCD32_DB12</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00107">projectConfig.h:107</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a6b369bfa1360055a5b83d101e791896c"><div class="ttname"><a href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">LCD32_MAX_COL</a></div><div class="ttdeci">#define LCD32_MAX_COL</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00120">projectConfig.h:120</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a788e6821ad3f4878731942d3a0773507"><div class="ttname"><a href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a></div><div class="ttdeci">#define LCD32_DB0</div><div class="ttdoc">(ESP32_DEVICE_MODE == RECEIVER)</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00095">projectConfig.h:95</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a7ccfa9d6755fa155ec0b784ecc676131"><div class="ttname"><a href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a></div><div class="ttdeci">#define LCD32_DB2</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00097">projectConfig.h:97</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a823ab6d619e8f42672471192ba26c42b"><div class="ttname"><a href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a></div><div class="ttdeci">#define LCD32_DB10</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00105">projectConfig.h:105</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a8b48bf476e1766d463f6465c2ff626e6"><div class="ttname"><a href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a></div><div class="ttdeci">#define LCD32_DB13</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00108">projectConfig.h:108</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_aabb4f25721a4eb712b8a7014b250143f"><div class="ttname"><a href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a></div><div class="ttdeci">#define LCD32_DB6</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00101">projectConfig.h:101</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_abe6cecfa4bf07577a952657c24d568bb"><div class="ttname"><a href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a></div><div class="ttdeci">#define LCD32_WR</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00114">projectConfig.h:114</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_ac115546f885b68ebb1ddb7f986e768b6"><div class="ttname"><a href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a></div><div class="ttdeci">#define LCD32_RD</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00115">projectConfig.h:115</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_acbe4f1ffb4b5e05de45e4ca39174b90f"><div class="ttname"><a href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a></div><div class="ttdeci">#define LCD32_CS</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00117">projectConfig.h:117</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_adf7a03a06529c34ac20f93d20e736b0e"><div class="ttname"><a href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a></div><div class="ttdeci">#define LCD32_DB3</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00098">projectConfig.h:98</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_aec68a022888f9f464147a71d440936f2"><div class="ttname"><a href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a></div><div class="ttdeci">#define LCD32_RST</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00113">projectConfig.h:113</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_af40d92c425e867615a7ad20678fbab47"><div class="ttname"><a href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a></div><div class="ttdeci">#define LCD32_DB11</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00106">projectConfig.h:106</a></div></div>
+<div class="ttc" id="amonitor_8h_html_a7b30be0dbeae14618a6caaa169112700"><div class="ttname"><a href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a></div><div class="ttdeci">lcd32Dev_t * lcd</div><div class="ttdoc">Pointer to the LCD 3.2&quot; device driver instance.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00065">monitor.h:65</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a0002bd43c07bf3c4d44f5312fac9c0a5"><div class="ttname"><a href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a></div><div class="ttdeci">#define LCD32_DB4</div><div class="ttdoc">LCD Data Bit 4.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00105">projectConfig.h:105</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a0ba618dcfc48fc528ca0ca4b52a03b87"><div class="ttname"><a href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a></div><div class="ttdeci">#define LCD32_DB1</div><div class="ttdoc">LCD Data Bit 1.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00102">projectConfig.h:102</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a13ff3b2b3273b72adba617c58656d101"><div class="ttname"><a href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a></div><div class="ttdeci">#define LCD32_DB9</div><div class="ttdoc">LCD Data Bit 9.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00110">projectConfig.h:110</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a18493351e8f4ca7bc008e55a4e6dad90"><div class="ttname"><a href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a></div><div class="ttdeci">#define LCD32_DB14</div><div class="ttdoc">LCD Data Bit 14.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00115">projectConfig.h:115</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a1b3df9a20cd27485d44dff7dce866b97"><div class="ttname"><a href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a></div><div class="ttdeci">#define LCD32_RS</div><div class="ttdoc">LCD Register Select pin (Command/Data)</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00122">projectConfig.h:122</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a1db5eca57bcab4b3ccdc8f214e4ebbe8"><div class="ttname"><a href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div><div class="ttdeci">#define LCD32_DB15</div><div class="ttdoc">LCD Data Bit 15.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00116">projectConfig.h:116</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a203f3f7cdb0f1c15904a5689b6712b16"><div class="ttname"><a href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a></div><div class="ttdeci">#define LCD32_DB5</div><div class="ttdoc">LCD Data Bit 5.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00106">projectConfig.h:106</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a24c3b713895c807586a1404f0a40dc29"><div class="ttname"><a href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a></div><div class="ttdeci">#define LCD32_DB8</div><div class="ttdoc">LCD Data Bit 8.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00109">projectConfig.h:109</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a27112496a3be7c32fab594a1ac749a1c"><div class="ttname"><a href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">LCD32_MAX_ROW</a></div><div class="ttdeci">#define LCD32_MAX_ROW</div><div class="ttdoc">Maximum rows (height) of LCD.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00125">projectConfig.h:125</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a3c9a2683c6a4e1d855ac0233ffb9acf4"><div class="ttname"><a href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a></div><div class="ttdeci">#define LCD32_DB7</div><div class="ttdoc">LCD Data Bit 7.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00108">projectConfig.h:108</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a4e2ae1d229ee2b440b6736a9a0791be5"><div class="ttname"><a href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a></div><div class="ttdeci">#define LCD32_DB12</div><div class="ttdoc">LCD Data Bit 12.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00113">projectConfig.h:113</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a6b369bfa1360055a5b83d101e791896c"><div class="ttname"><a href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">LCD32_MAX_COL</a></div><div class="ttdeci">#define LCD32_MAX_COL</div><div class="ttdoc">Maximum columns (width) of LCD.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00126">projectConfig.h:126</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a788e6821ad3f4878731942d3a0773507"><div class="ttname"><a href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a></div><div class="ttdeci">#define LCD32_DB0</div><div class="ttdoc">(ESP32_DEVICE_MODE == RECEIVER)</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00101">projectConfig.h:101</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a7ccfa9d6755fa155ec0b784ecc676131"><div class="ttname"><a href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a></div><div class="ttdeci">#define LCD32_DB2</div><div class="ttdoc">LCD Data Bit 2.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00103">projectConfig.h:103</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a823ab6d619e8f42672471192ba26c42b"><div class="ttname"><a href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a></div><div class="ttdeci">#define LCD32_DB10</div><div class="ttdoc">LCD Data Bit 10.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00111">projectConfig.h:111</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a8b48bf476e1766d463f6465c2ff626e6"><div class="ttname"><a href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a></div><div class="ttdeci">#define LCD32_DB13</div><div class="ttdoc">LCD Data Bit 13.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00114">projectConfig.h:114</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_aabb4f25721a4eb712b8a7014b250143f"><div class="ttname"><a href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a></div><div class="ttdeci">#define LCD32_DB6</div><div class="ttdoc">LCD Data Bit 6.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00107">projectConfig.h:107</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_abe6cecfa4bf07577a952657c24d568bb"><div class="ttname"><a href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a></div><div class="ttdeci">#define LCD32_WR</div><div class="ttdoc">LCD Write control pin.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00120">projectConfig.h:120</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_ac115546f885b68ebb1ddb7f986e768b6"><div class="ttname"><a href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a></div><div class="ttdeci">#define LCD32_RD</div><div class="ttdoc">LCD Read control pin.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00121">projectConfig.h:121</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_acbe4f1ffb4b5e05de45e4ca39174b90f"><div class="ttname"><a href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a></div><div class="ttdeci">#define LCD32_CS</div><div class="ttdoc">LCD Chip Select pin.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00123">projectConfig.h:123</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_adf7a03a06529c34ac20f93d20e736b0e"><div class="ttname"><a href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a></div><div class="ttdeci">#define LCD32_DB3</div><div class="ttdoc">LCD Data Bit 3.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00104">projectConfig.h:104</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_aec68a022888f9f464147a71d440936f2"><div class="ttname"><a href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a></div><div class="ttdeci">#define LCD32_RST</div><div class="ttdoc">LCD Reset pin.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00119">projectConfig.h:119</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_af40d92c425e867615a7ad20678fbab47"><div class="ttname"><a href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a></div><div class="ttdeci">#define LCD32_DB11</div><div class="ttdoc">LCD Data Bit 11.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00112">projectConfig.h:112</a></div></div>
 <div class="ttc" id="astructlcd32ControlPin__t_html"><div class="ttname"><a href="structlcd32ControlPin__t.html">lcd32ControlPin_t</a></div><div class="ttdef"><b>Definition</b> <a href="lcd32Def_8h_source.html#l00031">lcd32Def.h:31</a></div></div>
 <div class="ttc" id="astructlcd32ControlPin__t_html_a7e4396d5cf696ac04896a144c7f80035"><div class="ttname"><a href="structlcd32ControlPin__t.html#a7e4396d5cf696ac04896a144c7f80035">lcd32ControlPin_t::r</a></div><div class="ttdeci">pin_t r</div><div class="ttdoc">Struct for data pint.</div><div class="ttdef"><b>Definition</b> <a href="lcd32Def_8h_source.html#l00032">lcd32Def.h:32</a></div></div>
 <div class="ttc" id="astructlcd32DataPin__t_html"><div class="ttname"><a href="structlcd32DataPin__t.html">lcd32DataPin_t</a></div><div class="ttdef"><b>Definition</b> <a href="lcd32Def_8h_source.html#l00025">lcd32Def.h:25</a></div></div>
@@ -548,34 +579,40 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>TASK //////////////////////////////////////////////////////////////////////////////////////////. </p>
+<p>Task to test LCD rendering by filling random colors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pv</td><td>FreeRTOS task parameter (unused). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00050">50</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                           {</div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;lcdTestTask()&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>    uint64_t all_pins_mask = <a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>-&gt;<a class="code hl_variable" href="structlcd32Dev__t.html#a3be5bcb78be1a1166b933889c3621491">dataPinMask</a> | <a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>-&gt;<a class="code hl_variable" href="structlcd32Dev__t.html#aed2fa07c13b42b11a703f01e2ded40f0">controlPinMask</a>;</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">__sys_log</a>(<span class="stringliteral">&quot;[lcdTestTask] all_pins_mask = 0x%08x&quot;</span>, all_pins_mask);</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>    <span class="keyword">const</span> uint32_t mask_low  = (uint32_t)(all_pins_mask);</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keyword">const</span> uint32_t mask_high = (uint32_t)(all_pins_mask &gt;&gt; 32);</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    uint16_t mask = 1;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">while</span>(!<a class="code hl_define" href="monitor_8h.html#ae7b700064466b5d5abe6f2c99e093fc2">IS_SYSTEM_STOPPED</a>){</div>
-<div class="line"><span class="lineno">   63</span>        </div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="lcd32_8h.html#a20f580d7fb908082116ab96867a5d0c2">lcd32FillCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, <a class="code hl_function" href="helper_8c.html#a74eb34845074281e3b6c3642f0f5b6a1">genRandNum</a>(esp_timer_get_time())%65536);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="lcd32_8h.html#aa9c10dee02914271f009a038a0244d93">lcd32FlushCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="comment">// vTaskDelay(50);</span></div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_define" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">__sys_log</a>(<span class="stringliteral">&quot;[lcdTestTask] Running...\n\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="line"><span class="lineno">   70</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;lcdTestTask()&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span>}</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00073">73</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                           {</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;lcdTestTask()&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    uint64_t all_pins_mask = <a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>-&gt;<a class="code hl_variable" href="structlcd32Dev__t.html#a3be5bcb78be1a1166b933889c3621491">dataPinMask</a> | <a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>-&gt;<a class="code hl_variable" href="structlcd32Dev__t.html#aed2fa07c13b42b11a703f01e2ded40f0">controlPinMask</a>;</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">__sys_log</a>(<span class="stringliteral">&quot;[lcdTestTask] all_pins_mask = 0x%08x&quot;</span>, all_pins_mask);</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="keyword">const</span> uint32_t mask_low  = (uint32_t)(all_pins_mask);</div>
+<div class="line"><span class="lineno">   81</span>    <span class="keyword">const</span> uint32_t mask_high = (uint32_t)(all_pins_mask &gt;&gt; 32);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    uint16_t mask = 1;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">while</span>(!<a class="code hl_define" href="monitor_8h.html#ae7b700064466b5d5abe6f2c99e093fc2">IS_SYSTEM_STOPPED</a>){</div>
+<div class="line"><span class="lineno">   86</span>        </div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_function" href="lcd32_8h.html#a20f580d7fb908082116ab96867a5d0c2">lcd32FillCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>, <a class="code hl_function" href="helper_8c.html#a74eb34845074281e3b6c3642f0f5b6a1">genRandNum</a>(esp_timer_get_time())%65536);</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="lcd32_8h.html#aa9c10dee02914271f009a038a0244d93">lcd32FlushCanvas</a>(<a class="code hl_variable" href="monitor_8h.html#a7b30be0dbeae14618a6caaa169112700">lcd</a>);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        <span class="comment">// vTaskDelay(50);</span></div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_define" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">__sys_log</a>(<span class="stringliteral">&quot;[lcdTestTask] Running...\n\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;lcdTestTask()&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>}</div>
 <div class="ttc" id="aespLogWrapper_8h_html_aac01a5081afb0502847989609da39b5b"><div class="ttname"><a href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">__sys_log</a></div><div class="ttdeci">#define __sys_log(fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="espLogWrapper_8h_source.html#l00069">espLogWrapper.h:69</a></div></div>
 <div class="ttc" id="ahelper_8c_html_a74eb34845074281e3b6c3642f0f5b6a1"><div class="ttname"><a href="helper_8c.html#a74eb34845074281e3b6c3642f0f5b6a1">genRandNum</a></div><div class="ttdeci">unsigned int genRandNum(unsigned int seed_input)</div><div class="ttdoc">Generates a pseudo-random number in the range [0, 9999]. If the input seed is negative or repeated,...</div><div class="ttdef"><b>Definition</b> <a href="helper_8c_source.html#l00006">helper.c:6</a></div></div>
-<div class="ttc" id="amonitor_8h_html_ae7b700064466b5d5abe6f2c99e093fc2"><div class="ttname"><a href="monitor_8h.html#ae7b700064466b5d5abe6f2c99e093fc2">IS_SYSTEM_STOPPED</a></div><div class="ttdeci">#define IS_SYSTEM_STOPPED</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00025">monitor.h:25</a></div></div>
+<div class="ttc" id="amonitor_8h_html_ae7b700064466b5d5abe6f2c99e093fc2"><div class="ttname"><a href="monitor_8h.html#ae7b700064466b5d5abe6f2c99e093fc2">IS_SYSTEM_STOPPED</a></div><div class="ttdeci">#define IS_SYSTEM_STOPPED</div><div class="ttdoc">Check if system is in STOPPED stage.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00035">monitor.h:35</a></div></div>
 <div class="ttc" id="astructlcd32Dev__t_html_a3be5bcb78be1a1166b933889c3621491"><div class="ttname"><a href="structlcd32Dev__t.html#a3be5bcb78be1a1166b933889c3621491">lcd32Dev_t::dataPinMask</a></div><div class="ttdeci">uint64_t dataPinMask</div><div class="ttdoc">Transaction level, to skill dup CS.</div><div class="ttdef"><b>Definition</b> <a href="lcd32Def_8h_source.html#l00051">lcd32Def.h:51</a></div></div>
 <div class="ttc" id="astructlcd32Dev__t_html_aed2fa07c13b42b11a703f01e2ded40f0"><div class="ttname"><a href="structlcd32Dev__t.html#aed2fa07c13b42b11a703f01e2ded40f0">lcd32Dev_t::controlPinMask</a></div><div class="ttdeci">uint64_t controlPinMask</div><div class="ttdef"><b>Definition</b> <a href="lcd32Def_8h_source.html#l00052">lcd32Def.h:52</a></div></div>
 </div><!-- fragment -->
@@ -596,21 +633,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00097">97</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                 {</div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;systemInit()&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_function" href="monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf">lcdInit</a>();</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aec7fcbc3dddc3c2683973655d0fdfa16">__tag_log</a>(<a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_function" href="myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>), <span class="stringliteral">&quot;[+] lcdTestTask()&quot;</span>);</div>
-<div class="line"><span class="lineno">  102</span>    xTaskCreate(<a class="code hl_function" href="monitor_8h.html#a7f70d348006d8bd0ac44aa0653cfde50">lcdTestTask</a>, <span class="stringliteral">&quot;lcdTestTask&quot;</span>, 2048, NULL, 7, NULL);</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;systemInit()&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<p>Initialize the entire system, including drivers and tasks. </p>
+
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00124">124</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                 {</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_define" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">__entry</a>(<span class="stringliteral">&quot;systemInit()&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_function" href="monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf">lcdInit</a>();</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aec7fcbc3dddc3c2683973655d0fdfa16">__tag_log</a>(<a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_function" href="myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>), <span class="stringliteral">&quot;[+] lcdTestTask()&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>    xTaskCreate(<a class="code hl_function" href="monitor_8h.html#a7f70d348006d8bd0ac44aa0653cfde50">lcdTestTask</a>, <span class="stringliteral">&quot;lcdTestTask&quot;</span>, 2048, NULL, 7, NULL);</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;systemInit()&quot;</span>);</div>
+<div class="line"><span class="lineno">  132</span>}</div>
 <div class="ttc" id="aespLogWrapper_8h_html_aec7fcbc3dddc3c2683973655d0fdfa16"><div class="ttname"><a href="espLogWrapper_8h.html#aec7fcbc3dddc3c2683973655d0fdfa16">__tag_log</a></div><div class="ttdeci">#define __tag_log(tag, fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="espLogWrapper_8h_source.html#l00078">espLogWrapper.h:78</a></div></div>
 <div class="ttc" id="ahelper_8h_html_a18d295a837ac71add5578860b55e5502"><div class="ttname"><a href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a></div><div class="ttdeci">#define STR(x)</div><div class="ttdoc">Convert macro argument x to string literal.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00081">helper.h:81</a></div></div>
-<div class="ttc" id="amonitor_8h_html_a3004c9c4fb128520f24f4407dca4f8cf"><div class="ttname"><a href="monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf">lcdInit</a></div><div class="ttdeci">void lcdInit()</div><div class="ttdoc">INIT //////////////////////////////////////////////////////////////////////////////////////////.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00075">monitor.h:75</a></div></div>
-<div class="ttc" id="amonitor_8h_html_a7f70d348006d8bd0ac44aa0653cfde50"><div class="ttname"><a href="monitor_8h.html#a7f70d348006d8bd0ac44aa0653cfde50">lcdTestTask</a></div><div class="ttdeci">void lcdTestTask(void *pv)</div><div class="ttdoc">TASK //////////////////////////////////////////////////////////////////////////////////////////.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00050">monitor.h:50</a></div></div>
-<div class="ttc" id="amyApp_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="myApp_8c_source.html#l00017">myApp.c:17</a></div></div>
+<div class="ttc" id="amonitor_8h_html_a3004c9c4fb128520f24f4407dca4f8cf"><div class="ttname"><a href="monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf">lcdInit</a></div><div class="ttdeci">void lcdInit()</div><div class="ttdoc">Initialize the LCD device, configure pins, and perform startup sequence.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00101">monitor.h:101</a></div></div>
+<div class="ttc" id="amonitor_8h_html_a7f70d348006d8bd0ac44aa0653cfde50"><div class="ttname"><a href="monitor_8h.html#a7f70d348006d8bd0ac44aa0653cfde50">lcdTestTask</a></div><div class="ttdeci">void lcdTestTask(void *pv)</div><div class="ttdoc">Task to test LCD rendering by filling random colors.</div><div class="ttdef"><b>Definition</b> <a href="monitor_8h_source.html#l00073">monitor.h:73</a></div></div>
+<div class="ttc" id="amyApp_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdoc">Main application entry point.</div><div class="ttdef"><b>Definition</b> <a href="myApp_8c_source.html#l00023">myApp.c:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -627,9 +666,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>LCD 3.2" //////////////////////////////////////////////////////////////////////////////////////. </p>
+<p>Pointer to the LCD 3.2" device driver instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00046">46</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00065">65</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -644,9 +683,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Global system stage flag used to represent the overall runtime state. Access to this variable must be protected by <code>systemStageMutex</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00016">16</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p>Global system stage flag used to represent the overall runtime state. </p>
+<dl class="section note"><dt>Note</dt><dd>Access to this variable must be protected by <code>systemStageMutex</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00024">24</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +705,7 @@ Variables</h2></td></tr>
 
 <p>Mutex for synchronizing access to the system stage flag. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00019">19</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monitor_8h_source.html#l00027">27</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>

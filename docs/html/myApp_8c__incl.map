@@ -1,12 +1,12 @@
 <map id="main/myApp.c" name="main/myApp.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="980,5,1096,31"/>
+<area shape="rect" id="Node000001" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="980,5,1096,31"/>
 <area shape="rect" id="Node000002" href="$projectConfig_8h.html" title="Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO,..." alt="" coords="296,533,471,559"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="980,27,782,45,529,77,410,97,312,120,273,132,245,145,227,158,221,171,221,400,224,423,232,443,245,462,262,478,300,506,339,526,337,530,297,510,258,482,241,465,228,446,219,424,215,401,216,170,223,155,242,140,271,127,310,115,409,92,528,71,781,40,980,21"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="1053,79,1130,104"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1049,29,1077,66,1073,69,1045,33"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="1155,79,1241,104"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1065,28,1161,71,1158,75,1063,33"/>
-<area shape="rect" id="Node000008" href="$monitor_8h.html" title=" " alt="" coords="944,79,1028,104"/>
+<area shape="rect" id="Node000008" href="$monitor_8h.html" title="Main project! For monitor/analyzer the bus!" alt="" coords="944,79,1028,104"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1032,33,1005,69,1001,66,1027,29"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="605,607,671,632"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="425,556,592,602,591,608,424,561"/>

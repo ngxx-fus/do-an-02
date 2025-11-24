@@ -1,30 +1,44 @@
+/// @file   monitor.h
+/// @brief  Main project! For monitor/analyzer the bus!
+
+#ifndef __MONITOR_H__
+#define __MONITOR_H__
+
 #include "../helper/general.h"
 #include "../comDriver/lcd32/lcd32.h"
 
+/// @cond
 /// DEFINITIONS ///////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
-/// Enumeration defining the system operation stages.
+/// @brief Enumeration defining the system operation stages.
 enum ENUM_SYSTEM_STAGE {
-    SYSTEM_INIT    = 0, /// System is initializing.
-    SYSTEM_RUNNING = 1, /// System is currently running.
-    SYSTEM_STOPPED = 2, /// System has been stopped or halted.
-    SYSTEM_STAGE_COUNT,
+    SYSTEM_INIT    = 0, ///< System is initializing.
+    SYSTEM_RUNNING = 1, ///< System is currently running.
+    SYSTEM_STOPPED = 2, ///< System has been stopped or halted.
+    SYSTEM_STAGE_COUNT, ///< Total number of defined stages.
 };
 
-/// Global system stage flag used to represent the overall runtime state.
-/// Access to this variable must be protected by `systemStageMutex`.
+/// @brief Global system stage flag used to represent the overall runtime state.
+/// @note Access to this variable must be protected by `systemStageMutex`.
 volatile flag_t systemStage = SYSTEM_INIT;
 
-/// Mutex for synchronizing access to the system stage flag.
+/// @brief Mutex for synchronizing access to the system stage flag.
 portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
 
+/// @cond
 /// LOCAL HELPER //////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
-#define IS_SYSTEM_INIT          (systemStage == SYSTEM_INIT)
-#define IS_SYSTEM_RUNNING       (systemStage == SYSTEM_RUNNING)
-#define IS_SYSTEM_STOPPED       (systemStage == SYSTEM_STOPPED)
+#define IS_SYSTEM_INIT          (systemStage == SYSTEM_INIT)    ///< Check if system is in INIT stage.
+#define IS_SYSTEM_RUNNING       (systemStage == SYSTEM_RUNNING) ///< Check if system is in RUNNING stage.
+#define IS_SYSTEM_STOPPED       (systemStage == SYSTEM_STOPPED) ///< Check if system is in STOPPED stage.
 
-/// Flag operation with MUTEX! 
+/// @brief Perform a flag operation safely within a critical section (Mutex).
+/// @param p2mutex Pointer to the mutex.
+/// @param flagOp  Flag operation macro/function (e.g., __setFlagBit).
+/// @param flag    The flag variable to modify.
+/// @param bitOrder The bit position to operate on.
 #define FLAG_OP_W_MUTEX(p2mutex, flagOp, flag, bitOrder)        \
         do {                                                    \
             vPortEnterCritical(p2mutex);                        \
@@ -32,7 +46,9 @@ portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
             vPortExitCritical(p2mutex);                         \
         } while (0)
 
-/// Wrap a piece of code in a MUTEX!
+/// @brief Execute a block of code safely within a critical section (Mutex).
+/// @param p2mutex Pointer to the mutex.
+/// @param anythingYouWantToDo Code block or function call to execute.
 #define DO_WITH_MUTEX(p2mutex, anythingYouWantToDo)             \
         do {                                                    \
             vPortEnterCritical(p2mutex);                        \
@@ -41,12 +57,19 @@ portMUX_TYPE systemStageMutex = portMUX_INITIALIZER_UNLOCKED;
         } while (0)
 
 
+/// @cond
 /// LCD 3.2" //////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
+/// @brief Pointer to the LCD 3.2" device driver instance.
 lcd32Dev_t * lcd;
 
+/// @cond
 /// TASK //////////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
+/// @brief Task to test LCD rendering by filling random colors.
+/// @param pv FreeRTOS task parameter (unused).
 void lcdTestTask(void * pv){
     __entry("lcdTestTask()");
 
@@ -70,8 +93,11 @@ void lcdTestTask(void * pv){
     __exit("lcdTestTask()");
 }
 
+/// @cond
 /// INIT //////////////////////////////////////////////////////////////////////////////////////////
+/// @endcond
 
+/// @brief Initialize the LCD device, configure pins, and perform startup sequence.
 void lcdInit(){
     __entry("lcdInit()");
     lcd32CreateDevice(&lcd);
@@ -94,6 +120,7 @@ void lcdInit(){
     __exit("lcdInit()");
 }
 
+/// @brief Initialize the entire system, including drivers and tasks.
 void systemInit(){
     __entry("systemInit()");
     lcdInit();
@@ -104,3 +131,4 @@ void systemInit(){
     __exit("systemInit()");
 }
 
+#endif

@@ -2,8 +2,8 @@
 <area shape="rect" id="Node000001" title="ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3...." alt="" coords="5,5,216,31"/>
 <area shape="rect" id="Node000002" href="$lcd32_8h.html" title="LCD 3.2&quot; driver interface; Provides APIs for creating, configuring, and controlling the LCD device,..." alt="" coords="21,79,201,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
-<area shape="rect" id="Node000003" href="$monitor_8h.html" title=" " alt="" coords="50,152,171,177"/>
+<area shape="rect" id="Node000003" href="$monitor_8h.html" title="Main project! For monitor/analyzer the bus!" alt="" coords="50,152,171,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,118,113,152,108,152,108,118"/>
-<area shape="rect" id="Node000004" href="$myApp_8c.html" title=" " alt="" coords="53,225,169,251"/>
+<area shape="rect" id="Node000004" href="$myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="53,225,169,251"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,191,113,225,108,225,108,191"/>
 </map>

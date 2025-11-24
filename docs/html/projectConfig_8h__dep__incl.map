@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO,..." alt="" coords="287,5,450,31"/>
 <area shape="rect" id="Node000002" href="$espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo..." alt="" coords="457,79,635,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,33,518,76,516,81,409,38"/>
-<area shape="rect" id="Node000015" href="$myApp_8c.html" title=" " alt="" coords="5,541,121,566"/>
+<area shape="rect" id="Node000015" href="$myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="5,541,121,566"/>
 <area shape="poly" id="edge32_Node000001_Node000015" title=" " alt="" coords="296,36,209,57,117,87,77,104,45,123,24,143,17,164,17,386,22,431,33,475,60,539,55,541,28,477,16,432,11,386,11,163,20,140,42,119,75,99,115,82,207,52,295,31"/>
 <area shape="rect" id="Node000003" href="$general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="659,152,787,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="588,107,695,149,693,154,586,112"/>
@@ -16,7 +16,7 @@
 <area shape="poly" id="edge15_Node000003_Node000011" title=" " alt="" coords="798,177,1041,223,1040,228,797,182"/>
 <area shape="rect" id="Node000012" href="$lcd32Cmd_8h.html" title="ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3...." alt="" coords="102,299,313,324"/>
 <area shape="poly" id="edge18_Node000003_Node000012" title=" " alt="" coords="646,173,511,191,434,206,360,228,321,244,283,264,225,301,222,296,280,260,318,240,358,223,433,201,510,185,645,168"/>
-<area shape="rect" id="Node000014" href="$monitor_8h.html" title=" " alt="" coords="52,453,173,478"/>
+<area shape="rect" id="Node000014" href="$monitor_8h.html" title="Main project! For monitor/analyzer the bus!" alt="" coords="52,453,173,478"/>
 <area shape="poly" id="edge31_Node000003_Node000014" title=" " alt="" coords="646,172,502,184,334,207,253,223,183,244,127,270,107,285,92,300,83,319,79,339,82,382,95,422,108,451,104,453,90,424,77,383,73,339,78,317,88,297,103,281,124,265,181,239,252,218,333,201,502,178,645,167"/>
 <area shape="rect" id="Node000016" href="$lcd32Def_8h.html" title="LCD 3.2&quot; type definitions; Includes color/dimension types, canvas, data/control pin structs,..." alt="" coords="371,225,574,251"/>
 <area shape="poly" id="edge22_Node000003_Node000016" title=" " alt="" coords="671,184,514,228,513,223,669,179"/>

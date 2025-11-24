@@ -99,117 +99,119 @@ $(document).ready(function(){initNavTree('projectConfig_8h_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a href="projectConfig_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef __GENERAL_CONFIG_H__</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define __GENERAL_CONFIG_H__</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afe3a5d0081166bd5e1d8c9ea00db83e5">    8</a></span><span class="preprocessor">#define SENDER              0x0</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a455948b8bd5f5ce920899ae1013c4b4c">    9</a></span><span class="preprocessor">#define RECEIVER            0x1</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#abc5c6b4c2e2bc12eadd440fdb10bfd7c">   10</a></span><span class="preprocessor">#define MONITOR             0x2</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0c0f15f7fed286557d68c043857d2a7a">   13</a></span><span class="preprocessor">#define ESP32_DEVICE_MODE   MONITOR</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef __GENERAL_CONFIG_H__</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define __GENERAL_CONFIG_H__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afe3a5d0081166bd5e1d8c9ea00db83e5">   11</a></span><span class="preprocessor">#define SENDER              0x0     </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a455948b8bd5f5ce920899ae1013c4b4c">   12</a></span><span class="preprocessor">#define RECEIVER            0x1     </span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#abc5c6b4c2e2bc12eadd440fdb10bfd7c">   13</a></span><span class="preprocessor">#define MONITOR             0x2     </span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0c0f15f7fed286557d68c043857d2a7a">   16</a></span><span class="preprocessor">#define ESP32_DEVICE_MODE   MONITOR</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#af26484c595f8384d983f0d14e9ec9a59">   26</a></span><span class="preprocessor">#define SYSTEM_LOG_LEVEL 3</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//DEPRECATED//  /// To config the com protocol at begin,</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//DEPRECATED//  /// See ENUM_SYSTEM_MODE enum in helper/general.h.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//DEPRECATED//  #define STARTUP_COM_MODE 0</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#af26484c595f8384d983f0d14e9ec9a59">   30</a></span><span class="preprocessor">#define SYSTEM_LOG_LEVEL 3</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a11f83cf56e361f2c630b8204c473dda5">   33</a></span><span class="preprocessor">#define SLAVE_ADDRE      0x39</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac99834713028c657c88b1272cca63c06">   37</a></span><span class="preprocessor">#define DATAFR_INTERVAL  200</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//DEPRECATED//  /// To config the com protocol at begin,</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//DEPRECATED//  /// See ENUM_SYSTEM_MODE enum in helper/general.h.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//DEPRECATED//  #define STARTUP_COM_MODE 0</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a11f83cf56e361f2c630b8204c473dda5">   37</a></span><span class="preprocessor">#define SLAVE_ADDRE      0x39</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a00aef9e8dd001a49f8717031d84b2c6c">   41</a></span><span class="preprocessor">#define DEBOUNCE_TIME   10000</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a4d97b513edc0d2fdc0c1de16be4e5af5">   45</a></span><span class="preprocessor">#define SHORTPRESS_TIME 500000</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac99834713028c657c88b1272cca63c06">   40</a></span><span class="preprocessor">#define DATAFR_INTERVAL  200</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a00aef9e8dd001a49f8717031d84b2c6c">   43</a></span><span class="preprocessor">#define DEBOUNCE_TIME   10000</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a4d97b513edc0d2fdc0c1de16be4e5af5">   46</a></span><span class="preprocessor">#define SHORTPRESS_TIME 500000</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a9588b37d541027c21d87e8e89312cca4">   49</a></span><span class="preprocessor">#define LONGPRESS_TIME 2000000</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afee4544a12ea7d299d799388f352529e">   51</a></span><span class="preprocessor">#define COM_SPI_FREQ   100000</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1fe5cf6f00a8233a1896c74d8b35c478">   52</a></span><span class="preprocessor">#define COM_SPI_CONF   SPI_11_MASTER</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afee4544a12ea7d299d799388f352529e">   52</a></span><span class="preprocessor">#define COM_SPI_FREQ   100000</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a98196e12b9d822ab5713cfebce3725a5">   54</a></span><span class="preprocessor">#define DISP_ORIENTATION 1   </span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;stdio.h&gt;</span>      </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &lt;stdint.h&gt;</span>     </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span>     </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">   63</a></span><span class="keyword">typedef</span> int8_t <a class="code hl_typedef" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#if (ESP32_DEVICE_MODE == SENDER)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a8909e4cc8d1f05aeb73943042144abdf">   67</a></span><span class="preprocessor">    #define PIN0    ((pin_t)4)</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a522e24eb599eab6d1ec4b1ae5a3a12b2">   68</a></span><span class="preprocessor">    #define PIN1    ((pin_t)16)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a903210ad84aed4458cbc75b489f9bb7e">   69</a></span><span class="preprocessor">    #define PIN2    ((pin_t)5)</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac4b639acb4bf160a49ff3c0d8fa80fc4">   70</a></span><span class="preprocessor">    #define PIN3    ((pin_t)17)</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a">   72</a></span><span class="preprocessor">    #define BTN0    ((pin_t)14)</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afbf31d4d5bad7fd61418b8b8036df96c">   74</a></span><span class="preprocessor">    #define OLED_SDA ((pin_t)21)</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ad3ddbbb48cad4c34406916e199b89122">   75</a></span><span class="preprocessor">    #define OLED_SCL ((pin_t)22)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#if (ESP32_DEVICE_MODE == RECEIVER)</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    #define PIN0    ((pin_t)0)</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">    #define PIN1    ((pin_t)0)</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    #define PIN2    ((pin_t)0)</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    #define PIN3    ((pin_t)0)</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    #define BTN0    ((pin_t)0)</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    #define OLED_SCL ((pin_t)0)</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    #define OLED_SDA ((pin_t)0)</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#if ESP32_DEVICE_MODE == MONITOR</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">   95</a></span><span class="preprocessor">    #define LCD32_DB0       18    </span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">   96</a></span><span class="preprocessor">    #define LCD32_DB1       12</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">   97</a></span><span class="preprocessor">    #define LCD32_DB2       17</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">   98</a></span><span class="preprocessor">    #define LCD32_DB3       11</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">   99</a></span><span class="preprocessor">    #define LCD32_DB4       16</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">  100</a></span><span class="preprocessor">    #define LCD32_DB5       10</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">  101</a></span><span class="preprocessor">    #define LCD32_DB6       15</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">  102</a></span><span class="preprocessor">    #define LCD32_DB7       9</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">  103</a></span><span class="preprocessor">    #define LCD32_DB8       7</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">  104</a></span><span class="preprocessor">    #define LCD32_DB9       3</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">  105</a></span><span class="preprocessor">    #define LCD32_DB10      6</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">  106</a></span><span class="preprocessor">    #define LCD32_DB11      20</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">  107</a></span><span class="preprocessor">    #define LCD32_DB12      5</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">  108</a></span><span class="preprocessor">    #define LCD32_DB13      19</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">  109</a></span><span class="preprocessor">    #define LCD32_DB14      4</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">  110</a></span><span class="preprocessor">    #define LCD32_DB15      8</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">  113</a></span><span class="preprocessor">    #define LCD32_RST       0</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">  114</a></span><span class="preprocessor">    #define LCD32_WR        2</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">  115</a></span><span class="preprocessor">    #define LCD32_RD        14</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">  116</a></span><span class="preprocessor">    #define LCD32_RS        21</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">  117</a></span><span class="preprocessor">    #define LCD32_CS        13</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">  119</a></span><span class="preprocessor">    #define LCD32_MAX_ROW   240</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">  120</a></span><span class="preprocessor">    #define LCD32_MAX_COL   320</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#endif </span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="foldopen" id="foldopen00125" data-start="{" data-end="};">
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">  125</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a> {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">  126</a></span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a> = -1,</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">  127</a></span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a> = -2,</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
-</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1fe5cf6f00a8233a1896c74d8b35c478">   55</a></span><span class="preprocessor">#define COM_SPI_CONF   SPI_11_MASTER</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a98196e12b9d822ab5713cfebce3725a5">   58</a></span><span class="preprocessor">#define DISP_ORIENTATION 1   </span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &lt;stdio.h&gt;</span>      </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &lt;stdint.h&gt;</span>     </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span>     </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">   69</a></span><span class="keyword">typedef</span> int8_t <a class="code hl_typedef" href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#if (ESP32_DEVICE_MODE == SENDER)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a8909e4cc8d1f05aeb73943042144abdf">   73</a></span><span class="preprocessor">    #define PIN0    ((pin_t)4)   </span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a522e24eb599eab6d1ec4b1ae5a3a12b2">   74</a></span><span class="preprocessor">    #define PIN1    ((pin_t)16)  </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a903210ad84aed4458cbc75b489f9bb7e">   75</a></span><span class="preprocessor">    #define PIN2    ((pin_t)5)   </span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac4b639acb4bf160a49ff3c0d8fa80fc4">   76</a></span><span class="preprocessor">    #define PIN3    ((pin_t)17)  </span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a">   78</a></span><span class="preprocessor">    #define BTN0    ((pin_t)14)  </span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#afbf31d4d5bad7fd61418b8b8036df96c">   80</a></span><span class="preprocessor">    #define OLED_SDA ((pin_t)21) </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ad3ddbbb48cad4c34406916e199b89122">   81</a></span><span class="preprocessor">    #define OLED_SCL ((pin_t)22) </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#if (ESP32_DEVICE_MODE == RECEIVER)</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">    #define PIN0    ((pin_t)0)   </span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    #define PIN1    ((pin_t)0)   </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    #define PIN2    ((pin_t)0)   </span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    #define PIN3    ((pin_t)0)   </span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">    #define BTN0    ((pin_t)0)   </span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">    #define OLED_SCL ((pin_t)0)  </span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    #define OLED_SDA ((pin_t)0)  </span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#if ESP32_DEVICE_MODE == MONITOR</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a788e6821ad3f4878731942d3a0773507">  101</a></span><span class="preprocessor">    #define LCD32_DB0       18   </span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">  102</a></span><span class="preprocessor">    #define LCD32_DB1       12   </span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">  103</a></span><span class="preprocessor">    #define LCD32_DB2       17   </span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#adf7a03a06529c34ac20f93d20e736b0e">  104</a></span><span class="preprocessor">    #define LCD32_DB3       11   </span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">  105</a></span><span class="preprocessor">    #define LCD32_DB4       16   </span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">  106</a></span><span class="preprocessor">    #define LCD32_DB5       10   </span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#aabb4f25721a4eb712b8a7014b250143f">  107</a></span><span class="preprocessor">    #define LCD32_DB6       15   </span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">  108</a></span><span class="preprocessor">    #define LCD32_DB7       9    </span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a24c3b713895c807586a1404f0a40dc29">  109</a></span><span class="preprocessor">    #define LCD32_DB8       7    </span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a13ff3b2b3273b72adba617c58656d101">  110</a></span><span class="preprocessor">    #define LCD32_DB9       3    </span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a823ab6d619e8f42672471192ba26c42b">  111</a></span><span class="preprocessor">    #define LCD32_DB10      6    </span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#af40d92c425e867615a7ad20678fbab47">  112</a></span><span class="preprocessor">    #define LCD32_DB11      20   </span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">  113</a></span><span class="preprocessor">    #define LCD32_DB12      5    </span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a8b48bf476e1766d463f6465c2ff626e6">  114</a></span><span class="preprocessor">    #define LCD32_DB13      19   </span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">  115</a></span><span class="preprocessor">    #define LCD32_DB14      4    </span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">  116</a></span><span class="preprocessor">    #define LCD32_DB15      8    </span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#aec68a022888f9f464147a71d440936f2">  119</a></span><span class="preprocessor">    #define LCD32_RST       0    </span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#abe6cecfa4bf07577a952657c24d568bb">  120</a></span><span class="preprocessor">    #define LCD32_WR        2    </span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#ac115546f885b68ebb1ddb7f986e768b6">  121</a></span><span class="preprocessor">    #define LCD32_RD        14   </span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a1b3df9a20cd27485d44dff7dce866b97">  122</a></span><span class="preprocessor">    #define LCD32_RS        21   </span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">  123</a></span><span class="preprocessor">    #define LCD32_CS        13   </span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a27112496a3be7c32fab594a1ac749a1c">  125</a></span><span class="preprocessor">    #define LCD32_MAX_ROW   240  </span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a6b369bfa1360055a5b83d101e791896c">  126</a></span><span class="preprocessor">    #define LCD32_MAX_COL   320  </span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aprojectConfig_8h_html_a1cfef2a62ed0c60c148158e708250d2c"><div class="ttname"><a href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a></div><div class="ttdeci">int8_t pin_t</div><div class="ttdoc">GPIO CONFIG ///////////////////////////////////////////////////////////////////////////////////.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00063">projectConfig.h:63</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a></div><div class="ttdeci">PIN_STATE</div><div class="ttdoc">(ESP32_DEVICE_MODE == MONITOR)</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00125">projectConfig.h:125</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a></div><div class="ttdeci">@ UNUSED</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00126">projectConfig.h:126</a></div></div>
-<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a></div><div class="ttdeci">@ INVALID</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00127">projectConfig.h:127</a></div></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="};">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">  131</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a> {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">  132</a></span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a> = -1,    </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">  133</a></span>    <a class="code hl_enumvalue" href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a> = -2,   </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aprojectConfig_8h_html_a1cfef2a62ed0c60c148158e708250d2c"><div class="ttname"><a href="projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c">pin_t</a></div><div class="ttdeci">int8_t pin_t</div><div class="ttdoc">Type definition for a GPIO pin number.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00069">projectConfig.h:69</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a></div><div class="ttdeci">PIN_STATE</div><div class="ttdoc">(ESP32_DEVICE_MODE == MONITOR)</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00131">projectConfig.h:131</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a></div><div class="ttdeci">@ UNUSED</div><div class="ttdoc">Pin is unused.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00132">projectConfig.h:132</a></div></div>
+<div class="ttc" id="aprojectConfig_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2"><div class="ttname"><a href="projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aef2863a469df3ea6871d640e3669a2f2">INVALID</a></div><div class="ttdeci">@ INVALID</div><div class="ttdoc">Pin value is invalid.</div><div class="ttdef"><b>Definition</b> <a href="projectConfig_8h_source.html#l00133">projectConfig.h:133</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
