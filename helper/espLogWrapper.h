@@ -1,3 +1,6 @@
+/// @file   espLogWrapper.h
+/// @brief  Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable log levels.
+
 #ifndef __ESP_CUSTOM_LOG_H__
 #define __ESP_CUSTOM_LOG_H__
 

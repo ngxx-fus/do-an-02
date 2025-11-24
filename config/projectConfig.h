@@ -1,3 +1,5 @@
+/// @file   projectConfig.h
+/// @brief  Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO, related values
 #ifndef __GENERAL_CONFIG_H__
 #define __GENERAL_CONFIG_H__
 

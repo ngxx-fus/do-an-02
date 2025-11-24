@@ -234,7 +234,7 @@ make failed with exit code 2, output of the command is in the /home/fus/Document
     ├── config
     │   ├── CMakeLists.txt
     │   ├── projectConfig.h
-    │   └── pinConfig.h
+    │   └── pinConfig.h                         (Deprecated)
     ├── diagram
     │   ├── diagram01.drawio
     │   └── diagram02.drawio

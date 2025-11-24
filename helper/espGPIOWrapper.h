@@ -1,3 +1,6 @@
+/// @file   espGPIOWrapper.h
+/// @brief  GPIO wrapper for ESP32; provides config helpers and fast direct-register macros.
+
 #ifndef __ESP_GPIO_WRAPPER_H__
 #define __ESP_GPIO_WRAPPER_H__
 
