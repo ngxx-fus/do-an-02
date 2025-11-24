@@ -116,57 +116,57 @@ $(document).ready(function(){initNavTree('espLogWrapper_8h_source.html',''); ini
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef __sys_err</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 1</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#ae4a087be859761fbaee51301d54afc1c">   22</a></span><span class="preprocessor">        #define __sys_err(fmt, ...)     ets_printf(&quot;[%lld] [err] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">        #define __sys_err(fmt, ...)     ets_printf(&quot;[%lld] [err] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">        #define __sys_err(fmt, ...)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#ae4a087be859761fbaee51301d54afc1c">   24</a></span><span class="preprocessor">        #define __sys_err(fmt, ...)</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef __sys_warn</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 2</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a13d20cc1e17f9ab2c0a05f45a12b27b5">   31</a></span><span class="preprocessor">        #define __sys_warn(fmt, ...)    ets_printf(&quot;[%lld] [W] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">        #define __sys_warn(fmt, ...)    ets_printf(&quot;[%lld] [W] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    #else </span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">        #define __sys_warn(fmt, ...)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a13d20cc1e17f9ab2c0a05f45a12b27b5">   33</a></span><span class="preprocessor">        #define __sys_warn(fmt, ...)</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef __entry</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 2</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">   40</a></span><span class="preprocessor">        #define __entry(fmt, ...)       ets_printf(&quot;[%lld] [--&gt;] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">        #define __entry(fmt, ...)       ets_printf(&quot;[%lld] [--&gt;] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">    #else </span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">        #define __entry(fmt, ...)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">   42</a></span><span class="preprocessor">        #define __entry(fmt, ...)</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#ifndef __exit</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 2</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">   49</a></span><span class="preprocessor">        #define __exit(fmt, ...)        ets_printf(&quot;[%lld] [&lt;--] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">        #define __exit(fmt, ...)        ets_printf(&quot;[%lld] [&lt;--] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    #else </span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">        #define __exit(fmt, ...)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">   51</a></span><span class="preprocessor">        #define __exit(fmt, ...)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifndef __sys_info</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 2</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a66096257a2cf079dd6f20cfb01e52280">   58</a></span><span class="preprocessor">        #define __sys_info(fmt, ...)    ets_printf(&quot;[%lld] [Info] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">        #define __sys_info(fmt, ...)    ets_printf(&quot;[%lld] [Info] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    #else </span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">        #define __sys_info(fmt, ...)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#a66096257a2cf079dd6f20cfb01e52280">   60</a></span><span class="preprocessor">        #define __sys_info(fmt, ...)</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#ifndef __sys_log</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 3</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">   67</a></span><span class="preprocessor">        #define __sys_log(fmt, ...)     ets_printf(&quot;[%lld] [log] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">        #define __sys_log(fmt, ...)     ets_printf(&quot;[%lld] [log] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">        #define __sys_log(fmt, ...)</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aac01a5081afb0502847989609da39b5b">   69</a></span><span class="preprocessor">        #define __sys_log(fmt, ...)</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#ifndef __tag_log</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    #if SYSTEM_LOG_LEVEL &gt;= 3</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aec7fcbc3dddc3c2683973655d0fdfa16">   76</a></span><span class="preprocessor">        #define __tag_log(tag, fmt, ...)    ets_printf(&quot;[%lld] [log] [%s] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), tag, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">        #define __tag_log(tag, fmt, ...)    ets_printf(&quot;[%lld] [log] [%s] &quot; fmt &quot;\n&quot;, esp_timer_get_time(), tag, ##__VA_ARGS__)</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">        #define __tag_log(tag, fmt, ...)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="espLogWrapper_8h.html#aec7fcbc3dddc3c2683973655d0fdfa16">   78</a></span><span class="preprocessor">        #define __tag_log(tag, fmt, ...)</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>

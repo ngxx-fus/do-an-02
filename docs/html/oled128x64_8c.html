@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('oled128x64_8c.html',''); initResizable
   <div class="headertitle"><div class="title">oled128x64.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of OLED 128x64 driver; Includes device creation, configuration, startup, pixel/canvas operations, and text rendering.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="helper_8h_source.html">../../helper/helper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="oled128x64Commands_8h_source.html">oled128x64Commands.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="oled128x64Helpers_8h_source.html">oled128x64Helpers.h</a>&quot;</code><br />
@@ -105,8 +108,131 @@ $(document).ready(function(){initNavTree('oled128x64_8c.html',''); initResizable
 Include dependency graph for oled128x64.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="oled128x64_8c__incl.png" border="0" usemap="#acomDriver_2oled128x64_2oled128x64_8c" alt=""/></div>
+<map name="acomDriver_2oled128x64_2oled128x64_8c" id="acomDriver_2oled128x64_2oled128x64_8c">
+<area shape="rect" title="Implementation of OLED 128x64 driver; Includes device creation, configuration, startup,..." alt="" coords="1713,5,1884,45"/>
+<area shape="rect" href="helper_8h.html" title="Common helper macros for loops, bit manipulation, math, and pointer handling." alt="" coords="94,607,237,632"/>
+<area shape="poly" title=" " alt="" coords="1713,32,1295,48,725,78,452,99,222,122,133,136,65,150,22,165,11,172,8,179,8,474,11,496,19,516,32,534,48,551,85,579,123,599,121,603,82,583,44,555,28,538,15,519,6,497,3,474,3,177,7,168,19,160,63,145,132,130,222,117,451,93,725,73,1295,43,1713,27"/>
+<area shape="rect" href="oled128x64Commands_8h.html" title=" " alt="" coords="1753,167,1937,192"/>
+<area shape="poly" title=" " alt="" coords="1807,45,1823,93,1841,153,1836,154,1817,94,1802,47"/>
+<area shape="rect" href="oled128x64Helpers_8h.html" title="Helper macros for OLED 128x64 display; Includes coordinate boundary checking and related utilities." alt="" coords="1961,167,2121,192"/>
+<area shape="poly" title=" " alt="" coords="1830,43,2013,157,2010,161,1827,48"/>
+<area shape="rect" href="oled128x64Log_8h.html" title="Logging macros for OLED 128x64 driver; Supports error, entry/exit, and detailed debug logs." alt="" coords="2145,167,2279,192"/>
+<area shape="poly" title=" " alt="" coords="1851,43,2169,159,2167,164,1849,48"/>
+<area shape="rect" href="oled128x64Definitions_8h.html" title="OLED 128x64 display definitions; Provides constants, types, and device structure for I2C communicatio..." alt="" coords="1447,167,1627,192"/>
+<area shape="poly" title=" " alt="" coords="1767,48,1571,162,1568,157,1765,43"/>
+<area shape="rect" href="oled128x64_8h.html" title="Header for OLED 128x64 driver; Provides device creation, configuration, pixel/canvas operations,..." alt="" coords="1697,93,1807,119"/>
+<area shape="poly" title=" " alt="" coords="1790,47,1768,83,1764,80,1785,44"/>
+<area shape="rect" title=" " alt="" coords="741,753,811,779"/>
+<area shape="poly" title=" " alt="" coords="176,631,209,668,231,687,257,703,296,716,349,727,481,744,617,755,727,760,727,766,617,760,480,750,348,733,295,721,255,708,228,692,205,672,172,634"/>
+<area shape="rect" title=" " alt="" coords="112,680,187,705"/>
+<area shape="poly" title=" " alt="" coords="165,633,157,667,152,666,160,632"/>
+<area shape="poly" title=" " alt="" coords="1938,188,1950,189,2061,193,2253,194,2495,195,2759,199,3015,211,3131,221,3234,233,3321,249,3388,269,3412,281,3431,294,3443,308,3447,324,3446,620,3450,622,3461,624,3499,625,3573,624,3581,627,3575,633,3528,646,3226,708,3162,716,3066,724,2793,737,2056,755,1303,764,825,767,825,762,1303,759,2056,749,2793,732,3065,719,3162,711,3225,703,3527,641,3573,629,3576,628,3573,629,3499,630,3460,629,3447,627,3442,622,3441,325,3438,311,3427,298,3410,286,3386,274,3320,255,3233,239,3130,226,3015,216,2759,205,2495,200,2253,199,2061,198,1949,195,1937,193"/>
+<area shape="rect" href="i2c_8h.html" title="I2C driver interface; Provides functions for creating, configuring, starting, transmitting/receiving,..." alt="" coords="1493,240,1581,265"/>
+<area shape="poly" title=" " alt="" coords="1540,192,1540,226,1535,226,1535,192"/>
+<area shape="rect" href="general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="1365,460,1517,485"/>
+<area shape="poly" title=" " alt="" coords="1552,264,1578,291,1605,329,1615,350,1620,372,1619,393,1610,413,1594,431,1575,445,1532,463,1530,458,1572,440,1591,427,1606,411,1614,392,1615,372,1610,352,1601,332,1574,295,1548,267"/>
+<area shape="rect" href="i2cLog_8h.html" title="Logging macros for I2C driver; Supports different log levels including error, entry/exit,..." alt="" coords="1327,387,1403,412"/>
+<area shape="poly" title=" " alt="" coords="1494,264,1442,282,1416,296,1394,315,1378,343,1370,373,1365,372,1373,341,1390,312,1413,292,1439,277,1492,259"/>
+<area shape="rect" href="i2cDefinition_8h.html" title=" " alt="" coords="1479,387,1595,412"/>
+<area shape="poly" title=" " alt="" coords="1540,266,1540,373,1535,373,1535,266"/>
+<area shape="rect" href="i2cHelper_8h.html" title=" " alt="" coords="1405,313,1499,339"/>
+<area shape="poly" title=" " alt="" coords="1525,267,1478,307,1475,302,1522,263"/>
+<area shape="poly" title=" " alt="" coords="1365,478,1060,486,650,507,450,524,277,547,206,560,149,575,107,591,83,608,75,629,76,656,85,682,102,703,135,717,198,728,376,746,574,756,727,761,727,766,573,761,376,751,197,734,134,722,98,707,81,685,71,657,70,628,79,605,105,586,147,569,205,555,276,541,450,519,650,502,1060,481,1365,473"/>
+<area shape="rect" title=" " alt="" coords="592,680,659,705"/>
+<area shape="poly" title=" " alt="" coords="1365,477,1182,479,948,487,721,505,629,519,559,536,512,553,470,573,455,585,447,598,446,613,454,630,473,645,504,658,579,679,578,684,503,663,470,649,450,634,441,614,442,597,451,582,467,569,510,548,558,531,628,513,721,500,948,482,1181,474,1365,471"/>
+<area shape="rect" title=" " alt="" coords="1051,680,1125,705"/>
+<area shape="poly" title=" " alt="" coords="1429,487,1344,553,1284,595,1221,634,1131,677,1129,672,1219,630,1281,591,1341,549,1426,483"/>
+<area shape="rect" title=" " alt="" coords="1406,607,1477,632"/>
+<area shape="poly" title=" " alt="" coords="1444,486,1444,593,1439,593,1439,486"/>
+<area shape="rect" title=" " alt="" coords="1125,607,1208,632"/>
+<area shape="poly" title=" " alt="" coords="1366,485,1296,503,1260,517,1228,535,1200,564,1180,595,1176,592,1196,560,1225,531,1258,512,1294,497,1364,480"/>
+<area shape="rect" title=" " alt="" coords="1675,533,1746,559"/>
+<area shape="poly" title=" " alt="" coords="1485,483,1662,529,1661,534,1484,488"/>
+<area shape="rect" href="fontUtils_8h.html" title=" " alt="" coords="2967,533,3105,559"/>
+<area shape="poly" title=" " alt="" coords="1518,475,1697,483,2819,531,2953,538,2953,543,2819,536,1697,488,1517,480"/>
+<area shape="rect" href="flag_8h.html" title="Bit&#45;flag utilities; provides fast non&#45;atomic flag ops and thread&#45;safe atomic flag manipulation." alt="" coords="571,533,629,559"/>
+<area shape="poly" title=" " alt="" coords="1365,483,643,544,643,538,1365,478"/>
+<area shape="rect" href="param_8h.html" title="Defines logic level types and constants; includes level_t typedef and BIN_LEVEL enum (LOW/HIGH)." alt="" coords="313,607,389,632"/>
+<area shape="poly" title=" " alt="" coords="1365,477,1133,481,833,490,561,507,464,520,431,528,409,536,394,547,381,563,362,595,358,592,376,559,390,544,407,531,429,522,463,515,561,502,833,484,1132,475,1365,472"/>
+<area shape="rect" href="return_8h.html" title="Defines standardized return types, macros, and DEFAULT_RETURN_STATUS enum for function error handling..." alt="" coords="2350,607,2423,632"/>
+<area shape="poly" title=" " alt="" coords="1518,480,1633,498,1697,513,1760,531,1785,544,1810,556,1887,575,1953,585,2013,590,2069,590,2187,590,2256,594,2336,604,2336,609,2255,599,2187,596,2069,596,2012,595,1953,591,1886,580,1808,561,1783,549,1758,536,1696,518,1632,503,1517,485"/>
+<area shape="rect" href="espGPIOWrapper_8h.html" title="GPIO wrapper for ESP32; provides config helpers and fast direct&#45;register macros." alt="" coords="1509,533,1651,559"/>
+<area shape="poly" title=" " alt="" coords="1465,483,1546,525,1544,529,1462,488"/>
+<area shape="rect" href="espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo..." alt="" coords="967,533,1102,559"/>
+<area shape="poly" title=" " alt="" coords="1376,488,1114,534,1113,528,1376,483"/>
+<area shape="rect" href="espRTOSWrapper_8h.html" title="FreeRTOS multitasking utilities; provides critical&#45;section helpers and task&#45;level synchronization mac..." alt="" coords="2661,533,2806,559"/>
+<area shape="poly" title=" " alt="" coords="1518,476,2647,537,2647,543,1518,481"/>
+<area shape="rect" title=" " alt="" coords="1821,533,1955,559"/>
+<area shape="poly" title=" " alt="" coords="1514,483,1808,529,1807,535,1513,488"/>
+<area shape="rect" href="gfxfont_8h.html" title=" " alt="" coords="3131,680,3213,705"/>
+<area shape="poly" title=" " alt="" coords="3074,556,3113,575,3132,589,3149,605,3165,635,3172,665,3167,667,3160,637,3145,608,3129,593,3110,580,3072,561"/>
+<area shape="rect" href="FreeSerif9pt7b_8h.html" title=" " alt="" coords="3209,607,3407,632"/>
+<area shape="poly" title=" " alt="" coords="3080,556,3252,601,3250,606,3079,561"/>
+<area shape="poly" title=" " alt="" coords="3131,698,825,766,825,761,3131,693"/>
+<area shape="poly" title=" " alt="" coords="3287,634,3207,676,3205,671,3285,630"/>
+<area shape="poly" title=" " alt="" coords="571,555,249,607,248,602,570,550"/>
+<area shape="poly" title=" " alt="" coords="571,551,504,556,423,566,348,583,320,595,302,608,298,619,302,630,330,655,373,677,428,697,491,714,621,740,727,756,727,761,620,745,490,719,427,702,371,682,327,659,298,634,292,619,298,605,317,590,346,578,422,561,504,551,570,546"/>
+<area shape="poly" title=" " alt="" coords="605,559,624,666,618,667,599,560"/>
+<area shape="poly" title=" " alt="" coords="630,549,739,568,808,584,876,604,902,616,928,630,1042,673,1040,678,926,634,900,621,874,609,806,589,738,573,629,554"/>
+<area shape="poly" title=" " alt="" coords="630,548,1112,608,1111,614,629,554"/>
+<area shape="rect" title=" " alt="" coords="464,607,563,632"/>
+<area shape="poly" title=" " alt="" coords="588,561,540,600,536,596,584,557"/>
+<area shape="poly" title=" " alt="" coords="381,630,581,703,728,748,726,753,579,708,379,635"/>
+<area shape="poly" title=" " alt="" coords="390,628,579,677,578,682,388,633"/>
+<area shape="poly" title=" " alt="" coords="2350,633,2339,635,2112,667,1880,694,1651,716,1433,733,1060,756,825,766,825,760,1060,750,1432,728,1651,711,1880,689,2111,662,2338,629,2349,627"/>
+<area shape="poly" title=" " alt="" coords="2350,633,2339,635,2080,647,1574,665,673,693,672,687,1574,660,2080,642,2338,629,2349,628"/>
+<area shape="poly" title=" " alt="" coords="1652,555,1664,556,1812,558,2060,560,2189,564,2303,571,2390,584,2420,593,2438,605,2444,619,2438,634,2424,646,2404,656,2347,676,2270,693,2176,708,1948,731,1688,747,1422,758,1172,764,825,767,825,762,1172,759,1422,753,1688,742,1947,726,2175,702,2269,688,2346,671,2402,651,2421,641,2434,630,2439,619,2434,608,2417,598,2389,590,2302,577,2188,569,2060,565,1812,564,1664,561,1651,560"/>
+<area shape="poly" title=" " alt="" coords="1573,561,1540,598,1516,618,1489,634,1422,654,1326,670,1139,690,1139,685,1325,665,1420,649,1487,630,1513,614,1536,594,1569,557"/>
+<area shape="poly" title=" " alt="" coords="1559,561,1477,603,1475,598,1557,556"/>
+<area shape="poly" title=" " alt="" coords="1514,561,1222,611,1221,606,1513,556"/>
+<area shape="rect" title=" " alt="" coords="2113,607,2217,632"/>
+<area shape="poly" title=" " alt="" coords="1652,554,1664,556,1880,578,2100,604,2099,609,1880,584,1664,561,1651,560"/>
+<area shape="rect" title=" " alt="" coords="2242,607,2326,632"/>
+<area shape="poly" title=" " alt="" coords="1652,555,1664,556,1821,570,1945,577,2069,585,2229,604,2228,609,2069,591,1944,582,1821,575,1664,561,1651,560"/>
+<area shape="rect" title=" " alt="" coords="1283,607,1381,632"/>
+<area shape="poly" title=" " alt="" coords="1541,561,1386,605,1385,600,1539,556"/>
+<area shape="rect" title=" " alt="" coords="1553,607,1666,632"/>
+<area shape="poly" title=" " alt="" coords="1587,558,1602,593,1597,595,1582,560"/>
+<area shape="rect" title=" " alt="" coords="1691,607,1792,632"/>
+<area shape="poly" title=" " alt="" coords="1607,556,1704,599,1701,603,1605,561"/>
+<area shape="rect" title=" " alt="" coords="1817,607,1949,632"/>
+<area shape="poly" title=" " alt="" coords="1629,556,1821,601,1820,606,1628,561"/>
+<area shape="rect" title=" " alt="" coords="1973,607,2089,632"/>
+<area shape="poly" title=" " alt="" coords="1652,556,1960,604,1959,609,1651,561"/>
+<area shape="poly" title=" " alt="" coords="968,554,805,573,729,588,699,598,677,609,663,621,652,636,636,668,631,666,647,634,660,618,675,604,697,593,728,583,805,567,967,549"/>
+<area shape="poly" title=" " alt="" coords="1043,558,1065,606,1084,666,1079,667,1060,608,1038,560"/>
+<area shape="poly" title=" " alt="" coords="1083,556,1271,601,1270,606,1082,561"/>
+<area shape="rect" title=" " alt="" coords="939,607,1051,632"/>
+<area shape="poly" title=" " alt="" coords="1030,560,1010,596,1006,593,1026,558"/>
+<area shape="rect" href="projectConfig_8h.html" title="Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO,..." alt="" coords="689,607,863,632"/>
+<area shape="poly" title=" " alt="" coords="994,561,832,606,830,600,992,556"/>
+<area shape="poly" title=" " alt="" coords="779,632,779,740,773,740,773,632"/>
+<area shape="poly" title=" " alt="" coords="753,634,664,676,661,672,751,630"/>
+<area shape="poly" title=" " alt="" coords="827,629,1038,677,1036,682,826,635"/>
+<area shape="rect" title=" " alt="" coords="2499,607,2650,632"/>
+<area shape="poly" title=" " alt="" coords="2709,561,2614,603,2612,599,2707,556"/>
+<area shape="rect" title=" " alt="" coords="2675,607,2792,632"/>
+<area shape="poly" title=" " alt="" coords="2736,559,2736,593,2731,593,2731,559"/>
+<area shape="rect" title=" " alt="" coords="2817,607,2973,632"/>
+<area shape="poly" title=" " alt="" coords="2760,556,2857,599,2855,603,2758,561"/>
+<area shape="rect" title=" " alt="" coords="2997,607,3134,632"/>
+<area shape="poly" title=" " alt="" coords="2787,556,2999,601,2998,606,2786,561"/>
+<area shape="poly" title=" " alt="" coords="1379,410,1421,449,1417,452,1376,414"/>
+<area shape="poly" title=" " alt="" coords="1523,414,1470,454,1467,449,1520,410"/>
+<area shape="poly" title=" " alt="" coords="1454,339,1446,446,1441,446,1448,339"/>
+<area shape="poly" title=" " alt="" coords="1440,341,1392,380,1388,376,1436,337"/>
+<area shape="poly" title=" " alt="" coords="1467,337,1515,376,1511,380,1464,341"/>
+<area shape="poly" title=" " alt="" coords="1769,117,1821,156,1818,160,1765,121"/>
+<area shape="poly" title=" " alt="" coords="1799,116,1982,161,1981,166,1798,121"/>
+<area shape="poly" title=" " alt="" coords="1808,113,2132,163,2131,168,1807,118"/>
+<area shape="poly" title=" " alt="" coords="1718,121,1586,165,1584,160,1717,116"/>
+<area shape="poly" title=" " alt="" coords="1740,121,1641,194,1572,236,1569,231,1639,190,1736,117"/>
+<area shape="poly" title=" " alt="" coords="1750,120,1730,176,1722,213,1719,251,1718,400,1728,410,1758,421,1869,444,2031,465,2226,485,2637,517,2953,537,2953,543,2637,523,2225,490,2031,470,1868,449,1757,426,1725,415,1714,402,1713,251,1717,212,1725,175,1744,118"/>
+</map>
 </div>
-</div><table class="memberdecls">
+</div>
+<p><a href="oled128x64_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4d34e5ac6e194740e9fa0ded33bd84c1" id="r_a4d34e5ac6e194740e9fa0ded33bd84c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64_8c.html#a4d34e5ac6e194740e9fa0ded33bd84c1">createOLEDDevice</a> (<a class="el" href="structoled128x64Dev__t.html">oled128x64Dev_t</a> **oled)</td></tr>
@@ -152,7 +278,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3b6fe6cc54256f6371999a88e7a7db88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text with line param instead of row index of baseline.  <br /></td></tr>
 <tr class="separator:a3b6fe6cc54256f6371999a88e7a7db88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of OLED 128x64 driver; Includes device creation, configuration, startup, pixel/canvas operations, and text rendering. </p>
+
+<p class="definition">Definition in file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="aa943f5b20ff91c81bf8380e302306945" name="aa943f5b20ff91c81bf8380e302306945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa943f5b20ff91c81bf8380e302306945">&#9670;&#160;</a></span>configOLEDDevice()</h2>
 
@@ -204,6 +334,38 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success, or error code if configuration fails. </dd></dl>
 <p>Config SCL, SDA, as MASTER mode + FAST mode speed</p>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00047">47</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                 {</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;configOLEDDevice(%p, %d, %d, 0x%02x)&quot;</span>, oled, scl, sda, config);</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled)) <span class="keywordflow">goto</span> configOLED_ReturnERR_NULL;</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>)) <span class="keywordflow">goto</span> configOLED_ReturnERR_NULL;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span>( <a class="code hl_function" href="i2c_8c.html#af59b3db828026a128bfb235e1791a541">configI2CDevice</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, scl, sda, config) != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>)</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">goto</span> configOLED_ReturnERR;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;configOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    configOLED_ReturnERR:</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;configOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    configOLED_ReturnERR_NULL:</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;configOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>));</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;</div>
+<div class="line"><span class="lineno">   67</span>}</div>
+<div class="ttc" id="ahelper_8h_html_a18d295a837ac71add5578860b55e5502"><div class="ttname"><a href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a></div><div class="ttdeci">#define STR(x)</div><div class="ttdoc">Convert macro argument x to string literal.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00081">helper.h:81</a></div></div>
+<div class="ttc" id="ahelper_8h_html_a485ab3f55b4285ed3fb801b3712168dc"><div class="ttname"><a href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a></div><div class="ttdeci">#define __is_null(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00048">helper.h:48</a></div></div>
+<div class="ttc" id="ai2c_8c_html_af59b3db828026a128bfb235e1791a541"><div class="ttname"><a href="i2c_8c.html#af59b3db828026a128bfb235e1791a541">configI2CDevice</a></div><div class="ttdeci">def configI2CDevice(i2cDev_t *dev, uint8_t addr, pin_t scl, pin_t sda, flag_t config)</div><div class="ttdoc">Configure I2C device pins and options.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00033">i2c.c:33</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_a7dfa2c4cfbfcba36416046052e7943e8"><div class="ttname"><a href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a></div><div class="ttdeci">#define OLED_ADDR</div><div class="ttdoc">I2C slave address of the OLED display (default 0x3C)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00029">oled128x64Definitions.h:29</a></div></div>
+<div class="ttc" id="aoled128x64Log_8h_html_ac80041e20850303135455b2da04768aa"><div class="ttname"><a href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a></div><div class="ttdeci">#define __oledEntry(...)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Log_8h_source.html#l00026">oled128x64Log.h:26</a></div></div>
+<div class="ttc" id="aoled128x64Log_8h_html_ad51707c3f8438b68c70679af70485315"><div class="ttname"><a href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a></div><div class="ttdeci">#define __oledExit(...)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Log_8h_source.html#l00027">oled128x64Log.h:27</a></div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a></div><div class="ttdeci">@ ERR</div><div class="ttdoc">Generic error.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00035">return.h:35</a></div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a></div><div class="ttdeci">@ ERR_NULL</div><div class="ttdoc">Null pointer passed.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00036">return.h:36</a></div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a></div><div class="ttdeci">@ OKE</div><div class="ttdoc">Success.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00034">return.h:34</a></div></div>
+<div class="ttc" id="astructoled128x64Dev__t_html_af12e872fefee9c7af73879665f7c05ac"><div class="ttname"><a href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">oled128x64Dev_t::i2cDev</a></div><div class="ttdeci">i2cDev_t * i2cDev</div><div class="ttdoc">Pointer to associated I2C device.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00053">oled128x64Definitions.h:53</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4d34e5ac6e194740e9fa0ded33bd84c1" name="a4d34e5ac6e194740e9fa0ded33bd84c1"></a>
@@ -231,6 +393,45 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success, or error code if allocation fails. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00015">15</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                             {</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;createOLEDDevice(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled)) <span class="keywordflow">goto</span> ReturnERR_NULL;</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>    (*oled) = (<a class="code hl_struct" href="structoled128x64Dev__t.html">oled128x64Dev_t</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structoled128x64Dev__t.html">oled128x64Dev_t</a>));</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(*oled)) <span class="keywordflow">goto</span> ReturnERR_NULL;</div>
+<div class="line"><span class="lineno">   22</span>    </div>
+<div class="line"><span class="lineno">   23</span>    (*oled)-&gt;height = <a class="code hl_define" href="oled128x64Definitions_8h.html#ac49bb6838beb5fe8da39ffafc99ab5c7">__oled_h</a>;</div>
+<div class="line"><span class="lineno">   24</span>    (*oled)-&gt;width  = <a class="code hl_define" href="oled128x64Definitions_8h.html#aa0830ad69f76559d64ac63723afaa230">__oled_w</a>;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    (*oled)-&gt;canvas = (<a class="code hl_typedef" href="oled128x64Definitions_8h.html#acf197cea53ab3c8ec5fc668fa60efe22">cell_t</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="oled128x64Definitions_8h.html#acf197cea53ab3c8ec5fc668fa60efe22">cell_t</a>) * ((*oled)-&gt;width) * ((*oled)-&gt;height) / 8);</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>((*oled)-&gt;canvas)) <span class="keywordflow">goto</span> ReturnERR_MALLOC_FAILED;</div>
+<div class="line"><span class="lineno">   28</span>    </div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span>( <a class="code hl_function" href="i2c_8c.html#a3e6c09e4f8c1e67a50f2b237613882b4">createI2CDevice</a>(&amp;((*oled)-&gt;i2cDev)) != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a> ) <span class="keywordflow">goto</span> ReturnERR;</div>
+<div class="line"><span class="lineno">   30</span>    </div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;createOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    ReturnERR:</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;createOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    ReturnERR_NULL:</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;createOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>));</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;</div>
+<div class="line"><span class="lineno">   41</span>        </div>
+<div class="line"><span class="lineno">   42</span>    ReturnERR_MALLOC_FAILED:</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;createOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2">ERR_MALLOC_FAILED</a>));</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2">ERR_MALLOC_FAILED</a>;</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+<div class="ttc" id="ai2c_8c_html_a3e6c09e4f8c1e67a50f2b237613882b4"><div class="ttname"><a href="i2c_8c.html#a3e6c09e4f8c1e67a50f2b237613882b4">createI2CDevice</a></div><div class="ttdeci">def createI2CDevice(i2cDev_t **pDev)</div><div class="ttdoc">Create a new I2C device instance.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00009">i2c.c:9</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_aa0830ad69f76559d64ac63723afaa230"><div class="ttname"><a href="oled128x64Definitions_8h.html#aa0830ad69f76559d64ac63723afaa230">__oled_w</a></div><div class="ttdeci">#define __oled_w</div><div class="ttdoc">OLED display width in pixels.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00025">oled128x64Definitions.h:25</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_ac49bb6838beb5fe8da39ffafc99ab5c7"><div class="ttname"><a href="oled128x64Definitions_8h.html#ac49bb6838beb5fe8da39ffafc99ab5c7">__oled_h</a></div><div class="ttdeci">#define __oled_h</div><div class="ttdoc">OLED display height in pixels.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00022">oled128x64Definitions.h:22</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_acf197cea53ab3c8ec5fc668fa60efe22"><div class="ttname"><a href="oled128x64Definitions_8h.html#acf197cea53ab3c8ec5fc668fa60efe22">cell_t</a></div><div class="ttdeci">uint8_t cell_t</div><div class="ttdoc">Alias for a single display cell unit (1 byte)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00038">oled128x64Definitions.h:38</a></div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aba74543d1064e9a88ed2fd268e26b9c2">ERR_MALLOC_FAILED</a></div><div class="ttdeci">@ ERR_MALLOC_FAILED</div><div class="ttdoc">Memory allocation failed.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00037">return.h:37</a></div></div>
+<div class="ttc" id="astructoled128x64Dev__t_html"><div class="ttname"><a href="structoled128x64Dev__t.html">oled128x64Dev_t</a></div><div class="ttdoc">Structure representing an OLED 128x64 display device.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00050">oled128x64Definitions.h:50</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3b6fe6cc54256f6371999a88e7a7db88" name="a3b6fe6cc54256f6371999a88e7a7db88"></a>
@@ -286,6 +487,21 @@ conf[18]: 0 - Call <a class="el" href="oled128x64_8h.html#a2d4966abf9593520dc289
 <dd>
 conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display.">oledFlush()</a>, 1 - Skip <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display.">oledFlush()</a> </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00390">390</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  390</span>                                                                         {</div>
+<div class="line"><span class="lineno">  391</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="flag_8h.html#a51c23fa3c5e1a865e3a16e40a6d55a57">__hasFlagBitClr</a>(conf, 16)) <a class="code hl_function" href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183">oledResetView</a>(oled);</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="flag_8h.html#a51c23fa3c5e1a865e3a16e40a6d55a57">__hasFlagBitClr</a>(conf, 17)) <a class="code hl_function" href="oled128x64_8c.html#ae2f144fde5c113fedc049795ce450f3a">oledFillScreen</a>(oled, 0);</div>
+<div class="line"><span class="lineno">  393</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="flag_8h.html#a51c23fa3c5e1a865e3a16e40a6d55a57">__hasFlagBitClr</a>(conf, 18)) <a class="code hl_function" href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb">oledShowRAMContent</a>(oled);</div>
+<div class="line"><span class="lineno">  394</span>    <a class="code hl_function" href="oled128x64_8c.html#ab1a90b56cdc1a95da2c65757ddb5890a">oledDrawText</a>(oled, ((conf&amp;0xFF)+1)*((conf&gt;&gt;8)&amp;0xFF) + (conf&amp;0xFF)*1, 0, text, 1, 1, ((conf&gt;&gt;8)&amp;0xFF));</div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="flag_8h.html#a51c23fa3c5e1a865e3a16e40a6d55a57">__hasFlagBitClr</a>(conf, 19)) <a class="code hl_function" href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2">oledFlush</a>(oled);</div>
+<div class="line"><span class="lineno">  396</span>}</div>
+<div class="ttc" id="aflag_8h_html_a51c23fa3c5e1a865e3a16e40a6d55a57"><div class="ttname"><a href="flag_8h.html#a51c23fa3c5e1a865e3a16e40a6d55a57">__hasFlagBitClr</a></div><div class="ttdeci">#define __hasFlagBitClr(flag, i)</div><div class="ttdef"><b>Definition</b> <a href="flag_8h_source.html#l00027">flag.h:27</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_a21eeb3d57d6ace23b9ebc4ec1feb9eb2"><div class="ttname"><a href="oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2">oledFlush</a></div><div class="ttdeci">def oledFlush(oled128x64Dev_t *oled)</div><div class="ttdoc">Flush the current framebuffer (canvas) to the OLED display.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00186">oled128x64.c:186</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_a2d4966abf9593520dc289ced025c47cb"><div class="ttname"><a href="oled128x64_8c.html#a2d4966abf9593520dc289ced025c47cb">oledShowRAMContent</a></div><div class="ttdeci">def oledShowRAMContent(oled128x64Dev_t *oled)</div><div class="ttdoc">Display the content stored in OLED RAM (resume from “all pixels on” mode).</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00163">oled128x64.c:163</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_a75509330529a3c56cd7edf45f8ed9183"><div class="ttname"><a href="oled128x64_8c.html#a75509330529a3c56cd7edf45f8ed9183">oledResetView</a></div><div class="ttdeci">def oledResetView(oled128x64Dev_t *oled)</div><div class="ttdoc">Reset the OLED control registers to default state (top-left = (0,0)).</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00114">oled128x64.c:114</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_ab1a90b56cdc1a95da2c65757ddb5890a"><div class="ttname"><a href="oled128x64_8c.html#ab1a90b56cdc1a95da2c65757ddb5890a">oledDrawText</a></div><div class="ttdeci">def oledDrawText(oled128x64Dev_t *oled, xy_t r, xy_t c, const char *str, color_t color, bool wrap, byte_t lineHeight)</div><div class="ttdoc">Draw a text string on the OLED display using the active font.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00348">oled128x64.c:348</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_ae2f144fde5c113fedc049795ce450f3a"><div class="ttname"><a href="oled128x64_8c.html#ae2f144fde5c113fedc049795ce450f3a">oledFillScreen</a></div><div class="ttdeci">def oledFillScreen(oled128x64Dev_t *oled, color_t color)</div><div class="ttdoc">Fill the entire screen with a uniform color.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00237">oled128x64.c:237</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5100967aefeb41d31d929cf635f2bb70" name="a5100967aefeb41d31d929cf635f2bb70"></a>
@@ -332,6 +548,68 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00304">304</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>                                                                            {</div>
+<div class="line"><span class="lineno">  305</span>    <span class="comment">// __oledEntry(&quot;oled_draw_char(%d, %d, %c, %d)&quot;, r, y, c, cl);</span></div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">if</span> (c &lt; 0x20 || c &gt; 0x7E) {</div>
+<div class="line"><span class="lineno">  307</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledDrawChar() : ESP_ERR_INVALID_ARG&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> ESP_ERR_INVALID_ARG;</div>
+<div class="line"><span class="lineno">  309</span>    }</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>    <a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> glyph = <a class="code hl_variable" href="fontUtils_8c.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a>.<a class="code hl_variable" href="structGFXfont.html#af63d88fa053c9a634e86eab7c96db290">glyph</a>[c - 0x20];</div>
+<div class="line"><span class="lineno">  312</span> </div>
+<div class="line"><span class="lineno">  313</span>    uint16_t bo = glyph.<a class="code hl_variable" href="structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8">bitmapOffset</a>;</div>
+<div class="line"><span class="lineno">  314</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>     w  = glyph.<a class="code hl_variable" href="structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1">width</a>;</div>
+<div class="line"><span class="lineno">  315</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>     h  = glyph.<a class="code hl_variable" href="structGFXglyph.html#a24cff650b78fc295dc46e1bfa9127bb7">height</a>;</div>
+<div class="line"><span class="lineno">  316</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>     xo = glyph.<a class="code hl_variable" href="structGFXglyph.html#ab030bd9aeb37509ccc94ae3dcec4de98">xOffset</a>;</div>
+<div class="line"><span class="lineno">  317</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>     yo = glyph.<a class="code hl_variable" href="structGFXglyph.html#a96b2c0dbe314bf053cdc0d5c622e76a7">yOffset</a>;</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> bitmap_top_x = r + yo;</div>
+<div class="line"><span class="lineno">  320</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> bitmap_left_y = y + xo;</div>
+<div class="line"><span class="lineno">  321</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1">byte_t</a> bits = 0;</div>
+<div class="line"><span class="lineno">  322</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1">byte_t</a> bitCount = 0;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>    <a class="code hl_define" href="helper_8h.html#a3d0e00b55b0732e518209579032288d5">REPT</a>(<a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>, yy, 0, h) {</div>
+<div class="line"><span class="lineno">  325</span>        <a class="code hl_define" href="helper_8h.html#a3d0e00b55b0732e518209579032288d5">REPT</a>(<a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a>, xx, 0, w) {</div>
+<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">if</span> (bitCount == 0) {</div>
+<div class="line"><span class="lineno">  327</span>                bits = <a class="code hl_variable" href="fontUtils_8c.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a>.<a class="code hl_variable" href="structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7">bitmap</a>[bo++];</div>
+<div class="line"><span class="lineno">  328</span>                bitCount = 8;</div>
+<div class="line"><span class="lineno">  329</span>            }</div>
+<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">if</span> (bits &amp; 0x80) {</div>
+<div class="line"><span class="lineno">  331</span>                <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> pixel_x = bitmap_top_x + yy;</div>
+<div class="line"><span class="lineno">  332</span>                <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> pixel_y = bitmap_left_y + xx;</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordflow">if</span> (pixel_x &gt;= <a class="code hl_define" href="oled128x64Definitions_8h.html#a1f4faa4f42e20f0366c99dfb4552437f">__min_x</a> &amp;&amp; pixel_x &lt; (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">  335</span>                    pixel_y &gt;= <a class="code hl_define" href="oled128x64Definitions_8h.html#ab14ed1cb0e308e5b322926a48e82b9de">__min_y</a> &amp;&amp; pixel_y &lt; (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>)) {</div>
+<div class="line"><span class="lineno">  336</span>                    <a class="code hl_function" href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a>(oled, pixel_x, pixel_y, cl);   </div>
+<div class="line"><span class="lineno">  337</span>                }</div>
+<div class="line"><span class="lineno">  338</span>            }</div>
+<div class="line"><span class="lineno">  339</span>            bits &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  340</span>            bitCount--;</div>
+<div class="line"><span class="lineno">  341</span>        }</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>    <span class="comment">// __oledExit(&quot;oledDrawChar() : OKE&quot;);</span></div>
+<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  346</span>}</div>
+<div class="ttc" id="afontUtils_8c_html_aa3352223ab7490ff04749c433f3894ae"><div class="ttname"><a href="fontUtils_8c.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a></div><div class="ttdeci">GFXfont mainFont</div><div class="ttdef"><b>Definition</b> <a href="fontUtils_8c_source.html#l00005">fontUtils.c:5</a></div></div>
+<div class="ttc" id="ahelper_8h_html_a3d0e00b55b0732e518209579032288d5"><div class="ttname"><a href="helper_8h.html#a3d0e00b55b0732e518209579032288d5">REPT</a></div><div class="ttdeci">#define REPT(type, i, a, b)</div><div class="ttdoc">Loop forward from a to b-1 (Integer types).</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00019">helper.h:19</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_a1f4faa4f42e20f0366c99dfb4552437f"><div class="ttname"><a href="oled128x64Definitions_8h.html#a1f4faa4f42e20f0366c99dfb4552437f">__min_x</a></div><div class="ttdeci">#define __min_x</div><div class="ttdoc">Minimum X coordinate (0)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00016">oled128x64Definitions.h:16</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_a4a866609d9773434a60de3bfe7b66596"><div class="ttname"><a href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a></div><div class="ttdeci">int16_t xy_t</div><div class="ttdoc">Alias for signed 16-bit coordinate type.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00046">oled128x64Definitions.h:46</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_a5f2bd8130655730e7899c385aca6a2b1"><div class="ttname"><a href="oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1">byte_t</a></div><div class="ttdeci">uint8_t byte_t</div><div class="ttdoc">Alias for 8-bit unsigned integer (used for generic byte data)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00034">oled128x64Definitions.h:34</a></div></div>
+<div class="ttc" id="aoled128x64Definitions_8h_html_ab14ed1cb0e308e5b322926a48e82b9de"><div class="ttname"><a href="oled128x64Definitions_8h.html#ab14ed1cb0e308e5b322926a48e82b9de">__min_y</a></div><div class="ttdeci">#define __min_y</div><div class="ttdoc">Minimum Y coordinate (0)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00019">oled128x64Definitions.h:19</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_ab163f851fe2f1c40e0c1b3fa5134e236"><div class="ttname"><a href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a></div><div class="ttdeci">def oledSetPixel(oled128x64Dev_t *oled, xy_t row, xy_t col, color_t c)</div><div class="ttdoc">Set a pixel in the OLED canvas to a given color (1 = ON, 0 = OFF).</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00244">oled128x64.c:244</a></div></div>
+<div class="ttc" id="astructGFXfont_html_a867b14d604450addbeaf62ae1e4799a7"><div class="ttname"><a href="structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7">GFXfont::bitmap</a></div><div class="ttdeci">uint8_t * bitmap</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00015">gfxfont.h:15</a></div></div>
+<div class="ttc" id="astructGFXfont_html_af63d88fa053c9a634e86eab7c96db290"><div class="ttname"><a href="structGFXfont.html#af63d88fa053c9a634e86eab7c96db290">GFXfont::glyph</a></div><div class="ttdeci">GFXglyph * glyph</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00016">gfxfont.h:16</a></div></div>
+<div class="ttc" id="astructGFXglyph_html"><div class="ttname"><a href="structGFXglyph.html">GFXglyph</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00007">gfxfont.h:7</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_a02bd34fd474af250b230f52cee75a6c1"><div class="ttname"><a href="structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1">GFXglyph::width</a></div><div class="ttdeci">uint8_t width</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00009">gfxfont.h:9</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_a24cff650b78fc295dc46e1bfa9127bb7"><div class="ttname"><a href="structGFXglyph.html#a24cff650b78fc295dc46e1bfa9127bb7">GFXglyph::height</a></div><div class="ttdeci">uint8_t height</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00009">gfxfont.h:9</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_a24d52036821c10af52a742a1d7fbd9b8"><div class="ttname"><a href="structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8">GFXglyph::bitmapOffset</a></div><div class="ttdeci">uint16_t bitmapOffset</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00008">gfxfont.h:8</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_a96b2c0dbe314bf053cdc0d5c622e76a7"><div class="ttname"><a href="structGFXglyph.html#a96b2c0dbe314bf053cdc0d5c622e76a7">GFXglyph::yOffset</a></div><div class="ttdeci">int8_t yOffset</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00011">gfxfont.h:11</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_ab030bd9aeb37509ccc94ae3dcec4de98"><div class="ttname"><a href="structGFXglyph.html#ab030bd9aeb37509ccc94ae3dcec4de98">GFXglyph::xOffset</a></div><div class="ttdeci">int8_t xOffset</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00011">gfxfont.h:11</a></div></div>
+<div class="ttc" id="astructoled128x64Dev__t_html_a19fba19e939bcf653531d534bd463aa0"><div class="ttname"><a href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">oled128x64Dev_t::width</a></div><div class="ttdeci">xy_t width</div><div class="ttdoc">Display width (usually 128 pixels)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00062">oled128x64Definitions.h:62</a></div></div>
+<div class="ttc" id="astructoled128x64Dev__t_html_a7ccdb2d87b9f8c9588d5c032c652a42d"><div class="ttname"><a href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">oled128x64Dev_t::height</a></div><div class="ttdeci">xy_t height</div><div class="ttdoc">Display height (usually 64 pixels)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00059">oled128x64Definitions.h:59</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2410d5bac21b075bc4e279dbd1412fa4" name="a2410d5bac21b075bc4e279dbd1412fa4"></a>
@@ -405,6 +683,44 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success, ERR_INVALID_ARG if coordinates are invalid. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00267">267</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                   {</div>
+<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">if</span> (edgeSize &lt; 1) <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (rTopLeft &lt; 0 || rTopLeft &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a> ||</div>
+<div class="line"><span class="lineno">  274</span>        cTopLeft &lt; 0 || cTopLeft &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a> ||</div>
+<div class="line"><span class="lineno">  275</span>        rBottomRight &lt; 0 || rBottomRight &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a> ||</div>
+<div class="line"><span class="lineno">  276</span>        cBottomRight &lt; 0 || cBottomRight &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>)</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da">ERR_INVALID_ARG</a>;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">if</span> (rTopLeft &gt; rBottomRight || cTopLeft &gt; cBottomRight)</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da">ERR_INVALID_ARG</a>;</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>    <span class="keywordflow">if</span> (rBottomRight - rTopLeft &lt;= 1 || cBottomRight - cTopLeft &lt;= 1)</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>    <span class="comment">// Draw vertical edges</span></div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_define" href="helper_8h.html#a7ed813e267ef0d1f2a79cc976242e9f8">REP</a>(x, rTopLeft, rBottomRight + 1) {</div>
+<div class="line"><span class="lineno">  287</span>        <a class="code hl_function" href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a>(oled, x, cTopLeft, color);</div>
+<div class="line"><span class="lineno">  288</span>        <a class="code hl_function" href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a>(oled, x, cBottomRight, color);</div>
+<div class="line"><span class="lineno">  289</span>    }</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>    <span class="comment">// Draw horizontal edges</span></div>
+<div class="line"><span class="lineno">  292</span>    <a class="code hl_define" href="helper_8h.html#a7ed813e267ef0d1f2a79cc976242e9f8">REP</a>(y, cTopLeft, cBottomRight + 1) {</div>
+<div class="line"><span class="lineno">  293</span>        <a class="code hl_function" href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a>(oled, rTopLeft, y, color);</div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_function" href="oled128x64_8c.html#ab163f851fe2f1c40e0c1b3fa5134e236">oledSetPixel</a>(oled, rBottomRight, y, color);</div>
+<div class="line"><span class="lineno">  295</span>    }</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>    <span class="comment">// Recursive shrink</span></div>
+<div class="line"><span class="lineno">  298</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="oled128x64_8c.html#a2410d5bac21b075bc4e279dbd1412fa4">oledDrawEmptyRect</a>(oled,</div>
+<div class="line"><span class="lineno">  299</span>                             rTopLeft + 1, cTopLeft + 1,</div>
+<div class="line"><span class="lineno">  300</span>                             rBottomRight - 1, cBottomRight - 1,</div>
+<div class="line"><span class="lineno">  301</span>                             edgeSize - 1, color);</div>
+<div class="line"><span class="lineno">  302</span>}</div>
+<div class="ttc" id="ahelper_8h_html_a7ed813e267ef0d1f2a79cc976242e9f8"><div class="ttname"><a href="helper_8h.html#a7ed813e267ef0d1f2a79cc976242e9f8">REP</a></div><div class="ttdeci">#define REP(i, a, b)</div><div class="ttdoc">Loop forward using size_t (Standard for array indexing).</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00032">helper.h:32</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_a2410d5bac21b075bc4e279dbd1412fa4"><div class="ttname"><a href="oled128x64_8c.html#a2410d5bac21b075bc4e279dbd1412fa4">oledDrawEmptyRect</a></div><div class="ttdeci">def oledDrawEmptyRect(oled128x64Dev_t *oled, xy_t rTopLeft, xy_t cTopLeft, xy_t rBottomRight, xy_t cBottomRight, xy_t edgeSize, color_t color)</div><div class="ttdoc">Draw an empty (border-only) rectangle on the OLED canvas.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00267">oled128x64.c:267</a></div></div>
+<div class="ttc" id="areturn_8h_html_ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da"><div class="ttname"><a href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da">ERR_INVALID_ARG</a></div><div class="ttdeci">@ ERR_INVALID_ARG</div><div class="ttdoc">Invalid argument.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00040">return.h:40</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab1a90b56cdc1a95da2c65757ddb5890a" name="ab1a90b56cdc1a95da2c65757ddb5890a"></a>
@@ -478,6 +794,51 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success, ERR_INVALID_ARG if string is NULL or invalid. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00348">348</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>{</div>
+<div class="line"><span class="lineno">  351</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;oledDrawText(%d, %d, \&quot;%s\&quot;, %d, wrap=%d, lh=%d)&quot;</span>,</div>
+<div class="line"><span class="lineno">  352</span>                r, c, str, color, wrap, lineHeight);</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">if</span> (!oled || !str)</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da">ERR_INVALID_ARG</a>;</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> cursor_r = r;</div>
+<div class="line"><span class="lineno">  358</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> cursor_c = c;</div>
+<div class="line"><span class="lineno">  359</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1">byte_t</a> finalLineHeight = <a class="code hl_define" href="helper_8h.html#aefee783408cb232cf030dd50dce08160">__max</a>(lineHeight, <a class="code hl_define" href="fontUtils_8h.html#a2ec7c0fa70f8b48d9abc699c38c6af6e">defaultTextH</a>(<a class="code hl_variable" href="fontUtils_8c.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a>));</div>
+<div class="line"><span class="lineno">  360</span> </div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">while</span> (*str) {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordtype">char</span> ch = *str++;</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;\n&#39;</span>) {</div>
+<div class="line"><span class="lineno">  365</span>            cursor_c = 0;</div>
+<div class="line"><span class="lineno">  366</span>            cursor_r += finalLineHeight;</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  368</span>        }</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (ch &lt; 0x20 || ch &gt; 0x7E)</div>
+<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>        <a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> glyph = <a class="code hl_variable" href="fontUtils_8c.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a>.<a class="code hl_variable" href="structGFXfont.html#af63d88fa053c9a634e86eab7c96db290">glyph</a>[ch - 0x20];</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>        <span class="comment">// Wrap if needed</span></div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span> (wrap &amp;&amp; (cursor_c + glyph.<a class="code hl_variable" href="structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2">xAdvance</a> &gt; oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>)) {</div>
+<div class="line"><span class="lineno">  377</span>            cursor_c = 0;</div>
+<div class="line"><span class="lineno">  378</span>            cursor_r += finalLineHeight;</div>
+<div class="line"><span class="lineno">  379</span>        }</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>        <a class="code hl_function" href="oled128x64_8c.html#a5100967aefeb41d31d929cf635f2bb70">oledDrawChar</a>(oled, cursor_r, cursor_c, ch, color);</div>
+<div class="line"><span class="lineno">  382</span>        cursor_c += glyph.<a class="code hl_variable" href="structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2">xAdvance</a>;</div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>    }</div>
+<div class="line"><span class="lineno">  385</span> </div>
+<div class="line"><span class="lineno">  386</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledDrawText() : OKE&quot;</span>);</div>
+<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  388</span>}</div>
+<div class="ttc" id="afontUtils_8h_html_a2ec7c0fa70f8b48d9abc699c38c6af6e"><div class="ttname"><a href="fontUtils_8h.html#a2ec7c0fa70f8b48d9abc699c38c6af6e">defaultTextH</a></div><div class="ttdeci">#define defaultTextH(__GFXfont)</div><div class="ttdef"><b>Definition</b> <a href="fontUtils_8h_source.html#l00008">fontUtils.h:8</a></div></div>
+<div class="ttc" id="ahelper_8h_html_aefee783408cb232cf030dd50dce08160"><div class="ttname"><a href="helper_8h.html#aefee783408cb232cf030dd50dce08160">__max</a></div><div class="ttdeci">#define __max(a, b)</div><div class="ttdoc">Return maximum of a and b.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00044">helper.h:44</a></div></div>
+<div class="ttc" id="aoled128x64_8c_html_a5100967aefeb41d31d929cf635f2bb70"><div class="ttname"><a href="oled128x64_8c.html#a5100967aefeb41d31d929cf635f2bb70">oledDrawChar</a></div><div class="ttdeci">def oledDrawChar(oled128x64Dev_t *oled, xy_t r, xy_t y, char c, color_t cl)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64_8c_source.html#l00304">oled128x64.c:304</a></div></div>
+<div class="ttc" id="astructGFXglyph_html_a9b191040252aa9b5362087d65366bbf2"><div class="ttname"><a href="structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2">GFXglyph::xAdvance</a></div><div class="ttdeci">uint8_t xAdvance</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00010">gfxfont.h:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae2f144fde5c113fedc049795ce450f3a" name="ae2f144fde5c113fedc049795ce450f3a"></a>
@@ -516,6 +877,15 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00237">237</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                         {</div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_define" href="helper_8h.html#a7ed813e267ef0d1f2a79cc976242e9f8">REP</a>(i, 0, (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a>) * (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>) / 8){</div>
+<div class="line"><span class="lineno">  239</span>        (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a309064561dafd30814583f3674636c62">canvas</a>)[i] = ((color)?(0xFF):(0x0));</div>
+<div class="line"><span class="lineno">  240</span>    }</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  242</span>}</div>
+<div class="ttc" id="astructoled128x64Dev__t_html_a309064561dafd30814583f3674636c62"><div class="ttname"><a href="structoled128x64Dev__t.html#a309064561dafd30814583f3674636c62">oled128x64Dev_t::canvas</a></div><div class="ttdeci">cell_t * canvas</div><div class="ttdoc">Pointer to framebuffer or canvas buffer (array of display cells)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Definitions_8h_source.html#l00056">oled128x64Definitions.h:56</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a21eeb3d57d6ace23b9ebc4ec1feb9eb2" name="a21eeb3d57d6ace23b9ebc4ec1feb9eb2"></a>
@@ -543,6 +913,66 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00186">186</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>                                     {</div>
+<div class="line"><span class="lineno">  187</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;oledFlush(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">  188</span>    uint8_t cmds[] = {</div>
+<div class="line"><span class="lineno">  189</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a227f3a6e509369f291fae65eb8c97bf6">SSD1306_DEACTIVATE_SCROLL</a>,</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">SSD1306_SET_MEMORY_MODE</a>, 0x00,</div>
+<div class="line"><span class="lineno">  191</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a5a71dd3dbda228c21abbc0e5009faf56">SSD1306_SET_COLUMN_ADDR</a>, 0x00, 0x7F,</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#ac3688afcf61a4ffccb0ee6ef165dd7a6">SSD1306_SET_PAGE_ADDR</a>, 0x00, 0x07,</div>
+<div class="line"><span class="lineno">  193</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">SSD1306_SET_START_LINE</a>(0),</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a43092651202a57af242fcb2fdd660c27">SSD1306_SET_SEG_REMAP_0</a>,</div>
+<div class="line"><span class="lineno">  195</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a0a3a736eb88fb3e1e5bd581979eec351">SSD1306_SET_COM_SCAN_INC</a>,</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">SSD1306_SET_DISPLAY_OFFSET</a>, 0x00,</div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">// SSD1306_INVERT_DISPLAY,</span></div>
+<div class="line"><span class="lineno">  198</span>        <span class="comment">// SSD1306_ENTIRE_DISPLAY_RESUME,</span></div>
+<div class="line"><span class="lineno">  199</span>        <span class="comment">// SSD1306_DISPLAY_ON</span></div>
+<div class="line"><span class="lineno">  200</span>    };</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_typedef" href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a> ret;</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    ret = <a class="code hl_function" href="i2c_8c.html#a8724c28a848e5283cd7ed4595aeb695f">i2cSetTransmitBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, cmds, <span class="keyword">sizeof</span>(cmds));</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    ret = <a class="code hl_function" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c">i2cSendBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a">I2C_RESET_TX_INDEX</a>));</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  209</span>    </div>
+<div class="line"><span class="lineno">  210</span>    ret = <a class="code hl_function" href="i2c_8c.html#a8724c28a848e5283cd7ed4595aeb695f">i2cSetTransmitBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a309064561dafd30814583f3674636c62">canvas</a>, ((oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a>) * (oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>) / 8));</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  212</span>    </div>
+<div class="line"><span class="lineno">  213</span>    ret = <a class="code hl_function" href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365">i2cSendByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a002e3b75ec7ef9b0191f4dfce6904d2a">SSD1306_DATA</a>, <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12baa4696dd8a01e954bb5d2b836c0d84c46">I2C_DIS_STOP_CONDI</a>));</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    ret = <a class="code hl_function" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c">i2cSendBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba839353db07f38a39e9b52127b4ee1859">I2C_SKIP_ADDR_FRAME</a>) |  <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba1dbb09fcb068117b0cb4ece2e584e412">I2C_DIS_START_CONDI</a>) | <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a">I2C_RESET_TX_INDEX</a>));</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  218</span>    </div>
+<div class="line"><span class="lineno">  219</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledFlush() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    oledFlush_ReturnERR:</div>
+<div class="line"><span class="lineno">  223</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledFlush() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">  225</span>}</div>
+<div class="ttc" id="ahelper_8h_html_afd240252a70fc121b524d293b33811f2"><div class="ttname"><a href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a></div><div class="ttdeci">#define __mask32(i)</div><div class="ttdoc">Generate 32-bit mask with bit i set.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00057">helper.h:57</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a98a2f23874c34914307e4bcace74c12ba1dbb09fcb068117b0cb4ece2e584e412"><div class="ttname"><a href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba1dbb09fcb068117b0cb4ece2e584e412">I2C_DIS_START_CONDI</a></div><div class="ttdeci">@ I2C_DIS_START_CONDI</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00075">i2cDefinition.h:75</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a"><div class="ttname"><a href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a">I2C_RESET_TX_INDEX</a></div><div class="ttdeci">@ I2C_RESET_TX_INDEX</div><div class="ttdoc">Set 1 to disable exit critical section.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00079">i2cDefinition.h:79</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a98a2f23874c34914307e4bcace74c12ba839353db07f38a39e9b52127b4ee1859"><div class="ttname"><a href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba839353db07f38a39e9b52127b4ee1859">I2C_SKIP_ADDR_FRAME</a></div><div class="ttdeci">@ I2C_SKIP_ADDR_FRAME</div><div class="ttdoc">Set 1 to reset receive buffer index before transmit.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00081">i2cDefinition.h:81</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a98a2f23874c34914307e4bcace74c12baa4696dd8a01e954bb5d2b836c0d84c46"><div class="ttname"><a href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12baa4696dd8a01e954bb5d2b836c0d84c46">I2C_DIS_STOP_CONDI</a></div><div class="ttdeci">@ I2C_DIS_STOP_CONDI</div><div class="ttdoc">Set 1 to disable start condition.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00076">i2cDefinition.h:76</a></div></div>
+<div class="ttc" id="ai2c_8c_html_a2e77648ca98f7e5c29efadf2ef49d365"><div class="ttname"><a href="i2c_8c.html#a2e77648ca98f7e5c29efadf2ef49d365">i2cSendByte</a></div><div class="ttdeci">def i2cSendByte(i2cDev_t *dev, uint8_t addr7, uint8_t rw, uint8_t byte, flag_t extConf)</div><div class="ttdoc">Send a specified byte.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00220">i2c.c:220</a></div></div>
+<div class="ttc" id="ai2c_8c_html_a4e0080fa7d7ffdc4b322f127b09b004c"><div class="ttname"><a href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c">i2cSendBuffer</a></div><div class="ttdeci">def i2cSendBuffer(i2cDev_t *dev, uint8_t addr7, uint8_t rw, flag_t extConf)</div><div class="ttdoc">Send all bytes in the transmit buffer.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00294">i2c.c:294</a></div></div>
+<div class="ttc" id="ai2c_8c_html_a8724c28a848e5283cd7ed4595aeb695f"><div class="ttname"><a href="i2c_8c.html#a8724c28a848e5283cd7ed4595aeb695f">i2cSetTransmitBuffer</a></div><div class="ttdeci">def i2cSetTransmitBuffer(i2cDev_t *dev, void *txPtr, size_t size)</div><div class="ttdoc">Set transmit buffer for I2C.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00145">i2c.c:145</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a002e3b75ec7ef9b0191f4dfce6904d2a"><div class="ttname"><a href="oled128x64Commands_8h.html#a002e3b75ec7ef9b0191f4dfce6904d2a">SSD1306_DATA</a></div><div class="ttdeci">#define SSD1306_DATA</div><div class="ttdoc">Continuation bit=0, D/C=1 (Data)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00150">oled128x64Commands.h:150</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a00d1b0194d44f6022d4ddc92d72d75e8"><div class="ttname"><a href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">SSD1306_SET_DISPLAY_OFFSET</a></div><div class="ttdeci">#define SSD1306_SET_DISPLAY_OFFSET</div><div class="ttdoc">Set display offset (1 byte: vertical shift)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00108">oled128x64Commands.h:108</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a0a3a736eb88fb3e1e5bd581979eec351"><div class="ttname"><a href="oled128x64Commands_8h.html#a0a3a736eb88fb3e1e5bd581979eec351">SSD1306_SET_COM_SCAN_INC</a></div><div class="ttdeci">#define SSD1306_SET_COM_SCAN_INC</div><div class="ttdoc">Scan from COM0 to COM[N-1].</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00102">oled128x64Commands.h:102</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a227f3a6e509369f291fae65eb8c97bf6"><div class="ttname"><a href="oled128x64Commands_8h.html#a227f3a6e509369f291fae65eb8c97bf6">SSD1306_DEACTIVATE_SCROLL</a></div><div class="ttdeci">#define SSD1306_DEACTIVATE_SCROLL</div><div class="ttdoc">Stop scrolling.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00046">oled128x64Commands.h:46</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a2a5d27a5a154ab8e13ae2ad29c16a360"><div class="ttname"><a href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">SSD1306_SET_START_LINE</a></div><div class="ttdeci">#define SSD1306_SET_START_LINE(line)</div><div class="ttdoc">Set display start line (0–63)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00090">oled128x64Commands.h:90</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a43092651202a57af242fcb2fdd660c27"><div class="ttname"><a href="oled128x64Commands_8h.html#a43092651202a57af242fcb2fdd660c27">SSD1306_SET_SEG_REMAP_0</a></div><div class="ttdeci">#define SSD1306_SET_SEG_REMAP_0</div><div class="ttdoc">Column address 0 mapped to SEG0.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00093">oled128x64Commands.h:93</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a568c78ddc8186fcf9c35c26d5486e1d9"><div class="ttname"><a href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">SSD1306_SET_MEMORY_MODE</a></div><div class="ttdeci">#define SSD1306_SET_MEMORY_MODE</div><div class="ttdoc">Set memory addressing mode (1 byte: 0x00=Horizontal, 0x01=Vertical, 0x02=Page)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00074">oled128x64Commands.h:74</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a5a71dd3dbda228c21abbc0e5009faf56"><div class="ttname"><a href="oled128x64Commands_8h.html#a5a71dd3dbda228c21abbc0e5009faf56">SSD1306_SET_COLUMN_ADDR</a></div><div class="ttdeci">#define SSD1306_SET_COLUMN_ADDR</div><div class="ttdoc">Set column address (2 bytes: start, end)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00077">oled128x64Commands.h:77</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_ac3688afcf61a4ffccb0ee6ef165dd7a6"><div class="ttname"><a href="oled128x64Commands_8h.html#ac3688afcf61a4ffccb0ee6ef165dd7a6">SSD1306_SET_PAGE_ADDR</a></div><div class="ttdeci">#define SSD1306_SET_PAGE_ADDR</div><div class="ttdoc">Set page address (2 bytes: start, end)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00080">oled128x64Commands.h:80</a></div></div>
+<div class="ttc" id="areturn_8h_html_a9a544c1d669c13779fb62f3ec21ad4c7"><div class="ttname"><a href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a></div><div class="ttdeci">int32_t def</div><div class="ttdoc">Default return type.</div><div class="ttdef"><b>Definition</b> <a href="return_8h_source.html#l00011">return.h:11</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a99a151d093aadbda4cb7dd31f7e94e2a" name="a99a151d093aadbda4cb7dd31f7e94e2a"></a>
@@ -561,6 +991,15 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00232">232</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                                   {</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>, <a class="code hl_define" href="oled128x64Commands_8h.html#a55e34e510760766cfd7d73cde58360db">SSD1306_DISPLAY_OFF</a>, 0);</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  235</span>}</div>
+<div class="ttc" id="ai2c_8c_html_aced096c5f1411415047c7abcf7d1c26e"><div class="ttname"><a href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a></div><div class="ttdeci">def i2cSendDoubleByte(i2cDev_t *dev, uint8_t addr7, uint8_t rw, uint8_t byteHigh, uint8_t byteLow, flag_t extConf)</div><div class="ttdoc">Send a specified double byte.</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00252">i2c.c:252</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a08d90ad11e229650b69ed637628ba3dc"><div class="ttname"><a href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a></div><div class="ttdeci">#define SSD1306_COMMAND</div><div class="ttdoc">Continuation bit=0, D/C=0 (Command)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00147">oled128x64Commands.h:147</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a55e34e510760766cfd7d73cde58360db"><div class="ttname"><a href="oled128x64Commands_8h.html#a55e34e510760766cfd7d73cde58360db">SSD1306_DISPLAY_OFF</a></div><div class="ttdeci">#define SSD1306_DISPLAY_OFF</div><div class="ttdoc">Set display OFF (sleep)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00033">oled128x64Commands.h:33</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a40ebf8c5b45960a8e142eea3928f9ae8" name="a40ebf8c5b45960a8e142eea3928f9ae8"></a>
@@ -579,6 +1018,13 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00227">227</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                  {</div>
+<div class="line"><span class="lineno">  228</span>    <a class="code hl_function" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>, <a class="code hl_define" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a>, 0);</div>
+<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  230</span>}</div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a0f0b91552d62eb58551521d137710aea"><div class="ttname"><a href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a></div><div class="ttdeci">#define SSD1306_DISPLAY_ON</div><div class="ttdoc">Set display ON.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00036">oled128x64Commands.h:36</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a75509330529a3c56cd7edf45f8ed9183" name="a75509330529a3c56cd7edf45f8ed9183"></a>
@@ -606,6 +1052,44 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00114">114</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                         {</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;oledResetView(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>    <span class="keyword">const</span> uint8_t cmds[] = {</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>,</div>
+<div class="line"><span class="lineno">  119</span>        <span class="comment">// SSD1306_DISPLAY_OFF,</span></div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a227f3a6e509369f291fae65eb8c97bf6">SSD1306_DEACTIVATE_SCROLL</a>,</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">SSD1306_SET_MEMORY_MODE</a>, 0x00,</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a5a71dd3dbda228c21abbc0e5009faf56">SSD1306_SET_COLUMN_ADDR</a>, 0x00, 0x7F,</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#ac3688afcf61a4ffccb0ee6ef165dd7a6">SSD1306_SET_PAGE_ADDR</a>, 0x00, 0x07,</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">SSD1306_SET_START_LINE</a>(0),</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a43092651202a57af242fcb2fdd660c27">SSD1306_SET_SEG_REMAP_0</a>,</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a0a3a736eb88fb3e1e5bd581979eec351">SSD1306_SET_COM_SCAN_INC</a>,</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">SSD1306_SET_DISPLAY_OFFSET</a>, 0x00,</div>
+<div class="line"><span class="lineno">  128</span>        <span class="comment">// SSD1306_NORMAL_DISPLAY,</span></div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#aadee55a5f9a731b97ed0e4cae658f865">SSD1306_ENTIRE_DISPLAY_RESUME</a>,</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a></div>
+<div class="line"><span class="lineno">  131</span>    };</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_typedef" href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a> ret;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    ret = <a class="code hl_function" href="i2c_8c.html#a8724c28a848e5283cd7ed4595aeb695f">i2cSetTransmitBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, cmds, <span class="keyword">sizeof</span>(cmds));</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    ret = <a class="code hl_function" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c">i2cSendBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">__mask32</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a">I2C_RESET_TX_INDEX</a>));</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledFlush_ReturnERR;</div>
+<div class="line"><span class="lineno">  140</span>    </div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledResetView() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    oledFlush_ReturnERR:</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledResetView() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="aoled128x64Commands_8h_html_aadee55a5f9a731b97ed0e4cae658f865"><div class="ttname"><a href="oled128x64Commands_8h.html#aadee55a5f9a731b97ed0e4cae658f865">SSD1306_ENTIRE_DISPLAY_RESUME</a></div><div class="ttdeci">#define SSD1306_ENTIRE_DISPLAY_RESUME</div><div class="ttdoc">Resume to RAM content display.</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00021">oled128x64Commands.h:21</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab163f851fe2f1c40e0c1b3fa5134e236" name="ab163f851fe2f1c40e0c1b3fa5134e236"></a>
@@ -660,6 +1144,33 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 <p>Page index (0–7)</p>
 <p>Bit position in the byte (0–7)</p>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00244">244</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>                                                                       {</div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_define" href="oled128x64Log_8h.html#a2543e3d1c72d9e9935558d6f75726f8e">__oledLog1</a>(<span class="stringliteral">&quot;** oledSetPixel(%p, %d, %d)&quot;</span>, oled, row, col);</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span>    <span class="comment">// Validate coordinates</span></div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">if</span> (row &lt; 0 || row &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d">height</a> || col &lt; 0 || col &gt;= oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a>)</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a70aa759d292a0e4be7123d01959357da">ERR_INVALID_ARG</a>;</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>    <span class="comment">// Each page = 8 rows (0–7)</span></div>
+<div class="line"><span class="lineno">  252</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> pageIndex = row &gt;&gt; 3;          </div>
+<div class="line"><span class="lineno">  253</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> bitIndex  = row &amp; 0x7;         </div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>    <span class="comment">// Compute byte index in framebuffer</span></div>
+<div class="line"><span class="lineno">  256</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596">xy_t</a> canvasIndex = pageIndex * oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0">width</a> + col;</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>    <span class="comment">// Write bit in framebuffer</span></div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">if</span> (c)</div>
+<div class="line"><span class="lineno">  260</span>        oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a309064561dafd30814583f3674636c62">canvas</a>[canvasIndex] |= <a class="code hl_define" href="helper_8h.html#a12161a5048dd0bd679b0270a6f1ea3bd">__mask8</a>(bitIndex);</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  262</span>        oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#a309064561dafd30814583f3674636c62">canvas</a>[canvasIndex] &amp;= <a class="code hl_define" href="helper_8h.html#ac205bf55ced7fadc2ef5f029ef62d975">__inv_mask8</a>(bitIndex);</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  265</span>}</div>
+<div class="ttc" id="ahelper_8h_html_a12161a5048dd0bd679b0270a6f1ea3bd"><div class="ttname"><a href="helper_8h.html#a12161a5048dd0bd679b0270a6f1ea3bd">__mask8</a></div><div class="ttdeci">#define __mask8(i)</div><div class="ttdoc">Generate 8-bit mask with bit i set.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00055">helper.h:55</a></div></div>
+<div class="ttc" id="ahelper_8h_html_ac205bf55ced7fadc2ef5f029ef62d975"><div class="ttname"><a href="helper_8h.html#ac205bf55ced7fadc2ef5f029ef62d975">__inv_mask8</a></div><div class="ttdeci">#define __inv_mask8(i)</div><div class="ttdoc">Generate 8-bit mask with bit i cleared.</div><div class="ttdef"><b>Definition</b> <a href="helper_8h_source.html#l00060">helper.h:60</a></div></div>
+<div class="ttc" id="aoled128x64Log_8h_html_a2543e3d1c72d9e9935558d6f75726f8e"><div class="ttname"><a href="oled128x64Log_8h.html#a2543e3d1c72d9e9935558d6f75726f8e">__oledLog1</a></div><div class="ttdeci">#define __oledLog1(...)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Log_8h_source.html#l00037">oled128x64Log.h:37</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2d4966abf9593520dc289ced025c47cb" name="a2d4966abf9593520dc289ced025c47cb"></a>
@@ -687,6 +1198,30 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00163">163</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                                              {</div>
+<div class="line"><span class="lineno">  164</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;oledShowRAMContent(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled)) {</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledTurnOnAllPixels() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>));</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="line"><span class="lineno">  169</span>    </div>
+<div class="line"><span class="lineno">  170</span>    <a class="code hl_typedef" href="return_8h.html#a9a544c1d669c13779fb62f3ec21ad4c7">def</a> ret;</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>    ret = <a class="code hl_function" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>, <a class="code hl_define" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a>, 0);</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledShowRAMContent_ReturnERR;</div>
+<div class="line"><span class="lineno">  174</span>    </div>
+<div class="line"><span class="lineno">  175</span>    ret = <a class="code hl_function" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>, <a class="code hl_define" href="oled128x64Commands_8h.html#aadee55a5f9a731b97ed0e4cae658f865">SSD1306_ENTIRE_DISPLAY_RESUME</a>, 0);</div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">if</span>(ret != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> oledShowRAMContent_ReturnERR;</div>
+<div class="line"><span class="lineno">  177</span>    </div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledTurnOnAllPixels() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>    oledShowRAMContent_ReturnERR:</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledShowRAMContent() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a52636dec26bbd2c14e41b14e2ff6d89f" name="a52636dec26bbd2c14e41b14e2ff6d89f"></a>
@@ -714,6 +1249,21 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00150">150</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                                               {</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;oledTurnOnAllPixels(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled)) {</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_define" href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a>(<span class="stringliteral">&quot;oledTurnOnAllPixels() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>));</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_function" href="i2c_8c.html#aced096c5f1411415047c7abcf7d1c26e">i2cSendDoubleByte</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, 0, <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>, <a class="code hl_define" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a>, 0);</div>
+<div class="line"><span class="lineno">  158</span>    </div>
+<div class="line"><span class="lineno">  159</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;oledTurnOnAllPixels() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+<div class="ttc" id="aespLogWrapper_8h_html_aa206926813ac6f690a60f957db10a6d4"><div class="ttname"><a href="espLogWrapper_8h.html#aa206926813ac6f690a60f957db10a6d4">__exit</a></div><div class="ttdeci">#define __exit(fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="espLogWrapper_8h_source.html#l00051">espLogWrapper.h:51</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b1bf354181db197ae9e4518a9de02f2" name="a6b1bf354181db197ae9e4518a9de02f2"></a>
@@ -741,6 +1291,66 @@ conf[19]: 0 - Call <a class="el" href="oled128x64_8h.html#a21eeb3d57d6ace23b9ebc
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OKE on success, or error code if initialization fails. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="oled128x64_8c_source.html#l00069">69</a> of file <a class="el" href="oled128x64_8c_source.html">oled128x64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                                             {</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(<span class="stringliteral">&quot;startupOLEDDevice(%p)&quot;</span>, oled);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="helper_8h.html#a485ab3f55b4285ed3fb801b3712168dc">__is_null</a>(oled)) <span class="keywordflow">goto</span> startupOLED_ReturnERR_NULL;</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="i2c_8c.html#af6e42088cdcbe7696898b9dc869c20c2">startupI2CDevice</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>) != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>) <span class="keywordflow">goto</span> startupOLED_ReturnERR;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_typedef" href="oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1">byte_t</a> init_commands[] = {</div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">SSD1306_COMMAND</a>,</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a55e34e510760766cfd7d73cde58360db">SSD1306_DISPLAY_OFF</a>,</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a0dde5f56c7e3318fdd06ad6d542bc08d">SSD1306_SET_DISPLAY_CLOCK_DIV</a>,      0x80,</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a4e68ffa5f2f19f9b047e1cc48c1b7941">SSD1306_SET_MULTIPLEX_RATIO</a>,        0x3F,</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">SSD1306_SET_DISPLAY_OFFSET</a>,         0x00,</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">SSD1306_SET_START_LINE</a>(0),</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a614e028e5f6024c70a6e98c85fecd818">SSD1306_CHARGE_PUMP</a>,                0x14,</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">SSD1306_SET_MEMORY_MODE</a>,            0x00,</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a2437417dce03c77ecd5104b741c823b2">SSD1306_SET_COM_PINS</a>,               0x12,</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#afe8311a1cf58658999df626f089df45a">SSD1306_SET_CONTRAST</a>,               0xCF,</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a9e285eddc84b360c27b56505bed3742b">SSD1306_SET_PRECHARGE</a>,              0xF1,</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a49950e7864566c5163d06fc75c17ab61">SSD1306_SET_VCOM_DETECT</a>,            0x40,</div>
+<div class="line"><span class="lineno">   89</span>        <span class="comment">// SSD1306_INVERT_DISPLAY,</span></div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a64d491cbcdb3dc0a48f6bae261fa39b6">SSD1306_NORMAL_DISPLAY</a>,</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">SSD1306_DISPLAY_ON</a>,</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_define" href="oled128x64Commands_8h.html#a52166d02e20b67be39bf9066d0e82668">SSD1306_ENTIRE_DISPLAY_ON</a></div>
+<div class="line"><span class="lineno">   93</span>    };</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_function" href="i2c_8c.html#a8724c28a848e5283cd7ed4595aeb695f">i2cSetTransmitBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, init_commands, <span class="keyword">sizeof</span>(init_commands));</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_define" href="oled128x64Log_8h.html#acd469369950feb5978bbbf42f53850d7">__oledLog</a>(<span class="stringliteral">&quot;Send start-up sequence ...&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span>( <a class="code hl_function" href="i2c_8c.html#a4e0080fa7d7ffdc4b322f127b09b004c">i2cSendBuffer</a>(oled-&gt;<a class="code hl_variable" href="structoled128x64Dev__t.html#af12e872fefee9c7af73879665f7c05ac">i2cDev</a>, <a class="code hl_define" href="oled128x64Definitions_8h.html#a7dfa2c4cfbfcba36416046052e7943e8">OLED_ADDR</a>, <a class="code hl_enumvalue" href="i2cDefinition_8h.html#a2bf0ae6e86945ccdbe0cbd215ed1e620afd55183d005b84269d610646ac6b4bdf">I2C_WRITE_MODE</a>, </div>
+<div class="line"><span class="lineno">   99</span>                <a class="code hl_define" href="flag_8h.html#afba31f13b35399331d8d3b9df6f2c88d">__flagMask</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12baed21bc1feca7098281c398847c60faf1">I2C_RESET_RX_INDEX</a>) | <a class="code hl_define" href="flag_8h.html#afba31f13b35399331d8d3b9df6f2c88d">__flagMask</a>(<a class="code hl_enumvalue" href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12ba35c88706bdae7b4a35a5bc4d48b17c5a">I2C_RESET_TX_INDEX</a>)) != <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>)</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">goto</span> startupOLED_ReturnERR;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;startupOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>));</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452">OKE</a>;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    startupOLED_ReturnERR:</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;startupOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>));</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78a0f886785b600b91048fcdc434c6b4a8e">ERR</a>;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    startupOLED_ReturnERR_NULL:</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_define" href="oled128x64Log_8h.html#ad51707c3f8438b68c70679af70485315">__oledExit</a>(<span class="stringliteral">&quot;startupOLEDDevice() : %s&quot;</span>, <a class="code hl_define" href="helper_8h.html#a18d295a837ac71add5578860b55e5502">STR</a>(<a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>));</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="return_8h.html#ac87d656a4f798fa79cff22420ef38e78aa5adfa848230154f452ac275e369df0a">ERR_NULL</a>;</div>
+<div class="line"><span class="lineno">  112</span>}</div>
+<div class="ttc" id="aflag_8h_html_afba31f13b35399331d8d3b9df6f2c88d"><div class="ttname"><a href="flag_8h.html#afba31f13b35399331d8d3b9df6f2c88d">__flagMask</a></div><div class="ttdeci">#define __flagMask(i)</div><div class="ttdef"><b>Definition</b> <a href="flag_8h_source.html#l00020">flag.h:20</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a2bf0ae6e86945ccdbe0cbd215ed1e620afd55183d005b84269d610646ac6b4bdf"><div class="ttname"><a href="i2cDefinition_8h.html#a2bf0ae6e86945ccdbe0cbd215ed1e620afd55183d005b84269d610646ac6b4bdf">I2C_WRITE_MODE</a></div><div class="ttdeci">@ I2C_WRITE_MODE</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00063">i2cDefinition.h:63</a></div></div>
+<div class="ttc" id="ai2cDefinition_8h_html_a98a2f23874c34914307e4bcace74c12baed21bc1feca7098281c398847c60faf1"><div class="ttname"><a href="i2cDefinition_8h.html#a98a2f23874c34914307e4bcace74c12baed21bc1feca7098281c398847c60faf1">I2C_RESET_RX_INDEX</a></div><div class="ttdeci">@ I2C_RESET_RX_INDEX</div><div class="ttdoc">Set 1 to reset transmit buffer index before transmit.</div><div class="ttdef"><b>Definition</b> <a href="i2cDefinition_8h_source.html#l00080">i2cDefinition.h:80</a></div></div>
+<div class="ttc" id="ai2c_8c_html_af6e42088cdcbe7696898b9dc869c20c2"><div class="ttname"><a href="i2c_8c.html#af6e42088cdcbe7696898b9dc869c20c2">startupI2CDevice</a></div><div class="ttdeci">def startupI2CDevice(i2cDev_t *dev)</div><div class="ttdoc">Startup the I2C device (initialize GPIO and configs)</div><div class="ttdef"><b>Definition</b> <a href="i2c_8c_source.html#l00071">i2c.c:71</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a0dde5f56c7e3318fdd06ad6d542bc08d"><div class="ttname"><a href="oled128x64Commands_8h.html#a0dde5f56c7e3318fdd06ad6d542bc08d">SSD1306_SET_DISPLAY_CLOCK_DIV</a></div><div class="ttdeci">#define SSD1306_SET_DISPLAY_CLOCK_DIV</div><div class="ttdoc">Set display clock divide ratio/oscillator frequency (1 byte)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00121">oled128x64Commands.h:121</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a2437417dce03c77ecd5104b741c823b2"><div class="ttname"><a href="oled128x64Commands_8h.html#a2437417dce03c77ecd5104b741c823b2">SSD1306_SET_COM_PINS</a></div><div class="ttdeci">#define SSD1306_SET_COM_PINS</div><div class="ttdoc">Set COM pins hardware configuration (1 byte)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00111">oled128x64Commands.h:111</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a49950e7864566c5163d06fc75c17ab61"><div class="ttname"><a href="oled128x64Commands_8h.html#a49950e7864566c5163d06fc75c17ab61">SSD1306_SET_VCOM_DETECT</a></div><div class="ttdeci">#define SSD1306_SET_VCOM_DETECT</div><div class="ttdoc">Set VCOMH deselect level (1 byte)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00127">oled128x64Commands.h:127</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a4e68ffa5f2f19f9b047e1cc48c1b7941"><div class="ttname"><a href="oled128x64Commands_8h.html#a4e68ffa5f2f19f9b047e1cc48c1b7941">SSD1306_SET_MULTIPLEX_RATIO</a></div><div class="ttdeci">#define SSD1306_SET_MULTIPLEX_RATIO</div><div class="ttdoc">Set multiplex ratio (1 byte: 0x0F–0x3F)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00099">oled128x64Commands.h:99</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a52166d02e20b67be39bf9066d0e82668"><div class="ttname"><a href="oled128x64Commands_8h.html#a52166d02e20b67be39bf9066d0e82668">SSD1306_ENTIRE_DISPLAY_ON</a></div><div class="ttdeci">#define SSD1306_ENTIRE_DISPLAY_ON</div><div class="ttdoc">Entire display ON (ignore RAM, all pixels ON)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00024">oled128x64Commands.h:24</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a614e028e5f6024c70a6e98c85fecd818"><div class="ttname"><a href="oled128x64Commands_8h.html#a614e028e5f6024c70a6e98c85fecd818">SSD1306_CHARGE_PUMP</a></div><div class="ttdeci">#define SSD1306_CHARGE_PUMP</div><div class="ttdoc">Enable/disable charge pump (1 byte: 0x14=enable, 0x10=disable)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00137">oled128x64Commands.h:137</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a64d491cbcdb3dc0a48f6bae261fa39b6"><div class="ttname"><a href="oled128x64Commands_8h.html#a64d491cbcdb3dc0a48f6bae261fa39b6">SSD1306_NORMAL_DISPLAY</a></div><div class="ttdeci">#define SSD1306_NORMAL_DISPLAY</div><div class="ttdoc">Set normal display (0=OFF, 1=ON)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00027">oled128x64Commands.h:27</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_a9e285eddc84b360c27b56505bed3742b"><div class="ttname"><a href="oled128x64Commands_8h.html#a9e285eddc84b360c27b56505bed3742b">SSD1306_SET_PRECHARGE</a></div><div class="ttdeci">#define SSD1306_SET_PRECHARGE</div><div class="ttdoc">Set pre-charge period (1 byte)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00124">oled128x64Commands.h:124</a></div></div>
+<div class="ttc" id="aoled128x64Commands_8h_html_afe8311a1cf58658999df626f089df45a"><div class="ttname"><a href="oled128x64Commands_8h.html#afe8311a1cf58658999df626f089df45a">SSD1306_SET_CONTRAST</a></div><div class="ttdeci">#define SSD1306_SET_CONTRAST</div><div class="ttdoc">Set contrast control (followed by 1 byte: 0x00–0xFF)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Commands_8h_source.html#l00018">oled128x64Commands.h:18</a></div></div>
+<div class="ttc" id="aoled128x64Log_8h_html_acd469369950feb5978bbbf42f53850d7"><div class="ttname"><a href="oled128x64Log_8h.html#acd469369950feb5978bbbf42f53850d7">__oledLog</a></div><div class="ttdeci">#define __oledLog(...)</div><div class="ttdef"><b>Definition</b> <a href="oled128x64Log_8h_source.html#l00032">oled128x64Log.h:32</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -16,9 +16,8 @@ var searchData=
   ['revt_13',['REVT',['../helper_8h.html#a5fadc0776db78f917126cccce8e24c71',1,'helper.h']]],
   ['rs_14',['rs',['../structlcd32ControlPin__t.html#a5636d00a236e7fde963b455c4a5bc52f',1,'lcd32ControlPin_t']]],
   ['rst_15',['rst',['../structlcd32ControlPin__t.html#a5e77b7c04c89eceada4199fd72594f0c',1,'lcd32ControlPin_t']]],
-  ['rw_16',['rw',['../i2cHelper_8h.html#adbb7c937c7ad2ad1917829ef254b065f',1,'i2cHelper.h']]],
-  ['rxindbit_17',['rxIndBit',['../structi2cDev__t.html#a9cb231962f4226ebde2a960e77ae94f2',1,'i2cDev_t']]],
-  ['rxindbyte_18',['rxIndByte',['../structi2cDev__t.html#a29b4bcf3b3a052a073ceb1b42118107f',1,'i2cDev_t']]],
-  ['rxptr_19',['rxPtr',['../structi2cDev__t.html#a7c3d811bfabeafb6654c39eee9fef11a',1,'i2cDev_t']]],
-  ['rxsize_20',['rxSize',['../structi2cDev__t.html#a0949de096e3d5eb789422fd603663efc',1,'i2cDev_t']]]
+  ['rxindbit_16',['rxIndBit',['../structi2cDev__t.html#a9cb231962f4226ebde2a960e77ae94f2',1,'i2cDev_t']]],
+  ['rxindbyte_17',['rxIndByte',['../structi2cDev__t.html#a29b4bcf3b3a052a073ceb1b42118107f',1,'i2cDev_t']]],
+  ['rxptr_18',['rxPtr',['../structi2cDev__t.html#a7c3d811bfabeafb6654c39eee9fef11a',1,'i2cDev_t']]],
+  ['rxsize_19',['rxSize',['../structi2cDev__t.html#a0949de096e3d5eb789422fd603663efc',1,'i2cDev_t']]]
 ];

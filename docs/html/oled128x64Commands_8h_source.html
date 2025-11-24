@@ -98,62 +98,76 @@ $(document).ready(function(){initNavTree('oled128x64Commands_8h_source.html','')
   <div class="headertitle"><div class="title">oled128x64Commands.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="oled128x64Commands_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __OLED128X64_CMDS_H__</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __OLED128X64_CMDS_H__</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*=========================================================================</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">    SSD1306 OLED 128x64 COMMANDS (Datasheet Reference)</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">    --------------------------------------------------</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    Each command configures internal registers of SSD1306.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    Use control byte = 0x00 before sending a command.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">=========================================================================*/</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/* Fundamental Commands */</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#afe8311a1cf58658999df626f089df45a">   12</a></span><span class="preprocessor">#define SSD1306_SET_CONTRAST                0x81  </span><span class="comment">// Set contrast control (followed by 1 byte: 0x00–0xFF)</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#aadee55a5f9a731b97ed0e4cae658f865">   13</a></span><span class="preprocessor">#define SSD1306_ENTIRE_DISPLAY_RESUME       0xA4  </span><span class="comment">// Resume to RAM content display</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a52166d02e20b67be39bf9066d0e82668">   14</a></span><span class="preprocessor">#define SSD1306_ENTIRE_DISPLAY_ON           0xA5  </span><span class="comment">// Entire display ON (ignore RAM, all pixels ON)</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a64d491cbcdb3dc0a48f6bae261fa39b6">   15</a></span><span class="preprocessor">#define SSD1306_NORMAL_DISPLAY              0xA6  </span><span class="comment">// Set normal display (0=OFF, 1=ON)</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a11b20f2dbe4ae08443082c663927cc74">   16</a></span><span class="preprocessor">#define SSD1306_INVERT_DISPLAY              0xA7  </span><span class="comment">// Inverse display (0=ON, 1=OFF)</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a55e34e510760766cfd7d73cde58360db">   17</a></span><span class="preprocessor">#define SSD1306_DISPLAY_OFF                 0xAE  </span><span class="comment">// Set display OFF (sleep)</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">   18</a></span><span class="preprocessor">#define SSD1306_DISPLAY_ON                  0xAF  </span><span class="comment">// Set display ON</span></div>
+<a href="oled128x64Commands_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __OLED128X64_CMDS_H__</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __OLED128X64_CMDS_H__</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;stdint.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#afe8311a1cf58658999df626f089df45a">   18</a></span><span class="preprocessor">#define SSD1306_SET_CONTRAST                0x81</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/* Scrolling Commands */</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a227f3a6e509369f291fae65eb8c97bf6">   21</a></span><span class="preprocessor">#define SSD1306_DEACTIVATE_SCROLL           0x2E  </span><span class="comment">// Stop scrolling</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a68ef82f75395902f0bf7050d2695dfe6">   22</a></span><span class="preprocessor">#define SSD1306_ACTIVATE_SCROLL             0x2F  </span><span class="comment">// Start scrolling</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a50443d2bd447f0fb0d6679615c1b266f">   23</a></span><span class="preprocessor">#define SSD1306_RIGHT_HORIZONTAL_SCROLL     0x26  </span><span class="comment">// Setup right horizontal scroll</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2addbca0876e3203b6b7aeb3fd33d356">   24</a></span><span class="preprocessor">#define SSD1306_LEFT_HORIZONTAL_SCROLL      0x27  </span><span class="comment">// Setup left horizontal scroll</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a7282e5941b11f2837eaea640f08e548c">   25</a></span><span class="preprocessor">#define SSD1306_VERTICAL_AND_RIGHT_SCROLL   0x29  </span><span class="comment">// Setup vertical &amp; right horizontal scroll</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#ababbf74aee982cceead285e91889afab">   26</a></span><span class="preprocessor">#define SSD1306_VERTICAL_AND_LEFT_SCROLL    0x2A  </span><span class="comment">// Setup vertical &amp; left horizontal scroll</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2a98851854770476f4b9758c4c484a11">   27</a></span><span class="preprocessor">#define SSD1306_SET_VERTICAL_SCROLL_AREA    0xA3  </span><span class="comment">// Set vertical scroll area (2 bytes: top, area)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#aadee55a5f9a731b97ed0e4cae658f865">   21</a></span><span class="preprocessor">#define SSD1306_ENTIRE_DISPLAY_RESUME       0xA4</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a52166d02e20b67be39bf9066d0e82668">   24</a></span><span class="preprocessor">#define SSD1306_ENTIRE_DISPLAY_ON           0xA5</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a64d491cbcdb3dc0a48f6bae261fa39b6">   27</a></span><span class="preprocessor">#define SSD1306_NORMAL_DISPLAY              0xA6</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/* Addressing Setting Commands */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">   30</a></span><span class="preprocessor">#define SSD1306_SET_MEMORY_MODE             0x20  </span><span class="comment">// Set memory addressing mode (1 byte: 0x00=Horizontal, 0x01=Vertical, 0x02=Page)</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a5a71dd3dbda228c21abbc0e5009faf56">   31</a></span><span class="preprocessor">#define SSD1306_SET_COLUMN_ADDR             0x21  </span><span class="comment">// Set column address (2 bytes: start, end)</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#ac3688afcf61a4ffccb0ee6ef165dd7a6">   32</a></span><span class="preprocessor">#define SSD1306_SET_PAGE_ADDR               0x22  </span><span class="comment">// Set page address (2 bytes: start, end)</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/* Hardware Configuration Commands */</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">   35</a></span><span class="preprocessor">#define SSD1306_SET_START_LINE(line)        (0x40 | ((line) &amp; 0x3F)) </span><span class="comment">// Set display start line (0–63)</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a43092651202a57af242fcb2fdd660c27">   36</a></span><span class="preprocessor">#define SSD1306_SET_SEG_REMAP_0             0xA0  </span><span class="comment">// Column address 0 → SEG0</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2877077e3c70cc9799a33b69bf79334b">   37</a></span><span class="preprocessor">#define SSD1306_SET_SEG_REMAP_127           0xA1  </span><span class="comment">// Column address 127 → SEG0 (mirrored)</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a4e68ffa5f2f19f9b047e1cc48c1b7941">   38</a></span><span class="preprocessor">#define SSD1306_SET_MULTIPLEX_RATIO         0xA8  </span><span class="comment">// Set multiplex ratio (1 byte: 0x0F–0x3F)</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0a3a736eb88fb3e1e5bd581979eec351">   39</a></span><span class="preprocessor">#define SSD1306_SET_COM_SCAN_INC            0xC0  </span><span class="comment">// Scan from COM0 to COM[N-1]</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a66d59c8a9db568e3baaed71117877e7f">   40</a></span><span class="preprocessor">#define SSD1306_SET_COM_SCAN_DEC            0xC8  </span><span class="comment">// Scan from COM[N-1] to COM0 (remap)</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">   41</a></span><span class="preprocessor">#define SSD1306_SET_DISPLAY_OFFSET          0xD3  </span><span class="comment">// Set display offset (1 byte: vertical shift)</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2437417dce03c77ecd5104b741c823b2">   42</a></span><span class="preprocessor">#define SSD1306_SET_COM_PINS                0xDA  </span><span class="comment">// Set COM pins hardware configuration (1 byte)</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/* Timing &amp; Driving Scheme Setting Commands */</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0dde5f56c7e3318fdd06ad6d542bc08d">   45</a></span><span class="preprocessor">#define SSD1306_SET_DISPLAY_CLOCK_DIV       0xD5  </span><span class="comment">// Set display clock divide ratio/oscillator frequency (1 byte)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a9e285eddc84b360c27b56505bed3742b">   46</a></span><span class="preprocessor">#define SSD1306_SET_PRECHARGE               0xD9  </span><span class="comment">// Set pre-charge period (1 byte)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a49950e7864566c5163d06fc75c17ab61">   47</a></span><span class="preprocessor">#define SSD1306_SET_VCOM_DETECT             0xDB  </span><span class="comment">// Set VCOMH deselect level (1 byte)</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/* Charge Pump Command */</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a614e028e5f6024c70a6e98c85fecd818">   50</a></span><span class="preprocessor">#define SSD1306_CHARGE_PUMP                 0x8D  </span><span class="comment">// Enable/disable charge pump (1 byte: 0x14=enable, 0x10=disable)</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/* Control */</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">   53</a></span><span class="preprocessor">#define SSD1306_COMMAND                     0x0</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a002e3b75ec7ef9b0191f4dfce6904d2a">   54</a></span><span class="preprocessor">#define SSD1306_DATA                        0x40</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">/* __OLED128X64_CMDS_H__ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a11b20f2dbe4ae08443082c663927cc74">   30</a></span><span class="preprocessor">#define SSD1306_INVERT_DISPLAY              0xA7</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a55e34e510760766cfd7d73cde58360db">   33</a></span><span class="preprocessor">#define SSD1306_DISPLAY_OFF                 0xAE</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0f0b91552d62eb58551521d137710aea">   36</a></span><span class="preprocessor">#define SSD1306_DISPLAY_ON                  0xAF</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a227f3a6e509369f291fae65eb8c97bf6">   46</a></span><span class="preprocessor">#define SSD1306_DEACTIVATE_SCROLL           0x2E</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a68ef82f75395902f0bf7050d2695dfe6">   49</a></span><span class="preprocessor">#define SSD1306_ACTIVATE_SCROLL             0x2F</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a50443d2bd447f0fb0d6679615c1b266f">   52</a></span><span class="preprocessor">#define SSD1306_RIGHT_HORIZONTAL_SCROLL     0x26</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2addbca0876e3203b6b7aeb3fd33d356">   55</a></span><span class="preprocessor">#define SSD1306_LEFT_HORIZONTAL_SCROLL      0x27</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a7282e5941b11f2837eaea640f08e548c">   58</a></span><span class="preprocessor">#define SSD1306_VERTICAL_AND_RIGHT_SCROLL   0x29</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#ababbf74aee982cceead285e91889afab">   61</a></span><span class="preprocessor">#define SSD1306_VERTICAL_AND_LEFT_SCROLL    0x2A</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2a98851854770476f4b9758c4c484a11">   64</a></span><span class="preprocessor">#define SSD1306_SET_VERTICAL_SCROLL_AREA    0xA3</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a568c78ddc8186fcf9c35c26d5486e1d9">   74</a></span><span class="preprocessor">#define SSD1306_SET_MEMORY_MODE             0x20</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a5a71dd3dbda228c21abbc0e5009faf56">   77</a></span><span class="preprocessor">#define SSD1306_SET_COLUMN_ADDR             0x21</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#ac3688afcf61a4ffccb0ee6ef165dd7a6">   80</a></span><span class="preprocessor">#define SSD1306_SET_PAGE_ADDR               0x22</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2a5d27a5a154ab8e13ae2ad29c16a360">   90</a></span><span class="preprocessor">#define SSD1306_SET_START_LINE(line)        (0x40 | ((line) &amp; 0x3F))</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a43092651202a57af242fcb2fdd660c27">   93</a></span><span class="preprocessor">#define SSD1306_SET_SEG_REMAP_0             0xA0</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2877077e3c70cc9799a33b69bf79334b">   96</a></span><span class="preprocessor">#define SSD1306_SET_SEG_REMAP_127           0xA1</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a4e68ffa5f2f19f9b047e1cc48c1b7941">   99</a></span><span class="preprocessor">#define SSD1306_SET_MULTIPLEX_RATIO         0xA8</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0a3a736eb88fb3e1e5bd581979eec351">  102</a></span><span class="preprocessor">#define SSD1306_SET_COM_SCAN_INC            0xC0</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a66d59c8a9db568e3baaed71117877e7f">  105</a></span><span class="preprocessor">#define SSD1306_SET_COM_SCAN_DEC            0xC8</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a00d1b0194d44f6022d4ddc92d72d75e8">  108</a></span><span class="preprocessor">#define SSD1306_SET_DISPLAY_OFFSET          0xD3</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a2437417dce03c77ecd5104b741c823b2">  111</a></span><span class="preprocessor">#define SSD1306_SET_COM_PINS                0xDA</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a0dde5f56c7e3318fdd06ad6d542bc08d">  121</a></span><span class="preprocessor">#define SSD1306_SET_DISPLAY_CLOCK_DIV       0xD5</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a9e285eddc84b360c27b56505bed3742b">  124</a></span><span class="preprocessor">#define SSD1306_SET_PRECHARGE               0xD9</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a49950e7864566c5163d06fc75c17ab61">  127</a></span><span class="preprocessor">#define SSD1306_SET_VCOM_DETECT             0xDB</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a614e028e5f6024c70a6e98c85fecd818">  137</a></span><span class="preprocessor">#define SSD1306_CHARGE_PUMP                 0x8D</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a08d90ad11e229650b69ed637628ba3dc">  147</a></span><span class="preprocessor">#define SSD1306_COMMAND                     0x00</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="oled128x64Commands_8h.html#a002e3b75ec7ef9b0191f4dfce6904d2a">  150</a></span><span class="preprocessor">#define SSD1306_DATA                        0x40</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif </span><span class="comment">/* __OLED128X64_CMDS_H__ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

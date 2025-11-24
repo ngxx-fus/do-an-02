@@ -52,9 +52,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BebasNeue__Bold10pt7b_8h.html",
-"globals_d.html",
-"lcd32Cmd_8h.html#a3b342bb903af4115a6e3011f8d0f143a",
-"projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c"
+"globals_c.html",
+"lcd32Cmd_8h.html#a29d300dc6661533c523b55b16ed531b5",
+"oled128x64_8c_source.html",
+"structlcd32Dev__t.html#a4fca563876f479f621058a9253de7fbe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

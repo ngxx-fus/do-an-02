@@ -9,7 +9,7 @@ var searchData=
   ['bitmapoffset_6',['bitmapOffset',['../structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8',1,'GFXglyph']]],
   ['bl_7',['bl',['../structlcd32ControlPin__t.html#a2dd1cbe4fcb2e14b2c045daf039fba7e',1,'lcd32ControlPin_t']]],
   ['boolcast_8',['boolCast',['../helper_8h.html#a5c46b6cf4fd88a7ba6d73f21599258f6',1,'helper.h']]],
-  ['buff_9',['buff',['../structlcd32Canvas__t.html#a0dbb4e87736d8f08f0e344b216b13b72',1,'lcd32Canvas_t']]],
-  ['byte_10',['byte',['../i2cHelper_8h.html#a96f44d20f1dbf1c8785a7bc99a46164c',1,'i2cHelper.h']]],
+  ['btn0_9',['btn0',['../projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a',1,'BTN0:&#160;projectConfig.h'],['../projectConfig_8h.html#a5bb86ca4e29bc982d0f07ca2a9808f9a',1,'BTN0:&#160;projectConfig.h']]],
+  ['buff_10',['buff',['../structlcd32Canvas__t.html#a0dbb4e87736d8f08f0e344b216b13b72',1,'lcd32Canvas_t']]],
   ['byte_5ft_11',['byte_t',['../oled128x64Definitions_8h.html#a5f2bd8130655730e7899c385aca6a2b1',1,'oled128x64Definitions.h']]]
 ];

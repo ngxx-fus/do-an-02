@@ -44,23 +44,17 @@ var spi_8h =
       [ "SPISTAT_RBUFF_EMPTY", "spi_8h.html#a7c9f74018c2e54ad18d2f5dfc3addc85a4ed205ae05cdfe10d4ee67f772c236d0", null ],
       [ "SPI_STATUS_FLAG_NUM", "spi_8h.html#a7c9f74018c2e54ad18d2f5dfc3addc85adf6a2edcf68feed1a674d616068a0c0a", null ]
     ] ],
-    [ "__attribute__", "spi_8h.html#ae4896c3b5425e3ebc1be14717ed45cde", null ],
     [ "configSPIDevice", "spi_8h.html#ad41a70035cf58df521639a48693a4dc2", null ],
     [ "createSPIDevice", "spi_8h.html#a9e20bca89dc6ea3716eec53098308d64", null ],
     [ "destroySPIDevice", "spi_8h.html#a3e7e3ce707a62db42a7e4a7a2ebbe3e8", null ],
-    [ "else", "spi_8h.html#a0282f717960af4e1c107bb72e7c5de63", null ],
-    [ "if", "spi_8h.html#a22a82b6959b76611339923d600c287da", null ],
     [ "spiGetReceiveSize", "spi_8h.html#a3ea78cd667a66647603467460883059e", null ],
     [ "spiGetTransmitSize", "spi_8h.html#a06d1ecbcb699c24400c3e5f434bcc98b", null ],
     [ "spiResetReceiveIndex", "spi_8h.html#aa74f1693881a83cc6554c01b82e8f933", null ],
     [ "spiResetTransmitIndex", "spi_8h.html#ae438c8da87272f3cd7e37f529b568ab1", null ],
+    [ "spiSetCLKState", "spi_8h.html#a8a4fd62d7c73330b2162867d6b26b0d8", null ],
+    [ "spiSetGPIO", "spi_8h.html#a599cba5d38196569bb30bc01a65d5b0a", null ],
     [ "spiSetReceiveBuffer", "spi_8h.html#aa1298f51e81999bf486786d27bc3bd33", null ],
     [ "spiSetTransmitBuffer", "spi_8h.html#ae10f60f11db164dcb2623f609a8d9a75", null ],
     [ "spiStartTransaction", "spi_8h.html#af07ee0f834b876d0a6a534829b65f9cc", null ],
-    [ "startupSPIDevice", "spi_8h.html#a1e363d88dac31b5a92c9550e59bf7c14", null ],
-    [ "cpol", "spi_8h.html#aba02c780304a6ffee2a16433f1effaad", null ],
-    [ "level", "spi_8h.html#af7c213ae45d30035b02b6ab518777f2b", null ],
-    [ "mask", "spi_8h.html#ad3bee21df6875eeccd25d3c577e0600a", null ],
-    [ "out_w1ts", "spi_8h.html#aed769290cf25988055cab5924ea4fbde", null ],
-    [ "state", "spi_8h.html#a79e440afc324e27e5eccfa76d8cd324e", null ]
+    [ "startupSPIDevice", "spi_8h.html#a1e363d88dac31b5a92c9550e59bf7c14", null ]
 ];

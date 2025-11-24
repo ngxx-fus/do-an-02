@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['r_0',['r',['../structlcd32ControlPin__t.html#a7e4396d5cf696ac04896a144c7f80035',1,'lcd32ControlPin_t']]],
-  ['rbuff_1',['rBuff',['../structspiDev__t.html#ab111a755003355686e66b70c608bba81',1,'spiDev_t']]],
-  ['rbuffindex_2',['rBuffIndex',['../structspiDev__t.html#a5e99dbc99dc0550ae693557d9e96e1f0',1,'spiDev_t']]],
-  ['rbuffmask_3',['rBuffMask',['../structspiDev__t.html#a0e3e80e657fee46aba017c15b8d2e0ce',1,'spiDev_t']]],
-  ['rbuffsize_4',['rBuffSize',['../structspiDev__t.html#ad7e400884f5db2cdac3636f0dce53ba3',1,'spiDev_t']]],
-  ['rs_5',['rs',['../structlcd32ControlPin__t.html#a5636d00a236e7fde963b455c4a5bc52f',1,'lcd32ControlPin_t']]],
-  ['rst_6',['rst',['../structlcd32ControlPin__t.html#a5e77b7c04c89eceada4199fd72594f0c',1,'lcd32ControlPin_t']]],
-  ['rw_7',['rw',['../i2cHelper_8h.html#adbb7c937c7ad2ad1917829ef254b065f',1,'i2cHelper.h']]],
-  ['rxindbit_8',['rxIndBit',['../structi2cDev__t.html#a9cb231962f4226ebde2a960e77ae94f2',1,'i2cDev_t']]],
-  ['rxindbyte_9',['rxIndByte',['../structi2cDev__t.html#a29b4bcf3b3a052a073ceb1b42118107f',1,'i2cDev_t']]],
-  ['rxptr_10',['rxPtr',['../structi2cDev__t.html#a7c3d811bfabeafb6654c39eee9fef11a',1,'i2cDev_t']]],
-  ['rxsize_11',['rxSize',['../structi2cDev__t.html#a0949de096e3d5eb789422fd603663efc',1,'i2cDev_t']]]
+  ['tbuff_0',['tBuff',['../structspiDev__t.html#aba8220d9abd65fb7cae1faf7b910e6b1',1,'spiDev_t']]],
+  ['tbuffindex_1',['tBuffIndex',['../structspiDev__t.html#a7ec4ee89ef6e7379ac1051e94ef0af04',1,'spiDev_t']]],
+  ['tbuffmask_2',['tBuffMask',['../structspiDev__t.html#a0e5ee12f48e537708178ffe8ca38ab8e',1,'spiDev_t']]],
+  ['tbuffsize_3',['tBuffSize',['../structspiDev__t.html#a6daea8e3128cd4edc838a155e16444b9',1,'spiDev_t']]],
+  ['translevel_4',['transLevel',['../structlcd32Dev__t.html#adbb9c55b64a5ea3d4878d82f0ce2a5d8',1,'lcd32Dev_t']]],
+  ['txindbit_5',['txIndBit',['../structi2cDev__t.html#ad59b04f89153af541ae8a995dcb43e83',1,'i2cDev_t']]],
+  ['txindbyte_6',['txIndByte',['../structi2cDev__t.html#ab3b9f0d60ccc71991b608bd92b8a8607',1,'i2cDev_t']]],
+  ['txptr_7',['txPtr',['../structi2cDev__t.html#ad106f41581be92213181f8261a36dd05',1,'i2cDev_t']]],
+  ['txsize_8',['txSize',['../structi2cDev__t.html#a7b84009631824a5bcaa344152f470baf',1,'i2cDev_t']]]
 ];

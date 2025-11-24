@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 <h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
 <li>__abs&#160;:&#160;<a class="el" href="helper_8h.html#ac045c73c41baea0fe2dea33ef8a79960">helper.h</a></li>
-<li>__attribute__()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a54edac0826b25aa1d9ca2f83954d5efa">i2cHelper.h</a>, <a class="el" href="spi_8h.html#ae4896c3b5425e3ebc1be14717ed45cde">spi.h</a>, <a class="el" href="lcd32Helper_8h.html#ae28b2d2014aa1a9130945502cf48db83">lcd32Helper.h</a>, <a class="el" href="spi_8c.html#a8c8313d05785802938c6d8a2a7fa3e09">spi.c</a></li>
 <li>__clearFlagBit&#160;:&#160;<a class="el" href="flag_8h.html#aee104171dcc5234e5557c5a2abf1ec89">flag.h</a></li>
 <li>__enterCriticalSection&#160;:&#160;<a class="el" href="espRTOSWrapper_8h.html#a35913d00763ee3ffd7eb681010931828">espRTOSWrapper.h</a></li>
 <li>__entry&#160;:&#160;<a class="el" href="espLogWrapper_8h.html#a977020e86ee37b91362e9067177d11bc">espLogWrapper.h</a></li>
@@ -111,8 +110,15 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>__i2cEntry&#160;:&#160;<a class="el" href="i2cLog_8h.html#ab61819a58450897871d4b2e1c362a522">i2cLog.h</a></li>
 <li>__i2cErr&#160;:&#160;<a class="el" href="i2cLog_8h.html#a71212aa7acf3df886a58cd4061e4a6c8">i2cLog.h</a></li>
 <li>__i2cExit&#160;:&#160;<a class="el" href="i2cLog_8h.html#a3d64b5cf24a687f3bf9d626d5055d929">i2cLog.h</a></li>
+<li>__i2cFreq()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a76dcf35abb43dd39010bd67a72de8c0a">i2cHelper.h</a></li>
+<li>__i2cGetSCL()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a8945ac065eb916d241f211e7a21c5b9e">i2cHelper.h</a></li>
+<li>__i2cGetSDA()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a43f86ea81faaf0e2e97a8561e3914d33">i2cHelper.h</a></li>
 <li>__i2cLog&#160;:&#160;<a class="el" href="i2cLog_8h.html#a26a88a1083a8eec50ffd2b37a5f0ca6a">i2cLog.h</a></li>
 <li>__i2cLog1&#160;:&#160;<a class="el" href="i2cLog_8h.html#a41f70d907a7c6da72e7dc63a03551833">i2cLog.h</a></li>
+<li>__i2cSCL()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#acbdfafb9270b6e7fd1a1c65c394ce59f">i2cHelper.h</a></li>
+<li>__i2cSDA()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a8d527f09c94133f3c265f5763cfed0a1">i2cHelper.h</a></li>
+<li>__i2cSetSCL()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a19893d34640a8b31cc00b0a260ebd7bb">i2cHelper.h</a></li>
+<li>__i2cSetSDA()&#160;:&#160;<a class="el" href="i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0">i2cHelper.h</a></li>
 <li>__inv_mask16&#160;:&#160;<a class="el" href="helper_8h.html#af76bb88f513fd33be9a7064b6ee4d715">helper.h</a></li>
 <li>__inv_mask32&#160;:&#160;<a class="el" href="helper_8h.html#aeeaceb6885762c7e0bfb725962b0c889">helper.h</a></li>
 <li>__inv_mask64&#160;:&#160;<a class="el" href="helper_8h.html#a26495eea42529f56b26bfe525ff8dfb1">helper.h</a></li>
@@ -127,18 +133,39 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>__isnot_zero&#160;:&#160;<a class="el" href="helper_8h.html#a12dd06bff55aaba6352b4a1041141db7">helper.h</a></li>
 <li>__LCD32_READ_SIG&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a4b65cd262f5b9c75e507c48c1fcf012d">lcd32Helper.h</a></li>
 <li>__LCD32_WRITE_SIG&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ab591bbf4e39ed54c470139c2e40636ea">lcd32Helper.h</a></li>
-<li>__lcd32ConfigCanvas()&#160;:&#160;<a class="el" href="lcd32_8c.html#a1dde013dd0a1c1310be4d2e5ef886e5c">lcd32.c</a>, <a class="el" href="lcd32_8h.html#a1dde013dd0a1c1310be4d2e5ef886e5c">lcd32.h</a></li>
+<li>__lcd32ConfigCanvas()&#160;:&#160;<a class="el" href="lcd32_8h.html#a1dde013dd0a1c1310be4d2e5ef886e5c">lcd32.h</a>, <a class="el" href="lcd32_8c.html#a1dde013dd0a1c1310be4d2e5ef886e5c">lcd32.c</a></li>
+<li>__lcd32ContReadRegister()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a96077bf536fa8eebc1fd9b50bff77bd8">lcd32Helper.h</a></li>
+<li>__lcd32ContReadRegisterStart()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a8efa1f19519e1dbfa55b90c958a1b9b9">lcd32Helper.h</a></li>
+<li>__lcd32ContReadRegisterStop()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a0666ea6331a58a9ee8cd5116045c9865">lcd32Helper.h</a></li>
 <li>__lcd32DeleteCanvasBuffer()&#160;:&#160;<a class="el" href="lcd32_8c.html#a324eee93561877dee3e72b7199dff8f8">lcd32.c</a>, <a class="el" href="lcd32_8h.html#a324eee93561877dee3e72b7199dff8f8">lcd32.h</a></li>
 <li>__lcd32FastSetDataBusInputM()&#160;:&#160;<a class="el" href="lcd32_8c.html#a38cfb0e5750c6bcdd4b9c827e51188db">lcd32.c</a>, <a class="el" href="lcd32Helper_8h.html#a38cfb0e5750c6bcdd4b9c827e51188db">lcd32Helper.h</a></li>
 <li>__lcd32FastSetDataBusOutputM()&#160;:&#160;<a class="el" href="lcd32_8c.html#a39bf29b972e6bfac38d913c3247a4853">lcd32.c</a>, <a class="el" href="lcd32Helper_8h.html#a39bf29b972e6bfac38d913c3247a4853">lcd32Helper.h</a></li>
+<li>__lcd32GetParallelData()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ac848454cf582ca67ad4045279f76b6af">lcd32Helper.h</a></li>
+<li>__lcd32GetPixel()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a8a60ede49f1999d5b164a096f8dd3f6a">lcd32Helper.h</a></li>
+<li>__lcd32GetPixelPtr()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a6d5dc54e725c0442e26b886b3522b503">lcd32Helper.h</a></li>
 <li>__lcd32GPIOConfigInputM()&#160;:&#160;<a class="el" href="lcd32_8c.html#ae340130a03d14e67426a89898d7b446d">lcd32.c</a>, <a class="el" href="lcd32Helper_8h.html#ae340130a03d14e67426a89898d7b446d">lcd32Helper.h</a></li>
 <li>__lcd32GPIOConfigOutputM()&#160;:&#160;<a class="el" href="lcd32_8c.html#a30ce3e70989876824655f61490634959">lcd32.c</a>, <a class="el" href="lcd32Helper_8h.html#a30ce3e70989876824655f61490634959">lcd32Helper.h</a></li>
+<li>__lcd32GPIOGetState()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a9e59a567587578fd09321ba52d8c36d7">lcd32Helper.h</a></li>
+<li>__lcd32GPIOSetState()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002">lcd32Helper.h</a></li>
+<li>__lcd32ReadRegister()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a56f3f91d0d93ce5de141c42d555194ef">lcd32Helper.h</a></li>
 <li>__lcd32SetAddressWindow()&#160;:&#160;<a class="el" href="lcd32_8c.html#a34094e29448c439c6ba399cdf9d84a4f">lcd32.c</a></li>
+<li>__lcd32SetBrightnessLightPin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#aef7608ff0e893a296a4322e62c3de397">lcd32Helper.h</a></li>
+<li>__lcd32SetChipSelPin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a60cfbcea0dd506d126425dbcc4b92637">lcd32Helper.h</a></li>
 <li>__lcd32SetCommandTransaction&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a87c62c4eeb9d48ae2ab8de3e33821fcd">lcd32Helper.h</a></li>
 <li>__lcd32SetDataTransaction&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a6b538f3dd624d653a60d99c8ebdd2083">lcd32Helper.h</a></li>
+<li>__lcd32SetParallelData()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#af2bb32a580a854fc6c446766df75ad31">lcd32Helper.h</a></li>
+<li>__lcd32SetPixel()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ab5aed5641b658c6280ad992852efeb4d">lcd32Helper.h</a></li>
+<li>__lcd32SetPixelNC()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#accdcd9157cc5f8a5afae4e364bc8dc33">lcd32Helper.h</a></li>
+<li>__lcd32SetReadPin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a75fbee488e5b73450728382af0d3b45b">lcd32Helper.h</a></li>
+<li>__lcd32SetRegSelPin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ab0ded6c1657526c5f4888d479a83d767">lcd32Helper.h</a></li>
+<li>__lcd32SetResetPin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a5eb093d28d4a2ef12ea787073a02a935">lcd32Helper.h</a></li>
 <li>__lcd32SetupPin()&#160;:&#160;<a class="el" href="lcd32_8c.html#a5e822503265e9fd16f2328c6fd695fe7">lcd32.c</a>, <a class="el" href="lcd32_8h.html#a5e822503265e9fd16f2328c6fd695fe7">lcd32.h</a></li>
+<li>__lcd32SetWritePin()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a4429e88a9e152b5c05418f802cb53bb2">lcd32Helper.h</a></li>
 <li>__lcd32StartTransaction&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a069f32874b30a9e892782f272811a9d1">lcd32Helper.h</a></li>
 <li>__lcd32StopTransaction&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ad3103520f288d1e6fc4c0d3338c250b4">lcd32Helper.h</a></li>
+<li>__lcd32WriteCommand()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a87d6b33eeb3cee4be698d19f3cf264ca">lcd32Helper.h</a></li>
+<li>__lcd32WriteData()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#a5b16fe702d37053854a2d5c9f8a65fca">lcd32Helper.h</a></li>
+<li>__lcd32WriteRegister()&#160;:&#160;<a class="el" href="lcd32Helper_8h.html#ac5a35c3c180b431e4d00a6c1922b0c65">lcd32Helper.h</a></li>
 <li>__mask16&#160;:&#160;<a class="el" href="helper_8h.html#ac0560cf37fa63608e7a8fcb8eefba165">helper.h</a></li>
 <li>__mask32&#160;:&#160;<a class="el" href="helper_8h.html#afd240252a70fc121b524d293b33811f2">helper.h</a></li>
 <li>__mask64&#160;:&#160;<a class="el" href="helper_8h.html#aabab8cc79e62e54c5d44786b59940aa1">helper.h</a></li>
@@ -197,7 +224,7 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>__safeFlagClear()&#160;:&#160;<a class="el" href="flag_8h.html#ad4861458b79754738ebc567b0a630af2">flag.h</a>, <a class="el" href="helper_8c.html#ad4861458b79754738ebc567b0a630af2">helper.c</a></li>
 <li>__safeFlagHas()&#160;:&#160;<a class="el" href="flag_8h.html#ad068cf276ddb52ee3e84fd0d30947aa2">flag.h</a>, <a class="el" href="helper_8c.html#ad068cf276ddb52ee3e84fd0d30947aa2">helper.c</a></li>
 <li>__safeFlagSet()&#160;:&#160;<a class="el" href="flag_8h.html#ac2be750f4e36df0b48c8fc29d3fd4dab">flag.h</a>, <a class="el" href="helper_8c.html#ac2be750f4e36df0b48c8fc29d3fd4dab">helper.c</a></li>
-<li>__safeFlagToggle()&#160;:&#160;<a class="el" href="helper_8c.html#a34059a96c4085295a6986bb15663844b">helper.c</a>, <a class="el" href="flag_8h.html#a34059a96c4085295a6986bb15663844b">flag.h</a></li>
+<li>__safeFlagToggle()&#160;:&#160;<a class="el" href="flag_8h.html#a34059a96c4085295a6986bb15663844b">flag.h</a>, <a class="el" href="helper_8c.html#a34059a96c4085295a6986bb15663844b">helper.c</a></li>
 <li>__setFlagBit&#160;:&#160;<a class="el" href="flag_8h.html#af1453f3faeb22f999de2aa3d04a9cc55">flag.h</a></li>
 <li>__spiDelay&#160;:&#160;<a class="el" href="spi_8h.html#a6a99aa0512796433c2b827c27ac839af">spi.h</a></li>
 <li>__spiEntry&#160;:&#160;<a class="el" href="spi_8h.html#acd1692df9248e73cb0b7d0ff9be314ae">spi.h</a></li>

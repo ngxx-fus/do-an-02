@@ -1,3 +1,6 @@
+/// @file   oled128x64Log.h
+/// @brief  Logging macros for OLED 128x64 driver; Supports error, entry/exit, and detailed debug logs.
+
 #ifndef __OLED128X64_LOG_H__
 #define __OLED128X64_LOG_H__
 

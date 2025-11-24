@@ -29,10 +29,9 @@ var searchData=
   ['lcd32entry_26',['lcd32Entry',['../lcd32Helper_8h.html#a7ab4498dcd9d22c1e1239513f7d41ce7',1,'lcd32Helper.h']]],
   ['lcd32err_27',['lcd32Err',['../lcd32Helper_8h.html#aa0981bd75541688e8eec47bdf05bc42c',1,'lcd32Helper.h']]],
   ['lcd32exit_28',['lcd32Exit',['../lcd32Helper_8h.html#a71f11ac3c0988083dcbc7007624b24bf',1,'lcd32Helper.h']]],
-  ['lcd32info_29',['lcd32Info',['../lcd32Helper_8h.html#a2ed357b95afea5b4140ff3a29a0865c3',1,'lcd32Helper.h']]],
-  ['lcd32log_30',['lcd32Log',['../lcd32Helper_8h.html#a1a1e4c773a3a17ac563d73b8c3e1fd72',1,'lcd32Helper.h']]],
-  ['lcd32log1_31',['lcd32Log1',['../lcd32Helper_8h.html#a63a9940109f2193724b312422f725525',1,'lcd32Helper.h']]],
-  ['lcd32nullcheck_32',['lcd32NULLCheck',['../lcd32Helper_8h.html#a83e1db6ed3548ec6f330b6216e1794e7',1,'lcd32Helper.h']]],
-  ['lcd32warn_33',['lcd32Warn',['../lcd32Helper_8h.html#abfc12411e2bf0abea45251216ea7bcd6',1,'lcd32Helper.h']]],
-  ['longpress_5ftime_34',['LONGPRESS_TIME',['../projectConfig_8h.html#a9588b37d541027c21d87e8e89312cca4',1,'projectConfig.h']]]
+  ['lcd32log_29',['lcd32Log',['../lcd32Helper_8h.html#a1a1e4c773a3a17ac563d73b8c3e1fd72',1,'lcd32Helper.h']]],
+  ['lcd32log1_30',['lcd32Log1',['../lcd32Helper_8h.html#a63a9940109f2193724b312422f725525',1,'lcd32Helper.h']]],
+  ['lcd32nullcheck_31',['lcd32NULLCheck',['../lcd32Helper_8h.html#a83e1db6ed3548ec6f330b6216e1794e7',1,'lcd32Helper.h']]],
+  ['lcd32warn_32',['lcd32Warn',['../lcd32Helper_8h.html#abfc12411e2bf0abea45251216ea7bcd6',1,'lcd32Helper.h']]],
+  ['longpress_5ftime_33',['LONGPRESS_TIME',['../projectConfig_8h.html#a9588b37d541027c21d87e8e89312cca4',1,'projectConfig.h']]]
 ];

@@ -1,0 +1,18 @@
+<map id="comDriver/i2c/i2cDefinition.h" name="comDriver/i2c/i2cDefinition.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="84,5,295,31"/>
+<area shape="rect" id="Node000002" href="$i2c_8h.html" title="I2C driver interface; Provides functions for creating, configuring, starting, transmitting/receiving,..." alt="" coords="115,152,263,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,43,159,60,151,79,149,99,156,118,179,150,175,153,151,121,144,100,145,78,155,57,167,40"/>
+<area shape="rect" id="Node000007" href="$i2cHelper_8h.html" title=" " alt="" coords="161,79,351,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="212,39,247,77,243,80,208,43"/>
+<area shape="rect" id="Node000003" href="$i2c_8c.html" title="Implements I2C device creation, configuration, startup, transmit/receive buffers, send/receive operat..." alt="" coords="5,233,152,258"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,188,97,235,94,230,160,183"/>
+<area shape="rect" id="Node000004" href="$oled128x64_8h.html" title="Header for OLED 128x64 driver; Provides device creation, configuration, pixel/canvas operations,..." alt="" coords="111,313,281,353"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="193,191,198,313,193,313,188,191"/>
+<area shape="rect" id="Node000006" href="$oled128x64Definitions_8h.html" title="OLED 128x64 display definitions; Provides constants, types, and device structure for I2C communicatio..." alt="" coords="227,225,411,265"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="222,182,289,223,286,227,219,187"/>
+<area shape="rect" id="Node000005" href="$oled128x64_8c.html" title="Implementation of OLED 128x64 driver; Includes device creation, configuration, startup,..." alt="" coords="172,401,343,441"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="220,363,246,400,242,403,215,366"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="282,275,225,315,222,311,279,271"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="316,280,296,354,272,402,267,400,291,352,311,279"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="237,116,202,154,198,150,234,113"/>
+</map>

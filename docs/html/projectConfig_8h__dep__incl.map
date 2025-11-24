@@ -1,0 +1,55 @@
+<map id="config/projectConfig.h" name="config/projectConfig.h">
+<area shape="rect" id="Node000001" title="Project configurations; Determine the driver type. E.g: SENDER, RECEIVER, MONITOR; Defines GPIO,..." alt="" coords="923,5,1085,31"/>
+<area shape="rect" id="Node000002" href="$espLogWrapper_8h.html" title="Custom lightweight logging system for ESP32; provides tagged logs with timestamps and configurable lo..." alt="" coords="852,79,1031,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="987,43,953,80,949,77,983,39"/>
+<area shape="rect" id="Node000016" href="$myApp_8c.html" title=" " alt="" coords="565,541,681,566"/>
+<area shape="poly" id="edge32_Node000001_Node000016" title=" " alt="" coords="1100,22,1171,35,1207,46,1241,60,1270,78,1294,101,1309,130,1315,163,1315,386,1309,410,1294,432,1269,451,1238,468,1157,496,1059,517,954,532,850,543,681,553,681,548,849,538,953,527,1058,512,1155,491,1236,463,1267,446,1290,428,1304,408,1309,386,1309,164,1304,131,1289,105,1267,83,1238,65,1206,51,1170,40,1099,27"/>
+<area shape="rect" id="Node000003" href="$general_8h.html" title="This header includes all helper functions, macros, and standard libraries required by the project." alt="" coords="633,152,761,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="890,110,738,154,736,149,888,105"/>
+<area shape="rect" id="Node000004" href="$i2c_8h.html" title="I2C driver interface; Provides functions for creating, configuring, starting, transmitting/receiving,..." alt="" coords="194,372,342,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="620,170,468,175,290,185,135,202,83,214,55,227,47,239,43,250,46,272,63,293,89,312,159,346,227,369,225,374,157,351,86,317,59,297,41,274,37,250,42,236,52,223,81,209,134,197,289,180,467,170,619,165"/>
+<area shape="rect" id="Node000009" href="$i2cDefinition_8h.html" title=" " alt="" coords="65,225,276,251"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="620,179,256,228,255,223,620,174"/>
+<area shape="rect" id="Node000010" href="$i2cHelper_8h.html" title=" " alt="" coords="207,299,398,324"/>
+<area shape="poly" id="edge14_Node000003_Node000010" title=" " alt="" coords="620,173,543,180,461,190,388,206,360,216,340,227,326,243,316,263,307,299,301,298,311,261,322,240,337,223,358,211,387,201,460,185,542,174,619,168"/>
+<area shape="rect" id="Node000011" href="$i2cLog_8h.html" title="Logging macros for I2C driver; Supports different log levels including error, entry/exit,..." alt="" coords="351,225,521,251"/>
+<area shape="poly" id="edge15_Node000003_Node000011" title=" " alt="" coords="643,183,479,228,478,223,641,178"/>
+<area shape="rect" id="Node000012" href="$lcd32Cmd_8h.html" title="ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3...." alt="" coords="1064,299,1275,324"/>
+<area shape="poly" id="edge18_Node000003_Node000012" title=" " alt="" coords="775,167,1015,187,1122,203,1159,212,1179,223,1188,242,1189,263,1178,299,1173,298,1183,262,1183,243,1175,227,1157,217,1121,208,1015,192,775,173"/>
+<area shape="rect" id="Node000015" href="$monitor_8h.html" title=" " alt="" coords="527,453,649,478"/>
+<area shape="poly" id="edge31_Node000003_Node000015" title=" " alt="" coords="640,185,610,202,586,227,573,256,566,288,563,321,565,353,575,412,586,452,581,453,570,413,559,354,558,321,560,287,568,254,582,224,606,198,637,180"/>
+<area shape="rect" id="Node000017" href="$lcd32Def_8h.html" title="LCD 3.2&quot; type definitions; Includes color/dimension types, canvas, data/control pin structs,..." alt="" coords="596,225,799,251"/>
+<area shape="poly" id="edge23_Node000003_Node000017" title=" " alt="" coords="700,191,700,225,695,225,695,191"/>
+<area shape="rect" id="Node000018" href="$lcd32Helper_8h.html" title="Helper functions and macros for LCD 3.2&quot;; Includes logging, GPIO setup, pin operations,..." alt="" coords="646,299,869,324"/>
+<area shape="poly" id="edge27_Node000003_Node000018" title=" " alt="" coords="757,180,788,198,813,224,817,235,817,246,808,267,792,286,775,301,772,297,789,282,804,264,812,245,812,236,808,227,785,202,755,185"/>
+<area shape="rect" id="Node000019" href="$spi_8h.html" title=" " alt="" coords="874,225,1022,251"/>
+<area shape="poly" id="edge28_Node000003_Node000019" title=" " alt="" coords="752,179,908,223,907,228,750,184"/>
+<area shape="rect" id="Node000021" href="$helper_8c.html" title=" " alt="" coords="1046,225,1165,251"/>
+<area shape="poly" id="edge30_Node000003_Node000021" title=" " alt="" coords="775,177,1046,224,1045,229,774,182"/>
+<area shape="rect" id="Node000005" href="$i2c_8c.html" title="Implements I2C device creation, configuration, startup, transmit/receive buffers, send/receive operat..." alt="" coords="5,453,152,478"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="229,405,107,455,105,450,227,400"/>
+<area shape="rect" id="Node000006" href="$oled128x64_8h.html" title="Header for OLED 128x64 driver; Provides device creation, configuration, pixel/canvas operations,..." alt="" coords="305,533,476,573"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="318,400,348,418,374,444,386,466,392,490,395,533,389,533,387,491,381,468,370,447,345,422,315,405"/>
+<area shape="rect" id="Node000008" href="$oled128x64Definitions_8h.html" title="OLED 128x64 display definitions; Provides constants, types, and device structure for I2C communicatio..." alt="" coords="176,445,360,485"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="271,411,271,445,265,445,265,411"/>
+<area shape="rect" id="Node000007" href="$oled128x64_8c.html" title="Implementation of OLED 128x64 driver; Includes device creation, configuration, startup,..." alt="" coords="244,621,415,661"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,586,345,623,341,620,367,583"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="308,491,365,531,362,535,305,495"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="276,499,296,572,320,620,315,622,291,574,271,500"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="176,264,183,293,197,323,222,350,250,370,246,374,218,354,192,325,178,295,171,265"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="205,255,282,296,280,301,202,259"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="293,338,276,373,271,371,289,335"/>
+<area shape="poly" id="edge16_Node000011_Node000004" title=" " alt="" coords="436,265,429,296,411,326,392,343,370,356,325,374,323,369,368,352,389,339,407,322,424,294,431,264"/>
+<area shape="poly" id="edge17_Node000011_Node000010" title=" " alt="" coords="404,259,326,301,323,296,401,255"/>
+<area shape="rect" id="Node000013" href="$lcd32_8h.html" title="LCD 3.2&quot; driver; Provides APIs to create, configure, start&#45;up, and control the LCD device,..." alt="" coords="667,372,847,397"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="1090,329,824,375,823,369,1089,324"/>
+<area shape="rect" id="Node000014" href="$lcd32_8c.html" title=" " alt="" coords="673,453,852,478"/>
+<area shape="poly" id="edge20_Node000013_Node000014" title=" " alt="" coords="762,411,765,452,759,453,756,411"/>
+<area shape="poly" id="edge21_Node000013_Node000015" title=" " alt="" coords="722,405,614,455,612,450,719,401"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="600,490,620,539,615,541,595,492"/>
+<area shape="poly" id="edge24_Node000017_Node000013" title=" " alt="" coords="669,261,652,275,639,290,633,306,637,323,650,339,667,352,706,369,704,374,665,356,647,343,632,325,628,306,635,288,648,271,665,257"/>
+<area shape="poly" id="edge25_Node000017_Node000018" title=" " alt="" coords="718,260,750,297,746,300,714,263"/>
+<area shape="poly" id="edge26_Node000018_Node000013" title=" " alt="" coords="760,338,760,372,755,372,755,338"/>
+<area shape="rect" id="Node000020" href="$spi_8c.html" title=" " alt="" coords="893,299,1040,324"/>
+<area shape="poly" id="edge29_Node000019_Node000020" title=" " alt="" coords="957,263,966,298,961,299,952,265"/>
+</map>

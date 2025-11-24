@@ -95,10 +95,21 @@ $(document).ready(function(){initNavTree('oled128x64Log_8h.html',''); initResiza
   <div class="headertitle"><div class="title">oled128x64Log.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Logging macros for OLED 128x64 driver; Supports error, entry/exit, and detailed debug logs.  
+<a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="oled128x64Log_8h__dep__incl.png" border="0" usemap="#acomDriver_2oled128x64_2oled128x64Log_8hdep" alt=""/></div>
+<map name="acomDriver_2oled128x64_2oled128x64Log_8hdep" id="acomDriver_2oled128x64_2oled128x64Log_8hdep">
+<area shape="rect" title="Logging macros for OLED 128x64 driver; Supports error, entry/exit, and detailed debug logs." alt="" coords="5,5,176,45"/>
+<area shape="rect" href="oled128x64_8c.html" title="Implementation of OLED 128x64 driver; Includes device creation, configuration, startup,..." alt="" coords="5,181,176,221"/>
+<area shape="poly" title=" " alt="" coords="73,58,57,94,54,113,57,133,67,158,80,180,75,183,62,160,52,134,49,113,52,93,68,56"/>
+<area shape="rect" href="oled128x64_8h.html" title="Header for OLED 128x64 driver; Provides device creation, configuration, pixel/canvas operations,..." alt="" coords="67,93,237,133"/>
+<area shape="poly" title=" " alt="" coords="114,55,141,92,136,95,110,58"/>
+<area shape="poly" title=" " alt="" coords="133,146,106,183,102,180,128,143"/>
+</map>
 </div>
 </div>
 <p><a href="oled128x64Log_8h_source.html">Go to the source code of this file.</a></p>
@@ -107,7 +118,7 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a85c97a68cfabf55fe28409a8464d542a" id="r_a85c97a68cfabf55fe28409a8464d542a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64Log_8h.html#a85c97a68cfabf55fe28409a8464d542a">OLED_LOG_LEVEL</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a85c97a68cfabf55fe28409a8464d542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dc8b653f149ed08a554fa8161370e6c" id="r_a6dc8b653f149ed08a554fa8161370e6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64Log_8h.html#a6dc8b653f149ed08a554fa8161370e6c">__oledErr</a>(...)&#160;&#160;&#160;<a class="el" href="espLogWrapper_8h.html#ae4a087be859761fbaee51301d54afc1c">__sys_err</a>(  __VA_ARGS__ )</td></tr>
+<tr class="memitem:a6dc8b653f149ed08a554fa8161370e6c" id="r_a6dc8b653f149ed08a554fa8161370e6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64Log_8h.html#a6dc8b653f149ed08a554fa8161370e6c">__oledErr</a>(...)</td></tr>
 <tr class="separator:a6dc8b653f149ed08a554fa8161370e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac80041e20850303135455b2da04768aa" id="r_ac80041e20850303135455b2da04768aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64Log_8h.html#ac80041e20850303135455b2da04768aa">__oledEntry</a>(...)</td></tr>
 <tr class="separator:ac80041e20850303135455b2da04768aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +129,11 @@ Macros</h2></td></tr>
 <tr class="memitem:a2543e3d1c72d9e9935558d6f75726f8e" id="r_a2543e3d1c72d9e9935558d6f75726f8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled128x64Log_8h.html#a2543e3d1c72d9e9935558d6f75726f8e">__oledLog1</a>(...)</td></tr>
 <tr class="separator:a2543e3d1c72d9e9935558d6f75726f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Logging macros for OLED 128x64 driver; Supports error, entry/exit, and detailed debug logs. </p>
+
+<p class="definition">Definition in file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ac80041e20850303135455b2da04768aa" name="ac80041e20850303135455b2da04768aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac80041e20850303135455b2da04768aa">&#9670;&#160;</a></span>__oledEntry</h2>
 
@@ -135,6 +150,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00026">26</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
+
 </div>
 </div>
 <a id="a6dc8b653f149ed08a554fa8161370e6c" name="a6dc8b653f149ed08a554fa8161370e6c"></a>
@@ -148,10 +165,12 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="espLogWrapper_8h.html#ae4a087be859761fbaee51301d54afc1c">__sys_err</a>(  __VA_ARGS__ )</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00020">20</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
 
 </div>
 </div>
@@ -171,6 +190,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00027">27</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
+
 </div>
 </div>
 <a id="acd469369950feb5978bbbf42f53850d7" name="acd469369950feb5978bbbf42f53850d7"></a>
@@ -188,6 +209,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00032">32</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
 
 </div>
 </div>
@@ -207,6 +230,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00037">37</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
+
 </div>
 </div>
 <a id="a85c97a68cfabf55fe28409a8464d542a" name="a85c97a68cfabf55fe28409a8464d542a"></a>
@@ -220,6 +245,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="oled128x64Log_8h_source.html#l00015">15</a> of file <a class="el" href="oled128x64Log_8h_source.html">oled128x64Log.h</a>.</p>
 
 </div>
 </div>
