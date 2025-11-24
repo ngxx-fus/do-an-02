@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "DO-AN-02", "index.html", [
+    [ "About project", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -52,8 +53,8 @@ var NAVTREEINDEX =
 [
 "BebasNeue__Bold10pt7b_8h.html",
 "globals_d.html",
-"lcd32Cmd_8h.html#a692c1112eb61cd501763924a1bcc79c2",
-"projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7"
+"lcd32Cmd_8h.html#a3b342bb903af4115a6e3011f8d0f143a",
+"projectConfig_8h.html#a1cfef2a62ed0c60c148158e708250d2c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

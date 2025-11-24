@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['xadvance_0',['xAdvance',['../structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2',1,'GFXglyph']]],
-  ['xoffset_1',['xOffset',['../structGFXglyph.html#ab030bd9aeb37509ccc94ae3dcec4de98',1,'GFXglyph']]],
-  ['xy_5ft_2',['xy_t',['../oled128x64Definitions_8h.html#a4a866609d9773434a60de3bfe7b66596',1,'oled128x64Definitions.h']]]
+  ['uint8_5farray_0',['UINT8_ARRAY',['../spi_8c.html#a1ee570ae5603433a9f70638b729d6952',1,'spi.c']]],
+  ['unused_1',['UNUSED',['../projectConfig_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7aa09b651ef326a9d8efcee5cc5b720ab4',1,'projectConfig.h']]],
+  ['useful_20links_2',['Useful links',['../index.html#autotoc_md11',1,'']]]
 ];

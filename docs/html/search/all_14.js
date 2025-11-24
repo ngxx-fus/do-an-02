@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['yadvance_0',['yAdvance',['../structGFXfont.html#ac2c2f0184b810a562be808fbb98822fa',1,'GFXfont']]],
-  ['yoffset_1',['yOffset',['../structGFXglyph.html#a96b2c0dbe314bf053cdc0d5c622e76a7',1,'GFXglyph']]]
+  ['w_0',['w',['../structlcd32ControlPin__t.html#a8477cc220f35660bcc3ed76153dcc0da',1,'lcd32ControlPin_t']]],
+  ['width_1',['width',['../structoled128x64Dev__t.html#a19fba19e939bcf653531d534bd463aa0',1,'oled128x64Dev_t::width'],['../structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1',1,'GFXglyph::width']]],
+  ['working_20tree_2',['working tree',['../index.html#autotoc_md10',1,'Full working-tree'],['../index.html#autotoc_md5',1,'Working-tree']]]
 ];
