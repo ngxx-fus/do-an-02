@@ -1,4 +1,4 @@
-#include "../config/generalConfig.h"
+#include "../config/projectConfig.h"
 
 #if ESP32_DEVICE_MODE == SENDER
     #include "sender.h"

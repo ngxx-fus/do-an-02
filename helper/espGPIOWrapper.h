@@ -1,65 +1,50 @@
 #ifndef __ESP_GPIO_WRAPPER_H__
 #define __ESP_GPIO_WRAPPER_H__
 
-#include <stdint.h>             /// fixed-width integer types (uint8_t, int32_t, etc.)
-#include <stdlib.h>             /// fixed-width integer types (uint8_t, int32_t, etc.)
-#include <stdbool.h>            /// boolean type (true/false)
-#include <stdarg.h>             /// variable arguments (va_list, va_start, va_end)
+#include <stdint.h>             /// Standard fixed-width integer types
+#include <stdlib.h>             /// Standard library definitions (malloc, free, etc.)
+#include <stdbool.h>            /// Boolean type definitions
+#include <stdarg.h>             /// Variable argument handling
 
-#include "driver/gpio.h"        /// high-level GPIO driver (gpio_set_level, gpio_get_level, gpio_config)
-#include "esp_log.h"            /// logging utilities (ESP_LOGI, ESP_LOGE, ESP_LOGD, etc.)
-#include "esp_timer.h"          /// system timer API (esp_timer_get_time, esp_timer_start_once, esp_tim
+#include "driver/gpio.h"        /// ESP-IDF High-level GPIO driver
+#include "esp_log.h"            /// ESP logging utilities
+#include "esp_timer.h"          /// High-resolution timer API
 
 #include "rom/ets_sys.h"        /// ROM functions (ets_printf, ets_delay_us)
-#include "hal/gpio_ll.h"        /// low-level GPIO control (gpio_ll_set_level, gpio_ll_get_level)
-#include "soc/gpio_struct.h"    /// direct register access: GPIO register structure
-#include "soc/gpio_reg.h"       /// GPIO register addresses and bit fields
+#include "hal/gpio_ll.h"        /// Low-level GPIO hardware abstraction layer
+#include "soc/gpio_struct.h"    /// GPIO hardware register structure
+#include "soc/gpio_reg.h"       /// GPIO register addresses and bit masks
+
+/// @brief Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type
+/// @param pin_bit_mask Bitmask of the GPIO(s) to configure
+/// @param mode         GPIO mode (e.g., GPIO_MODE_INPUT, GPIO_MODE_OUTPUT)
+/// @param pull_up_en   Enable/Disable pull-up resistor
+/// @param pull_down_en Enable/Disable pull-down resistor
+/// @param intr_type    Interrupt type (e.g., GPIO_INTR_POSEDGE, GPIO_INTR_DISABLE)
+void GPIOConfig(uint64_t pin_bit_mask, gpio_mode_t mode, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en, gpio_int_type_t intr_type);
+
+/// @brief Configure GPIO(s) as output with no internal pull resistors and interrupts disabled
+/// @param pin_bit_mask Bitmask of the GPIO(s) to configure
+void GPIOConfigAsOutput(uint64_t pin_bit_mask);
+
+/// @brief Configure GPIO(s) as input with no internal pull resistors and interrupts disabled
+/// @param pin_bit_mask Bitmask of the GPIO(s) to configure
+void GPIOConfigAsInput(uint64_t pin_bit_mask);
+
+/* --- Direct Register Access Macros (Faster than HAL) --- */
+
+/// @brief Fast set High for GPIO 0-31 (Write 1 to Set)
+#define GPIOSetHigh(GPIO_MASK)  GPIO.out_w1ts = (GPIO_MASK)
+
+/// @brief Fast set Low for GPIO 0-31 (Write 1 to Clear)
+#define GPIOSetLow(GPIO_MASK)   GPIO.out_w1tc = (GPIO_MASK)
+
+/// @brief Fast set High for GPIO 32-64 (Write 1 to Set - High Register)
+#define GPIOSetHigh1(GPIO_MASK) GPIO.out1_w1ts = (GPIO_MASK)  
+
+/// @brief Fast set Low for GPIO 32-64 (Write 1 to Clear - High Register)
+#define GPIOSetLow1(GPIO_MASK)  GPIO.out1_w1tc = (GPIO_MASK)  
 
 // typedef void IRAM_ATTR (isrFunc_t)(void *pv);
 
-// static void setupISR(){
-//     static int8_t isSetup = 0;
-//     if(isSetup > 0) return ; 
-//     isSetup = 1;
-//     gpio_install_isr_service(ESP_INTR_FLAG_IRAM);
-// }
-
-// static void gpioSetOutpin(uint64_t gpioPinMask){
-//     gpio_config_t outPin = {
-//         .intr_type = GPIO_INTR_DISABLE,
-//         .mode = GPIO_MODE_OUTPUT,
-//         .pin_bit_mask = gpioPinMask,
-//         .pull_down_en = GPIO_PULLDOWN_DISABLE,
-//         .pull_up_en = GPIO_PULLUP_DISABLE,
-//     };
-//     gpio_config(&outPin);
-// }
-
-// static void gpioSetInput(uint64_t gpioPinMask){
-//     gpio_config_t inPin = {
-//         .intr_type      = GPIO_INTR_POSEDGE,
-//         .mode           = GPIO_MODE_INPUT,
-//         .pin_bit_mask   = gpioPinMask,
-//         .pull_down_en   = GPIO_PULLDOWN_DISABLE,
-//         .pull_up_en     = GPIO_PULLUP_DISABLE
-//     };
-//     gpio_config(&inPin);
-// }
-
-// void gpioSetISR(pin_t pin, isrFunc_t *isr){
-//     setupISR();
-//     gpio_isr_handler_add(pin, isr, (void*) pin);
-// }
-
-// static void gpioSetState(pin_t pin, level_t level){
-//     if (level)
-//         GPIO.out_w1ts = (1 << pin);
-//     else
-//         GPIO.out_w1tc = (1 << pin);
-// }
-
-// static def gpioGetState(pin_t pin){
-//     return (GPIO.out & __mask32(pin)) ? 0x1 : 0x0;
-// }
-
-#endif 
+#endif

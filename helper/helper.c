@@ -1,6 +1,4 @@
-#include "helper.h"
-#include "stdint.h"
-#include "return.h"
+#include "general.h"
 
 unsigned int genRandNum(unsigned int seed_input) {
     // --- 1. Persistent state ---
@@ -46,6 +44,42 @@ unsigned int genRandNum(unsigned int seed_input) {
     return last_known_random_state;
 }
 
+void GPIOConfig(uint64_t pin_bit_mask, gpio_mode_t mode, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en, gpio_int_type_t intr_type){
+    if(pull_up_en < 0)      pull_up_en = GPIO_PULLUP_DISABLE;
+    if(pull_down_en < 0)    pull_down_en = GPIO_PULLUP_DISABLE;
+    if(intr_type < 0)        pull_down_en = GPIO_PULLUP_DISABLE;
+    gpio_config_t pin = {
+        .pin_bit_mask = pin_bit_mask,
+        .mode = mode,
+        .intr_type = intr_type,
+        .pull_up_en = pull_up_en,
+        .pull_down_en = pull_down_en,
+    };
+    gpio_config(&pin);
+}
+
+void GPIOConfigAsOutput(uint64_t pin_bit_mask){
+    gpio_config_t pin = {
+        .pin_bit_mask = pin_bit_mask,
+        .mode = GPIO_MODE_OUTPUT,
+        .intr_type = GPIO_PULLUP_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLUP_DISABLE,
+    };
+    gpio_config(&pin);
+}
+
+void GPIOConfigAsInput(uint64_t pin_bit_mask){
+    gpio_config_t pin = {
+        .pin_bit_mask = pin_bit_mask,
+        .mode = GPIO_MODE_INPUT,
+        .intr_type = GPIO_PULLUP_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLUP_DISABLE,
+    };
+    gpio_config(&pin);
+}
+
 const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret) {
     switch (ret) {
         case OKE:                 return STR_OKE;
@@ -69,3 +103,34 @@ const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret) {
         default:                  return "UNKNOWN_RETURN_CODE";
     }
 }
+
+/// @brief Atomically set a bit (Thread-safe)
+/// @param f Pointer to the safeFlag_t variable
+/// @param i Bit position (0-31)
+void __safeFlagSet(safeFlag_t *f, uint32_t i) {
+    atomic_fetch_or(f, (1UL << i));
+}
+
+/// @brief Atomically clear a bit (Thread-safe)
+/// @param f Pointer to the safeFlag_t variable
+/// @param i Bit position (0-31)
+void __safeFlagClear(safeFlag_t *f, uint32_t i) {
+    atomic_fetch_and(f, ~(1UL << i));
+}
+
+/// @brief Atomically toggle a bit (Thread-safe)
+/// @param f Pointer to the safeFlag_t variable
+/// @param i Bit position (0-31)
+void __safeFlagToggle(safeFlag_t *f, uint32_t i) {
+    atomic_fetch_xor(f, (1UL << i));
+}
+
+/// @brief Atomically check if a bit is set (Thread-safe)
+/// @param f The safeFlag_t variable (passed by value is fine for read, but ptr is consistent)
+/// @param i Bit position (0-31)
+/// @return true if set, false otherwise
+bool __safeFlagHas(safeFlag_t *f, uint32_t i) {
+    return (atomic_load(f) & (1UL << i)) != 0U;
+}
+
+
