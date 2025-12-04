@@ -1,8 +1,6 @@
 var files_dup =
 [
-    [ "comDriver", "dir_5724be1d21e72eab604b54d0448d9810.html", "dir_5724be1d21e72eab604b54d0448d9810" ],
-    [ "config", "dir_9f351d46ce3cc29445a41dc3a31e6919.html", "dir_9f351d46ce3cc29445a41dc3a31e6919" ],
-    [ "fonts", "dir_f315b379889fde23168cba3fe99c18a3.html", "dir_f315b379889fde23168cba3fe99c18a3" ],
-    [ "helper", "dir_d634f21e635b1ea642c8b957ecf78b4f.html", "dir_d634f21e635b1ea642c8b957ecf78b4f" ],
-    [ "main", "dir_5c982d53a68cdbcd421152b4020263a9.html", "dir_5c982d53a68cdbcd421152b4020263a9" ]
+    [ "AppConfig", "dir_5c802121822b9487483564a303f5d564.html", "dir_5c802121822b9487483564a303f5d564" ],
+    [ "AppUtils", "dir_4c306e4d49174244cbf514078df11fdc.html", "dir_4c306e4d49174244cbf514078df11fdc" ],
+    [ "Main", "dir_f4e982bca5d979afcf7d664254407d09.html", "dir_f4e982bca5d979afcf7d664254407d09" ]
 ];

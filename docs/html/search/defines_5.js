@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['esp32_5fdevice_5fmode_0',['esp32_device_mode',['../generalConfig_8h.html#a0c0f15f7fed286557d68c043857d2a7a',1,'ESP32_DEVICE_MODE:&#160;generalConfig.h'],['../projectConfig_8h.html#a0c0f15f7fed286557d68c043857d2a7a',1,'ESP32_DEVICE_MODE:&#160;projectConfig.h']]]
+  ['lcd32_5fbl_0',['LCD32_BL',['../DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45',1,'DevicePinout.h']]],
+  ['lcd32_5fcs_1',['LCD32_CS',['../DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f',1,'DevicePinout.h']]],
+  ['lcd32_5fdb0_2',['LCD32_DB0',['../DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507',1,'DevicePinout.h']]],
+  ['lcd32_5fdb1_3',['LCD32_DB1',['../DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87',1,'DevicePinout.h']]],
+  ['lcd32_5fdb10_4',['LCD32_DB10',['../DevicePinout_8h.html#a823ab6d619e8f42672471192ba26c42b',1,'DevicePinout.h']]],
+  ['lcd32_5fdb11_5',['LCD32_DB11',['../DevicePinout_8h.html#af40d92c425e867615a7ad20678fbab47',1,'DevicePinout.h']]],
+  ['lcd32_5fdb12_6',['LCD32_DB12',['../DevicePinout_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5',1,'DevicePinout.h']]],
+  ['lcd32_5fdb13_7',['LCD32_DB13',['../DevicePinout_8h.html#a8b48bf476e1766d463f6465c2ff626e6',1,'DevicePinout.h']]],
+  ['lcd32_5fdb14_8',['LCD32_DB14',['../DevicePinout_8h.html#a18493351e8f4ca7bc008e55a4e6dad90',1,'DevicePinout.h']]],
+  ['lcd32_5fdb15_9',['LCD32_DB15',['../DevicePinout_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8',1,'DevicePinout.h']]],
+  ['lcd32_5fdb2_10',['LCD32_DB2',['../DevicePinout_8h.html#a7ccfa9d6755fa155ec0b784ecc676131',1,'DevicePinout.h']]],
+  ['lcd32_5fdb3_11',['LCD32_DB3',['../DevicePinout_8h.html#adf7a03a06529c34ac20f93d20e736b0e',1,'DevicePinout.h']]],
+  ['lcd32_5fdb4_12',['LCD32_DB4',['../DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5',1,'DevicePinout.h']]],
+  ['lcd32_5fdb5_13',['LCD32_DB5',['../DevicePinout_8h.html#a203f3f7cdb0f1c15904a5689b6712b16',1,'DevicePinout.h']]],
+  ['lcd32_5fdb6_14',['LCD32_DB6',['../DevicePinout_8h.html#aabb4f25721a4eb712b8a7014b250143f',1,'DevicePinout.h']]],
+  ['lcd32_5fdb7_15',['LCD32_DB7',['../DevicePinout_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4',1,'DevicePinout.h']]],
+  ['lcd32_5fdb8_16',['LCD32_DB8',['../DevicePinout_8h.html#a24c3b713895c807586a1404f0a40dc29',1,'DevicePinout.h']]],
+  ['lcd32_5fdb9_17',['LCD32_DB9',['../DevicePinout_8h.html#a13ff3b2b3273b72adba617c58656d101',1,'DevicePinout.h']]],
+  ['lcd32_5frd_18',['LCD32_RD',['../DevicePinout_8h.html#ac115546f885b68ebb1ddb7f986e768b6',1,'DevicePinout.h']]],
+  ['lcd32_5frs_19',['LCD32_RS',['../DevicePinout_8h.html#a1b3df9a20cd27485d44dff7dce866b97',1,'DevicePinout.h']]],
+  ['lcd32_5frst_20',['LCD32_RST',['../DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2',1,'DevicePinout.h']]],
+  ['lcd32_5fwr_21',['LCD32_WR',['../DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb',1,'DevicePinout.h']]]
 ];

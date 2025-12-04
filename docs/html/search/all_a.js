@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['height_0',['height',['../structoled128x64Dev__t.html#a7ccdb2d87b9f8c9588d5c032c652a42d',1,'oled128x64Dev_t::height'],['../gfxfont_8h.html#adcf201a8aabf55cb352ec05331242594',1,'height:&#160;gfxfont.h']]],
-  ['helper_1',['2nd-level | [06] helper',['../index.html#autotoc_md8',1,'']]],
-  ['helper_2ec_2',['helper.c',['../helper_8c.html',1,'']]],
-  ['helper_2eh_3',['helper.h',['../helper_8h.html',1,'']]],
-  ['high_4',['HIGH',['../param_8h.html#aabece0e68a1756b282874047655a1e2ea0c3a1dacf94061154b3ee354359c5893',1,'param.h']]]
+  ['oke_0',['OKE',['../ReturnType_8h.html#ac87d656a4f798fa79cff22420ef38e78acec5520cb9a3d6cc9acc1900586b7452',1,'ReturnType.h']]],
+  ['oled_5fscl_1',['oled_scl',['../DevicePinout_8h.html#ad3ddbbb48cad4c34406916e199b89122',1,'OLED_SCL:&#160;DevicePinout.h'],['../DevicePinout_8h.html#ad3ddbbb48cad4c34406916e199b89122',1,'OLED_SCL:&#160;DevicePinout.h']]],
+  ['oled_5fsda_2',['oled_sda',['../DevicePinout_8h.html#afbf31d4d5bad7fd61418b8b8036df96c',1,'OLED_SDA:&#160;DevicePinout.h'],['../DevicePinout_8h.html#afbf31d4d5bad7fd61418b8b8036df96c',1,'OLED_SDA:&#160;DevicePinout.h']]]
 ];

@@ -1,1 +1,0 @@
-/home/fus/.fus/esp-idf/components/mbedtls/mbedtls/library/error.c

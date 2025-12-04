@@ -1,5 +1,0 @@
-<map id="configI2CDevice" name="configI2CDevice">
-<area shape="rect" id="Node000001" title="Configure I2C device pins and options." alt="" coords="195,5,321,31"/>
-<area shape="rect" id="Node000002" href="$oled128x64_8c.html#aa943f5b20ff91c81bf8380e302306945" title="Configure the OLED device I²C pins and communication parameters." alt="" coords="5,5,147,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,21,147,21,147,15,181,15"/>
-</map>

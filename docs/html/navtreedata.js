@@ -25,37 +25,24 @@
 var NAVTREE =
 [
   [ "DO-AN-02", "index.html", [
-    [ "About project", "index.html", "index" ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", "globals_defs" ]
+        [ "Macros", "globals_defs.html", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "Examples", "examples.html", "examples" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"BebasNeue__Bold10pt7b_8h.html",
-"flag_8h.html#a346d653b45b5adf949dcdfbe5ca581a5",
-"i2cHelper_8h.html#a8f204c74fbf2ffc97dcdf5d121e160b0",
-"lcd32Helper_8h.html#ab44517ac413dabb6593790948a486f6e",
-"projectConfig_8h.html#a522e24eb599eab6d1ec4b1ae5a3a12b2"
+"AppConfig_2All_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

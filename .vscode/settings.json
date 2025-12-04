@@ -102,6 +102,11 @@
         "freeserifbolditalic9pt7b.h": "c",
         "freeserifbolditalic18pt7b.h": "c",
         "freeserifbolditalic24pt7b.h": "c",
-        "string.h": "c"
-    }
+        "string.h": "c",
+        "cbuff.h": "c",
+        "projectconfig.h": "c",
+        "osc_ui.h": "c",
+        "myapp.h": "c"
+    },
+    "idf.pythonInstallPath": "/home/codespace/.python/current/bin/python"
 }

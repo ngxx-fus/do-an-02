@@ -1,9 +1,0 @@
-<map id="i2cSetTransmitBuffer" name="i2cSetTransmitBuffer">
-<area shape="rect" id="Node000001" title="Set transmit buffer for I2C." alt="" coords="357,31,515,56"/>
-<area shape="rect" id="Node000002" href="$oled128x64_8c.html#a21eeb3d57d6ace23b9ebc4ec1feb9eb2" title="Flush the current framebuffer (canvas) to the OLED display." alt="" coords="193,5,278,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,34,278,26,279,21,344,29"/>
-<area shape="rect" id="Node000004" href="$oled128x64_8c.html#a6b1bf354181db197ae9e4518a9de02f2" title="Initialize and start up the OLED device (send initialization sequence)." alt="" coords="161,55,309,80"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,57,310,61,309,56,343,52"/>
-<area shape="rect" id="Node000003" href="$oled128x64_8c.html#a3b6fe6cc54256f6371999a88e7a7db88" title="Draw text with line param instead of row index of baseline." alt="" coords="5,5,113,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,21,114,21,114,15,179,15"/>
-</map>

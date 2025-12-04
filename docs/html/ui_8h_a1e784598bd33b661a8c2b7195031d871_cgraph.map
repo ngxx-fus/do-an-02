@@ -1,9 +1,0 @@
-<map id="screenControlTask" name="screenControlTask">
-<area shape="rect" id="Node000001" title="Task to handle screen updates, rendering, and power states based on event flags." alt="" coords="5,55,147,80"/>
-<area shape="rect" id="Node000002" href="$lcd32_8c.html#aa9c10dee02914271f009a038a0244d93" title=" " alt="" coords="205,5,345,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,52,209,31,211,37,129,57"/>
-<area shape="rect" id="Node000003" href="$lcd32_8c.html#a52626ad127d92f73c3f5dd9669cbff0f" title=" " alt="" coords="211,55,339,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,65,197,65,197,70,147,70"/>
-<area shape="rect" id="Node000004" href="$lcd32_8c.html#a1996b7286b52a98b154e6f0f0edfeb01" title=" " alt="" coords="195,104,356,129"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="129,77,211,98,209,103,127,83"/>
-</map>
