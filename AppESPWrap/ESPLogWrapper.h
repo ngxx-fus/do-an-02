@@ -4,12 +4,21 @@
 #ifndef __ESP_CUSTOM_LOG_H__
 #define __ESP_CUSTOM_LOG_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppESPWrap/ESPLogWrapper.h")
+#endif
+
 #include <stdio.h>              /// Standard input/output definitions
 #include <stdarg.h>             /// Macros for variable arguments
 #include "esp_timer.h"          /// ESP32 timer functions (esp_timer_get_time)
 #include "esp_system.h"         /// ESP32 system APIs
 
 #include "../AppConfig/SystemLog.h"
+
 
 /// Auto-Config
 #if (1 == 1)
@@ -121,6 +130,10 @@
     #define SysExitVer(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysExitVer(fmt, ...)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif // __ESP_CUSTOM_LOG_H__

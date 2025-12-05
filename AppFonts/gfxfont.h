@@ -2,6 +2,15 @@
 #define _GFFFONT_H_
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppFonts/gfxfont.h")
+#endif
+
+
 #define PROGMEM
 
 typedef struct GFXglyph{ // Data stored PER GLYPH
@@ -17,5 +26,9 @@ typedef struct GFXfont{ // Data stored for FONT AS A WHOLE:
 	uint8_t   first, last; // ASCII extents
 	uint8_t   yAdvance;    // Newline distance (y axis)
 } GFXfont;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

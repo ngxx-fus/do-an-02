@@ -1,6 +1,14 @@
 #ifndef __FONT_UTILS_H__
 #define __FONT_UTILS_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppFonts/AppFont.h")
+#endif
+
 #include "gfxfont.h"
 #include "localFonts/FreeSerifBoldItalic24pt7b.h"
 #include "localFonts/FreeSerifBoldItalic18pt7b.h"
@@ -20,5 +28,9 @@ extern GFXfont    fontHeading01;
 extern GFXfont    fontHeading02;
 extern GFXfont    fontHeading03;
 extern GFXfont    fontNote;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif 

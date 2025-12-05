@@ -5,6 +5,10 @@
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppConfig/SystemLog.h")
+#endif
+
 #include <stdint.h>
 #include <stdlib.h>
 

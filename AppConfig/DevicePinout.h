@@ -1,12 +1,19 @@
-#ifndef __PINOUT_H__
+#ifndef __DEVICE_PINOUT_H__
 #define __DEVICE_PINOUT_H__
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppConfig/DevicePinout.h")
+#endif
+
 #include <stdint.h>
 #include <stdlib.h>
+
+#include "FirmwareType.h"
+#include "Components.h"
 
 /// @brief Type of a GPIO
 typedef int8_t Pin_t;
@@ -18,35 +25,16 @@ enum PIN_STATE {
     PIN_NOT_FOUND = -3
 };
 
-#if FIRMWARE_TYPE == TYPE_SENDER
-
-    #define PIN0            ((Pin_t)4)
-    #define PIN1            ((Pin_t)16)
-    #define PIN2            ((Pin_t)5)
-    #define PIN3            ((Pin_t)17)
-
-    #define BTN0            ((Pin_t)14)
-
-    #define OLED_SDA        ((Pin_t)21)
-    #define OLED_SCL        ((Pin_t)22)
-
+#if (FIRMWARE_TYPE == TYPE_SENDER)
+    /// Reserved
 #endif 
 
-#if FIRMWARE_TYPE == TYPE_RECEIVER
-
-    #define PIN0            PIN_UNUSED
-    #define PIN1            PIN_UNUSED
-    #define PIN2            PIN_UNUSED
-    #define PIN3            PIN_UNUSED
-
-    #define BTN0            PIN_UNUSED
-
-    #define OLED_SCL        PIN_UNUSED
-    #define OLED_SDA        PIN_UNUSED
-
+#if (FIRMWARE_TYPE == TYPE_RECEIVER)
+    /// Reserved
 #endif 
 
-#if FIRMWARE_TYPE == TYPE_ANALYZER_MASTER
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) && \
+    (EN_DRIVER_P16 == ENABLE)
 
     #define LCD32_DB0       18    
     #define LCD32_DB1       12
@@ -77,8 +65,8 @@ enum PIN_STATE {
 
 #if FIRMWARE_TYPE == TYPE_ANALYZER_READER
     /// Reserved
-
 #endif
+
 
 
 #ifdef __cplusplus

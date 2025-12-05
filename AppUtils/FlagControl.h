@@ -8,6 +8,10 @@
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppUtils/FlagControl.h")
+#endif
+
 /// Standard input/output definitions
 #include <stdio.h>
 /// Fixed-width integer types (uint8_t, int32_t, etc.)

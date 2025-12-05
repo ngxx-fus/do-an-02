@@ -1,6 +1,15 @@
 #ifndef __APP_UTILS_LOOP_H__
 #define __APP_UTILS_LOOP_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppUtils/Loop.h")
+#endif
+
+
 #include <stdint.h>
 
 /// @brief Loop forward from `a` to `b-1`.
@@ -34,5 +43,9 @@
 /// @param N End value (exclusive).
 #define REPN(i, a, b) for(int32_t i = (0); (i) < (N); ++(i))
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /// __APP_UTILS_LOOP_H__

@@ -8,6 +8,10 @@
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppUtils/Arithmetic.h")
+#endif
+
 /// Standard definitions for NULL, size_t
 #include <stddef.h>
 /// Fixed-width integer types
@@ -61,7 +65,7 @@ extern "C" {
 ///          Otherwise, it reseeds the generator with the new value.
 /// @param SeedInput The input seed. Pass a negative value (e.g., -1) to continue the sequence.
 /// @return A pseudo-random integer in the range [0, 9999] (or customized range).
-unsigned int GenerateRandomNumber(int32_t SeedInput);
+uint32_t GenerateRandomNumber(uint32_t SeedInput);
 
 #ifdef __cplusplus
 }

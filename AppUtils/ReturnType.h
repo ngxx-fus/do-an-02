@@ -4,6 +4,14 @@
 #ifndef __RETURN_H__
 #define __RETURN_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppUtils/ReturnType.h")
+#endif
+
 #include "stdio.h"
 #include "stdint.h"
 
@@ -70,5 +78,9 @@ typedef enum {
 /// @param  ret The status code
 /// @return const char* String description
 const char* DefaultReturnType2Str(DefaultRet_t ret);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __RETURN_H__

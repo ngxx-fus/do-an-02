@@ -4,6 +4,14 @@
 #ifndef __ESP_GPIO_WRAPPER_H__
 #define __ESP_GPIO_WRAPPER_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppESPWrap/ESPGPIOWrapper.h")
+#endif
+
 #include <stdint.h>             /// Standard fixed-width integer types
 #include <stdlib.h>             /// Standard library definitions (malloc, free, etc.)
 #include <stdbool.h>            /// Boolean type definitions
@@ -28,7 +36,7 @@ void IOConfig(uint64_t pin_bit_mask, gpio_mode_t mode, gpio_pullup_t pull_up_en,
 
 /// @brief Configure GPIO(s) as output with no internal pull resistors and interrupts disabled
 /// @param pin_bit_mask Bitmask of the GPIO(s) to configure
-void void IOConfigAsOutput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en);
+void IOConfigAsOutput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en);
 
 /// @brief Configure GPIO(s) as input with no internal pull resistors and interrupts disabled
 /// @param pin_bit_mask Bitmask of the GPIO(s) to configure
@@ -47,5 +55,9 @@ void IOConfigAsInput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulld
 #define GPIOSetLow1(GPIO_MASK)  GPIO.out1_w1tc = (GPIO_MASK)  
 
 // typedef void IRAM_ATTR (isrFunc_t)(void *pv);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

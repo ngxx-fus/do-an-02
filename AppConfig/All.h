@@ -5,12 +5,17 @@
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppConfig/All.h")
+#endif /// PRINT_HEADER_COMPILE_MESSAGE
+
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "firmwareType.h"
-#include "devicePinout.h"
-#include "systemLog.h"
+#include "FirmwareType.h"
+#include "Components.h"
+#include "DevicePinout.h"
+#include "SystemLog.h"
 
 #ifdef __cplusplus
 }

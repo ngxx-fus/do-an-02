@@ -5,6 +5,10 @@
 extern "C" {
 #endif
 
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppConfig/FirmwareType.h")
+#endif
+
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -18,7 +22,7 @@ extern "C" {
 #define TYPE_ANALYZER_READER    3
 
 /// @brief Configuration selection
-#define FIRMWARE_TYPE   TYPE_RECEIVER
+#define FIRMWARE_TYPE   TYPE_ANALYZER_MASTER
 
 /// @brief Firmware type enumeration
 typedef enum {

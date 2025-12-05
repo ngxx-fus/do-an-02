@@ -4,23 +4,27 @@
 #ifndef __ESP_MULTITASK_WRAPPER__
 #define __ESP_MULTITASK_WRAPPER__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef PRINT_HEADER_COMPILE_MESSAGE
+#pragma message ("AppESPWrap/ESPFreeRTOSWrapper.h")
+#endif
+
 #include "freertos/FreeRTOS.h"   /// Core FreeRTOS definitions
 #include "freertos/task.h"       /// Task management
 #include "freertos/semphr.h"     /// Semaphores and Mutexes
 
-/// CRITICAL SECTION //////////////////////////////////////////////////////////
-
-#ifndef __enterCriticalSection
+#ifndef EnterCriticalSection
     /// Enter critical section (disable interrupts) - Use with care!
-    #define __enterCriticalSection(mutex_ptr)   taskENTER_CRITICAL(mutex_ptr)
+    #define EnterCriticalSection(mutex_ptr)   taskENTER_CRITICAL(mutex_ptr)
 #endif
 
-#ifndef __exitCriticalSection
+#ifndef ExitCriticalSection
     /// Exit critical section (restore interrupts)
-    #define __exitCriticalSection(mutex_ptr)    taskEXIT_CRITICAL(mutex_ptr)
+    #define ExitCriticalSection(mutex_ptr)    taskEXIT_CRITICAL(mutex_ptr)
 #endif
-
-/// TIME & DELAY //////////////////////////////////////////////////////////////
 
 /// Convert Milliseconds to Ticks (Auto handle portTICK_PERIOD_MS)
 #define MsToTicks(ms)           (pdMS_TO_TICKS(ms))
@@ -99,5 +103,10 @@
 
 /// Delete Semaphore/Mutex
 #define DeleteSem(sem)          vSemaphoreDelete(sem)
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __ESP_MULTITASK_WRAPPER__
