@@ -79,15 +79,11 @@ extern "C" {
 /// Delete a task (NULL for current task)
 #define DeleteTask(handle)      vTaskDelete(handle)
 
-/// TASK NOTIFICATION /////////////////////////////////////////////////////////
-
 /// Wait for notification (Block indefinitely)
 #define WaitForNotify(val_ptr)  ulTaskNotifyTake(pdTRUE, portMAX_DELAY)
 
 /// Send notification to a task
 #define NotifyTask(handle)      xTaskNotifyGive(handle)
-
-/// MUTEX & SEMAPHORE /////////////////////////////////////////////////////////
 
 /// Create a standard Mutex
 #define CreateMutex()           xSemaphoreCreateMutex()

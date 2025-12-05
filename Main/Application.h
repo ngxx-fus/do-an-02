@@ -17,7 +17,15 @@
 /// @brief Application's firmware
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
     #include "../AppCore/AnalyzerMaster/All.h"
-#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
+#endif
+
+void Log1(void * pv){
+    SysEntry("Log1");
+    while (1){
+        SysLog("[Log1    ] Running...");
+        DelayMs(103);
+    }
+}
 
 
 #endif

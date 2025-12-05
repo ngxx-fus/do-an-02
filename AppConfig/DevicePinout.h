@@ -19,11 +19,20 @@ extern "C" {
 typedef int8_t Pin_t;
 
 /// @brief States of pin
-enum PIN_STATE {
+enum PIN_STATE_e {
     PIN_UNUSED = -1,
     PIN_INVALID = -2,
     PIN_NOT_FOUND = -3
 };
+
+/// @brief Check if pin is valid (0-63)
+#define IsValidPin(p)       (((p) >= 0) && ((p) < 64))
+
+/// @brief Check if pin is in standard range (0-31) for GPIO_OUT_REG
+#define IsStandardPin(p)    (((p) >= 0) && ((p) < 32))
+
+/// @brief Check if pin is in extended range (32-63) for GPIO_OUT1_REG
+#define IsExtendedPin(p)    (((p) >= 32) && ((p) < 64))
 
 #if (FIRMWARE_TYPE == TYPE_SENDER)
     /// Reserved

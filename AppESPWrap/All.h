@@ -12,6 +12,11 @@ extern "C" {
 #include <stdint.h>
 #include <stdlib.h>
 
+#include <rom/ets_sys.h>
+
+/// This help the lib more readable!
+#include "../AppConfig/All.h"
+
 #include "./ESPGPIOWrapper.h"
 #include "./ESPLogWrapper.h"
 #include "./ESPFreeRTOSWrapper.h"

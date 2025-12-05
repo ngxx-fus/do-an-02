@@ -33,9 +33,9 @@ typedef enum {
 } eFirmwareType;
 
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
-    #pragma message ("Config: Analyzer Master (UX/UI included)")
+    // #pragma message ("Config: Analyzer Master (UX/UI included)")
 #elif (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
-    #pragma message ("Config: Analyzer Reader (Signal logic included)")
+    // #pragma message ("Config: Analyzer Reader (Signal logic included)")
 #endif
 
 #ifdef __cplusplus

@@ -26,6 +26,30 @@ extern "C" {
 #include "soc/gpio_struct.h"    /// GPIO hardware register structure
 #include "soc/gpio_reg.h"       /// GPIO register addresses and bit masks
 
+/// @brief Get input level of all GPIO 0-31 (Atomic, Fast)
+/// @return 32-bit raw value (Bit N = GPIO N status)
+#define IOStandardGet()              (GPIO.in)
+
+/// @brief Get input level of all GPIO 32-39+ (Atomic, Fast)
+/// @return 32-bit raw value (Bit N = GPIO 32+N status)
+#define IOExtendedGet()              (GPIO.in1.val)
+
+/// @brief Set output level High for GPIO 0-31 (Atomic, Fast)
+/// @param mask Bitmask of pins to set (1 bit = 1 pin)
+#define IOStandardSet(mask)          (GPIO.out_w1ts = (uint32_t)(mask))
+
+/// @brief Set output level Low for GPIO 0-31 (Atomic, Fast)
+/// @param mask Bitmask of pins to clear
+#define IOStandardClr(mask)          (GPIO.out_w1tc = (uint32_t)(mask))
+
+/// @brief Set output level High for GPIO 32-39+ (Atomic, Fast)
+/// @param mask Bitmask relative to the high bank (bit 0 = GPIO 32)
+#define IOExtendedSet(mask)          (GPIO.out1_w1ts.val = (uint32_t)(mask))
+
+/// @brief Set output level Low for GPIO 32-39+ (Atomic, Fast)
+/// @param mask Bitmask relative to the high bank
+#define IOExtendedClr(mask)          (GPIO.out1_w1tc.val = (uint32_t)(mask))
+
 /// @brief Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type
 /// @param pin_bit_mask Bitmask of the GPIO(s) to configure
 /// @param mode         GPIO mode (e.g., GPIO_MODE_INPUT, GPIO_MODE_OUTPUT)
@@ -41,6 +65,20 @@ void IOConfigAsOutput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pull
 /// @brief Configure GPIO(s) as input with no internal pull resistors and interrupts disabled
 /// @param pin_bit_mask Bitmask of the GPIO(s) to configure
 void IOConfigAsInput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en);
+
+/// @brief Configure GPIO as Input/Output Open-Drain with Internal Pull-up
+/// @param pin_bit_mask Bit mask of the pin
+void IOConfigAsInputOutputODPullUp(uint64_t pin_bit_mask);
+
+/// @brief Configure GPIO as Input and Output (Bidirectional)
+/// @param pin_bit_mask Bit mask of the pin
+/// @param pull_up_en Enable internal pull-up
+/// @param pull_down_en Enable internal pull-down
+void IOConfigAsInputOutput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en);
+
+/// @brief Configure GPIO as Output Open-Drain with Internal Pull-up enabled
+/// @param pin_bit_mask Bit mask of the pin
+void IOConfigAsOutputODPullUp(uint64_t pin_bit_mask);
 
 /// @brief Fast set High for GPIO 0-31 (Write 1 to Set)
 #define GPIOSetHigh(GPIO_MASK)  GPIO.out_w1ts = (GPIO_MASK)

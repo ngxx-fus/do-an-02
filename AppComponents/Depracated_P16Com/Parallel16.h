@@ -3,8 +3,8 @@
 
 #include <string.h>
 
-#include "../../AppConfig/All.h"
-#include "../../AppUtils/All.h"
+#include "AppConfig/All.h"
+#include "AppUtils/All.h"
 
 #include "Parallel16Def.h"
 #include "Parallel16Utils.h"

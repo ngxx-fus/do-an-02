@@ -61,9 +61,6 @@ extern "C" {
 /// @param i Bit position (0-63)
 #define InvMask64(i)       ((uint64_t)(~(1ULL << (i))))
 
-
-/* --- VARIADIC MACRO HELPERS (Internal Use) --- */
-
 // These macros are internal expansion helpers used to implement the variadic functionality.
 // They apply function 'f' (e.g., Mask32) to each argument and bitwise-OR them together.
 

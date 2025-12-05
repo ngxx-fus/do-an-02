@@ -8,9 +8,8 @@
 extern "C" {
 #endif
 
-#include "../../AppConfig/DevicePinout.h"
-#include "../../AppUtils/ReturnType.h"
-#include "../../AppUtils/FlagControl.h"
+#include "AppConfig/All.h"
+#include "AppUtils/All.h"
 
 
 #define P16_COMMAND_MODE    0       ///< Command mode identifier (for RS Pin_t).

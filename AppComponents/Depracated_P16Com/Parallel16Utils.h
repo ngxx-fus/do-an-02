@@ -8,8 +8,8 @@
 #include "espLogWrapper.h"      /// Custom Logging wrapper
 #include "Parallel16Def.h"      /// Driver Definitions
 
-#include "../../AppUtils/All.h"
-#include "../../AppESPWrap/All.h"
+#include "AppUtils/All.h"
+#include "AppESPWrap/All.h"
 
 #define P16_LOG_ENTRY_L0_EN     1
 #define P16_LOG_EXIT_L0_EN      1

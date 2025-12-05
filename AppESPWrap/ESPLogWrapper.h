@@ -17,8 +17,8 @@ extern "C" {
 #include "esp_timer.h"          /// ESP32 timer functions (esp_timer_get_time)
 #include "esp_system.h"         /// ESP32 system APIs
 
+/// This help the lib more readable!
 #include "../AppConfig/SystemLog.h"
-
 
 /// Auto-Config
 #if (1 == 1)
@@ -54,6 +54,29 @@ extern "C" {
         #define SYSTEM_LOG_ENTRY_L2_EN      1
     #endif
 #endif
+
+#if (SYSTEM_SAFE_THREAD_LOG_EN == 1)
+    #include "freertos/FreeRTOS.h"   /// Core FreeRTOS definitions
+    #include "freertos/task.h"       /// Task management
+    #include "freertos/semphr.h"     /// Semaphores and Mutexes
+
+    /// @brief Spinlock to protect printing resource (UART)
+    extern portMUX_TYPE __LogSpinLock;
+
+    /// @brief Thread-safe logging wrapper function
+    /// @param fmt Format string (printf style)
+    /// @param ... Variable arguments
+    void CoreLog(const char *fmt, ...);
+
+#elif (SYSTEM_SAFE_THREAD_LOG_EN == 0)
+    #define CoreLog ets_printf
+#else 
+    #ifdef SYSTEM_SAFE_THREAD_LOG_EN
+        #undef SYSTEM_SAFE_THREAD_LOG_EN
+    #endif 
+    #define SYSTEM_SAFE_THREAD_LOG_EN 0
+    #error("[AppESPWrap.c] SYSTEM_SAFE_THREAD_LOG_EN is not correct!")
+#endif /// (SYSTEM_SAFE_THREAD_LOG_EN == 1)
 
 /// ERROR LOGGING
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_ERR_EN) && SYSTEM_ERR_EN == 1)
@@ -105,29 +128,29 @@ extern "C" {
 
 /// ENTRY/EXIT TRACES
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_ENTRY_L1_EN) && SYSTEM_LOG_ENTRY_L1_EN == 1)
-    /// Log function entry trace (Level 1) with [-->] tag
-    #define SysEntry(fmt, ...)      ets_printf("[%lld] [-->] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    /// Log function entry trace (Level 1) with [>>>] tag
+    #define SysEntry(fmt, ...)      ets_printf("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysEntry(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_ENTRY_L2_EN) && SYSTEM_LOG_ENTRY_L2_EN == 1)
-    /// Log function entry trace (Level 2/Verbose) with [-->] tag
-    #define SysEntryVer(fmt, ...)   ets_printf("[%lld] [-->] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    /// Log function entry trace (Level 2/Verbose) with [>>>] tag
+    #define SysEntryVer(fmt, ...)   ets_printf("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysEntryVer(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_EXIT_L1_EN) && SYSTEM_LOG_EXIT_L1_EN == 1)
-    /// Log function exit trace (Level 1) with [<--] tag
-    #define SysExit(fmt, ...)       ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    /// Log function exit trace (Level 1) with [<<<] tag
+    #define SysExit(fmt, ...)       ets_printf("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysExit(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_EXIT_L2_EN) && SYSTEM_LOG_EXIT_L2_EN == 1)
-    /// Log function exit trace (Level 2/Verbose) with [<--] tag
-    #define SysExitVer(fmt, ...)    ets_printf("[%lld] [<--] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    /// Log function exit trace (Level 2/Verbose) with [<<<] tag
+    #define SysExitVer(fmt, ...)    ets_printf("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysExitVer(fmt, ...)
 #endif

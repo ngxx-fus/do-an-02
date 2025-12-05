@@ -41,7 +41,7 @@ extern "C" {
 /// @brief Loop forward using int32_t.
 /// @param i Loop variable.
 /// @param N End value (exclusive).
-#define REPN(i, a, b) for(int32_t i = (0); (i) < (N); ++(i))
+#define REPN(i, N) for(int32_t i = (0); (i) < (N); ++(i))
 
 
 #ifdef __cplusplus
