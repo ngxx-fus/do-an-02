@@ -1,7 +1,15 @@
 <map id="AppConfig/DevicePinout.h" name="AppConfig/DevicePinout.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,196,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="19,79,89,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,32,71,69,67,66,91,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="113,79,184,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,30,136,66,131,69,106,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="63,5,252,33"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="50,157,121,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,36,44,54,27,67,13,82,9,99,16,116,30,132,50,147,45,149,27,136,11,119,3,100,8,80,23,63,41,49,83,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="195,157,264,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,31,269,49,287,63,301,80,306,99,299,118,285,135,266,150,264,146,281,132,295,116,301,99,296,82,283,67,266,54,229,36"/>
+<area shape="rect" id="Node000004" href="$FirmwareType_8h.html" title=" " alt="" coords="23,81,148,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,36,111,72,107,68,146,32"/>
+<area shape="rect" id="Node000005" href="$Components_8h.html" title=" " alt="" coords="172,81,287,109"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="171,31,209,70,204,70,170,36"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="87,107,88,142,83,140,84,111"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="112,107,193,148,188,150,111,112"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="206,109,126,152,123,147,201,110"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="231,107,232,142,227,140,228,111"/>
 </map>

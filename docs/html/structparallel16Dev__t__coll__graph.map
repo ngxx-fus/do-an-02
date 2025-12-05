@@ -1,0 +1,11 @@
+<map id="parallel16Dev_t" name="parallel16Dev_t">
+<area shape="rect" id="Node000001" title="Main device structure for a 16&#45;bit parallel interface." alt="" coords="62,207,186,234"/>
+<area shape="rect" id="Node000002" href="$unionP16DatPin__t.html" title="Union for 16&#45;bit data Pin_ts (array or struct access)." alt="" coords="14,106,114,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,145,96,181,115,206,109,206,92,184,74,150"/>
+<area shape="rect" id="Node000003" href="$struct____Data16Pin__t.html" title="Struct for 16&#45;bit data Pin_ts (individual Pin_t access)." alt="" coords="5,5,120,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,46,66,106,61,105,62,51"/>
+<area shape="rect" id="Node000004" href="$unionP16CtlPin__t.html" title="Union for control Pin_ts (array or struct access)." alt="" coords="138,106,233,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,146,134,208,130,204,167,147"/>
+<area shape="rect" id="Node000005" href="$struct____ctlPin__t.html" title="Struct for control Pin_ts (individual Pin_t access)." alt="" coords="144,5,227,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,46,188,106,183,105,184,51"/>
+</map>

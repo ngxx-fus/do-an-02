@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['invmask16_0',['InvMask16',['../BitOp_8h.html#a55afec614094d3502684af61052bd60d',1,'BitOp.h']]],
-  ['invmask32_1',['InvMask32',['../BitOp_8h.html#aa885fae9d18ea8a8f9d8eaef30ab7637',1,'BitOp.h']]],
-  ['invmask64_2',['InvMask64',['../BitOp_8h.html#ad9d38a7912e6963e11578b1f6aed39fc',1,'BitOp.h']]],
-  ['invmask8_3',['InvMask8',['../BitOp_8h.html#ab6cd0cb4abad5f83158c316162148615',1,'BitOp.h']]],
-  ['isneg_4',['IsNeg',['../Arithmetic_8h.html#ab4453547a19d7f112bda8591a6e20548',1,'Arithmetic.h']]],
-  ['isnotneg_5',['IsNotNeg',['../Arithmetic_8h.html#a678ff667e724469369fc79d7dc1032d1',1,'Arithmetic.h']]],
-  ['isnotnull_6',['IsNotNull',['../Arithmetic_8h.html#aa4fc6a229314f7fefcb814471e6b3b68',1,'Arithmetic.h']]],
-  ['isnotpos_7',['IsNotPos',['../Arithmetic_8h.html#a0a595483fe3b05bfca107e1bcdc182e9',1,'Arithmetic.h']]],
-  ['isnotzero_8',['IsNotZero',['../Arithmetic_8h.html#a47d63abb8aadb689254f85f247905d2d',1,'Arithmetic.h']]],
-  ['isnull_9',['IsNull',['../Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3',1,'Arithmetic.h']]],
-  ['ispos_10',['IsPos',['../Arithmetic_8h.html#a649aba20b83ac0e5c63fbf4a1ebf9529',1,'Arithmetic.h']]],
-  ['iszero_11',['IsZero',['../Arithmetic_8h.html#af240ff757229758aec4293869448a8b2',1,'Arithmetic.h']]]
+  ['defaulttexth_0',['DefaultTextH',['../AppFont_8h.html#a06f416bb3392f0670ab1792b5ad6c5c8',1,'AppFont.h']]],
+  ['delayms_1',['DelayMs',['../ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf',1,'ESPFreeRTOSWrapper.h']]],
+  ['deletesem_2',['DeleteSem',['../ESPFreeRTOSWrapper_8h.html#a97bf5bb414011225053f1a4f14b1a969',1,'ESPFreeRTOSWrapper.h']]],
+  ['deletetask_3',['DeleteTask',['../ESPFreeRTOSWrapper_8h.html#a69787a571fd1cd6e881a7c4887e95ba4',1,'ESPFreeRTOSWrapper.h']]],
+  ['disable_4',['DISABLE',['../Components_8h.html#a99496f7308834e8b220f7894efa0b6ab',1,'Components.h']]]
 ];

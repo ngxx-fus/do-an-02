@@ -1,0 +1,19 @@
+<map id="AppConfig/DevicePinout.h" name="AppConfig/DevicePinout.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="100,5,289,33"/>
+<area shape="rect" id="Node000002" href="$Parallel16Def_8h.html" title=" " alt="" coords="5,81,202,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,46,130,82,125,79,170,42"/>
+<area shape="rect" id="Node000006" href="$AppConfig_2All_8h.html" title=" " alt="" coords="226,90,346,117"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="220,41,274,89,269,90,220,46"/>
+<area shape="rect" id="Node000003" href="$Parallel16_8h.html" title=" " alt="" coords="29,266,226,311"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,138,33,154,19,175,13,196,19,217,42,244,73,265,68,267,39,248,14,220,7,196,14,173,29,151,51,133"/>
+<area shape="rect" id="Node000005" href="$Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="29,174,226,218"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="113,138,125,174,119,173,113,143"/>
+<area shape="rect" id="Node000004" href="$Parallel16_8c.html" title=" " alt="" coords="29,359,226,404"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,325,130,360,125,358,126,329"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="129,231,130,267,125,265,126,236"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="281,130,267,176,240,220,210,247,177,268,174,264,207,243,236,217,262,174,278,134"/>
+<area shape="rect" id="Node000007" href="$Application_8h.html" title=" " alt="" coords="300,182,443,210"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="309,126,362,182,357,182,308,131"/>
+<area shape="rect" id="Node000008" href="$Application_8c.html" title=" " alt="" coords="301,275,442,302"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="373,223,374,276,369,273,370,227"/>
+</map>

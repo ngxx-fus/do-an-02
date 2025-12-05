@@ -1,11 +1,13 @@
 var searchData=
 [
-  ['firmware_5ftype_0',['FIRMWARE_TYPE',['../FirmwareType_8h.html#a083c27320094447ee7d1062dd0a735c8',1,'FirmwareType.h']]],
-  ['firmwaretype_2eh_1',['FirmwareType.h',['../FirmwareType_8h.html',1,'']]],
-  ['flag_5ft_2',['Flag_t',['../FlagControl_8h.html#a83f5cbba84b12a6bca6ff95681dab7fa',1,'FlagControl.h']]],
-  ['flagcontrol_2eh_3',['FlagControl.h',['../FlagControl_8h.html',1,'']]],
-  ['fwt_5fanalyzer_5fmaster_4',['FWT_Analyzer_Master',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64af2838967718ede9715bf9214da4a7c23',1,'FirmwareType.h']]],
-  ['fwt_5fanalyzer_5freader_5',['FWT_Analyzer_Reader',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64a6fa263fd057c49df8a9dfc924b355a80',1,'FirmwareType.h']]],
-  ['fwt_5freceiver_6',['FWT_Receiver',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64a6799ec33e0951b319469a4d4b18acf34',1,'FirmwareType.h']]],
-  ['fwt_5fsender_7',['FWT_Sender',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64aaaebf67972319f6f7fa0cced46d6efa8',1,'FirmwareType.h']]]
+  ['comdriver_0',['2nd-level | [02] comDriver',['../index.html#autotoc_md8',1,'']]],
+  ['components_2eh_1',['Components.h',['../Components_8h.html',1,'']]],
+  ['createmutex_2',['CreateMutex',['../ESPFreeRTOSWrapper_8h.html#a701ede93d6060433e5a1d04e4a87c44e',1,'ESPFreeRTOSWrapper.h']]],
+  ['createtaskany_3',['CreateTaskAny',['../ESPFreeRTOSWrapper_8h.html#aef049bbd6581974cc60eb839ceef021b',1,'ESPFreeRTOSWrapper.h']]],
+  ['createtaskcpu0_4',['CreateTaskCPU0',['../ESPFreeRTOSWrapper_8h.html#a2e999ee7a57d32fc1cb14396e63c7271',1,'ESPFreeRTOSWrapper.h']]],
+  ['createtaskcpu1_5',['CreateTaskCPU1',['../ESPFreeRTOSWrapper_8h.html#a92175c48dd4a9816512524130bdfdab4',1,'ESPFreeRTOSWrapper.h']]],
+  ['createtaskpinned_6',['CreateTaskPinned',['../ESPFreeRTOSWrapper_8h.html#a19e9dd52420d92f7524ab42fc52cc259',1,'ESPFreeRTOSWrapper.h']]],
+  ['cs_7',['cs',['../struct____ctlPin__t.html#a1a1d8857dd2ea307f1b4db6d96d328c4',1,'__ctlPin_t']]],
+  ['ctlpin_8',['CtlPin',['../structparallel16Dev__t.html#a942337c3e0b06fbcd58c3a2f838aac85',1,'parallel16Dev_t']]],
+  ['ctlpinmask_9',['CtlPinMask',['../structparallel16Dev__t.html#a919cdd1bb407adce868f13c3ed99d615',1,'parallel16Dev_t']]]
 ];

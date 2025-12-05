@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['default_5freturn_5fstatus_0',['DEFAULT_RETURN_STATUS',['../ReturnType_8h.html#ac87d656a4f798fa79cff22420ef38e78',1,'ReturnType.h']]]
+  ['defaultret_5fe_0',['DefaultRet_e',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5',1,'ReturnType.h']]]
 ];

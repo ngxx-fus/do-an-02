@@ -13,5 +13,5 @@ var Arithmetic_8h =
     [ "Max", "Arithmetic_8h.html#a4886a8f966a69949cefc46a6a3468006", null ],
     [ "Min", "Arithmetic_8h.html#a9e04209162ea72f9985338596262b657", null ],
     [ "STR", "Arithmetic_8h.html#a18d295a837ac71add5578860b55e5502", null ],
-    [ "GenerateRandomNumber", "Arithmetic_8h.html#aebe2eac9f2d9bf95cd234cc5fd9da036", null ]
+    [ "GenerateRandomNumber", "Arithmetic_8h.html#a1f3555c6e2d86c5b1c8fc4fb00dff6bf", null ]
 ];
