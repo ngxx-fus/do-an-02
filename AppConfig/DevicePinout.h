@@ -9,7 +9,7 @@ extern "C" {
 #include <stdlib.h>
 
 /// @brief Type of a GPIO
-typedef int8_t pin_t;
+typedef int8_t Pin_t;
 
 /// @brief States of pin
 enum PIN_STATE {
@@ -20,15 +20,15 @@ enum PIN_STATE {
 
 #if FIRMWARE_TYPE == TYPE_SENDER
 
-    #define PIN0            ((pin_t)4)
-    #define PIN1            ((pin_t)16)
-    #define PIN2            ((pin_t)5)
-    #define PIN3            ((pin_t)17)
+    #define PIN0            ((Pin_t)4)
+    #define PIN1            ((Pin_t)16)
+    #define PIN2            ((Pin_t)5)
+    #define PIN3            ((Pin_t)17)
 
-    #define BTN0            ((pin_t)14)
+    #define BTN0            ((Pin_t)14)
 
-    #define OLED_SDA        ((pin_t)21)
-    #define OLED_SCL        ((pin_t)22)
+    #define OLED_SDA        ((Pin_t)21)
+    #define OLED_SCL        ((Pin_t)22)
 
 #endif 
 

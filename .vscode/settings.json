@@ -106,7 +106,18 @@
         "cbuff.h": "c",
         "projectconfig.h": "c",
         "osc_ui.h": "c",
-        "myapp.h": "c"
+        "myapp.h": "c",
+        "appfont.h": "c",
+        "picopixel.h": "c",
+        "systemlog.h": "c",
+        "all.h": "c",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "flagcontrol.h": "c",
+        "returntype.h": "c",
+        "parallel16utils.h": "c",
+        "parallel16def.h": "c",
+        "arithmetic.h": "c"
     },
     "idf.pythonInstallPath": "/home/codespace/.python/current/bin/python"
 }

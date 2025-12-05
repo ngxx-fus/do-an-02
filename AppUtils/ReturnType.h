@@ -7,50 +7,68 @@
 #include "stdio.h"
 #include "stdint.h"
 
+#define ESP_ERR_CONVERT_EN  0
+
 /// Default return type
-typedef int32_t def;
+typedef int32_t DefaultRet_t;
 
-#define STR_OKE                "OKE"
-#define STR_ERR                "ERR"
-#define STR_ERR_NULL           "ERR_NULL"
-#define STR_ERR_MALLOC_FAILED  "ERR_MALLOC_FAILED"
-#define STR_ERR_TIMEOUT        "ERR_TIMEOUT"
-#define STR_ERR_BUSY           "ERR_BUSY"
-#define STR_ERR_INVALID_ARG    "ERR_INVALID_ARG"
-#define STR_ERR_OVERFLOW       "ERR_OVERFLOW"
-#define STR_ERR_UNDERFLOW      "ERR_UNDERFLOW"
-#define STR_ERR_NOT_FOUND      "ERR_NOT_FOUND"
-#define STR_ERR_ALREADY_EXISTS "ERR_ALREADY_EXISTS"
-#define STR_ERR_NOT_IMPLEMENTED "ERR_NOT_IMPLEMENTED"
-#define STR_ERR_UNSUPPORTED    "ERR_UNSUPPORTED"
-#define STR_ERR_IO             "ERR_IO"
-#define STR_ERR_PERMISSION     "ERR_PERMISSION"
-#define STR_ERR_CRC            "ERR_CRC"
-#define STR_ERR_INIT_FAILED    "ERR_INIT_FAILED"
-#define STR_ERR_PSRAM_FAILED   "STR_ERR_PSRAM_FAILED"
+#define STR_STAT_OKE                    "STAT_OKE"
+#define STR_STAT_ERR                    "STAT_ERR"
+#define STR_STAT_ERR_NULL               "STAT_ERR_NULL"
+#define STR_STAT_ERR_MALLOC_FAILED      "STAT_ERR_MALLOC_FAILED"
+#define STR_STAT_ERR_TIMEOUT            "STAT_ERR_TIMEOUT"
+#define STR_STAT_ERR_BUSY               "STAT_ERR_BUSY"
+#define STR_STAT_ERR_INVALID_ARG        "STAT_ERR_INVALID_ARG"
+#define STR_STAT_ERR_INVALID_STATE      "STAT_ERR_INVALID_STATE"
+#define STR_STAT_ERR_INVALID_SIZE       "STAT_ERR_INVALID_SIZE"
+#define STR_STAT_ERR_OVERFLOW           "STAT_ERR_OVERFLOW"
+#define STR_STAT_ERR_UNDERFLOW          "STAT_ERR_UNDERFLOW"
+#define STR_STAT_ERR_NOT_FOUND          "STAT_ERR_NOT_FOUND"
+#define STR_STAT_ERR_ALREADY_EXISTS     "STAT_ERR_ALREADY_EXISTS"
+#define STR_STAT_ERR_NOT_IMPLEMENTED    "STAT_ERR_NOT_IMPLEMENTED"
+#define STR_STAT_ERR_UNSUPPORTED        "STAT_ERR_UNSUPPORTED"
+#define STR_STAT_ERR_IO                 "STAT_ERR_IO"
+#define STR_STAT_ERR_PERMISSION         "STAT_ERR_PERMISSION"
+#define STR_STAT_ERR_CRC                "STAT_ERR_CRC"
+#define STR_STAT_ERR_INIT_FAILED        "STAT_ERR_INIT_FAILED"
+#define STR_STAT_ERR_PSRAM_FAILED       "STAT_ERR_PSRAM_FAILED"
+#define STR_STAT_UNKNOWN                "STAT_UNKNOWN"
 
-/// Standardized return status codes for functions.
-enum DEFAULT_RETURN_STATUS {
-    OKE                 = 0,   ///< Success
-    ERR                 = -1,  ///< Generic error
-    ERR_NULL            = -2,  ///< Null pointer passed
-    ERR_MALLOC_FAILED   = -3,  ///< Memory allocation failed
-    ERR_TIMEOUT         = -4,  ///< Timeout occurred
-    ERR_BUSY            = -5,  ///< Resource/device is busy
-    ERR_INVALID_ARG     = -6,  ///< Invalid argument
-    ERR_OVERFLOW        = -7,  ///< Buffer/variable overflow
-    ERR_UNDERFLOW       = -8,  ///< Buffer/variable underflow
-    ERR_NOT_FOUND       = -9,  ///< Resource not found
-    ERR_ALREADY_EXISTS  = -10, ///< Resource already exists
-    ERR_NOT_IMPLEMENTED = -11, ///< Functionality not implemented
-    ERR_UNSUPPORTED     = -12, ///< Unsupported operation
-    ERR_IO              = -13, ///< Input/Output error
-    ERR_PERMISSION      = -14, ///< Permission denied
-    ERR_CRC             = -15, ///< CRC check failed (data corrupted)
-    ERR_INIT_FAILED     = -16, ///< Initialization failed
-    ERR_PSRAM_FAILED    = -17, ///< 
-};
+typedef enum {
+    STAT_OKE                     = 0,   ///< Success
+    STAT_ERR                     = -1,  ///< Generic error
+    STAT_ERR_NULL                = -2,  ///< Null pointer passed
+    STAT_ERR_MALLOC_FAILED       = -3,  ///< Memory allocation failed
+    STAT_ERR_TIMEOUT             = -4,  ///< Timeout occurred
+    STAT_ERR_BUSY                = -5,  ///< Resource/device is busy
+    STAT_ERR_INVALID_ARG         = -6,  ///< Invalid argument
+    STAT_ERR_INVALID_STATE       = -7,  ///< Invalid state (e.g. not initialized)
+    STAT_ERR_INVALID_SIZE        = -8,  ///< Invalid size provided
+    STAT_ERR_OVERFLOW            = -9,  ///< Buffer/variable overflow
+    STAT_ERR_UNDERFLOW           = -10, ///< Buffer/variable underflow
+    STAT_ERR_NOT_FOUND           = -11, ///< Resource not found
+    STAT_ERR_ALREADY_EXISTS      = -12, ///< Resource already exists
+    STAT_ERR_NOT_IMPLEMENTED     = -13, ///< Functionality not implemented
+    STAT_ERR_UNSUPPORTED         = -14, ///< Unsupported operation
+    STAT_ERR_IO                  = -15, ///< Input/Output error
+    STAT_ERR_PERMISSION          = -16, ///< Permission denied
+    STAT_ERR_CRC                 = -17, ///< CRC check failed (data corrupted)
+    STAT_ERR_INIT_FAILED         = -18, ///< Initialization failed
+    STAT_ERR_PSRAM_FAILED        = -19, ///< PSRAM failure
+} DefaultRet_e;
 
-const char * getDefRetStat_Str(enum DEFAULT_RETURN_STATUS ret);
-
+#if (ESP_ERR_CONVERT_EN == 1)
+    #include "esp_err.h"
+    
+    /// @brief  Convert generic ESP return codes to project DefaultRet_t
+    /// @param  espErr ESP error code (int or esp_err_t)
+    /// @return DefaultRet_t Corresponding system status code
+    DefaultRet_t ESPReturnType2DefaultReturnType(int espErr);
 #endif
+
+/// @brief  Get string representation of a DefaultRet_t status
+/// @param  ret The status code
+/// @return const char* String description
+const char* DefaultReturnType2Str(DefaultRet_t ret);
+
+#endif // __RETURN_H__

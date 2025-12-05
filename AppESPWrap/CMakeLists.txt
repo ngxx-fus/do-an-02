@@ -1,6 +1,6 @@
 idf_component_register(
     SRCS
-        "Parallel16.c"
+        "AppESPWrap.c"
     INCLUDE_DIRS
         "."
 )

@@ -1,6 +1,4 @@
-#include "fontUtils.h"
-
-#pragma message("fontUtils.c is compiling...")
+#include "AppFont.h"
 
 GFXfont     mainFont        = FreeSerif9pt7b;
 GFXfont     fontTitle       = FreeSerifBoldItalic24pt7b;

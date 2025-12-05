@@ -1,6 +1,6 @@
 idf_component_register(
     SRCS
-        "Parallel16.c"
+        "LCD320x240.c"
     INCLUDE_DIRS
         "."
 )
