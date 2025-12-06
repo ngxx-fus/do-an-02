@@ -1,4 +1,7 @@
 #include "All.h"
+
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
+
 #include "driver/spi_slave.h"
 
 void TaskMonitor(void * pv) {
@@ -115,3 +118,5 @@ void TaskAnalyzerReader(void * pv) {
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
+
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_READER)

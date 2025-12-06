@@ -1,4 +1,6 @@
 #include "All.h"
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
+
 #include "driver/spi_master.h"
 
 LCD32Dev_t * lcd32 = NULL; 
@@ -377,3 +379,6 @@ void TaskAnalyzerReader(void * pv) {
         vTaskDelay(pdMS_TO_TICKS(MAIN_LOOP_DELAY_MS));
     }
 }
+
+
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
