@@ -24,10 +24,10 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
-{text:"Class Members",url:"functions.html",children:[
+{text:"Data Structures",url:"annotated.html",children:[
+{text:"Data Structures",url:"annotated.html"},
+{text:"Data Structure Index",url:"classes.html"},
+{text:"Data Fields",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
 {text:"b",url:"functions.html#index_b"},
@@ -62,7 +62,7 @@ var menudata={children:[
 {text:"y",url:"functions_vars.html#index_y"}]}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
-{text:"File Members",url:"globals.html",children:[
+{text:"Globals",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals_a.html#index_a"},
