@@ -1,0 +1,5 @@
+<map id="P16DatPin_t" name="P16DatPin_t">
+<area shape="rect" id="Node000001" title="Union for 16&#45;bit data Pin_ts (array or struct access)." alt="" coords="12,106,113,134"/>
+<area shape="rect" id="Node000002" href="$struct____Data16Pin__t.html" title="Struct for 16&#45;bit data Pin_ts (individual Pin_t access)." alt="" coords="5,5,120,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,47,65,106,60,105,60,50"/>
+</map>

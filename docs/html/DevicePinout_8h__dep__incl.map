@@ -1,0 +1,22 @@
+<map id="AppConfig/DevicePinout.h" name="AppConfig/DevicePinout.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="359,5,548,33"/>
+<area shape="rect" id="Node000002" href="$AppConfig_2All_8h.html" title=" " alt="" coords="394,81,514,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,47,456,82,451,79,452,51"/>
+<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,241,284,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,119,171,243,169,238,414,114"/>
+<area shape="rect" id="Node000004" href="$P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,232,494,277"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="442,121,428,158,407,233,403,230,423,156,438,124"/>
+<area shape="rect" id="Node000006" href="$AppESPWrap_2All_8h.html" title=" " alt="" coords="438,157,576,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="473,119,500,157,495,156,471,124"/>
+<area shape="rect" id="Node000008" href="$Application_8h.html" title=" " alt="" coords="744,241,886,268"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="498,113,788,239,783,241,497,118"/>
+<area shape="rect" id="Node000005" href="$P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,325,494,370"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,291,403,326,398,323,399,294"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="433,191,203,243,202,238,435,186"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="480,193,430,234,428,229,476,195"/>
+<area shape="rect" id="Node000007" href="$AppESPWrap_8c.html" title=" " alt="" coords="518,241,720,268"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="538,191,604,241,599,240,537,197"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="571,186,768,240,763,241,571,191"/>
+<area shape="rect" id="Node000009" href="$Application_8c.html" title=" " alt="" coords="744,334,886,361"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="817,282,817,335,813,331,813,286"/>
+</map>
