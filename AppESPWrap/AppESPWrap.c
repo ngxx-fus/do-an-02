@@ -84,28 +84,31 @@ void IOConfigAsInputOutputODPullUp(uint64_t pin_bit_mask){
     /// @param fmt Format string (printf style)
     /// @param ... Variable arguments
     void CoreLog(const char *fmt, ...) {
+
+        /// Enter Critical Section - Disable interrupts, lock other Cores
+        portENTER_CRITICAL(&__LogSpinLock);
+
         va_list args;
         static char log_buffer[256]; /// Temporary buffer
 
-        /// 1. Start argument processing
+        /// Start argument processing
         va_start(args, fmt);
 
-        /// 2. Format string into buffer first (Avoid holding lock during calculation)
+        /// Format string into buffer first (Avoid holding lock during calculation)
         /// vsnprintf is safer than vsprintf due to length limitation
         vsnprintf(log_buffer, sizeof(log_buffer), fmt, args);
 
-        /// 3. Enter Critical Section - Disable interrupts, lock other Cores
-        portENTER_CRITICAL(&__LogSpinLock);
+ 
 
-        /// 4. Print formatted string using low-level function
+        /// Print formatted string using low-level function
         /// The string is now continuous, preventing interleaving
         ets_printf("%s", log_buffer);
 
-        /// 5. Exit Critical Section
-        portEXIT_CRITICAL(&__LogSpinLock);
-
-        /// 6. End argument processing
+        /// End argument processing
         va_end(args);
+
+        /// Exit Critical Section
+        portEXIT_CRITICAL(&__LogSpinLock);
     }
 
 #endif /// (SYSTEM_SAFE_THREAD_LOG_EN == 1)

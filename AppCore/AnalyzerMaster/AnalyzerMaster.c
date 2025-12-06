@@ -1,4 +1,5 @@
 #include "All.h"
+#include "driver/spi_master.h"
 
 LCD32Dev_t * lcd32 = NULL; 
 
@@ -217,5 +218,162 @@ void TaskScreen(void * pv){
     // 5. Main loop: Test all drawing functions cyclically
     while (1){
         PerformScreenTest(lcd32);
+    }
+}
+
+void TaskAnalyzerReader(void * pv) {
+    AMEntry("TaskAnalyzerReader(%p)", pv);
+
+    // --- Constants ---
+    #define ANALYZER_CMD_READ_DATA      0x0A
+    #define READY_WAIT_TIMEOUT_MS       2000
+    #define MAIN_LOOP_DELAY_MS          1000
+
+    // --- Buffer Configuration ---
+    const size_t buffer_size_words = 4096;
+    const size_t buffer_size_bytes = buffer_size_words * sizeof(uint16_t);
+    
+    // This is a temporary linear buffer to receive data from a single SPI transaction.
+    // The data is then copied to the main circular buffer.
+    uint16_t *spi_rx_buffer = NULL;
+    // This is the main circular buffer to store incoming data stream.
+    CBuff_t *data_cbuff = NULL;
+
+    // --- Buffer Allocation ---
+    #if (LCD32_CANVAS_IN_PSRAM_EN == 1)
+        spi_rx_buffer = (uint16_t *)heap_caps_malloc(buffer_size_bytes, MALLOC_CAP_SPIRAM);
+        AMLog("[TaskAnalyzerReader] Allocating %d-byte temporary SPI RX buffer in PSRAM.", buffer_size_bytes);
+    #else
+        spi_rx_buffer = (uint16_t *)malloc(buffer_size_bytes);
+        AMLog("[TaskAnalyzerReader] Allocating %d-byte temporary SPI RX buffer in Internal RAM.", buffer_size_bytes);
+    #endif
+
+    if (IsNull(spi_rx_buffer)) {
+        AMErr("[TaskAnalyzerReader] Failed to allocate SPI buffer.");
+        vTaskDelete(NULL);
+        return;
+    }
+
+    // Create the main circular buffer, preferably in PSRAM.
+    data_cbuff = CBuffCreate(buffer_size_bytes, (LCD32_CANVAS_IN_PSRAM_EN == 1));
+    if (IsNull(data_cbuff)) {
+        AMErr("[TaskAnalyzerReader] Failed to create circular buffer.");
+        heap_caps_free(spi_rx_buffer);
+        vTaskDelete(NULL);
+        return;
+    }
+    AMLog("[TaskAnalyzerReader] Circular buffer created successfully (size: %d bytes).", buffer_size_bytes);
+
+    // --- GPIO Configuration ---
+    // Configure READY pin as input with pull-down, if it's enabled.
+    #if (ANALYZER_READER_PIN_READY != -1)
+        IOConfigAsInput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_ENABLE);
+        AMLog("[TaskAnalyzerReader] Configured READY pin (%d) as input.", ANALYZER_READER_PIN_READY);
+    #else
+        AMLog("[TaskAnalyzerReader] READY pin is disabled, will not wait for signal.");
+    #endif
+
+    // --- SPI Configuration ---
+    spi_bus_config_t buscfg = {
+        .miso_io_num = ANALYZER_MASTER_SPI_MISO,
+        .mosi_io_num = ANALYZER_MASTER_SPI_MOSI,
+        .sclk_io_num = ANALYZER_MASTER_SPI_SCLK,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = buffer_size_bytes,
+    };
+
+    // Note: SPI clock speed should be chosen based on the slave device's capability.
+    // Starting with a safe 10 MHz.
+    spi_device_interface_config_t devcfg = {
+        .clock_speed_hz = 10 * 1000 * 1000,
+        .mode = 0, // SPI mode 0
+        .spics_io_num = ANALYZER_MASTER_SPI_CS,
+        .queue_size = 7, // We want to be able to queue 7 transactions at a time
+        .command_bits = 8, // Use 8-bit command phase
+    };
+
+    spi_device_handle_t spi_handle;
+
+    // Initialize the SPI bus
+    esp_err_t ret = spi_bus_initialize(ANALYZER_READER_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    if (ret != ESP_OK) {
+        AMErr("[TaskAnalyzerReader] spi_bus_initialize failed: %s", esp_err_to_name(ret));
+        heap_caps_free(spi_rx_buffer);
+        vTaskDelete(NULL);
+        return;
+    }
+
+    // Attach the slave device to the SPI bus
+    ret = spi_bus_add_device(ANALYZER_READER_SPI_HOST, &devcfg, &spi_handle);
+    if (ret != ESP_OK) {
+        AMErr("[TaskAnalyzerReader] spi_bus_add_device failed: %s", esp_err_to_name(ret));
+        spi_bus_free(ANALYZER_READER_SPI_HOST);
+        heap_caps_free(spi_rx_buffer);
+        vTaskDelete(NULL);
+        return;
+    }
+
+    AMLog("[TaskAnalyzerReader] SPI Master initialized successfully.");
+
+    // --- Main Loop ---
+    while(1) {
+        bool proceed_with_transaction = false;
+
+        #if (ANALYZER_READER_PIN_READY != -1)
+            // Wait for the slave to be ready (active high)
+            AMLog("[TaskAnalyzerReader] Waiting for READY signal...");
+            int64_t start_time = esp_timer_get_time();
+            while(gpio_get_level(ANALYZER_READER_PIN_READY) == 0) {
+                if ((esp_timer_get_time() - start_time) / 1000 > READY_WAIT_TIMEOUT_MS) {
+                    AMLog("[TaskAnalyzerReader] Timeout waiting for READY signal. Retrying...");
+                    break;
+                }
+                vTaskDelay(pdMS_TO_TICKS(1)); // Yield to other tasks
+            }
+
+            if (gpio_get_level(ANALYZER_READER_PIN_READY) == 1) {
+                proceed_with_transaction = true;
+            }
+        #else
+            // If READY pin is disabled, always proceed.
+            proceed_with_transaction = true;
+        #endif
+
+        if (proceed_with_transaction) {
+            AMLog("[TaskAnalyzerReader] READY signal detected or bypassed. Starting transaction.");
+
+            // A single transaction that sends a command and then reads data.
+            // This is more efficient and ensures CS stays low during the whole process.
+            spi_transaction_t t;
+            memset(&t, 0, sizeof(t));
+            t.cmd = ANALYZER_CMD_READ_DATA;      // Command to send
+            t.length = buffer_size_bytes * 8;    // Total bits to READ
+            t.rx_buffer = spi_rx_buffer;         // Buffer to store received data
+
+            ret = spi_device_polling_transmit(spi_handle, &t);
+            if (ret == ESP_OK) {
+                // On success, t.rxlength is the number of bits read.
+                size_t bytes_read = t.rxlength / 8;
+                AMLog("[TaskAnalyzerReader] Command 0x%02X sent, read %d bytes from SPI.", (uint8_t)t.cmd, bytes_read);
+
+                    // --- Phase 3: Store data in Circular Buffer ---
+                    size_t bytes_written = CBuffWrite(data_cbuff, spi_rx_buffer, bytes_read);
+                    if (bytes_written < bytes_read) {
+                        AMErr("[TaskAnalyzerReader] Circular buffer is full! Discarded %d bytes.", bytes_read - bytes_written);
+                    } else {
+                        AMLog("[TaskAnalyzerReader] Wrote %d bytes to circular buffer.", bytes_written);
+                    }
+                    AMLog("[TaskAnalyzerReader] CBuff status: %u / %u bytes used.", CBuffGetDataCount(data_cbuff), data_cbuff->size);
+
+                    AMLog("[TaskAnalyzerReader] Data sample: 0x%04X 0x%04X 0x%04X 0x%04X ...",
+                          spi_rx_buffer[0], spi_rx_buffer[1], spi_rx_buffer[2], spi_rx_buffer[3]);
+            } else {
+                AMErr("[TaskAnalyzerReader] SPI transaction failed: %s", esp_err_to_name(ret));
+            }
+        }
+
+        // Wait before next cycle
+        vTaskDelay(pdMS_TO_TICKS(MAIN_LOOP_DELAY_MS));
     }
 }

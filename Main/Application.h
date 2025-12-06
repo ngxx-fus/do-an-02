@@ -5,19 +5,60 @@
 #pragma message ("Main/Application.h")
 #endif
 
-/// @brief Include project config
 #include "../AppConfig/All.h"
-
-/// @brief Include project utilities
 #include "../AppUtils/All.h"
-
-/// @brief Include  ESP's functions and freeRTOS wrapper
 #include "../AppESPWrap/All.h"
 
-/// @brief Application's firmware
+#include "../AppCore/SystemMonitor/All.h"
+
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
     #include "../AppCore/AnalyzerMaster/All.h"
-#endif
+
+    void AppInitialize(){
+        SysEntry("AppInitialize()");
+
+        #if (SYSTEM_MON_EN == 1)
+            SysLog("[AppInitialize] [+Task] TaskSystemMonitor");
+            CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
+        #endif
+
+        SysLog("[AppInitialize] [+Task] TaskScreen");
+        CreateTaskCPU1(TaskScreen, "TaskScreen", 4096, NULL, 2, NULL);
+
+        #if (ANALYZER_READER_EN == 1)
+            SysLog("[AppInitialize] [+Task] TaskAnalyzerReader");
+            CreateTaskCPU0(TaskAnalyzerReader, "TaskAnalyzerReader", 4096, NULL, 3, NULL);
+        #endif
+
+        SysExit("AppInitialize()");
+    }
+
+
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
+
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
+    #include "../AppCore/AnalyzerReader/All.h"
+
+    void AppInitialize(){
+        SysEntry("AppInitialize()");
+
+        #if (SYSTEM_MON_EN == 1)
+            SysLog("[AppInitialize] [+Task] TaskSystemMonitor");
+            CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
+        #endif
+
+        SysLog("[AppInitialize] [+Task] TaskMonitor");
+        CreateTaskCPU0(TaskMonitor, "TaskMonitor", 4096, NULL, 2, NULL);
+
+        #if (ANALYZER_READER_EN == 1)
+            SysLog("[AppInitialize] [+Task] TaskAnalyzerReader");
+            CreateTaskCPU1(TaskAnalyzerReader, "TaskAnalyzerReader", 4096, NULL, 3, NULL);
+        #endif
+
+        SysExit("AppInitialize()");
+    }
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
+
 
 
 #endif

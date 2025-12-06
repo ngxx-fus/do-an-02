@@ -6,4 +6,5 @@ idf_component_register(
     REQUIRES
         AppESPWrap
         LCD32
+        CBuff
 )
