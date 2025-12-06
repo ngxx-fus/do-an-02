@@ -1,5 +1,7 @@
 var P16Com_8h =
 [
+    [ "P16LutEntry_s", "structP16LutEntry__s.html", "structP16LutEntry__s" ],
+    [ "P16Lut_s", "structP16Lut__s.html", "structP16Lut__s" ],
     [ "P16Dev_t", "structP16Dev__t.html", "structP16Dev__t" ],
     [ "P16BlockingDelay", "P16Com_8h.html#a135be85b0318166f043cbc49783420ae", null ],
     [ "P16ClockCycle", "P16Com_8h.html#a7f082de15024925f52012e7a86b275c6", null ],
@@ -45,12 +47,14 @@ var P16Com_8h =
     [ "P16SetLowWritePin", "P16Com_8h.html#afa50efc55506e4540a1f6c8d59912079", null ],
     [ "P16Data_t", "P16Com_8h.html#ab3dbe1b9489144b25eac73c9b79d4bb4", null ],
     [ "P16Dev_t", "P16Com_8h.html#a0314f7c14047e0f24da90eef4e54a6d3", null ],
+    [ "P16Lut_t", "P16Com_8h.html#a28e5794618b18f7f8a61eb92d345e4e4", null ],
+    [ "P16LutEntry_t", "P16Com_8h.html#a5d54163a56e5818fbb48468c8a9d0d22", null ],
     [ "P16Size_t", "P16Com_8h.html#ab99f87512b2032cb2a70ad720c405cd1", null ],
     [ "P16ComPositiveStatusFlag_e", "P16Com_8h.html#aa0676f0c7a21fc30ededd0aaae84d57a", [
       [ "P16COM_INITIALIZED", "P16Com_8h.html#aa0676f0c7a21fc30ededd0aaae84d57aa2e00c45e8e4ea2fdc5ae7ecb265e9695", null ]
     ] ],
     [ "P16ComConfigCtl", "P16Com_8h.html#aee81d39be9e790673d65516e90141088", null ],
-    [ "P16ComConfigDat", "P16Com_8h.html#a050c6969975359190dbf43c7b7672f5f", null ],
+    [ "P16ComConfigDat", "P16Com_8h.html#af9d3250b810a084c6725b06c0b61968b", null ],
     [ "P16ComInit", "P16Com_8h.html#a7705594730141f8d8213378a645e6eef", null ],
     [ "P16ComMakeReset", "P16Com_8h.html#a771b9c483d5b54b5a79d22bdadc85285", null ],
     [ "P16ComNew", "P16Com_8h.html#a834c8f5c27cf72bcda1856f4969c2fe6", null ],

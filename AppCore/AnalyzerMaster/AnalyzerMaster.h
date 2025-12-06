@@ -21,6 +21,9 @@ extern LCD32Dev_t * lcd32;
 
 void TaskScreen(void * pv);
 
+/// @brief Task to periodically log system resource usage (Heap, Stack, etc.)
+void TaskSystemMonitor(void * pv);
+
 #ifdef __cplusplus
 }
 #endif

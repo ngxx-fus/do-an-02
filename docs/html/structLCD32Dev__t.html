@@ -101,9 +101,14 @@ Collaboration diagram for LCD32Dev_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="structLCD32Dev__t__coll__graph.png" border="0" usemap="#aLCD32Dev__t_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aLCD32Dev__t_coll__map" id="aLCD32Dev__t_coll__map">
-<area shape="rect" title="LCD Device Structure." alt="" coords="5,106,107,134"/>
-<area shape="rect" href="structP16Dev__t.html" title="Pinout structure for 16&#45;bit parallel communication." alt="" coords="14,5,98,33"/>
-<area shape="poly" title=" " alt="" coords="58,47,59,106,53,105,54,50"/>
+<area shape="rect" title="LCD Device Structure." alt="" coords="11,330,113,357"/>
+<area shape="rect" href="structP16Dev__t.html" title="Pinout structure for 16&#45;bit parallel communication." alt="" coords="156,229,240,257"/>
+<area shape="poly" title=" " alt="" coords="170,267,82,331,79,327,166,264"/>
+<area shape="rect" href="structP16Lut__s.html" title="Look&#45;Up Table structure for fast GPIO writes." alt="" coords="22,128,102,156"/>
+<area shape="poly" title=" " alt="" coords="59,168,56,229,58,285,63,330,57,329,52,285,51,229,58,174"/>
+<area shape="poly" title=" " alt="" coords="92,162,182,227,177,230,91,168"/>
+<area shape="rect" href="structP16LutEntry__s.html" title="Single entry in the LUT." alt="" coords="5,5,119,33"/>
+<area shape="poly" title=" " alt="" coords="62,46,65,128,59,127,62,51"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -113,23 +118,25 @@ Data Fields</h2></td></tr>
 <tr class="memitem:adcbfde8f65a33fc9f06347942f9676d9" id="r_adcbfde8f65a33fc9f06347942f9676d9"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="structP16Dev__t.html">P16Dev_t</a>&#160;&#160;&#160;<a class="el" href="#a4160dc524e15dd30a8885916cb802ee8">P16Com</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:adcbfde8f65a33fc9f06347942f9676d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base P16Com object (Allows casting to P16Dev_t*)  <a href="#a4160dc524e15dd30a8885916cb802ee8">More...</a><br /></td></tr>
 <tr class="memitem:"><td class="memItemLeft anon">&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ad62cd4f19b4718e2fa07b0df38be9f26" id="r_ad62cd4f19b4718e2fa07b0df38be9f26"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#ac2155dec105a4dafc71f639d67e7cc63">_pad_ctl_arr</a> [<a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a>]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:ad62cd4f19b4718e2fa07b0df38be9f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com Control pins (Read, Write, CS, RS, Reset)  <a href="#ac2155dec105a4dafc71f639d67e7cc63">More...</a><br /></td></tr>
+<tr class="memitem:a7ba5dfe589a826c960dc97e9fe152510" id="r_a7ba5dfe589a826c960dc97e9fe152510"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#a0e567e2e9d2dd84e1d8fefd9321f302e">__pad_ctl_arr</a> [<a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a>]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a7ba5dfe589a826c960dc97e9fe152510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com Control pins (Read, Write, CS, RS, Reset)  <a href="#a0e567e2e9d2dd84e1d8fefd9321f302e">More...</a><br /></td></tr>
 <tr class="memitem:a4bd3079cdcdcab7fe3ef4f0c841664e3" id="r_a4bd3079cdcdcab7fe3ef4f0c841664e3"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#abb259d89190837a3df58bca70b96fcf8">BrightLight</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:a4bd3079cdcdcab7fe3ef4f0c841664e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backlight Control Pin (Overlays on P16Com Reserved0)  <a href="#abb259d89190837a3df58bca70b96fcf8">More...</a><br /></td></tr>
-<tr class="memitem:a69ed112c1f8162bef1a0ed670e3f121a" id="r_a69ed112c1f8162bef1a0ed670e3f121a"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#a25e2a88fa50735f039d84d192d739e23">_pad_ctl_end</a> [<a class="el" href="P16Com_8h.html#a6604d7f41d100d1b3b06fa314c259e13">P16COM_CTL_PIN_NUM_W_PADDING</a> <br class="typebreak" />
+<tr class="memitem:a12e57bb35ee9862b4932b2260e1ab9be" id="r_a12e57bb35ee9862b4932b2260e1ab9be"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#a925f7a9527fcc275e188857166a317a8">__pad_ctl_end</a> [<a class="el" href="P16Com_8h.html#a6604d7f41d100d1b3b06fa314c259e13">P16COM_CTL_PIN_NUM_W_PADDING</a> <br class="typebreak" />
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- <a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a> - 1]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a69ed112c1f8162bef1a0ed670e3f121a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips remaining P16Com Control padding (Reserved1, Reserved2)  <a href="#a25e2a88fa50735f039d84d192d739e23">More...</a><br /></td></tr>
-<tr class="memitem:ac61e83eadefa7a9a825158e34ba199b9" id="r_ac61e83eadefa7a9a825158e34ba199b9"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#ab3428990c1f1f265051989b0e3823d64">_pad_dat_arr</a> [<a class="el" href="P16Com_8h.html#a891a9371da677f8e4fd543c526280cd4">P16COM_DAT_PIN_NUM_W_PADDING</a>]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:ac61e83eadefa7a9a825158e34ba199b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com Data pins (DatPinArr)  <a href="#ab3428990c1f1f265051989b0e3823d64">More...</a><br /></td></tr>
+<tr class="memdesc:a12e57bb35ee9862b4932b2260e1ab9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips remaining P16Com Control padding (Reserved1, Reserved2)  <a href="#a925f7a9527fcc275e188857166a317a8">More...</a><br /></td></tr>
+<tr class="memitem:a414ff13abd7c502dd802260d31514aec" id="r_a414ff13abd7c502dd802260d31514aec"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a>&#160;&#160;&#160;<a class="el" href="#aa06d3384b9eab6e8b20f4f278ec40067">__pad_dat_arr</a> [<a class="el" href="P16Com_8h.html#a891a9371da677f8e4fd543c526280cd4">P16COM_DAT_PIN_NUM_W_PADDING</a>]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a414ff13abd7c502dd802260d31514aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com Data pins (DatPinArr)  <a href="#aa06d3384b9eab6e8b20f4f278ec40067">More...</a><br /></td></tr>
 <tr class="memitem:a420af97d7593a5ccd81ac74b21b17170" id="r_a420af97d7593a5ccd81ac74b21b17170"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#a2e20978734ae4889da50c66965abd490">StatusFlag</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:a420af97d7593a5ccd81ac74b21b17170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status Flags (Must align with P16Com StatusFlag)  <a href="#a2e20978734ae4889da50c66965abd490">More...</a><br /></td></tr>
-<tr class="memitem:a885f0b471dc518154c4b2740fcede81b" id="r_a885f0b471dc518154c4b2740fcede81b"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a05344d85c94a8b9ea54ad1bd913a0dda">_pad_CtlMask</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a885f0b471dc518154c4b2740fcede81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com CtlIOMask (uint64_t)  <a href="#a05344d85c94a8b9ea54ad1bd913a0dda">More...</a><br /></td></tr>
-<tr class="memitem:a22e44875b05ebf451ef68dbc0d76c853" id="r_a22e44875b05ebf451ef68dbc0d76c853"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a9f2509f1efc5ff58267a30b6ec806bd2">_pad_DatMask</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a22e44875b05ebf451ef68dbc0d76c853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com DatIOMask (uint64_t)  <a href="#a9f2509f1efc5ff58267a30b6ec806bd2">More...</a><br /></td></tr>
+<tr class="memitem:ae423894ccdc46bf734473ef31af6396d" id="r_ae423894ccdc46bf734473ef31af6396d"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a07fad6ae81dd660a8bf23a797d5f8e62">__pad_CtlMask</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ae423894ccdc46bf734473ef31af6396d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com CtlIOMask (uint64_t)  <a href="#a07fad6ae81dd660a8bf23a797d5f8e62">More...</a><br /></td></tr>
+<tr class="memitem:a96e4bfe564dff173c8bd2a500af69f71" id="r_a96e4bfe564dff173c8bd2a500af69f71"><td class="memItemLeft anon">&#160;&#160;&#160;&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#aa1fa7ca6217e104462eee574804e3081">__pad_DatMask</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a96e4bfe564dff173c8bd2a500af69f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com DatIOMask (uint64_t)  <a href="#aa1fa7ca6217e104462eee574804e3081">More...</a><br /></td></tr>
 <tr class="memitem:add192f7a82b824a4ee0e6a3c01ff0240" id="r_add192f7a82b824a4ee0e6a3c01ff0240"><td class="memItemLeft anonEnd" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:add192f7a82b824a4ee0e6a3c01ff0240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlay struct to access specific LCD pins directly. <br /></td></tr>
+<tr class="memitem:a54bd02ef952225334503c1e882dd6c7f" id="r_a54bd02ef952225334503c1e882dd6c7f"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="P16Com_8h.html#a28e5794618b18f7f8a61eb92d345e4e4">P16Lut_t</a> *&#160;&#160;&#160;<a class="el" href="#abf28b99bbc1d15d2028432cf50232507">__pad_LutPtr</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a54bd02ef952225334503c1e882dd6c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips P16Com LUT pointer.  <a href="#abf28b99bbc1d15d2028432cf50232507">More...</a><br /></td></tr>
 <tr class="memitem:a444697c011a709852cc4919d21eeb606" id="r_a444697c011a709852cc4919d21eeb606"><td class="memItemLeft anonEnd" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memitem:a4397cbe9dbf4b9d9cc02990e7199c913" id="r_a4397cbe9dbf4b9d9cc02990e7199c913"><td class="memItemLeft" align="right" valign="top"><a class="el" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4397cbe9dbf4b9d9cc02990e7199c913">Width</a></td></tr>
 <tr class="memdesc:a4397cbe9dbf4b9d9cc02990e7199c913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current display width.  <br /></td></tr>
@@ -160,14 +167,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2155dec105a4dafc71f639d67e7cc63" name="ac2155dec105a4dafc71f639d67e7cc63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2155dec105a4dafc71f639d67e7cc63">&#9670;&#160;</a></span>_pad_ctl_arr</h2>
+<a id="a0e567e2e9d2dd84e1d8fefd9321f302e" name="a0e567e2e9d2dd84e1d8fefd9321f302e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e567e2e9d2dd84e1d8fefd9321f302e">&#9670;&#160;</a></span>__pad_ctl_arr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::_pad_ctl_arr[<a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a>]</td>
+          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::__pad_ctl_arr[<a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -178,14 +185,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a25e2a88fa50735f039d84d192d739e23" name="a25e2a88fa50735f039d84d192d739e23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e2a88fa50735f039d84d192d739e23">&#9670;&#160;</a></span>_pad_ctl_end</h2>
+<a id="a925f7a9527fcc275e188857166a317a8" name="a925f7a9527fcc275e188857166a317a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925f7a9527fcc275e188857166a317a8">&#9670;&#160;</a></span>__pad_ctl_end</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::_pad_ctl_end[<a class="el" href="P16Com_8h.html#a6604d7f41d100d1b3b06fa314c259e13">P16COM_CTL_PIN_NUM_W_PADDING</a> - <a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a> - 1]</td>
+          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::__pad_ctl_end[<a class="el" href="P16Com_8h.html#a6604d7f41d100d1b3b06fa314c259e13">P16COM_CTL_PIN_NUM_W_PADDING</a> - <a class="el" href="P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe">P16COM_CTL_PIN_NUM</a> - 1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -196,14 +203,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a05344d85c94a8b9ea54ad1bd913a0dda" name="a05344d85c94a8b9ea54ad1bd913a0dda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05344d85c94a8b9ea54ad1bd913a0dda">&#9670;&#160;</a></span>_pad_CtlMask</h2>
+<a id="a07fad6ae81dd660a8bf23a797d5f8e62" name="a07fad6ae81dd660a8bf23a797d5f8e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fad6ae81dd660a8bf23a797d5f8e62">&#9670;&#160;</a></span>__pad_CtlMask</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t LCD32Dev_t::_pad_CtlMask</td>
+          <td class="memname">uint64_t LCD32Dev_t::__pad_CtlMask</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -214,14 +221,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3428990c1f1f265051989b0e3823d64" name="ab3428990c1f1f265051989b0e3823d64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3428990c1f1f265051989b0e3823d64">&#9670;&#160;</a></span>_pad_dat_arr</h2>
+<a id="aa06d3384b9eab6e8b20f4f278ec40067" name="aa06d3384b9eab6e8b20f4f278ec40067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06d3384b9eab6e8b20f4f278ec40067">&#9670;&#160;</a></span>__pad_dat_arr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::_pad_dat_arr[<a class="el" href="P16Com_8h.html#a891a9371da677f8e4fd543c526280cd4">P16COM_DAT_PIN_NUM_W_PADDING</a>]</td>
+          <td class="memname"><a class="el" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> LCD32Dev_t::__pad_dat_arr[<a class="el" href="P16Com_8h.html#a891a9371da677f8e4fd543c526280cd4">P16COM_DAT_PIN_NUM_W_PADDING</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -232,14 +239,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f2509f1efc5ff58267a30b6ec806bd2" name="a9f2509f1efc5ff58267a30b6ec806bd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f2509f1efc5ff58267a30b6ec806bd2">&#9670;&#160;</a></span>_pad_DatMask</h2>
+<a id="aa1fa7ca6217e104462eee574804e3081" name="aa1fa7ca6217e104462eee574804e3081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fa7ca6217e104462eee574804e3081">&#9670;&#160;</a></span>__pad_DatMask</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t LCD32Dev_t::_pad_DatMask</td>
+          <td class="memname">uint64_t LCD32Dev_t::__pad_DatMask</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -247,6 +254,24 @@ Data Fields</h2></td></tr>
 <p>Skips P16Com DatIOMask (uint64_t) </p>
 
 <p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00103">103</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
+
+</div>
+</div>
+<a id="abf28b99bbc1d15d2028432cf50232507" name="abf28b99bbc1d15d2028432cf50232507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf28b99bbc1d15d2028432cf50232507">&#9670;&#160;</a></span>__pad_LutPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="P16Com_8h.html#a28e5794618b18f7f8a61eb92d345e4e4">P16Lut_t</a>* LCD32Dev_t::__pad_LutPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Skips P16Com LUT pointer. </p>
+
+<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00107">107</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
 </div>
 </div>
@@ -266,7 +291,7 @@ Data Fields</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00088">88</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00090">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00091">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
 
 </div>
 </div>
@@ -284,9 +309,9 @@ Data Fields</h2></td></tr>
 
 <p>Frame buffer pointer (if used) </p>
 
-<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00110">110</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00113">113</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00075">LCD32Delete()</a>, <a class="el" href="LCD32_8c_source.html#l00412">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00383">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, and <a class="el" href="LCD32_8c_source.html#l00421">LCD32SetCanvasPixel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00076">LCD32Delete()</a>, <a class="el" href="LCD32_8c_source.html#l00483">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00384">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00413">LCD32FlushCanvasFast()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, and <a class="el" href="LCD32_8c_source.html#l00492">LCD32SetCanvasPixel()</a>.</p>
 
 </div>
 </div>
@@ -304,9 +329,9 @@ Data Fields</h2></td></tr>
 
 <p>Current display height. </p>
 
-<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00108">108</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00111">111</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00546">LCD32DrawFilledPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00412">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00383">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00617">LCD32DrawFilledPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00483">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00384">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00413">LCD32FlushCanvasFast()</a>, <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
 
 </div>
 </div>
@@ -324,9 +349,9 @@ Data Fields</h2></td></tr>
 
 <p>Current orientation (0-3) </p>
 
-<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00109">109</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00112">112</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, and <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>.</p>
 
 </div>
 </div>
@@ -346,7 +371,7 @@ Data Fields</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00080">80</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00090">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00428">LCD32DirectlyWritePixel()</a>, <a class="el" href="LCD32_8c_source.html#l00383">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, <a class="el" href="LCD32_8c_source.html#l00345">LCD32WriteCmd()</a>, and <a class="el" href="LCD32_8c_source.html#l00352">LCD32WriteData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00091">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00499">LCD32DirectlyWritePixel()</a>, <a class="el" href="LCD32_8c_source.html#l00384">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00413">LCD32FlushCanvasFast()</a>, <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, <a class="el" href="LCD32_8c_source.html#l00346">LCD32WriteCmd()</a>, and <a class="el" href="LCD32_8c_source.html#l00353">LCD32WriteData()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +391,7 @@ Data Fields</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00097">97</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>.</p>
 
 </div>
 </div>
@@ -384,9 +409,9 @@ Data Fields</h2></td></tr>
 
 <p>Current display width. </p>
 
-<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00107">107</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LCD32_8h_source.html#l00110">110</a> of file <a class="el" href="LCD32_8h_source.html">LCD32.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00546">LCD32DrawFilledPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00626">LCD32DrawText()</a>, <a class="el" href="LCD32_8c_source.html#l00412">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00383">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, and <a class="el" href="LCD32_8c_source.html#l00421">LCD32SetCanvasPixel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00617">LCD32DrawFilledPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>, <a class="el" href="LCD32_8c_source.html#l00483">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00384">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00413">LCD32FlushCanvasFast()</a>, <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, and <a class="el" href="LCD32_8c_source.html#l00492">LCD32SetCanvasPixel()</a>.</p>
 
 </div>
 </div>

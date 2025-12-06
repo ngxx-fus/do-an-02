@@ -1,7 +1,7 @@
 var LCD32_8c =
 [
     [ "compare_int32", "LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f", null ],
-    [ "LCD32Config", "LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f", null ],
+    [ "LCD32Config", "LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d", null ],
     [ "LCD32Delete", "LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42", null ],
     [ "LCD32DirectlyWritePixel", "LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae", null ],
     [ "LCD32DrawChar", "LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2", null ],
@@ -15,6 +15,7 @@ var LCD32_8c =
     [ "LCD32DrawThickLine", "LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7", null ],
     [ "LCD32FillCanvas", "LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542", null ],
     [ "LCD32FlushCanvas", "LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0", null ],
+    [ "LCD32FlushCanvasFast", "LCD32_8c.html#a3bb234d9f50421a3d09b15f3676ab940", null ],
     [ "LCD32Init", "LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0", null ],
     [ "LCD32New", "LCD32_8c.html#a51e6740149e8127f18d85feacb483c81", null ],
     [ "LCD32ReConfig", "LCD32_8c.html#a86c2a30243e294b55f03ea4d2b711d42", null ],

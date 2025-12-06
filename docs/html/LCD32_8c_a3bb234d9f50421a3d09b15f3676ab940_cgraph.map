@@ -1,0 +1,18 @@
+<map id="LCD32FlushCanvasFast" name="LCD32FlushCanvasFast">
+<area shape="rect" id="Node000001" title="Flush the internal Canvas buffer to the display (Optimized, inlined)" alt="" coords="5,45,178,73"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="803,12,928,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,42,225,31,408,7,488,3,591,5,790,19,785,20,591,10,488,8,408,12,226,37,164,47"/>
+<area shape="rect" id="Node000003" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="798,76,934,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,71,226,82,408,106,488,109,591,107,779,98,785,98,591,113,488,115,408,111,225,87,163,76"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="226,45,414,73"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,57,213,59,207,60,178,62"/>
+<area shape="rect" id="Node000005" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="462,19,591,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="414,44,450,42,445,43,415,50"/>
+<area shape="rect" id="Node000007" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="462,71,591,98"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="414,68,449,75,444,75,414,73"/>
+<area shape="rect" id="Node000006" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="639,44,750,72"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="591,40,627,47,621,47,591,45"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="750,45,785,41,791,40,751,50"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="750,66,785,75,780,74,750,71"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="592,72,622,69,627,69,592,77"/>
+</map>

@@ -1,20 +1,11 @@
 {
     "configurations": [
         {
-            "name": "Linux",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "/home/fus/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/**",
-                "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/**",
-                "/home/fus/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/**",
-                "/home/fus/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_system/**",
-                "/home/fus/.espressif/tools/xtensa-esp-elf/esp-15.1.0_20250607/xtensa-esp-elf/xtensa-esp-elf/include"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c17",
+            "name": "ESP-IDF",
+            "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "linux-clang-x64"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4

@@ -1,0 +1,9 @@
+<map id="LCD32DrawThickLine" name="LCD32DrawThickLine">
+<area shape="rect" id="Node000001" title="Draw a thick line." alt="" coords="431,5,591,33"/>
+<area shape="rect" id="Node000002" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,5,383,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,19,384,22,384,17,419,19"/>
+<area shape="rect" id="Node000003" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,5,241,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,19,241,22,241,17,276,19"/>
+<area shape="rect" id="Node000004" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,5,91,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,19,91,22,91,17,126,19"/>
+</map>

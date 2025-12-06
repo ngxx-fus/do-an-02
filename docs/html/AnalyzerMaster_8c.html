@@ -92,14 +92,17 @@ $(function(){initNavTree('AnalyzerMaster_8c.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="AppCore_2AnalyzerMaster_2All_8h_source.html">All.h</a>&quot;</code><br />
+<code>#include &quot;esp_heap_caps.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AnalyzerMaster.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="AnalyzerMaster_8c__incl.png" border="0" usemap="#aAppCore_2AnalyzerMaster_2AnalyzerMaster_8c" loading="lazy" alt=""/></div>
 <map name="aAppCore_2AnalyzerMaster_2AnalyzerMaster_8c" id="aAppCore_2AnalyzerMaster_2AnalyzerMaster_8c">
-<area shape="rect" title=" " alt="" coords="1508,5,1690,50"/>
+<area shape="rect" title=" " alt="" coords="1565,5,1747,50"/>
 <area shape="rect" href="AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="1574,98,1624,126"/>
-<area shape="poly" title=" " alt="" coords="1600,48,1601,84,1597,81,1597,53"/>
+<area shape="poly" title=" " alt="" coords="1643,49,1619,87,1615,83,1639,52"/>
+<area shape="rect" title=" " alt="" coords="1649,98,1781,126"/>
+<area shape="poly" title=" " alt="" coords="1672,48,1699,86,1694,84,1671,53"/>
 <area shape="rect" href="AnalyzerMaster_8h.html" title=" " alt="" coords="1532,174,1666,201"/>
 <area shape="poly" title=" " alt="" coords="1600,124,1601,159,1597,157,1597,128"/>
 <area shape="rect" href="AppConfig_2All_8h.html" title=" " alt="" coords="1832,510,1976,538"/>
@@ -257,13 +260,79 @@ Include dependency graph for AnalyzerMaster.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:affdc3e0d5cf57157bff1937be1a18a8f" id="r_affdc3e0d5cf57157bff1937be1a18a8f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a> (<a class="el" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> max_val, int16_t margin)</td></tr>
+<tr class="memdesc:affdc3e0d5cf57157bff1937be1a18a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to generate random coordinates with an out-of-bounds margin.  <br /></td></tr>
+<tr class="memitem:ac289155e7346fe7095a1f4f8686b32ae" id="r_ac289155e7346fe7095a1f4f8686b32ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac289155e7346fe7095a1f4f8686b32ae">TaskSystemMonitor</a> (void *pv)</td></tr>
+<tr class="memdesc:ac289155e7346fe7095a1f4f8686b32ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task to periodically log system resource usage (Heap, Stack, etc.).  <br /></td></tr>
 <tr class="memitem:a0ff6461cec9cf517fc00bf44dc8fed74" id="r_a0ff6461cec9cf517fc00bf44dc8fed74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a> (void *pv)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a45d36e7fc314d332355aeb1fcd47d885" id="r_a45d36e7fc314d332355aeb1fcd47d885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structLCD32Dev__t.html">LCD32Dev_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a> = NULL</td></tr>
+<tr class="memitem:a2dcf6098d104093241e225469b7f08bf" id="r_a2dcf6098d104093241e225469b7f08bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="P16Com_8h.html#a28e5794618b18f7f8a61eb92d345e4e4">P16Lut_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dcf6098d104093241e225469b7f08bf">lcd_lut</a></td></tr>
+<tr class="memdesc:a2dcf6098d104093241e225469b7f08bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statically allocated Look-Up Table for the main LCD to save HEAP memory.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="affdc3e0d5cf57157bff1937be1a18a8f" name="affdc3e0d5cf57157bff1937be1a18a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affdc3e0d5cf57157bff1937be1a18a8f">&#9670;&#160;</a></span>rand_coord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> rand_coord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a></td>          <td class="paramname"><span class="paramname"><em>max_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>margin</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to generate random coordinates with an out-of-bounds margin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_val</td><td>The maximum valid coordinate (e.g., width or height). </td></tr>
+    <tr><td class="paramname">margin</td><td>The margin to extend beyond the valid range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random coordinate between -margin and (max_val + margin). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00015">15</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                       {</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">return</span> (esp_random() % (max_val + 2 * margin)) - margin;</div>
+<div class="line"><span class="lineno">   17</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00077">TaskScreen()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="AnalyzerMaster_8c_affdc3e0d5cf57157bff1937be1a18a8f_icgraph.png" border="0" usemap="#aAnalyzerMaster_8c_affdc3e0d5cf57157bff1937be1a18a8f_icgraph" loading="lazy" alt=""/></div>
+<map name="aAnalyzerMaster_8c_affdc3e0d5cf57157bff1937be1a18a8f_icgraph" id="aAnalyzerMaster_8c_affdc3e0d5cf57157bff1937be1a18a8f_icgraph">
+<area shape="rect" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="431,5,525,33"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,5,383,33"/>
+<area shape="poly" title=" " alt="" coords="413,19,384,22,384,17,418,19"/>
+<area shape="rect" href="Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,5,241,33"/>
+<area shape="poly" title=" " alt="" coords="271,19,241,22,241,17,276,19"/>
+<area shape="rect" href="Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,5,91,33"/>
+<area shape="poly" title=" " alt="" coords="120,19,91,22,91,17,126,19"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a0ff6461cec9cf517fc00bf44dc8fed74" name="a0ff6461cec9cf517fc00bf44dc8fed74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ff6461cec9cf517fc00bf44dc8fed74">&#9670;&#160;</a></span>TaskScreen()</h2>
 
@@ -279,67 +348,217 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00005">5</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    5</span>                          {</div>
-<div class="line"><span class="lineno">    6</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;TaskScreen(%p)&quot;</span>, pv);</div>
-<div class="line"><span class="lineno">    7</span> </div>
-<div class="line"><span class="lineno">    8</span>    <span class="comment">// 1. Create a new LCD device instance</span></div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a> = <a class="code hl_function" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81">LCD32New</a>();</div>
-<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3">IsNull</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>)) {</div>
-<div class="line"><span class="lineno">   11</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] Failed to create LCD device object.&quot;</span>);</div>
-<div class="line"><span class="lineno">   12</span>        vTaskDelete(NULL); <span class="comment">// Abort task if creation fails</span></div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>    <span class="comment">// 2. Define pin configuration arrays</span></div>
-<div class="line"><span class="lineno">   17</span>    <span class="comment">// Control Pins: RD, WR, CS, RS, RST, BL</span></div>
-<div class="line"><span class="lineno">   18</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> ctl_pins[6] = {</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_define" href="DevicePinout_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a>, <a class="code hl_define" href="DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a>, <a class="code hl_define" href="DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a>, <a class="code hl_define" href="DevicePinout_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a>, <a class="code hl_define" href="DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a>, <a class="code hl_define" href="DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45">LCD32_BL</a></div>
-<div class="line"><span class="lineno">   20</span>    };</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>    <span class="comment">// Data Pins: D0 to D15</span></div>
-<div class="line"><span class="lineno">   23</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> dat_pins[16] = {</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_define" href="DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a>,  <a class="code hl_define" href="DevicePinout_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a>,</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_define" href="DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a>,  <a class="code hl_define" href="DevicePinout_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a>,</div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_define" href="DevicePinout_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a>, <a class="code hl_define" href="DevicePinout_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a>,</div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_define" href="DevicePinout_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a>, <a class="code hl_define" href="DevicePinout_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a>, <a class="code hl_define" href="DevicePinout_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a>, <a class="code hl_define" href="DevicePinout_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div>
-<div class="line"><span class="lineno">   28</span>    };</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    <span class="comment">// 3. Configure the LCD driver with the specified pins</span></div>
-<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f">LCD32Config</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, ctl_pins, dat_pins) != <a class="code hl_enumvalue" href="ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7">STAT_OKE</a>) {</div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] LCD32Config failed.&quot;</span>);</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
-<div class="line"><span class="lineno">   34</span>        vTaskDelete(NULL);</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    <span class="comment">// 4. Initialize the LCD hardware</span></div>
-<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0">LCD32Init</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>) != <a class="code hl_enumvalue" href="ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7">STAT_OKE</a>) {</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] LCD32Init failed.&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_function" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
-<div class="line"><span class="lineno">   42</span>        vTaskDelete(NULL);</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="line"><span class="lineno">   45</span>    </div>
-<div class="line"><span class="lineno">   46</span>    <span class="comment">// 5. Main loop: Fill with random color every second</span></div>
-<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">while</span> (1){</div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// Generate a random 16-bit color (RGB565). </span></div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">// esp_random() is preferred on ESP-IDF for true random numbers.</span></div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a> random_color = (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>) esp_random();</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>        <span class="comment">// Fill the entire canvas buffer with this color</span></div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, random_color);</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">// Push the canvas buffer to the physical LCD screen</span></div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen    ] Flushed new color: 0x%04X&quot;</span>, random_color);</div>
-<div class="line"><span class="lineno">   59</span>        </div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">// Wait for 1 second before the next color change</span></div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(1000);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="line"><span class="lineno">   63</span>}</div>
-<div class="ttc" id="aAnalyzerMaster_8c_html_a45d36e7fc314d332355aeb1fcd47d885"><div class="ttname"><a href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a></div><div class="ttdeci">LCD32Dev_t * lcd32</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00003">AnalyzerMaster.c:3</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00077">77</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>                          {</div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;TaskScreen(%p)&quot;</span>, pv);</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">// 1. Create a new LCD device instance</span></div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a> = <a class="code hl_function" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81">LCD32New</a>();</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3">IsNull</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>)) {</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] Failed to create LCD device object.&quot;</span>);</div>
+<div class="line"><span class="lineno">   84</span>        vTaskDelete(NULL); <span class="comment">// Abort task if creation fails</span></div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// 2. Define pin configuration arrays</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">// Control Pins: RD, WR, CS, RS, RST, BL</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> ctl_pins[6] = {</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_define" href="DevicePinout_8h.html#ac115546f885b68ebb1ddb7f986e768b6">LCD32_RD</a>, <a class="code hl_define" href="DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb">LCD32_WR</a>, <a class="code hl_define" href="DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">LCD32_CS</a>, <a class="code hl_define" href="DevicePinout_8h.html#a1b3df9a20cd27485d44dff7dce866b97">LCD32_RS</a>, <a class="code hl_define" href="DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2">LCD32_RST</a>, <a class="code hl_define" href="DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45">LCD32_BL</a></div>
+<div class="line"><span class="lineno">   92</span>    };</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">// Data Pins: D0 to D15</span></div>
+<div class="line"><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a> dat_pins[16] = {</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_define" href="DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">LCD32_DB2</a>,  <a class="code hl_define" href="DevicePinout_8h.html#adf7a03a06529c34ac20f93d20e736b0e">LCD32_DB3</a>,</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_define" href="DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">LCD32_DB5</a>,  <a class="code hl_define" href="DevicePinout_8h.html#aabb4f25721a4eb712b8a7014b250143f">LCD32_DB6</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">LCD32_DB7</a>,</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_define" href="DevicePinout_8h.html#a24c3b713895c807586a1404f0a40dc29">LCD32_DB8</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a13ff3b2b3273b72adba617c58656d101">LCD32_DB9</a>,  <a class="code hl_define" href="DevicePinout_8h.html#a823ab6d619e8f42672471192ba26c42b">LCD32_DB10</a>, <a class="code hl_define" href="DevicePinout_8h.html#af40d92c425e867615a7ad20678fbab47">LCD32_DB11</a>,</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_define" href="DevicePinout_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">LCD32_DB12</a>, <a class="code hl_define" href="DevicePinout_8h.html#a8b48bf476e1766d463f6465c2ff626e6">LCD32_DB13</a>, <a class="code hl_define" href="DevicePinout_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">LCD32_DB14</a>, <a class="code hl_define" href="DevicePinout_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">LCD32_DB15</a></div>
+<div class="line"><span class="lineno">  100</span>    };</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="comment">// 3. Configure the LCD driver with the specified pins</span></div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d">LCD32Config</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, ctl_pins, dat_pins, &amp;<a class="code hl_variable" href="#a2dcf6098d104093241e225469b7f08bf">lcd_lut</a>) != <a class="code hl_enumvalue" href="ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7">STAT_OKE</a>) {</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] LCD32Config failed.&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_function" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  106</span>        vTaskDelete(NULL);</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="comment">// 4. Initialize the LCD hardware</span></div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0">LCD32Init</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>) != <a class="code hl_enumvalue" href="ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7">STAT_OKE</a>) {</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(<span class="stringliteral">&quot;[TaskScreen] LCD32Init failed.&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  114</span>        vTaskDelete(NULL);</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="line"><span class="lineno">  117</span>    </div>
+<div class="line"><span class="lineno">  118</span>    <span class="comment">// 5. Main loop: Test all drawing functions cyclically</span></div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">while</span> (1){</div>
+<div class="line"><span class="lineno">  120</span>        <span class="comment">// --- Test 0: Performance Measurement with LUT optimization ---</span></div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a> random_color = (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random();</div>
+<div class="line"><span class="lineno">  123</span>            int64_t start_time, fill_end_time, flush_end_time;</div>
+<div class="line"><span class="lineno">  124</span>            uint32_t fill_duration_ms, flush_duration_ms;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>            <span class="comment">// --- Measure LCD32FlushCanvas (which now uses LUT) ---</span></div>
+<div class="line"><span class="lineno">  127</span>            <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: Performance of Fill + Flush (with LUT)&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>            start_time = esp_timer_get_time();</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, random_color);</div>
+<div class="line"><span class="lineno">  130</span>            fill_end_time = esp_timer_get_time();</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  132</span>            flush_end_time = esp_timer_get_time();</div>
+<div class="line"><span class="lineno">  133</span>            fill_duration_ms = (uint32_t)((fill_end_time - start_time) / 1000);</div>
+<div class="line"><span class="lineno">  134</span>            flush_duration_ms = (uint32_t)((flush_end_time - fill_end_time) / 1000);</div>
+<div class="line"><span class="lineno">  135</span>            <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] LUT Optimized -&gt; Fill: %u ms, Flush: %u ms&quot;</span>, fill_duration_ms, flush_duration_ms);</div>
+<div class="line"><span class="lineno">  136</span>            <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(1000);</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="comment">// --- Test 1: LCD32SetCanvasPixel ---</span></div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32SetCanvasPixel&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3000; i++) {</div>
+<div class="line"><span class="lineno">  143</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  145</span>            <a class="code hl_function" href="LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e">LCD32SetCanvasPixel</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r, c, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>        <span class="comment">// --- Test 2: LCD32DirectlyWritePixel ---</span></div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DirectlyWritePixel&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>); <span class="comment">// Flush background first</span></div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3000; i++) {</div>
+<div class="line"><span class="lineno">  155</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_function" href="LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae">LCD32DirectlyWritePixel</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r, c, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        <span class="comment">// --- Test 3: LCD32DrawLine ---</span></div>
+<div class="line"><span class="lineno">  162</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawLine&quot;</span>);</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 20; i++) {</div>
+<div class="line"><span class="lineno">  165</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  166</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  167</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  168</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933">LCD32DrawLine</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r0, c0, r1, c1, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  172</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>        <span class="comment">// --- Test 4: LCD32DrawThickLine ---</span></div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawThickLine&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  179</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  180</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  182</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> thickness = (esp_random() % 15) + 1;</div>
+<div class="line"><span class="lineno">  183</span>            <a class="code hl_function" href="LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7">LCD32DrawThickLine</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r0, c0, r1, c1, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random(), thickness);</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>        <span class="comment">// --- Test 5: LCD32DrawEmptyRect ---</span></div>
+<div class="line"><span class="lineno">  189</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawEmptyRect&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line"><span class="lineno">  192</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  193</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c0 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  194</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  195</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c1 = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  196</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> edge = (esp_random() % 10) + 2;</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (r0 &gt; r1) { <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> tmp = r0; r0 = r1; r1 = tmp; }</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (c0 &gt; c1) { <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> tmp = c0; c0 = c1; c1 = tmp; }</div>
+<div class="line"><span class="lineno">  199</span>            <a class="code hl_function" href="LCD32_8c.html#a4e001150ae8f409049e870565296dd14">LCD32DrawEmptyRect</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r0, c0, r1, c1, edge, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  200</span>        }</div>
+<div class="line"><span class="lineno">  201</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  202</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>        <span class="comment">// --- Test 6: LCD32DrawPolygon (Outline) ---</span></div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawPolygon&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  207</span>        {</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordtype">size_t</span> num_points = (esp_random() % 5) + 3; <span class="comment">// 3 to 7 points</span></div>
+<div class="line"><span class="lineno">  209</span>            <a class="code hl_struct" href="structLCDPoint__t.html">LCDPoint_t</a> points[8];</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; num_points; i++) {</div>
+<div class="line"><span class="lineno">  211</span>                points[i].<a class="code hl_variable" href="structLCDPoint__t.html#abb668c00afff02d69b0e05f22ec7b39e">row</a> = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  212</span>                points[i].<a class="code hl_variable" href="structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3">col</a> = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  213</span>            }</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_function" href="LCD32_8c.html#ab71611daf778e243ae3d07b998141873">LCD32DrawPolygon</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, points, num_points, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  217</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>        <span class="comment">// --- Test 7: LCD32DrawFilledPolygon ---</span></div>
+<div class="line"><span class="lineno">  220</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawFilledPolygon&quot;</span>);</div>
+<div class="line"><span class="lineno">  221</span>        <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  222</span>        {</div>
+<div class="line"><span class="lineno">  223</span>            <span class="keywordtype">size_t</span> num_points = (esp_random() % 5) + 3; <span class="comment">// 3 to 7 points</span></div>
+<div class="line"><span class="lineno">  224</span>            <a class="code hl_struct" href="structLCDPoint__t.html">LCDPoint_t</a> points[8];</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; num_points; i++) {</div>
+<div class="line"><span class="lineno">  226</span>                points[i].<a class="code hl_variable" href="structLCDPoint__t.html#abb668c00afff02d69b0e05f22ec7b39e">row</a> = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 50);</div>
+<div class="line"><span class="lineno">  227</span>                points[i].<a class="code hl_variable" href="structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3">col</a> = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 50);</div>
+<div class="line"><span class="lineno">  228</span>            }</div>
+<div class="line"><span class="lineno">  229</span>            <a class="code hl_function" href="LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54">LCD32DrawFilledPolygon</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, points, num_points, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="comment">// --- Font Tests (DrawChar and DrawText for each font) ---</span></div>
+<div class="line"><span class="lineno">  235</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structGFXfont.html">GFXfont</a>* fonts_to_test[] = {</div>
+<div class="line"><span class="lineno">  236</span>            &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#ab37f80f3acb632dca2833498527d3546">fontTitle</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#aaa974309ed95ef8fb90e14a5f1f4ebb0">fontHeading01</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#af00e156d32694288b851f9539ca329dc">fontHeading02</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#a6c392d75f87fde8a161a8f0e528572d9">fontHeading03</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#ab5e0ed82d5445d8db342633d66de60b2">fontBody</a>, &amp;<a class="code hl_variable" href="AppFonts_2All_8h.html#ae4dc60c49346f5d406b6fbade66e5eff">fontNote</a></div>
+<div class="line"><span class="lineno">  237</span>        };</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* font_names[] = {</div>
+<div class="line"><span class="lineno">  239</span>            <span class="stringliteral">&quot;fontTitle (24pt)&quot;</span>, <span class="stringliteral">&quot;fontHeading01 (18pt)&quot;</span>, <span class="stringliteral">&quot;fontHeading02 (12pt)&quot;</span>, </div>
+<div class="line"><span class="lineno">  240</span>            <span class="stringliteral">&quot;fontHeading03 (9pt)&quot;</span>, <span class="stringliteral">&quot;mainFont (9pt)&quot;</span>, <span class="stringliteral">&quot;fontBody (9pt)&quot;</span>, <span class="stringliteral">&quot;fontNote (Picopixel)&quot;</span></div>
+<div class="line"><span class="lineno">  241</span>        };</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">size_t</span> num_fonts = <span class="keyword">sizeof</span>(fonts_to_test) / <span class="keyword">sizeof</span>(fonts_to_test[0]);</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> f = 0; f &lt; num_fonts; f++) {</div>
+<div class="line"><span class="lineno">  245</span>            <span class="keyword">const</span> <a class="code hl_struct" href="structGFXfont.html">GFXfont</a>* current_font = fonts_to_test[f];</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* current_font_name = font_names[f];</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>            <span class="comment">// --- Test: LCD32DrawChar with current font ---</span></div>
+<div class="line"><span class="lineno">  249</span>            <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawChar with %s&quot;</span>, current_font_name);</div>
+<div class="line"><span class="lineno">  250</span>            <a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a> bg_color = (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random();</div>
+<div class="line"><span class="lineno">  251</span>            <a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a> fg_color = (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random();</div>
+<div class="line"><span class="lineno">  252</span>            <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, bg_color);</div>
+<div class="line"><span class="lineno">  253</span>            <span class="comment">// Use fewer characters for larger fonts to avoid clutter</span></div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordtype">int</span> char_count = (current_font-&gt;<a class="code hl_variable" href="structGFXfont.html#ac2c2f0184b810a562be808fbb98822fa">yAdvance</a> &gt; 20) ? 20 : 50;</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; char_count; i++) {</div>
+<div class="line"><span class="lineno">  256</span>                <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 20);</div>
+<div class="line"><span class="lineno">  257</span>                <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 20);</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordtype">char</span> ch = (esp_random() % (126 - 32)) + 32; <span class="comment">// Printable ASCII</span></div>
+<div class="line"><span class="lineno">  259</span>                <a class="code hl_function" href="LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2">LCD32DrawChar</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r, c, ch, current_font, fg_color);</div>
+<div class="line"><span class="lineno">  260</span>            }</div>
+<div class="line"><span class="lineno">  261</span>            <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  262</span>            <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>            <span class="comment">// --- Test: LCD32DrawText with current font ---</span></div>
+<div class="line"><span class="lineno">  265</span>            <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[TaskScreen] Testing: LCD32DrawText with %s&quot;</span>, current_font_name);</div>
+<div class="line"><span class="lineno">  266</span>            <a class="code hl_function" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* test_strings[] = { <span class="stringliteral">&quot;Hello World!&quot;</span>, <span class="stringliteral">&quot;ESP32 Test&quot;</span>, <span class="stringliteral">&quot;LCD32 Driver&quot;</span>, <span class="stringliteral">&quot;Random Text\nNew Line&quot;</span>, <span class="stringliteral">&quot;Boundary Check&quot;</span> };</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* str_to_draw = test_strings[esp_random() % 5];</div>
+<div class="line"><span class="lineno">  269</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> r = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Height, 20);</div>
+<div class="line"><span class="lineno">  270</span>            <a class="code hl_typedef" href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a> c = <a class="code hl_function" href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>-&gt;Width, 20);</div>
+<div class="line"><span class="lineno">  271</span>            <a class="code hl_function" href="LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781">LCD32DrawText</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>, r, c, str_to_draw, current_font, (<a class="code hl_typedef" href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a>)esp_random());</div>
+<div class="line"><span class="lineno">  272</span>            <a class="code hl_function" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a>(<a class="code hl_variable" href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><span class="lineno">  273</span>            <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(500);</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span>    }</div>
+<div class="line"><span class="lineno">  276</span>}</div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a2dcf6098d104093241e225469b7f08bf"><div class="ttname"><a href="#a2dcf6098d104093241e225469b7f08bf">lcd_lut</a></div><div class="ttdeci">static P16Lut_t lcd_lut</div><div class="ttdoc">Statically allocated Look-Up Table for the main LCD to save HEAP memory.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00007">AnalyzerMaster.c:7</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a45d36e7fc314d332355aeb1fcd47d885"><div class="ttname"><a href="#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a></div><div class="ttdeci">LCD32Dev_t * lcd32</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00004">AnalyzerMaster.c:4</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_affdc3e0d5cf57157bff1937be1a18a8f"><div class="ttname"><a href="#affdc3e0d5cf57157bff1937be1a18a8f">rand_coord</a></div><div class="ttdeci">static Dim_t rand_coord(Dim_t max_val, int16_t margin)</div><div class="ttdoc">Helper to generate random coordinates with an out-of-bounds margin.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00015">AnalyzerMaster.c:15</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_a6c392d75f87fde8a161a8f0e528572d9"><div class="ttname"><a href="AppFonts_2All_8h.html#a6c392d75f87fde8a161a8f0e528572d9">fontHeading03</a></div><div class="ttdeci">GFXfont fontHeading03</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00007">AppFont.c:7</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_aa3352223ab7490ff04749c433f3894ae"><div class="ttname"><a href="AppFonts_2All_8h.html#aa3352223ab7490ff04749c433f3894ae">mainFont</a></div><div class="ttdeci">GFXfont mainFont</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00003">AppFont.c:3</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_aaa974309ed95ef8fb90e14a5f1f4ebb0"><div class="ttname"><a href="AppFonts_2All_8h.html#aaa974309ed95ef8fb90e14a5f1f4ebb0">fontHeading01</a></div><div class="ttdeci">GFXfont fontHeading01</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00005">AppFont.c:5</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_ab37f80f3acb632dca2833498527d3546"><div class="ttname"><a href="AppFonts_2All_8h.html#ab37f80f3acb632dca2833498527d3546">fontTitle</a></div><div class="ttdeci">GFXfont fontTitle</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00004">AppFont.c:4</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_ab5e0ed82d5445d8db342633d66de60b2"><div class="ttname"><a href="AppFonts_2All_8h.html#ab5e0ed82d5445d8db342633d66de60b2">fontBody</a></div><div class="ttdeci">GFXfont fontBody</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00008">AppFont.c:8</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_ae4dc60c49346f5d406b6fbade66e5eff"><div class="ttname"><a href="AppFonts_2All_8h.html#ae4dc60c49346f5d406b6fbade66e5eff">fontNote</a></div><div class="ttdeci">GFXfont fontNote</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00009">AppFont.c:9</a></div></div>
+<div class="ttc" id="aAppFonts_2All_8h_html_af00e156d32694288b851f9539ca329dc"><div class="ttname"><a href="AppFonts_2All_8h.html#af00e156d32694288b851f9539ca329dc">fontHeading02</a></div><div class="ttdeci">GFXfont fontHeading02</div><div class="ttdef"><b>Definition</b> <a href="AppFont_8c_source.html#l00006">AppFont.c:6</a></div></div>
 <div class="ttc" id="aArithmetic_8h_html_abcfdb61af82f4d781aa19e889dd4fad3"><div class="ttname"><a href="Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3">IsNull</a></div><div class="ttdeci">#define IsNull(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> <a href="Arithmetic_8h_source.html#l00032">Arithmetic.h:32</a></div></div>
 <div class="ttc" id="aDevicePinout_8h_html_a0002bd43c07bf3c4d44f5312fac9c0a5"><div class="ttname"><a href="DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">LCD32_DB4</a></div><div class="ttdeci">#define LCD32_DB4</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00052">DevicePinout.h:52</a></div></div>
 <div class="ttc" id="aDevicePinout_8h_html_a0ba618dcfc48fc528ca0ca4b52a03b87"><div class="ttname"><a href="DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a></div><div class="ttdeci">#define LCD32_DB1</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00049">DevicePinout.h:49</a></div></div>
@@ -368,16 +587,31 @@ Variables</h2></td></tr>
 <div class="ttc" id="aESPLogWrapper_8h_html_a414aeb481f289833090271e150b3dc94"><div class="ttname"><a href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a></div><div class="ttdeci">#define SysEntry(fmt,...)</div><div class="ttdoc">ENTRY/EXIT TRACES.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00134">ESPLogWrapper.h:134</a></div></div>
 <div class="ttc" id="aESPLogWrapper_8h_html_ab3a5bf5f559dc2842497793a1edc2f4f"><div class="ttname"><a href="ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a></div><div class="ttdeci">#define SysErr(fmt,...)</div><div class="ttdoc">(SYSTEM_SAFE_THREAD_LOG_EN == 1)</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00086">ESPLogWrapper.h:86</a></div></div>
 <div class="ttc" id="aESPLogWrapper_8h_html_ad74cd22f79ba53917ed27ee13f6499dc"><div class="ttname"><a href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a></div><div class="ttdeci">#define SysLog(fmt,...)</div><div class="ttdoc">LEVEL 1 LOGGING.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00113">ESPLogWrapper.h:113</a></div></div>
-<div class="ttc" id="aLCD32_8c_html_a226dad50852060e1f0343f2b107b8e42"><div class="ttname"><a href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a></div><div class="ttdeci">void LCD32Delete(LCD32Dev_t *Dev)</div><div class="ttdoc">Deallocate memory for LCD32Dev_t object and Canvas.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00075">LCD32.c:75</a></div></div>
-<div class="ttc" id="aLCD32_8c_html_a4b4ea05eaa0fdb37f36fc398ee56ef5f"><div class="ttname"><a href="LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f">LCD32Config</a></div><div class="ttdeci">DefaultRet_t LCD32Config(LCD32Dev_t *Dev, const Pin_t *CtlPins, const Pin_t *DatPins)</div><div class="ttdoc">Configure pin mapping for LCD.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00090">LCD32.c:90</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a00a1b18b664d6f0c07274130784de43e"><div class="ttname"><a href="LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e">LCD32SetCanvasPixel</a></div><div class="ttdeci">void LCD32SetCanvasPixel(LCD32Dev_t *Dev, Dim_t Row, Dim_t Col, Color_t Color)</div><div class="ttdoc">Draw a single pixel on the canvas (with bounds check)</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00492">LCD32.c:492</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a13ac2dd79424cdc876c7aacfa13d6aae"><div class="ttname"><a href="LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae">LCD32DirectlyWritePixel</a></div><div class="ttdeci">void LCD32DirectlyWritePixel(LCD32Dev_t *Dev, Dim_t Row, Dim_t Col, Color_t Color)</div><div class="ttdoc">Write a single pixel directly to the LCD (bypassing canvas)</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00499">LCD32.c:499</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a226dad50852060e1f0343f2b107b8e42"><div class="ttname"><a href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42">LCD32Delete</a></div><div class="ttdeci">void LCD32Delete(LCD32Dev_t *Dev)</div><div class="ttdoc">Deallocate memory for LCD32Dev_t object and Canvas.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00076">LCD32.c:76</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a2721b67931fdbec4b71c4abdcd9485e7"><div class="ttname"><a href="LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7">LCD32DrawThickLine</a></div><div class="ttdeci">DefaultRet_t LCD32DrawThickLine(LCD32Dev_t *Dev, Dim_t r0, Dim_t c0, Dim_t r1, Dim_t c1, Color_t Color, Dim_t Thickness)</div><div class="ttdoc">Draw a thick line.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00546">LCD32.c:546</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a4150f3e7dba29fd578d38040b45b9a54"><div class="ttname"><a href="LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54">LCD32DrawFilledPolygon</a></div><div class="ttdeci">DefaultRet_t LCD32DrawFilledPolygon(LCD32Dev_t *Dev, const LCDPoint_t *Points, size_t N, Color_t Color)</div><div class="ttdoc">Draw a filled polygon (Scanline algorithm)</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00617">LCD32.c:617</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a4263bbd9f68b5172ce290932fc782781"><div class="ttname"><a href="LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781">LCD32DrawText</a></div><div class="ttdeci">DefaultRet_t LCD32DrawText(LCD32Dev_t *Dev, Dim_t r, Dim_t c, const char *Str, const GFXfont *Font, Color_t Color)</div><div class="ttdoc">Draw a string using GFX font.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00697">LCD32.c:697</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a4e001150ae8f409049e870565296dd14"><div class="ttname"><a href="LCD32_8c.html#a4e001150ae8f409049e870565296dd14">LCD32DrawEmptyRect</a></div><div class="ttdeci">DefaultRet_t LCD32DrawEmptyRect(LCD32Dev_t *Dev, Dim_t rTopLeft, Dim_t cTopLeft, Dim_t rBottomRight, Dim_t cBottomRight, Dim_t EdgeSize, Color_t Color)</div><div class="ttdoc">Draw an empty rectangle.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00585">LCD32.c:585</a></div></div>
 <div class="ttc" id="aLCD32_8c_html_a51e6740149e8127f18d85feacb483c81"><div class="ttname"><a href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81">LCD32New</a></div><div class="ttdeci">LCD32Dev_t * LCD32New()</div><div class="ttdoc">Allocates memory for a new LCD32Dev_t object and Canvas.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00010">LCD32.c:10</a></div></div>
-<div class="ttc" id="aLCD32_8c_html_a74e67a98ba6b2fb2399a8bc185f2c542"><div class="ttname"><a href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a></div><div class="ttdeci">void LCD32FillCanvas(LCD32Dev_t *Dev, Color_t Color)</div><div class="ttdoc">Fill the entire canvas with a single color.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00412">LCD32.c:412</a></div></div>
-<div class="ttc" id="aLCD32_8c_html_a91b667df683b10d8f2ac282f25684de0"><div class="ttname"><a href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a></div><div class="ttdeci">void LCD32FlushCanvas(LCD32Dev_t *Dev)</div><div class="ttdoc">Flush the internal Canvas buffer to the display.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00383">LCD32.c:383</a></div></div>
-<div class="ttc" id="aLCD32_8c_html_accf251caf6d7c7d7ea6aaf039fd86dd0"><div class="ttname"><a href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0">LCD32Init</a></div><div class="ttdeci">DefaultRet_t LCD32Init(LCD32Dev_t *Dev)</div><div class="ttdoc">Initialize the LCD (GPIOs, Reset, Startup Sequence)</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00122">LCD32.c:122</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a55f5e2c2e90ca5af94b1cc49184bb933"><div class="ttname"><a href="LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933">LCD32DrawLine</a></div><div class="ttdeci">DefaultRet_t LCD32DrawLine(LCD32Dev_t *Dev, Dim_t r0, Dim_t c0, Dim_t r1, Dim_t c1, Color_t Color)</div><div class="ttdoc">Draw a line using Bresenham&#39;s algorithm.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00521">LCD32.c:521</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a74e67a98ba6b2fb2399a8bc185f2c542"><div class="ttname"><a href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542">LCD32FillCanvas</a></div><div class="ttdeci">void LCD32FillCanvas(LCD32Dev_t *Dev, Color_t Color)</div><div class="ttdoc">Fill the entire canvas with a single color.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00483">LCD32.c:483</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a87df59d05cb81e86b82357437c8347a2"><div class="ttname"><a href="LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2">LCD32DrawChar</a></div><div class="ttdeci">DefaultRet_t LCD32DrawChar(LCD32Dev_t *Dev, Dim_t r, Dim_t c, char Ch, const GFXfont *Font, Color_t Color)</div><div class="ttdoc">Draw a character using GFX font.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00668">LCD32.c:668</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_a91b667df683b10d8f2ac282f25684de0"><div class="ttname"><a href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0">LCD32FlushCanvas</a></div><div class="ttdeci">void LCD32FlushCanvas(LCD32Dev_t *Dev)</div><div class="ttdoc">Flush the internal Canvas buffer to the display.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00384">LCD32.c:384</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_ab71611daf778e243ae3d07b998141873"><div class="ttname"><a href="LCD32_8c.html#ab71611daf778e243ae3d07b998141873">LCD32DrawPolygon</a></div><div class="ttdeci">DefaultRet_t LCD32DrawPolygon(LCD32Dev_t *Dev, const LCDPoint_t *Points, size_t N, Color_t Color)</div><div class="ttdoc">Draw a polygon outline.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00601">LCD32.c:601</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_accf251caf6d7c7d7ea6aaf039fd86dd0"><div class="ttname"><a href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0">LCD32Init</a></div><div class="ttdeci">DefaultRet_t LCD32Init(LCD32Dev_t *Dev)</div><div class="ttdoc">Initialize the LCD (GPIOs, Reset, Startup Sequence)</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00123">LCD32.c:123</a></div></div>
+<div class="ttc" id="aLCD32_8c_html_acf1b7cb245918cbd52aead36070bca7d"><div class="ttname"><a href="LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d">LCD32Config</a></div><div class="ttdeci">DefaultRet_t LCD32Config(LCD32Dev_t *Dev, const Pin_t *CtlPins, const Pin_t *DatPins, P16Lut_t *Lut)</div><div class="ttdoc">Configure pin mapping for LCD.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8c_source.html#l00091">LCD32.c:91</a></div></div>
 <div class="ttc" id="aLCD32_8h_html_a4ee74f0e961b73f8e29bac68c3d9af87"><div class="ttname"><a href="LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87">Color_t</a></div><div class="ttdeci">uint16_t Color_t</div><div class="ttdoc">16-bit color type for LCD</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00050">LCD32.h:50</a></div></div>
+<div class="ttc" id="aLCD32_8h_html_af95d1055c844613206099afc79a2f17c"><div class="ttname"><a href="LCD32_8h.html#af95d1055c844613206099afc79a2f17c">Dim_t</a></div><div class="ttdeci">int16_t Dim_t</div><div class="ttdoc">Dimension type for LCD.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00048">LCD32.h:48</a></div></div>
 <div class="ttc" id="aReturnType_8h_html_a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7"><div class="ttname"><a href="ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7">STAT_OKE</a></div><div class="ttdeci">@ STAT_OKE</div><div class="ttdoc">Success.</div><div class="ttdef"><b>Definition</b> <a href="ReturnType_8h_source.html#l00046">ReturnType.h:46</a></div></div>
+<div class="ttc" id="astructGFXfont_html"><div class="ttname"><a href="structGFXfont.html">GFXfont</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00023">gfxfont.h:23</a></div></div>
+<div class="ttc" id="astructGFXfont_html_ac2c2f0184b810a562be808fbb98822fa"><div class="ttname"><a href="structGFXfont.html#ac2c2f0184b810a562be808fbb98822fa">GFXfont::yAdvance</a></div><div class="ttdeci">uint8_t yAdvance</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00027">gfxfont.h:27</a></div></div>
+<div class="ttc" id="astructLCDPoint__t_html"><div class="ttname"><a href="structLCDPoint__t.html">LCDPoint_t</a></div><div class="ttdoc">Point structure for polygon drawing.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00023">LCD32.h:23</a></div></div>
+<div class="ttc" id="astructLCDPoint__t_html_a8281933fa8e1a91ae6d8f55793e1c9e3"><div class="ttname"><a href="structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3">LCDPoint_t::col</a></div><div class="ttdeci">int16_t col</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00024">LCD32.h:24</a></div></div>
+<div class="ttc" id="astructLCDPoint__t_html_abb668c00afff02d69b0e05f22ec7b39e"><div class="ttname"><a href="structLCDPoint__t.html#abb668c00afff02d69b0e05f22ec7b39e">LCDPoint_t::row</a></div><div class="ttdeci">int16_t row</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00025">LCD32.h:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00033">DelayMs</a>, <a class="el" href="Arithmetic_8h_source.html#l00032">IsNull</a>, <a class="el" href="AnalyzerMaster_8c_source.html#l00003">lcd32</a>, <a class="el" href="DevicePinout_8h_source.html#l00071">LCD32_BL</a>, <a class="el" href="DevicePinout_8h_source.html#l00070">LCD32_CS</a>, <a class="el" href="DevicePinout_8h_source.html#l00048">LCD32_DB0</a>, <a class="el" href="DevicePinout_8h_source.html#l00049">LCD32_DB1</a>, <a class="el" href="DevicePinout_8h_source.html#l00058">LCD32_DB10</a>, <a class="el" href="DevicePinout_8h_source.html#l00059">LCD32_DB11</a>, <a class="el" href="DevicePinout_8h_source.html#l00060">LCD32_DB12</a>, <a class="el" href="DevicePinout_8h_source.html#l00061">LCD32_DB13</a>, <a class="el" href="DevicePinout_8h_source.html#l00062">LCD32_DB14</a>, <a class="el" href="DevicePinout_8h_source.html#l00063">LCD32_DB15</a>, <a class="el" href="DevicePinout_8h_source.html#l00050">LCD32_DB2</a>, <a class="el" href="DevicePinout_8h_source.html#l00051">LCD32_DB3</a>, <a class="el" href="DevicePinout_8h_source.html#l00052">LCD32_DB4</a>, <a class="el" href="DevicePinout_8h_source.html#l00053">LCD32_DB5</a>, <a class="el" href="DevicePinout_8h_source.html#l00054">LCD32_DB6</a>, <a class="el" href="DevicePinout_8h_source.html#l00055">LCD32_DB7</a>, <a class="el" href="DevicePinout_8h_source.html#l00056">LCD32_DB8</a>, <a class="el" href="DevicePinout_8h_source.html#l00057">LCD32_DB9</a>, <a class="el" href="DevicePinout_8h_source.html#l00068">LCD32_RD</a>, <a class="el" href="DevicePinout_8h_source.html#l00069">LCD32_RS</a>, <a class="el" href="DevicePinout_8h_source.html#l00066">LCD32_RST</a>, <a class="el" href="DevicePinout_8h_source.html#l00067">LCD32_WR</a>, <a class="el" href="LCD32_8c_source.html#l00090">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00075">LCD32Delete()</a>, <a class="el" href="LCD32_8c_source.html#l00412">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00383">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00122">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, <a class="el" href="ReturnType_8h_source.html#l00046">STAT_OKE</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00134">SysEntry</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00086">SysErr</a>, and <a class="el" href="ESPLogWrapper_8h_source.html#l00113">SysLog</a>.</p>
+<p class="reference">References <a class="el" href="LCD32_8h_source.html#l00024">LCDPoint_t::col</a>, <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00033">DelayMs</a>, <a class="el" href="AppFont_8c_source.html#l00008">fontBody</a>, <a class="el" href="AppFont_8c_source.html#l00005">fontHeading01</a>, <a class="el" href="AppFont_8c_source.html#l00006">fontHeading02</a>, <a class="el" href="AppFont_8c_source.html#l00007">fontHeading03</a>, <a class="el" href="AppFont_8c_source.html#l00009">fontNote</a>, <a class="el" href="AppFont_8c_source.html#l00004">fontTitle</a>, <a class="el" href="Arithmetic_8h_source.html#l00032">IsNull</a>, <a class="el" href="AnalyzerMaster_8c_source.html#l00004">lcd32</a>, <a class="el" href="DevicePinout_8h_source.html#l00071">LCD32_BL</a>, <a class="el" href="DevicePinout_8h_source.html#l00070">LCD32_CS</a>, <a class="el" href="DevicePinout_8h_source.html#l00048">LCD32_DB0</a>, <a class="el" href="DevicePinout_8h_source.html#l00049">LCD32_DB1</a>, <a class="el" href="DevicePinout_8h_source.html#l00058">LCD32_DB10</a>, <a class="el" href="DevicePinout_8h_source.html#l00059">LCD32_DB11</a>, <a class="el" href="DevicePinout_8h_source.html#l00060">LCD32_DB12</a>, <a class="el" href="DevicePinout_8h_source.html#l00061">LCD32_DB13</a>, <a class="el" href="DevicePinout_8h_source.html#l00062">LCD32_DB14</a>, <a class="el" href="DevicePinout_8h_source.html#l00063">LCD32_DB15</a>, <a class="el" href="DevicePinout_8h_source.html#l00050">LCD32_DB2</a>, <a class="el" href="DevicePinout_8h_source.html#l00051">LCD32_DB3</a>, <a class="el" href="DevicePinout_8h_source.html#l00052">LCD32_DB4</a>, <a class="el" href="DevicePinout_8h_source.html#l00053">LCD32_DB5</a>, <a class="el" href="DevicePinout_8h_source.html#l00054">LCD32_DB6</a>, <a class="el" href="DevicePinout_8h_source.html#l00055">LCD32_DB7</a>, <a class="el" href="DevicePinout_8h_source.html#l00056">LCD32_DB8</a>, <a class="el" href="DevicePinout_8h_source.html#l00057">LCD32_DB9</a>, <a class="el" href="DevicePinout_8h_source.html#l00068">LCD32_RD</a>, <a class="el" href="DevicePinout_8h_source.html#l00069">LCD32_RS</a>, <a class="el" href="DevicePinout_8h_source.html#l00066">LCD32_RST</a>, <a class="el" href="DevicePinout_8h_source.html#l00067">LCD32_WR</a>, <a class="el" href="LCD32_8c_source.html#l00091">LCD32Config()</a>, <a class="el" href="LCD32_8c_source.html#l00076">LCD32Delete()</a>, <a class="el" href="LCD32_8c_source.html#l00499">LCD32DirectlyWritePixel()</a>, <a class="el" href="LCD32_8c_source.html#l00668">LCD32DrawChar()</a>, <a class="el" href="LCD32_8c_source.html#l00585">LCD32DrawEmptyRect()</a>, <a class="el" href="LCD32_8c_source.html#l00617">LCD32DrawFilledPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00521">LCD32DrawLine()</a>, <a class="el" href="LCD32_8c_source.html#l00601">LCD32DrawPolygon()</a>, <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>, <a class="el" href="LCD32_8c_source.html#l00546">LCD32DrawThickLine()</a>, <a class="el" href="LCD32_8c_source.html#l00483">LCD32FillCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00384">LCD32FlushCanvas()</a>, <a class="el" href="LCD32_8c_source.html#l00123">LCD32Init()</a>, <a class="el" href="LCD32_8c_source.html#l00010">LCD32New()</a>, <a class="el" href="LCD32_8c_source.html#l00492">LCD32SetCanvasPixel()</a>, <a class="el" href="AnalyzerMaster_8c_source.html#l00007">lcd_lut</a>, <a class="el" href="AppFont_8c_source.html#l00003">mainFont</a>, <a class="el" href="AnalyzerMaster_8c_source.html#l00015">rand_coord()</a>, <a class="el" href="LCD32_8h_source.html#l00025">LCDPoint_t::row</a>, <a class="el" href="ReturnType_8h_source.html#l00046">STAT_OKE</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00134">SysEntry</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00086">SysErr</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00113">SysLog</a>, and <a class="el" href="gfxfont_8h_source.html#l00027">GFXfont::yAdvance</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00005">AppInitialize()</a>.</p>
 <div class="dynheader">
@@ -385,51 +619,89 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="AnalyzerMaster_8c_a0ff6461cec9cf517fc00bf44dc8fed74_cgraph.png" border="0" usemap="#aAnalyzerMaster_8c_a0ff6461cec9cf517fc00bf44dc8fed74_cgraph" loading="lazy" alt=""/></div>
 <map name="aAnalyzerMaster_8c_a0ff6461cec9cf517fc00bf44dc8fed74_cgraph" id="aAnalyzerMaster_8c_a0ff6461cec9cf517fc00bf44dc8fed74_cgraph">
-<area shape="rect" title=" " alt="" coords="5,148,100,176"/>
-<area shape="rect" href="LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f" title="Configure pin mapping for LCD." alt="" coords="169,17,273,45"/>
-<area shape="poly" title=" " alt="" coords="61,146,95,102,119,77,146,56,159,50,155,54,149,60,123,81,99,105,66,149"/>
-<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="168,69,274,97"/>
-<area shape="poly" title=" " alt="" coords="76,145,147,107,165,101,161,105,149,112,79,149"/>
-<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="156,121,286,149"/>
-<area shape="poly" title=" " alt="" coords="99,152,142,146,138,150,101,157"/>
-<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="148,173,294,201"/>
-<area shape="poly" title=" " alt="" coords="99,166,135,172,130,175,101,171"/>
-<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="394,249,478,277"/>
-<area shape="poly" title=" " alt="" coords="75,174,110,193,149,210,209,228,270,241,381,258,376,259,269,246,207,233,147,215,108,198,76,179"/>
-<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="175,275,267,302"/>
-<area shape="poly" title=" " alt="" coords="65,174,102,213,149,254,169,267,164,268,146,259,98,217,65,179"/>
-<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="369,57,503,85"/>
-<area shape="poly" title=" " alt="" coords="273,38,356,55,351,57,274,43"/>
-<area shape="rect" href="P16Com_8c.html#a050c6969975359190dbf43c7b7672f5f" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="366,5,506,33"/>
-<area shape="poly" title=" " alt="" coords="273,26,353,22,349,25,275,31"/>
-<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="342,173,530,201"/>
-<area shape="poly" title=" " alt="" coords="294,185,329,186,324,188,295,190"/>
-<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="756,157,901,185"/>
-<area shape="poly" title=" " alt="" coords="281,170,342,159,444,146,524,139,605,138,708,146,751,154,745,154,707,151,605,144,525,144,445,151,342,164,282,175"/>
-<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="579,160,707,188"/>
-<area shape="poly" title=" " alt="" coords="530,178,566,178,561,180,531,184"/>
-<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="578,212,708,240"/>
-<area shape="poly" title=" " alt="" coords="513,199,566,211,561,211,514,204"/>
-<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="773,209,884,237"/>
-<area shape="poly" title=" " alt="" coords="698,186,762,205,757,205,698,191"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="954,209,1080,237"/>
-<area shape="poly" title=" " alt="" coords="884,221,941,223,936,223,884,226"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="949,261,1085,289"/>
-<area shape="poly" title=" " alt="" coords="882,235,953,257,947,257,881,240"/>
-<area shape="poly" title=" " alt="" coords="708,222,760,224,755,224,708,228"/>
-<area shape="poly" title=" " alt="" coords="882,183,953,205,947,205,881,188"/>
-<area shape="poly" title=" " alt="" coords="878,183,902,196,918,209,927,221,936,234,951,246,961,255,956,254,947,251,932,237,923,225,914,212,900,200,877,188"/>
-<area shape="poly" title=" " alt="" coords="468,246,577,198,591,195,596,193,579,203,470,251"/>
-<area shape="poly" title=" " alt="" coords="465,275,542,309,593,328,650,344,711,357,775,364,838,362,900,350,948,327,987,300,992,299,951,331,902,355,839,368,775,369,710,363,649,350,591,333,540,314,464,280"/>
-<area shape="poly" title=" " alt="" coords="478,253,566,240,561,241,479,258"/>
-<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="780,313,876,341"/>
-<area shape="poly" title=" " alt="" coords="479,267,768,316,763,318,479,273"/>
-<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="774,261,882,289"/>
-<area shape="poly" title=" " alt="" coords="479,262,761,272,756,274,479,267"/>
-<area shape="poly" title=" " alt="" coords="876,310,900,298,914,286,923,274,932,261,947,248,956,245,961,243,951,252,936,264,927,277,918,290,902,303,878,316"/>
-<area shape="poly" title=" " alt="" coords="877,311,947,294,953,293,878,317"/>
-<area shape="poly" title=" " alt="" coords="881,258,947,242,953,241,882,263"/>
-<area shape="poly" title=" " alt="" coords="883,273,936,275,931,275,883,278"/>
+<area shape="rect" title=" " alt="" coords="5,521,100,549"/>
+<area shape="rect" href="LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="186,57,290,85"/>
+<area shape="poly" title=" " alt="" coords="52,521,56,458,69,362,81,307,97,252,119,197,145,146,170,116,202,92,199,96,174,119,150,149,123,199,102,253,86,309,75,363,61,458,57,521"/>
+<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="185,159,291,186"/>
+<area shape="poly" title=" " alt="" coords="51,521,52,462,63,375,75,328,92,281,115,236,146,197,171,182,169,186,149,201,119,239,96,283,80,329,68,376,57,462,56,521"/>
+<area shape="rect" href="LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="148,211,328,238"/>
+<area shape="poly" title=" " alt="" coords="51,521,56,470,69,397,81,358,97,318,119,282,146,249,154,244,151,249,150,253,123,285,102,321,86,359,74,399,61,471,57,521"/>
+<area shape="rect" href="LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="406,495,534,522"/>
+<area shape="poly" title=" " alt="" coords="71,519,105,498,147,481,214,470,283,470,347,478,405,490,400,492,346,483,282,476,215,476,148,486,108,502,75,523"/>
+<area shape="rect" href="LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="845,565,1008,593"/>
+<area shape="poly" title=" " alt="" coords="63,520,98,486,121,469,147,457,196,445,236,445,277,451,328,457,462,462,566,469,669,485,797,519,844,536,887,558,882,558,842,541,796,524,668,491,565,474,461,468,328,462,276,456,236,450,197,450,149,462,124,474,101,490,68,522"/>
+<area shape="rect" href="LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="154,547,322,574"/>
+<area shape="poly" title=" " alt="" coords="99,539,140,545,136,548,101,544"/>
+<area shape="rect" href="LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="612,617,797,645"/>
+<area shape="poly" title=" " alt="" coords="73,547,109,567,148,583,266,610,387,625,500,632,599,634,594,636,500,637,386,631,265,615,147,588,107,572,75,552"/>
+<area shape="rect" href="LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="408,700,532,728"/>
+<area shape="poly" title=" " alt="" coords="58,547,71,579,89,617,115,655,149,685,178,700,208,711,272,723,336,726,395,725,390,727,336,732,272,729,207,716,175,705,146,689,111,658,84,619,66,581,58,552"/>
+<area shape="rect" href="LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="163,749,312,777"/>
+<area shape="poly" title=" " alt="" coords="57,547,69,585,86,633,113,684,130,708,149,729,166,742,161,743,146,733,126,712,108,687,81,635,64,586,57,552"/>
+<area shape="rect" href="LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="176,495,300,522"/>
+<area shape="poly" title=" " alt="" coords="98,526,162,518,159,522,101,531"/>
+<area shape="rect" href="LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="158,648,318,676"/>
+<area shape="poly" title=" " alt="" coords="64,547,101,587,124,609,149,628,173,641,168,643,146,632,121,613,97,591,65,552"/>
+<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="173,801,303,829"/>
+<area shape="poly" title=" " alt="" coords="55,547,63,595,78,659,106,727,125,759,149,787,162,797,156,797,146,790,121,762,101,730,73,661,58,596,55,552"/>
+<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="165,263,311,290"/>
+<area shape="poly" title=" " alt="" coords="54,520,64,482,82,431,109,375,146,324,164,308,187,295,184,300,167,312,150,328,114,378,87,433,70,484,60,521"/>
+<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="428,324,512,352"/>
+<area shape="poly" title=" " alt="" coords="56,520,67,491,86,454,112,417,146,386,178,368,213,355,284,338,354,331,415,332,410,335,354,336,285,343,214,360,181,373,149,391,116,421,90,457,72,493,61,522"/>
+<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="192,853,284,881"/>
+<area shape="poly" title=" " alt="" coords="54,547,59,603,72,681,83,723,100,765,122,804,150,839,163,848,179,858,174,858,160,853,146,842,117,807,95,767,78,725,67,682,54,604,54,552"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#affdc3e0d5cf57157bff1937be1a18a8f" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="191,905,284,933"/>
+<area shape="poly" title=" " alt="" coords="56,547,69,620,89,723,116,825,132,864,150,891,162,901,179,910,173,910,159,905,146,894,127,867,111,826,84,725,64,621,55,552"/>
+<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="403,5,537,33"/>
+<area shape="poly" title=" " alt="" coords="289,58,392,35,388,39,292,62"/>
+<area shape="rect" href="P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="400,57,540,85"/>
+<area shape="poly" title=" " alt="" coords="289,69,387,69,383,73,291,73"/>
+<area shape="rect" href="P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="640,57,769,85"/>
+<area shape="poly" title=" " alt="" coords="539,69,627,70,622,73,542,74"/>
+<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="376,211,564,238"/>
+<area shape="poly" title=" " alt="" coords="327,222,363,223,358,226,330,227"/>
+<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="871,207,982,234"/>
+<area shape="poly" title=" " alt="" coords="290,208,435,173,523,157,612,145,705,133,746,134,797,145,852,167,898,197,892,198,849,172,796,150,746,140,705,139,613,150,524,162,436,179,293,212"/>
+<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="640,159,769,186"/>
+<area shape="poly" title=" " alt="" coords="535,208,627,189,623,192,537,212"/>
+<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="640,211,769,238"/>
+<area shape="poly" title=" " alt="" coords="564,222,627,223,622,226,566,227"/>
+<area shape="poly" title=" " alt="" coords="769,184,858,205,853,206,770,189"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1062,259,1187,286"/>
+<area shape="poly" title=" " alt="" coords="982,232,1056,254,1051,255,982,238"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1056,311,1192,338"/>
+<area shape="poly" title=" " alt="" coords="982,232,1009,245,1025,258,1034,271,1043,283,1058,296,1068,303,1063,303,1054,300,1039,287,1030,274,1021,261,1007,249,982,237"/>
+<area shape="poly" title=" " alt="" coords="769,221,858,221,853,223,771,226"/>
+<area shape="poly" title=" " alt="" coords="534,513,797,551,843,561,838,562,796,556,534,519"/>
+<area shape="rect" href="LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="624,565,785,593"/>
+<area shape="poly" title=" " alt="" coords="322,561,610,574,606,577,323,566"/>
+<area shape="poly" title=" " alt="" coords="785,577,832,579,827,580,786,582"/>
+<area shape="poly" title=" " alt="" coords="766,614,852,596,847,598,768,619"/>
+<area shape="rect" href="LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="867,617,986,645"/>
+<area shape="poly" title=" " alt="" coords="796,629,855,631,849,632,797,634"/>
+<area shape="poly" title=" " alt="" coords="532,712,591,708,658,699,729,682,795,654,810,643,819,630,828,617,843,604,853,601,858,599,846,608,832,620,823,633,814,647,798,659,731,687,659,704,591,713,533,717"/>
+<area shape="poly" title=" " alt="" coords="305,746,395,729,390,731,307,751"/>
+<area shape="poly" title=" " alt="" coords="299,506,393,507,389,510,301,511"/>
+<area shape="poly" title=" " alt="" coords="303,674,395,696,390,698,303,679"/>
+<area shape="rect" href="LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="404,648,536,676"/>
+<area shape="poly" title=" " alt="" coords="317,659,392,661,387,663,318,664"/>
+<area shape="poly" title=" " alt="" coords="535,651,599,644,594,646,537,656"/>
+<area shape="poly" title=" " alt="" coords="302,260,392,241,388,244,305,264"/>
+<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="854,259,999,286"/>
+<area shape="poly" title=" " alt="" coords="311,273,840,271,837,275,312,279"/>
+<area shape="poly" title=" " alt="" coords="999,270,1048,272,1043,273,1000,275"/>
+<area shape="poly" title=" " alt="" coords="982,284,1056,306,1051,307,982,290"/>
+<area shape="poly" title=" " alt="" coords="485,322,562,248,585,221,595,209,611,197,628,190,624,194,614,201,599,213,589,224,566,252,489,326"/>
+<area shape="poly" title=" " alt="" coords="508,350,599,379,658,394,723,407,793,416,866,419,938,414,1007,399,1055,376,1094,350,1099,348,1058,381,1009,404,938,420,866,425,793,422,723,413,657,400,597,384,509,355"/>
+<area shape="poly" title=" " alt="" coords="499,321,662,244,658,247,502,326"/>
+<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="878,311,974,338"/>
+<area shape="poly" title=" " alt="" coords="512,334,865,325,861,328,514,339"/>
+<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="872,363,980,390"/>
+<area shape="poly" title=" " alt="" coords="513,339,859,369,854,372,513,344"/>
+<area shape="poly" title=" " alt="" coords="974,309,1056,290,1051,292,976,314"/>
+<area shape="poly" title=" " alt="" coords="974,322,1043,324,1038,325,976,327"/>
+<area shape="poly" title=" " alt="" coords="980,361,1007,348,1021,336,1030,323,1039,310,1054,297,1063,295,1067,292,1058,301,1043,314,1034,326,1025,339,1009,352,982,365"/>
+<area shape="poly" title=" " alt="" coords="980,360,1056,342,1052,344,982,365"/>
 </map>
 </div>
 <div class="dynheader">
@@ -440,6 +712,97 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="289,5,383,33"/>
 <area shape="rect" href="Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,5,241,33"/>
 <area shape="poly" title=" " alt="" coords="271,19,241,22,241,17,276,19"/>
+<area shape="rect" href="Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,5,91,33"/>
+<area shape="poly" title=" " alt="" coords="120,19,91,22,91,17,126,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac289155e7346fe7095a1f4f8686b32ae" name="ac289155e7346fe7095a1f4f8686b32ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac289155e7346fe7095a1f4f8686b32ae">&#9670;&#160;</a></span>TaskSystemMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TaskSystemMonitor </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task to periodically log system resource usage (Heap, Stack, etc.). </p>
+<p>Task to periodically log system resource usage (Heap, Stack, etc.)</p>
+<p>This function can be run as a separate task to monitor the system's health, checking for memory leaks or stack overflows. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00024">24</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                                  {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;TaskSystemMonitor(%p)&quot;</span>, pv);</div>
+<div class="line"><span class="lineno">   26</span>    </div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// A buffer large enough to hold the task list and runtime stats.</span></div>
+<div class="line"><span class="lineno">   28</span>    <span class="comment">// 2048 bytes should be more than enough for a reasonable number of tasks.</span></div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordtype">char</span> task_stats_buffer[2048];</div>
+<div class="line"><span class="lineno">   30</span>    </div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="comment">// --- Task List (like top) ---</span></div>
+<div class="line"><span class="lineno">   33</span>        vTaskList(task_stats_buffer);</div>
+<div class="line"><span class="lineno">   34</span>        <span class="comment">// Use a critical section to prevent log output from being interleaved by other tasks.</span></div>
+<div class="line"><span class="lineno">   35</span><span class="preprocessor">        #if (SYSTEM_SAFE_THREAD_LOG_EN == 1)</span></div>
+<div class="line"><span class="lineno">   36</span>            portENTER_CRITICAL(&amp;__LogSpinLock);</div>
+<div class="line"><span class="lineno">   37</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   38</span>        ets_printf(<span class="stringliteral">&quot;[%lld] [log] [Monitor] --- Task States &amp; Stack Usage (vTaskList) ---\n&quot;</span>, esp_timer_get_time());</div>
+<div class="line"><span class="lineno">   39</span>        ets_printf(<span class="stringliteral">&quot;Task Name\t\tStatus\tPrio\tHWM (bytes)\tTask#\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>        ets_printf(<span class="stringliteral">&quot;****************************************************************\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   41</span>        ets_printf(<span class="stringliteral">&quot;%s&quot;</span>, task_stats_buffer);</div>
+<div class="line"><span class="lineno">   42</span>        ets_printf(<span class="stringliteral">&quot;****************************************************************\n\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span><span class="preprocessor">        #if (SYSTEM_SAFE_THREAD_LOG_EN == 1)</span></div>
+<div class="line"><span class="lineno">   44</span>            portEXIT_CRITICAL(&amp;__LogSpinLock);</div>
+<div class="line"><span class="lineno">   45</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="comment">// --- CPU Usage ---</span></div>
+<div class="line"><span class="lineno">   48</span>        vTaskGetRunTimeStats(task_stats_buffer);</div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">        #if (SYSTEM_SAFE_THREAD_LOG_EN == 1)</span></div>
+<div class="line"><span class="lineno">   50</span>            portENTER_CRITICAL(&amp;__LogSpinLock);</div>
+<div class="line"><span class="lineno">   51</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   52</span>        ets_printf(<span class="stringliteral">&quot;[%lld] [log] [Monitor] --- Task CPU Usage (vTaskGetRunTimeStats) ---\n&quot;</span>, esp_timer_get_time());</div>
+<div class="line"><span class="lineno">   53</span>        ets_printf(<span class="stringliteral">&quot;Task Name\t\tAbs Time (us)\t\t%%CPU\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>        ets_printf(<span class="stringliteral">&quot;****************************************************************\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>        ets_printf(<span class="stringliteral">&quot;%s&quot;</span>, task_stats_buffer);</div>
+<div class="line"><span class="lineno">   56</span>        ets_printf(<span class="stringliteral">&quot;****************************************************************\n\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span><span class="preprocessor">        #if (SYSTEM_SAFE_THREAD_LOG_EN == 1)</span></div>
+<div class="line"><span class="lineno">   58</span>            portEXIT_CRITICAL(&amp;__LogSpinLock);</div>
+<div class="line"><span class="lineno">   59</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>        <span class="comment">// --- Heap Memory ---</span></div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">size_t</span> total_free_heap = esp_get_free_heap_size();</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">size_t</span> internal_free_heap = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">size_t</span> psram_free_heap = 0;</div>
+<div class="line"><span class="lineno">   65</span><span class="preprocessor">        #if (LCD32_CANVAS_IN_PSRAM_EN == 1)</span></div>
+<div class="line"><span class="lineno">   66</span>            psram_free_heap = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);</div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[Monitor] Free Heap: Total=%u, Internal=%u, PSRAM=%u&quot;</span>, (uint32_t)total_free_heap, (uint32_t)internal_free_heap, (uint32_t)psram_free_heap);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <span class="comment">// Add a final line for this monitor task&#39;s own HWM for easy checking</span></div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[Monitor] Monitor Task Stack HWM: %u bytes&quot;</span>, uxTaskGetStackHighWaterMark(NULL));</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(10000); <span class="comment">// Log every 10 seconds</span></div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00033">DelayMs</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00134">SysEntry</a>, and <a class="el" href="ESPLogWrapper_8h_source.html#l00113">SysLog</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00005">AppInitialize()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="AnalyzerMaster_8c_ac289155e7346fe7095a1f4f8686b32ae_icgraph.png" border="0" usemap="#aAnalyzerMaster_8c_ac289155e7346fe7095a1f4f8686b32ae_icgraph" loading="lazy" alt=""/></div>
+<map name="aAnalyzerMaster_8c_ac289155e7346fe7095a1f4f8686b32ae_icgraph" id="aAnalyzerMaster_8c_ac289155e7346fe7095a1f4f8686b32ae_icgraph">
+<area shape="rect" title="Task to periodically log system resource usage (Heap, Stack, etc.)." alt="" coords="289,5,438,33"/>
+<area shape="rect" href="Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,5,241,33"/>
+<area shape="poly" title=" " alt="" coords="271,19,242,22,241,17,276,19"/>
 <area shape="rect" href="Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,5,91,33"/>
 <area shape="poly" title=" " alt="" coords="120,19,91,22,91,17,126,19"/>
 </map>
@@ -460,9 +823,37 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00003">3</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00004">4</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00005">TaskScreen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00077">TaskScreen()</a>.</p>
+
+</div>
+</div>
+<a id="a2dcf6098d104093241e225469b7f08bf" name="a2dcf6098d104093241e225469b7f08bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dcf6098d104093241e225469b7f08bf">&#9670;&#160;</a></span>lcd_lut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="P16Com_8h.html#a28e5794618b18f7f8a61eb92d345e4e4">P16Lut_t</a> lcd_lut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Statically allocated Look-Up Table for the main LCD to save HEAP memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerMaster_8c_source.html#l00007">7</a> of file <a class="el" href="AnalyzerMaster_8c_source.html">AnalyzerMaster.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00077">TaskScreen()</a>.</p>
 
 </div>
 </div>

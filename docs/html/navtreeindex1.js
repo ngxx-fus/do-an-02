@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"FreeMono24pt7b_8h.html#a4b552ab3e4ab4b5eb60c89ce9b86792d":[2,0,4,0,6,0],
+"FreeMono24pt7b_8h.html#a56cb5e0107eae0efc02157b018e4ffc9":[2,0,4,0,6,2],
+"FreeMono24pt7b_8h.html#a75acaba9e781937468d0911423bc0c35":[2,0,4,0,6,1],
+"FreeMono24pt7b_8h.html#ab0ca1b9763dd5647cbc5b86728b5a9e8":[2,0,4,0,6,3],
 "FreeMono24pt7b_8h_source.html":[2,0,4,0,6],
 "FreeMono9pt7b_8h.html":[2,0,4,0,7],
 "FreeMono9pt7b_8h.html#a4b552ab3e4ab4b5eb60c89ce9b86792d":[2,0,4,0,7,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "LCD32Cmds_8h.html#acb3e864c7ce12db47980af06bb3cd7a3":[2,0,0,0,2,50],
 "LCD32Cmds_8h.html#accffe7d904e739b23808486424bea2e4":[2,0,0,0,2,79],
 "LCD32Cmds_8h.html#ad6662af29b0a1fe571b3d17d3d1db10d":[2,0,0,0,2,36],
-"LCD32Cmds_8h.html#ad7e2984b196d9ab7f6b85ccfd9b21788":[2,0,0,0,2,4],
-"LCD32Cmds_8h.html#adc23a239d2b6976d53254ef4fc5d1713":[2,0,0,0,2,89],
-"LCD32Cmds_8h.html#adf6f6188c087d6b94181b05d08aebe03":[2,0,0,0,2,59],
-"LCD32Cmds_8h.html#adf7c01292da1aa51725e20a23c217b4d":[2,0,0,0,2,17],
-"LCD32Cmds_8h.html#ae18c0e983e7c6b85a62ef46b7fb5eac4":[2,0,0,0,2,49]
+"LCD32Cmds_8h.html#ad7e2984b196d9ab7f6b85ccfd9b21788":[2,0,0,0,2,4]
 };

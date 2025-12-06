@@ -81,7 +81,7 @@ extern "C" {
 /// ERROR LOGGING
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_ERR_EN) && SYSTEM_ERR_EN == 1)
     /// Log error message with timestamp and [err] tag
-    #define SysErr(fmt, ...)    ets_printf("[%lld] [err] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysErr(fmt, ...)    CoreLog("[%lld] [err] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysErr(fmt, ...)
 #endif
@@ -89,7 +89,7 @@ extern "C" {
 /// WARNING LOGGING
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_WARN_EN) && SYSTEM_WARN_EN == 1)
     /// Log warning message with timestamp and [W] tag
-    #define SysWarn(fmt, ...)   ets_printf("[%lld] [W] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysWarn(fmt, ...)   CoreLog("[%lld] [W] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysWarn(fmt, ...)
 #endif
@@ -97,7 +97,7 @@ extern "C" {
 /// INFO LOGGING
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_INFO_EN) && SYSTEM_INFO_EN == 1)
     /// Log info message with timestamp and [Info] tag
-    #define SysInfo(fmt, ...)   ets_printf("[%lld] [Info] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysInfo(fmt, ...)   CoreLog("[%lld] [Info] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysInfo(fmt, ...)
 #endif
@@ -105,10 +105,10 @@ extern "C" {
 /// LEVEL 1 LOGGING
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_L1_EN) && SYSTEM_LOG_L1_EN == 1)
     /// Log standard message with timestamp and [log] tag
-    #define SysLog(fmt, ...)            ets_printf("[%lld] [log] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysLog(fmt, ...)            CoreLog("[%lld] [log] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
     
     /// Log message with custom tag string (Mapped to L1)
-    #define SysTagLog(tag, fmt, ...)    ets_printf("[%lld] [log] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
+    #define SysTagLog(tag, fmt, ...)    CoreLog("[%lld] [log] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
 #else
     #define SysLog(fmt, ...)
     #define SysTagLog(tag, fmt, ...)
@@ -117,10 +117,10 @@ extern "C" {
 /// LEVEL 2 LOGGING (VERBOSE)
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_L2_EN) && SYSTEM_LOG_L2_EN == 1)
     /// Log verbose/detailed message with timestamp and [verb] tag
-    #define SysLogVer(fmt, ...)             ets_printf("[%lld] [verb] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysLogVer(fmt, ...)             CoreLog("[%lld] [verb] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
     
     /// Log verbose message with custom tag
-    #define SysTagLogVer(tag, fmt, ...)     ets_printf("[%lld] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
+    #define SysTagLogVer(tag, fmt, ...)     CoreLog("[%lld] [%s] " fmt "\n", esp_timer_get_time(), tag, ##__VA_ARGS__)
 #else
     #define SysLogVer(fmt, ...)
     #define SysTagLogVer(tag, fmt, ...)
@@ -129,28 +129,28 @@ extern "C" {
 /// ENTRY/EXIT TRACES
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_ENTRY_L1_EN) && SYSTEM_LOG_ENTRY_L1_EN == 1)
     /// Log function entry trace (Level 1) with [>>>] tag
-    #define SysEntry(fmt, ...)      ets_printf("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysEntry(fmt, ...)      CoreLog("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysEntry(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_ENTRY_L2_EN) && SYSTEM_LOG_ENTRY_L2_EN == 1)
     /// Log function entry trace (Level 2/Verbose) with [>>>] tag
-    #define SysEntryVer(fmt, ...)   ets_printf("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysEntryVer(fmt, ...)   CoreLog("[%lld] [>>>] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysEntryVer(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_EXIT_L1_EN) && SYSTEM_LOG_EXIT_L1_EN == 1)
     /// Log function exit trace (Level 1) with [<<<] tag
-    #define SysExit(fmt, ...)       ets_printf("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysExit(fmt, ...)       CoreLog("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysExit(fmt, ...)
 #endif
 
 #if (defined(SYSTEM_LOG_EN) && SYSTEM_LOG_EN == 1) && (defined(SYSTEM_LOG_EXIT_L2_EN) && SYSTEM_LOG_EXIT_L2_EN == 1)
     /// Log function exit trace (Level 2/Verbose) with [<<<] tag
-    #define SysExitVer(fmt, ...)    ets_printf("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
+    #define SysExitVer(fmt, ...)    CoreLog("[%lld] [<<<] " fmt "\n", esp_timer_get_time(), ##__VA_ARGS__)
 #else
     #define SysExitVer(fmt, ...)
 #endif

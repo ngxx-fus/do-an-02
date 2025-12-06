@@ -1,7 +1,8 @@
 var P16Com_8c =
 [
+    [ "P16ComBuildLut", "P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c", null ],
     [ "P16ComConfigCtl", "P16Com_8c.html#aee81d39be9e790673d65516e90141088", null ],
-    [ "P16ComConfigDat", "P16Com_8c.html#a050c6969975359190dbf43c7b7672f5f", null ],
+    [ "P16ComConfigDat", "P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b", null ],
     [ "P16ComInit", "P16Com_8c.html#a7705594730141f8d8213378a645e6eef", null ],
     [ "P16ComMakeReset", "P16Com_8c.html#a771b9c483d5b54b5a79d22bdadc85285", null ],
     [ "P16ComNew", "P16Com_8c.html#a834c8f5c27cf72bcda1856f4969c2fe6", null ],

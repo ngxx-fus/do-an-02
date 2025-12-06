@@ -1,7 +1,15 @@
 <map id="LCD32DrawLine" name="LCD32DrawLine">
-<area shape="rect" id="Node000001" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="213,32,337,60"/>
-<area shape="rect" id="Node000002" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="10,5,160,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,35,160,32,160,27,200,35"/>
-<area shape="rect" id="Node000003" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="5,57,165,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,57,166,63,165,58,200,56"/>
+<area shape="rect" id="Node000001" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="639,56,763,84"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="436,5,586,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="629,51,565,36,566,31,634,52"/>
+<area shape="rect" id="Node000003" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,56,383,84"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="621,70,384,72,384,67,626,69"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="431,107,591,134"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="634,88,566,109,565,103,629,89"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,37,384,59,383,54,444,38"/>
+<area shape="rect" id="Node000004" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,56,241,84"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,70,242,72,241,67,276,69"/>
+<area shape="rect" id="Node000005" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,56,91,84"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="121,71,92,72,91,67,126,69"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="443,102,383,86,384,81,449,102"/>
 </map>

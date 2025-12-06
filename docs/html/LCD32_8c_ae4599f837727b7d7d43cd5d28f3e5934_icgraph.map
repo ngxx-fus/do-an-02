@@ -1,20 +1,23 @@
 <map id="LCD32WriteData" name="LCD32WriteData">
-<area shape="rect" id="Node000001" title="Helper to write Data." alt="" coords="896,83,1025,110"/>
+<area shape="rect" id="Node000001" title="Helper to write Data." alt="" coords="896,108,1025,136"/>
 <area shape="rect" id="Node000002" href="$LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="712,56,796,84"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="878,86,796,78,796,73,884,86"/>
-<area shape="rect" id="Node000007" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="660,108,848,136"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="883,106,849,113,848,108,878,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="885,104,796,83,796,78,890,104"/>
+<area shape="rect" id="Node000007" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="660,133,848,161"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="883,131,849,138,848,133,878,132"/>
 <area shape="rect" id="Node000003" href="$LCD32_8c.html#a86c2a30243e294b55f03ea4d2b711d42" title="Re&#45;run configuration logic." alt="" coords="461,5,582,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="694,58,582,35,583,30,699,57"/>
-<area shape="rect" id="Node000004" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,108,383,136"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="693,71,574,80,432,98,382,110,381,105,431,93,574,75,699,71"/>
-<area shape="rect" id="Node000005" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,108,241,136"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,122,242,124,241,119,276,121"/>
-<area shape="rect" id="Node000006" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,108,91,136"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="121,123,92,124,91,119,126,121"/>
+<area shape="rect" id="Node000004" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,107,383,134"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="694,72,574,81,432,98,385,109,383,104,431,93,574,75,699,71"/>
+<area shape="rect" id="Node000005" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,107,241,134"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,121,242,123,241,118,276,120"/>
+<area shape="rect" id="Node000006" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,107,91,134"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="121,122,92,123,90,118,125,119"/>
 <area shape="rect" id="Node000008" href="$LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="431,107,612,134"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="641,121,612,124,612,118,647,121"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="641,135,612,134,612,128,647,134"/>
 <area shape="rect" id="Node000009" href="$LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="448,159,595,186"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="675,139,589,161,588,155,670,140"/>
-<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="452,154,384,137,384,132,457,154"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="641,159,595,167,595,162,647,159"/>
+<area shape="rect" id="Node000010" href="$LCD32_8c.html#a3bb234d9f50421a3d09b15f3676ab940" title="Flush the internal Canvas buffer to the display (Optimized, inlined)" alt="" coords="435,211,608,238"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="703,166,613,200,573,213,572,207,611,195,697,167"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="413,121,384,123,384,118,418,120"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="452,154,384,136,384,131,457,154"/>
 </map>

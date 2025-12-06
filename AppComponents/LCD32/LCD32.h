@@ -82,26 +82,29 @@ typedef struct LCD32Dev_t{
         /// @brief Overlay struct to access specific LCD pins directly
         struct {
             /// @brief Skips P16Com Control pins (Read, Write, CS, RS, Reset)
-            Pin_t       _pad_ctl_arr[P16COM_CTL_PIN_NUM];
+            Pin_t       __pad_ctl_arr[P16COM_CTL_PIN_NUM];
             
             /// @brief Backlight Control Pin (Overlays on P16Com Reserved0)
             Pin_t       BrightLight;
             
             /// @brief Skips remaining P16Com Control padding (Reserved1, Reserved2)
-            Pin_t       _pad_ctl_end[P16COM_CTL_PIN_NUM_W_PADDING - P16COM_CTL_PIN_NUM - 1];
+            Pin_t       __pad_ctl_end[P16COM_CTL_PIN_NUM_W_PADDING - P16COM_CTL_PIN_NUM - 1];
             
             /// @brief Skips P16Com Data pins (DatPinArr)
-            Pin_t       _pad_dat_arr[P16COM_DAT_PIN_NUM_W_PADDING];
+            Pin_t       __pad_dat_arr[P16COM_DAT_PIN_NUM_W_PADDING];
             
             /// @brief Status Flags (Must align with P16Com StatusFlag)
             uint32_t    StatusFlag;
 
             /// @brief Skips P16Com CtlIOMask (uint64_t)
-            uint64_t    _pad_CtlMask;
+            uint64_t    __pad_CtlMask;
 
             /// @brief Skips P16Com DatIOMask (uint64_t)
-            uint64_t    _pad_DatMask;
+            uint64_t    __pad_DatMask;
         };
+
+        /// @brief Skips P16Com LUT pointer
+        P16Lut_t*   __pad_LutPtr;
     };
     
     Dim_t Width;        ///< Current display width
@@ -127,8 +130,9 @@ void                LCD32Delete(LCD32Dev_t * Dev);
 /// @param Dev (LCD32Dev_t *) Pointer to the device object
 /// @param CtlPins (const Pin_t *) Array of 6 pins: [RD, WR, CS, RS, RST, BL]
 /// @param DatPins (const Pin_t *) Array of 16 pins: [D0..D15]
+/// @param Lut (P16Lut_t *) Pointer to a LUT structure for P16Com to use.
 /// @return STAT_OKE or Error Code
-DefaultRet_t        LCD32Config(LCD32Dev_t * Dev, const Pin_t * CtlPins, const Pin_t * DatPins);
+DefaultRet_t        LCD32Config(LCD32Dev_t * Dev, const Pin_t * CtlPins, const Pin_t * DatPins, P16Lut_t *Lut);
 
 /// @brief Initialize the LCD (GPIOs, Reset, Startup Sequence)
 /// @param Dev (LCD32Dev_t *) Pointer to the LCD32Dev_t object

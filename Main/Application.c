@@ -4,7 +4,14 @@
 
 void AppInitialize(){
     SysEntry("AppInitialize()");
-    
+    /// TaskSystemMonitor
+
+    SysLog("[AppInitialize] [+Task] TaskSystemMonitor");
+    // Increased stack size from 1024 to 4096.
+    // This is CRITICAL because vTaskList and the local buffer use significant stack space.
+    // The previous HWM was dangerously low (~88 bytes).
+    CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
+
     SysLog("[AppInitialize] [+Task] TaskScreen");
     CreateTaskCPU0(TaskScreen, "TaskScreen", 4096, NULL, 2, NULL);
 

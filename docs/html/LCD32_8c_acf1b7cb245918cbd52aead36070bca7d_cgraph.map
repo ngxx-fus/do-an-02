@@ -1,0 +1,9 @@
+<map id="LCD32Config" name="LCD32Config">
+<area shape="rect" id="Node000001" title="Configure pin mapping for LCD." alt="" coords="5,32,110,60"/>
+<area shape="rect" id="Node000002" href="$P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="160,5,294,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,35,147,31,142,33,111,40"/>
+<area shape="rect" id="Node000003" href="$P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="158,57,297,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,51,145,58,140,59,110,56"/>
+<area shape="rect" id="Node000004" href="$P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="345,57,473,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="297,69,332,71,327,71,297,74"/>
+</map>

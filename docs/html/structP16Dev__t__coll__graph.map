@@ -1,0 +1,7 @@
+<map id="P16Dev_t" name="P16Dev_t">
+<area shape="rect" id="Node000001" title="Pinout structure for 16&#45;bit parallel communication." alt="" coords="20,229,104,257"/>
+<area shape="rect" id="Node000002" href="$structP16Lut__s.html" title="Look&#45;Up Table structure for fast GPIO writes." alt="" coords="22,128,102,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,170,65,229,59,228,60,173"/>
+<area shape="rect" id="Node000003" href="$structP16LutEntry__s.html" title="Single entry in the LUT." alt="" coords="5,5,119,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,46,65,128,59,127,61,51"/>
+</map>

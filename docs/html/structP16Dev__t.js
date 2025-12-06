@@ -21,6 +21,7 @@ var structP16Dev__t =
     [ "D9", "structP16Dev__t.html#a3cc29874f4849d3375652bbfb24725b6", null ],
     [ "DatIOMask", "structP16Dev__t.html#a6b9acf581f4b1ea2336bab548cca00ef", null ],
     [ "DatPinArr", "structP16Dev__t.html#a1fb58749c4968b6e1efa3d6464c02db9", null ],
+    [ "Lut", "structP16Dev__t.html#af68674bdc4655f265a1f9e8f9c789488", null ],
     [ "Read", "structP16Dev__t.html#ad4d689584f4708ef0fec7747ec14a1ae", null ],
     [ "RegSel", "structP16Dev__t.html#a4c2d7c32858139c910920e30399010ad", null ],
     [ "Reserved0", "structP16Dev__t.html#a79f8d09c5116bd8fba1684529b630063", null ],

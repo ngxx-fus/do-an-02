@@ -26,6 +26,7 @@ LCD32Dev_t * LCD32New(){
     (DevPtr->P16Com).StatusFlag = 0;
     (DevPtr->P16Com).CtlIOMask = 0;
     (DevPtr->P16Com).DatIOMask = 0;
+    (DevPtr->P16Com).Lut = NULL;
 
     /// Preset LCD specific fields
     DevPtr->BrightLight = -1;
@@ -87,10 +88,10 @@ void LCD32Delete(LCD32Dev_t * Dev){
 }
 
 /// @brief Configure pin mapping for LCD
-DefaultRet_t LCD32Config(LCD32Dev_t * Dev, const Pin_t * CtlPins, const Pin_t * DatPins){
-    LCD32Entry("LCD32Config(%p, %p, %p)", Dev, CtlPins, DatPins);
+DefaultRet_t LCD32Config(LCD32Dev_t * Dev, const Pin_t * CtlPins, const Pin_t * DatPins, P16Lut_t *Lut){
+    LCD32Entry("LCD32Config(%p, %p, %p, %p)", Dev, CtlPins, DatPins, Lut);
 
-    if(IsNull(Dev) || IsNull(CtlPins) || IsNull(DatPins)){
+    if(IsNull(Dev) || IsNull(CtlPins) || IsNull(DatPins) || IsNull(Lut)){
         LCD32ReturnWithLog(STAT_ERR_NULL, "LCD32Config() : STAT_ERR_NULL");
     }
 
@@ -110,7 +111,7 @@ DefaultRet_t LCD32Config(LCD32Dev_t * Dev, const Pin_t * CtlPins, const Pin_t * 
     }
 
     /// 3. Config Data Pins (16)
-    ret = P16ComConfigDat(&(Dev->P16Com), DatPins);
+    ret = P16ComConfigDat(&(Dev->P16Com), DatPins, Lut);
     if(ret != STAT_OKE){
         LCD32ReturnWithLog(ret, "LCD32Config() : Error");
     }
@@ -343,14 +344,14 @@ DefaultRet_t LCD32ReConfig(LCD32Dev_t * Dev){
 
 /// @brief Helper to write Command
 void LCD32WriteCmd(LCD32Dev_t * Dev, uint16_t Cmd){
-    P16Log1("LCD32WriteCmd(%p, 0x%X)", Dev, Cmd);
+    // P16Log1("LCD32WriteCmd(%p, 0x%X)", Dev, Cmd);
     LCD32SetCommandTransaction(Dev);
     P16ComWrite(&(Dev->P16Com), Cmd);
 }
 
 /// @brief Helper to write Data
 void LCD32WriteData(LCD32Dev_t * Dev, uint16_t Data){
-    P16Log1("LCD32WriteData(%p, 0x%X)", Dev, Data);
+    // P16Log1("LCD32WriteData(%p, 0x%X)", Dev, Data);
     LCD32SetDataTransaction(Dev);
     P16ComWrite(&(Dev->P16Com), Data);
 }
@@ -401,6 +402,76 @@ void LCD32FlushCanvas(LCD32Dev_t * Dev){
     LCD32SetDataTransaction(Dev);
     /// 3. Burst Write Pixels using P16Com optimized driver
     P16ComWriteArray(&(Dev->P16Com), (P16Data_t *)Dev->Canvas, (Dev->Width * Dev->Height));
+    LCD32StopTransaction(Dev);
+
+    #if (LCD32_THREAD_SAFE_EN == 1)
+    xSemaphoreGive(Dev->mutex);
+    #endif
+}
+
+/// @brief Flush the internal Canvas buffer to the display (Optimized, inlined)
+void LCD32FlushCanvasFast(LCD32Dev_t * Dev){
+    // LCD32Entry("LCD32FlushCanvasFast(%p)", Dev);
+    
+    if(IsNull(Dev) || IsNull(Dev->Canvas)){
+        return;
+    }
+
+    #if (LCD32_THREAD_SAFE_EN == 1)
+    if (xSemaphoreTake(Dev->mutex, portMAX_DELAY) != pdTRUE) {
+        LCD32Err("[LCD32FlushCanvasFast] Failed to take mutex");
+        return;
+    }
+    #endif
+
+    /// 1. Set Address Window to Full Screen
+    LCD32SetAddressWindow(Dev, 0, 0, Dev->Width, Dev->Height);
+    
+    /// 2. Start Data Stream
+    LCD32StartTransaction(Dev);
+    LCD32SetDataTransaction(Dev);
+
+    /// 3. Inlined Burst Write from P16ComWriteArray
+    {
+        P16Dev_t* P16Dev = &(Dev->P16Com);
+        P16Data_t* DataArr = (P16Data_t*)Dev->Canvas;
+        P16Size_t Size = Dev->Width * Dev->Height;
+
+        #if (P16COM_INIT_CHECK_EN == 1)
+            if( !((P16Dev->StatusFlag) & P16COM_INITIALIZED) ){
+                LCD32Err("[LCD32FlushCanvasFast] P16Com not initialized!");
+                goto cleanup;
+            }
+        #endif
+
+        if(IsNull(DataArr) || IsNotPos(Size)){
+            LCD32Err("[LCD32FlushCanvasFast] Canvas is NULL or Size not valid!");
+            goto cleanup;
+        }
+
+        #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+            IOConfigAsOutput(P16Dev->DatIOMask, -1, -1);
+        #endif
+
+        REPN(j, Size){
+            P16Data_t currentData = DataArr[j];
+            uint8_t low_byte = currentData & 0xFF;
+            uint8_t high_byte = (currentData >> 8) & 0xFF;
+
+            uint64_t MaskSet = P16Dev->Lut->LutLow[low_byte].setMask | P16Dev->Lut->LutHigh[high_byte].setMask;
+            uint64_t MaskClr = P16Dev->Lut->LutLow[low_byte].clrMask | P16Dev->Lut->LutHigh[high_byte].clrMask;
+
+            IOSet(MaskSet);
+            IOClr(MaskClr);
+            P16MakeWritePulse(P16Dev);
+        }
+        
+        #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+            IOConfigAsInput(P16Dev->DatIOMask, -1, -1);
+        #endif
+    }
+
+cleanup:
     LCD32StopTransaction(Dev);
 
     #if (LCD32_THREAD_SAFE_EN == 1)

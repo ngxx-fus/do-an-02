@@ -38,7 +38,7 @@ var LCD32_8h =
       [ "__P16COM_RESERVED", "LCD32_8h.html#a217ee09142106a3b9efcc8ceb1546a36a85b0118e56a9291fdff1d0ad4d08aff9", null ],
       [ "LCD32_INITIALIZED", "LCD32_8h.html#a217ee09142106a3b9efcc8ceb1546a36a3be8e8ef28d938a068d3d737483a8738", null ]
     ] ],
-    [ "LCD32Config", "LCD32_8h.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f", null ],
+    [ "LCD32Config", "LCD32_8h.html#acf1b7cb245918cbd52aead36070bca7d", null ],
     [ "LCD32Delete", "LCD32_8h.html#a226dad50852060e1f0343f2b107b8e42", null ],
     [ "LCD32DirectlyWritePixel", "LCD32_8h.html#a13ac2dd79424cdc876c7aacfa13d6aae", null ],
     [ "LCD32DrawChar", "LCD32_8h.html#a87df59d05cb81e86b82357437c8347a2", null ],

@@ -53,9 +53,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AnalyzerMaster_8c.html",
-"FreeMono24pt7b_8h_source.html",
-"LCD32Cmds_8h.html#ae59279482bdbb6a107856c9a6ee31559",
-"ReturnType_8h.html#abc773528770ba1d7728e2088602a8f43"
+"FreeMono24pt7b_8h.html#a4b552ab3e4ab4b5eb60c89ce9b86792d",
+"LCD32Cmds_8h.html#adc23a239d2b6976d53254ef4fc5d1713",
+"ReturnType_8h.html#a80ebd7de5b86f5bd3141eff8c1f880a6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

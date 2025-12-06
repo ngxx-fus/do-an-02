@@ -285,15 +285,15 @@ Functions</h2></td></tr>
 <p>Main entry point for the ESP-IDF application. </p>
 <p>This function is called by the ESP-IDF startup code. Its primary role is to initialize the application by creating tasks and then delete itself to free up memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="Application_8c_source.html#l00017">17</a> of file <a class="el" href="Application_8c_source.html">Application.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                   {</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;app_main() : User SW entry point! &quot;</span>);</div>
-<div class="line"><span class="lineno">   19</span>    <span class="comment">// Call the main initialization routine which sets up all application tasks.</span></div>
-<div class="line"><span class="lineno">   20</span>    <a class="code hl_function" href="#a81875772de66351e046ffa03726dbcc4">AppInitialize</a>();</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>    <span class="comment">// The main task has completed its setup. Delete it to free up its stack memory.</span></div>
-<div class="line"><span class="lineno">   23</span>    vTaskDelete(NULL);</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Application_8c_source.html#l00024">24</a> of file <a class="el" href="Application_8c_source.html">Application.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                   {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;app_main() : User SW entry point! &quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>    <span class="comment">// Call the main initialization routine which sets up all application tasks.</span></div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_function" href="#a81875772de66351e046ffa03726dbcc4">AppInitialize</a>();</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>    <span class="comment">// The main task has completed its setup. Delete it to free up its stack memory.</span></div>
+<div class="line"><span class="lineno">   30</span>    vTaskDelete(NULL);</div>
+<div class="line"><span class="lineno">   31</span>}</div>
 <div class="ttc" id="aApplication_8c_html_a81875772de66351e046ffa03726dbcc4"><div class="ttname"><a href="#a81875772de66351e046ffa03726dbcc4">AppInitialize</a></div><div class="ttdeci">void AppInitialize()</div><div class="ttdef"><b>Definition</b> <a href="Application_8c_source.html#l00005">Application.c:5</a></div></div>
 <div class="ttc" id="aESPLogWrapper_8h_html_a414aeb481f289833090271e150b3dc94"><div class="ttname"><a href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a></div><div class="ttdeci">#define SysEntry(fmt,...)</div><div class="ttdoc">ENTRY/EXIT TRACES.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00134">ESPLogWrapper.h:134</a></div></div>
 </div><!-- fragment -->
@@ -303,55 +303,95 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Application_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph.png" border="0" usemap="#aApplication_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph" loading="lazy" alt=""/></div>
 <map name="aApplication_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph" id="aApplication_8c_a630544a7f0a2cc40d8a7fefab7e2fe70_cgraph">
-<area shape="rect" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,148,91,176"/>
-<area shape="rect" href="Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,148,241,176"/>
-<area shape="poly" title=" " alt="" coords="90,159,125,160,121,163,92,164"/>
-<area shape="rect" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,148,383,176"/>
-<area shape="poly" title=" " alt="" coords="241,159,276,161,271,163,242,164"/>
-<area shape="rect" href="LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f" title="Configure pin mapping for LCD." alt="" coords="452,17,557,45"/>
-<area shape="poly" title=" " alt="" coords="345,145,379,102,403,77,430,56,443,51,438,54,433,60,407,81,383,105,349,149"/>
-<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="451,69,558,97"/>
-<area shape="poly" title=" " alt="" coords="360,145,430,107,449,102,445,104,432,112,363,150"/>
-<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="439,121,570,149"/>
-<area shape="poly" title=" " alt="" coords="383,152,426,147,421,149,384,157"/>
-<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="431,173,578,201"/>
-<area shape="poly" title=" " alt="" coords="383,166,419,173,414,174,384,172"/>
-<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="678,249,762,277"/>
-<area shape="poly" title=" " alt="" coords="360,174,394,193,432,210,492,228,554,241,664,258,659,259,553,246,491,233,430,215,391,198,359,179"/>
-<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="458,275,551,302"/>
-<area shape="poly" title=" " alt="" coords="350,174,385,213,433,254,453,268,448,267,430,259,382,217,348,179"/>
-<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="653,57,787,85"/>
-<area shape="poly" title=" " alt="" coords="557,38,640,55,635,56,558,44"/>
-<area shape="rect" href="P16Com_8c.html#a050c6969975359190dbf43c7b7672f5f" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="650,5,790,33"/>
-<area shape="poly" title=" " alt="" coords="557,26,637,23,632,25,558,31"/>
-<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="626,173,814,201"/>
-<area shape="poly" title=" " alt="" coords="577,185,612,187,607,188,578,190"/>
-<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="1039,157,1185,185"/>
-<area shape="poly" title=" " alt="" coords="565,170,625,159,728,146,808,139,889,138,992,146,1034,154,1029,154,991,151,888,144,808,144,728,151,626,164,566,175"/>
-<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="862,160,991,188"/>
-<area shape="poly" title=" " alt="" coords="814,178,849,179,844,179,815,184"/>
-<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="862,212,991,240"/>
-<area shape="poly" title=" " alt="" coords="797,199,850,211,845,211,797,204"/>
-<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="1057,209,1167,237"/>
-<area shape="poly" title=" " alt="" coords="982,186,1046,205,1040,205,981,191"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1238,209,1364,237"/>
-<area shape="poly" title=" " alt="" coords="1168,221,1225,223,1220,223,1168,226"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1233,261,1369,289"/>
-<area shape="poly" title=" " alt="" coords="1165,235,1236,257,1231,257,1165,240"/>
-<area shape="poly" title=" " alt="" coords="992,222,1044,224,1038,224,992,228"/>
-<area shape="poly" title=" " alt="" coords="1165,183,1236,205,1231,205,1165,188"/>
-<area shape="poly" title=" " alt="" coords="1162,183,1186,196,1201,209,1211,221,1220,234,1234,246,1244,255,1239,254,1231,251,1216,237,1207,225,1198,212,1183,200,1161,188"/>
-<area shape="poly" title=" " alt="" coords="752,246,861,198,874,195,880,193,863,203,754,251"/>
-<area shape="poly" title=" " alt="" coords="749,275,825,309,876,328,934,344,995,357,1058,364,1122,362,1184,350,1232,327,1271,300,1276,299,1235,331,1186,355,1123,368,1058,369,994,363,932,350,875,333,823,314,748,280"/>
-<area shape="poly" title=" " alt="" coords="762,253,844,241,849,240,763,258"/>
-<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="1064,313,1160,341"/>
-<area shape="poly" title=" " alt="" coords="763,267,1052,317,1046,317,762,273"/>
-<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="1058,261,1166,289"/>
-<area shape="poly" title=" " alt="" coords="762,262,1045,273,1040,273,763,267"/>
-<area shape="poly" title=" " alt="" coords="1160,310,1183,298,1198,286,1207,274,1216,261,1231,248,1239,245,1244,243,1234,252,1220,264,1211,277,1201,290,1186,303,1161,316"/>
-<area shape="poly" title=" " alt="" coords="1160,311,1231,294,1236,293,1161,317"/>
-<area shape="poly" title=" " alt="" coords="1165,258,1231,242,1236,241,1166,263"/>
-<area shape="poly" title=" " alt="" coords="1167,273,1220,275,1215,275,1167,278"/>
+<area shape="rect" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,548,91,576"/>
+<area shape="rect" href="Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,548,241,576"/>
+<area shape="poly" title=" " alt="" coords="90,560,125,560,121,564,93,564"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="316,521,411,549"/>
+<area shape="poly" title=" " alt="" coords="240,552,304,543,300,546,243,556"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#ac289155e7346fe7095a1f4f8686b32ae" title="Task to periodically log system resource usage (Heap, Stack, etc.)." alt="" coords="289,573,438,601"/>
+<area shape="poly" title=" " alt="" coords="241,567,276,573,271,575,243,572"/>
+<area shape="rect" href="LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="524,57,629,85"/>
+<area shape="poly" title=" " alt="" coords="364,520,373,458,394,362,430,251,455,197,484,146,510,116,542,92,538,96,513,120,489,149,459,199,435,253,400,363,379,459,369,522"/>
+<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="523,159,630,186"/>
+<area shape="poly" title=" " alt="" coords="363,520,370,462,388,375,404,327,424,280,451,236,485,197,511,183,507,187,488,201,455,239,429,283,409,329,393,376,375,462,368,522"/>
+<area shape="rect" href="LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="486,211,667,238"/>
+<area shape="poly" title=" " alt="" coords="364,520,374,469,394,397,410,357,430,318,455,281,485,249,494,244,490,248,488,253,459,284,435,320,415,359,400,398,379,471,369,522"/>
+<area shape="rect" href="LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="745,495,872,522"/>
+<area shape="poly" title=" " alt="" coords="389,519,433,497,486,481,551,473,617,473,679,479,736,490,731,492,679,485,617,479,551,478,487,486,435,502,392,523"/>
+<area shape="rect" href="LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="1183,565,1347,593"/>
+<area shape="poly" title=" " alt="" coords="380,519,425,486,454,470,486,458,536,448,576,448,667,458,800,463,905,470,1007,485,1136,519,1182,536,1226,558,1221,558,1180,541,1135,524,1006,491,904,475,800,468,666,463,575,454,536,453,487,463,457,475,428,490,383,523"/>
+<area shape="rect" href="LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="492,547,661,574"/>
+<area shape="poly" title=" " alt="" coords="410,538,479,548,474,550,412,543"/>
+<area shape="rect" href="LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="951,617,1135,645"/>
+<area shape="poly" title=" " alt="" coords="407,547,439,559,463,573,487,583,605,609,726,624,839,630,938,634,933,635,839,636,725,629,604,614,486,588,461,577,437,564,408,552"/>
+<area shape="rect" href="LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="747,700,871,728"/>
+<area shape="poly" title=" " alt="" coords="411,543,440,560,453,576,460,593,463,626,467,658,474,672,488,685,515,702,545,715,609,728,673,731,734,728,729,729,673,736,608,734,543,720,513,707,485,689,470,675,462,659,458,627,454,595,448,579,437,564,411,548"/>
+<area shape="rect" href="LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="502,749,651,777"/>
+<area shape="poly" title=" " alt="" coords="411,542,427,549,440,560,456,582,463,604,465,646,466,688,474,709,488,729,501,742,496,741,484,733,469,711,461,689,460,647,458,605,451,584,436,564,424,554,412,547"/>
+<area shape="rect" href="LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="514,495,639,522"/>
+<area shape="poly" title=" " alt="" coords="410,527,501,517,497,519,412,532"/>
+<area shape="rect" href="LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="497,648,656,676"/>
+<area shape="poly" title=" " alt="" coords="411,545,440,560,456,577,465,595,473,611,488,628,508,641,502,641,485,632,468,614,460,597,452,580,437,564,412,550"/>
+<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="511,801,642,829"/>
+<area shape="poly" title=" " alt="" coords="411,541,427,549,440,560,459,590,467,619,467,648,464,676,461,704,462,732,469,759,488,787,500,799,495,798,484,790,465,761,456,732,456,704,459,676,462,648,462,620,454,592,436,564,424,554,412,547"/>
+<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="503,263,650,290"/>
+<area shape="poly" title=" " alt="" coords="368,519,383,482,408,431,442,375,485,324,528,296,524,300,488,328,446,378,413,433,388,484,373,522"/>
+<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="767,324,851,352"/>
+<area shape="poly" title=" " alt="" coords="370,519,386,491,412,454,445,417,485,386,518,370,553,357,624,341,693,334,754,334,749,336,693,339,625,346,554,363,520,375,488,391,449,421,416,457,391,494,374,523"/>
+<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="530,853,623,881"/>
+<area shape="poly" title=" " alt="" coords="411,541,428,549,440,560,463,597,471,633,470,668,464,702,458,737,458,771,466,804,488,839,501,849,518,859,513,859,498,854,484,842,461,807,452,771,453,736,459,702,464,667,465,633,458,599,436,564,425,553,412,547"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#affdc3e0d5cf57157bff1937be1a18a8f" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="530,905,623,933"/>
+<area shape="poly" title=" " alt="" coords="411,541,428,549,440,560,456,582,466,604,474,646,472,688,464,729,456,769,454,809,463,850,473,870,488,891,501,901,518,912,512,911,498,906,484,894,469,873,458,852,448,810,451,769,458,728,466,687,469,646,461,605,451,585,436,564,425,553,412,546"/>
+<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="742,5,876,33"/>
+<area shape="poly" title=" " alt="" coords="627,57,731,35,727,39,630,62"/>
+<area shape="rect" href="P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="739,57,878,85"/>
+<area shape="poly" title=" " alt="" coords="628,69,726,70,721,72,630,74"/>
+<area shape="rect" href="P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="979,57,1107,85"/>
+<area shape="poly" title=" " alt="" coords="878,69,966,70,961,72,880,74"/>
+<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="715,211,903,238"/>
+<area shape="poly" title=" " alt="" coords="666,222,702,223,697,226,668,227"/>
+<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="1210,207,1320,234"/>
+<area shape="poly" title=" " alt="" coords="629,208,774,173,862,157,951,145,1044,133,1085,134,1136,145,1190,167,1236,197,1231,197,1188,172,1135,150,1084,140,1044,139,951,150,863,162,775,179,632,212"/>
+<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="979,159,1107,186"/>
+<area shape="poly" title=" " alt="" coords="874,208,966,189,961,191,876,212"/>
+<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="978,211,1108,238"/>
+<area shape="poly" title=" " alt="" coords="903,222,965,224,960,225,904,227"/>
+<area shape="poly" title=" " alt="" coords="1108,184,1197,205,1192,206,1108,189"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1400,259,1526,286"/>
+<area shape="poly" title=" " alt="" coords="1320,232,1395,254,1390,254,1321,238"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1395,311,1531,338"/>
+<area shape="poly" title=" " alt="" coords="1321,232,1348,245,1364,258,1373,271,1382,283,1396,296,1407,304,1401,303,1393,300,1378,287,1369,274,1360,261,1345,249,1321,237"/>
+<area shape="poly" title=" " alt="" coords="1108,221,1197,221,1192,223,1109,226"/>
+<area shape="poly" title=" " alt="" coords="873,513,1136,551,1182,562,1177,562,1135,556,873,519"/>
+<area shape="rect" href="LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="962,565,1124,593"/>
+<area shape="poly" title=" " alt="" coords="661,561,949,574,944,576,662,567"/>
+<area shape="poly" title=" " alt="" coords="1124,577,1171,579,1165,580,1125,582"/>
+<area shape="poly" title=" " alt="" coords="1105,614,1191,596,1185,598,1106,619"/>
+<area shape="rect" href="LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="1206,617,1324,645"/>
+<area shape="poly" title=" " alt="" coords="1135,629,1193,631,1188,632,1136,634"/>
+<area shape="poly" title=" " alt="" coords="871,712,929,708,997,699,1068,682,1134,654,1149,643,1158,630,1167,617,1182,604,1192,601,1197,599,1185,608,1171,620,1162,633,1153,647,1137,659,1069,687,998,704,930,713,872,717"/>
+<area shape="poly" title=" " alt="" coords="644,746,734,729,729,731,646,751"/>
+<area shape="poly" title=" " alt="" coords="638,506,732,508,727,509,639,511"/>
+<area shape="poly" title=" " alt="" coords="642,674,734,696,729,697,642,679"/>
+<area shape="rect" href="LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="743,648,874,676"/>
+<area shape="poly" title=" " alt="" coords="656,659,731,661,725,662,657,664"/>
+<area shape="poly" title=" " alt="" coords="874,651,938,645,933,646,875,656"/>
+<area shape="poly" title=" " alt="" coords="641,260,731,241,726,244,643,264"/>
+<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="1192,259,1338,286"/>
+<area shape="poly" title=" " alt="" coords="649,273,1179,271,1175,275,650,279"/>
+<area shape="poly" title=" " alt="" coords="1337,270,1387,272,1382,273,1338,275"/>
+<area shape="poly" title=" " alt="" coords="1321,284,1395,306,1390,306,1321,290"/>
+<area shape="poly" title=" " alt="" coords="824,322,901,248,923,221,934,209,950,197,967,191,962,194,952,201,937,213,927,224,905,252,827,326"/>
+<area shape="poly" title=" " alt="" coords="847,350,937,379,996,394,1062,407,1132,416,1204,419,1276,414,1346,399,1394,376,1433,350,1438,348,1397,381,1348,404,1277,420,1204,425,1132,422,1061,413,995,400,936,384,847,355"/>
+<area shape="poly" title=" " alt="" coords="838,321,1001,244,997,247,841,326"/>
+<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="1217,311,1313,338"/>
+<area shape="poly" title=" " alt="" coords="851,334,1204,325,1199,327,852,339"/>
+<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="1211,363,1319,390"/>
+<area shape="poly" title=" " alt="" coords="851,339,1198,370,1193,372,852,344"/>
+<area shape="poly" title=" " alt="" coords="1313,309,1395,290,1390,292,1314,314"/>
+<area shape="poly" title=" " alt="" coords="1313,322,1381,324,1376,325,1314,327"/>
+<area shape="poly" title=" " alt="" coords="1318,361,1345,348,1360,336,1369,323,1378,310,1393,297,1402,295,1406,292,1396,301,1382,314,1373,326,1364,339,1348,352,1321,365"/>
+<area shape="poly" title=" " alt="" coords="1319,360,1395,342,1390,344,1321,365"/>
 </map>
 </div>
 
@@ -371,76 +411,124 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>TaskSystemMonitor</p>
 
 <p class="definition">Definition at line <a class="el" href="Application_8c_source.html#l00005">5</a> of file <a class="el" href="Application_8c_source.html">Application.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    5</span>                    {</div>
 <div class="line"><span class="lineno">    6</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;AppInitialize()&quot;</span>);</div>
-<div class="line"><span class="lineno">    7</span>    </div>
-<div class="line"><span class="lineno">    8</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[AppInitialize] [+Task] TaskScreen&quot;</span>);</div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#a2e999ee7a57d32fc1cb14396e63c7271">CreateTaskCPU0</a>(<a class="code hl_function" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a>, <span class="stringliteral">&quot;TaskScreen&quot;</span>, 4096, NULL, 2, NULL);</div>
-<div class="line"><span class="lineno">   10</span> </div>
-<div class="line"><span class="lineno">   11</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#ac277825c0a0ceb6ad4e11f65d874127d">SysExit</a>(<span class="stringliteral">&quot;AppInitialize()&quot;</span>);</div>
-<div class="line"><span class="lineno">   12</span>}</div>
-<div class="ttc" id="aAnalyzerMaster_8c_html_a0ff6461cec9cf517fc00bf44dc8fed74"><div class="ttname"><a href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a></div><div class="ttdeci">void TaskScreen(void *pv)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00005">AnalyzerMaster.c:5</a></div></div>
+<div class="line"><span class="lineno">    8</span> </div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[AppInitialize] [+Task] TaskSystemMonitor&quot;</span>);</div>
+<div class="line"><span class="lineno">   10</span>    <span class="comment">// Increased stack size from 1024 to 4096.</span></div>
+<div class="line"><span class="lineno">   11</span>    <span class="comment">// This is CRITICAL because vTaskList and the local buffer use significant stack space.</span></div>
+<div class="line"><span class="lineno">   12</span>    <span class="comment">// The previous HWM was dangerously low (~88 bytes).</span></div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#a2e999ee7a57d32fc1cb14396e63c7271">CreateTaskCPU0</a>(<a class="code hl_function" href="AnalyzerMaster_8c.html#ac289155e7346fe7095a1f4f8686b32ae">TaskSystemMonitor</a>, <span class="stringliteral">&quot;TaskSystemMonitor&quot;</span>, 4096, NULL, 2, NULL);</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[AppInitialize] [+Task] TaskScreen&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>    <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#a2e999ee7a57d32fc1cb14396e63c7271">CreateTaskCPU0</a>(<a class="code hl_function" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a>, <span class="stringliteral">&quot;TaskScreen&quot;</span>, 4096, NULL, 2, NULL);</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#ac277825c0a0ceb6ad4e11f65d874127d">SysExit</a>(<span class="stringliteral">&quot;AppInitialize()&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a0ff6461cec9cf517fc00bf44dc8fed74"><div class="ttname"><a href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a></div><div class="ttdeci">void TaskScreen(void *pv)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00077">AnalyzerMaster.c:77</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_ac289155e7346fe7095a1f4f8686b32ae"><div class="ttname"><a href="AnalyzerMaster_8c.html#ac289155e7346fe7095a1f4f8686b32ae">TaskSystemMonitor</a></div><div class="ttdeci">void TaskSystemMonitor(void *pv)</div><div class="ttdoc">Task to periodically log system resource usage (Heap, Stack, etc.).</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00024">AnalyzerMaster.c:24</a></div></div>
 <div class="ttc" id="aESPFreeRTOSWrapper_8h_html_a2e999ee7a57d32fc1cb14396e63c7271"><div class="ttname"><a href="ESPFreeRTOSWrapper_8h.html#a2e999ee7a57d32fc1cb14396e63c7271">CreateTaskCPU0</a></div><div class="ttdeci">#define CreateTaskCPU0(func, name, stack, param, prio, handle)</div><div class="ttdef"><b>Definition</b> <a href="ESPFreeRTOSWrapper_8h_source.html#l00056">ESPFreeRTOSWrapper.h:56</a></div></div>
 <div class="ttc" id="aESPLogWrapper_8h_html_ac277825c0a0ceb6ad4e11f65d874127d"><div class="ttname"><a href="ESPLogWrapper_8h.html#ac277825c0a0ceb6ad4e11f65d874127d">SysExit</a></div><div class="ttdeci">#define SysExit(fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00148">ESPLogWrapper.h:148</a></div></div>
 <div class="ttc" id="aESPLogWrapper_8h_html_ad74cd22f79ba53917ed27ee13f6499dc"><div class="ttname"><a href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a></div><div class="ttdeci">#define SysLog(fmt,...)</div><div class="ttdoc">LEVEL 1 LOGGING.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00113">ESPLogWrapper.h:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00056">CreateTaskCPU0</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00134">SysEntry</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00148">SysExit</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00113">SysLog</a>, and <a class="el" href="AnalyzerMaster_8c_source.html#l00005">TaskScreen()</a>.</p>
+<p class="reference">References <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00056">CreateTaskCPU0</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00134">SysEntry</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00148">SysExit</a>, <a class="el" href="ESPLogWrapper_8h_source.html#l00113">SysLog</a>, <a class="el" href="AnalyzerMaster_8c_source.html#l00077">TaskScreen()</a>, and <a class="el" href="AnalyzerMaster_8c_source.html#l00024">TaskSystemMonitor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00017">app_main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00024">app_main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Application_8c_a81875772de66351e046ffa03726dbcc4_cgraph.png" border="0" usemap="#aApplication_8c_a81875772de66351e046ffa03726dbcc4_cgraph" loading="lazy" alt=""/></div>
 <map name="aApplication_8c_a81875772de66351e046ffa03726dbcc4_cgraph" id="aApplication_8c_a81875772de66351e046ffa03726dbcc4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,148,108,176"/>
-<area shape="rect" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="156,148,250,176"/>
-<area shape="poly" title=" " alt="" coords="107,159,142,160,138,163,109,164"/>
-<area shape="rect" href="LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f" title="Configure pin mapping for LCD." alt="" coords="319,17,423,45"/>
-<area shape="poly" title=" " alt="" coords="212,146,246,102,270,77,296,56,309,50,305,54,300,60,273,81,250,105,216,149"/>
-<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="318,69,424,97"/>
-<area shape="poly" title=" " alt="" coords="226,145,297,107,316,102,311,105,299,112,229,150"/>
-<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="306,121,436,149"/>
-<area shape="poly" title=" " alt="" coords="249,152,293,147,288,149,251,157"/>
-<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="298,173,444,201"/>
-<area shape="poly" title=" " alt="" coords="250,166,286,173,281,175,251,172"/>
-<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="544,249,629,277"/>
-<area shape="poly" title=" " alt="" coords="226,174,260,193,299,210,359,228,421,241,531,258,526,259,420,246,358,233,297,215,258,198,226,179"/>
-<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="325,275,417,302"/>
-<area shape="poly" title=" " alt="" coords="216,174,252,213,300,254,320,268,314,268,296,259,248,217,215,179"/>
-<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="519,57,654,85"/>
-<area shape="poly" title=" " alt="" coords="424,38,506,55,501,57,424,43"/>
-<area shape="rect" href="P16Com_8c.html#a050c6969975359190dbf43c7b7672f5f" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="517,5,656,33"/>
-<area shape="poly" title=" " alt="" coords="423,26,504,23,499,25,425,31"/>
-<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="492,173,681,201"/>
-<area shape="poly" title=" " alt="" coords="444,185,479,187,474,188,445,190"/>
-<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="906,157,1051,185"/>
-<area shape="poly" title=" " alt="" coords="431,170,492,159,594,146,675,139,755,138,858,146,901,154,896,154,858,151,755,144,675,144,595,151,493,164,433,175"/>
-<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="729,160,858,188"/>
-<area shape="poly" title=" " alt="" coords="681,178,716,179,711,179,681,184"/>
-<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="729,212,858,240"/>
-<area shape="poly" title=" " alt="" coords="664,199,717,211,711,211,664,204"/>
-<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="924,209,1034,237"/>
-<area shape="poly" title=" " alt="" coords="848,186,912,205,907,205,848,191"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1105,209,1230,237"/>
-<area shape="poly" title=" " alt="" coords="1034,221,1092,223,1086,223,1035,226"/>
-<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1099,261,1236,289"/>
-<area shape="poly" title=" " alt="" coords="1032,235,1103,257,1098,257,1032,240"/>
-<area shape="poly" title=" " alt="" coords="858,222,910,224,905,224,859,228"/>
-<area shape="poly" title=" " alt="" coords="1032,183,1103,205,1098,205,1032,188"/>
-<area shape="poly" title=" " alt="" coords="1028,183,1053,196,1068,209,1078,221,1087,234,1101,246,1111,255,1106,254,1098,251,1083,237,1073,225,1064,212,1050,200,1027,188"/>
-<area shape="poly" title=" " alt="" coords="619,246,728,198,741,195,746,193,730,203,621,251"/>
-<area shape="poly" title=" " alt="" coords="615,275,692,309,743,328,800,344,862,357,925,364,989,362,1050,350,1099,327,1137,300,1142,299,1101,331,1052,355,989,368,925,369,861,363,799,350,741,333,690,314,614,280"/>
-<area shape="poly" title=" " alt="" coords="629,253,711,241,716,240,630,258"/>
-<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="930,313,1027,341"/>
-<area shape="poly" title=" " alt="" coords="629,267,918,317,913,317,629,273"/>
-<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="924,261,1033,289"/>
-<area shape="poly" title=" " alt="" coords="629,262,912,273,906,273,629,267"/>
-<area shape="poly" title=" " alt="" coords="1026,310,1050,298,1064,286,1073,274,1083,261,1098,248,1106,245,1111,243,1101,252,1087,264,1078,277,1068,290,1053,303,1028,316"/>
-<area shape="poly" title=" " alt="" coords="1027,311,1098,294,1103,293,1028,317"/>
-<area shape="poly" title=" " alt="" coords="1031,258,1098,242,1103,241,1032,263"/>
-<area shape="poly" title=" " alt="" coords="1033,273,1087,275,1081,275,1033,278"/>
+<area shape="rect" title=" " alt="" coords="5,548,108,576"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="183,521,278,549"/>
+<area shape="poly" title=" " alt="" coords="107,552,170,543,167,547,110,556"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#ac289155e7346fe7095a1f4f8686b32ae" title="Task to periodically log system resource usage (Heap, Stack, etc.)." alt="" coords="156,573,305,601"/>
+<area shape="poly" title=" " alt="" coords="107,567,143,573,138,576,110,572"/>
+<area shape="rect" href="LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="391,57,495,85"/>
+<area shape="poly" title=" " alt="" coords="231,520,240,458,261,362,297,251,321,197,351,146,376,116,408,92,405,96,380,120,355,149,326,199,302,253,266,363,245,459,236,522"/>
+<area shape="rect" href="LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="390,159,496,186"/>
+<area shape="poly" title=" " alt="" coords="230,520,236,462,255,375,270,327,291,280,318,236,351,197,377,183,374,187,355,201,322,239,296,283,275,329,260,376,242,462,235,522"/>
+<area shape="rect" href="LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="353,211,533,238"/>
+<area shape="poly" title=" " alt="" coords="231,520,240,469,261,397,277,357,297,318,321,281,351,249,361,244,357,248,355,253,326,284,301,320,282,359,266,398,246,471,236,522"/>
+<area shape="rect" href="LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="612,495,739,522"/>
+<area shape="poly" title=" " alt="" coords="255,519,300,497,352,481,418,473,484,473,546,479,603,490,598,492,545,485,483,479,418,478,354,486,302,502,258,523"/>
+<area shape="rect" href="LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="1050,565,1213,593"/>
+<area shape="poly" title=" " alt="" coords="246,519,292,486,321,470,352,458,402,448,442,448,534,458,667,463,771,470,874,485,1003,519,1049,536,1093,558,1087,558,1047,541,1001,524,873,491,771,475,667,468,533,463,442,454,403,453,354,463,323,475,295,490,250,523"/>
+<area shape="rect" href="LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="359,547,527,574"/>
+<area shape="poly" title=" " alt="" coords="277,538,346,547,341,550,279,543"/>
+<area shape="rect" href="LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="818,617,1002,645"/>
+<area shape="poly" title=" " alt="" coords="273,547,306,559,330,573,354,583,472,609,592,624,705,630,805,634,799,635,705,636,592,629,471,614,352,588,327,577,304,564,274,552"/>
+<area shape="rect" href="LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="613,700,738,728"/>
+<area shape="poly" title=" " alt="" coords="277,543,307,560,320,576,326,593,330,626,334,658,341,672,355,685,382,702,412,715,476,728,540,731,601,728,595,729,540,736,475,734,410,720,380,707,351,689,337,675,329,659,324,627,321,595,315,579,303,564,278,548"/>
+<area shape="rect" href="LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="368,749,518,777"/>
+<area shape="poly" title=" " alt="" coords="277,542,294,549,307,560,323,582,330,604,332,646,333,688,340,709,355,729,368,742,362,741,351,733,335,711,328,689,326,647,325,605,318,584,303,564,291,554,278,547"/>
+<area shape="rect" href="LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="381,495,505,522"/>
+<area shape="poly" title=" " alt="" coords="277,527,368,517,363,520,279,532"/>
+<area shape="rect" href="LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="364,648,523,676"/>
+<area shape="poly" title=" " alt="" coords="278,545,307,560,323,577,331,595,339,611,355,628,374,641,369,642,351,632,335,614,327,597,319,580,303,564,279,550"/>
+<area shape="rect" href="LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="378,801,508,829"/>
+<area shape="poly" title=" " alt="" coords="277,541,294,549,307,560,326,590,334,619,334,648,331,676,328,704,328,732,336,759,355,787,367,798,362,798,351,790,331,761,323,732,322,704,326,676,329,648,329,620,321,592,303,564,291,554,278,547"/>
+<area shape="rect" href="LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="370,263,516,290"/>
+<area shape="poly" title=" " alt="" coords="234,520,250,482,275,431,309,375,351,324,394,296,391,300,355,328,313,378,279,433,255,484,239,522"/>
+<area shape="rect" href="LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="633,324,718,352"/>
+<area shape="poly" title=" " alt="" coords="236,520,253,491,278,454,312,417,352,386,384,370,419,357,491,341,560,334,620,334,615,336,560,339,492,346,421,363,387,375,354,391,315,421,283,457,258,494,241,522"/>
+<area shape="rect" href="LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="397,853,489,881"/>
+<area shape="poly" title=" " alt="" coords="278,541,294,549,307,560,329,597,337,633,336,668,331,702,325,737,324,771,333,804,355,839,368,849,385,859,379,859,365,854,351,842,328,807,319,771,320,736,325,702,331,667,332,633,324,599,303,564,291,553,279,546"/>
+<area shape="rect" href="AnalyzerMaster_8c.html#affdc3e0d5cf57157bff1937be1a18a8f" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="396,905,490,933"/>
+<area shape="poly" title=" " alt="" coords="277,541,294,549,307,560,322,582,333,604,341,646,338,688,330,729,323,769,320,809,329,850,340,870,355,891,368,901,384,912,379,911,365,906,351,894,335,873,324,852,315,810,317,769,325,728,333,687,336,646,327,605,318,585,303,564,291,553,278,546"/>
+<area shape="rect" href="P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="608,5,743,33"/>
+<area shape="poly" title=" " alt="" coords="494,57,597,35,593,39,497,62"/>
+<area shape="rect" href="P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="606,57,745,85"/>
+<area shape="poly" title=" " alt="" coords="494,69,592,70,588,73,497,74"/>
+<area shape="rect" href="P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="846,57,974,85"/>
+<area shape="poly" title=" " alt="" coords="745,69,832,70,827,72,747,74"/>
+<area shape="rect" href="LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="581,211,770,238"/>
+<area shape="poly" title=" " alt="" coords="533,222,568,223,563,226,535,227"/>
+<area shape="rect" href="P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="1076,207,1187,234"/>
+<area shape="poly" title=" " alt="" coords="496,208,640,173,728,157,817,145,911,133,952,134,1003,145,1057,167,1103,197,1098,198,1054,172,1001,150,951,140,911,139,818,150,729,162,641,179,498,212"/>
+<area shape="rect" href="LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="846,159,974,186"/>
+<area shape="poly" title=" " alt="" coords="740,208,833,189,828,191,743,212"/>
+<area shape="rect" href="LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="845,211,974,238"/>
+<area shape="poly" title=" " alt="" coords="769,222,832,223,827,226,771,227"/>
+<area shape="poly" title=" " alt="" coords="974,184,1064,205,1058,206,975,189"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1267,259,1392,286"/>
+<area shape="poly" title=" " alt="" coords="1187,232,1262,254,1256,255,1188,238"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1261,311,1398,338"/>
+<area shape="poly" title=" " alt="" coords="1187,232,1215,245,1230,258,1240,271,1249,283,1263,296,1273,304,1268,303,1260,300,1245,287,1235,274,1226,261,1212,249,1187,237"/>
+<area shape="poly" title=" " alt="" coords="974,221,1063,221,1058,223,976,226"/>
+<area shape="poly" title=" " alt="" coords="739,513,1002,551,1049,562,1043,562,1002,556,739,519"/>
+<area shape="rect" href="LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="829,565,990,593"/>
+<area shape="poly" title=" " alt="" coords="528,561,816,574,811,577,528,567"/>
+<area shape="poly" title=" " alt="" coords="990,577,1037,579,1032,580,991,582"/>
+<area shape="poly" title=" " alt="" coords="972,614,1057,596,1052,598,973,619"/>
+<area shape="rect" href="LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="1072,617,1191,645"/>
+<area shape="poly" title=" " alt="" coords="1002,629,1060,631,1055,632,1003,634"/>
+<area shape="poly" title=" " alt="" coords="738,712,796,708,864,699,934,682,1001,654,1015,643,1024,630,1033,617,1048,604,1058,601,1063,599,1052,608,1037,620,1029,633,1019,647,1003,659,936,687,865,704,797,713,738,717"/>
+<area shape="poly" title=" " alt="" coords="511,746,601,729,596,731,512,751"/>
+<area shape="poly" title=" " alt="" coords="505,506,599,507,594,510,506,511"/>
+<area shape="poly" title=" " alt="" coords="508,674,601,696,595,697,509,679"/>
+<area shape="rect" href="LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="610,648,741,676"/>
+<area shape="poly" title=" " alt="" coords="522,659,597,661,592,663,523,664"/>
+<area shape="poly" title=" " alt="" coords="741,651,805,645,799,646,742,656"/>
+<area shape="poly" title=" " alt="" coords="507,260,597,241,593,244,510,264"/>
+<area shape="rect" href="P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="1059,259,1204,286"/>
+<area shape="poly" title=" " alt="" coords="516,273,1045,271,1042,275,517,279"/>
+<area shape="poly" title=" " alt="" coords="1204,270,1254,272,1249,273,1205,275"/>
+<area shape="poly" title=" " alt="" coords="1187,284,1262,306,1256,306,1188,290"/>
+<area shape="poly" title=" " alt="" coords="690,322,768,248,790,221,800,209,816,197,833,191,829,194,819,201,804,213,794,224,772,252,694,326"/>
+<area shape="poly" title=" " alt="" coords="713,350,804,379,863,394,929,407,999,416,1071,419,1143,414,1212,399,1261,376,1300,350,1304,348,1263,381,1214,404,1144,420,1071,425,998,422,928,413,862,400,803,384,714,355"/>
+<area shape="poly" title=" " alt="" coords="705,321,868,244,863,247,708,326"/>
+<area shape="rect" href="P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="1084,311,1180,338"/>
+<area shape="poly" title=" " alt="" coords="718,334,1070,325,1066,328,719,339"/>
+<area shape="rect" href="P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="1078,363,1186,390"/>
+<area shape="poly" title=" " alt="" coords="718,339,1064,369,1059,372,719,344"/>
+<area shape="poly" title=" " alt="" coords="1179,309,1262,290,1257,292,1181,314"/>
+<area shape="poly" title=" " alt="" coords="1180,322,1248,324,1243,325,1181,327"/>
+<area shape="poly" title=" " alt="" coords="1185,361,1212,348,1226,336,1235,323,1245,310,1260,297,1268,295,1273,292,1263,301,1249,314,1240,326,1230,339,1215,352,1187,365"/>
+<area shape="poly" title=" " alt="" coords="1185,360,1262,342,1257,344,1187,365"/>
 </map>
 </div>
 <div class="dynheader">

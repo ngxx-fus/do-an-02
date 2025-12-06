@@ -1,0 +1,5 @@
+<map id="P16ComConfigDat" name="P16ComConfigDat">
+<area shape="rect" id="Node000001" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="5,5,145,33"/>
+<area shape="rect" id="Node000002" href="$P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="193,5,321,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,17,180,19,175,19,145,22"/>
+</map>

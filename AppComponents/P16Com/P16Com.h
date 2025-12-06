@@ -38,7 +38,7 @@ extern "C" {
 #ifndef P16ClockCycle
     /// @brief Total cycle time for write/read operation (in micro-seconds)
     /// @note Adjust this based on the speed of the external device
-    #define P16ClockCycle 2
+    #define P16ClockCycle 0 // Set to 0 for maximum speed (no explicit delay)
 #endif
 
 #ifdef P16ClockCycle
@@ -80,6 +80,18 @@ typedef int32_t     P16Size_t;
 enum P16ComPositiveStatusFlag_e {
     P16COM_INITIALIZED = 0x00000001, ///< Driver is initialized and ready
 };
+
+/// @brief Single entry in the LUT
+typedef struct P16LutEntry_s {
+    uint64_t setMask; ///< Mask for pins to set HIGH
+    uint64_t clrMask; ///< Mask for pins to set LOW
+} P16LutEntry_t;
+
+/// @brief Look-Up Table structure for fast GPIO writes.
+typedef struct P16Lut_s {
+    P16LutEntry_t LutLow[256];  ///< LUT for bits 0-7
+    P16LutEntry_t LutHigh[256]; ///< LUT for bits 8-15
+} P16Lut_t;
 
 /// @brief Pinout structure for 16-bit parallel communication
 /// @details Uses anonymous unions to allow access via specific names (e.g., .Read) 
@@ -125,6 +137,9 @@ typedef struct P16Dev_t{
     /// @brief Store the Data pins mask for quick set-up IN/OUT
     /// @note Using uint64_t to support ESP32 pins > 31
     uint64_t DatIOMask;
+
+    /// @brief Pointer to the Look-Up Table for GPIO masks.
+    P16Lut_t *Lut;
 } P16Dev_t;
 
 /* --- FUNCTION PROTOTYPES --- */
@@ -146,8 +161,9 @@ DefaultRet_t        P16ComConfigCtl(P16Dev_t * Dev, const Pin_t * CtlPins);
 /// @brief Configure Data pins mapping and calculate IO Masks
 /// @param Dev Pointer to the P16Dev_t object
 /// @param DatPins Array of 16 Data Pins (D0..D15)
-/// @return STAT_OKE on success, STAT_ERR on invalid pin
-DefaultRet_t        P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins);
+/// @param Lut Pointer to a P16Lut_t structure to be used and populated.
+/// @return STAT_OKE on success, STAT_ERR on invalid pin or NULL Lut
+DefaultRet_t        P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins, P16Lut_t *Lut);
 
 /// @brief Initializes the GPIOs for the parallel interface
 /// @param Dev Pointer to the P16Dev_t object
@@ -285,13 +301,19 @@ void                P16ComReadArray(P16Dev_t * Dev, P16Data_t * pBuff, P16Size_t
     #define P16GetDataPin(p16Dev, n)      ((IOStandardGet() >> (p16Dev)->DatPinArr[n]) & 0x1)
 
     /// @brief Perform a complete Write Strobe: Low -> Delay -> High -> Delay
+    #if P16ClockCycle > 0
     #define P16MakeWritePulse(p16Dev)     do { \
                                               P16SetLowWritePin(p16Dev); \
                                               P16BlockingDelay(P16HalfClockCycle); \
                                               P16SetHighWritePin(p16Dev); \
                                               P16BlockingDelay(P16HalfClockCycle); \
                                           } while(0)
-
+    #else // Optimized for speed, no explicit delay
+    #define P16MakeWritePulse(p16Dev)     do { \
+                                              P16SetLowWritePin(p16Dev); \
+                                              P16SetHighWritePin(p16Dev); \
+                                          } while(0)
+    #endif
     /// @brief Perform a complete Read Strobe: Low -> Delay -> High -> Delay
     #define P16MakeReadPulse(p16Dev)      do { \
                                               P16SetLowReadPin(p16Dev); \

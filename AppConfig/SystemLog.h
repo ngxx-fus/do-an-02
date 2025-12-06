@@ -21,7 +21,7 @@ extern "C" {
 #define SYSTEM_LOG_ENTRY_L1_EN      1
 #define SYSTEM_LOG_ENTRY_L2_EN      1
 
-#define SYSTEM_SAFE_THREAD_LOG_EN   0
+#define SYSTEM_SAFE_THREAD_LOG_EN   1
 
 #ifdef __cplusplus
 }

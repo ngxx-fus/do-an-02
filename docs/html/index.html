@@ -96,7 +96,8 @@ $(function(){initNavTree('index.html','',''); });
 <p>DOC: <a href="https://ngxx-fus.github.io/do-an-02/">https://ngxx-fus.github.io/do-an-02/</a></p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 About team</h1>
-<p>My team consists of two members:</p><ul>
+<p>My team consists of two members:</p>
+<ul>
 <li>Nguyen Thanh Phu – Student ID: 22119211 – Contact: <a href="#" onclick="location.href='mai'+'lto:'+'nth'+'an'+'hph'+'u.'+'k22'+'.h'+'cmu'+'te'+'@gm'+'ai'+'l.c'+'om'; return false;">nthan<span class="obfuscator">.nosp@m.</span>hphu<span class="obfuscator">.nosp@m.</span>.k22.<span class="obfuscator">.nosp@m.</span>hcmu<span class="obfuscator">.nosp@m.</span>te@gm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a> (myself)</li>
 <li>Nguyen Van Quoc – Student ID: 22119222 – Contact: <a href="#" onclick="location.href='mai'+'lto:'+'quo'+'cv'+'an5'+'61'+'@gm'+'ai'+'l.c'+'om'; return false;">quocv<span class="obfuscator">.nosp@m.</span>an56<span class="obfuscator">.nosp@m.</span>1@gma<span class="obfuscator">.nosp@m.</span>il.c<span class="obfuscator">.nosp@m.</span>om</a></li>
 </ul>
@@ -141,37 +142,47 @@ Top-Level Directory Structure</h2>
 Detailed Module Descriptions</h2>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 <span class="tt">Main</span> (<span class="tt">AppEntry</span>)</h3>
-<p>This is the starting point of the application.</p><ul>
+<p>This is the starting point of the application.</p>
+<ul>
 <li><span class="tt">main.c</span>: Contains the <span class="tt">app_main</span> function. Its primary role is to initialize system services, configure hardware, and create the main application tasks defined in <span class="tt">AppCore</span>.</li>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 <span class="tt">AppCore</span></h3>
-<p>This layer contains the core logic and state machines of the device.</p><ul>
+<p>This layer contains the core logic and state machines of the device.</p>
+<ul>
 <li><span class="tt">AnalyzerMaster/</span>: Implements the main functionality of the logic analyzer, such as handling user input, managing the screen task (<span class="tt">TaskScreen</span>), and coordinating data acquisition.</li>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 <span class="tt">AppComponents</span></h3>
-<p>This directory houses all the low-level hardware drivers. Each driver is a self-contained component.</p><ul>
+<p>This directory houses all the low-level hardware drivers. Each driver is a self-contained component.</p>
+<ul>
 <li><span class="tt">P16Com/</span>: A generic driver for 16-bit parallel communication, which serves as a base for other drivers.</li>
 <li><span class="tt">LCD32/</span>: The specific driver for the ILI9341 3.2" LCD, built on top of &lt;tt&gt;P16Com&lt;/tt&gt;. It handles initialization, drawing primitives, and canvas management.
 
 @subsubsection autotoc_md12 &lt;tt&gt;AppConfig&lt;/tt&gt;
+
 This is the central hub for all project configurations.
--   &lt;tt&gt;pinConfig.h&lt;/tt&gt;: Defines all GPIO pin assignments for the hardware.
--   &lt;tt&gt;projectConfig.h&lt;/tt&gt;: Contains feature flags, buffer sizes, and other compile-time settings.
--   &lt;tt&gt;All.h&lt;/tt&gt;: Includes all other configuration files for easy access from other modules.
+
+- &lt;tt&gt;pinConfig.h&lt;/tt&gt;: Defines all GPIO pin assignments for the hardware.
+- &lt;tt&gt;projectConfig.h&lt;/tt&gt;: Contains feature flags, buffer sizes, and other compile-time settings.
+- &lt;tt&gt;All.h&lt;/tt&gt;: Includes all other configuration files for easy access from other modules.
 
 @subsubsection autotoc_md13 &lt;tt&gt;AppESPWrap&lt;/tt&gt;
+
 This layer abstracts the underlying ESP-IDF framework. By wrapping ESP-IDF functions, we can easily swap out the framework or port the code to another platform in the future.
--   &lt;tt&gt;espGPIOWrapper.h&lt;/tt&gt;: Wraps &lt;tt&gt;driver/gpio.h&lt;/tt&gt;.
--   &lt;tt&gt;espLogWrapper.h&lt;/tt&gt;: Wraps &lt;tt&gt;esp_log.h&lt;/tt&gt;.
--   &lt;tt&gt;espRTOSWrapper.h&lt;/tt&gt;: Wraps FreeRTOS headers like &lt;tt&gt;freertos/FreeRTOS.h&lt;/tt&gt;, &lt;tt&gt;freertos/task.h&lt;/tt&gt;, etc.
+
+- &lt;tt&gt;espGPIOWrapper.h&lt;/tt&gt;: Wraps &lt;tt&gt;driver/gpio.h&lt;/tt&gt;.
+- &lt;tt&gt;espLogWrapper.h&lt;/tt&gt;: Wraps &lt;tt&gt;esp_log.h&lt;/tt&gt;.
+- &lt;tt&gt;espRTOSWrapper.h&lt;/tt&gt;: Wraps FreeRTOS headers like &lt;tt&gt;freertos/FreeRTOS.h&lt;/tt&gt;, &lt;tt&gt;freertos/task.h&lt;/tt&gt;, etc.
 
 @subsubsection autotoc_md14 &lt;tt&gt;AppUtils&lt;/tt&gt;
+
 A collection of general-purpose helper functions and macros used throughout the project.
--   &lt;tt&gt;helper.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Contains utilities for things like status codes, common macros (&lt;tt&gt;IsNull&lt;/tt&gt;, &lt;tt&gt;IsNotNull&lt;/tt&gt;), and other miscellaneous functions.
+
+- &lt;tt&gt;helper.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Contains utilities for things like status codes, common macros (&lt;tt&gt;IsNull&lt;/tt&gt;, &lt;tt&gt;IsNotNull&lt;/tt&gt;), and other miscellaneous functions.
 
 @subsubsection autotoc_md15 &lt;tt&gt;AppFonts&lt;/tt&gt;
+
 Contains font data (e.g., GFX fonts) and utilities for rendering text.
 
 &lt;hr&gt;
@@ -193,11 +204,11 @@ Create a &lt;tt&gt;CMakeLists.txt&lt;/tt&gt; file inside &lt;tt&gt;AppComponents
 # CMakeLists.txt for BME280 component
 idf_component_register(
     SRCS        "BME280.c"
-    INCLUDE_DIRS "." REQUIRES AppESPWrap AppUtils AppConfig # Add dependencies here )  <blockquote class="doxtable">
+    INCLUDE_DIRS "." REQUIRES AppESPWrap AppUtils AppConfig # Add dependencies here ) </li>
+</ul>
+<blockquote class="doxtable">
 <p><b>Note:</b> Common dependencies like <span class="tt">AppESPWrap</span>, <span class="tt">AppUtils</span>, and <span class="tt">AppConfig</span> are almost always required. </p>
 </blockquote>
-</li>
-</ul>
 <p><b>4. Register the Component in the Main Build:</b> Open the main <span class="tt">CMakeLists.txt</span> at the project root and add the path to your new component to <span class="tt">EXTRA_COMPONENT_DIRS</span>.</p>
 <div class="fragment"><div class="line"># Root CMakeLists.txt</div>
 <div class="line">set(EXTRA_COMPONENT_DIRS</div>
@@ -294,20 +305,20 @@ File Descriptions</h3>
 <ul>
 <li><b><span class="tt">AppComponents/</span></b>: Contains all reusable hardware driver components.<ul>
 <li><b><span class="tt">LCD32/</span></b>: Driver for the 3.2" ILI9341 LCD.
-        -   &lt;tt&gt;LCD32.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Public interface and implementation for the LCD driver.
-        -   &lt;tt&gt;LCD32Cmds.h&lt;/tt&gt;: Defines all command codes for the ILI9341 controller.
-        -   &lt;tt&gt;LCD32Colors.h&lt;/tt&gt;: Defines a palette of pre-set colors.
-    -   &lt;strong&gt;&lt;tt&gt;P16Com/&lt;/tt&gt;&lt;/strong&gt;: A generic, low-level driver for 16-bit parallel communication.
-        -   &lt;tt&gt;P16Com.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Interface and implementation for sending/receiving data over a 16-bit parallel bus. It forms the base for the &lt;tt&gt;LCD32&lt;/tt&gt; driver.
--   &lt;strong&gt;&lt;tt&gt;AppConfig/&lt;/tt&gt;&lt;/strong&gt;: Central hub for all project-wide configurations.
-    -   &lt;tt&gt;All.h&lt;/tt&gt;: A master include file for the configuration module.
-    -   &lt;tt&gt;DevicePinout.h&lt;/tt&gt;: Defines all physical GPIO pin assignments for the hardware.
-    -   &lt;tt&gt;FirmwareType.h&lt;/tt&gt;: Defines the type of firmware being built (e.g., Master or Reader).
-    -   &lt;tt&gt;SystemLog.h&lt;/tt&gt;: Configures logging levels and settings for different modules.
--   &lt;strong&gt;&lt;tt&gt;AppCore/&lt;/tt&gt;&lt;/strong&gt;: Implements the high-level application logic and state machines.
-    -   &lt;strong&gt;&lt;tt&gt;AnalyzerMaster/&lt;/tt&gt;&lt;/strong&gt;: Contains the core logic for the "Master" device firmware.
-        -   &lt;tt&gt;AnalyzerMaster.c&lt;/tt&gt;: Implements the main application task (&lt;tt&gt;TaskScreen&lt;/tt&gt;) and business logic.
-    -   &lt;strong&gt;&lt;tt&gt;AnalyzerReader/&lt;/tt&gt;&lt;/strong&gt;: Contains the core logic for the "Reader" device firmware.</li>
+    - &lt;tt&gt;LCD32.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Public interface and implementation for the LCD driver.
+    - &lt;tt&gt;LCD32Cmds.h&lt;/tt&gt;: Defines all command codes for the ILI9341 controller.
+    - &lt;tt&gt;LCD32Colors.h&lt;/tt&gt;: Defines a palette of pre-set colors.
+  - &lt;strong&gt;&lt;tt&gt;P16Com/&lt;/tt&gt;&lt;/strong&gt;: A generic, low-level driver for 16-bit parallel communication.
+    - &lt;tt&gt;P16Com.h&lt;/tt&gt;/&lt;tt&gt;.c&lt;/tt&gt;: Interface and implementation for sending/receiving data over a 16-bit parallel bus. It forms the base for the &lt;tt&gt;LCD32&lt;/tt&gt; driver.
+- &lt;strong&gt;&lt;tt&gt;AppConfig/&lt;/tt&gt;&lt;/strong&gt;: Central hub for all project-wide configurations.
+  - &lt;tt&gt;All.h&lt;/tt&gt;: A master include file for the configuration module.
+  - &lt;tt&gt;DevicePinout.h&lt;/tt&gt;: Defines all physical GPIO pin assignments for the hardware.
+  - &lt;tt&gt;FirmwareType.h&lt;/tt&gt;: Defines the type of firmware being built (e.g., Master or Reader).
+  - &lt;tt&gt;SystemLog.h&lt;/tt&gt;: Configures logging levels and settings for different modules.
+- &lt;strong&gt;&lt;tt&gt;AppCore/&lt;/tt&gt;&lt;/strong&gt;: Implements the high-level application logic and state machines.
+  - &lt;strong&gt;&lt;tt&gt;AnalyzerMaster/&lt;/tt&gt;&lt;/strong&gt;: Contains the core logic for the "Master" device firmware.
+    - &lt;tt&gt;AnalyzerMaster.c&lt;/tt&gt;: Implements the main application task (&lt;tt&gt;TaskScreen&lt;/tt&gt;) and business logic.
+  - &lt;strong&gt;&lt;tt&gt;AnalyzerReader/&lt;/tt&gt;&lt;/strong&gt;: Contains the core logic for the "Reader" device firmware.</li>
 </ul>
 </li>
 <li><b><span class="tt">AppESPWrap/</span></b>: Hardware Abstraction Layer (HAL) that wraps ESP-IDF functions.<ul>

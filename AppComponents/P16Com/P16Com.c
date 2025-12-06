@@ -6,6 +6,42 @@
 
 #include "P16Com.h"
 
+/// @brief Builds the Look-Up Tables (LUTs) for GPIO mask pre-calculation.
+/// @details This is a one-time setup that dramatically speeds up write operations
+///          by avoiding per-pixel bitmask calculation.
+static void P16ComBuildLut(const Pin_t* DatPinArr, P16Lut_t* Lut) {
+    P16Entry("P16ComBuildLut(%p, %p)", DatPinArr, Lut);
+    // Build LUT for low byte (bits 0-7)
+    for (uint32_t i = 0; i < 256; i++) {
+        uint64_t setMask = 0;
+        uint64_t clrMask = 0;
+        for (uint8_t bit = 0; bit < 8; bit++) {
+            if ((i >> bit) & 1) {
+                setMask |= (1ULL << DatPinArr[bit]);
+            } else {
+                clrMask |= (1ULL << DatPinArr[bit]);
+            }
+        }
+        Lut->LutLow[i].setMask = setMask;
+        Lut->LutLow[i].clrMask = clrMask;
+    }
+    // Build LUT for high byte (bits 8-15)
+    for (uint32_t i = 0; i < 256; i++) {
+        uint64_t setMask = 0;
+        uint64_t clrMask = 0;
+        for (uint8_t bit = 0; bit < 8; bit++) {
+            if ((i >> bit) & 1) {
+                setMask |= (1ULL << DatPinArr[bit + 8]);
+            } else {
+                clrMask |= (1ULL << DatPinArr[bit + 8]);
+            }
+        }
+        Lut->LutHigh[i].setMask = setMask;
+        Lut->LutHigh[i].clrMask = clrMask;
+    }
+    P16Log("[P16ComBuildLut] LUTs generated for fast writes.");
+}
+
 /// @brief Allocates a new P16Dev_t object
 P16Dev_t * P16ComNew(){
     /// Allocate memory
@@ -27,6 +63,7 @@ P16Dev_t * P16ComNew(){
     devPtr->StatusFlag = 0;
     devPtr->CtlIOMask = 0;
     devPtr->DatIOMask = 0;
+    devPtr->Lut = NULL;
     
     return devPtr;
 }
@@ -62,10 +99,11 @@ DefaultRet_t P16ComConfigCtl(P16Dev_t * Dev, const Pin_t * CtlPins){
 }
 
 /// @brief Configure Data pins mapping and calculate IO Masks
-DefaultRet_t P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins){
-    P16Entry("P16ComConfigDat(%p, %p)", Dev, DatPins);
+DefaultRet_t P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins, P16Lut_t *Lut){
+    P16Entry("P16ComConfigDat(%p, %p, %p)", Dev, DatPins, Lut);
 
-    if(IsNull(Dev) || IsNull(DatPins)){
+    if(IsNull(Dev) || IsNull(DatPins) || IsNull(Lut)){
+        P16Err("[P16ComConfigDat] Dev, DatPins or Lut is NULL");
         P16ReturnWithLog(STAT_ERR_NULL, "P16ComConfigDat() : STAT_ERR_NULL");
     }
 
@@ -80,6 +118,12 @@ DefaultRet_t P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins){
             P16ReturnWithLog(STAT_ERR_INVALID_ARG, "P16ComConfigDat() : STAT_ERR_INVALID_ARG");
         }
     }
+
+    /// Store the pointer to the LUT
+    Dev->Lut = Lut;
+
+    /// Build the LUTs now that we have the pin mapping
+    P16ComBuildLut(Dev->DatPinArr, Dev->Lut);
 
     P16ReturnWithLog(STAT_OKE, "P16ComConfigDat() : STAT_OKE");
 }
@@ -162,21 +206,25 @@ void P16ComWrite(P16Dev_t * Dev, P16Data_t Data){
         IOConfigAsOutput(Dev->DatIOMask, -1, -1);
     #endif
 
-    /// Calculate Bit Masks
-    uint64_t MaskSet = 0, MaskClr = 0;
-    REPN(i, 16){
-        (Data & (1 << i)) ? 
-        (MaskSet |= (1ULL << Dev->DatPinArr[i])) :
-        (MaskClr |= (1ULL << Dev->DatPinArr[i])) ;
+    if (IsNull(Dev->Lut)) {
+        P16Err("[P16ComWrite] LUT is not configured!");
+        goto cleanup;
     }
 
+    /// Use pre-calculated LUTs for speed
+    uint8_t low_byte = Data & 0xFF;
+    uint8_t high_byte = (Data >> 8) & 0xFF;
+    uint64_t MaskSet = Dev->Lut->LutLow[low_byte].setMask | Dev->Lut->LutHigh[high_byte].setMask;
+    uint64_t MaskClr = Dev->Lut->LutLow[low_byte].clrMask | Dev->Lut->LutHigh[high_byte].clrMask;
+
     /// Drive Data to Pins
-    IOStandardSet(MaskSet);
-    IOStandardClr(MaskClr);
+    IOSet(MaskSet);
+    IOClr(MaskClr);
 
     /// Strobe Write
     P16MakeWritePulse(Dev);
 
+cleanup:
     #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
         /// Switch back to INPUT (Safe Mode)
         IOConfigAsInput(Dev->DatIOMask, -1, -1);
@@ -200,6 +248,11 @@ void P16ComWriteArray(P16Dev_t * Dev, P16Data_t * DataArr, P16Size_t Size){
         return;
     }
 
+    if (IsNull(Dev->Lut)) {
+        P16Err("[P16ComWriteArray] LUT is not configured!");
+        return;
+    }
+
     #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
         /// Switch to OUTPUT ONCE for the whole burst
         IOConfigAsOutput(Dev->DatIOMask, -1, -1);
@@ -207,19 +260,16 @@ void P16ComWriteArray(P16Dev_t * Dev, P16Data_t * DataArr, P16Size_t Size){
 
     REPN(j, Size){
         P16Data_t currentData = DataArr[j];
-        uint64_t MaskSet = 0, MaskClr = 0;
+        uint8_t low_byte = currentData & 0xFF;
+        uint8_t high_byte = (currentData >> 8) & 0xFF;
 
-        /// Map bits
-        REPN(i, 16){
-            (currentData & (1 << i)) ? 
-            (MaskSet |= (1ULL << Dev->DatPinArr[i])) :
-            (MaskClr |= (1ULL << Dev->DatPinArr[i])) ;
-        }
+        uint64_t MaskSet = Dev->Lut->LutLow[low_byte].setMask | Dev->Lut->LutHigh[high_byte].setMask;
+        uint64_t MaskClr = Dev->Lut->LutLow[low_byte].clrMask | Dev->Lut->LutHigh[high_byte].clrMask;
 
         /// Drive Data
-        IOStandardSet(MaskSet);
-        IOStandardClr(MaskClr);
-
+        IOSet(MaskSet);
+        IOClr(MaskClr);
+        
         /// Strobe Write
         P16MakeWritePulse(Dev);
     }
