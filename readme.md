@@ -2,7 +2,7 @@
 
 This is one of three projects (Project 01, Project 02, and the Graduation Project - Capstone Project). In this project, I will develop a device that analyzes data on SPI/I2C buses and captures analog signals for display like an oscilloscope.
 
-DOC: []()
+DOC: [https://ngxx-fus.github.io/do-an-02/](https://ngxx-fus.github.io/do-an-02/)
 
 # About team
 
