@@ -1,7 +1,0 @@
-<map id="__lcd32GPIOConfigInputM" name="__lcd32GPIOConfigInputM">
-<area shape="rect" id="Node000001" title="[Internal] Configure GPIO pins as input based on a 64&#45;bit mask." alt="" coords="272,31,461,56"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#a8efa1f19519e1dbfa55b90c958a1b9b9" title="[Internal] Start continue reading 16bit from LCD (keep transaction open, keep input mode)" alt="" coords="5,5,224,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,35,224,32,225,26,258,30"/>
-<area shape="rect" id="Node000003" href="$lcd32Helper_8h.html#a56f3f91d0d93ce5de141c42d555194ef" title="[Internal] Send a commend the read 16bit from LCD" alt="" coords="35,55,194,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,56,194,62,194,57,258,51"/>
-</map>

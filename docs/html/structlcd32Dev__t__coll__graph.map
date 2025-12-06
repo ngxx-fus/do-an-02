@@ -1,9 +1,0 @@
-<map id="lcd32Dev_t" name="lcd32Dev_t">
-<area shape="rect" id="Node000001" title=" " alt="" coords="170,93,265,119"/>
-<area shape="rect" id="Node000002" href="$structlcd32DataPin__t.html" title=" " alt="" coords="5,5,125,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,35,198,91,195,95,96,40"/>
-<area shape="rect" id="Node000003" href="$structlcd32ControlPin__t.html" title=" " alt="" coords="149,5,285,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,45,220,93,215,93,215,45"/>
-<area shape="rect" id="Node000004" href="$structlcd32Canvas__t.html" title="16&#45;bit signed for dimension" alt="" coords="309,5,427,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,41,293,72,245,96,243,91,291,67,340,36"/>
-</map>

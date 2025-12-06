@@ -1,5 +1,0 @@
-<map id="__lcd32ContReadRegisterStop" name="__lcd32ContReadRegisterStop">
-<area shape="rect" id="Node000001" title="[Internal] Stop continue reading 16bit from LCD (close transaction)" alt="" coords="5,5,223,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#a30ce3e70989876824655f61490634959" title="[Internal] Configure GPIO pins as output based on a 64&#45;bit mask." alt="" coords="271,5,471,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,15,257,15,257,21,223,21"/>
-</map>

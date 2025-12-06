@@ -1,5 +1,0 @@
-<map id="spiSetTransmitBuffer" name="spiSetTransmitBuffer">
-<area shape="rect" id="Node000001" title="Assign transmit buffer to the SPI device." alt="" coords="5,5,163,31"/>
-<area shape="rect" id="Node000002" href="$spi_8c.html#a1520eb301a8b9a5aadd27e6c9a9aaed3" title=" " alt="" coords="211,5,323,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,15,197,15,197,21,163,21"/>
-</map>

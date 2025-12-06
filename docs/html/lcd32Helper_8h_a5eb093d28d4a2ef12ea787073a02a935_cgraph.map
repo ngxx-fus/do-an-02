@@ -1,5 +1,0 @@
-<map id="__lcd32SetResetPin" name="__lcd32SetResetPin">
-<area shape="rect" id="Node000001" title="[Internal] Set state of RST (reset) pin" alt="" coords="5,5,155,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="203,5,361,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,15,189,15,189,21,155,21"/>
-</map>

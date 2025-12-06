@@ -1,5 +1,0 @@
-<map id="createI2CDevice" name="createI2CDevice">
-<area shape="rect" id="Node000001" title="Create a new I2C device instance." alt="" coords="196,5,325,31"/>
-<area shape="rect" id="Node000002" href="$oled128x64_8c.html#a4d34e5ac6e194740e9fa0ded33bd84c1" title="Create and allocate a new OLED device descriptor." alt="" coords="5,5,148,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,21,149,21,149,15,182,15"/>
-</map>

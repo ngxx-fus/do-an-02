@@ -1,5 +1,0 @@
-<map id="__lcd32SetReadPin" name="__lcd32SetReadPin">
-<area shape="rect" id="Node000001" title="[Internal] Set state of READ pin" alt="" coords="5,5,151,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="199,5,357,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,15,185,15,185,21,151,21"/>
-</map>

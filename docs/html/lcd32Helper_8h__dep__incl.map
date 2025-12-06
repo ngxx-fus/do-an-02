@@ -1,9 +1,0 @@
-<map id="comDriver/lcd32/lcd32Helper.h" name="comDriver/lcd32/lcd32Helper.h">
-<area shape="rect" id="Node000001" title="Helper functions and macros for LCD 3.2&quot;; Includes logging, GPIO setup, pin operations,..." alt="" coords="5,5,228,31"/>
-<area shape="rect" id="Node000002" href="$lcd32_8h.html" title="LCD 3.2&quot; driver interface; Provides APIs for creating, configuring, and controlling the LCD device,..." alt="" coords="27,79,207,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,44,119,79,114,79,114,44"/>
-<area shape="rect" id="Node000003" href="$monitor_8h.html" title="Main project! For monitor/analyzer the bus!" alt="" coords="56,152,177,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,118,119,152,114,152,114,118"/>
-<area shape="rect" id="Node000004" href="$myApp_8c.html" title="Main application entry point; Initializes system based on configured mode (Sender/Receiver/Monitor) a..." alt="" coords="59,225,175,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="119,191,119,225,114,225,114,191"/>
-</map>

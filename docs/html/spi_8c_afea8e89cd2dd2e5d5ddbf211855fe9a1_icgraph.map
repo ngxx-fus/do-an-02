@@ -1,5 +1,0 @@
-<map id="spiTransmitBuffGetNextBit" name="spiTransmitBuffGetNextBit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="200,5,395,31"/>
-<area shape="rect" id="Node000002" href="$spi_8c.html#af07ee0f834b876d0a6a534829b65f9cc" title="Start a SPI transaction (Master mode only)" alt="" coords="5,5,152,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,21,153,21,153,15,186,15"/>
-</map>

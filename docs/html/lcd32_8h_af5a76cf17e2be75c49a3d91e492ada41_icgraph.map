@@ -1,9 +1,0 @@
-<map id="lcd32ConfigDevice" name="lcd32ConfigDevice">
-<area shape="rect" id="Node000001" title="[Public function] Config new object" alt="" coords="389,5,532,31"/>
-<area shape="rect" id="Node000002" href="$monitor_8h.html#a3004c9c4fb128520f24f4407dca4f8cf" title="Initialize the LCD device, configure pins, and perform startup sequence." alt="" coords="279,5,341,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,21,342,21,342,15,376,15"/>
-<area shape="rect" id="Node000003" href="$monitor_8h.html#adc86b84eeabe5d8dc8445cec2314d925" title="Initialize the entire system, including drivers and tasks." alt="" coords="140,5,231,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,21,231,21,231,15,265,15"/>
-<area shape="rect" id="Node000004" href="$myApp_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main application entry point." alt="" coords="5,5,92,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="126,21,92,21,92,15,126,15"/>
-</map>

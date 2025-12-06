@@ -1,5 +1,0 @@
-<map id="__lcd32SetParallelData" name="__lcd32SetParallelData">
-<area shape="rect" id="Node000001" title="[Internal] Set state of 16 parallel data/command pins" alt="" coords="5,5,176,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="224,5,383,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,15,210,15,210,21,176,21"/>
-</map>

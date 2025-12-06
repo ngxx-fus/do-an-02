@@ -1,5 +1,0 @@
-<map id="__lcd32SetRegSelPin" name="__lcd32SetRegSelPin">
-<area shape="rect" id="Node000001" title="[Internal] Set state of RS (register select) pin" alt="" coords="5,5,163,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#aaf76542e96ad2a5c070299fbc224f002" title="[Internal] Set GPIO output state (supports GPIO0–GPIO47)." alt="" coords="211,5,369,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,15,197,15,197,21,163,21"/>
-</map>

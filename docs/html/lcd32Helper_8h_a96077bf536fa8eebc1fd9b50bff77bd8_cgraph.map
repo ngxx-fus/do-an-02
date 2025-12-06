@@ -1,7 +1,0 @@
-<map id="__lcd32ContReadRegister" name="__lcd32ContReadRegister">
-<area shape="rect" id="Node000001" title="[Internal] Read new one word (16 bits) from LCD" alt="" coords="5,5,193,31"/>
-<area shape="rect" id="Node000002" href="$lcd32Helper_8h.html#ac848454cf582ca67ad4045279f76b6af" title="[Internal] Get state of 16 parallel data/command pins" alt="" coords="241,5,415,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,15,228,15,228,21,194,21"/>
-<area shape="rect" id="Node000003" href="$lcd32Helper_8h.html#a9e59a567587578fd09321ba52d8c36d7" title="[Internal] Get GPIO state via GPIO struct with range check." alt="" coords="463,5,623,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,15,449,15,449,21,415,21"/>
-</map>
