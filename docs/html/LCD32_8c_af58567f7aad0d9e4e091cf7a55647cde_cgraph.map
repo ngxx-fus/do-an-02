@@ -1,0 +1,14 @@
+<map id="LCD32SetAddressWindow" name="LCD32SetAddressWindow">
+<area shape="rect" id="Node000001" title="Set the active drawing area window on the LCD." alt="" coords="5,32,194,60"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="242,5,370,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,31,229,29,224,30,194,36"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="242,57,371,85"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="194,55,229,61,223,61,194,60"/>
+<area shape="rect" id="Node000003" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="419,32,529,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,27,406,35,401,35,371,32"/>
+<area shape="rect" id="Node000004" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="583,5,708,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="529,35,565,32,570,31,530,40"/>
+<area shape="rect" id="Node000005" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="577,57,714,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="530,51,565,59,559,59,530,57"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="371,59,401,57,407,56,372,64"/>
+</map>

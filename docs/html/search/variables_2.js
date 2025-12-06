@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['d0_0',['D0',['../structP16ComPin__t.html#ac0cdd3c3d74efdf580310e0d8189ed62',1,'P16Dev_t']]],
-  ['d1_1',['D1',['../structP16ComPin__t.html#a862f848171141321270b1d2cef470c8d',1,'P16Dev_t']]],
-  ['d10_2',['D10',['../structP16ComPin__t.html#abe5bc8af4a1ab3fd6b8b99c3d012329c',1,'P16Dev_t']]],
-  ['d11_3',['D11',['../structP16ComPin__t.html#ac91a02643e1252e56603cfbe4839832d',1,'P16Dev_t']]],
-  ['d12_4',['D12',['../structP16ComPin__t.html#a291365c3641175f796986caacbefa378',1,'P16Dev_t']]],
-  ['d13_5',['D13',['../structP16ComPin__t.html#abb3ad116bb94305cc55039fbaaee13fd',1,'P16Dev_t']]],
-  ['d14_6',['D14',['../structP16ComPin__t.html#a6e2cd946a88b53715c0635a8565df3a5',1,'P16Dev_t']]],
-  ['d15_7',['D15',['../structP16ComPin__t.html#a6062fbdc090ec64cf5dcbc1861a13891',1,'P16Dev_t']]],
-  ['d2_8',['D2',['../structP16ComPin__t.html#a2d2b86d29fb9df45cbd0dac42ef2796e',1,'P16Dev_t']]],
-  ['d3_9',['D3',['../structP16ComPin__t.html#accb43d1cd4af7bc4b2872b794d768491',1,'P16Dev_t']]],
-  ['d4_10',['D4',['../structP16ComPin__t.html#afe741d0f147ec0b292ac6a5a7f3d4aed',1,'P16Dev_t']]],
-  ['d5_11',['D5',['../structP16ComPin__t.html#ae871c90b61dac160043aacb5945f103c',1,'P16Dev_t']]],
-  ['d6_12',['D6',['../structP16ComPin__t.html#a1780d1430e41ecab8612767acccd3683',1,'P16Dev_t']]],
-  ['d7_13',['D7',['../structP16ComPin__t.html#a37af48aa2fcc568565b6b8032b356e63',1,'P16Dev_t']]],
-  ['d8_14',['D8',['../structP16ComPin__t.html#a295867540a04df062e2eadf0d3a2cf55',1,'P16Dev_t']]],
-  ['d9_15',['D9',['../structP16ComPin__t.html#a081c4e1a27db1d36124ca4bd6e368e66',1,'P16Dev_t']]],
-  ['datpinarr_16',['DatPinArr',['../structP16ComPin__t.html#a83f8518cd815c94534ab1cb2e2013186',1,'P16Dev_t']]]
+  ['canvas_0',['Canvas',['../structLCD32Dev__t.html#abbdb1d1162921451c0312517874dfe6f',1,'LCD32Dev_t']]],
+  ['chipsel_1',['ChipSel',['../structP16Dev__t.html#ad03d2ec9c1848d1cc9977a28a14d5b01',1,'P16Dev_t']]],
+  ['col_2',['col',['../structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3',1,'LCDPoint_t']]],
+  ['ctliomask_3',['CtlIOMask',['../structP16Dev__t.html#a4d9dcf30d8e8e33038edf8058a43cd22',1,'P16Dev_t']]],
+  ['ctlpinarr_4',['CtlPinArr',['../structP16Dev__t.html#a121ee60ccaf03d3b97ebf017759fc262',1,'P16Dev_t']]]
 ];

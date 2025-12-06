@@ -1,0 +1,14 @@
+<map id="LCD32DrawThickLine" name="LCD32DrawThickLine">
+<area shape="rect" id="Node000001" title="Draw a thick line." alt="" coords="5,32,165,60"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="422,5,546,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,38,407,22,406,27,165,43"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="213,57,344,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,54,200,60,195,61,165,59"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="624,5,788,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="546,17,611,19,606,19,547,22"/>
+<area shape="rect" id="Node000005" href="$LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="392,57,576,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="344,69,379,71,374,71,345,74"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="546,54,626,37,632,37,547,59"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="647,57,765,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="577,69,634,71,629,71,577,74"/>
+</map>

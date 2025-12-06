@@ -1,0 +1,7 @@
+<map id="LCD32DrawLine" name="LCD32DrawLine">
+<area shape="rect" id="Node000001" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="213,32,337,60"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="10,5,160,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,35,160,32,160,27,200,35"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="5,57,165,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,57,166,63,165,58,200,56"/>
+</map>

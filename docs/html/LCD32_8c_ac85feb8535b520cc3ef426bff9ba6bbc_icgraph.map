@@ -1,0 +1,5 @@
+<map id="LCD32DrawFilledRect" name="LCD32DrawFilledRect">
+<area shape="rect" id="Node000001" title="Helper to draw a filled rectangle on the canvas." alt="" coords="222,5,383,33"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="5,5,174,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,19,174,22,174,17,209,19"/>
+</map>

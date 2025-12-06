@@ -1,0 +1,25 @@
+var LCD32_8c =
+[
+    [ "compare_int32", "LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f", null ],
+    [ "LCD32Config", "LCD32_8c.html#a4b4ea05eaa0fdb37f36fc398ee56ef5f", null ],
+    [ "LCD32Delete", "LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42", null ],
+    [ "LCD32DirectlyWritePixel", "LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae", null ],
+    [ "LCD32DrawChar", "LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2", null ],
+    [ "LCD32DrawEmptyRect", "LCD32_8c.html#a4e001150ae8f409049e870565296dd14", null ],
+    [ "LCD32DrawFilledPolygon", "LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54", null ],
+    [ "LCD32DrawFilledRect", "LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc", null ],
+    [ "LCD32DrawLine", "LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933", null ],
+    [ "LCD32DrawPolygon", "LCD32_8c.html#ab71611daf778e243ae3d07b998141873", null ],
+    [ "LCD32DrawQuad", "LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4", null ],
+    [ "LCD32DrawText", "LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781", null ],
+    [ "LCD32DrawThickLine", "LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7", null ],
+    [ "LCD32FillCanvas", "LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542", null ],
+    [ "LCD32FlushCanvas", "LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0", null ],
+    [ "LCD32Init", "LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0", null ],
+    [ "LCD32New", "LCD32_8c.html#a51e6740149e8127f18d85feacb483c81", null ],
+    [ "LCD32ReConfig", "LCD32_8c.html#a86c2a30243e294b55f03ea4d2b711d42", null ],
+    [ "LCD32SetAddressWindow", "LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde", null ],
+    [ "LCD32SetCanvasPixel", "LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e", null ],
+    [ "LCD32WriteCmd", "LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805", null ],
+    [ "LCD32WriteData", "LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934", null ]
+];

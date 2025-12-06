@@ -25,7 +25,7 @@ var searchData=
   ['stat_5ferr_5funderflow_22',['STAT_ERR_UNDERFLOW',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a543d636db5b9049e495e45396bb2506f',1,'ReturnType.h']]],
   ['stat_5ferr_5funsupported_23',['STAT_ERR_UNSUPPORTED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a508b5404b027b42bf9333faceb2fa056',1,'ReturnType.h']]],
   ['stat_5foke_24',['STAT_OKE',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7',1,'ReturnType.h']]],
-  ['statusflag_25',['StatusFlag',['../structP16ComPin__t.html#a8a1b10ca79c921c4d0421c53ad26f3f7',1,'P16Dev_t']]],
+  ['statusflag_25',['StatusFlag',['../structLCD32Dev__t.html#a2e20978734ae4889da50c66965abd490',1,'LCD32Dev_t::StatusFlag'],['../structP16Dev__t.html#ae800b3d51697b324d63798ce4ec0690b',1,'P16Dev_t::StatusFlag']]],
   ['str_26',['STR',['../Arithmetic_8h.html#a18d295a837ac71add5578860b55e5502',1,'Arithmetic.h']]],
   ['str_5fstat_5ferr_27',['STR_STAT_ERR',['../ReturnType_8h.html#ac1dc6c48ea56c29b33bba66e310a10f8',1,'ReturnType.h']]],
   ['str_5fstat_5ferr_5falready_5fexists_28',['STR_STAT_ERR_ALREADY_EXISTS',['../ReturnType_8h.html#a7c7bed53c6fae28c5171775923887590',1,'ReturnType.h']]],

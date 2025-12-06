@@ -1,0 +1,20 @@
+<map id="LCD32FlushCanvas" name="LCD32FlushCanvas">
+<area shape="rect" id="Node000001" title="Flush the internal Canvas buffer to the display." alt="" coords="5,83,152,110"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="200,57,388,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,85,187,83,182,85,152,91"/>
+<area shape="rect" id="Node000008" href="$P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="613,108,759,136"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="152,97,598,116,597,121,152,102"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="436,5,565,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,54,425,38,430,37,353,59"/>
+<area shape="rect" id="Node000007" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="436,57,565,85"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="388,69,423,71,418,71,388,74"/>
+<area shape="rect" id="Node000004" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="631,56,741,84"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="554,31,621,51,616,51,554,36"/>
+<area shape="rect" id="Node000005" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="812,56,938,84"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="742,67,799,70,794,70,742,72"/>
+<area shape="rect" id="Node000006" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="807,108,943,136"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="740,82,810,104,805,103,739,87"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="566,68,618,70,612,71,566,73"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="739,105,805,89,810,88,740,110"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="759,119,794,122,789,122,759,124"/>
+</map>

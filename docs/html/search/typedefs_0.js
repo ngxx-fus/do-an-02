@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultret_5ft_0',['DefaultRet_t',['../ReturnType_8h.html#aefafe5c3042b19da85f8b613ad881e6f',1,'ReturnType.h']]]
+  ['color_5ft_0',['Color_t',['../LCD32_8h.html#a4ee74f0e961b73f8e29bac68c3d9af87',1,'LCD32.h']]]
 ];

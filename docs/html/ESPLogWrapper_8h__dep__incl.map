@@ -1,17 +1,28 @@
 <map id="AppESPWrap/ESPLogWrapper.h" name="AppESPWrap/ESPLogWrapper.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="399,5,620,33"/>
-<area shape="rect" id="Node000002" href="$AppESPWrap_2All_8h.html" title=" " alt="" coords="441,81,578,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="511,47,512,82,508,79,508,51"/>
-<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="435,115,204,167,202,162,438,110"/>
-<area shape="rect" id="Node000004" href="$P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="482,117,431,158,428,154,478,120"/>
-<area shape="rect" id="Node000006" href="$AppESPWrap_8c.html" title=" " alt="" coords="518,165,720,193"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="540,116,604,165,599,164,539,121"/>
-<area shape="rect" id="Node000007" href="$Application_8h.html" title=" " alt="" coords="744,165,886,193"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="574,111,769,164,764,165,573,116"/>
-<area shape="rect" id="Node000005" href="$P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
-<area shape="rect" id="Node000008" href="$Application_8c.html" title=" " alt="" coords="744,258,886,286"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="817,206,817,259,813,256,813,210"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,5,454,33"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_2All_8h.html" title=" " alt="" coords="274,81,412,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,46,346,81,341,80,342,51"/>
+<area shape="rect" id="Node000003" href="$LCD32_8h.html" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="71,249,245,294"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,118,269,136,240,159,200,205,171,250,167,248,195,202,236,155,266,132,301,114"/>
+<area shape="rect" id="Node000005" href="$AnalyzerMaster_8h.html" title=" " alt="" coords="5,342,188,387"/>
+<area shape="poly" id="edge12_Node000002_Node000005" title=" " alt="" coords="261,115,209,135,152,162,100,201,79,224,62,250,56,273,60,297,70,320,82,341,77,342,65,323,55,299,51,273,57,248,75,221,97,197,149,158,207,130,265,111"/>
+<area shape="rect" id="Node000008" href="$Application_8h.html" title=" " alt="" coords="369,536,512,564"/>
+<area shape="poly" id="edge14_Node000002_Node000008" title=" " alt="" coords="392,113,424,131,450,155,472,183,486,208,493,235,495,270,495,366,490,416,477,465,449,537,445,534,472,463,485,415,490,366,490,270,488,236,481,210,468,186,447,158,421,135,393,118"/>
+<area shape="rect" id="Node000010" href="$P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="250,157,436,201"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="344,122,346,157,341,155,342,127"/>
+<area shape="rect" id="Node000012" href="$AppESPWrap_8c.html" title=" " alt="" coords="530,165,732,193"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="404,111,587,163,583,166,404,116"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="212,342,386,387"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,300,268,341,263,342,204,305"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="134,309,113,343,109,341,136,305"/>
+<area shape="rect" id="Node000006" href="$AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="59,435,241,479"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="117,397,140,434,135,435,117,403"/>
+<area shape="rect" id="Node000007" href="$AnalyzerMaster_8c.html" title=" " alt="" coords="59,527,241,572"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="151,493,152,528,147,526,149,497"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="234,482,400,534,396,536,234,487"/>
+<area shape="rect" id="Node000009" href="$Application_8c.html" title=" " alt="" coords="370,620,511,648"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="442,577,443,621,438,618,439,581"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="283,211,204,251,200,247,287,206"/>
+<area shape="rect" id="Node000011" href="$P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="269,249,455,294"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="351,214,360,250,355,249,350,219"/>
 </map>

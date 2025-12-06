@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultreturntype2str_0',['DefaultReturnType2Str',['../AppUtils_8c.html#a584a35d76d7ea6f9051f0dae0fc11daa',1,'DefaultReturnType2Str(DefaultRet_t ret):&#160;AppUtils.c'],['../ReturnType_8h.html#a584a35d76d7ea6f9051f0dae0fc11daa',1,'DefaultReturnType2Str(DefaultRet_t ret):&#160;AppUtils.c']]]
+  ['compare_5fint32_0',['compare_int32',['../LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f',1,'LCD32.c']]]
 ];

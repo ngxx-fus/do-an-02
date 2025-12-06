@@ -1,0 +1,5 @@
+<map id="LCD32Dev_t" name="LCD32Dev_t">
+<area shape="rect" id="Node000001" title="LCD Device Structure." alt="" coords="5,106,107,134"/>
+<area shape="rect" id="Node000002" href="$structP16Dev__t.html" title="Pinout structure for 16&#45;bit parallel communication." alt="" coords="14,5,98,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,47,59,106,53,105,54,50"/>
+</map>

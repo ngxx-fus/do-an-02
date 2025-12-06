@@ -1,0 +1,9 @@
+<map id="P16ComReConfig" name="P16ComReConfig">
+<area shape="rect" id="Node000001" title="Re&#45;initializes the driver based on existing configuration." alt="" coords="5,32,139,60"/>
+<area shape="rect" id="Node000002" href="$P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="187,32,283,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,43,174,45,169,46,139,48"/>
+<area shape="rect" id="Node000003" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="336,5,462,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,35,324,31,318,32,284,41"/>
+<area shape="rect" id="Node000004" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="331,57,467,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="283,51,318,58,313,58,283,56"/>
+</map>

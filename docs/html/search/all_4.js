@@ -8,5 +8,6 @@ var searchData=
   ['bitmap_5',['bitmap',['../structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7',1,'GFXfont']]],
   ['bitmapoffset_6',['bitmapOffset',['../structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8',1,'GFXglyph']]],
   ['bitop_2eh_7',['BitOp.h',['../BitOp_8h.html',1,'']]],
-  ['booleancast_8',['BooleanCast',['../Arithmetic_8h.html#a4ffcd1721ce90328ae500ff23eebd421',1,'Arithmetic.h']]]
+  ['booleancast_8',['BooleanCast',['../Arithmetic_8h.html#a4ffcd1721ce90328ae500ff23eebd421',1,'Arithmetic.h']]],
+  ['brightlight_9',['BrightLight',['../structLCD32Dev__t.html#abb259d89190837a3df58bca70b96fcf8',1,'LCD32Dev_t']]]
 ];

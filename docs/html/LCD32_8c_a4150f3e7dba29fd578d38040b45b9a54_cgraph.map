@@ -1,0 +1,7 @@
+<map id="LCD32DrawFilledPolygon" name="LCD32DrawFilledPolygon">
+<area shape="rect" id="Node000001" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="5,32,190,60"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="260,5,378,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,32,248,27,242,29,190,37"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="238,57,401,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,54,225,60,219,60,190,59"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="P16ComWriteArray" name="P16ComWriteArray">
+<area shape="rect" id="Node000001" title="Write a block of data to the bus (Burst Write)" alt="" coords="5,32,151,60"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="204,5,330,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,33,192,29,186,31,152,38"/>
+<area shape="rect" id="Node000003" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="199,57,335,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,53,186,60,181,60,151,58"/>
+</map>

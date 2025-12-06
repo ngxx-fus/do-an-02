@@ -1,0 +1,23 @@
+<map id="LCD32Init" name="LCD32Init">
+<area shape="rect" id="Node000001" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="5,86,90,113"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="473,83,610,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,84,90,49,112,32,137,20,186,7,238,3,289,6,340,15,431,43,503,76,498,76,430,48,339,20,289,11,238,8,187,12,139,25,115,37,93,53,62,87"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="138,86,266,113"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,97,125,98,120,101,91,102"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="138,34,267,61"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="89,83,146,65,143,69,91,88"/>
+<area shape="rect" id="Node000007" href="$P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="322,135,418,163"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="90,110,138,122,226,135,309,145,304,146,225,141,137,127,90,116"/>
+<area shape="rect" id="Node000008" href="$P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="316,187,424,215"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="71,111,103,129,139,145,223,171,304,190,299,190,221,176,137,150,101,134,71,117"/>
+<area shape="rect" id="Node000004" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="315,83,425,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,96,302,97,297,99,268,101"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="425,94,460,96,455,97,426,99"/>
+<area shape="rect" id="Node000005" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="479,135,604,163"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="419,109,482,130,477,130,418,114"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="252,59,309,78,304,79,252,65"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="418,132,477,116,482,115,419,137"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="419,146,466,149,461,149,419,151"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="404,184,424,172,438,159,447,147,457,134,472,121,480,119,485,117,475,126,460,138,451,150,442,163,427,176,406,189"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="418,184,477,168,482,167,419,189"/>
+</map>

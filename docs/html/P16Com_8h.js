@@ -1,12 +1,13 @@
 var P16Com_8h =
 [
-    [ "P16Dev_t", "structP16ComPin__t.html", "structP16ComPin__t" ],
+    [ "P16Dev_t", "structP16Dev__t.html", "structP16Dev__t" ],
     [ "P16BlockingDelay", "P16Com_8h.html#a135be85b0318166f043cbc49783420ae", null ],
     [ "P16ClockCycle", "P16Com_8h.html#a7f082de15024925f52012e7a86b275c6", null ],
     [ "P16COM_CTL_PIN_NUM", "P16Com_8h.html#af842590f3540e937ac09e98fa20e1ebe", null ],
     [ "P16COM_CTL_PIN_NUM_W_PADDING", "P16Com_8h.html#a6604d7f41d100d1b3b06fa314c259e13", null ],
     [ "P16COM_DAT_PIN_NUM", "P16Com_8h.html#af4824b27dd79fe7fa35b6ab7d071265f", null ],
     [ "P16COM_DAT_PIN_NUM_W_PADDING", "P16Com_8h.html#a891a9371da677f8e4fd543c526280cd4", null ],
+    [ "P16COM_DB_NORMAL_OUTPUT_EN", "P16Com_8h.html#a21e37d040c7b2a42917b27dcc688eeb6", null ],
     [ "P16COM_ERR_EN", "P16Com_8h.html#a0a1bde5af5b146ae64600748aaa3676a", null ],
     [ "P16COM_INIT_CHECK_EN", "P16Com_8h.html#a0e46b5e55d32c99465983d5237fa2d4b", null ],
     [ "P16COM_LOG1_EN", "P16Com_8h.html#a64c16e352dca1cb7b1d06acf743b215d", null ],
@@ -27,6 +28,8 @@ var P16Com_8h =
     [ "P16HalfClockCycle", "P16Com_8h.html#a4ce4fec5da8f7ff3bc9b99b8cb5d58f2", null ],
     [ "P16Log", "P16Com_8h.html#a430b1271207bf6be87372d6443e2a7ea", null ],
     [ "P16Log1", "P16Com_8h.html#a112c77b263b4ce3cb953e9329c2d89ee", null ],
+    [ "P16MakeReadPulse", "P16Com_8h.html#a5ffdf0d86056f7d672d7c0569e941021", null ],
+    [ "P16MakeWritePulse", "P16Com_8h.html#a013e91a99368ebe8f889ead21e13b47c", null ],
     [ "P16ReturnWithLog", "P16Com_8h.html#a123ac6be668a72ced484c3ba28a40a45", null ],
     [ "P16SetHighChipSelPin", "P16Com_8h.html#ae5ad3836a0345080da3dd5362bf5d274", null ],
     [ "P16SetHighDataPin", "P16Com_8h.html#a15872dad3f9e2e92027ae1b682c007c5", null ],
@@ -40,17 +43,21 @@ var P16Com_8h =
     [ "P16SetLowRegSelPin", "P16Com_8h.html#add0518ea5852d3bfcd7f0415d0a6d905", null ],
     [ "P16SetLowResetPin", "P16Com_8h.html#a111bb914e39d4c524d2c9e969169b9c5", null ],
     [ "P16SetLowWritePin", "P16Com_8h.html#afa50efc55506e4540a1f6c8d59912079", null ],
-    [ "P16Dev_t", "P16Com_8h.html#aefb98db910eabc284f2eace7e962ab57", null ],
     [ "P16Data_t", "P16Com_8h.html#ab3dbe1b9489144b25eac73c9b79d4bb4", null ],
+    [ "P16Dev_t", "P16Com_8h.html#a0314f7c14047e0f24da90eef4e54a6d3", null ],
     [ "P16Size_t", "P16Com_8h.html#ab99f87512b2032cb2a70ad720c405cd1", null ],
     [ "P16ComPositiveStatusFlag_e", "P16Com_8h.html#aa0676f0c7a21fc30ededd0aaae84d57a", [
       [ "P16COM_INITIALIZED", "P16Com_8h.html#aa0676f0c7a21fc30ededd0aaae84d57aa2e00c45e8e4ea2fdc5ae7ecb265e9695", null ]
     ] ],
-    [ "P16ComInit", "P16Com_8h.html#aa85ad7bc0745c420c81f31d88236815b", null ],
-    [ "P16ComMakeReset", "P16Com_8h.html#ab58f2de00de7531944fa3df95551cab3", null ],
-    [ "P16ComNew", "P16Com_8h.html#afedead10d0e86ce11ce35a816c05a003", null ],
-    [ "P16ComRead", "P16Com_8h.html#ae1bd7705acb78182191b8a913143240b", null ],
-    [ "P16ComReadArray", "P16Com_8h.html#abe1d21db3533b21b0264d4eb85698d01", null ],
-    [ "P16ComWrite", "P16Com_8h.html#ace413f31cfedde91c88258a2a68bb619", null ],
-    [ "P16ComWriteArray", "P16Com_8h.html#ab1b4ce0687b560b761338a6706f5a865", null ]
+    [ "P16ComConfigCtl", "P16Com_8h.html#aee81d39be9e790673d65516e90141088", null ],
+    [ "P16ComConfigDat", "P16Com_8h.html#a050c6969975359190dbf43c7b7672f5f", null ],
+    [ "P16ComInit", "P16Com_8h.html#a7705594730141f8d8213378a645e6eef", null ],
+    [ "P16ComMakeReset", "P16Com_8h.html#a771b9c483d5b54b5a79d22bdadc85285", null ],
+    [ "P16ComNew", "P16Com_8h.html#a834c8f5c27cf72bcda1856f4969c2fe6", null ],
+    [ "P16ComRead", "P16Com_8h.html#ac63f817b467733d3a239b5086646d6db", null ],
+    [ "P16ComReadArray", "P16Com_8h.html#abfd12b89cb7f6b9a87c0d590ecd98456", null ],
+    [ "P16ComReConfig", "P16Com_8h.html#acb0702447fe1a344048d14c5c2e95114", null ],
+    [ "P16ComWrite", "P16Com_8h.html#ad1662d1fa1e89ee0da92e098e4e3ceb8", null ],
+    [ "P16ComWriteArray", "P16Com_8h.html#a1e6f9b6079888c12656233b3d9429570", null ],
+    [ "P16Delete", "P16Com_8h.html#a3404d525093a3bedbd32942ed0c52cfd", null ]
 ];

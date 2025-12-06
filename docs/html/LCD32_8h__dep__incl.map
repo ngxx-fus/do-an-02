@@ -1,0 +1,15 @@
+<map id="AppComponents/LCD32/LCD32.h" name="AppComponents/LCD32/LCD32.h">
+<area shape="rect" id="Node000001" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="107,5,281,50"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="5,98,180,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,62,119,99,115,96,160,58"/>
+<area shape="rect" id="Node000003" href="$AnalyzerMaster_8h.html" title=" " alt="" coords="204,98,386,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,58,274,97,268,98,229,63"/>
+<area shape="rect" id="Node000004" href="$AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="204,191,386,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="296,156,298,192,293,189,294,161"/>
+<area shape="rect" id="Node000005" href="$AnalyzerMaster_8c.html" title=" " alt="" coords="111,283,293,328"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="265,244,225,285,222,281,260,248"/>
+<area shape="rect" id="Node000006" href="$Application_8h.html" title=" " alt="" coords="317,292,460,320"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="329,243,378,291,372,291,327,248"/>
+<area shape="rect" id="Node000007" href="$Application_8c.html" title=" " alt="" coords="318,376,459,404"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="390,333,391,377,386,374,387,337"/>
+</map>

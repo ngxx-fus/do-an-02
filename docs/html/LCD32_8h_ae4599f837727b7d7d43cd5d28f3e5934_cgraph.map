@@ -1,0 +1,9 @@
+<map id="LCD32WriteData" name="LCD32WriteData">
+<area shape="rect" id="Node000001" title="Write a data byte/word to the LCD." alt="" coords="5,32,135,60"/>
+<area shape="rect" id="Node000002" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="183,32,293,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,43,170,45,165,46,135,48"/>
+<area shape="rect" id="Node000003" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="346,5,472,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,35,334,31,329,32,294,40"/>
+<area shape="rect" id="Node000004" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="341,57,477,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="294,51,328,59,323,59,293,57"/>
+</map>

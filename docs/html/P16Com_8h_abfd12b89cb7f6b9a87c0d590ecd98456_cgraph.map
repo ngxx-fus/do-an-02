@@ -1,0 +1,7 @@
+<map id="P16ComReadArray" name="P16ComReadArray">
+<area shape="rect" id="Node000001" title="Reads an array of 16&#45;bit values from the bus (Burst Read)" alt="" coords="5,32,149,60"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="202,5,328,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,33,189,30,184,31,149,38"/>
+<area shape="rect" id="Node000003" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="197,57,333,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,53,184,60,179,60,149,58"/>
+</map>

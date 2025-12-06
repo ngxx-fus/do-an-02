@@ -1,0 +1,7 @@
+<map id="LCD32DrawEmptyRect" name="LCD32DrawEmptyRect">
+<area shape="rect" id="Node000001" title="Draw an empty rectangle." alt="" coords="5,5,174,33"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="222,5,383,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,17,209,19,204,19,174,22"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="431,5,594,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,17,418,19,413,19,383,22"/>
+</map>

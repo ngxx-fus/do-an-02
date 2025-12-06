@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['width_0',['width',['../structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1',1,'GFXglyph']]],
-  ['write_1',['Write',['../structP16ComPin__t.html#a6320c5eb6dba2fc500cb8875119f17da',1,'P16Dev_t']]]
+  ['statusflag_0',['StatusFlag',['../structLCD32Dev__t.html#a2e20978734ae4889da50c66965abd490',1,'LCD32Dev_t::StatusFlag'],['../structP16Dev__t.html#ae800b3d51697b324d63798ce4ec0690b',1,'P16Dev_t::StatusFlag']]]
 ];

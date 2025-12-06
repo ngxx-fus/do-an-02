@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['bebasneue_5fbold23pt7bglyphs_0',['BebasNeue_Bold23pt7bGlyphs',['../BebasNeue__Bold23pt7b_8h.html#a0fa43c9e0db278561da5d4c04896f692',1,'BebasNeue_Bold23pt7b.h']]],
-  ['bitmap_1',['bitmap',['../structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7',1,'GFXfont']]],
-  ['bitmapoffset_2',['bitmapOffset',['../structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8',1,'GFXglyph']]]
+  ['_5fpad_5fctl_5farr_0',['_pad_ctl_arr',['../structLCD32Dev__t.html#ac2155dec105a4dafc71f639d67e7cc63',1,'LCD32Dev_t']]],
+  ['_5fpad_5fctl_5fend_1',['_pad_ctl_end',['../structLCD32Dev__t.html#a25e2a88fa50735f039d84d192d739e23',1,'LCD32Dev_t']]],
+  ['_5fpad_5fctlmask_2',['_pad_CtlMask',['../structLCD32Dev__t.html#a05344d85c94a8b9ea54ad1bd913a0dda',1,'LCD32Dev_t']]],
+  ['_5fpad_5fdat_5farr_3',['_pad_dat_arr',['../structLCD32Dev__t.html#ab3428990c1f1f265051989b0e3823d64',1,'LCD32Dev_t']]],
+  ['_5fpad_5fdatmask_4',['_pad_DatMask',['../structLCD32Dev__t.html#a9f2509f1efc5ff58267a30b6ec806bd2',1,'LCD32Dev_t']]]
 ];

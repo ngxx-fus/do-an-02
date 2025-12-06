@@ -1,0 +1,27 @@
+<map id="P16ComWrite" name="P16ComWrite">
+<area shape="rect" id="Node000001" title="Writes a single 16&#45;bit value to the bus." alt="" coords="1073,108,1184,136"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="431,159,612,186"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1065,140,1026,150,915,163,803,171,612,176,612,171,803,165,914,157,1025,145,1060,140"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="896,108,1025,136"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1055,122,1025,124,1025,119,1061,122"/>
+<area shape="rect" id="Node000011" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="896,56,1025,84"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1064,103,1007,87,1008,82,1069,103"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="712,56,796,84"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="885,104,796,83,796,78,890,104"/>
+<area shape="rect" id="Node000009" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="660,108,848,136"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="878,122,849,124,848,119,883,122"/>
+<area shape="rect" id="Node000005" href="$LCD32_8c.html#a86c2a30243e294b55f03ea4d2b711d42" title="Re&#45;run configuration logic." alt="" coords="461,5,582,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="694,58,582,35,583,30,699,57"/>
+<area shape="rect" id="Node000006" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="289,81,383,109"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="694,74,384,95,383,90,698,72"/>
+<area shape="rect" id="Node000007" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,81,241,109"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="271,96,242,98,241,93,276,95"/>
+<area shape="rect" id="Node000008" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,81,91,109"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="121,96,92,98,91,93,125,94"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="675,139,589,161,588,155,670,140"/>
+<area shape="rect" id="Node000010" href="$LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="448,107,595,134"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="641,121,595,124,595,118,647,121"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="431,109,384,104,384,99,436,108"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="878,70,796,72,796,67,883,70"/>
+<area shape="poly" id="edge14_Node000011_Node000009" title=" " alt="" coords="890,88,813,110,812,105,885,88"/>
+</map>

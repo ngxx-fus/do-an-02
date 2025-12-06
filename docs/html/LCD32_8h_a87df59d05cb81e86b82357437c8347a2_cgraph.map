@@ -1,0 +1,5 @@
+<map id="LCD32DrawChar" name="LCD32DrawChar">
+<area shape="rect" id="Node000001" title="Draw a character using GFX font." alt="" coords="5,5,133,33"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="181,5,344,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,17,168,19,162,19,133,22"/>
+</map>

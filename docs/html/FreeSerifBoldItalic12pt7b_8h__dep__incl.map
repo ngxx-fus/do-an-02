@@ -1,9 +1,22 @@
 <map id="AppFonts/localFonts/FreeSerifBoldItalic12pt7b.h" name="AppFonts/localFonts/FreeSerifBoldItalic12pt7b.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="162,5,364,50"/>
-<area shape="rect" id="Node000002" href="$AppFont_8h.html" title=" " alt="" coords="188,98,338,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,64,266,99,261,96,262,68"/>
-<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,174,284,201"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,133,167,176,164,171,227,135"/>
-<area shape="rect" id="Node000004" href="$AppFont_8c.html" title=" " alt="" coords="307,174,456,201"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,131,363,173,358,173,296,137"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="194,5,396,50"/>
+<area shape="rect" id="Node000002" href="$AppFonts_2All_8h.html" title=" " alt="" coords="238,98,352,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,63,298,98,293,97,294,68"/>
+<area shape="rect" id="Node000003" href="$LCD32_8h.html" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="84,174,258,218"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="261,137,206,175,202,171,264,133"/>
+<area shape="rect" id="Node000005" href="$AnalyzerMaster_8h.html" title=" " alt="" coords="204,266,386,311"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="296,139,298,267,293,266,294,144"/>
+<area shape="rect" id="Node000010" href="$AppFont_8c.html" title=" " alt="" coords="332,182,482,210"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="326,133,392,181,387,182,326,138"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="5,266,180,311"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="141,232,113,268,109,265,144,228"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="213,225,268,265,263,267,213,230"/>
+<area shape="rect" id="Node000006" href="$AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="204,359,386,404"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="296,324,298,360,293,358,294,329"/>
+<area shape="rect" id="Node000007" href="$AnalyzerMaster_8c.html" title=" " alt="" coords="111,452,293,496"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="265,413,225,454,222,449,260,416"/>
+<area shape="rect" id="Node000008" href="$Application_8h.html" title=" " alt="" coords="317,460,460,488"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="329,412,378,460,372,459,327,417"/>
+<area shape="rect" id="Node000009" href="$Application_8c.html" title=" " alt="" coords="318,544,459,572"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="390,502,391,546,386,542,387,506"/>
 </map>

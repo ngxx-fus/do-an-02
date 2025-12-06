@@ -1,0 +1,7 @@
+<map id="LCD32DrawPolygon" name="LCD32DrawPolygon">
+<area shape="rect" id="Node000001" title="Draw a polygon outline." alt="" coords="5,5,155,33"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="203,5,327,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,17,190,19,185,19,155,22"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="375,5,538,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,17,362,19,357,19,328,22"/>
+</map>

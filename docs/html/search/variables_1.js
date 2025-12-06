@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['chipsel_0',['ChipSel',['../structP16ComPin__t.html#a55f9f8d9beb671b7362ced528a94d8d4',1,'P16Dev_t']]],
-  ['ctlpinarr_1',['CtlPinArr',['../structP16ComPin__t.html#a82a0cb7886a63b542edf7a420763994a',1,'P16Dev_t']]]
+  ['bebasneue_5fbold23pt7bglyphs_0',['BebasNeue_Bold23pt7bGlyphs',['../BebasNeue__Bold23pt7b_8h.html#a0fa43c9e0db278561da5d4c04896f692',1,'BebasNeue_Bold23pt7b.h']]],
+  ['bitmap_1',['bitmap',['../structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7',1,'GFXfont']]],
+  ['bitmapoffset_2',['bitmapOffset',['../structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8',1,'GFXglyph']]],
+  ['brightlight_3',['BrightLight',['../structLCD32Dev__t.html#abb259d89190837a3df58bca70b96fcf8',1,'LCD32Dev_t']]]
 ];

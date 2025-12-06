@@ -1,0 +1,15 @@
+<map id="P16ComInit" name="P16ComInit">
+<area shape="rect" id="Node000001" title="Initialize the driver GPIOs and Flags." alt="" coords="640,57,736,85"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="483,31,567,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="622,61,568,54,568,49,627,61"/>
+<area shape="rect" id="Node000007" href="$P16Com_8c.html#acb0702447fe1a344048d14c5c2e95114" title="Re&#45;initializes the driver based on existing configuration." alt="" coords="458,83,592,110"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="627,81,592,89,592,83,622,81"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a86c2a30243e294b55f03ea4d2b711d42" title="Re&#45;run configuration logic." alt="" coords="289,5,410,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="465,36,411,31,411,25,470,36"/>
+<area shape="rect" id="Node000004" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title=" " alt="" coords="302,57,397,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="470,53,398,67,397,61,465,54"/>
+<area shape="rect" id="Node000005" href="$Application_8c.html#a81875772de66351e046ffa03726dbcc4" title=" " alt="" coords="139,57,241,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="284,71,242,74,241,69,289,71"/>
+<area shape="rect" id="Node000006" href="$Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title="Main entry point for the ESP&#45;IDF application." alt="" coords="5,57,91,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="121,72,92,74,91,69,126,70"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LCD32DrawQuad" name="LCD32DrawQuad">
+<area shape="rect" id="Node000001" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="213,5,344,33"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="5,5,165,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,19,165,22,165,17,200,19"/>
+</map>

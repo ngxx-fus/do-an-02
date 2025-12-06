@@ -1,0 +1,17 @@
+<map id="AppComponents/LCD32/LCD32Cmds.h" name="AppComponents/LCD32/LCD32Cmds.h">
+<area shape="rect" id="Node000001" title="ILI9341 LCD command definitions; Provides all command codes and constants for controlling the 3...." alt="" coords="107,5,281,50"/>
+<area shape="rect" id="Node000002" href="$LCD32_8h.html" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="107,98,281,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,63,196,98,191,97,193,68"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="5,191,180,235"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,155,119,192,115,189,160,151"/>
+<area shape="rect" id="Node000004" href="$AnalyzerMaster_8h.html" title=" " alt="" coords="204,191,386,235"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="229,150,274,190,268,191,229,156"/>
+<area shape="rect" id="Node000005" href="$AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="204,283,386,328"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="296,249,298,284,293,282,294,253"/>
+<area shape="rect" id="Node000006" href="$AnalyzerMaster_8c.html" title=" " alt="" coords="111,376,293,421"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="265,337,225,378,222,374,260,340"/>
+<area shape="rect" id="Node000007" href="$Application_8h.html" title=" " alt="" coords="317,384,460,412"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="329,336,378,384,372,384,327,341"/>
+<area shape="rect" id="Node000008" href="$Application_8c.html" title=" " alt="" coords="318,469,459,496"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="390,426,391,470,386,467,387,430"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="LCD32DrawQuad" name="LCD32DrawQuad">
+<area shape="rect" id="Node000001" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="5,32,137,60"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="185,32,369,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,43,172,45,166,46,137,48"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="440,5,558,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="369,32,427,28,422,28,370,37"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="417,57,580,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="369,54,404,60,399,60,369,59"/>
+</map>

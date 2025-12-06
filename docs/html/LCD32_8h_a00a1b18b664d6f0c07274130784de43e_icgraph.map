@@ -1,0 +1,22 @@
+<map id="LCD32SetCanvasPixel" name="LCD32SetCanvasPixel">
+<area shape="rect" id="Node000001" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="661,84,825,112"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="458,5,585,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="692,78,612,48,575,36,575,31,614,43,698,78"/>
+<area shape="rect" id="Node000004" href="$LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="429,57,613,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="643,86,614,85,614,80,648,86"/>
+<area shape="rect" id="Node000007" href="$LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="440,109,602,137"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="643,109,603,117,602,111,648,108"/>
+<area shape="rect" id="Node000009" href="$LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="459,161,583,189"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="696,117,614,151,575,163,574,158,612,146,691,119"/>
+<area shape="rect" id="Node000003" href="$LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="235,5,359,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,20,360,22,359,17,444,18"/>
+<area shape="rect" id="Node000005" href="$LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="231,57,362,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="411,72,363,74,363,69,416,71"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="5,109,165,137"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="220,91,146,111,144,106,225,88"/>
+<area shape="rect" id="Node000008" href="$LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="213,109,381,137"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="423,124,382,126,381,121,428,123"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="441,171,334,165,212,151,151,140,151,135,213,146,334,160,446,171"/>
+<area shape="rect" id="Node000010" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="222,211,372,238"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="447,192,363,213,363,207,441,192"/>
+</map>
