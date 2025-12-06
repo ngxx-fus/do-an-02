@@ -105,6 +105,14 @@ extern "C" {
 #define ILI9341_DCX_COMMAND                0x00  // D/CX = 0 -> command
 #define ILI9341_DCX_DATA                   0x01  // D/CX = 1 -> data
 
+// Bits for ILI9341_MEMORY_ACCESS_CONTROL (0x36)
+#define MADCTL_MY                          0x80  // Row Address Order
+#define MADCTL_MX                          0x40  // Column Address Order
+#define MADCTL_MV                          0x20  // Row/Column Exchange
+#define MADCTL_ML                          0x10  // Vertical Refresh Order
+#define MADCTL_BGR                         0x08  // BGR-RGB Order
+#define MADCTL_MH                          0x04  // Horizontal Refresh Order
+
 
 #ifdef __cplusplus
 }

@@ -15,33 +15,9 @@ extern "C" {
 #include "../../AppConfig/All.h"
 #include "../../AppUtils/All.h"
 #include "../../AppESPWrap/All.h"
+#include "../../AppFonts/All.h"
 
 #include "../P16Com/P16Com.h"
-
-// For GFX fonts support
-#include "esp_rom_sys.h" // For rom delay
-#include "rom/ets_sys.h"
-
-// Define rudimentary GFX structures if not available elsewhere
-#ifndef _GFX_FONT_DEFINED
-#define _GFX_FONT_DEFINED
-typedef struct { 
-    uint16_t bitmapOffset; 
-    uint8_t  width; 
-    uint8_t  height; 
-    uint8_t  xAdvance; 
-    int8_t   xOffset; 
-    int8_t   yOffset; 
-} GFXglyph;
-
-typedef struct { 
-    uint8_t  *bitmap; 
-    GFXglyph *glyph; 
-    uint8_t  first; 
-    uint8_t  last; 
-    uint8_t  yAdvance; 
-} GFXfont;
-#endif
 
 /// @brief Point structure for polygon drawing
 typedef struct {
@@ -73,9 +49,16 @@ typedef int16_t                     Dim_t;
 /// @brief  16-bit color type for LCD
 typedef uint16_t                    Color_t;
 
-#define LCD32_DEFAULT_H             240 
-#define LCD32_DEFAULT_W             320 
-#define LCD32_DEFAULT_ORIENTATION   0 
+/// @brief Screen Orientation Options
+#define LCD32_ORIENTATION_PORTRAIT          0 ///< 240x320
+#define LCD32_ORIENTATION_LANDSCAPE         1 ///< 320x240
+#define LCD32_ORIENTATION_PORTRAIT_FLIP     2 ///< 240x320, Flipped
+#define LCD32_ORIENTATION_LANDSCAPE_FLIP    3 ///< 320x240, Flipped
+
+#define LCD32_NATIVE_W              240
+#define LCD32_NATIVE_H              320
+
+#define LCD32_DEFAULT_ORIENTATION   LCD32_ORIENTATION_LANDSCAPE
 #define LCD32_DEFAULT_COLOR_BIT     sizeof(Color_t)
 
 /// Predefined colors

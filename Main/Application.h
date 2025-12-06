@@ -19,13 +19,5 @@
     #include "../AppCore/AnalyzerMaster/All.h"
 #endif
 
-void Log1(void * pv){
-    SysEntry("Log1");
-    while (1){
-        SysLog("[Log1    ] Running...");
-        DelayMs(103);
-    }
-}
-
 
 #endif

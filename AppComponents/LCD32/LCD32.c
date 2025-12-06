@@ -5,7 +5,6 @@
  */
 
 #include "LCD32.h"
-#include <math.h> // For abs, ceilf, floorf
 
 /// @brief Allocates memory for a new LCD32Dev_t object and Canvas
 LCD32Dev_t * LCD32New(){
@@ -31,8 +30,9 @@ LCD32Dev_t * LCD32New(){
     /// Preset LCD specific fields
     DevPtr->BrightLight = -1;
     DevPtr->Orientation = LCD32_DEFAULT_ORIENTATION;
-    DevPtr->Width       = LCD32_DEFAULT_W;
-    DevPtr->Height      = LCD32_DEFAULT_H;
+    // Width and Height will be set properly in LCD32Init based on orientation
+    DevPtr->Width       = 0;
+    DevPtr->Height      = 0;
     
     #if (LCD32_THREAD_SAFE_EN == 1)
         /// Init Mutex
@@ -46,11 +46,11 @@ LCD32Dev_t * LCD32New(){
 
     /// Allocate Canvas
     #if (LCD32_CANVAS_IN_PSRAM_EN == 1)
-        /// Allocate in PSRAM (approx 150KB for 320x240x16bit)
-        DevPtr->Canvas = (Color_t *)heap_caps_malloc(sizeof(Color_t) * (DevPtr->Width) * (DevPtr->Height), MALLOC_CAP_SPIRAM);
+        /// Allocate in PSRAM based on physical pixels (320*240 = 150KB)
+        DevPtr->Canvas = (Color_t *)heap_caps_malloc(sizeof(Color_t) * LCD32_NATIVE_W * LCD32_NATIVE_H, MALLOC_CAP_SPIRAM);
     #else
         /// Allocate in DRAM
-        DevPtr->Canvas = (Color_t *)malloc(sizeof(Color_t) * (DevPtr->Width) * (DevPtr->Height));
+        DevPtr->Canvas = (Color_t *)malloc(sizeof(Color_t) * LCD32_NATIVE_W * LCD32_NATIVE_H);
     #endif
 
     if(IsNull(DevPtr->Canvas)){
@@ -63,7 +63,7 @@ LCD32Dev_t * LCD32New(){
     }
 
     /// Clear Canvas (Black)
-    for(int32_t i = 0; i < (DevPtr->Width * DevPtr->Height); i++){
+    for(int32_t i = 0; i < (LCD32_NATIVE_W * LCD32_NATIVE_H); i++){
         (DevPtr->Canvas)[i] = COLOR_BLACK;
     }
 
@@ -173,15 +173,70 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
         // LCD32ReturnWithLog(STAT_ERR_UNSUPPORTED, "LCD32Init() : Wrong Device ID");
         // Uncomment above line to enforce check, currently just logging error for debugging
     }
+    
+    // Set MADCTL based on orientation and update Width/Height
+    uint16_t madctl_val = 0;
+    switch (Dev->Orientation) {
+        case LCD32_ORIENTATION_PORTRAIT:
+            madctl_val = (MADCTL_MX | MADCTL_BGR); // 0x48
+            Dev->Width = LCD32_NATIVE_W;
+            Dev->Height = LCD32_NATIVE_H;
+            break;
+        
+        case LCD32_ORIENTATION_LANDSCAPE:
+            madctl_val = (MADCTL_MV | MADCTL_BGR); // 0x28
+            Dev->Width = LCD32_NATIVE_H;
+            Dev->Height = LCD32_NATIVE_W;
+            break;
+
+        case LCD32_ORIENTATION_PORTRAIT_FLIP:
+            madctl_val = (MADCTL_MY | MADCTL_BGR); // 0x88
+            Dev->Width = LCD32_NATIVE_W;
+            Dev->Height = LCD32_NATIVE_H;
+            break;
+
+        case LCD32_ORIENTATION_LANDSCAPE_FLIP:
+            madctl_val = (MADCTL_MY | MADCTL_MX | MADCTL_MV | MADCTL_BGR); // 0xE8
+            Dev->Width = LCD32_NATIVE_H;
+            Dev->Height = LCD32_NATIVE_W;
+            break;
+        
+        default: // Default to landscape as it's most common for these displays
+            madctl_val = (MADCTL_MV | MADCTL_BGR); // 0x28
+            Dev->Width = LCD32_NATIVE_H;
+            Dev->Height = LCD32_NATIVE_W;
+            Dev->Orientation = LCD32_ORIENTATION_LANDSCAPE; // Correct the state
+            break;
+    }
+    LCD32Log("[LCD32Init] Orientation: %d, W: %d, H: %d, MADCTL: 0x%02X", Dev->Orientation, Dev->Width, Dev->Height, madctl_val);
 
     // ILI9341 INITIALIZATION SEQUENCE
     LCD32StartTransaction(Dev);
 
+    // Power Control A
+    LCD32WriteCmd(Dev, ILI9341_POWER_CONTROL_A);
+    LCD32WriteData(Dev, 0x39);
+    LCD32WriteData(Dev, 0x2C);
+    LCD32WriteData(Dev, 0x00);
+    LCD32WriteData(Dev, 0x34);
+    LCD32WriteData(Dev, 0x02);
+
     // Power Control B
     LCD32WriteCmd(Dev, ILI9341_POWER_CONTROL_B);
     LCD32WriteData(Dev, 0x00);
-    LCD32WriteData(Dev, 0xEA);
-    LCD32WriteData(Dev, 0xF0);
+    LCD32WriteData(Dev, 0xC1);
+    LCD32WriteData(Dev, 0x30);
+
+    // Driver Timing Control A
+    LCD32WriteCmd(Dev, ILI9341_DRIVER_TIMING_CTRL_A_INT);
+    LCD32WriteData(Dev, 0x85);
+    LCD32WriteData(Dev, 0x00);
+    LCD32WriteData(Dev, 0x78);
+
+    // Driver Timing Control B
+    LCD32WriteCmd(Dev, ILI9341_DRIVER_TIMING_CTRL_B);
+    LCD32WriteData(Dev, 0x00);
+    LCD32WriteData(Dev, 0x00);
 
     // Power On Sequence Control
     LCD32WriteCmd(Dev, ILI9341_POWER_ON_SEQ_CTRL);
@@ -190,32 +245,13 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
     LCD32WriteData(Dev, 0x12);
     LCD32WriteData(Dev, 0x81);
 
-    // Driver Timing Control A
-    LCD32WriteCmd(Dev, ILI9341_DRIVER_TIMING_CTRL_A_INT);
-    LCD32WriteData(Dev, 0x85);
-    LCD32WriteData(Dev, 0x10);
-    LCD32WriteData(Dev, 0x78);
-
-    // Power Control A
-    LCD32WriteCmd(Dev, ILI9341_POWER_CONTROL_A);
-    LCD32WriteData(Dev, 0x39);
-    LCD32WriteData(Dev, 0x2C);
-    LCD32WriteData(Dev, 0x00);
-    LCD32WriteData(Dev, 0x33);
-    LCD32WriteData(Dev, 0x06);
-
     // Pump Ratio Control
     LCD32WriteCmd(Dev, ILI9341_PUMP_RATIO_CONTROL);
     LCD32WriteData(Dev, 0x20);
 
-    // Driver Timing Control B
-    LCD32WriteCmd(Dev, ILI9341_DRIVER_TIMING_CTRL_B);
-    LCD32WriteData(Dev, 0x00);
-    LCD32WriteData(Dev, 0x00);
-
     // Power Control 1
     LCD32WriteCmd(Dev, ILI9341_POWER_CONTROL_1);
-    LCD32WriteData(Dev, 0x21);
+    LCD32WriteData(Dev, 0x23);
 
     // Power Control 2
     LCD32WriteCmd(Dev, ILI9341_POWER_CONTROL_2);
@@ -223,16 +259,16 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
 
     // VCOM Control 1
     LCD32WriteCmd(Dev, ILI9341_VCOM_CONTROL_1);
-    LCD32WriteData(Dev, 0x4F);
-    LCD32WriteData(Dev, 0x38);
+    LCD32WriteData(Dev, 0x3e);
+    LCD32WriteData(Dev, 0x28);
 
     // VCOM Control 2
     LCD32WriteCmd(Dev, ILI9341_VCOM_CONTROL_2);
-    LCD32WriteData(Dev, 0xB7);
+    LCD32WriteData(Dev, 0x86);
 
     // Memory Access Control
     LCD32WriteCmd(Dev, ILI9341_MEMORY_ACCESS_CONTROL);
-    LCD32WriteData(Dev, 0x48); // BGR Order
+    LCD32WriteData(Dev, madctl_val);
 
     // Pixel Format Set
     LCD32WriteCmd(Dev, ILI9341_PIXEL_FORMAT_SET);
@@ -241,7 +277,7 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
     // Frame Rate Control
     LCD32WriteCmd(Dev, ILI9341_FRAME_RATE_NORMAL);
     LCD32WriteData(Dev, 0x00);
-    LCD32WriteData(Dev, 0x1B);
+    LCD32WriteData(Dev, 0x18);
 
     // Display Function Control
     LCD32WriteCmd(Dev, ILI9341_DISPLAY_FUNCTION_CTRL);
@@ -259,19 +295,25 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
 
     // Positive Gamma Correction
     LCD32WriteCmd(Dev, ILI9341_POSITIVE_GAMMA_CORR);
-    LCD32WriteData(Dev, 0x0F); LCD32WriteData(Dev, 0x31); LCD32WriteData(Dev, 0x2B);
-    LCD32WriteData(Dev, 0x0C); LCD32WriteData(Dev, 0x0E); LCD32WriteData(Dev, 0x08);
-    LCD32WriteData(Dev, 0x4E); LCD32WriteData(Dev, 0xF1); LCD32WriteData(Dev, 0x37);
-    LCD32WriteData(Dev, 0x07); LCD32WriteData(Dev, 0x10); LCD32WriteData(Dev, 0x03);
-    LCD32WriteData(Dev, 0x0E); LCD32WriteData(Dev, 0x09); LCD32WriteData(Dev, 0x00);
+    LCD32WriteData(Dev, 0x0F); LCD32WriteData(Dev, 0x31);
+    LCD32WriteData(Dev, 0x2B); LCD32WriteData(Dev, 0x0C);
+    LCD32WriteData(Dev, 0x0E); LCD32WriteData(Dev, 0x08);
+    LCD32WriteData(Dev, 0x4E); LCD32WriteData(Dev, 0xF1);
+    LCD32WriteData(Dev, 0x37); LCD32WriteData(Dev, 0x07);
+    LCD32WriteData(Dev, 0x10); LCD32WriteData(Dev, 0x03);
+    LCD32WriteData(Dev, 0x0E); LCD32WriteData(Dev, 0x09);
+    LCD32WriteData(Dev, 0x00);
 
     // Negative Gamma Correction
     LCD32WriteCmd(Dev, ILI9341_NEGATIVE_GAMMA_CORR);
-    LCD32WriteData(Dev, 0x00); LCD32WriteData(Dev, 0x0E); LCD32WriteData(Dev, 0x14);
-    LCD32WriteData(Dev, 0x03); LCD32WriteData(Dev, 0x11); LCD32WriteData(Dev, 0x07);
-    LCD32WriteData(Dev, 0x31); LCD32WriteData(Dev, 0xC1); LCD32WriteData(Dev, 0x48);
-    LCD32WriteData(Dev, 0x08); LCD32WriteData(Dev, 0x0F); LCD32WriteData(Dev, 0x0C);
-    LCD32WriteData(Dev, 0x31); LCD32WriteData(Dev, 0x36); LCD32WriteData(Dev, 0x0F);
+    LCD32WriteData(Dev, 0x00); LCD32WriteData(Dev, 0x0E);
+    LCD32WriteData(Dev, 0x14); LCD32WriteData(Dev, 0x03);
+    LCD32WriteData(Dev, 0x11); LCD32WriteData(Dev, 0x07);
+    LCD32WriteData(Dev, 0x31); LCD32WriteData(Dev, 0xC1);
+    LCD32WriteData(Dev, 0x48); LCD32WriteData(Dev, 0x08);
+    LCD32WriteData(Dev, 0x0F); LCD32WriteData(Dev, 0x0C);
+    LCD32WriteData(Dev, 0x31); LCD32WriteData(Dev, 0x36);
+    LCD32WriteData(Dev, 0x0F);
 
     // Sleep Out
     LCD32WriteCmd(Dev, ILI9341_SLEEP_OUT);
@@ -279,11 +321,14 @@ DefaultRet_t LCD32Init(LCD32Dev_t * Dev){
 
     // Display On
     LCD32WriteCmd(Dev, ILI9341_DISPLAY_ON);
-    
+    P16BlockingDelay(50000); // Add delay for stability
+
     LCD32StopTransaction(Dev);
 
     /// 6. Turn On Backlight (Active Low logic per macro)
-    LCD32SetLowBrightLightPin(Dev);
+    // LCD32SetLowBrightLightPin(Dev); // Original line (Assumes Active-Low)
+    LCD32SetHighBrightLightPin(Dev);   // TEST: Try this for Active-High backlight
+    LCD32Log("[LCD32Init] Backlight turned ON.");
 
     Dev->StatusFlag |= LCD32_INITIALIZED;
 
@@ -298,12 +343,14 @@ DefaultRet_t LCD32ReConfig(LCD32Dev_t * Dev){
 
 /// @brief Helper to write Command
 void LCD32WriteCmd(LCD32Dev_t * Dev, uint16_t Cmd){
+    P16Log1("LCD32WriteCmd(%p, 0x%X)", Dev, Cmd);
     LCD32SetCommandTransaction(Dev);
     P16ComWrite(&(Dev->P16Com), Cmd);
 }
 
 /// @brief Helper to write Data
 void LCD32WriteData(LCD32Dev_t * Dev, uint16_t Data){
+    P16Log1("LCD32WriteData(%p, 0x%X)", Dev, Data);
     LCD32SetDataTransaction(Dev);
     P16ComWrite(&(Dev->P16Com), Data);
 }
@@ -417,18 +464,6 @@ DefaultRet_t LCD32DrawLine(LCD32Dev_t *Dev, Dim_t r0, Dim_t c0, Dim_t r1, Dim_t 
     return STAT_OKE;
 }
 
-/// @brief Draw a filled circle on the canvas
-static void LCD32DrawFilledCircle(LCD32Dev_t *Dev, Dim_t x0, Dim_t y0, Dim_t r, Color_t Color) {
-    int x = -r, y = 0, err = 2 - 2 * r;
-    do {
-        LCD32DrawLine(Dev, y0 - y, x0 + x, y0 - y, x0 - x, Color);
-        LCD32DrawLine(Dev, y0 + y, x0 + x, y0 + y, x0 - x, Color);
-        r = err;
-        if (r > x) err += ++x * 2 + 1;
-        if (r <= y) err += ++y * 2 + 1;
-    } while (x < 0);
-}
-
 /// @brief Helper to draw a filled quadrilateral (4-sided polygon)
 static void LCD32DrawQuad(LCD32Dev_t *Dev, const LCDPoint_t p[4], Color_t Color) {
     LCDPoint_t tri1[3] = { p[0], p[1], p[2] };
@@ -460,12 +495,8 @@ DefaultRet_t LCD32DrawThickLine(LCD32Dev_t *Dev, Dim_t r0, Dim_t c0, Dim_t r1, D
     p[2] = (LCDPoint_t){ .row = (Dim_t)roundf(r1 + ny * half_thick), .col = (Dim_t)roundf(c1 + nx * half_thick) };
     p[3] = (LCDPoint_t){ .row = (Dim_t)roundf(r0 + ny * half_thick), .col = (Dim_t)roundf(c0 + nx * half_thick) };
 
-    // Draw the rectangle as two filled triangles
-    LCDPoint_t tri1[3] = { p[0], p[1], p[2] };
-    LCDPoint_t tri2[3] = { p[0], p[2], p[3] };
-
-    LCD32DrawFilledPolygon(Dev, tri1, 3, Color);
-    LCD32DrawFilledPolygon(Dev, tri2, 3, Color);
+    // Draw the rectangle (quad)
+    LCD32DrawQuad(Dev, p, Color);
 
     return STAT_OKE;
 }

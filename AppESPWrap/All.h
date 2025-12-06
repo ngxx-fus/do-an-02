@@ -13,6 +13,7 @@ extern "C" {
 #include <stdlib.h>
 
 #include <rom/ets_sys.h>
+#include <esp_random.h>
 
 /// This help the lib more readable!
 #include "../AppConfig/All.h"

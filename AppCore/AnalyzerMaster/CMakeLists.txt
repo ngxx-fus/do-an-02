@@ -1,4 +1,9 @@
 idf_component_register(
-    SRCS "AnalyzerMaster.c"
-    INCLUDE_DIRS "."
+    SRCS
+        "AnalyzerMaster.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        AppESPWrap
+        LCD32
 )

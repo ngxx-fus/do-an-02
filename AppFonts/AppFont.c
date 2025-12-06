@@ -1,4 +1,4 @@
-#include "AppFont.h"
+#include "All.h"
 
 GFXfont     mainFont        = FreeSerif9pt7b;
 GFXfont     fontTitle       = FreeSerifBoldItalic24pt7b;
