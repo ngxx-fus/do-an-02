@@ -121,23 +121,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="DevicePinout_8h__dep__incl.png" border="0" usemap="#aAppConfig_2DevicePinout_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppConfig_2DevicePinout_8hdep" id="aAppConfig_2DevicePinout_8hdep">
-<area shape="rect" title=" " alt="" coords="100,5,289,33"/>
-<area shape="rect" href="Parallel16Def_8h.html" title=" " alt="" coords="5,81,202,126"/>
-<area shape="poly" title=" " alt="" coords="167,46,130,82,125,79,170,42"/>
-<area shape="rect" href="AppConfig_2All_8h.html" title=" " alt="" coords="226,90,346,117"/>
-<area shape="poly" title=" " alt="" coords="220,41,274,89,269,90,220,46"/>
-<area shape="rect" href="Parallel16_8h.html" title=" " alt="" coords="29,266,226,311"/>
-<area shape="poly" title=" " alt="" coords="49,138,33,154,19,175,13,196,19,217,42,244,73,265,68,267,39,248,14,220,7,196,14,173,29,151,51,133"/>
-<area shape="rect" href="Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="29,174,226,218"/>
-<area shape="poly" title=" " alt="" coords="113,138,125,174,119,173,113,143"/>
-<area shape="rect" href="Parallel16_8c.html" title=" " alt="" coords="29,359,226,404"/>
-<area shape="poly" title=" " alt="" coords="129,325,130,360,125,358,126,329"/>
-<area shape="poly" title=" " alt="" coords="129,231,130,267,125,265,126,236"/>
-<area shape="poly" title=" " alt="" coords="281,130,267,176,240,220,210,247,177,268,174,264,207,243,236,217,262,174,278,134"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="300,182,443,210"/>
-<area shape="poly" title=" " alt="" coords="309,126,362,182,357,182,308,131"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="301,275,442,302"/>
-<area shape="poly" title=" " alt="" coords="373,223,374,276,369,273,370,227"/>
+<area shape="rect" title=" " alt="" coords="359,5,548,33"/>
+<area shape="rect" href="AppConfig_2All_8h.html" title=" " alt="" coords="394,81,514,109"/>
+<area shape="poly" title=" " alt="" coords="455,47,456,82,451,79,452,51"/>
+<area shape="rect" href="ComponentCommon_8h.html" title=" " alt="" coords="5,241,284,268"/>
+<area shape="poly" title=" " alt="" coords="415,119,171,243,169,238,414,114"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,232,494,277"/>
+<area shape="poly" title=" " alt="" coords="442,121,428,158,407,233,403,230,423,156,438,124"/>
+<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="438,157,576,184"/>
+<area shape="poly" title=" " alt="" coords="473,119,500,157,495,156,471,124"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="744,241,886,268"/>
+<area shape="poly" title=" " alt="" coords="498,113,788,239,783,241,497,118"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,325,494,370"/>
+<area shape="poly" title=" " alt="" coords="402,291,403,326,398,323,399,294"/>
+<area shape="poly" title=" " alt="" coords="433,191,203,243,202,238,435,186"/>
+<area shape="poly" title=" " alt="" coords="480,193,430,234,428,229,476,195"/>
+<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="518,241,720,268"/>
+<area shape="poly" title=" " alt="" coords="538,191,604,241,599,240,537,197"/>
+<area shape="poly" title=" " alt="" coords="571,186,768,240,763,241,571,191"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="744,334,886,361"/>
+<area shape="poly" title=" " alt="" coords="817,282,817,335,813,331,813,286"/>
 </map>
 </div>
 </div>
@@ -145,6 +148,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:adfbd20f652afcd35bae0c587dd80ba65" id="r_adfbd20f652afcd35bae0c587dd80ba65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfbd20f652afcd35bae0c587dd80ba65">IsValidPin</a>(p)</td></tr>
+<tr class="memdesc:adfbd20f652afcd35bae0c587dd80ba65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if pin is valid (0-63)  <br /></td></tr>
+<tr class="memitem:aa5e3fbc3e99995e20b928a8c9cb3aacc" id="r_aa5e3fbc3e99995e20b928a8c9cb3aacc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5e3fbc3e99995e20b928a8c9cb3aacc">IsStandardPin</a>(p)</td></tr>
+<tr class="memdesc:aa5e3fbc3e99995e20b928a8c9cb3aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if pin is in standard range (0-31) for GPIO_OUT_REG.  <br /></td></tr>
+<tr class="memitem:af537e89c649252460c811aafefe22bfc" id="r_af537e89c649252460c811aafefe22bfc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af537e89c649252460c811aafefe22bfc">IsExtendedPin</a>(p)</td></tr>
+<tr class="memdesc:af537e89c649252460c811aafefe22bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if pin is in extended range (32-63) for GPIO_OUT1_REG.  <br /></td></tr>
 <tr class="memitem:a788e6821ad3f4878731942d3a0773507" id="r_a788e6821ad3f4878731942d3a0773507"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a788e6821ad3f4878731942d3a0773507">LCD32_DB0</a>&#160;&#160;&#160;18</td></tr>
 <tr class="memdesc:a788e6821ad3f4878731942d3a0773507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved.  <br /></td></tr>
 <tr class="memitem:a0ba618dcfc48fc528ca0ca4b52a03b87" id="r_a0ba618dcfc48fc528ca0ca4b52a03b87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba618dcfc48fc528ca0ca4b52a03b87">LCD32_DB1</a>&#160;&#160;&#160;12</td></tr>
@@ -176,13 +185,81 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a7b7a6f8fb64eca694ec6a997a8cd33e7" id="r_a7b7a6f8fb64eca694ec6a997a8cd33e7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a> { <a class="el" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a> = -1
-, <a class="el" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a> = -2
-, <a class="el" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a> = -3
+<tr class="memitem:ab5e26277aa89760b746909ec30870d68" id="r_ab5e26277aa89760b746909ec30870d68"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5e26277aa89760b746909ec30870d68">PIN_STATE_e</a> { <a class="el" href="#ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a> = -1
+, <a class="el" href="#ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a> = -2
+, <a class="el" href="#ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a> = -3
  }</td></tr>
-<tr class="memdesc:a7b7a6f8fb64eca694ec6a997a8cd33e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">States of pin.  <a href="#a7b7a6f8fb64eca694ec6a997a8cd33e7">More...</a><br /></td></tr>
+<tr class="memdesc:ab5e26277aa89760b746909ec30870d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">States of pin.  <a href="#ab5e26277aa89760b746909ec30870d68">More...</a><br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="af537e89c649252460c811aafefe22bfc" name="af537e89c649252460c811aafefe22bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af537e89c649252460c811aafefe22bfc">&#9670;&#160;</a></span>IsExtendedPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IsExtendedPin</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((p) &gt;= 32) &amp;&amp; ((p) &lt; 64))</div>
+</div><!-- fragment -->
+<p>Check if pin is in extended range (32-63) for GPIO_OUT1_REG. </p>
+
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00035">35</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+
+</div>
+</div>
+<a id="aa5e3fbc3e99995e20b928a8c9cb3aacc" name="aa5e3fbc3e99995e20b928a8c9cb3aacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e3fbc3e99995e20b928a8c9cb3aacc">&#9670;&#160;</a></span>IsStandardPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IsStandardPin</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((p) &gt;= 0) &amp;&amp; ((p) &lt; 32))</div>
+</div><!-- fragment -->
+<p>Check if pin is in standard range (0-31) for GPIO_OUT_REG. </p>
+
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00032">32</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00035">P16ComInit()</a>.</p>
+
+</div>
+</div>
+<a id="adfbd20f652afcd35bae0c587dd80ba65" name="adfbd20f652afcd35bae0c587dd80ba65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbd20f652afcd35bae0c587dd80ba65">&#9670;&#160;</a></span>IsValidPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IsValidPin</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((p) &gt;= 0) &amp;&amp; ((p) &lt; 64))</div>
+</div><!-- fragment -->
+<p>Check if pin is valid (0-63) </p>
+
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00029">29</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+
+</div>
+</div>
 <a id="a613c3e68ffd6c516a67ef22e12e51d45" name="a613c3e68ffd6c516a67ef22e12e51d45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a613c3e68ffd6c516a67ef22e12e51d45">&#9670;&#160;</a></span>LCD32_BL</h2>
 
@@ -195,7 +272,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00062">62</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00071">71</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +288,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00061">61</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00070">70</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +307,7 @@ Enumerations</h2></td></tr>
 <p>Reserved. </p>
 <p>Reserved </p>
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00039">39</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00048">48</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +323,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00040">40</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00049">49</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +339,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00049">49</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00058">58</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +355,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00050">50</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00059">59</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +371,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00051">51</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00060">60</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +387,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00052">52</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00061">61</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -326,7 +403,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00053">53</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00062">62</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -342,7 +419,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00054">54</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00063">63</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +435,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00041">41</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00050">50</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +451,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00042">42</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00051">51</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +467,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00043">43</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00052">52</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +483,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00044">44</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00053">53</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -422,7 +499,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00045">45</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00054">54</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +515,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00046">46</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00055">55</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +531,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00047">47</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00056">56</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +547,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00048">48</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00057">57</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -486,7 +563,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00059">59</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00068">68</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -502,7 +579,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00060">60</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00069">69</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -518,7 +595,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00057">57</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00066">66</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -534,7 +611,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00058">58</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00067">67</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
 
 </div>
 </div>
@@ -558,34 +635,34 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
-<a id="a7b7a6f8fb64eca694ec6a997a8cd33e7" name="a7b7a6f8fb64eca694ec6a997a8cd33e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b7a6f8fb64eca694ec6a997a8cd33e7">&#9670;&#160;</a></span>PIN_STATE</h2>
+<a id="ab5e26277aa89760b746909ec30870d68" name="ab5e26277aa89760b746909ec30870d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e26277aa89760b746909ec30870d68">&#9670;&#160;</a></span>PIN_STATE_e</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7">PIN_STATE</a></td>
+          <td class="memname">enum <a class="el" href="#ab5e26277aa89760b746909ec30870d68">PIN_STATE_e</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>States of pin. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2" name="a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2"></a>PIN_UNUSED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247" name="a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247"></a>PIN_INVALID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32" name="a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32"></a>PIN_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2" name="ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2"></a>PIN_UNUSED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247" name="ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247"></a>PIN_INVALID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32" name="ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32"></a>PIN_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="DevicePinout_8h_source.html#l00022">22</a> of file <a class="el" href="DevicePinout_8h_source.html">DevicePinout.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>               {</div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a> = -1,</div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a> = -2,</div>
-<div class="line"><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="#a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a> = -3</div>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                 {</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="#ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a> = -1,</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="#ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a> = -2,</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="#ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a> = -3</div>
 <div class="line"><span class="lineno">   26</span>};</div>
-<div class="ttc" id="aDevicePinout_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2"><div class="ttname"><a href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a></div><div class="ttdeci">@ PIN_UNUSED</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00023">DevicePinout.h:23</a></div></div>
-<div class="ttc" id="aDevicePinout_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247"><div class="ttname"><a href="#a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a></div><div class="ttdeci">@ PIN_INVALID</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00024">DevicePinout.h:24</a></div></div>
-<div class="ttc" id="aDevicePinout_8h_html_a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32"><div class="ttname"><a href="#a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a></div><div class="ttdeci">@ PIN_NOT_FOUND</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00025">DevicePinout.h:25</a></div></div>
+<div class="ttc" id="aDevicePinout_8h_html_ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2"><div class="ttname"><a href="#ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2">PIN_UNUSED</a></div><div class="ttdeci">@ PIN_UNUSED</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00023">DevicePinout.h:23</a></div></div>
+<div class="ttc" id="aDevicePinout_8h_html_ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247"><div class="ttname"><a href="#ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247">PIN_INVALID</a></div><div class="ttdeci">@ PIN_INVALID</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00024">DevicePinout.h:24</a></div></div>
+<div class="ttc" id="aDevicePinout_8h_html_ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32"><div class="ttname"><a href="#ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32">PIN_NOT_FOUND</a></div><div class="ttdeci">@ PIN_NOT_FOUND</div><div class="ttdef"><b>Definition</b> <a href="DevicePinout_8h_source.html#l00025">DevicePinout.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

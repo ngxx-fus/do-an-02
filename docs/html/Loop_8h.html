@@ -108,22 +108,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Loop_8h__dep__incl.png" border="0" usemap="#aAppUtils_2Loop_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppUtils_2Loop_8hdep" id="aAppUtils_2Loop_8hdep">
-<area shape="rect" title=" " alt="" coords="207,5,330,33"/>
-<area shape="rect" href="AppUtils_2All_8h.html" title=" " alt="" coords="214,81,324,109"/>
-<area shape="poly" title=" " alt="" coords="270,46,271,81,266,80,268,51"/>
-<area shape="rect" href="Parallel16_8h.html" title=" " alt="" coords="5,249,202,294"/>
-<area shape="poly" title=" " alt="" coords="197,109,117,130,83,143,63,158,55,180,60,203,71,227,87,248,81,249,67,230,55,205,50,179,59,155,81,139,115,125,200,105"/>
-<area shape="rect" href="Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="73,157,270,201"/>
-<area shape="poly" title=" " alt="" coords="240,121,199,158,196,154,243,117"/>
-<area shape="rect" href="AppUtils_8c.html" title=" " alt="" coords="294,165,441,193"/>
-<area shape="poly" title=" " alt="" coords="297,116,355,165,349,165,296,121"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="464,165,607,193"/>
-<area shape="poly" title=" " alt="" coords="326,111,495,164,490,166,326,116"/>
-<area shape="rect" href="Parallel16_8c.html" title=" " alt="" coords="5,342,202,387"/>
-<area shape="poly" title=" " alt="" coords="105,308,106,343,101,341,102,312"/>
-<area shape="poly" title=" " alt="" coords="148,212,122,251,117,248,144,216"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="465,258,606,286"/>
-<area shape="poly" title=" " alt="" coords="537,206,538,259,533,256,534,210"/>
+<area shape="rect" title=" " alt="" coords="434,5,557,33"/>
+<area shape="rect" href="AppUtils_2All_8h.html" title=" " alt="" coords="440,81,550,109"/>
+<area shape="poly" title=" " alt="" coords="497,47,497,82,493,79,494,51"/>
+<area shape="rect" href="ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
+<area shape="poly" title=" " alt="" coords="424,115,202,167,200,162,426,110"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
+<area shape="poly" title=" " alt="" coords="471,118,427,158,424,154,466,120"/>
+<area shape="rect" href="AppUtils_8c.html" title=" " alt="" coords="518,165,664,193"/>
+<area shape="poly" title=" " alt="" coords="523,116,579,165,573,165,521,121"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="688,165,830,193"/>
+<area shape="poly" title=" " alt="" coords="552,111,720,164,714,165,552,116"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
+<area shape="poly" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="688,258,830,286"/>
+<area shape="poly" title=" " alt="" coords="761,206,761,259,757,256,757,210"/>
 </map>
 </div>
 </div>
@@ -139,8 +138,8 @@ Macros</h2></td></tr>
 <tr class="memdesc:a7ed813e267ef0d1f2a79cc976242e9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop forward using int32_t.  <br /></td></tr>
 <tr class="memitem:a73bc0298fafe0975ac0f87cd5af591b4" id="r_a73bc0298fafe0975ac0f87cd5af591b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73bc0298fafe0975ac0f87cd5af591b4">REV</a>(i,  a,  b)</td></tr>
 <tr class="memdesc:a73bc0298fafe0975ac0f87cd5af591b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop backward using int32_t.  <br /></td></tr>
-<tr class="memitem:a3001befe1fbe84c72fc698d8331b10cd" id="r_a3001befe1fbe84c72fc698d8331b10cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3001befe1fbe84c72fc698d8331b10cd">REPN</a>(i,  a,  b)</td></tr>
-<tr class="memdesc:a3001befe1fbe84c72fc698d8331b10cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop forward using int32_t.  <br /></td></tr>
+<tr class="memitem:ab2c4a60b1e5c347a6a7b9e63e061f34b" id="r_ab2c4a60b1e5c347a6a7b9e63e061f34b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2c4a60b1e5c347a6a7b9e63e061f34b">REPN</a>(i,  N)</td></tr>
+<tr class="memdesc:ab2c4a60b1e5c347a6a7b9e63e061f34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop forward using int32_t.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a7ed813e267ef0d1f2a79cc976242e9f8" name="a7ed813e267ef0d1f2a79cc976242e9f8"></a>
@@ -180,12 +179,10 @@ Macros</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Loop_8h_source.html#l00033">33</a> of file <a class="el" href="Loop_8h_source.html">Loop.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Parallel16_8c_source.html#l00030">P16ConfigDevice()</a>, <a class="el" href="Parallel16_8c_source.html#l00251">P16ReadArray()</a>, <a class="el" href="Parallel16_8c_source.html#l00130">P16Write()</a>, and <a class="el" href="Parallel16_8c_source.html#l00214">P16WriteArray()</a>.</p>
-
 </div>
 </div>
-<a id="a3001befe1fbe84c72fc698d8331b10cd" name="a3001befe1fbe84c72fc698d8331b10cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3001befe1fbe84c72fc698d8331b10cd">&#9670;&#160;</a></span>REPN</h2>
+<a id="ab2c4a60b1e5c347a6a7b9e63e061f34b" name="ab2c4a60b1e5c347a6a7b9e63e061f34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c4a60b1e5c347a6a7b9e63e061f34b">&#9670;&#160;</a></span>REPN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,12 +195,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>N</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -219,6 +211,8 @@ Macros</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="Loop_8h_source.html#l00044">44</a> of file <a class="el" href="Loop_8h_source.html">Loop.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00035">P16ComInit()</a>, <a class="el" href="P16Com_8c_source.html#l00012">P16ComNew()</a>, <a class="el" href="P16Com_8c_source.html#l00186">P16ComRead()</a>, <a class="el" href="P16Com_8c_source.html#l00223">P16ComReadArray()</a>, <a class="el" href="P16Com_8c_source.html#l00095">P16ComWrite()</a>, and <a class="el" href="P16Com_8c_source.html#l00134">P16ComWriteArray()</a>.</p>
 
 </div>
 </div>

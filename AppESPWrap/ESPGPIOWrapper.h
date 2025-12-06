@@ -50,6 +50,26 @@ extern "C" {
 /// @param mask Bitmask relative to the high bank
 #define IOExtendedClr(mask)          (GPIO.out1_w1tc.val = (uint32_t)(mask))
 
+/// @brief Get input level of ALL GPIOs (0-39+) combined
+/// @details Reads both low and high banks and combines them. 
+///          Note: Not strictly atomic across banks (2 separate reads).
+/// @return 64-bit raw value (Bit N = GPIO N status)
+#define IOGet()                      ( ((uint64_t)IOExtendedGet() << 32) | (uint64_t)IOStandardGet() )
+
+/// @brief Set output level High for ANY GPIOs (0-39+)
+/// @param mask64 64-bit Bitmask of pins to set (must use 1ULL << pin)
+#define IOSet(mask64)                do { \
+                                        IOStandardSet((uint32_t)(mask64)); \
+                                        IOExtendedSet((uint32_t)((uint64_t)(mask64) >> 32)); \
+                                     } while(0)
+
+/// @brief Set output level Low for ANY GPIOs (0-39+)
+/// @param mask64 64-bit Bitmask of pins to clear (must use 1ULL << pin)
+#define IOClr(mask64)                do { \
+                                        IOStandardClr((uint32_t)(mask64)); \
+                                        IOExtendedClr((uint32_t)((uint64_t)(mask64) >> 32)); \
+                                     } while(0)
+
 /// @brief Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type
 /// @param pin_bit_mask Bitmask of the GPIO(s) to configure
 /// @param mode         GPIO mode (e.g., GPIO_MODE_INPUT, GPIO_MODE_OUTPUT)

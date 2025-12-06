@@ -31,6 +31,7 @@ var searchData=
   ['level_2007_20main_28',['2nd-level | [07] main',['../index.html#autotoc_md9',1,'']]],
   ['liberationsans_5fbold10pt7b_2eh_29',['LiberationSans_Bold10pt7b.h',['../LiberationSans__Bold10pt7b_8h.html',1,'']]],
   ['links_30',['Useful links',['../index.html#autotoc_md11',1,'']]],
-  ['logisoso10pt7b_2eh_31',['Logisoso10pt7b.h',['../Logisoso10pt7b_8h.html',1,'']]],
-  ['loop_2eh_32',['Loop.h',['../Loop_8h.html',1,'']]]
+  ['log1_31',['Log1',['../Application_8h.html#aee058a67d86c80ab90c17f791dbe4c70',1,'Application.h']]],
+  ['logisoso10pt7b_2eh_32',['Logisoso10pt7b.h',['../Logisoso10pt7b_8h.html',1,'']]],
+  ['loop_2eh_33',['Loop.h',['../Loop_8h.html',1,'']]]
 ];

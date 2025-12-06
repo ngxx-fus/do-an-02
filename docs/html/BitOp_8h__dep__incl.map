@@ -1,18 +1,17 @@
 <map id="AppUtils/BitOp.h" name="AppUtils/BitOp.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="205,5,333,33"/>
-<area shape="rect" id="Node000002" href="$AppUtils_2All_8h.html" title=" " alt="" coords="214,81,324,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,46,271,81,266,80,268,51"/>
-<area shape="rect" id="Node000003" href="$Parallel16_8h.html" title=" " alt="" coords="5,249,202,294"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="197,109,117,130,83,143,63,158,55,180,60,203,71,227,87,248,81,249,67,230,55,205,50,179,59,155,81,139,115,125,200,105"/>
-<area shape="rect" id="Node000005" href="$Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="73,157,270,201"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="240,121,199,158,196,154,243,117"/>
-<area shape="rect" id="Node000006" href="$AppUtils_8c.html" title=" " alt="" coords="294,165,441,193"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="297,116,355,165,349,165,296,121"/>
-<area shape="rect" id="Node000007" href="$Application_8h.html" title=" " alt="" coords="464,165,607,193"/>
-<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="326,111,495,164,490,166,326,116"/>
-<area shape="rect" id="Node000004" href="$Parallel16_8c.html" title=" " alt="" coords="5,342,202,387"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,308,106,343,101,341,102,312"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="148,212,122,251,117,248,144,216"/>
-<area shape="rect" id="Node000008" href="$Application_8c.html" title=" " alt="" coords="465,258,606,286"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="537,206,538,259,533,256,534,210"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="431,5,559,33"/>
+<area shape="rect" id="Node000002" href="$AppUtils_2All_8h.html" title=" " alt="" coords="440,81,550,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,47,497,82,493,79,494,51"/>
+<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,115,202,167,200,162,426,110"/>
+<area shape="rect" id="Node000004" href="$P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="471,118,427,158,424,154,466,120"/>
+<area shape="rect" id="Node000006" href="$AppUtils_8c.html" title=" " alt="" coords="518,165,664,193"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="523,116,579,165,573,165,521,121"/>
+<area shape="rect" id="Node000007" href="$Application_8h.html" title=" " alt="" coords="688,165,830,193"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="552,111,720,164,714,165,552,116"/>
+<area shape="rect" id="Node000005" href="$P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
+<area shape="rect" id="Node000008" href="$Application_8c.html" title=" " alt="" coords="688,258,830,286"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="761,206,761,259,757,256,757,210"/>
 </map>

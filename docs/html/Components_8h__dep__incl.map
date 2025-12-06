@@ -1,22 +1,25 @@
 <map id="AppConfig/Components.h" name="AppConfig/Components.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="119,5,305,33"/>
-<area shape="rect" id="Node000002" href="$AppConfig_2All_8h.html" title=" " alt="" coords="86,165,207,193"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,48,174,82,159,127,151,165,146,164,154,126,170,80,194,43"/>
-<area shape="rect" id="Node000007" href="$DevicePinout_8h.html" title=" " alt="" coords="184,81,373,109"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="234,42,269,80,264,81,234,47"/>
-<area shape="rect" id="Node000003" href="$Parallel16_8h.html" title=" " alt="" coords="171,342,368,387"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,203,258,341,252,342,163,208"/>
-<area shape="rect" id="Node000005" href="$Application_8h.html" title=" " alt="" coords="22,258,164,286"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="130,208,103,259,99,256,133,204"/>
-<area shape="rect" id="Node000004" href="$Parallel16_8c.html" title=" " alt="" coords="171,435,368,479"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,400,272,436,267,433,267,404"/>
-<area shape="rect" id="Node000006" href="$Application_8c.html" title=" " alt="" coords="5,350,147,378"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="89,298,81,351,76,349,87,303"/>
-<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="243,119,170,167,166,163,246,115"/>
-<area shape="rect" id="Node000008" href="$Parallel16Def_8h.html" title=" " alt="" coords="231,157,428,201"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="295,119,319,156,313,156,294,125"/>
-<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="308,212,292,250,279,299,273,343,269,340,274,298,287,248,305,217"/>
-<area shape="rect" id="Node000009" href="$Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="302,249,498,294"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="356,211,386,249,381,249,355,216"/>
-<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="359,301,302,344,299,339,354,304"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="361,5,546,33"/>
+<area shape="rect" id="Node000002" href="$AppConfig_2All_8h.html" title=" " alt="" coords="394,157,514,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,43,416,82,414,95,416,108,429,134,445,157,439,156,424,136,411,109,409,95,411,80,431,47"/>
+<area shape="rect" id="Node000010" href="$DevicePinout_8h.html" title=" " alt="" coords="426,81,615,109"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="476,42,511,81,506,80,476,47"/>
+<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,316,284,344"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,194,171,318,169,314,414,189"/>
+<area shape="rect" id="Node000004" href="$P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,308,494,353"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="442,196,428,233,407,309,403,306,423,231,438,200"/>
+<area shape="rect" id="Node000006" href="$AppESPWrap_2All_8h.html" title=" " alt="" coords="438,232,576,260"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="473,195,500,232,495,231,471,200"/>
+<area shape="rect" id="Node000008" href="$Application_8h.html" title=" " alt="" coords="744,316,886,344"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="498,188,788,315,783,317,497,194"/>
+<area shape="rect" id="Node000005" href="$P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,401,494,445"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,366,403,402,398,399,399,370"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="433,266,203,319,202,313,435,262"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="480,269,430,310,428,305,476,271"/>
+<area shape="rect" id="Node000007" href="$AppESPWrap_8c.html" title=" " alt="" coords="518,316,720,344"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="538,267,604,316,599,316,537,272"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="571,262,768,316,763,316,571,267"/>
+<area shape="rect" id="Node000009" href="$Application_8c.html" title=" " alt="" coords="744,409,886,437"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="817,358,817,411,813,407,813,361"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="501,119,467,158,464,154,496,122"/>
 </map>

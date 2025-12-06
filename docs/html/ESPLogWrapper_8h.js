@@ -1,5 +1,6 @@
 var ESPLogWrapper_8h =
 [
+    [ "CoreLog", "ESPLogWrapper_8h.html#ac816cf6584a3363f78b9a96120e25507", null ],
     [ "SysEntry", "ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94", null ],
     [ "SysEntryVer", "ESPLogWrapper_8h.html#af432eb210da1e4171a6224911123fd1d", null ],
     [ "SysErr", "ESPLogWrapper_8h.html#ab3a5bf5f559dc2842497793a1edc2f4f", null ],

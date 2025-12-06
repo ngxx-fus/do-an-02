@@ -1,5 +1,8 @@
 var DevicePinout_8h =
 [
+    [ "IsExtendedPin", "DevicePinout_8h.html#af537e89c649252460c811aafefe22bfc", null ],
+    [ "IsStandardPin", "DevicePinout_8h.html#aa5e3fbc3e99995e20b928a8c9cb3aacc", null ],
+    [ "IsValidPin", "DevicePinout_8h.html#adfbd20f652afcd35bae0c587dd80ba65", null ],
     [ "LCD32_BL", "DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45", null ],
     [ "LCD32_CS", "DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f", null ],
     [ "LCD32_DB0", "DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507", null ],
@@ -23,9 +26,9 @@ var DevicePinout_8h =
     [ "LCD32_RST", "DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2", null ],
     [ "LCD32_WR", "DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb", null ],
     [ "Pin_t", "DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58", null ],
-    [ "PIN_STATE", "DevicePinout_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7", [
-      [ "PIN_UNUSED", "DevicePinout_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7a18cf6cd3410235585c7a774ee14571e2", null ],
-      [ "PIN_INVALID", "DevicePinout_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7a9474c26fb89b2f29ed9a3aa5ac4fd247", null ],
-      [ "PIN_NOT_FOUND", "DevicePinout_8h.html#a7b7a6f8fb64eca694ec6a997a8cd33e7acf9db05d317c2978866cf2fa5bf40a32", null ]
+    [ "PIN_STATE_e", "DevicePinout_8h.html#ab5e26277aa89760b746909ec30870d68", [
+      [ "PIN_UNUSED", "DevicePinout_8h.html#ab5e26277aa89760b746909ec30870d68a18cf6cd3410235585c7a774ee14571e2", null ],
+      [ "PIN_INVALID", "DevicePinout_8h.html#ab5e26277aa89760b746909ec30870d68a9474c26fb89b2f29ed9a3aa5ac4fd247", null ],
+      [ "PIN_NOT_FOUND", "DevicePinout_8h.html#ab5e26277aa89760b746909ec30870d68acf9db05d317c2978866cf2fa5bf40a32", null ]
     ] ]
 ];

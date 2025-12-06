@@ -20,9 +20,9 @@ extern "C" {
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "AppConfig/All.h"
-#include "AppUtils/All.h"
-#include "AppESPWrap/All.h"
+#include "../../AppConfig/All.h"
+#include "../../AppUtils/All.h"
+#include "../../AppESPWrap/All.h"
 
 #define P16COM_LOG_SECTION
 #define P16COM_UTILS_SECTION
@@ -49,7 +49,10 @@ extern "C" {
 typedef uint16_t    P16Data_t;
 typedef int32_t     P16Size_t;
 
-/* --- LOGGING CONFIGURATION --- */
+/// @brief Configures the default state of the 16-bit Data Bus.
+/// @details 1: Default is OUTPUT (Faster writes). 0: Default is INPUT (Safe/High-Z).
+#define P16COM_DB_NORMAL_OUTPUT_EN      1
+
 /// @brief Enable standard logging for this module
 #define P16COM_LOG_EN                   1
 /// @brief Enable verbose/detailed logging
@@ -61,7 +64,6 @@ typedef int32_t     P16Size_t;
 /// @brief Enable function exit tracing
 #define P16COM_LOG_EXIT                 1
 
-/* --- PIN CONFIGURATION --- */
 /// @brief Number of actual Control Pins used (Read, Write, CS, RS, Reset)
 #define P16COM_CTL_PIN_NUM              5
 
@@ -83,7 +85,7 @@ enum P16ComPositiveStatusFlag_e {
 /// @details Uses anonymous unions to allow access via specific names (e.g., .Read) 
 ///          or via arrays (e.g., .CtlPinArr[i]) for bulk configuration.
 ///          Memory is organized into two contiguous blocks: Control and Data.
-typedef struct P16ComPin_t {
+typedef struct P16Dev_t{
     /// @brief Control Pins Group (Union)
     union {
         /// @brief Individual Control Pin Access
@@ -115,44 +117,73 @@ typedef struct P16ComPin_t {
     };
     /// @brief Internal status flags
     uint32_t StatusFlag;
-} P16ComPin_t;
+    
+    /// @brief Store the Control pins mask for quick set-up IN/OUT
+    /// @note Using uint64_t to support ESP32 pins > 31
+    uint64_t CtlIOMask;
+    
+    /// @brief Store the Data pins mask for quick set-up IN/OUT
+    /// @note Using uint64_t to support ESP32 pins > 31
+    uint64_t DatIOMask;
+} P16Dev_t;
 
 /* --- FUNCTION PROTOTYPES --- */
 
-/// @brief Allocates memory for a new P16ComPin_t object
+/// @brief Allocates memory for a new P16Dev_t object
 /// @return Pointer to the new object or NULL if malloc fails
-P16ComPin_t * P16ComNew();
+P16Dev_t * P16ComNew();
+
+/// @brief Deallocate memory for P16Dev_t object
+/// @param Dev Pointer to the P16Dev_t object
+void                P16Delete(P16Dev_t * Dev);
+
+/// @brief Configure Control pins mapping and calculate IO Masks
+/// @param Dev Pointer to the P16Dev_t object
+/// @param CtlPins Array of 5 Control Pins (RD, WR, CS, RS, RST)
+/// @return STAT_OKE on success, STAT_ERR on invalid pin
+DefaultRet_t        P16ComConfigCtl(P16Dev_t * Dev, const Pin_t * CtlPins);
+
+/// @brief Configure Data pins mapping and calculate IO Masks
+/// @param Dev Pointer to the P16Dev_t object
+/// @param DatPins Array of 16 Data Pins (D0..D15)
+/// @return STAT_OKE on success, STAT_ERR on invalid pin
+DefaultRet_t        P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins);
 
 /// @brief Initializes the GPIOs for the parallel interface
-/// @param Dev Pointer to the P16ComPin_t object
+/// @param Dev Pointer to the P16Dev_t object
 /// @return STAT_OKE on success, STAT_ERR on failure
-DefaultRet_t        P16ComInit(P16ComPin_t * Dev);
+DefaultRet_t        P16ComInit(P16Dev_t * Dev);
+
+/// @brief Re-initializes the driver based on existing configuration
+/// @param Dev Pointer to the P16Dev_t object
+/// @return STAT_OKE on success
+DefaultRet_t        P16ComReConfig(P16Dev_t * Dev);
 
 /// @brief Performs a hardware reset sequence using the Reset pin
-/// @param Dev Pointer to the P16ComPin_t object
-void                P16ComMakeReset(P16ComPin_t * Dev);
+/// @param Dev Pointer to the P16Dev_t object
+void                P16ComMakeReset(P16Dev_t * Dev);
 
 /// @brief Writes a single 16-bit value to the bus
-/// @param Dev Pointer to the P16ComPin_t object
+/// @param Dev Pointer to the P16Dev_t object
 /// @param Data The 16-bit value to write
-void                P16ComWrite(P16ComPin_t * Dev, P16Data_t Data);
+void                P16ComWrite(P16Dev_t * Dev, P16Data_t Data);
 
 /// @brief Writes an array of 16-bit values to the bus (Burst Write)
-/// @param Dev Pointer to the P16ComPin_t object
+/// @param Dev Pointer to the P16Dev_t object
 /// @param DataArr Pointer to the data array
 /// @param Size Number of elements to write
-void                P16ComWriteArray(P16ComPin_t * Dev, P16Data_t * DataArr, P16Size_t Size);
+void                P16ComWriteArray(P16Dev_t * Dev, P16Data_t * DataArr, P16Size_t Size);
 
 /// @brief Reads a single 16-bit value from the bus
-/// @param Dev Pointer to the P16ComPin_t object
+/// @param Dev Pointer to the P16Dev_t object
 /// @return The 16-bit value read from the bus
-P16Data_t           P16ComRead(P16ComPin_t * Dev);
+P16Data_t           P16ComRead(P16Dev_t * Dev);
 
 /// @brief Reads an array of 16-bit values from the bus (Burst Read)
-/// @param Dev Pointer to the P16ComPin_t object
+/// @param Dev Pointer to the P16Dev_t object
 /// @param pBuff Pointer to the buffer to store data
 /// @param Size Number of elements to read
-void                P16ComReadArray(P16ComPin_t * Dev, P16Data_t * pBuff, P16Size_t Size);
+void                P16ComReadArray(P16Dev_t * Dev, P16Data_t * pBuff, P16Size_t Size);
 
 #ifdef P16COM_LOG_SECTION
 
@@ -252,6 +283,22 @@ void                P16ComReadArray(P16ComPin_t * Dev, P16Data_t * pBuff, P16Siz
 
     /// @brief Get current state of a specific Data Pin (by index 0-15)
     #define P16GetDataPin(p16Dev, n)      ((IOStandardGet() >> (p16Dev)->DatPinArr[n]) & 0x1)
+
+    /// @brief Perform a complete Write Strobe: Low -> Delay -> High -> Delay
+    #define P16MakeWritePulse(p16Dev)     do { \
+                                              P16SetLowWritePin(p16Dev); \
+                                              P16BlockingDelay(P16HalfClockCycle); \
+                                              P16SetHighWritePin(p16Dev); \
+                                              P16BlockingDelay(P16HalfClockCycle); \
+                                          } while(0)
+
+    /// @brief Perform a complete Read Strobe: Low -> Delay -> High -> Delay
+    #define P16MakeReadPulse(p16Dev)      do { \
+                                              P16SetLowReadPin(p16Dev); \
+                                              P16BlockingDelay(P16HalfClockCycle); \
+                                              P16SetHighReadPin(p16Dev); \
+                                              P16BlockingDelay(P16HalfClockCycle); \
+                                          } while(0)
 
 #endif /// P16COM_UTILS_SECTION
 

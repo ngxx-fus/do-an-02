@@ -16,6 +16,7 @@ extern "C" {
 #include <stdbool.h>            /// boolean type (true/false)
 #include <stdarg.h>             /// variable arguments (va_list, va_start, va_end)
 #include <string.h>             /// memset, strlen
+#include <math.h>
 
 #include "./BitOp.h"
 #include "./Arithmetic.h"

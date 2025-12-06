@@ -138,21 +138,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ESPGPIOWrapper_8h__dep__incl.png" border="0" usemap="#aAppESPWrap_2ESPGPIOWrapper_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppESPWrap_2ESPGPIOWrapper_8hdep" id="aAppESPWrap_2ESPGPIOWrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="212,5,443,33"/>
-<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="259,81,396,109"/>
-<area shape="poly" title=" " alt="" coords="329,46,330,81,325,80,326,51"/>
-<area shape="rect" href="Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="5,157,202,201"/>
-<area shape="poly" title=" " alt="" coords="276,116,164,158,162,154,279,112"/>
-<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="226,165,429,193"/>
-<area shape="poly" title=" " alt="" coords="329,122,330,166,325,164,326,127"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="452,165,595,193"/>
-<area shape="poly" title=" " alt="" coords="373,112,495,164,490,165,373,118"/>
-<area shape="rect" href="Parallel16_8h.html" title=" " alt="" coords="5,249,202,294"/>
-<area shape="poly" title=" " alt="" coords="104,214,106,250,101,249,103,219"/>
-<area shape="rect" href="Parallel16_8c.html" title=" " alt="" coords="5,342,202,387"/>
-<area shape="poly" title=" " alt="" coords="105,308,106,343,101,341,102,312"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="453,258,594,286"/>
-<area shape="poly" title=" " alt="" coords="525,206,526,259,521,256,522,210"/>
+<area shape="rect" title=" " alt="" coords="395,5,625,33"/>
+<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="441,81,578,109"/>
+<area shape="poly" title=" " alt="" coords="511,47,512,82,508,79,508,51"/>
+<area shape="rect" href="ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
+<area shape="poly" title=" " alt="" coords="435,115,204,167,202,162,438,110"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
+<area shape="poly" title=" " alt="" coords="482,117,431,158,428,154,478,120"/>
+<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="518,165,720,193"/>
+<area shape="poly" title=" " alt="" coords="540,116,604,165,599,164,539,121"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="744,165,886,193"/>
+<area shape="poly" title=" " alt="" coords="574,111,769,164,764,165,573,116"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
+<area shape="poly" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="744,258,886,286"/>
+<area shape="poly" title=" " alt="" coords="817,206,817,259,813,256,813,210"/>
 </map>
 </div>
 </div>
@@ -160,6 +160,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a6a4167452dd4773d81ca412d6e496793" id="r_a6a4167452dd4773d81ca412d6e496793"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a4167452dd4773d81ca412d6e496793">IOStandardGet</a>()</td></tr>
+<tr class="memdesc:a6a4167452dd4773d81ca412d6e496793"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-resolution timer API.  <br /></td></tr>
+<tr class="memitem:a6232e69fda5dc40e133574564cfd23a1" id="r_a6232e69fda5dc40e133574564cfd23a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6232e69fda5dc40e133574564cfd23a1">IOExtendedGet</a>()</td></tr>
+<tr class="memdesc:a6232e69fda5dc40e133574564cfd23a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get input level of all GPIO 32-39+ (Atomic, Fast)  <br /></td></tr>
+<tr class="memitem:a0441eda0d85f153d2b9cea0723ea348b" id="r_a0441eda0d85f153d2b9cea0723ea348b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0441eda0d85f153d2b9cea0723ea348b">IOStandardSet</a>(mask)</td></tr>
+<tr class="memdesc:a0441eda0d85f153d2b9cea0723ea348b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set output level High for GPIO 0-31 (Atomic, Fast)  <br /></td></tr>
+<tr class="memitem:a72a6c3b54a11e73f0623f29be63da4a1" id="r_a72a6c3b54a11e73f0623f29be63da4a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a6c3b54a11e73f0623f29be63da4a1">IOStandardClr</a>(mask)</td></tr>
+<tr class="memdesc:a72a6c3b54a11e73f0623f29be63da4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set output level Low for GPIO 0-31 (Atomic, Fast)  <br /></td></tr>
+<tr class="memitem:a3f64b08859e48d79c383ac55d2a2584c" id="r_a3f64b08859e48d79c383ac55d2a2584c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f64b08859e48d79c383ac55d2a2584c">IOExtendedSet</a>(mask)</td></tr>
+<tr class="memdesc:a3f64b08859e48d79c383ac55d2a2584c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set output level High for GPIO 32-39+ (Atomic, Fast)  <br /></td></tr>
+<tr class="memitem:a2a4928d6b32a19c42749892cc77d21d2" id="r_a2a4928d6b32a19c42749892cc77d21d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4928d6b32a19c42749892cc77d21d2">IOExtendedClr</a>(mask)</td></tr>
+<tr class="memdesc:a2a4928d6b32a19c42749892cc77d21d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set output level Low for GPIO 32-39+ (Atomic, Fast)  <br /></td></tr>
 <tr class="memitem:aca8c1c8aa525d4ab751ac4a780cdb07f" id="r_aca8c1c8aa525d4ab751ac4a780cdb07f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8c1c8aa525d4ab751ac4a780cdb07f">GPIOSetHigh</a>(GPIO_MASK)</td></tr>
 <tr class="memdesc:aca8c1c8aa525d4ab751ac4a780cdb07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast set High for GPIO 0-31 (Write 1 to Set)  <br /></td></tr>
 <tr class="memitem:a89c52776931a333ef57ba87620e67c9c" id="r_a89c52776931a333ef57ba87620e67c9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89c52776931a333ef57ba87620e67c9c">GPIOSetLow</a>(GPIO_MASK)</td></tr>
@@ -172,11 +184,17 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6c0ebae47b62e740ad70b3041c94de72" id="r_a6c0ebae47b62e740ad70b3041c94de72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c0ebae47b62e740ad70b3041c94de72">IOConfig</a> (uint64_t pin_bit_mask, gpio_mode_t mode, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en, gpio_int_type_t intr_type)</td></tr>
-<tr class="memdesc:a6c0ebae47b62e740ad70b3041c94de72"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-resolution timer API.  <br /></td></tr>
+<tr class="memdesc:a6c0ebae47b62e740ad70b3041c94de72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type.  <br /></td></tr>
 <tr class="memitem:a0026339c80214ec0535bade46f210a23" id="r_a0026339c80214ec0535bade46f210a23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0026339c80214ec0535bade46f210a23">IOConfigAsOutput</a> (uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en)</td></tr>
 <tr class="memdesc:a0026339c80214ec0535bade46f210a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure GPIO(s) as output with no internal pull resistors and interrupts disabled.  <br /></td></tr>
 <tr class="memitem:a0ab6d24e84a1dacfc1374b25fa87c038" id="r_a0ab6d24e84a1dacfc1374b25fa87c038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ab6d24e84a1dacfc1374b25fa87c038">IOConfigAsInput</a> (uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en)</td></tr>
 <tr class="memdesc:a0ab6d24e84a1dacfc1374b25fa87c038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure GPIO(s) as input with no internal pull resistors and interrupts disabled.  <br /></td></tr>
+<tr class="memitem:a9660c0194bd9b3510ad816fb83cba245" id="r_a9660c0194bd9b3510ad816fb83cba245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9660c0194bd9b3510ad816fb83cba245">IOConfigAsInputOutputODPullUp</a> (uint64_t pin_bit_mask)</td></tr>
+<tr class="memdesc:a9660c0194bd9b3510ad816fb83cba245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure GPIO as Input/Output Open-Drain with Internal Pull-up.  <br /></td></tr>
+<tr class="memitem:affed3b3f68b5a8a361708ec8062d6dbe" id="r_affed3b3f68b5a8a361708ec8062d6dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affed3b3f68b5a8a361708ec8062d6dbe">IOConfigAsInputOutput</a> (uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en)</td></tr>
+<tr class="memdesc:affed3b3f68b5a8a361708ec8062d6dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure GPIO as Input and Output (Bidirectional)  <br /></td></tr>
+<tr class="memitem:ae4adf19e4dd512826c7941728f2a0f86" id="r_ae4adf19e4dd512826c7941728f2a0f86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4adf19e4dd512826c7941728f2a0f86">IOConfigAsOutputODPullUp</a> (uint64_t pin_bit_mask)</td></tr>
+<tr class="memdesc:ae4adf19e4dd512826c7941728f2a0f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure GPIO as Output Open-Drain with Internal Pull-up enabled.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aca8c1c8aa525d4ab751ac4a780cdb07f" name="aca8c1c8aa525d4ab751ac4a780cdb07f"></a>
@@ -197,7 +215,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Fast set High for GPIO 0-31 (Write 1 to Set) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00046">46</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00084">84</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -219,7 +237,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Fast set High for GPIO 32-64 (Write 1 to Set - High Register) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00052">52</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00090">90</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +259,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Fast set Low for GPIO 0-31 (Write 1 to Clear) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00049">49</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00087">87</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +281,172 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Fast set Low for GPIO 32-64 (Write 1 to Clear - High Register) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00055">55</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00093">93</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+</div>
+</div>
+<a id="a2a4928d6b32a19c42749892cc77d21d2" name="a2a4928d6b32a19c42749892cc77d21d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4928d6b32a19c42749892cc77d21d2">&#9670;&#160;</a></span>IOExtendedClr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOExtendedClr</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.out1_w1tc.val = (uint32_t)(mask))</div>
+</div><!-- fragment -->
+<p>Set output level Low for GPIO 32-39+ (Atomic, Fast) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Bitmask relative to the high bank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00051">51</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+</div>
+</div>
+<a id="a6232e69fda5dc40e133574564cfd23a1" name="a6232e69fda5dc40e133574564cfd23a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6232e69fda5dc40e133574564cfd23a1">&#9670;&#160;</a></span>IOExtendedGet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOExtendedGet</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.in1.val)</div>
+</div><!-- fragment -->
+<p>Get input level of all GPIO 32-39+ (Atomic, Fast) </p>
+<dl class="section return"><dt>Returns</dt><dd>32-bit raw value (Bit N = GPIO 32+N status) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00035">35</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+</div>
+</div>
+<a id="a3f64b08859e48d79c383ac55d2a2584c" name="a3f64b08859e48d79c383ac55d2a2584c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f64b08859e48d79c383ac55d2a2584c">&#9670;&#160;</a></span>IOExtendedSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOExtendedSet</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.out1_w1ts.val = (uint32_t)(mask))</div>
+</div><!-- fragment -->
+<p>Set output level High for GPIO 32-39+ (Atomic, Fast) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Bitmask relative to the high bank (bit 0 = GPIO 32) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00047">47</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+</div>
+</div>
+<a id="a72a6c3b54a11e73f0623f29be63da4a1" name="a72a6c3b54a11e73f0623f29be63da4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a6c3b54a11e73f0623f29be63da4a1">&#9670;&#160;</a></span>IOStandardClr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOStandardClr</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.out_w1tc = (uint32_t)(mask))</div>
+</div><!-- fragment -->
+<p>Set output level Low for GPIO 0-31 (Atomic, Fast) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Bitmask of pins to clear </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00043">43</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00095">P16ComWrite()</a>, and <a class="el" href="P16Com_8c_source.html#l00134">P16ComWriteArray()</a>.</p>
+
+</div>
+</div>
+<a id="a6a4167452dd4773d81ca412d6e496793" name="a6a4167452dd4773d81ca412d6e496793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4167452dd4773d81ca412d6e496793">&#9670;&#160;</a></span>IOStandardGet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOStandardGet</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.in)</div>
+</div><!-- fragment -->
+<p>High-resolution timer API. </p>
+<p>Standard fixed-width integer types Standard library definitions (malloc, free, etc.) Boolean type definitions Variable argument handling ESP-IDF High-level GPIO driver ESP logging utilities ROM functions (ets_printf, ets_delay_us) Low-level GPIO hardware abstraction layer GPIO hardware register structure GPIO register addresses and bit masks</p>
+<p>Get input level of all GPIO 0-31 (Atomic, Fast) </p><dl class="section return"><dt>Returns</dt><dd>32-bit raw value (Bit N = GPIO N status) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00031">31</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00186">P16ComRead()</a>, and <a class="el" href="P16Com_8c_source.html#l00223">P16ComReadArray()</a>.</p>
+
+</div>
+</div>
+<a id="a0441eda0d85f153d2b9cea0723ea348b" name="a0441eda0d85f153d2b9cea0723ea348b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0441eda0d85f153d2b9cea0723ea348b">&#9670;&#160;</a></span>IOStandardSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IOStandardSet</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(GPIO.out_w1ts = (uint32_t)(mask))</div>
+</div><!-- fragment -->
+<p>Set output level High for GPIO 0-31 (Atomic, Fast) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Bitmask of pins to set (1 bit = 1 pin) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ESPGPIOWrapper_8h_source.html#l00039">39</a> of file <a class="el" href="ESPGPIOWrapper_8h_source.html">ESPGPIOWrapper.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00035">P16ComInit()</a>, <a class="el" href="P16Com_8c_source.html#l00095">P16ComWrite()</a>, and <a class="el" href="P16Com_8c_source.html#l00134">P16ComWriteArray()</a>.</p>
 
 </div>
 </div>
@@ -302,9 +485,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>High-resolution timer API. </p>
-<p>Standard fixed-width integer types Standard library definitions (malloc, free, etc.) Boolean type definitions Variable argument handling ESP-IDF High-level GPIO driver ESP logging utilities ROM functions (ets_printf, ets_delay_us) Low-level GPIO hardware abstraction layer GPIO hardware register structure GPIO register addresses and bit masks</p>
-<p>Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Configure a GPIO pin with specific mode, pull-up/down settings, and interrupt type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pin_bit_mask</td><td>Bitmask of the GPIO(s) to configure </td></tr>
     <tr><td class="paramname">mode</td><td>GPIO mode (e.g., GPIO_MODE_INPUT, GPIO_MODE_OUTPUT) </td></tr>
@@ -378,6 +560,110 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   40</span>    gpio_config(&amp;pin);</div>
 <div class="line"><span class="lineno">   41</span>}</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00035">P16ComInit()</a>, <a class="el" href="P16Com_8c_source.html#l00095">P16ComWrite()</a>, and <a class="el" href="P16Com_8c_source.html#l00134">P16ComWriteArray()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ESPGPIOWrapper_8h_a0ab6d24e84a1dacfc1374b25fa87c038_icgraph.png" border="0" usemap="#aESPGPIOWrapper_8h_a0ab6d24e84a1dacfc1374b25fa87c038_icgraph" loading="lazy" alt=""/></div>
+<map name="aESPGPIOWrapper_8h_a0ab6d24e84a1dacfc1374b25fa87c038_icgraph" id="aESPGPIOWrapper_8h_a0ab6d24e84a1dacfc1374b25fa87c038_icgraph">
+<area shape="rect" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="199,57,324,85"/>
+<area shape="rect" href="P16Com_8c.html#aa85ad7bc0745c420c81f31d88236815b" title="Initialize the driver GPIOs and Flags." alt="" coords="30,5,126,33"/>
+<area shape="poly" title=" " alt="" coords="193,54,126,35,126,30,198,51"/>
+<area shape="rect" href="P16Com_8c.html#ace413f31cfedde91c88258a2a68bb619" title="Write a single word to the bus." alt="" coords="23,57,133,85"/>
+<area shape="poly" title=" " alt="" coords="181,72,134,74,133,69,186,70"/>
+<area shape="rect" href="P16Com_8c.html#ab1b4ce0687b560b761338a6706f5a865" title="Write a block of data to the bus (Burst Write)" alt="" coords="5,109,151,137"/>
+<area shape="poly" title=" " alt="" coords="198,89,130,111,129,106,193,90"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="affed3b3f68b5a8a361708ec8062d6dbe" name="affed3b3f68b5a8a361708ec8062d6dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affed3b3f68b5a8a361708ec8062d6dbe">&#9670;&#160;</a></span>IOConfigAsInputOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOConfigAsInputOutput </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>pin_bit_mask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpio_pullup_t</td>          <td class="paramname"><span class="paramname"><em>pull_up_en</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpio_pulldown_t</td>          <td class="paramname"><span class="paramname"><em>pull_down_en</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure GPIO as Input and Output (Bidirectional) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin_bit_mask</td><td>Bit mask of the pin </td></tr>
+    <tr><td class="paramname">pull_up_en</td><td>Enable internal pull-up </td></tr>
+    <tr><td class="paramname">pull_down_en</td><td>Enable internal pull-down </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="AppESPWrap_8c_source.html#l00054">54</a> of file <a class="el" href="AppESPWrap_8c_source.html">AppESPWrap.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span>(pull_up_en &lt;= 0)          pull_up_en     = GPIO_PULLUP_DISABLE;</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">if</span>(pull_down_en &lt;= 0)        pull_down_en   = GPIO_PULLDOWN_DISABLE;</div>
+<div class="line"><span class="lineno">   57</span>    </div>
+<div class="line"><span class="lineno">   58</span>    gpio_config_t pin = {</div>
+<div class="line"><span class="lineno">   59</span>        .pin_bit_mask = pin_bit_mask,</div>
+<div class="line"><span class="lineno">   60</span>        .mode = GPIO_MODE_INPUT_OUTPUT,     <span class="comment">// Input + Output</span></div>
+<div class="line"><span class="lineno">   61</span>        .intr_type = GPIO_INTR_DISABLE,</div>
+<div class="line"><span class="lineno">   62</span>        .pull_up_en = pull_up_en,</div>
+<div class="line"><span class="lineno">   63</span>        .pull_down_en = pull_down_en,</div>
+<div class="line"><span class="lineno">   64</span>    };</div>
+<div class="line"><span class="lineno">   65</span>    gpio_config(&amp;pin);</div>
+<div class="line"><span class="lineno">   66</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9660c0194bd9b3510ad816fb83cba245" name="a9660c0194bd9b3510ad816fb83cba245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9660c0194bd9b3510ad816fb83cba245">&#9670;&#160;</a></span>IOConfigAsInputOutputODPullUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOConfigAsInputOutputODPullUp </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>pin_bit_mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure GPIO as Input/Output Open-Drain with Internal Pull-up. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin_bit_mask</td><td>Bit mask of the pin </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="AppESPWrap_8c_source.html#l00068">68</a> of file <a class="el" href="AppESPWrap_8c_source.html">AppESPWrap.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                         {</div>
+<div class="line"><span class="lineno">   69</span>    gpio_config_t pin = {</div>
+<div class="line"><span class="lineno">   70</span>        .pin_bit_mask = pin_bit_mask,</div>
+<div class="line"><span class="lineno">   71</span>        .mode = GPIO_MODE_INPUT_OUTPUT_OD,  <span class="comment">// Input + Output Open-Drain</span></div>
+<div class="line"><span class="lineno">   72</span>        .intr_type = GPIO_INTR_DISABLE,</div>
+<div class="line"><span class="lineno">   73</span>        .pull_up_en = GPIO_PULLUP_ENABLE,   <span class="comment">// Force Enable Pull-up</span></div>
+<div class="line"><span class="lineno">   74</span>        .pull_down_en = GPIO_PULLDOWN_DISABLE,</div>
+<div class="line"><span class="lineno">   75</span>    };</div>
+<div class="line"><span class="lineno">   76</span>    gpio_config(&amp;pin);</div>
+<div class="line"><span class="lineno">   77</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0026339c80214ec0535bade46f210a23" name="a0026339c80214ec0535bade46f210a23"></a>
@@ -425,6 +711,59 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>    };</div>
 <div class="line"><span class="lineno">   27</span>    gpio_config(&amp;pin);</div>
 <div class="line"><span class="lineno">   28</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="P16Com_8c_source.html#l00035">P16ComInit()</a>, <a class="el" href="P16Com_8c_source.html#l00095">P16ComWrite()</a>, and <a class="el" href="P16Com_8c_source.html#l00134">P16ComWriteArray()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ESPGPIOWrapper_8h_a0026339c80214ec0535bade46f210a23_icgraph.png" border="0" usemap="#aESPGPIOWrapper_8h_a0026339c80214ec0535bade46f210a23_icgraph" loading="lazy" alt=""/></div>
+<map name="aESPGPIOWrapper_8h_a0026339c80214ec0535bade46f210a23_icgraph" id="aESPGPIOWrapper_8h_a0026339c80214ec0535bade46f210a23_icgraph">
+<area shape="rect" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="199,57,335,85"/>
+<area shape="rect" href="P16Com_8c.html#aa85ad7bc0745c420c81f31d88236815b" title="Initialize the driver GPIOs and Flags." alt="" coords="30,5,126,33"/>
+<area shape="poly" title=" " alt="" coords="197,54,126,35,127,30,201,51"/>
+<area shape="rect" href="P16Com_8c.html#ace413f31cfedde91c88258a2a68bb619" title="Write a single word to the bus." alt="" coords="23,57,133,85"/>
+<area shape="poly" title=" " alt="" coords="181,72,134,74,133,69,186,70"/>
+<area shape="rect" href="P16Com_8c.html#ab1b4ce0687b560b761338a6706f5a865" title="Write a block of data to the bus (Burst Write)" alt="" coords="5,109,151,137"/>
+<area shape="poly" title=" " alt="" coords="202,89,132,111,130,106,197,90"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4adf19e4dd512826c7941728f2a0f86" name="ae4adf19e4dd512826c7941728f2a0f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4adf19e4dd512826c7941728f2a0f86">&#9670;&#160;</a></span>IOConfigAsOutputODPullUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IOConfigAsOutputODPullUp </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>pin_bit_mask</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure GPIO as Output Open-Drain with Internal Pull-up enabled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin_bit_mask</td><td>Bit mask of the pin </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="AppESPWrap_8c_source.html#l00043">43</a> of file <a class="el" href="AppESPWrap_8c_source.html">AppESPWrap.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                    {</div>
+<div class="line"><span class="lineno">   44</span>    gpio_config_t pin = {</div>
+<div class="line"><span class="lineno">   45</span>        .pin_bit_mask = pin_bit_mask,</div>
+<div class="line"><span class="lineno">   46</span>        .mode = GPIO_MODE_OUTPUT_OD,        <span class="comment">// Output Open-Drain</span></div>
+<div class="line"><span class="lineno">   47</span>        .intr_type = GPIO_INTR_DISABLE,</div>
+<div class="line"><span class="lineno">   48</span>        .pull_up_en = GPIO_PULLUP_ENABLE,   <span class="comment">// Force Enable Pull-up</span></div>
+<div class="line"><span class="lineno">   49</span>        .pull_down_en = GPIO_PULLDOWN_DISABLE,</div>
+<div class="line"><span class="lineno">   50</span>    };</div>
+<div class="line"><span class="lineno">   51</span>    gpio_config(&amp;pin);</div>
+<div class="line"><span class="lineno">   52</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

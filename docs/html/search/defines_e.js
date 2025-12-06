@@ -41,6 +41,7 @@ var searchData=
   ['system_5flog_5fexit_5fl2_5fen_38',['SYSTEM_LOG_EXIT_L2_EN',['../SystemLog_8h.html#ac02289778c67f77ad897dd8a9b836378',1,'SystemLog.h']]],
   ['system_5flog_5fl1_5fen_39',['SYSTEM_LOG_L1_EN',['../SystemLog_8h.html#ad41aae3e022ddeb7ffeaccbd12580d80',1,'SystemLog.h']]],
   ['system_5flog_5fl2_5fen_40',['SYSTEM_LOG_L2_EN',['../SystemLog_8h.html#a90f570d7013f6852aeb8443446691e82',1,'SystemLog.h']]],
-  ['system_5fwarn_5fen_41',['SYSTEM_WARN_EN',['../ESPLogWrapper_8h.html#ac088e53bce58984c39bb79719a1b4a26',1,'ESPLogWrapper.h']]],
-  ['syswarn_42',['SysWarn',['../ESPLogWrapper_8h.html#a39024e3b68cdb6632a538041c45c44ab',1,'ESPLogWrapper.h']]]
+  ['system_5fsafe_5fthread_5flog_5fen_41',['SYSTEM_SAFE_THREAD_LOG_EN',['../SystemLog_8h.html#ac7fbba0deb617cfc6b56e8685ace39bd',1,'SystemLog.h']]],
+  ['system_5fwarn_5fen_42',['SYSTEM_WARN_EN',['../ESPLogWrapper_8h.html#ac088e53bce58984c39bb79719a1b4a26',1,'ESPLogWrapper.h']]],
+  ['syswarn_43',['SysWarn',['../ESPLogWrapper_8h.html#a39024e3b68cdb6632a538041c45c44ab',1,'ESPLogWrapper.h']]]
 ];

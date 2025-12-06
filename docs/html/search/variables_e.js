@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xadvance_0',['xAdvance',['../structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2',1,'GFXglyph']]],
-  ['xoffset_1',['xOffset',['../structGFXglyph.html#ab030bd9aeb37509ccc94ae3dcec4de98',1,'GFXglyph']]]
+  ['yadvance_0',['yAdvance',['../structGFXfont.html#ac2c2f0184b810a562be808fbb98822fa',1,'GFXfont']]],
+  ['yoffset_1',['yOffset',['../structGFXglyph.html#a96b2c0dbe314bf053cdc0d5c622e76a7',1,'GFXglyph']]]
 ];

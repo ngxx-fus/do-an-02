@@ -17,6 +17,5 @@ var searchData=
   ['application_2eh_14',['Application.h',['../Application_8h.html',1,'']]],
   ['apputils_2ec_15',['AppUtils.c',['../AppUtils_8c.html',1,'']]],
   ['architecture_16',['General system architecture',['../index.html#autotoc_md3',1,'']]],
-  ['arithmetic_2eh_17',['Arithmetic.h',['../Arithmetic_8h.html',1,'']]],
-  ['arr_18',['arr',['../unionP16DatPin__t.html#a2a30ca43842526ba1339cba5aadf5e80',1,'P16DatPin_t::arr'],['../unionP16CtlPin__t.html#a32492a4da889ff3e274b26aa5ee9b7bc',1,'P16CtlPin_t::arr']]]
+  ['arithmetic_2eh_17',['Arithmetic.h',['../Arithmetic_8h.html',1,'']]]
 ];

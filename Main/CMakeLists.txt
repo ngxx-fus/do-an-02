@@ -5,13 +5,13 @@ idf_component_register(
         "."
     REQUIRES 
         esp_driver_gpio esp_driver_spi esp_timer
-        
+        AppConfig AppESPWrap AppUtils AppFonts P16Com LCD32
 )
 
 target_include_directories(${COMPONENT_TARGET}
     PUBLIC
     ../AppCore
-    # ../AppComponents
+    ../AppComponents
     ../AppESPWrap
     ../AppFonts
     ../AppUtils

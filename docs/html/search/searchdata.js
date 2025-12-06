@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
   0: "02_abcdefghilmnoprstuwxy",
-  1: "_gp",
+  1: "gp",
   2: "abcdefgloprst",
-  3: "adgimps",
-  4: "_abcdfghlmoprwxy",
-  5: "_dfgps",
+  3: "adgilmps",
+  4: "bcdfghlmoprswxy",
+  5: "dfgps",
   6: "dep",
   7: "fps",
   8: "_abcdefgilmnprstw",

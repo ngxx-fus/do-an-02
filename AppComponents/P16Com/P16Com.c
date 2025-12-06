@@ -1,20 +1,18 @@
 /**
  * @file P16Com.c
  * @brief 16-bit Parallel Communication Driver Implementation
- * @details Implements "Safe-Mode" bus handling: Data bus is always kept as INPUT 
- * unless a WRITE operation is strictly performing.
  * @author Nguyen Thanh Phu
  */
 
 #include "P16Com.h"
 
-/// @brief Allocates a new P16ComPin_t object
-P16ComPin_t * P16ComNew(){
+/// @brief Allocates a new P16Dev_t object
+P16Dev_t * P16ComNew(){
     /// Allocate memory
-    P16ComPin_t * devPtr = (P16ComPin_t *) malloc(sizeof(P16ComPin_t));
+    P16Dev_t * devPtr = (P16Dev_t *) malloc(sizeof(P16Dev_t));
     
     if (devPtr == NULL) {
-        P16Err("P16ComNew: Malloc failed!");
+        P16Err("[P16ComNew] Malloc failed!");
         return NULL;
     }
 
@@ -27,59 +25,157 @@ P16ComPin_t * P16ComNew(){
     }
     /// Preset status to uninitialized
     devPtr->StatusFlag = 0;
+    devPtr->CtlIOMask = 0;
+    devPtr->DatIOMask = 0;
     
     return devPtr;
 }
 
+/// @brief Deallocate memory for P16Dev_t object
+void P16Delete(P16Dev_t * Dev){
+    if(Dev != NULL){
+        free(Dev);
+    }
+}
+
+/// @brief Configure Control pins mapping and calculate IO Masks
+DefaultRet_t P16ComConfigCtl(P16Dev_t * Dev, const Pin_t * CtlPins){
+    P16Entry("P16ComConfigCtl(%p, %p)", Dev, CtlPins);
+
+    if(IsNull(Dev) || IsNull(CtlPins)){
+        P16ReturnWithLog(STAT_ERR_NULL, "P16ComConfigCtl() : STAT_ERR_NULL");
+    }
+
+    /// Configure and Mask Control Pins
+    Dev->CtlIOMask = 0;
+    REPN(i, P16COM_CTL_PIN_NUM){
+        if(IsStandardPin(CtlPins[i])){
+            Dev->CtlPinArr[i] = CtlPins[i];
+            Dev->CtlIOMask |= Mask64(CtlPins[i]);
+        } else {
+            P16Err("[P16ComConfigCtl] Invalid Control Pin at index %d", i);
+            P16ReturnWithLog(STAT_ERR_INVALID_ARG, "P16ComConfigCtl() : STAT_ERR_INVALID_ARG");
+        }
+    }
+    
+    P16ReturnWithLog(STAT_OKE, "P16ComConfigCtl() : STAT_OKE");
+}
+
+/// @brief (Private) Builds the lookup tables for GPIO masks to accelerate write operations.
+/// @param Dev (P16Dev_t *) Pointer to the P16Dev_t object.
+static void __P16ComBuildLuts(P16Dev_t * Dev) {
+    P16Log("[__P16ComBuildLuts] Building mask lookup tables...");
+    
+    // Low byte LUT for D0-D7
+    for (uint32_t i = 0; i < 256; i++) {
+        uint64_t set_mask = 0;
+        uint64_t clr_mask = 0;
+        for (uint32_t bit = 0; bit < 8; bit++) {
+            if ((i >> bit) & 1) {
+                set_mask |= (1ULL << Dev->DatPinArr[bit]);
+            } else {
+                clr_mask |= (1ULL << Dev->DatPinArr[bit]);
+            }
+        }
+        Dev->LowByteLut[i].set = set_mask;
+        Dev->LowByteLut[i].clr = clr_mask;
+    }
+
+    // High byte LUT for D8-D15
+    for (uint32_t i = 0; i < 256; i++) {
+        uint64_t set_mask = 0;
+        uint64_t clr_mask = 0;
+        for (uint32_t bit = 0; bit < 8; bit++) {
+            if ((i >> bit) & 1) {
+                set_mask |= (1ULL << Dev->DatPinArr[bit + 8]);
+            } else {
+                clr_mask |= (1ULL << Dev->DatPinArr[bit + 8]);
+            }
+        }
+        Dev->HighByteLut[i].set = set_mask;
+        Dev->HighByteLut[i].clr = clr_mask;
+    }
+    P16Log("[__P16ComBuildLuts] LUTs built successfully.");
+}
+
+/// @brief Configure Data pins mapping and calculate IO Masks
+DefaultRet_t P16ComConfigDat(P16Dev_t * Dev, const Pin_t * DatPins){
+    P16Entry("P16ComConfigDat(%p, %p)", Dev, DatPins);
+
+    if(IsNull(Dev) || IsNull(DatPins)){
+        P16ReturnWithLog(STAT_ERR_NULL, "P16ComConfigDat() : STAT_ERR_NULL");
+    }
+
+    /// Configure and Mask Data Pins
+    Dev->DatIOMask = 0;
+    REPN(i, P16COM_DAT_PIN_NUM){
+        if(IsStandardPin(DatPins[i])){
+            Dev->DatPinArr[i] = DatPins[i];
+            Dev->DatIOMask |= Mask64(DatPins[i]);
+        } else {
+            P16Err("[P16ComConfigDat] Invalid Data Pin at index %d", i);
+            P16ReturnWithLog(STAT_ERR_INVALID_ARG, "P16ComConfigDat() : STAT_ERR_INVALID_ARG");
+        }
+    }
+
+    // Build lookup tables for fast writes
+    __P16ComBuildLuts(Dev);
+
+    P16ReturnWithLog(STAT_OKE, "P16ComConfigDat() : STAT_OKE");
+}
+
 /// @brief Initialize the driver GPIOs and Flags
-DefaultRet_t P16ComInit(P16ComPin_t * Dev){
+DefaultRet_t P16ComInit(P16Dev_t * Dev){
     P16Entry("P16ComInit(%p)", Dev);
     
-    if(Dev == NULL) {
-        P16ReturnWithLog(STAT_ERR_NULL, "P16ComInit: Device pointer is NULL");
+    if(IsNull(Dev)) {
+        P16ReturnWithLog(STAT_ERR_NULL, "P16ComInit() : STAT_ERR_NULL");
     }
 
-    uint64_t IOMask = 0;
-    
-    /// 1. Loop for DATA pins configuration
-    REPN(i, P16COM_DAT_PIN_NUM){
-        if(IsStandardPin(Dev->DatPinArr[i])){
-            IOMask |= Mask64(Dev->DatPinArr[i]);
-        }else{
-            P16Err("[P16ComInit] Data pin index %d (GPIO %d) is not a Standard pin!", i, Dev->DatPinArr[i]);
-            P16ReturnWithLog(STAT_ERR_INIT_FAILED, "P16ComInit: Invalid Data Pin");
-        }
+    /// 1. Configure DATA pins
+    /// @note Use pre-calculated DatIOMask for speed and sync
+    if(Dev->DatIOMask == 0){
+        P16Err("[P16ComInit] DatIOMask is empty! Run Config first?");
+        P16ReturnWithLog(STAT_ERR_INIT_FAILED, "P16ComInit() : STAT_ERR_INIT_FAILED");
     }
-    /// @note SAFETY: Default state of Data Bus is INPUT (High Impedance)
-    IOConfigAsInput(IOMask, -1, -1); 
 
-    IOMask = 0;
-    /// 2. Loop for CONTROL pins configuration
-    REPN(i, P16COM_CTL_PIN_NUM){
-        if(IsStandardPin(Dev->CtlPinArr[i])){
-            IOMask |= Mask64(Dev->CtlPinArr[i]);
-        }else{
-            P16Err("[P16ComInit] Control pin index %d (GPIO %d) is not a Standard pin!", i, Dev->CtlPinArr[i]);
-            P16ReturnWithLog(STAT_ERR_INIT_FAILED, "P16ComInit: Invalid Control Pin");
-        }
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 1)
+        /// @note Normal state is OUTPUT (optimized for write)
+        IOConfigAsOutput(Dev->DatIOMask, -1, -1);
+    #else
+        /// @note Normal state is INPUT (Safe Mode / High-Z)
+        IOConfigAsInput(Dev->DatIOMask, -1, -1);
+    #endif
+
+    /// 2. Configure CONTROL pins
+    if(Dev->CtlIOMask == 0){
+        P16Err("[P16ComInit] CtlIOMask is empty! Run Config first?");
+        P16ReturnWithLog(STAT_ERR_INIT_FAILED, "P16ComInit() : STAT_ERR_INIT_FAILED");
     }
+
     /// Set Control pins to OUTPUT (Push-Pull)
-    IOConfigAsOutput(IOMask, -1, -1);
+    IOConfigAsOutput(Dev->CtlIOMask, -1, -1);
     
     /// Set Control pins to IDLE state (High for active-low signals)
-    IOStandardSet(IOMask);
+    IOStandardSet(Dev->CtlIOMask);
 
     /// 3. Mark as initialized 
     Dev->StatusFlag |= P16COM_INITIALIZED;
     
-    P16ReturnWithLog(STAT_OKE, "P16ComInit: STAT_OKE");
+    P16ReturnWithLog(STAT_OKE, "P16ComInit() : STAT_OKE");
+}
+
+/// @brief Re-initializes the driver based on existing configuration
+DefaultRet_t P16ComReConfig(P16Dev_t * Dev){
+    P16Entry("P16ComReConfig(%p)", Dev);
+    return P16ComInit(Dev);
 }
 
 /// @brief Generate a hard reset pulse
-void P16ComMakeReset(P16ComPin_t * Dev){
+void P16ComMakeReset(P16Dev_t * Dev){
     #if (P16COM_INIT_CHECK_EN == 1)
         if( !((Dev->StatusFlag) & P16COM_INITIALIZED) ){
-            P16Err("P16ComMakeReset: Device not initialized!");
+            P16Err("[P16ComMakeReset] Device not initialized!");
             return;
         }
     #endif
@@ -92,71 +188,81 @@ void P16ComMakeReset(P16ComPin_t * Dev){
 }
 
 /// @brief Write a single word to the bus
-void P16ComWrite(P16ComPin_t * Dev, P16Data_t Data){
+void P16ComWrite(P16Dev_t * Dev, P16Data_t Data){
 
     #if (P16COM_INIT_CHECK_EN == 1)
         if( !((Dev->StatusFlag) & P16COM_INITIALIZED) ){
-            P16Err("P16ComWrite: Device not initialized!");
+            P16Err("[P16ComWrite] Device not initialized!");
             return;
         }
     #endif
 
-    /// 1. Prepare Mask for Data Pins
-    uint64_t dataMask = 0;
-    REPN(i, 16) { dataMask |= Mask64(Dev->DatPinArr[i]); }
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+        /// Switch to OUTPUT using pre-calculated mask
+        IOConfigAsOutput(Dev->DatIOMask, -1, -1);
+    #endif
 
-    /// 2. SWITCH TO OUTPUT (Push-Pull) just for writing
-    IOConfigAsOutput(dataMask, -1, -1);
-
-    /// 3. Calculate Bit Masks
+    /// Calculate Bit Masks
     uint32_t MaskSet = 0, MaskClr = 0;
     REPN(i, 16){
         (Data & (1 << i)) ? 
         (MaskSet |= Mask32(Dev->DatPinArr[i])) :
         (MaskClr |= Mask32(Dev->DatPinArr[i])) ;
     }
+    /// Use pre-calculated LUTs for high-speed mask generation
+    uint8_t low_byte = Data & 0xFF;
+    uint8_t high_byte = (Data >> 8) & 0xFF;
 
-    /// 4. Drive Data to Pins
+    uint64_t MaskSet = Dev->LowByteLut[low_byte].set | Dev->HighByteLut[high_byte].set;
+    uint64_t MaskClr = Dev->LowByteLut[low_byte].clr | Dev->HighByteLut[high_byte].clr;
+
+    /// Drive Data to Pins
     IOStandardSet(MaskSet);
     IOStandardClr(MaskClr);
 
-    /// 5. Strobe Write (Low -> High)
-    P16SetLowWritePin(Dev);
-    P16BlockingDelay(P16HalfClockCycle);
-    P16SetHighWritePin(Dev);
-    P16BlockingDelay(P16HalfClockCycle);
+    /// Strobe Write
+    P16MakeWritePulse(Dev);
 
-    /// 6. SAFETY: Switch back to INPUT (High-Z) immediately
-    IOConfigAsInput(dataMask, -1, -1);
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+        /// Switch back to INPUT (Safe Mode)
+        IOConfigAsInput(Dev->DatIOMask, -1, -1);
+    #endif
 }
 
 /// @brief Write a block of data to the bus (Burst Write)
-void P16ComWriteArray(P16ComPin_t * Dev, P16Data_t * DataArr, P16Size_t Size){
+void P16ComWriteArray(P16Dev_t * Dev, P16Data_t * DataArr, P16Size_t Size){
 
     P16Entry("P16ComWriteArray(%p, %p, %d)", Dev, DataArr, Size);
 
     #if (P16COM_INIT_CHECK_EN == 1)
         if( !((Dev->StatusFlag) & P16COM_INITIALIZED) ){
-            P16Err("P16ComWriteArray: Device not initialized!");
+            P16Err("[P16ComWriteArray] Device not initialized!");
             return;
         }
     #endif
 
     if(IsNull(DataArr) || IsNotPos(Size)){
-        P16Err("DataArr is NULL or Size not valid!");
+        P16Err("[P16ComWriteArray] DataArr is NULL or Size not valid!");
         return;
     }
 
-    /// 1. Prepare Mask
-    uint64_t dataMask = 0;
-    REPN(i, 16) { dataMask |= Mask64(Dev->DatPinArr[i]); }
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+        /// Switch to OUTPUT ONCE for the whole burst
+        IOConfigAsOutput(Dev->DatIOMask, -1, -1);
+    #endif
 
-    /// 2. SWITCH TO OUTPUT (Push-Pull) ONCE for the whole burst
-    IOConfigAsOutput(dataMask, -1, -1);
+    uint8_t low_byte, high_byte;
+    uint64_t MaskSet, MaskClr;
 
     REPN(j, Size){
         P16Data_t currentData = DataArr[j];
         uint32_t MaskSet = 0, MaskClr = 0;
+        
+        /// Use pre-calculated LUTs for high-speed mask generation
+        low_byte = currentData & 0xFF;
+        high_byte = (currentData >> 8) & 0xFF;
+        MaskSet = Dev->LowByteLut[low_byte].set | Dev->HighByteLut[high_byte].set;
+        MaskClr = Dev->LowByteLut[low_byte].clr | Dev->HighByteLut[high_byte].clr;
 
         /// Map bits
         REPN(i, 16){
@@ -166,43 +272,41 @@ void P16ComWriteArray(P16ComPin_t * Dev, P16Data_t * DataArr, P16Size_t Size){
         }
 
         /// Drive Data
+        /// Drive Data to Pins
         IOStandardSet(MaskSet);
         IOStandardClr(MaskClr);
 
         /// Strobe Write
-        P16SetLowWritePin(Dev);
-        P16BlockingDelay(P16HalfClockCycle);
-        P16SetHighWritePin(Dev);
-        P16BlockingDelay(P16HalfClockCycle);
+        P16MakeWritePulse(Dev);
     }
     
-    /// 3. SAFETY: Switch back to INPUT (High-Z) after burst finishes
-    IOConfigAsInput(dataMask, -1, -1);
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 0)
+        /// Switch back to INPUT
+        IOConfigAsInput(Dev->DatIOMask, -1, -1);
+    #endif
 
-    P16Exit("P16ComWriteArray: Done");
+    P16Exit("P16ComWriteArray() : Done");
 }
 
 /// @brief Read a single word from the bus
-P16Data_t P16ComRead(P16ComPin_t * Dev){
+P16Data_t P16ComRead(P16Dev_t * Dev){
     #if (P16COM_INIT_CHECK_EN == 1)
         if( !((Dev->StatusFlag) & P16COM_INITIALIZED) ){
-            P16Err("P16ComRead: Device not initialized!");
+            P16Err("[P16ComRead] Device not initialized!");
             return 0;
         }
     #endif
 
-    /// @note Pins are already INPUT by default/after write, 
-    /// but ensuring it here is safe practice (or can be removed for speed).
-    /* uint64_t dataMask = 0;
-    REPN(i, 16) { dataMask |= Mask64(Dev->DatPinArr[i]); }
-    IOConfigAsInput(dataMask, -1, -1);
-    */
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 1)
+        /// Switch Data Bus to INPUT for reading
+        IOConfigAsInput(Dev->DatIOMask, -1, -1);
+    #endif
 
-    /// 1. Activate Read Strobe
+    /// Activate Read Strobe
     P16SetLowReadPin(Dev);
     P16BlockingDelay(P16HalfClockCycle);
 
-    /// 2. Sample Data
+    /// Sample Data
     uint64_t portState = IOStandardGet();
     uint16_t result = 0;
     
@@ -212,30 +316,38 @@ P16Data_t P16ComRead(P16ComPin_t * Dev){
         }
     }
 
-    /// 3. Deactivate Read Strobe
+    /// Deactivate Read Strobe
     P16SetHighReadPin(Dev);
     P16BlockingDelay(P16HalfClockCycle);
+
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 1)
+        /// Switch back to OUTPUT (Normal State)
+        IOConfigAsOutput(Dev->DatIOMask, -1, -1);
+    #endif
 
     return result;
 }
 
 /// @brief Read a block of data from the bus (Burst Read)
-void P16ComReadArray(P16ComPin_t * Dev, P16Data_t * pBuff, P16Size_t Size){
+void P16ComReadArray(P16Dev_t * Dev, P16Data_t * pBuff, P16Size_t Size){
     P16Entry("P16ComReadArray(%p, %p, %d)", Dev, pBuff, Size);
 
     #if (P16COM_INIT_CHECK_EN == 1)
         if( !((Dev->StatusFlag) & P16COM_INITIALIZED) ){
-            P16Err("P16ComReadArray: Device not initialized!");
+            P16Err("[P16ComReadArray] Device not initialized!");
             return;
         }
     #endif
 
     if(IsNull(pBuff) || IsNotPos(Size)){
-        P16Err("Buffer is NULL or Size not valid!");
+        P16Err("[P16ComReadArray] Buffer is NULL or Size not valid!");
         return;
     }
 
-    /// @note Pins are assumed to be INPUT (Safe state)
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 1)
+        /// Switch Data Bus to INPUT for reading
+        IOConfigAsInput(Dev->DatIOMask, -1, -1);
+    #endif
 
     REPN(j, Size){
         P16SetLowReadPin(Dev);
@@ -254,5 +366,10 @@ void P16ComReadArray(P16ComPin_t * Dev, P16Data_t * pBuff, P16Size_t Size){
         P16BlockingDelay(P16HalfClockCycle);
     }
     
-    P16Exit("P16ComReadArray: Done");
+    #if (P16COM_DB_NORMAL_OUTPUT_EN == 1)
+        /// Switch back to OUTPUT
+        IOConfigAsOutput(Dev->DatIOMask, -1, -1);
+    #endif
+
+    P16Exit("P16ComReadArray() : Done");
 }

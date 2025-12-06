@@ -6,7 +6,7 @@ set(
     EXTRA_COMPONENT_DIRS        
     "Main"
     "AppCore"
-    # "AppComponents"
+    "AppComponents"
     "AppESPWrap"
     "AppFonts"
     "AppUtils"

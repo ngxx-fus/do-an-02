@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultret_5ft_0',['DefaultRet_t',['../ReturnType_8h.html#aefafe5c3042b19da85f8b613ad881e6f',1,'ReturnType.h']]]
+  ['flag_5ft_0',['Flag_t',['../FlagControl_8h.html#a83f5cbba84b12a6bca6ff95681dab7fa',1,'FlagControl.h']]]
 ];

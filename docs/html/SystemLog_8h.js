@@ -7,5 +7,6 @@ var SystemLog_8h =
     [ "SYSTEM_LOG_EXIT_L1_EN", "SystemLog_8h.html#a7a42003530299820f917072164dc9f82", null ],
     [ "SYSTEM_LOG_EXIT_L2_EN", "SystemLog_8h.html#ac02289778c67f77ad897dd8a9b836378", null ],
     [ "SYSTEM_LOG_L1_EN", "SystemLog_8h.html#ad41aae3e022ddeb7ffeaccbd12580d80", null ],
-    [ "SYSTEM_LOG_L2_EN", "SystemLog_8h.html#a90f570d7013f6852aeb8443446691e82", null ]
+    [ "SYSTEM_LOG_L2_EN", "SystemLog_8h.html#a90f570d7013f6852aeb8443446691e82", null ],
+    [ "SYSTEM_SAFE_THREAD_LOG_EN", "SystemLog_8h.html#ac7fbba0deb617cfc6b56e8685ace39bd", null ]
 ];

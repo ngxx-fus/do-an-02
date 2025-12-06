@@ -1,0 +1,9 @@
+<map id="IOConfigAsInput" name="IOConfigAsInput">
+<area shape="rect" id="Node000001" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="199,57,324,85"/>
+<area shape="rect" id="Node000002" href="$P16Com_8c.html#aa85ad7bc0745c420c81f31d88236815b" title="Initialize the driver GPIOs and Flags." alt="" coords="30,5,126,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,54,126,35,126,30,198,51"/>
+<area shape="rect" id="Node000003" href="$P16Com_8c.html#ace413f31cfedde91c88258a2a68bb619" title="Write a single word to the bus." alt="" coords="23,57,133,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,72,134,74,133,69,186,70"/>
+<area shape="rect" id="Node000004" href="$P16Com_8c.html#ab1b4ce0687b560b761338a6706f5a865" title="Write a block of data to the bus (Burst Write)" alt="" coords="5,109,151,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,89,130,111,129,106,193,90"/>
+</map>

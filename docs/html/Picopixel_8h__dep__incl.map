@@ -1,7 +1,9 @@
 <map id="AppFonts/localFonts/Picopixel.h" name="AppFonts/localFonts/Picopixel.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,157,50"/>
-<area shape="rect" id="Node000002" href="$AppFont_8h.html" title=" " alt="" coords="6,98,156,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,63,84,98,78,97,80,68"/>
-<area shape="rect" id="Node000003" href="$AppFont_8c.html" title=" " alt="" coords="6,174,156,201"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,140,84,174,78,172,79,143"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,5,339,50"/>
+<area shape="rect" id="Node000002" href="$AppFont_8h.html" title=" " alt="" coords="188,98,338,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,64,266,99,261,96,262,68"/>
+<area shape="rect" id="Node000003" href="$ComponentCommon_8h.html" title=" " alt="" coords="5,174,284,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,133,167,176,164,171,227,135"/>
+<area shape="rect" id="Node000004" href="$AppFont_8c.html" title=" " alt="" coords="307,174,456,201"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,131,363,173,358,173,296,137"/>
 </map>

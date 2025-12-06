@@ -107,14 +107,28 @@ $(function(){initNavTree('Application_8h_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    #include &quot;<a class="code" href="AppCore_2AnalyzerMaster_2All_8h.html">../AppCore/AnalyzerMaster/All.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="Application_8h.html#aee058a67d86c80ab90c17f791dbe4c70">   22</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Application_8h.html#aee058a67d86c80ab90c17f791dbe4c70">Log1</a>(<span class="keywordtype">void</span> * pv){</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_define" href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a>(<span class="stringliteral">&quot;Log1&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">while</span> (1){</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_define" href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a>(<span class="stringliteral">&quot;[Log1    ] Running...&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(103);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAppConfig_2All_8h_html"><div class="ttname"><a href="AppConfig_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppCore_2AnalyzerMaster_2All_8h_html"><div class="ttname"><a href="AppCore_2AnalyzerMaster_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppESPWrap_2All_8h_html"><div class="ttname"><a href="AppESPWrap_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppUtils_2All_8h_html"><div class="ttname"><a href="AppUtils_2All_8h.html">All.h</a></div></div>
+<div class="ttc" id="aApplication_8h_html_aee058a67d86c80ab90c17f791dbe4c70"><div class="ttname"><a href="Application_8h.html#aee058a67d86c80ab90c17f791dbe4c70">Log1</a></div><div class="ttdeci">void Log1(void *pv)</div><div class="ttdoc">Include project config.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">Application.h:22</a></div></div>
+<div class="ttc" id="aESPFreeRTOSWrapper_8h_html_ad64c5f32aa7747ba40b48550dc4d2cdf"><div class="ttname"><a href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a></div><div class="ttdeci">#define DelayMs(ms)</div><div class="ttdoc">Delay task for X milliseconds (Blocking)</div><div class="ttdef"><b>Definition</b> <a href="ESPFreeRTOSWrapper_8h_source.html#l00033">ESPFreeRTOSWrapper.h:33</a></div></div>
+<div class="ttc" id="aESPLogWrapper_8h_html_a414aeb481f289833090271e150b3dc94"><div class="ttname"><a href="ESPLogWrapper_8h.html#a414aeb481f289833090271e150b3dc94">SysEntry</a></div><div class="ttdeci">#define SysEntry(fmt,...)</div><div class="ttdoc">ENTRY/EXIT TRACES.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00134">ESPLogWrapper.h:134</a></div></div>
+<div class="ttc" id="aESPLogWrapper_8h_html_ad74cd22f79ba53917ed27ee13f6499dc"><div class="ttname"><a href="ESPLogWrapper_8h.html#ad74cd22f79ba53917ed27ee13f6499dc">SysLog</a></div><div class="ttdeci">#define SysLog(fmt,...)</div><div class="ttdoc">LEVEL 1 LOGGING.</div><div class="ttdef"><b>Definition</b> <a href="ESPLogWrapper_8h_source.html#l00113">ESPLogWrapper.h:113</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

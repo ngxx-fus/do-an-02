@@ -124,21 +124,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ESPLogWrapper_8h__dep__incl.png" border="0" usemap="#aAppESPWrap_2ESPLogWrapper_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppESPWrap_2ESPLogWrapper_8hdep" id="aAppESPWrap_2ESPLogWrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="217,5,438,33"/>
-<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="259,81,396,109"/>
-<area shape="poly" title=" " alt="" coords="329,46,330,81,325,80,326,51"/>
-<area shape="rect" href="Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="5,157,202,201"/>
-<area shape="poly" title=" " alt="" coords="276,116,164,158,162,154,279,112"/>
-<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="226,165,429,193"/>
-<area shape="poly" title=" " alt="" coords="329,122,330,166,325,164,326,127"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="452,165,595,193"/>
-<area shape="poly" title=" " alt="" coords="373,112,495,164,490,165,373,118"/>
-<area shape="rect" href="Parallel16_8h.html" title=" " alt="" coords="5,249,202,294"/>
-<area shape="poly" title=" " alt="" coords="104,214,106,250,101,249,103,219"/>
-<area shape="rect" href="Parallel16_8c.html" title=" " alt="" coords="5,342,202,387"/>
-<area shape="poly" title=" " alt="" coords="105,308,106,343,101,341,102,312"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="453,258,594,286"/>
-<area shape="poly" title=" " alt="" coords="525,206,526,259,521,256,522,210"/>
+<area shape="rect" title=" " alt="" coords="399,5,620,33"/>
+<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="441,81,578,109"/>
+<area shape="poly" title=" " alt="" coords="511,47,512,82,508,79,508,51"/>
+<area shape="rect" href="ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
+<area shape="poly" title=" " alt="" coords="435,115,204,167,202,162,438,110"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
+<area shape="poly" title=" " alt="" coords="482,117,431,158,428,154,478,120"/>
+<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="518,165,720,193"/>
+<area shape="poly" title=" " alt="" coords="540,116,604,165,599,164,539,121"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="744,165,886,193"/>
+<area shape="poly" title=" " alt="" coords="574,111,769,164,764,165,573,116"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
+<area shape="poly" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="744,258,886,286"/>
+<area shape="poly" title=" " alt="" coords="817,206,817,259,813,256,813,210"/>
 </map>
 </div>
 </div>
@@ -149,8 +149,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ac088e53bce58984c39bb79719a1b4a26" id="r_ac088e53bce58984c39bb79719a1b4a26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac088e53bce58984c39bb79719a1b4a26">SYSTEM_WARN_EN</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:ac088e53bce58984c39bb79719a1b4a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 system APIs.  <br /></td></tr>
 <tr class="memitem:a5638facf27379c49a05f2d7541f1dd45" id="r_a5638facf27379c49a05f2d7541f1dd45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5638facf27379c49a05f2d7541f1dd45">SYSTEM_INFO_EN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ac816cf6584a3363f78b9a96120e25507" id="r_ac816cf6584a3363f78b9a96120e25507"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac816cf6584a3363f78b9a96120e25507">CoreLog</a>&#160;&#160;&#160;ets_printf</td></tr>
 <tr class="memitem:ab3a5bf5f559dc2842497793a1edc2f4f" id="r_ab3a5bf5f559dc2842497793a1edc2f4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a5bf5f559dc2842497793a1edc2f4f">SysErr</a>(fmt, ...)</td></tr>
-<tr class="memdesc:ab3a5bf5f559dc2842497793a1edc2f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ERROR LOGGING.  <br /></td></tr>
+<tr class="memdesc:ab3a5bf5f559dc2842497793a1edc2f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(SYSTEM_SAFE_THREAD_LOG_EN == 1)  <br /></td></tr>
 <tr class="memitem:a39024e3b68cdb6632a538041c45c44ab" id="r_a39024e3b68cdb6632a538041c45c44ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39024e3b68cdb6632a538041c45c44ab">SysWarn</a>(fmt, ...)</td></tr>
 <tr class="memdesc:a39024e3b68cdb6632a538041c45c44ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">WARNING LOGGING.  <br /></td></tr>
 <tr class="memitem:a01a33fc9162c50fbf3e184d1e658d5c8" id="r_a01a33fc9162c50fbf3e184d1e658d5c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a33fc9162c50fbf3e184d1e658d5c8">SysInfo</a>(fmt, ...)</td></tr>
@@ -168,6 +169,22 @@ Macros</h2></td></tr>
 <tr class="memitem:acba55eaa5e6d5335ecccf757ab960a9c" id="r_acba55eaa5e6d5335ecccf757ab960a9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acba55eaa5e6d5335ecccf757ab960a9c">SysExitVer</a>(fmt, ...)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="ac816cf6584a3363f78b9a96120e25507" name="ac816cf6584a3363f78b9a96120e25507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac816cf6584a3363f78b9a96120e25507">&#9670;&#160;</a></span>CoreLog</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CoreLog&#160;&#160;&#160;ets_printf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00072">72</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+
+</div>
+</div>
 <a id="a414aeb481f289833090271e150b3dc94" name="a414aeb481f289833090271e150b3dc94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a414aeb481f289833090271e150b3dc94">&#9670;&#160;</a></span>SysEntry</h2>
 
@@ -189,9 +206,9 @@ Macros</h2></td></tr>
 
 <p>ENTRY/EXIT TRACES. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00111">111</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00134">134</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>, and <a class="el" href="Application_8h_source.html#l00022">Log1()</a>.</p>
 
 </div>
 </div>
@@ -214,7 +231,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00118">118</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00141">141</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -237,9 +254,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ERROR LOGGING. </p>
+<p>(SYSTEM_SAFE_THREAD_LOG_EN == 1) </p>
+<p>ERROR LOGGING </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00063">63</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00086">86</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +280,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00125">125</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00148">148</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -285,7 +303,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00132">132</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00155">155</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +328,7 @@ Macros</h2></td></tr>
 
 <p>INFO LOGGING. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00079">79</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00102">102</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -335,9 +353,9 @@ Macros</h2></td></tr>
 
 <p>LEVEL 1 LOGGING. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00090">90</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00113">113</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>, and <a class="el" href="Application_8h_source.html#l00022">Log1()</a>.</p>
 
 </div>
 </div>
@@ -362,7 +380,7 @@ Macros</h2></td></tr>
 
 <p>LEVEL 2 LOGGING (VERBOSE) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00102">102</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00125">125</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -390,7 +408,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00091">91</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00114">114</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +436,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00103">103</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00126">126</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -451,7 +469,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ESP32 system APIs. </p>
-<p>Standard input/output definitions Macros for variable arguments ESP32 timer functions (esp_timer_get_time) Auto-Config Added standalone control for Warn/Info </p>
+<p>Standard input/output definitions Macros for variable arguments ESP32 timer functions (esp_timer_get_time) This help the lib more readable! Auto-Config Added standalone control for Warn/Info </p>
 
 <p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00033">33</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
@@ -478,7 +496,7 @@ Macros</h2></td></tr>
 
 <p>WARNING LOGGING. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00071">71</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPLogWrapper_8h_source.html#l00094">94</a> of file <a class="el" href="ESPLogWrapper_8h_source.html">ESPLogWrapper.h</a>.</p>
 
 </div>
 </div>

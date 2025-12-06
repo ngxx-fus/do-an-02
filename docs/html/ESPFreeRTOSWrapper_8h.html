@@ -114,21 +114,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ESPFreeRTOSWrapper_8h__dep__incl.png" border="0" usemap="#aAppESPWrap_2ESPFreeRTOSWrapper_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppESPWrap_2ESPFreeRTOSWrapper_8hdep" id="aAppESPWrap_2ESPFreeRTOSWrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="197,5,458,33"/>
-<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="259,81,396,109"/>
-<area shape="poly" title=" " alt="" coords="329,46,330,81,325,80,326,51"/>
-<area shape="rect" href="Parallel16Utils_8h.html" title="Utility macros for GPIO control and Logging in Parallel16 driver." alt="" coords="5,157,202,201"/>
-<area shape="poly" title=" " alt="" coords="276,116,164,158,162,154,279,112"/>
-<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="226,165,429,193"/>
-<area shape="poly" title=" " alt="" coords="329,122,330,166,325,164,326,127"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="452,165,595,193"/>
-<area shape="poly" title=" " alt="" coords="373,112,495,164,490,165,373,118"/>
-<area shape="rect" href="Parallel16_8h.html" title=" " alt="" coords="5,249,202,294"/>
-<area shape="poly" title=" " alt="" coords="104,214,106,250,101,249,103,219"/>
-<area shape="rect" href="Parallel16_8c.html" title=" " alt="" coords="5,342,202,387"/>
-<area shape="poly" title=" " alt="" coords="105,308,106,343,101,341,102,312"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="453,258,594,286"/>
-<area shape="poly" title=" " alt="" coords="525,206,526,259,521,256,522,210"/>
+<area shape="rect" title=" " alt="" coords="380,5,640,33"/>
+<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="441,81,578,109"/>
+<area shape="poly" title=" " alt="" coords="511,47,512,82,508,79,508,51"/>
+<area shape="rect" href="ComponentCommon_8h.html" title=" " alt="" coords="5,165,284,193"/>
+<area shape="poly" title=" " alt="" coords="435,115,204,167,202,162,438,110"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="307,157,494,201"/>
+<area shape="poly" title=" " alt="" coords="482,117,431,158,428,154,478,120"/>
+<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="518,165,720,193"/>
+<area shape="poly" title=" " alt="" coords="540,116,604,165,599,164,539,121"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="744,165,886,193"/>
+<area shape="poly" title=" " alt="" coords="574,111,769,164,764,165,573,116"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="307,249,494,294"/>
+<area shape="poly" title=" " alt="" coords="402,215,403,251,398,248,399,219"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="744,258,886,286"/>
+<area shape="poly" title=" " alt="" coords="817,206,817,259,813,256,813,210"/>
 </map>
 </div>
 </div>
@@ -153,11 +153,11 @@ Macros</h2></td></tr>
 <tr class="memitem:a69787a571fd1cd6e881a7c4887e95ba4" id="r_a69787a571fd1cd6e881a7c4887e95ba4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69787a571fd1cd6e881a7c4887e95ba4">DeleteTask</a>(handle)</td></tr>
 <tr class="memdesc:a69787a571fd1cd6e881a7c4887e95ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a task (NULL for current task)  <br /></td></tr>
 <tr class="memitem:a3a57517e112d3d74ef5e3b4035f18a7d" id="r_a3a57517e112d3d74ef5e3b4035f18a7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a57517e112d3d74ef5e3b4035f18a7d">WaitForNotify</a>(val_ptr)</td></tr>
-<tr class="memdesc:a3a57517e112d3d74ef5e3b4035f18a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">TASK NOTIFICATION /////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a3a57517e112d3d74ef5e3b4035f18a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for notification (Block indefinitely)  <br /></td></tr>
 <tr class="memitem:a5e0a1875e5662871ec060b39366a0eca" id="r_a5e0a1875e5662871ec060b39366a0eca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0a1875e5662871ec060b39366a0eca">NotifyTask</a>(handle)</td></tr>
 <tr class="memdesc:a5e0a1875e5662871ec060b39366a0eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification to a task.  <br /></td></tr>
 <tr class="memitem:a701ede93d6060433e5a1d04e4a87c44e" id="r_a701ede93d6060433e5a1d04e4a87c44e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a701ede93d6060433e5a1d04e4a87c44e">CreateMutex</a>()</td></tr>
-<tr class="memdesc:a701ede93d6060433e5a1d04e4a87c44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MUTEX &amp; SEMAPHORE /////////////////////////////////////////////////////////.  <br /></td></tr>
+<tr class="memdesc:a701ede93d6060433e5a1d04e4a87c44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a standard Mutex.  <br /></td></tr>
 <tr class="memitem:af2daa07daced64b7fa39f15cbdd93fef" id="r_af2daa07daced64b7fa39f15cbdd93fef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2daa07daced64b7fa39f15cbdd93fef">MutexLock</a>(mutex)</td></tr>
 <tr class="memdesc:af2daa07daced64b7fa39f15cbdd93fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock Mutex (Block indefinitely until obtained)  <br /></td></tr>
 <tr class="memitem:a256635b8c596b8b90caaaf38bdfb541e" id="r_a256635b8c596b8b90caaaf38bdfb541e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a256635b8c596b8b90caaaf38bdfb541e">MutexUnlock</a>(mutex)</td></tr>
@@ -184,12 +184,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">xSemaphoreCreateMutex()</div>
 </div><!-- fragment -->
-<p>MUTEX &amp; SEMAPHORE /////////////////////////////////////////////////////////. </p>
-<p>Create a standard Mutex </p>
+<p>Create a standard Mutex. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00093">93</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Parallel16_8c_source.html#l00004">P16CreateDevice()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00089">89</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -305,6 +302,8 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   56</span><span class="preprocessor">#define CreateTaskCPU0(func, name, stack, param, prio, handle) \</span></div>
 <div class="line"><span class="lineno">   57</span><span class="preprocessor">    xTaskCreatePinnedToCore(func, name, stack, param, prio, handle, 0)</span></div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>.</p>
+
 </div>
 </div>
 <a id="a92175c48dd4a9816512524130bdfdab4" name="a92175c48dd4a9816512524130bdfdab4"></a>
@@ -448,6 +447,8 @@ Macros</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00033">33</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Application_8c_source.html#l00006">app_main()</a>, and <a class="el" href="Application_8h_source.html#l00022">Log1()</a>.</p>
+
 </div>
 </div>
 <a id="a97bf5bb414011225053f1a4f14b1a969" name="a97bf5bb414011225053f1a4f14b1a969"></a>
@@ -468,7 +469,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Delete Semaphore/Mutex. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00105">105</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00101">101</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +580,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Lock Mutex (Block indefinitely until obtained) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00096">96</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00092">92</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -605,7 +606,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Lock Mutex with Timeout (ms) - Returns pdTRUE if successful. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00102">102</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00098">98</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -627,7 +628,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Unlock Mutex. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00099">99</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00095">95</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +650,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Send notification to a task. </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00088">88</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00086">86</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
@@ -691,10 +692,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">ulTaskNotifyTake(pdTRUE, portMAX_DELAY)</div>
 </div><!-- fragment -->
-<p>TASK NOTIFICATION /////////////////////////////////////////////////////////. </p>
 <p>Wait for notification (Block indefinitely) </p>
 
-<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00085">85</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ESPFreeRTOSWrapper_8h_source.html#l00083">83</a> of file <a class="el" href="ESPFreeRTOSWrapper_8h_source.html">ESPFreeRTOSWrapper.h</a>.</p>
 
 </div>
 </div>
