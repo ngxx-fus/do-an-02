@@ -14,6 +14,7 @@ extern "C" {
 
 #include <rom/ets_sys.h>
 #include <esp_random.h>
+#include <esp_heap_caps.h>
 
 /// This help the lib more readable!
 #include "../AppConfig/All.h"
