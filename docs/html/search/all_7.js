@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['efirmwaretype_0',['eFirmwareType',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64',1,'FirmwareType.h']]],
-  ['en_5fdriver_5fp16_1',['EN_DRIVER_P16',['../Components_8h.html#a83de7ffbcce900eebfe4f202d47d6724',1,'Components.h']]],
-  ['en_5fdriverlcd_2',['EN_DRIVERLCD',['../Components_8h.html#a172dadcb50eaa536aaedd72f5de9ef67',1,'Components.h']]],
-  ['enable_3',['ENABLE',['../Components_8h.html#a514ad415fb6125ba296793df7d1a468a',1,'Components.h']]],
-  ['entercriticalsection_4',['EnterCriticalSection',['../ESPFreeRTOSWrapper_8h.html#ae690e06737374072c943878f3106ac9e',1,'ESPFreeRTOSWrapper.h']]],
-  ['esp_5ferr_5fconvert_5fen_5',['ESP_ERR_CONVERT_EN',['../ReturnType_8h.html#abcfae2c015b96d80549c9a7a70493497',1,'ReturnType.h']]],
-  ['espfreertoswrapper_2eh_6',['ESPFreeRTOSWrapper.h',['../ESPFreeRTOSWrapper_8h.html',1,'']]],
-  ['espgpiowrapper_2eh_7',['ESPGPIOWrapper.h',['../ESPGPIOWrapper_8h.html',1,'']]],
-  ['esplogwrapper_2eh_8',['ESPLogWrapper.h',['../ESPLogWrapper_8h.html',1,'']]],
-  ['exitcriticalsection_9',['ExitCriticalSection',['../ESPFreeRTOSWrapper_8h.html#a5340807f35806727998d77666a1c2d7c',1,'ESPFreeRTOSWrapper.h']]]
+  ['general_20system_20architecture_0',['General system architecture',['../index.html#autotoc_md3',1,'']]],
+  ['generaterandomnumber_1',['GenerateRandomNumber',['../AppUtils_8c.html#a1f3555c6e2d86c5b1c8fc4fb00dff6bf',1,'GenerateRandomNumber(uint32_t SeedInput):&#160;AppUtils.c'],['../Arithmetic_8h.html#a1f3555c6e2d86c5b1c8fc4fb00dff6bf',1,'GenerateRandomNumber(uint32_t SeedInput):&#160;AppUtils.c']]],
+  ['gfxfont_2',['GFXfont',['../structGFXfont.html',1,'GFXfont'],['../gfxfont_8h.html#a10c9f3d329292b0d1b19f3d81a4c584e',1,'GFXfont:&#160;gfxfont.h']]],
+  ['gfxfont_2eh_3',['gfxfont.h',['../gfxfont_8h.html',1,'']]],
+  ['gfxglyph_4',['GFXglyph',['../structGFXglyph.html',1,'GFXglyph'],['../gfxfont_8h.html#aab134cdc35ab83c11d153d826a8dfc5d',1,'GFXglyph:&#160;gfxfont.h']]],
+  ['glyph_5',['glyph',['../structGFXfont.html#af63d88fa053c9a634e86eab7c96db290',1,'GFXfont']]],
+  ['gpiosethigh_6',['GPIOSetHigh',['../ESPGPIOWrapper_8h.html#aca8c1c8aa525d4ab751ac4a780cdb07f',1,'ESPGPIOWrapper.h']]],
+  ['gpiosethigh1_7',['GPIOSetHigh1',['../ESPGPIOWrapper_8h.html#a668f2a83e30013ed0ece672fccd77067',1,'ESPGPIOWrapper.h']]],
+  ['gpiosetlow_8',['GPIOSetLow',['../ESPGPIOWrapper_8h.html#a89c52776931a333ef57ba87620e67c9c',1,'ESPGPIOWrapper.h']]],
+  ['gpiosetlow1_9',['GPIOSetLow1',['../ESPGPIOWrapper_8h.html#a0349652cd90ec394bd265aba4d40977d',1,'ESPGPIOWrapper.h']]]
 ];

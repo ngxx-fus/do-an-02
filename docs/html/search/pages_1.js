@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['2nd_20level_2002_20comdriver_0',['2nd-level | [02] comDriver',['../index.html#autotoc_md8',1,'']]],
-  ['2nd_20level_2006_20helper_1',['2nd-level | [06] helper',['../index.html#autotoc_md7',1,'']]],
-  ['2nd_20level_2007_20main_2',['2nd-level | [07] main',['../index.html#autotoc_md9',1,'']]]
+  ['component_0',['How to Add a New Component',['../index.html#autotoc_md17',1,'']]],
+  ['core_20principles_1',['Core Principles',['../index.html#autotoc_md5',1,'']]]
 ];

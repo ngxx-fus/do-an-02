@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['device_0',['About device',['../index.html#autotoc_md2',1,'']]]
+  ['general_20system_20architecture_0',['General system architecture',['../index.html#autotoc_md3',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['full_20working_20tree_0',['Full working-tree',['../index.html#autotoc_md10',1,'']]]
+  ['how_20to_20add_20a_20new_20component_0',['How to Add a New Component',['../index.html#autotoc_md17',1,'']]]
 ];

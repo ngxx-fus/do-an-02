@@ -1,26 +1,6 @@
 var searchData=
 [
-  ['madctl_5fbgr_0',['MADCTL_BGR',['../LCD32Cmds_8h.html#a659f0d6f0c258a3d91f882a59dfa76f5',1,'LCD32Cmds.h']]],
-  ['madctl_5fmh_1',['MADCTL_MH',['../LCD32Cmds_8h.html#a6f8b9fad1b5db52b70960b389056f0dd',1,'LCD32Cmds.h']]],
-  ['madctl_5fml_2',['MADCTL_ML',['../LCD32Cmds_8h.html#a9ecee6d3131d3b4f750b94d5766b998a',1,'LCD32Cmds.h']]],
-  ['madctl_5fmv_3',['MADCTL_MV',['../LCD32Cmds_8h.html#adc23a239d2b6976d53254ef4fc5d1713',1,'LCD32Cmds.h']]],
-  ['madctl_5fmx_4',['MADCTL_MX',['../LCD32Cmds_8h.html#a6d18ed48efb3186877a07d0e81155453',1,'LCD32Cmds.h']]],
-  ['madctl_5fmy_5',['MADCTL_MY',['../LCD32Cmds_8h.html#ab30e6bd24448245df1d60a3e1c4ddbdf',1,'LCD32Cmds.h']]],
-  ['main_6',['2nd-level | [07] main',['../index.html#autotoc_md9',1,'']]],
-  ['mainfont_7',['mainFont',['../AppFonts_2All_8h.html#aa3352223ab7490ff04749c433f3894ae',1,'mainFont:&#160;AppFont.c'],['../AppFont_8c.html#aa3352223ab7490ff04749c433f3894ae',1,'mainFont:&#160;AppFont.c']]],
-  ['mask16_8',['Mask16',['../BitOp_8h.html#a0ef86c4720e1a47a11d9e067ab05cac2',1,'BitOp.h']]],
-  ['mask32_9',['Mask32',['../BitOp_8h.html#ae6040a40026014a65607f4bc4063d2ff',1,'Mask32:&#160;BitOp.h'],['../FlagControl_8h.html#ae6040a40026014a65607f4bc4063d2ff',1,'Mask32:&#160;FlagControl.h']]],
-  ['mask64_10',['Mask64',['../BitOp_8h.html#af94bd76050db0d6b7592f17778c0ea0a',1,'BitOp.h']]],
-  ['mask8_11',['Mask8',['../BitOp_8h.html#a27597ab5312ec0cc5471577b7bf1a0b8',1,'BitOp.h']]],
-  ['masks16_12',['Masks16',['../BitOp_8h.html#a22521f8ce75ab74d24f5206ec22340f6',1,'BitOp.h']]],
-  ['masks32_13',['Masks32',['../BitOp_8h.html#a6eef96e68420d8c882cdaa8a9937e6d9',1,'BitOp.h']]],
-  ['masks64_14',['Masks64',['../BitOp_8h.html#aabd880b25b49ec6e77f654ff7c90a01f',1,'BitOp.h']]],
-  ['masks8_15',['Masks8',['../BitOp_8h.html#a36547ab0fb93524ef27865e8e5b485e0',1,'BitOp.h']]],
-  ['master_16',['master',['../BebasNeue__Bold23pt7b_8h.html#abcdd356c13070c55c659e2401ccf3166',1,'master:&#160;BebasNeue_Bold23pt7b.h'],['../FreeMono12pt7b_8h.html#a92a1cef8066a0bcabcbfc16ab8d20ae0',1,'master:&#160;FreeMono12pt7b.h'],['../FreeMono18pt7b_8h.html#a3e9e209e4c43869b49c292d3f1013b89',1,'master:&#160;FreeMono18pt7b.h'],['../FreeMono24pt7b_8h.html#a1f9e20c241e417313ed8f5507b6e223d',1,'master:&#160;FreeMono24pt7b.h'],['../FreeMono9pt7b_8h.html#ad864cd6b38321af49f395c4b8c08ce47',1,'master:&#160;FreeMono9pt7b.h'],['../FreeMonoBold24pt7b_8h.html#a464de4f1285d4dba786ea9464dcfb48a',1,'master:&#160;FreeMonoBold24pt7b.h'],['../FreeSansBold10pt7b_8h.html#a4cb7a7a72d1742f4c06ea675616a819b',1,'master:&#160;FreeSansBold10pt7b.h'],['../FreeSansBold12pt7b_8h.html#aaf11ddc37dc4590d1101b1edc0bb818e',1,'master:&#160;FreeSansBold12pt7b.h'],['../FreeSansBold18pt7b_8h.html#aa951a6c5ae5580e7053f9474bda5a5f3',1,'master:&#160;FreeSansBold18pt7b.h'],['../FreeSansBold24pt7b_8h.html#a78422443a6e9a7db9f5588c4b1efc011',1,'master:&#160;FreeSansBold24pt7b.h'],['../Org__01_8h.html#aef232cddb502687bfbae3f7f26b2db35',1,'master:&#160;Org_01.h'],['../BebasNeue__Bold23pt7b_8h.html#ac5862e914ab069f116c429432bb3d64b',1,'master(uint8_t *) BebasNeue_Bold23pt7bBitmaps:&#160;BebasNeue_Bold23pt7b.h'],['../FreeMono12pt7b_8h.html#aa6ff820bff1c326ad383286d8406aa5e',1,'master(uint8_t *) FreeMono12pt7bBitmaps:&#160;FreeMono12pt7b.h'],['../FreeMono18pt7b_8h.html#a693b544f58d2a1c555286c6209d4d1b7',1,'master(uint8_t *) FreeMono18pt7bBitmaps:&#160;FreeMono18pt7b.h'],['../FreeMono24pt7b_8h.html#a56cb5e0107eae0efc02157b018e4ffc9',1,'master(uint8_t *) FreeMono24pt7bBitmaps:&#160;FreeMono24pt7b.h'],['../FreeMono9pt7b_8h.html#af533cfe814270e6e72c403845ba26982',1,'master(uint8_t *) FreeMono9pt7bBitmaps:&#160;FreeMono9pt7b.h'],['../FreeMonoBold24pt7b_8h.html#ac4e43b1173afe091fef03083cee0d56e',1,'master(uint8_t *) FreeMonoBold24pt7bBitmaps:&#160;FreeMonoBold24pt7b.h'],['../FreeSansBold10pt7b_8h.html#ad569774bbd4b1bc4dd44edd8cb66bc36',1,'master(uint8_t *) FreeSansBold10pt7bBitmaps:&#160;FreeSansBold10pt7b.h'],['../FreeSansBold12pt7b_8h.html#a7f2150fba867ee40b7ca0cb0641300b8',1,'master(uint8_t *) FreeSansBold12pt7bBitmaps:&#160;FreeSansBold12pt7b.h'],['../FreeSansBold18pt7b_8h.html#abb2fe71f400d916024e3313b6806941a',1,'master(uint8_t *) FreeSansBold18pt7bBitmaps:&#160;FreeSansBold18pt7b.h'],['../FreeSansBold24pt7b_8h.html#abcfb3648dbe110a2dad59c2455de6e59',1,'master(uint8_t *) FreeSansBold24pt7bBitmaps:&#160;FreeSansBold24pt7b.h'],['../Org__01_8h.html#ab8d08b5cf5b05dd1d26d52a6c4b7d2b7',1,'master(uint8_t *) Org_01Bitmaps:&#160;Org_01.h']]],
-  ['max_17',['Max',['../Arithmetic_8h.html#a4886a8f966a69949cefc46a6a3468006',1,'Arithmetic.h']]],
-  ['min_18',['Min',['../Arithmetic_8h.html#a9e04209162ea72f9985338596262b657',1,'Arithmetic.h']]],
-  ['mstoticks_19',['MsToTicks',['../ESPFreeRTOSWrapper_8h.html#aacda6a16d966ef70ec2ceaae4c04c2d7',1,'ESPFreeRTOSWrapper.h']]],
-  ['mutexlock_20',['MutexLock',['../ESPFreeRTOSWrapper_8h.html#af2daa07daced64b7fa39f15cbdd93fef',1,'ESPFreeRTOSWrapper.h']]],
-  ['mutexlocktimeout_21',['MutexLockTimeout',['../ESPFreeRTOSWrapper_8h.html#a52b2b115f9ba62c61834f24e91cd35ef',1,'ESPFreeRTOSWrapper.h']]],
-  ['mutexunlock_22',['MutexUnlock',['../ESPFreeRTOSWrapper_8h.html#a256635b8c596b8b90caaaf38bdfb541e',1,'ESPFreeRTOSWrapper.h']]]
+  ['org_5f01_2eh_0',['Org_01.h',['../Org__01_8h.html',1,'']]],
+  ['org_5f01glyphs_1',['Org_01Glyphs',['../Org__01_8h.html#a4658ef92880a84ed9b8ca58a20bd144d',1,'Org_01.h']]],
+  ['orientation_2',['Orientation',['../structLCD32Dev__t.html#a35a92c9710375a6d9034de76f089c32b',1,'LCD32Dev_t']]]
 ];
