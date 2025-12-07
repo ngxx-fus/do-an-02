@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['analyzermastercmds_5fe_0',['AnalyzerMasterCmds_e',['../AnalyzerMaster_8h.html#a2619825a66610947491427a733da03dd',1,'AnalyzerMaster.h']]]
+  ['analyzercmds_5fe_0',['AnalyzerCmds_e',['../AnalyzerConfig_8h.html#af0da428d281312597b56db900241199b',1,'AnalyzerConfig.h']]]
 ];

@@ -1,5 +1,15 @@
 var DevicePinout_8h =
 [
+    [ "ANALYZER_MASTER_SPI_CS", "DevicePinout_8h.html#a527d25457f706755ea03de0e107d2927", null ],
+    [ "ANALYZER_MASTER_SPI_MISO", "DevicePinout_8h.html#a99c45088badafd27b716b757ce7dbe5d", null ],
+    [ "ANALYZER_MASTER_SPI_MOSI", "DevicePinout_8h.html#ab38cad09b5d32785e0fc62813bc3ed84", null ],
+    [ "ANALYZER_MASTER_SPI_SCLK", "DevicePinout_8h.html#a05566e4ade88254707b753f26c00e4ab", null ],
+    [ "ANALYZER_READER_PIN_READY", "DevicePinout_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668", null ],
+    [ "ANALYZER_READER_PIN_READY", "DevicePinout_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668", null ],
+    [ "ANALYZER_READER_SPI_CS", "DevicePinout_8h.html#a4139786f058f8367cc00bae7437c3748", null ],
+    [ "ANALYZER_READER_SPI_MISO", "DevicePinout_8h.html#aae5b0d47db01be3480ca97b5a5ac057b", null ],
+    [ "ANALYZER_READER_SPI_MOSI", "DevicePinout_8h.html#a8dae7b6cf9f2583e3cc54e90d669d732", null ],
+    [ "ANALYZER_READER_SPI_SCLK", "DevicePinout_8h.html#aee64a8be816565f3ac8a71d40bd2e03f", null ],
     [ "IsExtendedPin", "DevicePinout_8h.html#af537e89c649252460c811aafefe22bfc", null ],
     [ "IsStandardPin", "DevicePinout_8h.html#aa5e3fbc3e99995e20b928a8c9cb3aacc", null ],
     [ "IsValidPin", "DevicePinout_8h.html#adfbd20f652afcd35bae0c587dd80ba65", null ],

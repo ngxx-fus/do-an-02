@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['width_0',['Width',['../structLCD32Dev__t.html#a4397cbe9dbf4b9d9cc02990e7199c913',1,'LCD32Dev_t']]],
-  ['width_1',['width',['../structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1',1,'GFXglyph']]],
-  ['write_2',['Write',['../structP16Dev__t.html#a54ee7aa993ba7f3ee1d086b2e1f6afde',1,'P16Dev_t']]]
+  ['tail_0',['tail',['../structCBuff__t.html#a7c1434f9f065ad36cdc368027eda8460',1,'CBuff_t']]],
+  ['title_1',['Title',['../unionSystemFont__t.html#abf015b9b67c859fde114839e604b17db',1,'SystemFont_t']]]
 ];

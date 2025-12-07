@@ -91,13 +91,16 @@ $(function(){initNavTree('AppFont_8c.html','',''); });
   <div class="headertitle"><div class="title">AppFont.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of system font definitions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="AppFonts_2All_8h_source.html">All.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AppFont.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="AppFont_8c__incl.png" border="0" usemap="#aAppFonts_2AppFont_8c" loading="lazy" alt=""/></div>
 <map name="aAppFonts_2AppFont_8c" id="aAppFonts_2AppFont_8c">
-<area shape="rect" title=" " alt="" coords="447,5,597,33"/>
+<area shape="rect" title="Implementation of system font definitions." alt="" coords="447,5,597,33"/>
 <area shape="rect" href="AppFonts_2All_8h.html" title=" " alt="" coords="497,81,547,109"/>
 <area shape="poly" title=" " alt="" coords="523,31,524,67,520,64,520,36"/>
 <area shape="rect" href="gfxfont_8h.html" title=" " alt="" coords="482,249,562,277"/>
@@ -129,138 +132,48 @@ Include dependency graph for AppFont.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa3352223ab7490ff04749c433f3894ae" id="r_aa3352223ab7490ff04749c433f3894ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3352223ab7490ff04749c433f3894ae">mainFont</a> = FreeSerif9pt7b</td></tr>
-<tr class="memitem:ab37f80f3acb632dca2833498527d3546" id="r_ab37f80f3acb632dca2833498527d3546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37f80f3acb632dca2833498527d3546">fontTitle</a> = FreeSerifBoldItalic24pt7b</td></tr>
-<tr class="memitem:aaa974309ed95ef8fb90e14a5f1f4ebb0" id="r_aaa974309ed95ef8fb90e14a5f1f4ebb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa974309ed95ef8fb90e14a5f1f4ebb0">fontHeading01</a> = FreeSerifBoldItalic18pt7b</td></tr>
-<tr class="memitem:af00e156d32694288b851f9539ca329dc" id="r_af00e156d32694288b851f9539ca329dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af00e156d32694288b851f9539ca329dc">fontHeading02</a> = FreeSerifBoldItalic12pt7b</td></tr>
-<tr class="memitem:a6c392d75f87fde8a161a8f0e528572d9" id="r_a6c392d75f87fde8a161a8f0e528572d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c392d75f87fde8a161a8f0e528572d9">fontHeading03</a> = FreeSerifBoldItalic9pt7b</td></tr>
-<tr class="memitem:ab5e0ed82d5445d8db342633d66de60b2" id="r_ab5e0ed82d5445d8db342633d66de60b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5e0ed82d5445d8db342633d66de60b2">fontBody</a> = FreeSerif9pt7b</td></tr>
-<tr class="memitem:ae4dc60c49346f5d406b6fbade66e5eff" id="r_ae4dc60c49346f5d406b6fbade66e5eff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXfont.html">GFXfont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4dc60c49346f5d406b6fbade66e5eff">fontNote</a> = Picopixel</td></tr>
+<tr class="memitem:af8c2defe6d2a3bda6e093db7004e3d0b" id="r_af8c2defe6d2a3bda6e093db7004e3d0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unionSystemFont__t.html">SystemFont_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8c2defe6d2a3bda6e093db7004e3d0b">SystemFont</a></td></tr>
+<tr class="memdesc:af8c2defe6d2a3bda6e093db7004e3d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global initialization of system fonts.  <br /></td></tr>
 </table>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ab5e0ed82d5445d8db342633d66de60b2" name="ab5e0ed82d5445d8db342633d66de60b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5e0ed82d5445d8db342633d66de60b2">&#9670;&#160;</a></span>fontBody</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of system font definitions. </p>
+
+<p class="definition">Definition in file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="af8c2defe6d2a3bda6e093db7004e3d0b" name="af8c2defe6d2a3bda6e093db7004e3d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c2defe6d2a3bda6e093db7004e3d0b">&#9670;&#160;</a></span>SystemFont</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontBody = FreeSerif9pt7b</td>
+          <td class="memname"><a class="el" href="unionSystemFont__t.html">SystemFont_t</a> SystemFont</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00008">8</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="aaa974309ed95ef8fb90e14a5f1f4ebb0" name="aaa974309ed95ef8fb90e14a5f1f4ebb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa974309ed95ef8fb90e14a5f1f4ebb0">&#9670;&#160;</a></span>fontHeading01</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontHeading01 = FreeSerifBoldItalic18pt7b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00005">5</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="af00e156d32694288b851f9539ca329dc" name="af00e156d32694288b851f9539ca329dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af00e156d32694288b851f9539ca329dc">&#9670;&#160;</a></span>fontHeading02</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontHeading02 = FreeSerifBoldItalic12pt7b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00006">6</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="a6c392d75f87fde8a161a8f0e528572d9" name="a6c392d75f87fde8a161a8f0e528572d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c392d75f87fde8a161a8f0e528572d9">&#9670;&#160;</a></span>fontHeading03</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontHeading03 = FreeSerifBoldItalic9pt7b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00007">7</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="ae4dc60c49346f5d406b6fbade66e5eff" name="ae4dc60c49346f5d406b6fbade66e5eff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4dc60c49346f5d406b6fbade66e5eff">&#9670;&#160;</a></span>fontNote</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontNote = Picopixel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .Title      = &amp;FreeSerifBoldItalic24pt7b,   </div>
+<div class="line">    .Body       = &amp;FreeSerif9pt7b,              </div>
+<div class="line">    .Heading01  = &amp;FreeSerifBoldItalic18pt7b,   </div>
+<div class="line">    .Heading02  = &amp;FreeSerifBoldItalic12pt7b,   </div>
+<div class="line">    .Heading03  = &amp;FreeSerifBoldItalic9pt7b,    </div>
+<div class="line">    .Note       = &amp;Picopixel                    </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Global initialization of system fonts. </p>
+<p>Global instance to access system fonts. </p>
 
 <p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00009">9</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="ab37f80f3acb632dca2833498527d3546" name="ab37f80f3acb632dca2833498527d3546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab37f80f3acb632dca2833498527d3546">&#9670;&#160;</a></span>fontTitle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> fontTitle = FreeSerifBoldItalic24pt7b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00004">4</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
-
-</div>
-</div>
-<a id="aa3352223ab7490ff04749c433f3894ae" name="aa3352223ab7490ff04749c433f3894ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3352223ab7490ff04749c433f3894ae">&#9670;&#160;</a></span>mainFont</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structGFXfont.html">GFXfont</a> mainFont = FreeSerif9pt7b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="AppFont_8c_source.html#l00003">3</a> of file <a class="el" href="AppFont_8c_source.html">AppFont.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>                          {</div>
+<div class="line"><span class="lineno">   10</span>    .Title      = &amp;FreeSerifBoldItalic24pt7b,   </div>
+<div class="line"><span class="lineno">   11</span>    .Body       = &amp;FreeSerif9pt7b,              </div>
+<div class="line"><span class="lineno">   12</span>    .Heading01  = &amp;FreeSerifBoldItalic18pt7b,   </div>
+<div class="line"><span class="lineno">   13</span>    .Heading02  = &amp;FreeSerifBoldItalic12pt7b,   </div>
+<div class="line"><span class="lineno">   14</span>    .Heading03  = &amp;FreeSerifBoldItalic9pt7b,    </div>
+<div class="line"><span class="lineno">   15</span>    .Note       = &amp;Picopixel                    </div>
+<div class="line"><span class="lineno">   16</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AnalyzerMaster_8c_source.html#l00037">PerformScreenTest()</a>, and <a class="el" href="AnalyzerMaster_8c_source.html#l00242">TaskScreen()</a>.</p>
 
 </div>
 </div>

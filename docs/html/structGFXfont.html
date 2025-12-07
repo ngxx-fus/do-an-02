@@ -92,14 +92,17 @@ $(function(){initNavTree('structGFXfont.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Data stored for FONT AS A WHOLE.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for GFXfont:</div>
 <div class="dyncontent">
 <div class="center"><img src="structGFXfont__coll__graph.png" border="0" usemap="#aGFXfont_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aGFXfont_coll__map" id="aGFXfont_coll__map">
-<area shape="rect" title=" " alt="" coords="10,106,85,134"/>
-<area shape="rect" href="structGFXglyph.html" title=" " alt="" coords="5,5,90,33"/>
+<area shape="rect" title="Data stored for FONT AS A WHOLE." alt="" coords="10,106,85,134"/>
+<area shape="rect" href="structGFXglyph.html" title="Data stored PER GLYPH (Character)." alt="" coords="5,5,90,33"/>
 <area shape="poly" title=" " alt="" coords="50,47,50,106,45,105,45,50"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -107,14 +110,20 @@ Collaboration diagram for GFXfont:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a867b14d604450addbeaf62ae1e4799a7" id="r_a867b14d604450addbeaf62ae1e4799a7"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a867b14d604450addbeaf62ae1e4799a7">bitmap</a></td></tr>
+<tr class="memdesc:a867b14d604450addbeaf62ae1e4799a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph bitmaps, concatenated.  <br /></td></tr>
 <tr class="memitem:af63d88fa053c9a634e86eab7c96db290" id="r_af63d88fa053c9a634e86eab7c96db290"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGFXglyph.html">GFXglyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af63d88fa053c9a634e86eab7c96db290">glyph</a></td></tr>
+<tr class="memdesc:af63d88fa053c9a634e86eab7c96db290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph array.  <br /></td></tr>
 <tr class="memitem:a8f7483c87a9208a6251d9ac354a33dbb" id="r_a8f7483c87a9208a6251d9ac354a33dbb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f7483c87a9208a6251d9ac354a33dbb">first</a></td></tr>
+<tr class="memdesc:a8f7483c87a9208a6251d9ac354a33dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASCII extents (First character)  <br /></td></tr>
 <tr class="memitem:a2d2ef5e8e2984dc65a7820e2906855b2" id="r_a2d2ef5e8e2984dc65a7820e2906855b2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d2ef5e8e2984dc65a7820e2906855b2">last</a></td></tr>
+<tr class="memdesc:a2d2ef5e8e2984dc65a7820e2906855b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASCII extents (Last character)  <br /></td></tr>
 <tr class="memitem:ac2c2f0184b810a562be808fbb98822fa" id="r_ac2c2f0184b810a562be808fbb98822fa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2c2f0184b810a562be808fbb98822fa">yAdvance</a></td></tr>
+<tr class="memdesc:ac2c2f0184b810a562be808fbb98822fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newline distance (y axis)  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00023">23</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<div class="textblock"><p>Data stored for FONT AS A WHOLE. </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00030">30</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a867b14d604450addbeaf62ae1e4799a7" name="a867b14d604450addbeaf62ae1e4799a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a867b14d604450addbeaf62ae1e4799a7">&#9670;&#160;</a></span>bitmap</h2>
@@ -128,7 +137,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00024">24</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>Glyph bitmaps, concatenated. </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00031">31</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00668">LCD32DrawChar()</a>.</p>
 
@@ -146,7 +157,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00026">26</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>ASCII extents (First character) </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00033">33</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00668">LCD32DrawChar()</a>, and <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>.</p>
 
@@ -164,7 +177,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00025">25</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>Glyph array. </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00032">32</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00668">LCD32DrawChar()</a>, and <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>.</p>
 
@@ -182,7 +197,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00026">26</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>ASCII extents (Last character) </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00034">34</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00668">LCD32DrawChar()</a>, and <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>.</p>
 
@@ -200,9 +217,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00027">27</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>Newline distance (y axis) </p>
 
-<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>, and <a class="el" href="AnalyzerMaster_8c_source.html#l00032">PerformScreenTest()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00035">35</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LCD32_8c_source.html#l00697">LCD32DrawText()</a>, and <a class="el" href="AnalyzerMaster_8c_source.html#l00037">PerformScreenTest()</a>.</p>
 
 </div>
 </div>

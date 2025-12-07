@@ -124,7 +124,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="9700,210,9640,251,9639,246,9695,211"/>
 <area shape="rect" id="Node000005" href="$AnalyzerMaster_8h.html" title=" " alt="" coords="9639,342,9822,387"/>
 <area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="9732,215,9732,344,9729,340,9729,219"/>
-<area shape="rect" id="Node000010" href="$AppFont_8c.html" title=" " alt="" coords="9768,258,9917,286"/>
+<area shape="rect" id="Node000010" href="$AppFont_8c.html" title="Implementation of system font definitions." alt="" coords="9768,258,9917,286"/>
 <area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="9762,208,9827,258,9822,257,9760,214"/>
 <area shape="rect" id="Node000004" href="$LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="9441,342,9615,387"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="9580,305,9547,344,9545,339,9575,307"/>

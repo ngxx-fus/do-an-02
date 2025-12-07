@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="623,5,803,33"/>
 <area shape="rect" id="Node000002" href="$AnalyzerMaster_8c.html#a5052cb6672ac6039c8c593197822372e" title="Perform a visual test sequence on the LCD screen." alt="" coords="431,5,575,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="605,19,575,22,575,17,610,19"/>
-<area shape="rect" id="Node000003" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title="FreeRTOS task for handling LCD screen updates and UI logic." alt="" coords="289,5,383,33"/>
+<area shape="rect" id="Node000003" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title="ANALYZER_MASTER_LOCAL_UTILS." alt="" coords="289,5,383,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,19,384,22,384,17,419,19"/>
 <area shape="rect" id="Node000004" href="$Application_8h.html#a81875772de66351e046ffa03726dbcc4" title="(FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)" alt="" coords="139,5,241,33"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,19,241,22,241,17,276,19"/>

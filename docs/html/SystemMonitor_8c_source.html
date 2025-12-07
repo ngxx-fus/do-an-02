@@ -153,36 +153,39 @@ $(function(){initNavTree('SystemMonitor_8c_source.html','',''); });
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> TaskSystemMonitor(<span class="keywordtype">void</span> * pv) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    SysMonEntry(<span class="stringliteral">&quot;TaskSystemMonitor(%p)&quot;</span>, pv);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">while</span>(1) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment">// --- Heap Memory ---</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">size_t</span> total_free = SysMonFreeHeapSize();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">size_t</span> internal_free = SysMonFreeInternalHeapSize();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">size_t</span> psram_free = SysMonFreePsramHeapSize();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        SysMonLog(<span class="stringliteral">&quot;[Monitor] Free Heap: Total=%u, Internal=%u, PSRAM=%u&quot;</span>, </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                  (uint32_t)total_free, (uint32_t)internal_free, (uint32_t)psram_free);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="Application_8c.html#a2d67e4eb99d01d61e61000d730861031">SYSTEM_STAGE</a> &lt; <a class="code hl_define" href="SystemStage_8h.html#afcdda837d66297d11469ff0aa8279e51">SYSTEM_INIT_N</a>(1)) vTaskDelay(1);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    SysMonEntry(<span class="stringliteral">&quot;TaskSystemMonitor(%p)&quot;</span>, pv);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// --- Heap Memory ---</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">size_t</span> total_free = SysMonFreeHeapSize();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">size_t</span> internal_free = SysMonFreeInternalHeapSize();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">size_t</span> psram_free = SysMonFreePsramHeapSize();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="comment">// --- Stack Memory for this task ---</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">// Add a final line for this monitor task&#39;s own HWM for easy checking</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        SysMonLog(<span class="stringliteral">&quot;[Monitor] Monitor Task Stack HWM: %u bytes&quot;</span>, TaskMonFreeStackSize());</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// --- Full System Stats (DEBUG ONLY) ---</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">// The functions below are very resource-intensive and can cause high CPU load</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// on IPC tasks, potentially destabilizing the system.</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">// They are disabled by default. Uncomment them only for temporary debugging.</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        SysMonPrintTaskList();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        SysMonPrintRuntimeStats();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(<a class="code hl_define" href="SystemMonitor_8h.html#a83dfa7b2702d7e08906fc3fcf04362fc">SYS_MON_INTERVAL</a>);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        SysMonLog(<span class="stringliteral">&quot;[Monitor] Free Heap: Total=%u, Internal=%u, PSRAM=%u&quot;</span>, </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                  (uint32_t)total_free, (uint32_t)internal_free, (uint32_t)psram_free);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// --- Stack Memory for this task ---</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// Add a final line for this monitor task&#39;s own HWM for easy checking</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        SysMonLog(<span class="stringliteral">&quot;[Monitor] Monitor Task Stack HWM: %u bytes&quot;</span>, TaskMonFreeStackSize());</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">// --- Full System Stats (DEBUG ONLY) ---</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// The functions below are very resource-intensive and can cause high CPU load</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">// on IPC tasks, potentially destabilizing the system.</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="comment">// They are disabled by default. Uncomment them only for temporary debugging.</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        SysMonPrintTaskList();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        SysMonPrintRuntimeStats();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_define" href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a>(<a class="code hl_define" href="SystemMonitor_8h.html#a83dfa7b2702d7e08906fc3fcf04362fc">SYS_MON_INTERVAL</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span></div>
 <div class="ttc" id="aAppCore_2SystemMonitor_2All_8h_html"><div class="ttname"><a href="AppCore_2SystemMonitor_2All_8h.html">All.h</a></div></div>
+<div class="ttc" id="aApplication_8c_html_a2d67e4eb99d01d61e61000d730861031"><div class="ttname"><a href="Application_8c.html#a2d67e4eb99d01d61e61000d730861031">SYSTEM_STAGE</a></div><div class="ttdeci">uint32_t volatile SYSTEM_STAGE</div><div class="ttdoc">Global system state variable.</div><div class="ttdef"><b>Definition</b> <a href="Application_8c_source.html#l00004">Application.c:4</a></div></div>
 <div class="ttc" id="aESPFreeRTOSWrapper_8h_html_ad64c5f32aa7747ba40b48550dc4d2cdf"><div class="ttname"><a href="ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf">DelayMs</a></div><div class="ttdeci">#define DelayMs(ms)</div><div class="ttdoc">Delay task for X milliseconds (Blocking)</div><div class="ttdef"><b>Definition</b> <a href="ESPFreeRTOSWrapper_8h_source.html#l00033">ESPFreeRTOSWrapper.h:33</a></div></div>
 <div class="ttc" id="aSystemMonitor_8h_html_a83dfa7b2702d7e08906fc3fcf04362fc"><div class="ttname"><a href="SystemMonitor_8h.html#a83dfa7b2702d7e08906fc3fcf04362fc">SYS_MON_INTERVAL</a></div><div class="ttdeci">#define SYS_MON_INTERVAL</div><div class="ttdoc">Delay between two calls of System Monitor component.</div><div class="ttdef"><b>Definition</b> <a href="SystemMonitor_8h_source.html#l00024">SystemMonitor.h:24</a></div></div>
+<div class="ttc" id="aSystemStage_8h_html_afcdda837d66297d11469ff0aa8279e51"><div class="ttname"><a href="SystemStage_8h.html#afcdda837d66297d11469ff0aa8279e51">SYSTEM_INIT_N</a></div><div class="ttdeci">#define SYSTEM_INIT_N(N)</div><div class="ttdoc">Calculate the magic number for a specific Init Phase N.</div><div class="ttdef"><b>Definition</b> <a href="SystemStage_8h_source.html#l00048">SystemStage.h:48</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

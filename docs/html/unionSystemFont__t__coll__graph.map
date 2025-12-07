@@ -1,0 +1,7 @@
+<map id="SystemFont_t" name="SystemFont_t">
+<area shape="rect" id="Node000001" title="Union containing the entire system font configuration." alt="" coords="5,341,116,368"/>
+<area shape="rect" id="Node000002" href="$structGFXfont.html" title="Data stored for FONT AS A WHOLE." alt="" coords="23,106,98,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,149,63,340,58,340,58,150"/>
+<area shape="rect" id="Node000003" href="$structGFXglyph.html" title="Data stored PER GLYPH (Character)." alt="" coords="18,5,103,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="61,46,63,106,58,105,60,51"/>
+</map>

@@ -1,13 +1,10 @@
 var AnalyzerReader_8h =
 [
-    [ "ANALYZER_READER_COM_EN", "AnalyzerReader_8h.html#a6f317da59e02dabca2d38876af38e2a6", null ],
+    [ "ANALYZER_READER_COM_EN", "AnalyzerReader_8h.html#ad8b83a686165e5b2eb58a4e62b30dbc8", null ],
     [ "ANALYZER_READER_LOG_SECTION", "AnalyzerReader_8h.html#a026530ba70c4a9427af2d442b35ea070", null ],
-    [ "ANALYZER_READER_PIN_READY", "AnalyzerReader_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668", null ],
-    [ "ANALYZER_READER_SPI_CS", "AnalyzerReader_8h.html#a4139786f058f8367cc00bae7437c3748", null ],
+    [ "ANALYZER_READER_RX_SIZE", "AnalyzerReader_8h.html#a92131e075b27f38bcf2f7160193e4e4c", null ],
     [ "ANALYZER_READER_SPI_HOST", "AnalyzerReader_8h.html#afc8c4c6b4bc659b098c5c94557187a9f", null ],
-    [ "ANALYZER_READER_SPI_MISO", "AnalyzerReader_8h.html#aae5b0d47db01be3480ca97b5a5ac057b", null ],
-    [ "ANALYZER_READER_SPI_MOSI", "AnalyzerReader_8h.html#a8dae7b6cf9f2583e3cc54e90d669d732", null ],
-    [ "ANALYZER_READER_SPI_SCLK", "AnalyzerReader_8h.html#aee64a8be816565f3ac8a71d40bd2e03f", null ],
+    [ "ANALYZER_READER_TX_SIZE", "AnalyzerReader_8h.html#a334abd46274b63f4d65f7e8419935c7a", null ],
     [ "AR_ERR_EN", "AnalyzerReader_8h.html#a29b3fa52b47efb699730649d96434129", null ],
     [ "AR_LOG_EN", "AnalyzerReader_8h.html#a47ec323d9dd9e8b7f10676906eeae687", null ],
     [ "AR_LOG_ENTRY", "AnalyzerReader_8h.html#ad6ea9736c671c8b510161f199349d990", null ],

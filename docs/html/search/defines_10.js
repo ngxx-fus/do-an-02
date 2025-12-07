@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['taskyield_0',['TaskYield',['../ESPFreeRTOSWrapper_8h.html#aa1f8fce98c21e800ba768a58abad585e',1,'ESPFreeRTOSWrapper.h']]],
-  ['tomthumb_5fuse_5fextended_1',['TOMTHUMB_USE_EXTENDED',['../TomThumb_8h.html#a1ad29de7c6a2941525eabc800aa8ea58',1,'TomThumb.h']]],
-  ['type_5fanalyzer_5fmaster_2',['TYPE_ANALYZER_MASTER',['../FirmwareType_8h.html#a2aae6d590106a6b6a7feffdfbf78e56d',1,'FirmwareType.h']]],
-  ['type_5fanalyzer_5freader_3',['TYPE_ANALYZER_READER',['../FirmwareType_8h.html#a9737c9da0b5af2d352271901102f9ae7',1,'FirmwareType.h']]],
-  ['type_5freceiver_4',['TYPE_RECEIVER',['../FirmwareType_8h.html#a1e647ed9fbccecccb01e22b11e486a3a',1,'FirmwareType.h']]],
-  ['type_5fsender_5',['TYPE_SENDER',['../FirmwareType_8h.html#acfaccc7687af6687e2634b363fe57f89',1,'FirmwareType.h']]]
+  ['validate_5fargs_0',['VALIDATE_ARGS',['../CBuff_8c.html#afa3b14a270ccbd9be583165bc647086f',1,'CBuff.c']]],
+  ['validate_5fargs_5fret_5fzero_1',['VALIDATE_ARGS_RET_ZERO',['../CBuff_8c.html#a7d3bee315778c1b97fc864143eb43dff',1,'CBuff.c']]],
+  ['validate_5finit_2',['VALIDATE_INIT',['../CBuff_8c.html#aedded7f0bd9b1a037feec44ce4302bd5',1,'CBuff.c']]],
+  ['validate_5finit_5fret_5fvoid_3',['VALIDATE_INIT_RET_VOID',['../CBuff_8c.html#a142fff7b4a813dbe0739a98d95c7a878',1,'CBuff.c']]],
+  ['validate_5finit_5fret_5fzero_4',['VALIDATE_INIT_RET_ZERO',['../CBuff_8c.html#a887ba1120acf49882f6a7f686307ea6f',1,'CBuff.c']]]
 ];

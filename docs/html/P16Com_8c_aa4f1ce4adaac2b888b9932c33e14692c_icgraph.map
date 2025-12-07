@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="753,19,723,22,723,17,758,19"/>
 <area shape="rect" id="Node000003" href="$LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="431,5,536,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="565,19,536,22,536,17,571,19"/>
-<area shape="rect" id="Node000004" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title="FreeRTOS task for handling LCD screen updates and UI logic." alt="" coords="289,5,383,33"/>
+<area shape="rect" id="Node000004" href="$AnalyzerMaster_8c.html#a0ff6461cec9cf517fc00bf44dc8fed74" title="ANALYZER_MASTER_LOCAL_UTILS." alt="" coords="289,5,383,33"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="413,19,384,22,384,17,418,19"/>
 <area shape="rect" id="Node000005" href="$Application_8h.html#a81875772de66351e046ffa03726dbcc4" title="(FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)" alt="" coords="139,5,241,33"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="271,19,241,22,241,17,276,19"/>

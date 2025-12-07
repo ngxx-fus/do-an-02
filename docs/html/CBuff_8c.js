@@ -5,6 +5,7 @@ var CBuff_8c =
     [ "VALIDATE_ARGS", "CBuff_8c.html#afa3b14a270ccbd9be583165bc647086f", null ],
     [ "VALIDATE_ARGS_RET_ZERO", "CBuff_8c.html#a7d3bee315778c1b97fc864143eb43dff", null ],
     [ "VALIDATE_INIT", "CBuff_8c.html#aedded7f0bd9b1a037feec44ce4302bd5", null ],
+    [ "VALIDATE_INIT_RET_VOID", "CBuff_8c.html#a142fff7b4a813dbe0739a98d95c7a878", null ],
     [ "VALIDATE_INIT_RET_ZERO", "CBuff_8c.html#a887ba1120acf49882f6a7f686307ea6f", null ],
     [ "_CBuffGetDataCount", "CBuff_8c.html#a3815341db93620def1bca590216423c2", null ],
     [ "_CBuffGetFreeSpace", "CBuff_8c.html#a3451df3e0566f543e8b28ac2ae5202e3", null ],
