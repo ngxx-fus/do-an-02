@@ -91,18 +91,660 @@ $(function(){initNavTree('AnalyzerReader_8h.html','',''); });
   <div class="headertitle"><div class="title">AnalyzerReader.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;<a class="el" href="AppConfig_2All_8h_source.html">../../AppConfig/All.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AppUtils_2All_8h_source.html">../../AppUtils/All.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AppESPWrap_2All_8h_source.html">../../AppESPWrap/All.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for AnalyzerReader.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="AnalyzerReader_8h__incl.png" border="0" usemap="#aAppCore_2AnalyzerReader_2AnalyzerReader_8h" loading="lazy" alt=""/></div>
+<map name="aAppCore_2AnalyzerReader_2AnalyzerReader_8h" id="aAppCore_2AnalyzerReader_2AnalyzerReader_8h">
+<area shape="rect" title=" " alt="" coords="1015,5,1198,50"/>
+<area shape="rect" href="AppConfig_2All_8h.html" title=" " alt="" coords="370,174,515,201"/>
+<area shape="poly" title=" " alt="" coords="1014,53,513,172,512,167,1017,49"/>
+<area shape="rect" href="AppUtils_2All_8h.html" title=" " alt="" coords="1040,249,1173,277"/>
+<area shape="poly" title=" " alt="" coords="1108,49,1109,235,1104,233,1105,52"/>
+<area shape="rect" href="AppESPWrap_2All_8h.html" title=" " alt="" coords="1154,98,1315,126"/>
+<area shape="poly" title=" " alt="" coords="1141,48,1204,90,1199,89,1140,53"/>
+<area shape="rect" title=" " alt="" coords="781,401,851,428"/>
+<area shape="poly" title=" " alt="" coords="457,199,539,269,596,312,657,350,713,376,768,399,763,398,711,381,655,355,593,316,536,274,456,205"/>
+<area shape="rect" title=" " alt="" coords="216,401,285,428"/>
+<area shape="poly" title=" " alt="" coords="368,202,276,223,172,251,124,268,82,286,50,306,30,326,23,347,29,364,46,378,71,389,136,403,203,411,198,412,135,408,69,394,43,383,25,367,18,348,26,324,47,301,80,281,122,263,171,246,275,218,372,200"/>
+<area shape="rect" href="FirmwareType_8h.html" title=" " alt="" coords="40,325,165,353"/>
+<area shape="poly" title=" " alt="" coords="369,203,300,223,226,252,173,284,130,317,126,313,170,279,224,247,299,218,374,201"/>
+<area shape="rect" href="Components_8h.html" title=" " alt="" coords="240,325,355,353"/>
+<area shape="poly" title=" " alt="" coords="435,200,408,238,371,279,328,317,325,313,367,275,404,235,431,203"/>
+<area shape="rect" href="DevicePinout_8h.html" title=" " alt="" coords="238,249,357,277"/>
+<area shape="poly" title=" " alt="" coords="414,203,338,244,335,240,419,201"/>
+<area shape="rect" href="SystemLog_8h.html" title=" " alt="" coords="481,325,586,353"/>
+<area shape="poly" title=" " alt="" coords="452,199,520,312,515,311,449,204"/>
+<area shape="poly" title=" " alt="" coords="165,344,766,405,765,411,165,349"/>
+<area shape="poly" title=" " alt="" coords="130,351,213,393,208,395,128,356"/>
+<area shape="poly" title=" " alt="" coords="355,346,767,404,764,408,355,351"/>
+<area shape="poly" title=" " alt="" coords="291,352,269,390,265,386,287,355"/>
+<area shape="poly" title=" " alt="" coords="318,275,385,313,427,333,470,350,549,372,630,389,768,409,763,409,629,394,548,378,468,355,424,338,382,317,317,280"/>
+<area shape="poly" title=" " alt="" coords="276,276,250,299,230,326,227,341,227,356,237,388,232,386,222,357,221,340,226,324,246,296,272,279"/>
+<area shape="poly" title=" " alt="" coords="260,279,152,322,150,317,264,276"/>
+<area shape="poly" title=" " alt="" coords="299,275,300,311,295,308,296,280"/>
+<area shape="poly" title=" " alt="" coords="584,351,769,400,763,400,583,356"/>
+<area shape="poly" title=" " alt="" coords="485,353,300,403,299,398,480,353"/>
+<area shape="poly" title=" " alt="" coords="1042,272,926,295,875,309,843,327,833,340,826,354,819,387,815,383,821,353,829,337,840,323,873,304,924,289,1037,272"/>
+<area shape="poly" title=" " alt="" coords="1037,265,930,270,787,279,628,297,470,328,420,342,372,360,290,396,289,391,370,355,419,337,469,322,627,292,786,274,929,265,1042,264"/>
+<area shape="rect" title=" " alt="" coords="1346,401,1411,428"/>
+<area shape="poly" title=" " alt="" coords="1107,275,1111,314,1117,334,1129,351,1151,370,1173,382,1195,388,1218,391,1269,391,1333,400,1328,400,1268,396,1218,396,1194,393,1171,387,1148,374,1125,354,1112,336,1106,315,1104,279"/>
+<area shape="rect" title=" " alt="" coords="1559,401,1633,428"/>
+<area shape="poly" title=" " alt="" coords="1174,267,1458,292,1586,308,1628,315,1648,323,1656,341,1652,359,1641,376,1625,392,1623,388,1637,373,1647,357,1651,341,1645,327,1627,321,1586,313,1457,298,1174,272"/>
+<area shape="rect" title=" " alt="" coords="1657,401,1738,428"/>
+<area shape="poly" title=" " alt="" coords="1173,267,1469,293,1605,309,1649,316,1671,323,1683,336,1691,352,1698,387,1694,384,1686,354,1678,339,1668,327,1648,321,1604,314,1468,299,1173,272"/>
+<area shape="rect" title=" " alt="" coords="1138,325,1208,353"/>
+<area shape="poly" title=" " alt="" coords="1120,275,1154,314,1149,313,1118,280"/>
+<area shape="rect" title=" " alt="" coords="712,325,779,353"/>
+<area shape="poly" title=" " alt="" coords="1042,276,798,328,794,328,794,323,797,322,1037,277"/>
+<area shape="rect" href="BitOp_8h.html" title=" " alt="" coords="1557,325,1635,353"/>
+<area shape="poly" title=" " alt="" coords="1174,269,1338,289,1544,325,1539,325,1337,294,1174,274"/>
+<area shape="rect" href="Arithmetic_8h.html" title=" " alt="" coords="1232,325,1341,353"/>
+<area shape="poly" title=" " alt="" coords="1139,275,1243,319,1238,319,1138,280"/>
+<area shape="rect" href="ReturnType_8h.html" title=" " alt="" coords="949,325,1064,353"/>
+<area shape="poly" title=" " alt="" coords="1091,277,1037,318,1035,313,1086,278"/>
+<area shape="rect" href="FlagControl_8h.html" title=" " alt="" coords="1416,325,1533,353"/>
+<area shape="poly" title=" " alt="" coords="1173,275,1404,323,1399,323,1173,280"/>
+<area shape="rect" href="Loop_8h.html" title=" " alt="" coords="853,325,925,353"/>
+<area shape="poly" title=" " alt="" coords="1070,277,941,323,940,318,1065,278"/>
+<area shape="poly" title=" " alt="" coords="1559,350,1546,355,1350,381,1156,399,867,414,867,409,1156,394,1349,376,1545,350,1554,351"/>
+<area shape="poly" title=" " alt="" coords="1560,353,1427,400,1425,395,1554,354"/>
+<area shape="poly" title=" " alt="" coords="1598,351,1598,387,1594,383,1594,355"/>
+<area shape="poly" title=" " alt="" coords="1615,351,1670,392,1664,391,1613,356"/>
+<area shape="rect" title=" " alt="" coords="1436,401,1534,428"/>
+<area shape="poly" title=" " alt="" coords="1579,352,1518,395,1516,390,1574,354"/>
+<area shape="poly" title=" " alt="" coords="1234,350,1220,355,867,409,866,404,1220,350,1229,351"/>
+<area shape="rect" title=" " alt="" coords="1249,401,1322,428"/>
+<area shape="poly" title=" " alt="" coords="1288,351,1288,387,1284,383,1284,355"/>
+<area shape="poly" title=" " alt="" coords="975,353,865,397,863,392,970,354"/>
+<area shape="poly" title=" " alt="" coords="1065,347,1333,400,1328,400,1064,353"/>
+<area shape="poly" title=" " alt="" coords="1419,347,867,410,866,405,1413,347"/>
+<area shape="poly" title=" " alt="" coords="1460,352,1409,394,1407,389,1455,354"/>
+<area shape="poly" title=" " alt="" coords="1497,351,1564,393,1559,392,1496,356"/>
+<area shape="poly" title=" " alt="" coords="1478,351,1483,387,1479,384,1475,355"/>
+<area shape="poly" title=" " alt="" coords="879,352,841,392,839,387,874,354"/>
+<area shape="poly" title=" " alt="" coords="1152,123,531,181,530,175,1155,118"/>
+<area shape="poly" title=" " alt="" coords="1151,119,1046,137,984,152,920,172,857,199,798,233,746,275,702,326,697,337,698,347,711,366,737,383,769,399,764,398,734,387,708,370,693,349,692,336,698,324,742,271,795,229,855,194,918,167,983,147,1045,132,1156,118"/>
+<area shape="poly" title=" " alt="" coords="1151,114,1005,119,807,128,583,146,470,159,359,176,220,199,162,217,93,252,56,274,24,297,14,309,9,322,10,336,18,351,29,361,47,370,94,385,202,405,199,409,93,390,44,375,26,365,14,354,5,337,4,321,9,306,21,293,53,269,91,247,160,212,219,193,358,171,469,154,583,140,806,122,1004,113,1156,113"/>
+<area shape="rect" title=" " alt="" coords="2537,401,2649,428"/>
+<area shape="poly" title=" " alt="" coords="1316,114,1539,132,1673,148,1807,171,2026,224,2237,286,2419,347,2547,395,2542,394,2417,352,2236,291,2024,229,1806,176,1672,154,1538,137,1316,120"/>
+<area shape="rect" title=" " alt="" coords="1234,174,1347,201"/>
+<area shape="poly" title=" " alt="" coords="1246,124,1274,162,1269,161,1244,129"/>
+<area shape="rect" title=" " alt="" coords="1371,174,1503,201"/>
+<area shape="poly" title=" " alt="" coords="1271,124,1390,168,1384,168,1271,129"/>
+<area shape="rect" href="ESPGPIOWrapper_8h.html" title=" " alt="" coords="1998,325,2149,353"/>
+<area shape="poly" title=" " alt="" coords="1315,114,1511,131,1627,147,1742,171,1843,202,1939,247,1996,280,2046,316,2041,315,1993,285,1936,252,1841,207,1741,176,1626,153,1511,136,1316,119"/>
+<area shape="rect" href="ESPLogWrapper_8h.html" title=" " alt="" coords="1307,249,1450,277"/>
+<area shape="poly" title=" " alt="" coords="1230,124,1219,162,1218,182,1225,200,1238,215,1255,228,1295,249,1290,248,1252,233,1235,219,1220,203,1213,183,1213,161,1226,128"/>
+<area shape="rect" href="ESPFreeRTOSWrapper_8h.html" title=" " alt="" coords="1548,174,1729,201"/>
+<area shape="poly" title=" " alt="" coords="1307,124,1553,170,1548,170,1307,129"/>
+<area shape="poly" title=" " alt="" coords="2000,347,1935,355,1306,393,867,414,867,408,1306,388,1934,350,1994,348"/>
+<area shape="poly" title=" " alt="" coords="2000,348,1935,355,1574,372,1085,390,301,414,301,409,1085,385,1574,367,1934,350,1994,348"/>
+<area shape="poly" title=" " alt="" coords="2000,348,1841,371,1649,403,1648,398,1840,366,1994,349"/>
+<area shape="poly" title=" " alt="" coords="2001,353,1754,403,1753,398,1995,354"/>
+<area shape="poly" title=" " alt="" coords="2150,347,2316,368,2524,400,2519,400,2316,373,2149,352"/>
+<area shape="rect" title=" " alt="" coords="2023,401,2126,428"/>
+<area shape="poly" title=" " alt="" coords="2075,351,2076,387,2072,383,2072,355"/>
+<area shape="rect" title=" " alt="" coords="2150,401,2234,428"/>
+<area shape="poly" title=" " alt="" coords="2095,351,2161,393,2156,392,2094,356"/>
+<area shape="rect" title=" " alt="" coords="1762,401,1859,428"/>
+<area shape="poly" title=" " alt="" coords="2029,353,1873,399,1872,393,2024,354"/>
+<area shape="rect" title=" " alt="" coords="2258,401,2358,428"/>
+<area shape="poly" title=" " alt="" coords="2116,351,2254,396,2249,395,2115,356"/>
+<area shape="rect" title=" " alt="" coords="2382,401,2514,428"/>
+<area shape="poly" title=" " alt="" coords="2141,351,2370,398,2364,397,2140,356"/>
+<area shape="rect" title=" " alt="" coords="1884,401,1999,428"/>
+<area shape="poly" title=" " alt="" coords="2052,353,1979,395,1977,390,2047,354"/>
+<area shape="poly" title=" " alt="" coords="1307,273,601,334,601,329,1307,268"/>
+<area shape="poly" title=" " alt="" coords="1381,275,1381,386,1377,383,1377,279"/>
+<area shape="poly" title=" " alt="" coords="1450,273,1602,300,1663,313,1692,323,1699,334,1699,345,1689,365,1668,382,1643,396,1641,391,1665,377,1685,361,1694,344,1694,336,1689,327,1662,318,1601,305,1450,279"/>
+<area shape="poly" title=" " alt="" coords="1450,273,1462,274,1704,286,1853,299,1907,309,1936,323,1944,335,1945,347,1931,367,1905,384,1872,398,1871,392,1902,379,1927,363,1939,345,1939,337,1933,327,1905,314,1853,305,1704,291,1461,280,1450,278"/>
+<area shape="rect" title=" " alt="" coords="1811,325,1922,353"/>
+<area shape="poly" title=" " alt="" coords="1450,273,1462,274,1792,322,1798,326,1793,325,1792,328,1461,280,1450,278"/>
+<area shape="rect" title=" " alt="" coords="1775,249,1926,277"/>
+<area shape="poly" title=" " alt="" coords="1677,199,1801,244,1796,244,1676,205"/>
+<area shape="rect" title=" " alt="" coords="1474,249,1590,277"/>
+<area shape="poly" title=" " alt="" coords="1622,201,1564,243,1562,238,1617,203"/>
+<area shape="rect" title=" " alt="" coords="1614,249,1751,277"/>
+<area shape="poly" title=" " alt="" coords="1648,200,1669,237,1665,235,1645,204"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="AnalyzerReader_8h__dep__incl.png" border="0" usemap="#aAppCore_2AnalyzerReader_2AnalyzerReader_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppCore_2AnalyzerReader_2AnalyzerReader_8hdep" id="aAppCore_2AnalyzerReader_2AnalyzerReader_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,189,50"/>
-<area shape="rect" href="AnalyzerReader_8c.html" title=" " alt="" coords="5,98,189,143"/>
-<area shape="poly" title=" " alt="" coords="99,64,100,99,94,97,95,68"/>
+<area shape="rect" title=" " alt="" coords="99,5,282,50"/>
+<area shape="rect" href="AppCore_2AnalyzerReader_2All_8h.html" title=" " alt="" coords="99,98,282,143"/>
+<area shape="poly" title=" " alt="" coords="191,63,193,99,188,97,189,68"/>
+<area shape="rect" href="AnalyzerReader_8c.html" title=" " alt="" coords="5,191,189,235"/>
+<area shape="poly" title=" " alt="" coords="156,155,121,192,117,189,159,151"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="212,199,355,227"/>
+<area shape="poly" title=" " alt="" coords="224,151,273,198,267,199,222,156"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="213,283,354,311"/>
+<area shape="poly" title=" " alt="" coords="286,241,286,285,281,282,282,245"/>
 </map>
 </div>
 </div>
 <p><a href="AnalyzerReader_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a026530ba70c4a9427af2d442b35ea070" id="r_a026530ba70c4a9427af2d442b35ea070"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a026530ba70c4a9427af2d442b35ea070">ANALYZER_READER_LOG_SECTION</a></td></tr>
+<tr class="memdesc:a026530ba70c4a9427af2d442b35ea070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a log section for this component.  <br /></td></tr>
+<tr class="memitem:a6f317da59e02dabca2d38876af38e2a6" id="r_a6f317da59e02dabca2d38876af38e2a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f317da59e02dabca2d38876af38e2a6">ANALYZER_READER_COM_EN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a6f317da59e02dabca2d38876af38e2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/Disable the Analyzer Reader (Slave) task.  <br /></td></tr>
+<tr class="memitem:afc8c4c6b4bc659b098c5c94557187a9f" id="r_afc8c4c6b4bc659b098c5c94557187a9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc8c4c6b4bc659b098c5c94557187a9f">ANALYZER_READER_SPI_HOST</a>&#160;&#160;&#160;SPI2_HOST</td></tr>
+<tr class="memdesc:afc8c4c6b4bc659b098c5c94557187a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI host to use for communication.  <br /></td></tr>
+<tr class="memitem:aee64a8be816565f3ac8a71d40bd2e03f" id="r_aee64a8be816565f3ac8a71d40bd2e03f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee64a8be816565f3ac8a71d40bd2e03f">ANALYZER_READER_SPI_SCLK</a>&#160;&#160;&#160;41</td></tr>
+<tr class="memdesc:aee64a8be816565f3ac8a71d40bd2e03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO for SPI Clock.  <br /></td></tr>
+<tr class="memitem:a8dae7b6cf9f2583e3cc54e90d669d732" id="r_a8dae7b6cf9f2583e3cc54e90d669d732"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dae7b6cf9f2583e3cc54e90d669d732">ANALYZER_READER_SPI_MOSI</a>&#160;&#160;&#160;39</td></tr>
+<tr class="memdesc:a8dae7b6cf9f2583e3cc54e90d669d732"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO for SPI Master Out Slave In (Slave's input).  <br /></td></tr>
+<tr class="memitem:aae5b0d47db01be3480ca97b5a5ac057b" id="r_aae5b0d47db01be3480ca97b5a5ac057b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5b0d47db01be3480ca97b5a5ac057b">ANALYZER_READER_SPI_MISO</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memdesc:aae5b0d47db01be3480ca97b5a5ac057b"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO for SPI Master In Slave Out (Slave's output).  <br /></td></tr>
+<tr class="memitem:a4139786f058f8367cc00bae7437c3748" id="r_a4139786f058f8367cc00bae7437c3748"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4139786f058f8367cc00bae7437c3748">ANALYZER_READER_SPI_CS</a>&#160;&#160;&#160;42</td></tr>
+<tr class="memdesc:a4139786f058f8367cc00bae7437c3748"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO for SPI Chip Select.  <br /></td></tr>
+<tr class="memitem:aa9dfabaf10ebac67bf6de5c7c6e3c668" id="r_aa9dfabaf10ebac67bf6de5c7c6e3c668"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>&#160;&#160;&#160;38</td></tr>
+<tr class="memdesc:aa9dfabaf10ebac67bf6de5c7c6e3c668"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO to signal the master that data is ready.  <br /></td></tr>
+<tr class="memitem:a47ec323d9dd9e8b7f10676906eeae687" id="r_a47ec323d9dd9e8b7f10676906eeae687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47ec323d9dd9e8b7f10676906eeae687">AR_LOG_EN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a29b3fa52b47efb699730649d96434129" id="r_a29b3fa52b47efb699730649d96434129"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b3fa52b47efb699730649d96434129">AR_ERR_EN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ad6ea9736c671c8b510161f199349d990" id="r_ad6ea9736c671c8b510161f199349d990"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6ea9736c671c8b510161f199349d990">AR_LOG_ENTRY</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a771e6d1a92da9cd52380998e3dd4a6bd" id="r_a771e6d1a92da9cd52380998e3dd4a6bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a771e6d1a92da9cd52380998e3dd4a6bd">AR_LOG_EXIT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:aa769f6abda658b8dbf8982ff067b0645" id="r_aa769f6abda658b8dbf8982ff067b0645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(...)</td></tr>
+<tr class="memitem:ae2ea0014a2ad1dbe1f3320de5d4a2419" id="r_ae2ea0014a2ad1dbe1f3320de5d4a2419"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">ARErr</a>(...)</td></tr>
+<tr class="memitem:a0a45acbcdc4f4677202fc140974bd446" id="r_a0a45acbcdc4f4677202fc140974bd446"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a45acbcdc4f4677202fc140974bd446">ARExit</a>(...)</td></tr>
+<tr class="memitem:ad886643138019160071d47cfd9843da9" id="r_ad886643138019160071d47cfd9843da9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad886643138019160071d47cfd9843da9">AREntry</a>(...)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a40426d8381c3c22e02a890bdd9c94ab8" id="r_a40426d8381c3c22e02a890bdd9c94ab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40426d8381c3c22e02a890bdd9c94ab8">TaskAnalyzerReader</a> (void *pv)</td></tr>
+<tr class="memdesc:a40426d8381c3c22e02a890bdd9c94ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task to handle communication with the Analyzer Master device over SPI (acting as Slave).  <br /></td></tr>
+<tr class="memitem:aadbb35bf60fa6148e622ced423e0fa16" id="r_aadbb35bf60fa6148e622ced423e0fa16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadbb35bf60fa6148e622ced423e0fa16">TaskMonitor</a> (void *pv)</td></tr>
+<tr class="memdesc:aadbb35bf60fa6148e622ced423e0fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task to monitor and print status information for the reader.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a6f317da59e02dabca2d38876af38e2a6" name="a6f317da59e02dabca2d38876af38e2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f317da59e02dabca2d38876af38e2a6">&#9670;&#160;</a></span>ANALYZER_READER_COM_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_COM_EN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable/Disable the Analyzer Reader (Slave) task. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00020">20</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="a026530ba70c4a9427af2d442b35ea070" name="a026530ba70c4a9427af2d442b35ea070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a026530ba70c4a9427af2d442b35ea070">&#9670;&#160;</a></span>ANALYZER_READER_LOG_SECTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_LOG_SECTION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a log section for this component. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00017">17</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9dfabaf10ebac67bf6de5c7c6e3c668" name="aa9dfabaf10ebac67bf6de5c7c6e3c668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9dfabaf10ebac67bf6de5c7c6e3c668">&#9670;&#160;</a></span>ANALYZER_READER_PIN_READY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_PIN_READY&#160;&#160;&#160;38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO to signal the master that data is ready. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00035">35</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="a4139786f058f8367cc00bae7437c3748" name="a4139786f058f8367cc00bae7437c3748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4139786f058f8367cc00bae7437c3748">&#9670;&#160;</a></span>ANALYZER_READER_SPI_CS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_SPI_CS&#160;&#160;&#160;42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO for SPI Chip Select. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00033">33</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>.</p>
+
+</div>
+</div>
+<a id="afc8c4c6b4bc659b098c5c94557187a9f" name="afc8c4c6b4bc659b098c5c94557187a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8c4c6b4bc659b098c5c94557187a9f">&#9670;&#160;</a></span>ANALYZER_READER_SPI_HOST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_SPI_HOST&#160;&#160;&#160;SPI2_HOST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The SPI host to use for communication. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00025">25</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="aae5b0d47db01be3480ca97b5a5ac057b" name="aae5b0d47db01be3480ca97b5a5ac057b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5b0d47db01be3480ca97b5a5ac057b">&#9670;&#160;</a></span>ANALYZER_READER_SPI_MISO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_SPI_MISO&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO for SPI Master In Slave Out (Slave's output). </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00031">31</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>.</p>
+
+</div>
+</div>
+<a id="a8dae7b6cf9f2583e3cc54e90d669d732" name="a8dae7b6cf9f2583e3cc54e90d669d732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dae7b6cf9f2583e3cc54e90d669d732">&#9670;&#160;</a></span>ANALYZER_READER_SPI_MOSI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_SPI_MOSI&#160;&#160;&#160;39</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO for SPI Master Out Slave In (Slave's input). </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00029">29</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>.</p>
+
+</div>
+</div>
+<a id="aee64a8be816565f3ac8a71d40bd2e03f" name="aee64a8be816565f3ac8a71d40bd2e03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee64a8be816565f3ac8a71d40bd2e03f">&#9670;&#160;</a></span>ANALYZER_READER_SPI_SCLK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANALYZER_READER_SPI_SCLK&#160;&#160;&#160;41</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO for SPI Clock. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00027">27</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>.</p>
+
+</div>
+</div>
+<a id="a29b3fa52b47efb699730649d96434129" name="a29b3fa52b47efb699730649d96434129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b3fa52b47efb699730649d96434129">&#9670;&#160;</a></span>AR_ERR_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AR_ERR_EN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00047">47</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="a47ec323d9dd9e8b7f10676906eeae687" name="a47ec323d9dd9e8b7f10676906eeae687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ec323d9dd9e8b7f10676906eeae687">&#9670;&#160;</a></span>AR_LOG_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AR_LOG_EN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00046">46</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6ea9736c671c8b510161f199349d990" name="ad6ea9736c671c8b510161f199349d990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ea9736c671c8b510161f199349d990">&#9670;&#160;</a></span>AR_LOG_ENTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AR_LOG_ENTRY&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00048">48</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="a771e6d1a92da9cd52380998e3dd4a6bd" name="a771e6d1a92da9cd52380998e3dd4a6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771e6d1a92da9cd52380998e3dd4a6bd">&#9670;&#160;</a></span>AR_LOG_EXIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AR_LOG_EXIT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00049">49</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="ad886643138019160071d47cfd9843da9" name="ad886643138019160071d47cfd9843da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad886643138019160071d47cfd9843da9">&#9670;&#160;</a></span>AREntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AREntry</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00072">72</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>, and <a class="el" href="AnalyzerReader_8c_source.html#l00007">TaskMonitor()</a>.</p>
+
+</div>
+</div>
+<a id="ae2ea0014a2ad1dbe1f3320de5d4a2419" name="ae2ea0014a2ad1dbe1f3320de5d4a2419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">&#9670;&#160;</a></span>ARErr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARErr</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00060">60</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>.</p>
+
+</div>
+</div>
+<a id="a0a45acbcdc4f4677202fc140974bd446" name="a0a45acbcdc4f4677202fc140974bd446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a45acbcdc4f4677202fc140974bd446">&#9670;&#160;</a></span>ARExit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARExit</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00066">66</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+</div>
+</div>
+<a id="aa769f6abda658b8dbf8982ff067b0645" name="aa769f6abda658b8dbf8982ff067b0645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa769f6abda658b8dbf8982ff067b0645">&#9670;&#160;</a></span>ARLog</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARLog</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8h_source.html#l00054">54</a> of file <a class="el" href="AnalyzerReader_8h_source.html">AnalyzerReader.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AnalyzerReader_8c_source.html#l00020">TaskAnalyzerReader()</a>, and <a class="el" href="AnalyzerReader_8c_source.html#l00007">TaskMonitor()</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a40426d8381c3c22e02a890bdd9c94ab8" name="a40426d8381c3c22e02a890bdd9c94ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40426d8381c3c22e02a890bdd9c94ab8">&#9670;&#160;</a></span>TaskAnalyzerReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TaskAnalyzerReader </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task to handle communication with the Analyzer Master device over SPI (acting as Slave). </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8c_source.html#l00020">20</a> of file <a class="el" href="AnalyzerReader_8c_source.html">AnalyzerReader.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                   {</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_define" href="#ad886643138019160071d47cfd9843da9">AREntry</a>(<span class="stringliteral">&quot;TaskAnalyzerReader(%p)&quot;</span>, pv);</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>    <span class="comment">// --- Buffer Configuration ---</span></div>
+<div class="line"><span class="lineno">   24</span>    <span class="comment">// This must match the master&#39;s read size.</span></div>
+<div class="line"><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> buffer_size_bytes = 4096 * <span class="keyword">sizeof</span>(uint16_t);</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment">// The slave only needs a transmit buffer for this protocol.</span></div>
+<div class="line"><span class="lineno">   28</span>    uint8_t *spi_tx_buffer = NULL;</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>    <span class="comment">// --- Buffer Allocation ---</span></div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment">// Allocate DMA-capable memory for SPI buffer</span></div>
+<div class="line"><span class="lineno">   32</span>    spi_tx_buffer = (uint8_t *)heap_caps_malloc(buffer_size_bytes, MALLOC_CAP_DMA);</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3">IsNull</a>(spi_tx_buffer)) {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">ARErr</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Failed to allocate SPI TX buffer.&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        vTaskDelete(NULL);</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Allocated %d-byte TX buffer.&quot;</span>, buffer_size_bytes);</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">// --- GPIO Configuration ---</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// Configure READY pin as output.</span></div>
+<div class="line"><span class="lineno">   43</span><span class="preprocessor">    #if (ANALYZER_READER_PIN_READY != -1)</span></div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_function" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23">IOConfigAsOutput</a>(1ULL &lt;&lt; <a class="code hl_define" href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>, -1, -1);</div>
+<div class="line"><span class="lineno">   45</span>        gpio_set_level(<a class="code hl_define" href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>, 0); <span class="comment">// Initially not ready</span></div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Configured READY pin (%d) as output.&quot;</span>, <a class="code hl_define" href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>);</div>
+<div class="line"><span class="lineno">   47</span><span class="preprocessor">    #else</span></div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] READY pin is disabled.&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment">// --- SPI Configuration ---</span></div>
+<div class="line"><span class="lineno">   52</span>    spi_bus_config_t buscfg = {</div>
+<div class="line"><span class="lineno">   53</span>        .miso_io_num = <a class="code hl_define" href="#aae5b0d47db01be3480ca97b5a5ac057b">ANALYZER_READER_SPI_MISO</a>,</div>
+<div class="line"><span class="lineno">   54</span>        .mosi_io_num = <a class="code hl_define" href="#a8dae7b6cf9f2583e3cc54e90d669d732">ANALYZER_READER_SPI_MOSI</a>,</div>
+<div class="line"><span class="lineno">   55</span>        .sclk_io_num = <a class="code hl_define" href="#aee64a8be816565f3ac8a71d40bd2e03f">ANALYZER_READER_SPI_SCLK</a>,</div>
+<div class="line"><span class="lineno">   56</span>        .quadwp_io_num = -1,</div>
+<div class="line"><span class="lineno">   57</span>        .quadhd_io_num = -1,</div>
+<div class="line"><span class="lineno">   58</span>    };</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    spi_slave_interface_config_t slvcfg = {</div>
+<div class="line"><span class="lineno">   61</span>        .spics_io_num = <a class="code hl_define" href="#a4139786f058f8367cc00bae7437c3748">ANALYZER_READER_SPI_CS</a>,</div>
+<div class="line"><span class="lineno">   62</span>        .flags = 0,</div>
+<div class="line"><span class="lineno">   63</span>        .queue_size = 3,</div>
+<div class="line"><span class="lineno">   64</span>        .mode = 0, <span class="comment">// SPI mode 0</span></div>
+<div class="line"><span class="lineno">   65</span>    };</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment">// Initialize SPI slave interface</span></div>
+<div class="line"><span class="lineno">   68</span>    esp_err_t ret = spi_slave_initialize(<a class="code hl_define" href="AnalyzerMaster_8h.html#afc8c4c6b4bc659b098c5c94557187a9f">ANALYZER_READER_SPI_HOST</a>, &amp;buscfg, &amp;slvcfg, SPI_DMA_CH_AUTO);</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> (ret != ESP_OK) {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_define" href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">ARErr</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] spi_slave_initialize failed: %s&quot;</span>, esp_err_to_name(ret));</div>
+<div class="line"><span class="lineno">   71</span>        heap_caps_free(spi_tx_buffer);</div>
+<div class="line"><span class="lineno">   72</span>        vTaskDelete(NULL);</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] SPI Slave initialized successfully.&quot;</span>);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    <span class="comment">// --- Main Loop ---</span></div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Preparing data and waiting for master...&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <span class="comment">// 1. Prepare the data to be sent.</span></div>
+<div class="line"><span class="lineno">   82</span>        esp_fill_random(spi_tx_buffer, buffer_size_bytes);</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Generated %d random bytes for transmission.&quot;</span>, buffer_size_bytes);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>        <span class="comment">// 2. Prepare the transaction structure.</span></div>
+<div class="line"><span class="lineno">   86</span>        spi_slave_transaction_t t;</div>
+<div class="line"><span class="lineno">   87</span>        memset(&amp;t, 0, <span class="keyword">sizeof</span>(t));</div>
+<div class="line"><span class="lineno">   88</span>        t.length = buffer_size_bytes * 8; <span class="comment">// Length in bits</span></div>
+<div class="line"><span class="lineno">   89</span>        t.tx_buffer = spi_tx_buffer;</div>
+<div class="line"><span class="lineno">   90</span>        t.rx_buffer = NULL; <span class="comment">// We don&#39;t need to receive data in this protocol.</span></div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        <span class="comment">// 3. Signal the master that we are ready.</span></div>
+<div class="line"><span class="lineno">   93</span><span class="preprocessor">        #if (ANALYZER_READER_PIN_READY != -1)</span></div>
+<div class="line"><span class="lineno">   94</span>            gpio_set_level(<a class="code hl_define" href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>, 1);</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] READY signal set to HIGH.&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        <span class="comment">// 4. Wait for the master to initiate and complete the transaction.</span></div>
+<div class="line"><span class="lineno">   99</span>        <span class="comment">// This function blocks until the transaction is finished.</span></div>
+<div class="line"><span class="lineno">  100</span>        ret = spi_slave_transmit(<a class="code hl_define" href="AnalyzerMaster_8h.html#afc8c4c6b4bc659b098c5c94557187a9f">ANALYZER_READER_SPI_HOST</a>, &amp;t, portMAX_DELAY);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>        <span class="comment">// 5. Lower the READY signal after the transaction.</span></div>
+<div class="line"><span class="lineno">  103</span><span class="preprocessor">        #if (ANALYZER_READER_PIN_READY != -1)</span></div>
+<div class="line"><span class="lineno">  104</span>            gpio_set_level(<a class="code hl_define" href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a>, 0);</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] READY signal set to LOW.&quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        <span class="comment">// 6. Check the result.</span></div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (ret == ESP_OK) {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="comment">// We cannot check the command sent by the master due to ESP-IDF driver limitations.</span></div>
+<div class="line"><span class="lineno">  111</span>            <span class="comment">// We just assume the transaction was successful if it completed.</span></div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] Transaction completed. Sent %d bytes.&quot;</span>, t.trans_len / 8);</div>
+<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_define" href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">ARErr</a>(<span class="stringliteral">&quot;[TaskAnalyzerReader] SPI slave transmit failed: %s&quot;</span>, esp_err_to_name(ret));</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        <span class="comment">// Wait before preparing the next batch of data.</span></div>
+<div class="line"><span class="lineno">  118</span>        vTaskDelay(pdMS_TO_TICKS(500));</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_aa9dfabaf10ebac67bf6de5c7c6e3c668"><div class="ttname"><a href="AnalyzerMaster_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">ANALYZER_READER_PIN_READY</a></div><div class="ttdeci">#define ANALYZER_READER_PIN_READY</div><div class="ttdoc">GPIO to check if the reader device is ready with data (Handshake/Interrupt).</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8h_source.html#l00058">AnalyzerMaster.h:58</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_afc8c4c6b4bc659b098c5c94557187a9f"><div class="ttname"><a href="AnalyzerMaster_8h.html#afc8c4c6b4bc659b098c5c94557187a9f">ANALYZER_READER_SPI_HOST</a></div><div class="ttdeci">#define ANALYZER_READER_SPI_HOST</div><div class="ttdoc">The SPI host to use for communication with the reader device.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8h_source.html#l00026">AnalyzerMaster.h:26</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_a4139786f058f8367cc00bae7437c3748"><div class="ttname"><a href="#a4139786f058f8367cc00bae7437c3748">ANALYZER_READER_SPI_CS</a></div><div class="ttdeci">#define ANALYZER_READER_SPI_CS</div><div class="ttdoc">GPIO for SPI Chip Select.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00033">AnalyzerReader.h:33</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_a8dae7b6cf9f2583e3cc54e90d669d732"><div class="ttname"><a href="#a8dae7b6cf9f2583e3cc54e90d669d732">ANALYZER_READER_SPI_MOSI</a></div><div class="ttdeci">#define ANALYZER_READER_SPI_MOSI</div><div class="ttdoc">GPIO for SPI Master Out Slave In (Slave&#39;s input).</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00029">AnalyzerReader.h:29</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_aa769f6abda658b8dbf8982ff067b0645"><div class="ttname"><a href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a></div><div class="ttdeci">#define ARLog(...)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00054">AnalyzerReader.h:54</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_aae5b0d47db01be3480ca97b5a5ac057b"><div class="ttname"><a href="#aae5b0d47db01be3480ca97b5a5ac057b">ANALYZER_READER_SPI_MISO</a></div><div class="ttdeci">#define ANALYZER_READER_SPI_MISO</div><div class="ttdoc">GPIO for SPI Master In Slave Out (Slave&#39;s output).</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00031">AnalyzerReader.h:31</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_ad886643138019160071d47cfd9843da9"><div class="ttname"><a href="#ad886643138019160071d47cfd9843da9">AREntry</a></div><div class="ttdeci">#define AREntry(...)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00072">AnalyzerReader.h:72</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_ae2ea0014a2ad1dbe1f3320de5d4a2419"><div class="ttname"><a href="#ae2ea0014a2ad1dbe1f3320de5d4a2419">ARErr</a></div><div class="ttdeci">#define ARErr(...)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00060">AnalyzerReader.h:60</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_aee64a8be816565f3ac8a71d40bd2e03f"><div class="ttname"><a href="#aee64a8be816565f3ac8a71d40bd2e03f">ANALYZER_READER_SPI_SCLK</a></div><div class="ttdeci">#define ANALYZER_READER_SPI_SCLK</div><div class="ttdoc">GPIO for SPI Clock.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8h_source.html#l00027">AnalyzerReader.h:27</a></div></div>
+<div class="ttc" id="aAppESPWrap_8c_html_a0026339c80214ec0535bade46f210a23"><div class="ttname"><a href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23">IOConfigAsOutput</a></div><div class="ttdeci">void IOConfigAsOutput(uint64_t pin_bit_mask, gpio_pullup_t pull_up_en, gpio_pulldown_t pull_down_en)</div><div class="ttdoc">Configure GPIO(s) as output with no internal pull resistors and interrupts disabled.</div><div class="ttdef"><b>Definition</b> <a href="AppESPWrap_8c_source.html#l00017">AppESPWrap.c:17</a></div></div>
+<div class="ttc" id="aArithmetic_8h_html_abcfdb61af82f4d781aa19e889dd4fad3"><div class="ttname"><a href="Arithmetic_8h.html#abcfdb61af82f4d781aa19e889dd4fad3">IsNull</a></div><div class="ttdeci">#define IsNull(ptr)</div><div class="ttdoc">Check if pointer is NULL.</div><div class="ttdef"><b>Definition</b> <a href="Arithmetic_8h_source.html#l00032">Arithmetic.h:32</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AnalyzerMaster_8h_source.html#l00058">ANALYZER_READER_PIN_READY</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00033">ANALYZER_READER_SPI_CS</a>, <a class="el" href="AnalyzerMaster_8h_source.html#l00026">ANALYZER_READER_SPI_HOST</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00031">ANALYZER_READER_SPI_MISO</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00029">ANALYZER_READER_SPI_MOSI</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00027">ANALYZER_READER_SPI_SCLK</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00072">AREntry</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00060">ARErr</a>, <a class="el" href="AnalyzerReader_8h_source.html#l00054">ARLog</a>, <a class="el" href="AppESPWrap_8c_source.html#l00017">IOConfigAsOutput()</a>, and <a class="el" href="Arithmetic_8h_source.html#l00032">IsNull</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="AnalyzerReader_8h_a40426d8381c3c22e02a890bdd9c94ab8_cgraph.png" border="0" usemap="#aAnalyzerReader_8h_a40426d8381c3c22e02a890bdd9c94ab8_cgraph" loading="lazy" alt=""/></div>
+<map name="aAnalyzerReader_8h_a40426d8381c3c22e02a890bdd9c94ab8_cgraph" id="aAnalyzerReader_8h_a40426d8381c3c22e02a890bdd9c94ab8_cgraph">
+<area shape="rect" title="Task to handle communication with the Analyzer Master device over SPI (acting as Slave)." alt="" coords="5,5,159,33"/>
+<area shape="rect" href="AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="207,5,343,33"/>
+<area shape="poly" title=" " alt="" coords="159,17,193,19,188,19,159,22"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aadbb35bf60fa6148e622ced423e0fa16" name="aadbb35bf60fa6148e622ced423e0fa16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbb35bf60fa6148e622ced423e0fa16">&#9670;&#160;</a></span>TaskMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TaskMonitor </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task to monitor and print status information for the reader. </p>
+
+<p class="definition">Definition at line <a class="el" href="AnalyzerReader_8c_source.html#l00007">7</a> of file <a class="el" href="AnalyzerReader_8c_source.html">AnalyzerReader.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                            {</div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_define" href="#ad886643138019160071d47cfd9843da9">AREntry</a>(<span class="stringliteral">&quot;TaskMonitor(%p)&quot;</span>, pv);</div>
+<div class="line"><span class="lineno">    9</span>    uint32_t last_heap = 0;</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><span class="lineno">   11</span>        uint32_t current_heap = esp_get_free_heap_size();</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (current_heap != last_heap) {</div>
+<div class="line"><span class="lineno">   13</span>            <a class="code hl_define" href="#aa769f6abda658b8dbf8982ff067b0645">ARLog</a>(<span class="stringliteral">&quot;[Monitor] Free Heap: %u bytes&quot;</span>, current_heap);</div>
+<div class="line"><span class="lineno">   14</span>            last_heap = current_heap;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        vTaskDelay(pdMS_TO_TICKS(5000));</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="line"><span class="lineno">   18</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AnalyzerReader_8h_source.html#l00072">AREntry</a>, and <a class="el" href="AnalyzerReader_8h_source.html#l00054">ARLog</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

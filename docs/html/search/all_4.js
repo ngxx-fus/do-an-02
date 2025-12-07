@@ -25,11 +25,12 @@ var searchData=
   ['delayms_22',['DelayMs',['../ESPFreeRTOSWrapper_8h.html#ad64c5f32aa7747ba40b48550dc4d2cdf',1,'ESPFreeRTOSWrapper.h']]],
   ['deletesem_23',['DeleteSem',['../ESPFreeRTOSWrapper_8h.html#a97bf5bb414011225053f1a4f14b1a969',1,'ESPFreeRTOSWrapper.h']]],
   ['deletetask_24',['DeleteTask',['../ESPFreeRTOSWrapper_8h.html#a69787a571fd1cd6e881a7c4887e95ba4',1,'ESPFreeRTOSWrapper.h']]],
-  ['descriptions_25',['Descriptions',['../index.html#autotoc_md8',1,'Detailed Module Descriptions'],['../index.html#autotoc_md22',1,'File Descriptions'],['../index.html#autotoc_md21',1,'Full Project Tree and File Descriptions']]],
-  ['detailed_20module_20descriptions_26',['Detailed Module Descriptions',['../index.html#autotoc_md8',1,'']]],
-  ['device_27',['About device',['../index.html#autotoc_md2',1,'']]],
-  ['devicepinout_2eh_28',['DevicePinout.h',['../DevicePinout_8h.html',1,'']]],
-  ['dim_5ft_29',['Dim_t',['../LCD32_8h.html#af95d1055c844613206099afc79a2f17c',1,'LCD32.h']]],
-  ['directory_20structure_30',['Top-Level Directory Structure',['../index.html#autotoc_md6',1,'']]],
-  ['disable_31',['DISABLE',['../Components_8h.html#a99496f7308834e8b220f7894efa0b6ab',1,'Components.h']]]
+  ['deprecated_5ftaskanalyzerreadercom_25',['Deprecated_TaskAnalyzerReaderCom',['../AnalyzerMaster_8c.html#a42483e26945fa4fb88fdbf0aaeea7ecf',1,'AnalyzerMaster.c']]],
+  ['descriptions_26',['Descriptions',['../index.html#autotoc_md8',1,'Detailed Module Descriptions'],['../index.html#autotoc_md22',1,'File Descriptions'],['../index.html#autotoc_md21',1,'Full Project Tree and File Descriptions']]],
+  ['detailed_20module_20descriptions_27',['Detailed Module Descriptions',['../index.html#autotoc_md8',1,'']]],
+  ['device_28',['About device',['../index.html#autotoc_md2',1,'']]],
+  ['devicepinout_2eh_29',['DevicePinout.h',['../DevicePinout_8h.html',1,'']]],
+  ['dim_5ft_30',['Dim_t',['../LCD32_8h.html#af95d1055c844613206099afc79a2f17c',1,'LCD32.h']]],
+  ['directory_20structure_31',['Top-Level Directory Structure',['../index.html#autotoc_md6',1,'']]],
+  ['disable_32',['DISABLE',['../Components_8h.html#a99496f7308834e8b220f7894efa0b6ab',1,'Components.h']]]
 ];

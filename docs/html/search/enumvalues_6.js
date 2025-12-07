@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['stat_5ferr_0',['STAT_ERR',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a26f44ac80fcdc2f0d5190a78e8e599e9',1,'ReturnType.h']]],
+  ['stat_5ferr_5falready_5fexists_1',['STAT_ERR_ALREADY_EXISTS',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a192749165703006a45adb9439bb7232e',1,'ReturnType.h']]],
+  ['stat_5ferr_5fbusy_2',['STAT_ERR_BUSY',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a2587beff185740c50535fa3f85126042',1,'ReturnType.h']]],
+  ['stat_5ferr_5fcrc_3',['STAT_ERR_CRC',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a44b48e01a73e85f403e14db6cb0fc305',1,'ReturnType.h']]],
+  ['stat_5ferr_5finit_5ffailed_4',['STAT_ERR_INIT_FAILED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a13e45f86e943da5254a87ce57a9a1929',1,'ReturnType.h']]],
+  ['stat_5ferr_5finvalid_5farg_5',['STAT_ERR_INVALID_ARG',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a39292843d968ec2384f419b1cd6f55b8',1,'ReturnType.h']]],
+  ['stat_5ferr_5finvalid_5fsize_6',['STAT_ERR_INVALID_SIZE',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a256d20594bf9ce307867f87614cd2eaa',1,'ReturnType.h']]],
+  ['stat_5ferr_5finvalid_5fstate_7',['STAT_ERR_INVALID_STATE',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a3224763352130014f283b74898b1e2c2',1,'ReturnType.h']]],
+  ['stat_5ferr_5fio_8',['STAT_ERR_IO',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a99c267770fe690321f3093054d398d17',1,'ReturnType.h']]],
+  ['stat_5ferr_5fmalloc_5ffailed_9',['STAT_ERR_MALLOC_FAILED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a168b264e6666b17567acc5bc659a7d9e',1,'ReturnType.h']]],
+  ['stat_5ferr_5fnot_5ffound_10',['STAT_ERR_NOT_FOUND',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5ae81117b10b88f636024b029c0978ecc4',1,'ReturnType.h']]],
+  ['stat_5ferr_5fnot_5fimplemented_11',['STAT_ERR_NOT_IMPLEMENTED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a8f5e3f4f8e31ea19079c99e6dccd866a',1,'ReturnType.h']]],
+  ['stat_5ferr_5fnull_12',['STAT_ERR_NULL',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a724bfaeb1eab883af04e44a326ea7ab5',1,'ReturnType.h']]],
+  ['stat_5ferr_5foverflow_13',['STAT_ERR_OVERFLOW',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a0bde2968193f39a922e1fb86ef4ea24c',1,'ReturnType.h']]],
+  ['stat_5ferr_5fpermission_14',['STAT_ERR_PERMISSION',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a2644576ac2b525493e4949f364937c11',1,'ReturnType.h']]],
+  ['stat_5ferr_5fpsram_5ffailed_15',['STAT_ERR_PSRAM_FAILED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a5c43a2a7e23a7951babfa81a6ca879b7',1,'ReturnType.h']]],
+  ['stat_5ferr_5ftimeout_16',['STAT_ERR_TIMEOUT',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5ab595588f6a7b4d8ccae5ea3fc9feff19',1,'ReturnType.h']]],
+  ['stat_5ferr_5funderflow_17',['STAT_ERR_UNDERFLOW',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a543d636db5b9049e495e45396bb2506f',1,'ReturnType.h']]],
+  ['stat_5ferr_5funsupported_18',['STAT_ERR_UNSUPPORTED',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5a508b5404b027b42bf9333faceb2fa056',1,'ReturnType.h']]],
+  ['stat_5foke_19',['STAT_OKE',['../ReturnType_8h.html#a4a657281dcba92e349a692551ba703b5af2df43663e616fc4a52d7a9ecd24a2b7',1,'ReturnType.h']]]
+];

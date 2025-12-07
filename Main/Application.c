@@ -1,11 +1,16 @@
 
 #include "Application.h"
 
+uint32_t volatile SYSTEM_STAGE = SYSTEM_INIT_N(0);
+
 void app_main(void){
     SysEntry("app_main() : User SW entry point! ");
-    // Call the main initialization routine which sets up all application tasks.
+    
+    SET_SYSTEM_INIT_N(0);
     AppInitialize();
+    SET_SYSTEM_INIT_N(1);
 
-    // The main task has completed its setup. Delete it to free up its stack memory.
+    INIT_DO_WAIT(vTaskDelay(1));
+    SET_SYSTEM_RUNNING();
     vTaskDelete(NULL);
 }

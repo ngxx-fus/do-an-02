@@ -8,6 +8,7 @@ var searchData=
   ['esp_5ferr_5fconvert_5fen_5',['ESP_ERR_CONVERT_EN',['../ReturnType_8h.html#abcfae2c015b96d80549c9a7a70493497',1,'ReturnType.h']]],
   ['espfreertoswrapper_2eh_6',['ESPFreeRTOSWrapper.h',['../ESPFreeRTOSWrapper_8h.html',1,'']]],
   ['espgpiowrapper_2eh_7',['ESPGPIOWrapper.h',['../ESPGPIOWrapper_8h.html',1,'']]],
-  ['esplogwrapper_2eh_8',['ESPLogWrapper.h',['../ESPLogWrapper_8h.html',1,'']]],
-  ['exitcriticalsection_9',['ExitCriticalSection',['../ESPFreeRTOSWrapper_8h.html#a5340807f35806727998d77666a1c2d7c',1,'ESPFreeRTOSWrapper.h']]]
+  ['espheapwrapper_2eh_8',['ESPHeapWrapper.h',['../ESPHeapWrapper_8h.html',1,'']]],
+  ['esplogwrapper_2eh_9',['ESPLogWrapper.h',['../ESPLogWrapper_8h.html',1,'']]],
+  ['exitcriticalsection_10',['ExitCriticalSection',['../ESPFreeRTOSWrapper_8h.html#a5340807f35806727998d77666a1c2d7c',1,'ESPFreeRTOSWrapper.h']]]
 ];

@@ -1,85 +1,87 @@
 <map id="TaskScreen" name="TaskScreen">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,521,100,549"/>
-<area shape="rect" id="Node000002" href="$LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="186,57,290,85"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,521,56,458,69,362,81,307,97,252,119,197,145,146,170,116,202,92,199,96,174,119,150,149,123,199,102,253,86,309,75,363,61,458,57,521"/>
-<area shape="rect" id="Node000006" href="$LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="185,159,291,186"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="51,521,52,462,63,375,75,328,92,281,115,236,146,197,171,182,169,186,149,201,119,239,96,283,80,329,68,376,57,462,56,521"/>
-<area shape="rect" id="Node000007" href="$LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="148,211,328,238"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="51,521,56,470,69,397,81,358,97,318,119,282,146,249,154,244,151,249,150,253,123,285,102,321,86,359,74,399,61,471,57,521"/>
-<area shape="rect" id="Node000014" href="$LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="406,495,534,522"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="71,519,105,498,147,481,214,470,283,470,347,478,405,490,400,492,346,483,282,476,215,476,148,486,108,502,75,523"/>
-<area shape="rect" id="Node000015" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="845,565,1008,593"/>
-<area shape="poly" id="edge50_Node000001_Node000015" title=" " alt="" coords="63,520,98,486,121,469,147,457,196,445,236,445,277,451,328,457,462,462,566,469,669,485,797,519,844,536,887,558,882,558,842,541,796,524,668,491,565,474,461,468,328,462,276,456,236,450,197,450,149,462,124,474,101,490,68,522"/>
-<area shape="rect" id="Node000016" href="$LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="154,547,322,574"/>
-<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="99,539,140,545,136,548,101,544"/>
-<area shape="rect" id="Node000018" href="$LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="612,617,797,645"/>
-<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="73,547,109,567,148,583,266,610,387,625,500,632,599,634,594,636,500,637,386,631,265,615,147,588,107,572,75,552"/>
-<area shape="rect" id="Node000020" href="$LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="408,700,532,728"/>
-<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="58,547,71,579,89,617,115,655,149,685,178,700,208,711,272,723,336,726,395,725,390,727,336,732,272,729,207,716,175,705,146,689,111,658,84,619,66,581,58,552"/>
-<area shape="rect" id="Node000021" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="163,749,312,777"/>
-<area shape="poly" id="edge25_Node000001_Node000021" title=" " alt="" coords="57,547,69,585,86,633,113,684,130,708,149,729,166,742,161,743,146,733,126,712,108,687,81,635,64,586,57,552"/>
-<area shape="rect" id="Node000022" href="$LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="176,495,300,522"/>
-<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="98,526,162,518,159,522,101,531"/>
-<area shape="rect" id="Node000023" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="158,648,318,676"/>
-<area shape="poly" id="edge29_Node000001_Node000023" title=" " alt="" coords="64,547,101,587,124,609,149,628,173,641,168,643,146,632,121,613,97,591,65,552"/>
-<area shape="rect" id="Node000025" href="$LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="173,801,303,829"/>
-<area shape="poly" id="edge33_Node000001_Node000025" title=" " alt="" coords="55,547,63,595,78,659,106,727,125,759,149,787,162,797,156,797,146,790,121,762,101,730,73,661,58,596,55,552"/>
-<area shape="rect" id="Node000026" href="$LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="165,263,311,290"/>
-<area shape="poly" id="edge34_Node000001_Node000026" title=" " alt="" coords="54,520,64,482,82,431,109,375,146,324,164,308,187,295,184,300,167,312,150,328,114,378,87,433,70,484,60,521"/>
-<area shape="rect" id="Node000028" href="$LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="428,324,512,352"/>
-<area shape="poly" id="edge39_Node000001_Node000028" title=" " alt="" coords="56,520,67,491,86,454,112,417,146,386,178,368,213,355,284,338,354,331,415,332,410,335,354,336,285,343,214,360,181,373,149,391,116,421,90,457,72,493,61,522"/>
-<area shape="rect" id="Node000031" href="$LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="192,853,284,881"/>
-<area shape="poly" id="edge49_Node000001_Node000031" title=" " alt="" coords="54,547,59,603,72,681,83,723,100,765,122,804,150,839,163,848,179,858,174,858,160,853,146,842,117,807,95,767,78,725,67,682,54,604,54,552"/>
-<area shape="rect" id="Node000032" href="$AnalyzerMaster_8c.html#affdc3e0d5cf57157bff1937be1a18a8f" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="191,905,284,933"/>
-<area shape="poly" id="edge51_Node000001_Node000032" title=" " alt="" coords="56,547,69,620,89,723,116,825,132,864,150,891,162,901,179,910,173,910,159,905,146,894,127,867,111,826,84,725,64,621,55,552"/>
-<area shape="rect" id="Node000003" href="$P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="403,5,537,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,58,392,35,388,39,292,62"/>
-<area shape="rect" id="Node000004" href="$P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="400,57,540,85"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="289,69,387,69,383,73,291,73"/>
-<area shape="rect" id="Node000005" href="$P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="640,57,769,85"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="539,69,627,70,622,73,542,74"/>
-<area shape="rect" id="Node000008" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="376,211,564,238"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="327,222,363,223,358,226,330,227"/>
-<area shape="rect" id="Node000010" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="871,207,982,234"/>
-<area shape="poly" id="edge14_Node000007_Node000010" title=" " alt="" coords="290,208,435,173,523,157,612,145,705,133,746,134,797,145,852,167,898,197,892,198,849,172,796,150,746,140,705,139,613,150,524,162,436,179,293,212"/>
-<area shape="rect" id="Node000009" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="640,159,769,186"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="535,208,627,189,623,192,537,212"/>
-<area shape="rect" id="Node000013" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="640,211,769,238"/>
-<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="564,222,627,223,622,226,566,227"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="769,184,858,205,853,206,770,189"/>
-<area shape="rect" id="Node000011" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1062,259,1187,286"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="982,232,1056,254,1051,255,982,238"/>
-<area shape="rect" id="Node000012" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1056,311,1192,338"/>
-<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="982,232,1009,245,1025,258,1034,271,1043,283,1058,296,1068,303,1063,303,1054,300,1039,287,1030,274,1021,261,1007,249,982,237"/>
-<area shape="poly" id="edge13_Node000013_Node000010" title=" " alt="" coords="769,221,858,221,853,223,771,226"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="534,513,797,551,843,561,838,562,796,556,534,519"/>
-<area shape="rect" id="Node000017" href="$LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="624,565,785,593"/>
-<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="322,561,610,574,606,577,323,566"/>
-<area shape="poly" id="edge19_Node000017_Node000015" title=" " alt="" coords="785,577,832,579,827,580,786,582"/>
-<area shape="poly" id="edge22_Node000018_Node000015" title=" " alt="" coords="766,614,852,596,847,598,768,619"/>
-<area shape="rect" id="Node000019" href="$LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="867,617,986,645"/>
-<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="796,629,855,631,849,632,797,634"/>
-<area shape="poly" id="edge24_Node000020_Node000015" title=" " alt="" coords="532,712,591,708,658,699,729,682,795,654,810,643,819,630,828,617,843,604,853,601,858,599,846,608,832,620,823,633,814,647,798,659,731,687,659,704,591,713,533,717"/>
-<area shape="poly" id="edge26_Node000021_Node000020" title=" " alt="" coords="305,746,395,729,390,731,307,751"/>
-<area shape="poly" id="edge28_Node000022_Node000014" title=" " alt="" coords="299,506,393,507,389,510,301,511"/>
-<area shape="poly" id="edge30_Node000023_Node000020" title=" " alt="" coords="303,674,395,696,390,698,303,679"/>
-<area shape="rect" id="Node000024" href="$LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="404,648,536,676"/>
-<area shape="poly" id="edge31_Node000023_Node000024" title=" " alt="" coords="317,659,392,661,387,663,318,664"/>
-<area shape="poly" id="edge32_Node000024_Node000018" title=" " alt="" coords="535,651,599,644,594,646,537,656"/>
-<area shape="poly" id="edge35_Node000026_Node000008" title=" " alt="" coords="302,260,392,241,388,244,305,264"/>
-<area shape="rect" id="Node000027" href="$P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="854,259,999,286"/>
-<area shape="poly" id="edge36_Node000026_Node000027" title=" " alt="" coords="311,273,840,271,837,275,312,279"/>
-<area shape="poly" id="edge37_Node000027_Node000011" title=" " alt="" coords="999,270,1048,272,1043,273,1000,275"/>
-<area shape="poly" id="edge38_Node000027_Node000012" title=" " alt="" coords="982,284,1056,306,1051,307,982,290"/>
-<area shape="poly" id="edge41_Node000028_Node000009" title=" " alt="" coords="485,322,562,248,585,221,595,209,611,197,628,190,624,194,614,201,599,213,589,224,566,252,489,326"/>
-<area shape="poly" id="edge40_Node000028_Node000012" title=" " alt="" coords="508,350,599,379,658,394,723,407,793,416,866,419,938,414,1007,399,1055,376,1094,350,1099,348,1058,381,1009,404,938,420,866,425,793,422,723,413,657,400,597,384,509,355"/>
-<area shape="poly" id="edge42_Node000028_Node000013" title=" " alt="" coords="499,321,662,244,658,247,502,326"/>
-<area shape="rect" id="Node000029" href="$P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="878,311,974,338"/>
-<area shape="poly" id="edge43_Node000028_Node000029" title=" " alt="" coords="512,334,865,325,861,328,514,339"/>
-<area shape="rect" id="Node000030" href="$P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="872,363,980,390"/>
-<area shape="poly" id="edge46_Node000028_Node000030" title=" " alt="" coords="513,339,859,369,854,372,513,344"/>
-<area shape="poly" id="edge44_Node000029_Node000011" title=" " alt="" coords="974,309,1056,290,1051,292,976,314"/>
-<area shape="poly" id="edge45_Node000029_Node000012" title=" " alt="" coords="974,322,1043,324,1038,325,976,327"/>
-<area shape="poly" id="edge47_Node000030_Node000011" title=" " alt="" coords="980,361,1007,348,1021,336,1030,323,1039,310,1054,297,1063,295,1067,292,1058,301,1043,314,1034,326,1025,339,1009,352,982,365"/>
-<area shape="poly" id="edge48_Node000030_Node000012" title=" " alt="" coords="980,360,1056,342,1052,344,982,365"/>
+<area shape="rect" id="Node000001" title="FreeRTOS task for handling LCD screen updates and UI logic." alt="" coords="5,135,100,162"/>
+<area shape="rect" id="Node000002" href="$LCD32_8c.html#acf1b7cb245918cbd52aead36070bca7d" title="Configure pin mapping for LCD." alt="" coords="167,32,272,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,133,101,102,146,70,161,64,158,68,149,75,104,106,70,136"/>
+<area shape="rect" id="Node000006" href="$LCD32_8c.html#a226dad50852060e1f0343f2b107b8e42" title="Deallocate memory for LCD32Dev_t object and Canvas." alt="" coords="166,84,272,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="98,132,158,115,155,119,102,136"/>
+<area shape="rect" id="Node000007" href="$LCD32_8c.html#accf251caf6d7c7d7ea6aaf039fd86dd0" title="Initialize the LCD (GPIOs, Reset, Startup Sequence)" alt="" coords="619,135,704,162"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="99,146,605,146,603,151,101,151"/>
+<area shape="rect" id="Node000015" href="$LCD32_8c.html#a51e6740149e8127f18d85feacb483c81" title="Allocates memory for a new LCD32Dev_t object and Canvas." alt="" coords="173,469,266,497"/>
+<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="54,160,60,216,73,294,85,337,101,379,122,419,150,455,162,465,157,467,146,458,118,422,96,381,80,339,68,295,55,217,54,166"/>
+<area shape="rect" id="Node000016" href="$AnalyzerMaster_8c.html#a5052cb6672ac6039c8c593197822372e" title="Perform a visual test sequence on the LCD screen." alt="" coords="148,417,291,445"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="63,160,205,403,199,404,61,165"/>
+<area shape="rect" id="Node000003" href="$P16Com_8c.html#aee81d39be9e790673d65516e90141088" title="Configure Control pins mapping and calculate IO Masks." alt="" coords="362,57,496,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,50,349,60,344,63,273,54"/>
+<area shape="rect" id="Node000004" href="$P16Com_8c.html#af9d3250b810a084c6725b06c0b61968b" title="Configure Data pins mapping and calculate IO Masks." alt="" coords="360,5,499,33"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="270,37,346,28,342,32,273,41"/>
+<area shape="rect" id="Node000005" href="$P16Com_8c.html#aa4f1ce4adaac2b888b9932c33e14692c" title="Builds the Look&#45;Up Tables (LUTs) for GPIO mask pre&#45;calculation." alt="" coords="597,5,726,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="498,17,584,18,579,21,501,22"/>
+<area shape="rect" id="Node000008" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="1247,136,1384,164"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="694,132,783,99,843,82,910,66,981,55,1055,51,1128,55,1200,70,1249,94,1291,125,1285,125,1247,98,1198,75,1128,60,1055,56,981,61,911,72,844,87,785,104,697,137"/>
+<area shape="rect" id="Node000009" href="$LCD32_8c.html#a71d3eb3d1a112561c73055709cc0d805" title="Helper to write Command." alt="" coords="832,237,960,265"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="688,160,805,222,827,232,822,233,803,227,688,165"/>
+<area shape="rect" id="Node000012" href="$LCD32_8c.html#ae4599f837727b7d7d43cd5d28f3e5934" title="Helper to write Data." alt="" coords="831,185,960,213"/>
+<area shape="poly" id="edge12_Node000007_Node000012" title=" " alt="" coords="704,155,819,181,814,183,705,160"/>
+<area shape="rect" id="Node000013" href="$P16Com_8c.html#a7705594730141f8d8213378a645e6eef" title="Initialize the driver GPIOs and Flags." alt="" coords="1070,136,1166,164"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="704,146,1056,148,1052,151,705,151"/>
+<area shape="rect" id="Node000014" href="$P16Com_8c.html#ac63f817b467733d3a239b5086646d6db" title="Read a single word from the bus." alt="" coords="1064,84,1172,112"/>
+<area shape="poly" id="edge17_Node000007_Node000014" title=" " alt="" coords="703,141,803,129,1051,104,1046,106,804,134,705,146"/>
+<area shape="rect" id="Node000010" href="$P16Com_8c.html#ad1662d1fa1e89ee0da92e098e4e3ceb8" title="Write a single word to the bus." alt="" coords="1062,188,1173,216"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="960,234,1050,216,1045,218,961,239"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="1172,185,1248,167,1243,169,1174,190"/>
+<area shape="rect" id="Node000011" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="1253,188,1378,216"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1173,199,1240,201,1234,202,1174,204"/>
+<area shape="poly" id="edge13_Node000012_Node000010" title=" " alt="" coords="961,197,1049,200,1044,202,962,203"/>
+<area shape="poly" id="edge16_Node000013_Node000008" title=" " alt="" coords="1166,147,1234,149,1229,151,1167,152"/>
+<area shape="poly" id="edge15_Node000013_Node000011" title=" " alt="" coords="1166,160,1248,183,1243,184,1166,165"/>
+<area shape="poly" id="edge19_Node000014_Node000008" title=" " alt="" coords="1172,109,1248,131,1243,132,1173,115"/>
+<area shape="poly" id="edge18_Node000014_Node000011" title=" " alt="" coords="1172,109,1201,122,1216,135,1226,148,1235,160,1249,173,1259,181,1254,181,1246,177,1231,164,1221,151,1212,139,1198,127,1172,114"/>
+<area shape="rect" id="Node000017" href="$LCD32_8c.html#a13ac2dd79424cdc876c7aacfa13d6aae" title="Write a single pixel directly to the LCD (bypassing canvas)" alt="" coords="339,185,519,213"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="222,416,236,378,259,326,293,271,314,246,337,224,349,218,345,222,341,228,317,249,297,274,264,328,241,380,227,418"/>
+<area shape="rect" id="Node000019" href="$LCD32_8c.html#a87df59d05cb81e86b82357437c8347a2" title="Draw a character using GFX font." alt="" coords="598,493,725,521"/>
+<area shape="poly" id="edge27_Node000016_Node000019" title=" " alt="" coords="260,443,292,455,316,469,340,479,402,493,466,501,585,508,580,510,466,507,401,498,338,484,313,473,290,460,261,448"/>
+<area shape="rect" id="Node000020" href="$LCD32_8c.html#a00a1b18b664d6f0c07274130784de43e" title="Draw a single pixel on the canvas (with bounds check)" alt="" coords="1036,544,1199,572"/>
+<area shape="poly" id="edge51_Node000016_Node000020" title=" " alt="" coords="291,426,399,424,519,429,653,439,757,450,859,469,989,502,1034,517,1076,537,1071,537,1032,522,987,507,858,474,756,455,652,444,519,434,399,429,292,431"/>
+<area shape="rect" id="Node000021" href="$LCD32_8c.html#a4e001150ae8f409049e870565296dd14" title="Draw an empty rectangle." alt="" coords="345,544,513,572"/>
+<area shape="poly" id="edge29_Node000016_Node000021" title=" " alt="" coords="270,443,293,456,309,473,317,491,325,507,341,524,360,537,355,538,337,528,321,510,313,493,304,476,289,460,270,448"/>
+<area shape="rect" id="Node000023" href="$LCD32_8c.html#a4150f3e7dba29fd578d38040b45b9a54" title="Draw a filled polygon (Scanline algorithm)" alt="" coords="804,697,988,725"/>
+<area shape="poly" id="edge32_Node000016_Node000023" title=" " alt="" coords="276,443,293,456,315,493,321,531,319,568,312,604,305,639,305,672,315,704,341,735,370,755,401,772,433,784,468,792,539,799,611,794,682,782,747,765,847,732,853,731,748,770,683,787,612,800,539,804,467,797,432,789,398,776,367,760,337,738,310,707,300,673,300,638,306,603,313,567,316,531,310,495,289,460,276,448"/>
+<area shape="rect" id="Node000025" href="$LCD32_8c.html#a55f5e2c2e90ca5af94b1cc49184bb933" title="Draw a line using Bresenham&#39;s algorithm." alt="" coords="599,620,724,648"/>
+<area shape="poly" id="edge35_Node000016_Node000025" title=" " alt="" coords="274,443,293,456,306,472,312,489,316,522,320,553,328,567,341,581,358,591,382,600,444,613,516,622,586,630,581,631,515,628,444,619,380,605,355,596,337,585,323,570,315,554,311,523,307,491,301,475,289,460,274,448"/>
+<area shape="rect" id="Node000026" href="$LCD32_8c.html#ab71611daf778e243ae3d07b998141873" title="Draw a polygon outline." alt="" coords="354,645,504,673"/>
+<area shape="poly" id="edge37_Node000016_Node000026" title=" " alt="" coords="275,443,293,456,308,478,316,500,317,543,319,584,326,605,341,625,354,638,348,637,337,629,321,607,314,585,312,543,311,501,304,481,289,460,275,448"/>
+<area shape="rect" id="Node000027" href="$LCD32_8c.html#a4263bbd9f68b5172ce290932fc782781" title="Draw a string using GFX font." alt="" coords="367,443,491,470"/>
+<area shape="poly" id="edge39_Node000016_Node000027" title=" " alt="" coords="291,437,354,446,349,448,292,442"/>
+<area shape="rect" id="Node000028" href="$LCD32_8c.html#a2721b67931fdbec4b71c4abdcd9485e7" title="Draw a thick line." alt="" coords="350,697,509,725"/>
+<area shape="poly" id="edge41_Node000016_Node000028" title=" " alt="" coords="276,443,293,456,312,486,320,515,320,544,317,572,314,600,314,628,322,655,341,683,345,689,340,687,337,686,317,657,309,629,308,600,311,572,315,544,314,516,307,488,289,460,276,448"/>
+<area shape="rect" id="Node000030" href="$LCD32_8c.html#a74e67a98ba6b2fb2399a8bc185f2c542" title="Fill the entire canvas with a single color." alt="" coords="364,237,494,265"/>
+<area shape="poly" id="edge45_Node000016_Node000030" title=" " alt="" coords="225,416,266,349,299,309,337,276,352,270,348,273,341,280,303,313,271,352,230,418"/>
+<area shape="rect" id="Node000031" href="$LCD32_8c.html#a91b667df683b10d8f2ac282f25684de0" title="Flush the internal Canvas buffer to the display." alt="" coords="356,341,502,369"/>
+<area shape="poly" id="edge46_Node000016_Node000031" title=" " alt="" coords="258,415,338,385,375,373,371,376,340,390,260,419"/>
+<area shape="rect" id="Node000033" href="$AnalyzerMaster_8c.html#acc7f74b86a96e15af9f00f9628f291c0" title="Helper to generate random coordinates with an out&#45;of&#45;bounds margin." alt="" coords="366,289,492,317"/>
+<area shape="poly" id="edge52_Node000016_Node000033" title=" " alt="" coords="231,415,276,372,305,348,338,328,355,321,351,325,340,332,309,353,279,376,235,419"/>
+<area shape="poly" id="edge26_Node000017_Node000010" title=" " alt="" coords="484,211,520,223,544,237,568,249,685,286,734,300,780,309,826,312,874,308,927,296,987,274,1002,264,1011,253,1020,239,1034,226,1051,221,1046,223,1038,231,1024,243,1015,256,1005,268,989,279,928,301,875,313,826,317,780,314,733,305,684,291,566,254,542,242,518,228,485,216"/>
+<area shape="rect" id="Node000018" href="$LCD32_8c.html#af58567f7aad0d9e4e091cf7a55647cde" title="Set the active drawing area window on the LCD." alt="" coords="567,212,756,240"/>
+<area shape="poly" id="edge23_Node000017_Node000018" title=" " alt="" coords="519,207,554,212,549,214,521,212"/>
+<area shape="poly" id="edge24_Node000018_Node000009" title=" " alt="" coords="755,233,819,242,814,243,757,239"/>
+<area shape="poly" id="edge25_Node000018_Node000012" title=" " alt="" coords="755,213,818,207,813,209,757,218"/>
+<area shape="poly" id="edge28_Node000019_Node000020" title=" " alt="" coords="725,507,847,515,988,530,1039,540,1034,541,988,535,847,520,726,513"/>
+<area shape="rect" id="Node000022" href="$LCD32_8c.html#ac85feb8535b520cc3ef426bff9ba6bbc" title="Helper to draw a filled rectangle on the canvas." alt="" coords="815,544,976,572"/>
+<area shape="poly" id="edge30_Node000021_Node000022" title=" " alt="" coords="514,555,802,557,797,559,514,560"/>
+<area shape="poly" id="edge31_Node000022_Node000020" title=" " alt="" coords="977,555,1023,557,1018,558,977,560"/>
+<area shape="poly" id="edge34_Node000023_Node000020" title=" " alt="" coords="917,694,1081,582,1086,580,919,699"/>
+<area shape="rect" id="Node000024" href="$LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f" title=" " alt="" coords="1058,697,1177,725"/>
+<area shape="poly" id="edge33_Node000023_Node000024" title=" " alt="" coords="988,709,1046,711,1041,711,988,714"/>
+<area shape="poly" id="edge36_Node000025_Node000020" title=" " alt="" coords="724,622,988,581,1034,575,1028,576,988,586,725,628"/>
+<area shape="poly" id="edge38_Node000026_Node000025" title=" " alt="" coords="504,648,586,642,581,643,505,654"/>
+<area shape="poly" id="edge40_Node000027_Node000019" title=" " alt="" coords="491,467,585,489,580,491,492,473"/>
+<area shape="poly" id="edge42_Node000028_Node000025" title=" " alt="" coords="480,694,518,682,605,654,610,653,520,687,481,699"/>
+<area shape="rect" id="Node000029" href="$LCD32_8c.html#a18f6cfbb2c6805a24740788d14b49da4" title="Helper to draw a filled quadrilateral (4&#45;sided polygon)" alt="" coords="596,697,727,725"/>
+<area shape="poly" id="edge43_Node000028_Node000029" title=" " alt="" coords="509,709,583,711,578,711,509,714"/>
+<area shape="poly" id="edge44_Node000029_Node000023" title=" " alt="" coords="727,709,791,711,785,711,728,714"/>
+<area shape="poly" id="edge47_Node000031_Node000018" title=" " alt="" coords="488,338,518,326,580,288,635,248,631,252,584,292,521,331,490,343"/>
+<area shape="rect" id="Node000032" href="$P16Com_8c.html#a1e6f9b6079888c12656233b3d9429570" title="Write a block of data to the bus (Burst Write)" alt="" coords="1045,240,1190,268"/>
+<area shape="poly" id="edge48_Node000031_Node000032" title=" " alt="" coords="502,357,600,359,722,356,856,343,923,332,987,317,1037,297,1080,277,1084,275,1039,302,989,322,924,337,856,348,723,361,600,365,504,362"/>
+<area shape="poly" id="edge50_Node000032_Node000008" title=" " alt="" coords="1173,237,1198,225,1212,213,1221,201,1231,188,1246,174,1254,172,1259,170,1249,179,1235,191,1226,204,1216,217,1201,229,1176,242"/>
+<area shape="poly" id="edge49_Node000032_Node000011" title=" " alt="" coords="1172,237,1248,219,1243,221,1174,242"/>
 </map>

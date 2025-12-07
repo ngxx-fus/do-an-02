@@ -1,0 +1,5 @@
+<map id="CBuffWrite" name="CBuffWrite">
+<area shape="rect" id="Node000001" title="Writes an array of data to the circular buffer." alt="" coords="5,5,97,33"/>
+<area shape="rect" id="Node000002" href="$CBuff_8c.html#a3451df3e0566f543e8b28ac2ae5202e3" title=" " alt="" coords="145,5,298,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,17,132,19,127,19,97,22"/>
+</map>

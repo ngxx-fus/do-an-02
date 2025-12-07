@@ -12,11 +12,14 @@ extern "C" {
 #include <stdint.h>
 #include <stdlib.h>
 
-#define ENABLE                  0
-#define DISABLE                 1
+#define ENABLE                              0
+#define DISABLE                             1
 
-#define EN_DRIVER_P16           ENABLE
-#define EN_DRIVERLCD            ENABLE
+#define EN_DRIVER_P16                       ENABLE
+#define EN_DRIVERLCD                        ENABLE
+#define EN_DRIVER_ANALYZER_READER_COM       ENABLE
+#define EN_DRIVER_ANALYZER_MASTER_COM       ENABLE
+
 
 #ifdef __cplusplus
 }

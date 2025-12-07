@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['notifytask_0',['NotifyTask',['../ESPFreeRTOSWrapper_8h.html#a5e0a1875e5662871ec060b39366a0eca',1,'ESPFreeRTOSWrapper.h']]]
+  ['madctl_5fbgr_0',['MADCTL_BGR',['../LCD32Cmds_8h.html#a659f0d6f0c258a3d91f882a59dfa76f5',1,'LCD32Cmds.h']]],
+  ['madctl_5fmh_1',['MADCTL_MH',['../LCD32Cmds_8h.html#a6f8b9fad1b5db52b70960b389056f0dd',1,'LCD32Cmds.h']]],
+  ['madctl_5fml_2',['MADCTL_ML',['../LCD32Cmds_8h.html#a9ecee6d3131d3b4f750b94d5766b998a',1,'LCD32Cmds.h']]],
+  ['madctl_5fmv_3',['MADCTL_MV',['../LCD32Cmds_8h.html#adc23a239d2b6976d53254ef4fc5d1713',1,'LCD32Cmds.h']]],
+  ['madctl_5fmx_4',['MADCTL_MX',['../LCD32Cmds_8h.html#a6d18ed48efb3186877a07d0e81155453',1,'LCD32Cmds.h']]],
+  ['madctl_5fmy_5',['MADCTL_MY',['../LCD32Cmds_8h.html#ab30e6bd24448245df1d60a3e1c4ddbdf',1,'LCD32Cmds.h']]],
+  ['main_5floop_5fdelay_5fms_6',['MAIN_LOOP_DELAY_MS',['../AnalyzerMaster_8c.html#a66ffffa960077b74bf7947eda8cbef32',1,'AnalyzerMaster.c']]],
+  ['mask16_7',['Mask16',['../BitOp_8h.html#a0ef86c4720e1a47a11d9e067ab05cac2',1,'BitOp.h']]],
+  ['mask32_8',['Mask32',['../BitOp_8h.html#ae6040a40026014a65607f4bc4063d2ff',1,'Mask32:&#160;BitOp.h'],['../FlagControl_8h.html#ae6040a40026014a65607f4bc4063d2ff',1,'Mask32:&#160;FlagControl.h']]],
+  ['mask64_9',['Mask64',['../BitOp_8h.html#af94bd76050db0d6b7592f17778c0ea0a',1,'BitOp.h']]],
+  ['mask8_10',['Mask8',['../BitOp_8h.html#a27597ab5312ec0cc5471577b7bf1a0b8',1,'BitOp.h']]],
+  ['masks16_11',['Masks16',['../BitOp_8h.html#a22521f8ce75ab74d24f5206ec22340f6',1,'BitOp.h']]],
+  ['masks32_12',['Masks32',['../BitOp_8h.html#a6eef96e68420d8c882cdaa8a9937e6d9',1,'BitOp.h']]],
+  ['masks64_13',['Masks64',['../BitOp_8h.html#aabd880b25b49ec6e77f654ff7c90a01f',1,'BitOp.h']]],
+  ['masks8_14',['Masks8',['../BitOp_8h.html#a36547ab0fb93524ef27865e8e5b485e0',1,'BitOp.h']]],
+  ['max_15',['Max',['../Arithmetic_8h.html#a4886a8f966a69949cefc46a6a3468006',1,'Arithmetic.h']]],
+  ['min_16',['Min',['../Arithmetic_8h.html#a9e04209162ea72f9985338596262b657',1,'Arithmetic.h']]],
+  ['mstoticks_17',['MsToTicks',['../ESPFreeRTOSWrapper_8h.html#aacda6a16d966ef70ec2ceaae4c04c2d7',1,'ESPFreeRTOSWrapper.h']]],
+  ['mutexlock_18',['MutexLock',['../ESPFreeRTOSWrapper_8h.html#af2daa07daced64b7fa39f15cbdd93fef',1,'ESPFreeRTOSWrapper.h']]],
+  ['mutexlocktimeout_19',['MutexLockTimeout',['../ESPFreeRTOSWrapper_8h.html#a52b2b115f9ba62c61834f24e91cd35ef',1,'ESPFreeRTOSWrapper.h']]],
+  ['mutexunlock_20',['MutexUnlock',['../ESPFreeRTOSWrapper_8h.html#a256635b8c596b8b90caaaf38bdfb541e',1,'ESPFreeRTOSWrapper.h']]]
 ];

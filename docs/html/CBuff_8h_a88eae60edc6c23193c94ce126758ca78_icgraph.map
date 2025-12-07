@@ -1,0 +1,7 @@
+<map id="CBuffInit" name="CBuffInit">
+<area shape="rect" id="Node000001" title="Initialize a CBuff handle with an EXTERNAL buffer (Static array or User Pointer)." alt="" coords="466,5,543,33"/>
+<area shape="rect" id="Node000002" href="$CBuff_8c.html#aafe488551a1413b0e68354fb58967e77" title="Creates and allocates a new circular buffer (Heap/PSRAM managed)." alt="" coords="319,5,418,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,19,418,22,418,17,453,19"/>
+<area shape="rect" id="Node000003" href="$AnalyzerMaster_8c.html#a42483e26945fa4fb88fdbf0aaeea7ecf" title=" " alt="" coords="5,5,271,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,19,271,22,271,17,306,19"/>
+</map>

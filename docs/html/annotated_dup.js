@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "CBuff_t", "structCBuff__t.html", "structCBuff__t" ],
     [ "GFXfont", "structGFXfont.html", "structGFXfont" ],
     [ "GFXglyph", "structGFXglyph.html", "structGFXglyph" ],
     [ "LCD32Dev_t", "structLCD32Dev__t.html", "structLCD32Dev__t" ],

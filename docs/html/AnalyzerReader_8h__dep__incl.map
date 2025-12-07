@@ -1,5 +1,11 @@
 <map id="AppCore/AnalyzerReader/AnalyzerReader.h" name="AppCore/AnalyzerReader/AnalyzerReader.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,189,50"/>
-<area shape="rect" id="Node000002" href="$AnalyzerReader_8c.html" title=" " alt="" coords="5,98,189,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,64,100,99,94,97,95,68"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,5,282,50"/>
+<area shape="rect" id="Node000002" href="$AppCore_2AnalyzerReader_2All_8h.html" title=" " alt="" coords="99,98,282,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,63,193,99,188,97,189,68"/>
+<area shape="rect" id="Node000003" href="$AnalyzerReader_8c.html" title=" " alt="" coords="5,191,189,235"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="156,155,121,192,117,189,159,151"/>
+<area shape="rect" id="Node000004" href="$Application_8h.html" title=" " alt="" coords="212,199,355,227"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,151,273,198,267,199,222,156"/>
+<area shape="rect" id="Node000005" href="$Application_8c.html" title=" " alt="" coords="213,283,354,311"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="286,241,286,285,281,282,282,245"/>
 </map>

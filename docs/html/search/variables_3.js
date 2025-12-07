@@ -1,21 +1,9 @@
 var searchData=
 [
-  ['d0_0',['D0',['../structP16Dev__t.html#a3cb8d44db44eb75cdba85afd9e02c614',1,'P16Dev_t']]],
-  ['d1_1',['D1',['../structP16Dev__t.html#a7238c228da4763076026e36977426145',1,'P16Dev_t']]],
-  ['d10_2',['D10',['../structP16Dev__t.html#aced5dff0a719039dbeab28fd27e326d8',1,'P16Dev_t']]],
-  ['d11_3',['D11',['../structP16Dev__t.html#a18ecb542a4591601af6b4956e4eaff2c',1,'P16Dev_t']]],
-  ['d12_4',['D12',['../structP16Dev__t.html#afce8e4234557fbf27cf41d49e95ace6e',1,'P16Dev_t']]],
-  ['d13_5',['D13',['../structP16Dev__t.html#ae3fd105345fcef0c6cc59b1c38a3ad8a',1,'P16Dev_t']]],
-  ['d14_6',['D14',['../structP16Dev__t.html#a7a97b7c4d3ae966225c465c7cda81bb0',1,'P16Dev_t']]],
-  ['d15_7',['D15',['../structP16Dev__t.html#aae67a0c6c5fa4196148292e699534e73',1,'P16Dev_t']]],
-  ['d2_8',['D2',['../structP16Dev__t.html#a613951d7f3efc0efea2f65dbc16a9e41',1,'P16Dev_t']]],
-  ['d3_9',['D3',['../structP16Dev__t.html#a89287430e041c72d6e65a2fedaccf7d3',1,'P16Dev_t']]],
-  ['d4_10',['D4',['../structP16Dev__t.html#a80796dca59fe3075ac7f250da993f6f4',1,'P16Dev_t']]],
-  ['d5_11',['D5',['../structP16Dev__t.html#a6099ae64cddc5da987540a6eaeba9ac7',1,'P16Dev_t']]],
-  ['d6_12',['D6',['../structP16Dev__t.html#a484cd25d42ec2a8a6662815827030337',1,'P16Dev_t']]],
-  ['d7_13',['D7',['../structP16Dev__t.html#ace63deed026ec92a06ba5af439a8c8cd',1,'P16Dev_t']]],
-  ['d8_14',['D8',['../structP16Dev__t.html#a64abf87360402927eeae6bbe1f022fb4',1,'P16Dev_t']]],
-  ['d9_15',['D9',['../structP16Dev__t.html#a3cc29874f4849d3375652bbfb24725b6',1,'P16Dev_t']]],
-  ['datiomask_16',['DatIOMask',['../structP16Dev__t.html#a6b9acf581f4b1ea2336bab548cca00ef',1,'P16Dev_t']]],
-  ['datpinarr_17',['DatPinArr',['../structP16Dev__t.html#a1fb58749c4968b6e1efa3d6464c02db9',1,'P16Dev_t']]]
+  ['canvas_0',['Canvas',['../structLCD32Dev__t.html#abbdb1d1162921451c0312517874dfe6f',1,'LCD32Dev_t']]],
+  ['chipsel_1',['ChipSel',['../structP16Dev__t.html#ad03d2ec9c1848d1cc9977a28a14d5b01',1,'P16Dev_t']]],
+  ['clrmask_2',['clrMask',['../structP16LutEntry__s.html#a359545b569e919cf056f09719d8e2cd2',1,'P16LutEntry_s']]],
+  ['col_3',['col',['../structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3',1,'LCDPoint_t']]],
+  ['ctliomask_4',['CtlIOMask',['../structP16Dev__t.html#a4d9dcf30d8e8e33038edf8058a43cd22',1,'P16Dev_t']]],
+  ['ctlpinarr_5',['CtlPinArr',['../structP16Dev__t.html#a121ee60ccaf03d3b97ebf017759fc262',1,'P16Dev_t']]]
 ];

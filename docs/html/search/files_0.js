@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['all_2eh_0',['All.h',['../AppConfig_2All_8h.html',1,'(Global Namespace)'],['../AppCore_2AnalyzerMaster_2All_8h.html',1,'(Global Namespace)'],['../AppESPWrap_2All_8h.html',1,'(Global Namespace)'],['../AppFonts_2All_8h.html',1,'(Global Namespace)'],['../AppUtils_2All_8h.html',1,'(Global Namespace)']]],
+  ['all_2eh_0',['All.h',['../AppComponents_2CBuff_2All_8h.html',1,'(Global Namespace)'],['../AppConfig_2All_8h.html',1,'(Global Namespace)'],['../AppCore_2AnalyzerMaster_2All_8h.html',1,'(Global Namespace)'],['../AppCore_2AnalyzerReader_2All_8h.html',1,'(Global Namespace)'],['../AppCore_2SystemMonitor_2All_8h.html',1,'(Global Namespace)'],['../AppESPWrap_2All_8h.html',1,'(Global Namespace)'],['../AppFonts_2All_8h.html',1,'(Global Namespace)'],['../AppUtils_2All_8h.html',1,'(Global Namespace)']]],
   ['analyzermaster_2ec_1',['AnalyzerMaster.c',['../AnalyzerMaster_8c.html',1,'']]],
   ['analyzermaster_2eh_2',['AnalyzerMaster.h',['../AnalyzerMaster_8h.html',1,'']]],
   ['analyzerreader_2ec_3',['AnalyzerReader.c',['../AnalyzerReader_8c.html',1,'']]],

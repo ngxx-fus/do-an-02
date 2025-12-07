@@ -16,6 +16,7 @@ extern "C" {
 #include "Components.h"
 #include "DevicePinout.h"
 #include "SystemLog.h"
+#include "SystemStage.h"
 
 #ifdef __cplusplus
 }

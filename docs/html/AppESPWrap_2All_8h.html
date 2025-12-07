@@ -95,6 +95,7 @@ $(function(){initNavTree('AppESPWrap_2All_8h.html','',''); });
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;rom/ets_sys.h&gt;</code><br />
 <code>#include &lt;esp_random.h&gt;</code><br />
+<code>#include &lt;esp_heap_caps.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="AppConfig_2All_8h_source.html">../AppConfig/All.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ESPGPIOWrapper_8h_source.html">./ESPGPIOWrapper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ESPLogWrapper_8h_source.html">./ESPLogWrapper.h</a>&quot;</code><br />
@@ -104,23 +105,25 @@ Include dependency graph for All.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="AppESPWrap_2All_8h__incl.png" border="0" usemap="#aAppESPWrap_2All_8h" loading="lazy" alt=""/></div>
 <map name="aAppESPWrap_2All_8h" id="aAppESPWrap_2All_8h">
-<area shape="rect" title=" " alt="" coords="1210,5,1348,33"/>
+<area shape="rect" title=" " alt="" coords="1512,5,1649,33"/>
 <area shape="rect" title=" " alt="" coords="80,308,150,336"/>
-<area shape="poly" title=" " alt="" coords="1208,24,623,44,311,61,199,72,133,84,95,96,65,108,41,127,19,158,13,175,9,200,10,230,20,259,40,282,68,301,63,303,37,286,15,261,5,231,3,200,7,173,14,155,37,123,62,103,93,91,132,78,198,66,311,56,622,38,1212,20"/>
+<area shape="poly" title=" " alt="" coords="1509,22,1200,29,770,39,366,57,219,69,133,84,95,96,65,108,41,126,19,158,13,175,9,200,10,230,20,259,40,282,68,301,63,303,37,286,15,261,5,231,3,200,7,173,14,155,37,123,62,103,93,91,132,78,218,64,365,52,770,34,1200,23,1514,21"/>
 <area shape="rect" title=" " alt="" coords="420,308,490,336"/>
-<area shape="poly" title=" " alt="" coords="1348,26,1502,49,1677,83,1752,105,1808,129,1827,142,1839,156,1841,171,1833,186,1805,205,1759,222,1696,236,1620,250,1435,273,1224,290,800,313,505,322,505,317,800,308,1223,285,1434,267,1619,245,1695,231,1757,216,1803,200,1829,183,1836,170,1834,158,1824,146,1806,133,1750,110,1675,89,1501,54,1348,31"/>
+<area shape="poly" title=" " alt="" coords="1638,31,1689,48,1743,73,1794,108,1815,130,1833,155,1839,171,1833,186,1805,205,1759,222,1696,236,1620,250,1435,273,1224,290,800,313,505,322,505,317,800,308,1223,285,1434,267,1619,245,1695,231,1757,216,1803,200,1829,183,1834,171,1829,158,1811,134,1790,112,1740,78,1687,53,1638,36"/>
 <area shape="rect" title=" " alt="" coords="350,157,462,184"/>
-<area shape="poly" title=" " alt="" coords="1207,32,909,84,478,159,477,154,908,78,1213,31"/>
-<area shape="rect" title=" " alt="" coords="1894,81,2008,109"/>
-<area shape="poly" title=" " alt="" coords="1348,23,1582,45,1875,78,1882,82,1876,82,1875,84,1582,50,1348,29"/>
+<area shape="poly" title=" " alt="" coords="1509,25,1247,48,1078,64,909,84,672,121,478,157,477,152,671,116,908,78,1078,58,1246,42,1514,24"/>
+<area shape="rect" title=" " alt="" coords="1817,81,1930,109"/>
+<area shape="poly" title=" " alt="" coords="1633,31,1809,77,1804,77,1633,36"/>
+<area shape="rect" title=" " alt="" coords="1954,81,2087,109"/>
+<area shape="poly" title=" " alt="" coords="1650,29,1941,80,1936,80,1649,35"/>
 <area shape="rect" href="AppConfig_2All_8h.html" title=" " alt="" coords="145,81,277,109"/>
-<area shape="poly" title=" " alt="" coords="1209,28,293,91,293,85,1210,23"/>
+<area shape="poly" title=" " alt="" coords="1511,27,293,92,293,86,1511,22"/>
 <area shape="rect" href="ESPGPIOWrapper_8h.html" title=" " alt="" coords="921,81,1072,109"/>
-<area shape="poly" title=" " alt="" coords="1231,33,1062,79,1061,74,1226,34"/>
-<area shape="rect" href="ESPLogWrapper_8h.html" title=" " alt="" coords="1465,81,1608,109"/>
-<area shape="poly" title=" " alt="" coords="1325,31,1479,76,1473,76,1325,36"/>
-<area shape="rect" href="ESPFreeRTOSWrapper_8h.html" title=" " alt="" coords="2034,81,2215,109"/>
-<area shape="poly" title=" " alt="" coords="1348,23,1635,44,2020,81,2015,81,1635,49,1348,28"/>
+<area shape="poly" title=" " alt="" coords="1508,30,1088,85,1087,79,1514,29"/>
+<area shape="rect" href="ESPLogWrapper_8h.html" title=" " alt="" coords="1509,81,1652,109"/>
+<area shape="poly" title=" " alt="" coords="1582,32,1582,67,1578,64,1579,36"/>
+<area shape="rect" href="ESPFreeRTOSWrapper_8h.html" title=" " alt="" coords="2111,81,2292,109"/>
+<area shape="poly" title=" " alt="" coords="1650,26,2098,80,2093,81,1650,31"/>
 <area shape="poly" title=" " alt="" coords="142,102,114,109,84,120,56,136,33,158,27,173,22,197,24,226,35,259,52,281,75,299,70,301,48,284,30,261,18,227,17,196,22,171,29,155,52,131,81,115,113,104,146,98"/>
 <area shape="poly" title=" " alt="" coords="220,106,248,143,286,182,309,198,328,206,349,215,373,230,408,262,437,296,432,295,404,266,369,234,346,220,326,211,306,202,283,186,244,147,219,111"/>
 <area shape="rect" href="FirmwareType_8h.html" title=" " alt="" coords="53,232,177,260"/>
@@ -160,19 +163,19 @@ Include dependency graph for All.h:</div>
 <area shape="poly" title=" " alt="" coords="1010,107,1047,146,1042,145,1008,112"/>
 <area shape="rect" title=" " alt="" coords="1157,157,1273,184"/>
 <area shape="poly" title=" " alt="" coords="1036,107,1164,151,1159,151,1035,112"/>
-<area shape="poly" title=" " alt="" coords="1546,107,1564,145,1566,167,1557,186,1542,193,1515,199,1426,210,1156,227,850,239,614,246,614,241,850,234,1155,222,1425,205,1514,194,1541,188,1553,182,1561,166,1559,147,1544,111"/>
-<area shape="poly" title=" " alt="" coords="1512,108,1426,152,1424,147,1507,110"/>
-<area shape="poly" title=" " alt="" coords="1531,108,1510,145,1507,141,1526,111"/>
+<area shape="poly" title=" " alt="" coords="1583,107,1579,148,1571,169,1557,186,1536,197,1503,206,1408,221,1282,232,1138,240,842,247,614,248,614,243,842,242,1138,234,1282,227,1407,216,1502,201,1534,192,1553,182,1566,166,1574,146,1579,111"/>
+<area shape="poly" title=" " alt="" coords="1548,109,1434,154,1433,148,1543,110"/>
+<area shape="poly" title=" " alt="" coords="1567,108,1522,149,1519,144,1562,110"/>
 <area shape="rect" title=" " alt="" coords="1618,157,1684,184"/>
-<area shape="poly" title=" " alt="" coords="1557,107,1621,149,1615,148,1556,112"/>
+<area shape="poly" title=" " alt="" coords="1594,107,1631,146,1626,145,1592,112"/>
 <area shape="rect" title=" " alt="" coords="1707,157,1819,184"/>
-<area shape="poly" title=" " alt="" coords="1577,107,1711,152,1706,151,1577,112"/>
-<area shape="rect" title=" " alt="" coords="1893,157,2044,184"/>
-<area shape="poly" title=" " alt="" coords="2099,109,2011,152,2009,147,2094,110"/>
-<area shape="rect" title=" " alt="" coords="2068,157,2184,184"/>
-<area shape="poly" title=" " alt="" coords="2126,107,2127,143,2123,139,2123,111"/>
-<area shape="rect" title=" " alt="" coords="2208,157,2345,184"/>
-<area shape="poly" title=" " alt="" coords="2152,107,2239,150,2233,149,2151,112"/>
+<area shape="poly" title=" " alt="" coords="1613,107,1719,151,1714,150,1613,112"/>
+<area shape="rect" title=" " alt="" coords="1969,157,2120,184"/>
+<area shape="poly" title=" " alt="" coords="2176,109,2087,152,2085,147,2171,110"/>
+<area shape="rect" title=" " alt="" coords="2144,157,2260,184"/>
+<area shape="poly" title=" " alt="" coords="2204,107,2204,143,2200,139,2200,111"/>
+<area shape="rect" title=" " alt="" coords="2284,157,2421,184"/>
+<area shape="poly" title=" " alt="" coords="2229,107,2314,150,2309,149,2228,112"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -180,30 +183,44 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="AppESPWrap_2All_8h__dep__incl.png" border="0" usemap="#aAppESPWrap_2All_8hdep" loading="lazy" alt=""/></div>
 <map name="aAppESPWrap_2All_8hdep" id="aAppESPWrap_2All_8hdep">
-<area shape="rect" title=" " alt="" coords="274,5,412,33"/>
-<area shape="rect" href="LCD32_8h.html" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="71,174,245,218"/>
-<area shape="poly" title=" " alt="" coords="298,42,269,60,240,83,200,130,171,175,167,172,195,127,236,79,266,56,301,38"/>
+<area shape="rect" title=" " alt="" coords="549,5,686,33"/>
+<area shape="rect" href="LCD32_8h.html" title="Driver definitions for 320x240 LCD (16&#45;bit Parallel Interface)" alt="" coords="117,174,292,218"/>
+<area shape="poly" title=" " alt="" coords="532,23,480,30,421,40,361,58,305,83,277,103,254,127,219,175,215,172,249,124,274,99,302,79,359,53,420,35,479,25,536,21"/>
 <area shape="rect" href="AnalyzerMaster_8h.html" title=" " alt="" coords="5,266,188,311"/>
-<area shape="poly" title=" " alt="" coords="261,40,209,59,152,87,100,125,79,148,62,175,56,198,60,222,70,245,82,265,77,266,65,247,55,223,51,197,57,173,75,145,97,121,149,82,207,54,265,36"/>
-<area shape="rect" href="Application_8h.html" title=" " alt="" coords="369,460,512,488"/>
-<area shape="poly" title=" " alt="" coords="392,37,424,55,450,79,472,107,486,132,493,159,495,195,495,290,490,341,477,389,449,462,445,458,472,388,485,340,490,290,490,195,488,160,481,134,468,110,447,83,421,60,393,43"/>
-<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="250,81,436,126"/>
-<area shape="poly" title=" " alt="" coords="344,46,346,81,341,80,342,51"/>
-<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="530,90,732,117"/>
-<area shape="poly" title=" " alt="" coords="404,35,587,88,583,90,404,40"/>
+<area shape="poly" title=" " alt="" coords="531,26,398,44,322,60,249,84,203,100,167,116,136,138,108,175,99,197,95,222,96,266,90,266,89,221,94,196,104,172,133,134,164,111,201,95,248,78,321,55,397,39,535,23"/>
+<area shape="rect" href="Application_8h.html" title=" " alt="" coords="496,460,638,488"/>
+<area shape="poly" title=" " alt="" coords="701,24,766,32,832,43,889,58,911,68,926,79,946,106,954,132,952,195,952,290,950,315,943,338,933,358,919,376,882,407,837,430,787,448,735,460,639,472,638,467,734,455,785,442,835,425,879,402,915,373,928,355,939,336,945,314,947,290,947,195,948,132,942,108,923,83,908,73,887,63,831,48,765,37,702,29"/>
+<area shape="rect" href="P16Com_8h.html" title="16&#45;bit Parallel Communication Driver Definitions" alt="" coords="315,81,502,126"/>
+<area shape="poly" title=" " alt="" coords="568,41,465,83,463,78,572,38"/>
+<area shape="rect" href="AnalyzerReader_8h.html" title=" " alt="" coords="526,81,710,126"/>
+<area shape="poly" title=" " alt="" coords="619,46,620,81,615,79,617,51"/>
+<area shape="rect" href="SystemMonitor_8h.html" title=" " alt="" coords="734,81,913,126"/>
+<area shape="poly" title=" " alt="" coords="665,36,771,80,766,81,665,42"/>
+<area shape="rect" href="AppESPWrap_8c.html" title=" " alt="" coords="987,90,1190,117"/>
+<area shape="poly" title=" " alt="" coords="702,32,969,78,1016,88,1011,89,968,84,702,38"/>
 <area shape="rect" href="LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="212,266,386,311"/>
-<area shape="poly" title=" " alt="" coords="204,224,268,265,263,267,204,230"/>
-<area shape="poly" title=" " alt="" coords="134,234,113,267,109,265,136,229"/>
-<area shape="rect" href="AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="59,359,241,404"/>
-<area shape="poly" title=" " alt="" coords="117,322,140,359,135,359,117,327"/>
-<area shape="rect" href="AnalyzerMaster_8c.html" title=" " alt="" coords="59,452,241,496"/>
-<area shape="poly" title=" " alt="" coords="151,417,152,452,147,451,149,422"/>
-<area shape="poly" title=" " alt="" coords="234,406,400,458,396,461,234,411"/>
-<area shape="rect" href="Application_8c.html" title=" " alt="" coords="370,544,511,572"/>
-<area shape="poly" title=" " alt="" coords="442,502,443,546,438,542,439,506"/>
-<area shape="poly" title=" " alt="" coords="283,135,204,175,200,171,287,131"/>
-<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="269,174,455,218"/>
-<area shape="poly" title=" " alt="" coords="351,138,360,174,355,173,350,143"/>
+<area shape="poly" title=" " alt="" coords="238,226,280,266,274,267,238,232"/>
+<area shape="poly" title=" " alt="" coords="166,230,124,268,120,264,169,226"/>
+<area shape="rect" href="AppCore_2AnalyzerMaster_2All_8h.html" title=" " alt="" coords="120,359,302,404"/>
+<area shape="poly" title=" " alt="" coords="135,318,186,358,181,359,135,323"/>
+<area shape="rect" href="AnalyzerMaster_8c.html" title=" " alt="" coords="120,452,302,496"/>
+<area shape="poly" title=" " alt="" coords="213,417,214,453,209,450,210,421"/>
+<area shape="poly" title=" " alt="" coords="311,405,518,458,513,461,311,411"/>
+<area shape="rect" href="Application_8c.html" title=" " alt="" coords="496,544,638,572"/>
+<area shape="poly" title=" " alt="" coords="569,502,569,546,565,542,565,506"/>
+<area shape="poly" title=" " alt="" coords="344,134,255,175,252,171,348,130"/>
+<area shape="rect" href="P16Com_8c.html" title="16&#45;bit Parallel Communication Driver Implementation" alt="" coords="315,174,502,218"/>
+<area shape="poly" title=" " alt="" coords="410,139,411,174,406,173,407,144"/>
+<area shape="rect" href="AppCore_2AnalyzerReader_2All_8h.html" title=" " alt="" coords="526,174,710,218"/>
+<area shape="poly" title=" " alt="" coords="619,139,620,175,615,172,617,144"/>
+<area shape="poly" title=" " alt="" coords="510,226,486,245,465,268,455,294,455,321,463,348,478,375,517,423,554,460,548,459,513,427,473,378,459,350,450,321,450,293,461,265,483,240,514,223"/>
+<area shape="rect" href="AnalyzerReader_8c.html" title=" " alt="" coords="476,266,659,311"/>
+<area shape="poly" title=" " alt="" coords="600,230,581,268,577,264,596,234"/>
+<area shape="rect" href="AppCore_2SystemMonitor_2All_8h.html" title=" " alt="" coords="734,174,913,218"/>
+<area shape="poly" title=" " alt="" coords="825,139,825,175,821,172,822,143"/>
+<area shape="poly" title=" " alt="" coords="775,226,724,268,675,321,633,376,576,462,573,458,629,373,671,317,720,264,770,228"/>
+<area shape="rect" href="SystemMonitor_8c.html" title=" " alt="" coords="734,266,913,311"/>
+<area shape="poly" title=" " alt="" coords="825,232,825,268,821,265,822,236"/>
 </map>
 </div>
 </div>

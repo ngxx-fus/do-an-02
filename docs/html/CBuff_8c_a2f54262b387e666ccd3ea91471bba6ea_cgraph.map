@@ -1,0 +1,5 @@
+<map id="CBuffPop" name="CBuffPop">
+<area shape="rect" id="Node000001" title="Pops a single element (or block) from the buffer (Atomic/All&#45;or&#45;Nothing)." alt="" coords="5,5,86,33"/>
+<area shape="rect" id="Node000002" href="$CBuff_8c.html#a3815341db93620def1bca590216423c2" title=" " alt="" coords="134,5,289,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,17,121,19,115,20,86,22"/>
+</map>

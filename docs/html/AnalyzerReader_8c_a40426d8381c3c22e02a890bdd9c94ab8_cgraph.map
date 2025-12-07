@@ -1,0 +1,5 @@
+<map id="TaskAnalyzerReader" name="TaskAnalyzerReader">
+<area shape="rect" id="Node000001" title="Task to handle communication with the Analyzer Master device over SPI (acting as Slave)." alt="" coords="5,5,159,33"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0026339c80214ec0535bade46f210a23" title="Configure GPIO(s) as output with no internal pull resistors and interrupts disabled." alt="" coords="207,5,343,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,17,193,19,188,19,159,22"/>
+</map>

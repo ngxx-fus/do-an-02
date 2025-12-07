@@ -2,53 +2,71 @@
 
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
 
-#include "driver/spi_slave.h"
+#include "driver/spi_slave_hd.h"
+#include <string.h>
 
+// Static buffers for SPI transactions
+static HalfWord_t* spi_tx_buffer = NULL;
+static HalfWord_t* spi_rx_buffer = NULL;
+
+// Response data for AM_CMD_REQ_ID
+const static HalfWord_t reader_id = ANALYZER_READER_ID;
+
+/**
+ * @brief Task to monitor system resources, like free heap.
+ */
 void TaskMonitor(void * pv) {
     AREntry("TaskMonitor(%p)", pv);
     uint32_t last_heap = 0;
     while(1) {
-        uint32_t current_heap = esp_get_free_heap_size();
+        // Using the SystemMonitor component functions for consistency
+        uint32_t current_heap = SysMonGetFreeHeapSize();
         if (current_heap != last_heap) {
             ARLog("[Monitor] Free Heap: %u bytes", current_heap);
             last_heap = current_heap;
         }
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        vTaskDelay(pdMS_TO_TICKS(10000)); // Match system monitor interval
     }
 }
 
+/**
+ * @brief Main task to handle SPI slave communication with the Analyzer Master.
+ * @details This implementation uses the Half-Duplex (HD) SPI slave driver to
+ *          correctly handle the Master's command-response protocol. It receives
+ *          a command and argument, then sends the appropriate data back in the
+ *          same transaction.
+ */
 void TaskAnalyzerReader(void * pv) {
     AREntry("TaskAnalyzerReader(%p)", pv);
-
-    // --- Buffer Configuration ---
-    // This must match the master's read size.
-    const size_t buffer_size_bytes = 4096 * sizeof(uint16_t);
-
-    // The slave only needs a transmit buffer for this protocol.
-    uint8_t *spi_tx_buffer = NULL;
+    esp_err_t ret;
 
     // --- Buffer Allocation ---
-    // Allocate DMA-capable memory for SPI buffer
-    spi_tx_buffer = (uint8_t *)heap_caps_malloc(buffer_size_bytes, MALLOC_CAP_DMA);
-
+    // Allocate DMA-capable memory for SPI buffers.
+    spi_tx_buffer = (HalfWord_t *)heap_caps_malloc(ANALYZER_READER_TX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
     if (IsNull(spi_tx_buffer)) {
-        ARErr("[TaskAnalyzerReader] Failed to allocate SPI TX buffer.");
-        vTaskDelete(NULL);
-        return;
+        ARErr("Failed to allocate SPI TX buffer.");
+        goto cleanup;
     }
-    ARLog("[TaskAnalyzerReader] Allocated %d-byte TX buffer.", buffer_size_bytes);
+    ARLog("Allocated %d bytes for TX buffer.", ANALYZER_READER_TX_SIZE * sizeof(HalfWord_t));
+
+    spi_rx_buffer = (HalfWord_t *)heap_caps_malloc(ANALYZER_READER_RX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
+    if (IsNull(spi_rx_buffer)) {
+        ARErr("Failed to allocate SPI RX buffer.");
+        goto cleanup;
+    }
+    ARLog("Allocated %d bytes for RX buffer.", ANALYZER_READER_RX_SIZE * sizeof(HalfWord_t));
 
     // --- GPIO Configuration ---
     // Configure READY pin as output.
     #if (ANALYZER_READER_PIN_READY != -1)
-        IOConfigAsOutput(1ULL << ANALYZER_READER_PIN_READY, -1, -1);
+        IOConfigAsOutput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_DISABLE);
         gpio_set_level(ANALYZER_READER_PIN_READY, 0); // Initially not ready
-        ARLog("[TaskAnalyzerReader] Configured READY pin (%d) as output.", ANALYZER_READER_PIN_READY);
+        ARLog("Configured READY pin (%d) as output.", ANALYZER_READER_PIN_READY);
     #else
-        ARLog("[TaskAnalyzerReader] READY pin is disabled.");
+        ARLog("READY pin is disabled.");
     #endif
 
-    // --- SPI Configuration ---
+    // --- SPI HD Slave Configuration ---
     spi_bus_config_t buscfg = {
         .miso_io_num = ANALYZER_READER_SPI_MISO,
         .mosi_io_num = ANALYZER_READER_SPI_MOSI,
@@ -57,66 +75,114 @@ void TaskAnalyzerReader(void * pv) {
         .quadhd_io_num = -1,
     };
 
-    spi_slave_interface_config_t slvcfg = {
+    // Configuration for the SPI slave device in Half-Duplex mode
+    // This MUST match the master's command/address bit length
+    spi_slave_hd_slot_config_t slvcfg = {
         .spics_io_num = ANALYZER_READER_SPI_CS,
-        .flags = 0,
-        .queue_size = 3,
+        .flags = SPI_SLAVE_HD_DB_BIT_LEN_ACCURATE,
         .mode = 0, // SPI mode 0
+        .command_bits = 16,
+        .address_bits = 16,
+        .dummy_bits = 0,
     };
 
-    // Initialize SPI slave interface
-    esp_err_t ret = spi_slave_initialize(ANALYZER_READER_SPI_HOST, &buscfg, &slvcfg, SPI_DMA_CH_AUTO);
+    ret = spi_slave_hd_init(ANALYZER_READER_SPI_HOST, &buscfg, &slvcfg);
     if (ret != ESP_OK) {
-        ARErr("[TaskAnalyzerReader] spi_slave_initialize failed: %s", esp_err_to_name(ret));
-        heap_caps_free(spi_tx_buffer);
-        vTaskDelete(NULL);
-        return;
+        ARErr("spi_slave_hd_init failed: %s", esp_err_to_name(ret));
+        goto cleanup;
     }
-    ARLog("[TaskAnalyzerReader] SPI Slave initialized successfully.");
+
+    // --- Prepare Transaction Descriptors ---
+    // These descriptors tell the driver what data to send when a specific command is received.
+
+    // Descriptor for AM_CMD_REQ_ID
+    spi_slave_hd_data_t id_trans_cfg = {
+        .cmd = AM_CMD_REQ_ID,
+        .data = (void*)&reader_id,
+        .len = sizeof(reader_id),
+    };
+
+    // Descriptor for AM_CMD_REQ_TEST
+    spi_slave_hd_data_t test_trans_cfg = {
+        .cmd = AM_CMD_REQ_TEST,
+        .data = spi_tx_buffer,
+        .len = ANALYZER_READER_TX_SIZE * sizeof(HalfWord_t), // Max length
+    };
+    
+    // Load the descriptors into the driver
+    spi_slave_hd_data_t* trans_configs[] = { &id_trans_cfg, &test_trans_cfg };
+    ret = spi_slave_hd_load_trans_config(ANALYZER_READER_SPI_HOST, trans_configs, 2);
+    if (ret != ESP_OK) {
+        ARErr("spi_slave_hd_load_trans_config failed: %s", esp_err_to_name(ret));
+        goto cleanup;
+    }
+
+    ARLog("SPI Slave HD initialized and configured. Waiting for master.");
 
     // --- Main Loop ---
     while(1) {
-        ARLog("[TaskAnalyzerReader] Preparing data and waiting for master...");
+        // Prepare data for the next potential transaction
+        esp_fill_random(spi_tx_buffer, ANALYZER_READER_TX_SIZE * sizeof(HalfWord_t));
 
-        // 1. Prepare the data to be sent.
-        esp_fill_random(spi_tx_buffer, buffer_size_bytes);
-        ARLog("[TaskAnalyzerReader] Generated %d random bytes for transmission.", buffer_size_bytes);
-
-        // 2. Prepare the transaction structure.
-        spi_slave_transaction_t t;
-        memset(&t, 0, sizeof(t));
-        t.length = buffer_size_bytes * 8; // Length in bits
-        t.tx_buffer = spi_tx_buffer;
-        t.rx_buffer = NULL; // We don't need to receive data in this protocol.
-
-        // 3. Signal the master that we are ready.
+        // Signal to the master that we are ready for a command
         #if (ANALYZER_READER_PIN_READY != -1)
             gpio_set_level(ANALYZER_READER_PIN_READY, 1);
-            ARLog("[TaskAnalyzerReader] READY signal set to HIGH.");
         #endif
 
-        // 4. Wait for the master to initiate and complete the transaction.
-        // This function blocks until the transaction is finished.
-        ret = spi_slave_transmit(ANALYZER_READER_SPI_HOST, &t, portMAX_DELAY);
+        // Arm the driver and wait for a transaction to occur. This is a blocking call.
+        spi_slave_hd_event_t event;
+        ret = spi_slave_hd_trigger_trans_wait_ret(ANALYZER_READER_SPI_HOST, &event, portMAX_DELAY);
 
-        // 5. Lower the READY signal after the transaction.
+        // Lower the READY signal once the transaction is complete
         #if (ANALYZER_READER_PIN_READY != -1)
             gpio_set_level(ANALYZER_READER_PIN_READY, 0);
-            ARLog("[TaskAnalyzerReader] READY signal set to LOW.");
         #endif
 
-        // 6. Check the result.
-        if (ret == ESP_OK) {
-            // We cannot check the command sent by the master due to ESP-IDF driver limitations.
-            // We just assume the transaction was successful if it completed.
-            ARLog("[TaskAnalyzerReader] Transaction completed. Sent %d bytes.", t.trans_len / 8);
-        } else {
-            ARErr("[TaskAnalyzerReader] SPI slave transmit failed: %s", esp_err_to_name(ret));
+        if (ret != ESP_OK) {
+            ARErr("spi_slave_hd_trigger_trans_wait_ret failed: %s", esp_err_to_name(ret));
+            vTaskDelay(pdMS_TO_TICKS(1000)); // Wait before retrying
+            continue;
         }
 
-        // Wait before preparing the next batch of data.
-        vTaskDelay(pdMS_TO_TICKS(500));
+        // Process the completed transaction
+        if (event.trans_type == SPI_SLAVE_HD_TRANS_TYPE_WRITE) {
+            // Master wrote data to us (e.g., AM_CMD_SET_DATA)
+            // Not implemented in this example
+            ARLog("Master wrote %d bytes.", event.len);
+
+        } else if (event.trans_type == SPI_SLAVE_HD_TRANS_TYPE_READ) {
+            // Master read data from us
+            switch (event.cmd) {
+                case AM_CMD_REQ_ID:
+                    ARLog("Master requested ID. Sent 0x%04X. Master ID was 0x%04X.", reader_id, (uint16_t)event.addr);
+                    break;
+                case AM_CMD_REQ_TEST:
+                    // The 'address' field from master contains the requested size in half-words
+                    ARLog("Master requested test data. Sent %d bytes (requested %d half-words).", event.len, (uint16_t)event.addr);
+                    break;
+                default:
+                    ARLog("Master read with unknown command: 0x%04X", event.cmd);
+                    break;
+            }
+        }
+        // A small delay to prevent busy-looping if something goes wrong
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
+
+cleanup:
+    ARLog("Cleaning up TaskAnalyzerReader...");
+    if (spi_tx_buffer) {
+        heap_caps_free(spi_tx_buffer);
+        spi_tx_buffer = NULL;
+    }
+    if (spi_rx_buffer) {
+        heap_caps_free(spi_rx_buffer);
+        spi_rx_buffer = NULL;
+    }
+    spi_slave_hd_deinit(ANALYZER_READER_SPI_HOST);
+
+    ARExit("TaskAnalyzerReader exiting.");
+    vTaskDelete(NULL);
 }
 
-#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
+#endif // (FIRMWARE_TYPE == TYPE_ANALYZER_READER)

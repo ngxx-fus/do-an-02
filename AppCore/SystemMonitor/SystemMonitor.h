@@ -18,6 +18,13 @@ extern "C" {
     #define SYSTEM_MON_EN       1
 #endif
 
+
+#ifndef SYS_MON_INTERVAL
+    /// @brief Delay between two calls of System Monitor component.
+    #define SYS_MON_INTERVAL        10000   /// ms
+#endif
+
+
 #if (SYSTEM_MON_EN == 1)
 
 /* --- LOGGING CONFIGURATION --- */
