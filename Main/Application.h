@@ -34,7 +34,7 @@ extern "C" {
 
         #if (ANALYZER_READER_COM_EN == 1)
             SysLog("[AppInitialize] [+Task] TaskAnalyzerReaderCom");
-            CreateTaskCPU1(TaskAnalyzerReaderCom, "TaskAnalyzerReaderCom", 4096, NULL, 3, NULL);
+            CreateTaskCPU1(TaskAnalyzerReaderCom, "TaskAnalyzerReaderCom", 4096, NULL, 7, NULL);
         #endif
 
         SysExit("AppInitialize()");
@@ -54,12 +54,9 @@ extern "C" {
             CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
         #endif
 
-        SysLog("[AppInitialize] [+Task] TaskMonitor");
-        CreateTaskCPU0(TaskMonitor, "TaskMonitor", 4096, NULL, 2, NULL);
-
         #if (ANALYZER_READER_COM_EN == 1)
-            SysLog("[AppInitialize] [+Task] TaskAnalyzerReader");
-            CreateTaskCPU1(TaskAnalyzerReader, "TaskAnalyzerReader", 4096, NULL, 3, NULL);
+            SysLog("[AppInitialize] [+Task] TaskAnalyzerMasterCom");
+            CreateTaskCPU1(TaskAnalyzerMasterCom, "TaskAnalyzerMasterCom", 4096, NULL, 3, NULL);
         #endif
 
         SysExit("AppInitialize()");

@@ -31,6 +31,8 @@ LCD32Dev_t *    lcd32 = NULL;
 /// @brief Statically allocated Look-Up Table for the main LCD to save HEAP memory.
 static P16Lut_t lcd_lut;
 
+static portMUX_TYPE __AnalyzerReaderComLock = portMUX_INITIALIZER_UNLOCKED;
+
 /**
  * @brief Helper to generate random coordinates with an out-of-bounds margin.
  * @param max_val The maximum valid coordinate (e.g., width or height).
@@ -244,28 +246,27 @@ void PerformScreenTest(LCD32Dev_t * lcd32) {
     }
 }
 
-/// static DefaultRet_t WaitForAnalyzerReaderReadyPinLow(int TimeoutMS){
-///     if(!IsValidPin(ANALYZER_READER_PIN_READY)) return STAT_ERR_IO;
-///     int64_t TimeoutUS = 1000L * TimeoutMS;
-///     int64_t EntryTime = esp_timer_get_time();
-///     while(esp_timer_get_time() - EntryTime <= TimeoutUS){
-///         if((IOGet() & Mask64(ANALYZER_READER_PIN_READY)) == 0) return STAT_OKE;
-///         vTaskDelay(1);
-///     }
-///     return STAT_ERR_TIMEOUT;
-/// }
-
 static DefaultRet_t WaitForAnalyzerReaderReadyPinHigh(int TimeoutMS){
     if(!IsValidPin(ANALYZER_READER_PIN_READY)) return STAT_ERR_IO;
     int64_t TimeoutUS = 1000L * TimeoutMS;
     int64_t EntryTime = esp_timer_get_time();
     while(esp_timer_get_time() - EntryTime <= TimeoutUS){
-        DelayMs(5);
         if((IOGet() & Mask64(ANALYZER_READER_PIN_READY)) != 0) return STAT_OKE;
+        DelayMs(5);
     }
     return STAT_ERR_TIMEOUT;
 }
 
+static DefaultRet_t WaitForAnalyzerReaderReadyPinLow(int TimeoutMS){
+    if(!IsValidPin(ANALYZER_READER_PIN_READY)) return STAT_ERR_IO;
+    int64_t TimeoutUS = 1000L * TimeoutMS;
+    int64_t EntryTime = esp_timer_get_time();
+    while(esp_timer_get_time() - EntryTime <= TimeoutUS){
+        DelayMs(5);
+        if((IOGet() & Mask64(ANALYZER_READER_PIN_READY)) == 0) return STAT_OKE;
+    }
+    return STAT_ERR_TIMEOUT;
+}
 
 /// @brief Init SPI, Buffer, ...
 static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSPIHandlePtr){
@@ -308,14 +309,19 @@ static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSP
 
     spi_device_interface_config_t devcfg = {
         .clock_speed_hz = ANALYZER_READER_SPI_FREQ,
-        .mode = 0,               // SPI mode 0 (CPOL=0, CPHA=0)
+        .mode = 2,               // SPI mode 0 (CPOL=0, CPHA=0)
         .spics_io_num = ANALYZER_MASTER_SPI_CS,
         .queue_size = 7,
         // --- IMPORTANT: Disable Driver Command/Address Phase ---
         // We manage the protocol payload manually in the TX buffer.
         .command_bits = 0,       
         .address_bits = 0,       
-        .dummy_bits = 0,         
+        .dummy_bits = 0,
+        // --- Synchronization Fix ---
+        // Add a 50us delay between CS assertion and the first clock edge.
+        // This allows signals to stabilize and prevents noise-induced bit-shift errors.
+        // SPI Freq = 5MHz -> 1 cycle = 0.2us. 50us / 0.2us/cycle = 250 cycles.
+        .cs_ena_pretrans = 250,
     };
 
     /// Initialize the SPI bus with DMA enabled (Auto channel).
@@ -329,7 +335,6 @@ static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSP
 
     AMLog("[AnalyzerReaderComInit] SPI Initialized in Raw Buffer Mode.");
 
-
     AMExit("AnalyzerReaderComInit() : STAT_OKE");
     return STAT_OKE;
 
@@ -342,6 +347,51 @@ static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSP
 
     ReturnValue = ESPReturnType2DefaultReturnType(ReturnValue);
     AMExit("AnalyzerReaderComInit() : %s", DefaultReturnType2Str(ReturnValue));
+    return ReturnValue;
+}
+
+static DefaultRet_t PerformAnalyzerReaderComViaSPI(spi_device_handle_t *SPIHandlePtr, HalfWord_t * SpecificTxData, HalfWord_t TxHalfWordSize){
+    AMEntry("PerformAnalyzerReaderComViaSPI(%p, %p, %d)", SPIHandlePtr, SpecificTxData, TxHalfWordSize);
+    if(IsNotPos(TxHalfWordSize)) {
+        return STAT_ERR_INVALID_ARG;
+    }
+
+    vPortEnterCritical(&__AnalyzerReaderComLock);
+    
+    /// Setup data
+    if(IsNotNull(SpecificTxData)){
+        REPN(i, TxHalfWordSize) {
+            AnalyzerMasterTx[i] = SpecificTxData[i];
+        }
+    }
+
+    AMLog("[TaskAnalyzerReaderCom] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
+            AnalyzerMasterTx[0], AnalyzerMasterTx[1], AnalyzerMasterTx[2], AnalyzerMasterTx[3],
+            AnalyzerMasterTx[4], AnalyzerMasterTx[5], AnalyzerMasterTx[6], AnalyzerMasterRx[7]);
+
+    /// Create transaction
+    spi_transaction_t trans;
+    memset(&trans, 0, sizeof(trans));
+    trans.length = TxHalfWordSize * 16;
+    trans.tx_buffer = AnalyzerMasterTx;
+    trans.rx_buffer = AnalyzerMasterRx;
+
+    WaitForAnalyzerReaderReadyPinHigh(200);
+
+    DefaultRet_t ReturnValue = spi_device_polling_transmit((*SPIHandlePtr), &trans);
+    ReturnValue = ESPReturnType2DefaultReturnType(ReturnValue);
+    if(ReturnValue != STAT_OKE){
+        vPortExitCritical(&__AnalyzerReaderComLock);
+        AMErr("[PerformAnalyzerReaderComViaSPI] ERR: %s", DefaultReturnType2Str(ReturnValue));
+        return ReturnValue;
+    }
+
+    AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
+            AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
+            AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
+
+    vPortExitCritical(&__AnalyzerReaderComLock);
+    AMExit("PerformAnalyzerReaderComViaSPI(): %s", DefaultReturnType2Str(ReturnValue));
     return ReturnValue;
 }
 
@@ -421,67 +471,34 @@ void TaskAnalyzerReaderCom(void * pv) {
 
     SYSTEM_STAGE = SYSTEM_RUNNING;
 
-    spi_transaction_t trans;
-   
     /// Verify Analyzer-Reader-ID loop
     while((!IS_SYSTEM_STOPPED()) && (!AnalyzerReaderIDVerified)){
+        AMLog("\n");
         AMLog("[TaskAnalyzerReaderCom] Try to verify Analyzer-Reader... ");
         // AMLog("[TaskAnalyzerReaderCom] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
               // AnalyzerMasterTx[0], AnalyzerMasterTx[1], AnalyzerMasterTx[2], AnalyzerMasterTx[3]);
         // AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
                 // AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3]);
 
-        /// 1. Prepare TX Buffer with ID Request Command.
-        /// Protocol: [CMD 16bit] [ADDR 16bit].
-        /// Note: Use __builtin_bswap16 to ensure Big Endian format on the wire.
-        // memset(AnalyzerMasterTx, 0, ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
         AnalyzerMasterTx[0] = (AM_CMD_REQ_ID);      // HalfWord 0: CMD
         AnalyzerMasterTx[1] = (ANALYZER_MASTER_ID); // HalfWord 1: ARG/ADDR
 
-        /// 2. Configure SPI Transaction.
-        memset(&trans, 0, sizeof(trans));
-        trans.length = 2 * 16;              // Total bits to clock out (32 bits)
-        trans.tx_buffer = AnalyzerMasterTx; // Transmit Command
-        trans.rx_buffer = AnalyzerMasterRx; // Receive (ignore result for this step)
+        PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+        WaitForAnalyzerReaderReadyPinLow(1000);
 
-        #if (ANALYZER_READER_PIN_READY != -1)
-            /// 3. Wait for Analyzer-Reader ready to start the transaction (HIGH)
-            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
-            if(ReturnValue != STAT_OKE) {
-                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
-            }
-        #else
-            DelayMs(10);
-        #endif
-
-        /// 4. Execute Transaction 1 (Send Command + Arg: Master ID).
-        /// The Slave receives the command but cannot reply instantly in the same frame.
-        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
-
-        #if (ANALYZER_READER_PIN_READY != -1)
-            /// 5. Wait for Analyzer-Reader ready to start the transaction (HIGH)
-            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
-            if(ReturnValue != STAT_OKE) {
-                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
-            }
-        #else
-            DelayMs(10);
-        #endif
-
-        /// 6. Execute Transaction 2 (Read Response).
-        /// Send NOP CMD (0x00) to clock out the response prepared by the Slave.
         AnalyzerMasterTx[0] = AM_CMD_NOP;   // HalfWord 0: NOP
         AnalyzerMasterTx[1] = AM_CMD_NOP;   // HalfWord 1: NOP
-        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans); 
-        AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
-                AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
-                AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
+
+        PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+
+        AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X,...}", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
+        
         if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
             if (AnalyzerMasterRx[1] == ANALYZER_READER_ID) {
                 AnalyzerReaderIDVerified = true;
                 AMLog("[TaskAnalyzerReaderCom] Reader ID Verified!");
             } else {
-                AMErr("[TaskAnalyzerReaderCom] Received ACK, but wrong expected ID (%04X)! Check the the Analyzer-Reader!", ANALYZER_READER_ID);
+                AMErr("[TaskAnalyzerReaderCom] Received ACK, but wrong expected ID (0x%04X)! Check the the Analyzer-Reader!", ANALYZER_READER_ID);
                 DelayMs(1000); // Retry after delay on failure
                 continue;
             }
@@ -490,7 +507,7 @@ void TaskAnalyzerReaderCom(void * pv) {
             DelayMs(1000); // Retry after delay on failure
             continue;
         }else {
-            AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK! Check the the Analyzer-Reader!");
+            AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK (0x%04X)! Check the the Analyzer-Reader!", AnalyzerMasterRx[0]);
             DelayMs(1000); // Retry after delay on failure
             continue;
         }
@@ -501,65 +518,30 @@ void TaskAnalyzerReaderCom(void * pv) {
     while (!IS_SYSTEM_STOPPED()) {
         
         /// Populate TX buffer manually.
-        // AnalyzerMasterTx[0] = __builtin_bswap16(AM_CMD_REQ_TEST);   // CMD
-        // AnalyzerMasterTx[1] = __builtin_bswap16((HalfWord_t)AnalyzerMasterRxSize);  // ARG
-        AnalyzerMasterTx[0] = (AM_CMD_REQ_TEST);   // CMD
-        AnalyzerMasterTx[1] = (AnalyzerMasterRxSize - 1);  // ARG (-1 frame for ACK/NACK)      
-        
-        memset(&trans, 0, sizeof(trans));
-        trans.length = 32; // Send 2 words (CMD + ARG)
-        trans.tx_buffer = AnalyzerMasterTx;
-        trans.rx_buffer = AnalyzerMasterRx; 
+        AnalyzerMasterTx[0] = (AM_CMD_REQ_TEST);
+        AnalyzerMasterTx[1] = AnalyzerMasterRxSize-16;
 
-        #if (ANALYZER_READER_PIN_READY != -1)
-            /// Wait for Analyzer-Reader ready to start the transaction (HIGH)
-            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
-            if(ReturnValue != STAT_OKE) {
-                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
-            }
-        #else
-            DelayMs(10);
-        #endif
-
-        /// Transmit request.
-        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
-
-        #if (ANALYZER_READER_PIN_READY != -1)
-            /// Wait for Analyzer-Reader ready to start the transaction (HIGH)
-            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
-            if(ReturnValue != STAT_OKE) {
-                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
-            }
-        #else
-            DelayMs(10);
-        #endif
-
-
-        /// The Slave has loaded the TX buffer. Master must send Dummy to receive it.
-        // Clear TX buffer (send 0x00s)
-        // memset(AnalyzerMasterTx, 0, req_len * sizeof(HalfWord_t)); 
-        memset(&trans, 0, sizeof(trans));
-        trans.length = (AnalyzerMasterRxSize) * 16;     // Total bits to read (includes ACK/NACK)
-        trans.tx_buffer = AnalyzerMasterTx;             // Send Dummy
-        trans.rx_buffer = AnalyzerMasterRx;             // Receive Data
-
-        ReturnValue = spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+        PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+        WaitForAnalyzerReaderReadyPinLow(1000);
+        ReturnValue = PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, AnalyzerMasterRxSize-16);
 
         if (ReturnValue == ESP_OK) {
-            AMLog("[TaskAnalyzerReaderCom] Received %d half-words:", (trans.rxlength >> 4));
-            AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
-                AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
-                AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
+            AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X,...}", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
+
             if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
+                AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
+                      AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
+                      AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
                 /// Do with the correct data!
-            }else if (AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
-                AMErr("[TaskAnalyzerReaderCom] Received NACK! Check the the command!");
+            }else if (AnalyzerMasterRx[0] == ANALYZER_READER_NACK){
+                AMErr("[TaskAnalyzerReaderCom] Received NACK! Check the command!");
             }else {
-                AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK! Check the the Analyzer-Reader!");
+                AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK (0x%04X)! Check the the Analyzer-Reader!", AnalyzerMasterRx[0]);
             }
         }
 
-///    next_loop:
+        AMLog("\n");
+
         DelayMs(1000);
     }
 

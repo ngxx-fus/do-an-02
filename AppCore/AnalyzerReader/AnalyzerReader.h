@@ -13,6 +13,9 @@ extern "C" {
 #include "../../AppUtils/All.h"
 #include "../../AppESPWrap/All.h"
 
+#include "../__Shared/AnalyzerConfig.h"
+
+
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_READER)
 
 /// @brief Define a log section for this component
@@ -55,10 +58,9 @@ extern "C" {
 #ifndef ANALYZER_READER_TX_SIZE
     /// @brief TX buffer size (unit: number of HalfWord_t elements).
     /// @note  Used for sending data to Master. Must be >= master's RX size.
-    #define ANALYZER_READER_TX_SIZE     (ANALYZER_MASTER_RX_SIZE)
+    #define ANALYZER_READER_TX_SIZE     (64)
 #endif /// ANALYZER_READER_TX_SIZE
 
-#include "../__Shared/AnalyzerConfig.h"
 
 /// @brief Task to handle communication with the Analyzer Master device over SPI (acting as Slave).
 void TaskAnalyzerReader(void * pv);
