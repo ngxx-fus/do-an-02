@@ -309,7 +309,7 @@ static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSP
 
     spi_device_interface_config_t devcfg = {
         .clock_speed_hz = ANALYZER_READER_SPI_FREQ,
-        .mode = 2,               // SPI mode 0 (CPOL=0, CPHA=0)
+        .mode = 0,               // SPI mode 0 (CPOL=0, CPHA=0)
         .spics_io_num = ANALYZER_MASTER_SPI_CS,
         .queue_size = 7,
         // --- IMPORTANT: Disable Driver Command/Address Phase ---
@@ -519,11 +519,11 @@ void TaskAnalyzerReaderCom(void * pv) {
         
         /// Populate TX buffer manually.
         AnalyzerMasterTx[0] = (AM_CMD_REQ_TEST);
-        AnalyzerMasterTx[1] = AnalyzerMasterRxSize-16;
+        AnalyzerMasterTx[1] = AnalyzerMasterRxSize;
 
         PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
         WaitForAnalyzerReaderReadyPinLow(1000);
-        ReturnValue = PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, AnalyzerMasterRxSize-16);
+        ReturnValue = PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, AnalyzerMasterRxSize);
 
         if (ReturnValue == ESP_OK) {
             AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X,...}", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
