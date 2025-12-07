@@ -13,10 +13,19 @@ extern "C" {
 #include "../../AppUtils/All.h"
 #include "../../AppESPWrap/All.h"
 
+#if (EN_TASK_SYSTEM_MONITOR == ENABLE)
+
 #ifndef SYSTEM_MON_EN
     /// @brief Enable/Disable the entire System Monitor component.
     #define SYSTEM_MON_EN       1
 #endif
+
+
+#ifndef SYS_MON_INTERVAL
+    /// @brief Delay between two calls of System Monitor component.
+    #define SYS_MON_INTERVAL        10000   /// ms
+#endif
+
 
 #if (SYSTEM_MON_EN == 1)
 
@@ -116,9 +125,11 @@ void TaskSystemMonitor(void * pv);
 #endif /// SYSTEM_MON_LOG_SECTION
 
 #endif /// (SYSTEM_MON_EN == 1)
+#endif /// (EN_TASK_SYSTEM_MONITOR == ENABLE)
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /// __SYSTEM_MONITOR_H__
+

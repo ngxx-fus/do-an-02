@@ -1,0 +1,5 @@
+<map id="TaskAnalyzerReaderCom" name="TaskAnalyzerReaderCom">
+<area shape="rect" id="Node000001" title="FreeRTOS task to handle SPI communication with the Analyzer Reader device." alt="" coords="5,5,189,33"/>
+<area shape="rect" id="Node000002" href="$AppESPWrap_8c.html#a0ab6d24e84a1dacfc1374b25fa87c038" title="Configure GPIO(s) as input with no internal pull resistors and interrupts disabled." alt="" coords="237,5,362,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,17,224,19,219,19,189,22"/>
+</map>

@@ -54,15 +54,15 @@ typedef int32_t     P16Size_t;
 #define P16COM_DB_NORMAL_OUTPUT_EN      1
 
 /// @brief Enable standard logging for this module
-#define P16COM_LOG_EN                   1
+#define P16COM_LOG_EN                   0
 /// @brief Enable verbose/detailed logging
-#define P16COM_LOG1_EN                  1
+#define P16COM_LOG1_EN                  0
 /// @brief Enable error logging
 #define P16COM_ERR_EN                   1
 /// @brief Enable function entry tracing
-#define P16COM_LOG_ENTRY                1
+#define P16COM_LOG_ENTRY                0
 /// @brief Enable function exit tracing
-#define P16COM_LOG_EXIT                 1
+#define P16COM_LOG_EXIT                 0
 
 /// @brief Number of actual Control Pins used (Read, Write, CS, RS, Reset)
 #define P16COM_CTL_PIN_NUM              5

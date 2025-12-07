@@ -1,6 +1,25 @@
 #include "All.h"
 
-LCD32Dev_t * lcd32 = NULL; 
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
+
+#define ANALYZER_MASTER_LOCAL_UTILS /// Do not deleted!
+
+#include "driver/spi_master.h"
+
+/// @brief Current configured size of the RX buffer.
+const HalfWord_t AnalyzerMasterRxSize = ANALYZER_MASTER_RX_SIZE;
+/// @brief Current configured size of the TX buffer.
+const HalfWord_t AnalyzerMasterTxSize = ANALYZER_MASTER_TX_SIZE;
+/// @brief Pointer to the RX data buffer.
+uint16_t *      AnalyzerMasterRx     = NULL ;
+/// @brief Pointer to the TX data buffer.
+uint16_t *      AnalyzerMasterTx     = NULL ;
+/// @brief CBuff for RX
+CBuff_t *       AnalyzerMasterCBuff  = NULL;
+/// @brief LCD32
+LCD32Dev_t *    lcd32 = NULL; 
+
+#ifdef ANALYZER_MASTER_LOCAL_UTILS
 
 /// @brief Statically allocated Look-Up Table for the main LCD to save HEAP memory.
 static P16Lut_t lcd_lut;
@@ -15,7 +34,9 @@ static Dim_t RandCoordinate(Dim_t max_val, int16_t margin) {
     return (esp_random() % (max_val + 2 * margin)) - margin;
 }
 
-void PerformScreenTest(LCD32Dev_t * lcd32){
+void PerformScreenTest(LCD32Dev_t * lcd32) {
+    if (!lcd32) return;
+
     // --- Test 0: Performance Measurement with LUT optimization ---
     {
         Color_t random_color = (Color_t)esp_random();
@@ -25,12 +46,16 @@ void PerformScreenTest(LCD32Dev_t * lcd32){
         // --- Measure LCD32FlushCanvas (which now uses LUT) ---
         SysLog("[TaskScreen] Testing: Performance of Fill + Flush (with LUT)");
         start_time = esp_timer_get_time();
+        
         LCD32FillCanvas(lcd32, random_color);
         fill_end_time = esp_timer_get_time();
+        
         LCD32FlushCanvas(lcd32);
         flush_end_time = esp_timer_get_time();
+        
         fill_duration_ms = (uint32_t)((fill_end_time - start_time) / 1000);
         flush_duration_ms = (uint32_t)((flush_end_time - fill_end_time) / 1000);
+        
         SysLog("[TaskScreen] LUT Optimized -> Fill: %u ms, Flush: %u ms", fill_duration_ms, flush_duration_ms);
         DelayMs(1000);
     }
@@ -130,27 +155,38 @@ void PerformScreenTest(LCD32Dev_t * lcd32){
     LCD32FlushCanvas(lcd32);
     DelayMs(500);
 
-    // --- Font Tests (DrawChar and DrawText for each font) ---
-    const GFXfont* fonts_to_test[] = {
-        &fontTitle, &fontHeading01, &fontHeading02, &fontHeading03, &mainFont, &fontBody, &fontNote
-    };
+    // --- Font Tests (Iterate via SystemFont Union Array) ---
+    // Order in union/struct: Title, Body, Heading01, Heading02, Heading03, Note
     const char* font_names[] = {
-        "fontTitle (24pt)", "fontHeading01 (18pt)", "fontHeading02 (12pt)", 
-        "fontHeading03 (9pt)", "mainFont (9pt)", "fontBody (9pt)", "fontNote (Picopixel)"
+        "Title (24pt)", 
+        "Body (9pt)", 
+        "Heading01 (18pt)", 
+        "Heading02 (12pt)", 
+        "Heading03 (9pt)", 
+        "Note (Picopixel)"
     };
-    size_t num_fonts = sizeof(fonts_to_test) / sizeof(fonts_to_test[0]);
+    
+    // Calculate number of fonts based on the union array size
+    size_t num_fonts = sizeof(SystemFont.arr) / sizeof(SystemFont.arr[0]);
 
     for (size_t f = 0; f < num_fonts; f++) {
-        const GFXfont* current_font = fonts_to_test[f];
+        // Access font via the union array (already pointers, so no & needed)
+        const GFXfont* current_font = SystemFont.arr[f];
         const char* current_font_name = font_names[f];
 
-        // --- Test: LCD32DrawChar with current font ---
+        if (current_font == NULL) continue; // Skip if null
+
+        // --- Test 8.1: LCD32DrawChar with current font ---
         SysLog("[TaskScreen] Testing: LCD32DrawChar with %s", current_font_name);
+        
         Color_t bg_color = (Color_t)esp_random();
         Color_t fg_color = (Color_t)esp_random();
+        
         LCD32FillCanvas(lcd32, bg_color);
+        
         // Use fewer characters for larger fonts to avoid clutter
         int char_count = (current_font->yAdvance > 20) ? 20 : 50;
+        
         for (int i = 0; i < char_count; i++) {
             Dim_t r = RandCoordinate(lcd32->Height, 20);
             Dim_t c = RandCoordinate(lcd32->Width, 20);
@@ -160,20 +196,131 @@ void PerformScreenTest(LCD32Dev_t * lcd32){
         LCD32FlushCanvas(lcd32);
         DelayMs(500);
 
-        // --- Test: LCD32DrawText with current font ---
+        // --- Test 8.2: LCD32DrawText Normal ---
         SysLog("[TaskScreen] Testing: LCD32DrawText with %s", current_font_name);
         LCD32FillCanvas(lcd32, (Color_t)esp_random());
-        const char* test_strings[] = { "Hello World!", "ESP32 Test", "LCD32 Driver", "Random Text\nNew Line", "Boundary Check" };
+        
+        const char* test_strings[] = { 
+            "Hello World!", "ESP32 Test", "LCD32 Driver", 
+            "Random Text\nNew Line", "Boundary Check" 
+        };
         const char* str_to_draw = test_strings[esp_random() % 5];
+        
         Dim_t r = RandCoordinate(lcd32->Height, 20);
         Dim_t c = RandCoordinate(lcd32->Width, 20);
+        
         LCD32DrawText(lcd32, r, c, str_to_draw, current_font, (Color_t)esp_random());
         LCD32FlushCanvas(lcd32);
         DelayMs(500);
+
+        // --- Test 8.3: STRESS TEST - Long Text (>300 chars) ---
+        SysLog("[TaskScreen] Testing: Pangram Stress Test (>300 chars) with %s", current_font_name);
+        LCD32FillCanvas(lcd32, (Color_t)esp_random());
+        
+        // "The quick brown fox jumps over the lazy dog." is 44 chars.
+        // Repeating it 7 times = 308 chars.
+        // This tests buffer handling and rendering stability.
+        const char * long_pangram = 
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog. "
+            "The quick brown fox jumps over the lazy dog.";
+
+        // Draw near top-left to maximize visible area
+        LCD32DrawText(lcd32, 10, 5, long_pangram, current_font, (Color_t)esp_random());
+        
+        LCD32FlushCanvas(lcd32);
+        DelayMs(1500); // Give extra time to inspect
     }
 }
 
+/// @brief Init SPI, Buffer, ...
+static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSPIHandlePtr){
+    AMEntry("AnalyzerReaderComInit(...)");
+
+    DefaultRet_t ReturnValue = 0;
+    bool AnalyzerMasterSPIReady = false;
+
+    /// Allocate DMA-capable memory for RX/TX buffers.
+    /// Internal RAM (MALLOC_CAP_DMA) is preferred for high-speed SPI transactions.
+    AnalyzerMasterRx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
+    AnalyzerMasterTx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
+
+    if (IsNull(AnalyzerMasterRx) || IsNull(AnalyzerMasterTx)) {
+        AMErr("[AnalyzerReaderComInit] Failed to allocate DMA buffers!");
+        goto cleanup;
+    }
+    
+    /// Zero-initialize buffers to prevent sending random garbage.
+    memset(AnalyzerMasterRx, 0, ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t));
+    memset(AnalyzerMasterTx, 0, ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
+
+    AMLog("[AnalyzerReaderComInit] Buffers allocated directly for DMA usage.");
+
+    // --- GPIO Configuration (Ready Pin) ---
+    #if (ANALYZER_READER_PIN_READY != -1)
+        /// Configure the handshake pin as input to detect Slave readiness.
+        IOConfigAsInput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_ENABLE);
+    #endif
+
+    // --- SPI Configuration ---
+    spi_bus_config_t buscfg = {
+        .miso_io_num = ANALYZER_MASTER_SPI_MISO,
+        .mosi_io_num = ANALYZER_MASTER_SPI_MOSI,
+        .sclk_io_num = ANALYZER_MASTER_SPI_SCLK,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t),
+    };
+
+    spi_device_interface_config_t devcfg = {
+        .clock_speed_hz = ANALYZER_READER_SPI_FREQ,
+        .mode = 0,               // SPI mode 0 (CPOL=0, CPHA=0)
+        .spics_io_num = ANALYZER_MASTER_SPI_CS,
+        .queue_size = 7,
+        // --- IMPORTANT: Disable Driver Command/Address Phase ---
+        // We manage the protocol payload manually in the TX buffer.
+        .command_bits = 0,       
+        .address_bits = 0,       
+        .dummy_bits = 0,         
+    };
+
+    /// Initialize the SPI bus with DMA enabled (Auto channel).
+    ReturnValue = spi_bus_initialize(ANALYZER_READER_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    if (ReturnValue != ESP_OK) goto cleanup;
+    AnalyzerMasterSPIReady = true;
+
+    /// Attach the Reader device to the SPI bus.
+    ReturnValue = spi_bus_add_device(ANALYZER_READER_SPI_HOST, &devcfg, &(*AnalyzerMasterSPIHandlePtr));
+    if (ReturnValue != ESP_OK) goto cleanup;
+
+    AMLog("[AnalyzerReaderComInit] SPI Initialized in Raw Buffer Mode.");
+
+
+    AMExit("AnalyzerReaderComInit() : STAT_OKE");
+    return STAT_OKE;
+
+    cleanup:
+    /// Release resources before exiting.
+    if ((*AnalyzerMasterSPIHandlePtr)) spi_bus_remove_device(*AnalyzerMasterSPIHandlePtr);
+    if (AnalyzerMasterSPIReady) spi_bus_free(ANALYZER_READER_SPI_HOST);
+    if (AnalyzerMasterTx) heap_caps_free(AnalyzerMasterTx);
+    if (AnalyzerMasterRx) heap_caps_free(AnalyzerMasterRx);
+
+    ReturnValue = ESPReturnType2DefaultReturnType(ReturnValue);
+    AMExit("AnalyzerReaderComInit() : %s", DefaultReturnType2Str(ReturnValue));
+    return ReturnValue;
+}
+
+#endif /// ANALYZER_MASTER_LOCAL_UTILS
+
 void TaskScreen(void * pv){
+    /// Waiting for essential init
+    while(SYSTEM_STAGE < SYSTEM_INIT_N(0)) vTaskDelay(1);
+    /// Start the task
     SysEntry("TaskScreen(%p)", pv);
 
     // 1. Create a new LCD device instance
@@ -214,8 +361,167 @@ void TaskScreen(void * pv){
         return;
     }
     
+    LCD32FillCanvas(lcd32, COLOR_WHITE);
+    LCD32DrawText(lcd32, 20, 0, "Hello from ngxx.fus!", SystemFont.Heading02, COLOR_CYAN);
+    LCD32FlushCanvas(lcd32);
+    DelayMs(500);
+
+    /// Set next state
+    SET_SYSTEM_INIT_N(2);
+
     // 5. Main loop: Test all drawing functions cyclically
-    while (1){
+    while (!IS_SYSTEM_STOPPED()){
         PerformScreenTest(lcd32);
     }
 }
+
+/// @brief Task to handle SPI Master communication with the Analyzer Reader.
+///        Implements a manual command-response protocol over Full-Duplex SPI.
+/// @param pv Parameters passed to the task (unused).
+void TaskAnalyzerReaderCom(void * pv) {
+    /// Wait for the system to reach initialization stage 2.
+    while(SYSTEM_STAGE < SYSTEM_INIT_N(2)) { vTaskDelay(1); }
+
+    AMEntry("TaskAnalyzerReaderCom(%p)", pv);
+
+    spi_device_handle_t AnalyzerMasterSPIHandle;
+    DefaultRet_t ReturnValue = AnalyzerReaderComInit(&AnalyzerMasterSPIHandle);
+    bool AnalyzerMasterSPIReady = (ReturnValue == STAT_OKE) ? true : false;
+    bool AnalyzerReaderIDVerified = false;
+
+    SYSTEM_STAGE = SYSTEM_RUNNING;
+
+    spi_transaction_t trans;
+   
+    /// Verify Analyzer-Reader-ID loop
+    while((!IS_SYSTEM_STOPPED()) && (!AnalyzerReaderIDVerified)){
+        AMLog("[TaskAnalyzerReaderCom] Try to verify Analyzer-Reader... ");
+        // AMLog("[TaskAnalyzerReaderCom] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+              // AnalyzerMasterTx[0], AnalyzerMasterTx[1], AnalyzerMasterTx[2], AnalyzerMasterTx[3]);
+        // AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+                // AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3]);
+
+        /// 1. Prepare TX Buffer with ID Request Command.
+        /// Protocol: [CMD 16bit] [ADDR 16bit].
+        /// Note: Use __builtin_bswap16 to ensure Big Endian format on the wire.
+        // memset(AnalyzerMasterTx, 0, ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
+        AnalyzerMasterTx[0] = (AM_CMD_REQ_ID);      // HalfWord 0: CMD
+        AnalyzerMasterTx[1] = (ANALYZER_MASTER_ID); // HalfWord 1: ARG/ADDR
+
+        /// 2. Configure SPI Transaction.
+        memset(&trans, 0, sizeof(trans));
+        trans.length = 2 * 16;              // Total bits to clock out (32 bits)
+        trans.tx_buffer = AnalyzerMasterTx; // Transmit Command
+        trans.rx_buffer = AnalyzerMasterRx; // Receive (ignore result for this step)
+
+        /// 3. Execute Transaction 1 (Send Command + Arg: Master ID).
+        /// The Slave receives the command but cannot reply instantly in the same frame.
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+
+        /// 4. Wait for Slave Handshake.
+        #if (ANALYZER_READER_PIN_READY != -1)
+            // Poll until the Slave asserts the READY pin (Logic High).
+            int retry = 0;
+            while(gpio_get_level(ANALYZER_READER_PIN_READY) == 0 && retry < 100) {
+                esp_rom_delay_us(100); 
+                retry++;
+            }
+        #else
+            // Hard delay fallback if no ready pin is defined.
+            esp_rom_delay_us(1000); 
+        #endif
+
+        /// 5. Execute Transaction 2 (Read Response).
+        /// Send NOP CMD (0x00) to clock out the response prepared by the Slave.
+        AnalyzerMasterTx[0] = AM_CMD_NOP;   // HalfWord 0: NOP
+        AnalyzerMasterTx[1] = AM_CMD_NOP;   // HalfWord 1: NOP
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans); 
+        AMLog("[TaskAnalyzerReaderCom] AnalyzerMasterRx[0...1]: 0x%04X, 0x%04X", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
+        if (AnalyzerMasterRx[0] == ANALYZER_READER_ID) {
+            AnalyzerReaderIDVerified = true;
+            AMLog("[TaskAnalyzerReaderCom] Reader ID Verified!");
+        } else {
+            DelayMs(1000); // Retry after delay on failure
+            continue;
+        }
+
+    }
+
+    /// Crawl data from Analyzer-Reader loop
+    while (!IS_SYSTEM_STOPPED()) {
+        
+        /// Populate TX buffer manually.
+        AnalyzerMasterTx[0] = __builtin_bswap16(AM_CMD_REQ_TEST);   // CMD
+        AnalyzerMasterTx[1] = __builtin_bswap16((HalfWord_t)AnalyzerMasterRxSize);  // ARG
+        
+        memset(&trans, 0, sizeof(trans));
+        trans.length = 32; // Send 2 words (CMD + ARG)
+        trans.tx_buffer = AnalyzerMasterTx;
+        trans.rx_buffer = AnalyzerMasterRx; 
+
+        /// Transmit request.
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+
+        // --- Step B: Wait for Slave Handshake ---
+        #if (ANALYZER_READER_PIN_READY != -1)
+            int64_t t_start = esp_timer_get_time();
+            // Wait for READY pin with a 2-second timeout.
+            while (gpio_get_level(ANALYZER_READER_PIN_READY) == 0) {
+                if ((esp_timer_get_time() - t_start) > 2000000) { 
+                    AMErr("Timeout waiting for READY");
+                    goto next_loop;
+                }
+                vTaskDelay(1);
+            }
+        #else
+            DelayMs(10);
+        #endif
+
+        // --- Step C: Clock out Data from Slave ---
+        /// The Slave has loaded the TX buffer. Master must send Dummy to receive it.
+        
+        // Clear TX buffer (send 0x00s)
+        // memset(AnalyzerMasterTx, 0, req_len * sizeof(HalfWord_t)); 
+        
+        memset(&trans, 0, sizeof(trans));
+        trans.length = AnalyzerMasterRxSize * 16;       // Total bits to read
+        trans.tx_buffer = AnalyzerMasterTx;             // Send Dummy
+        trans.rx_buffer = AnalyzerMasterRx;             // Receive Data
+
+        ReturnValue = spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+
+        if (ReturnValue == ESP_OK) {
+            AMLog("[TaskAnalyzerReaderCom] Received %d words:", AnalyzerMasterRxSize);
+            HalfWord_t __Value = 0, __Num = 1;
+            for(int i=0; i<AnalyzerMasterRxSize; i++) {
+                /// Swap bytes to host order before processing.
+                AnalyzerMasterRx[i] = __builtin_bswap16(AnalyzerMasterRx[i]);
+                /// Count cont. byte!
+                if(AnalyzerMasterRx[i] == __Value) ++ __Num;
+                else {
+                    printf("%04X (x%u) ", __Value, __Num);
+                    __Num = 1; 
+                    __Value = AnalyzerMasterRx[i];
+                }
+                // AnalyzerMasterRx[i] = __builtin_bswap16(AnalyzerMasterRx[i]);
+                // printf("0x%04X ", AnalyzerMasterRx[i]);
+            }
+            printf("[%04X] (x%u)", __Value, __Num);
+            printf("\n");
+        }
+
+    next_loop:
+        DelayMs(1000);
+    }
+
+    /// Release resources before exiting.
+    if (AnalyzerMasterSPIHandle)    spi_bus_remove_device(AnalyzerMasterSPIHandle);
+    if (AnalyzerMasterSPIReady)     spi_bus_free(ANALYZER_READER_SPI_HOST);
+    if (AnalyzerMasterTx)           heap_caps_free(AnalyzerMasterTx);
+    if (AnalyzerMasterRx)           heap_caps_free(AnalyzerMasterRx);
+    
+    AMExit("Exiting.");
+    vTaskDelete(NULL);
+}
+
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)

@@ -102,13 +102,95 @@ $(function(){initNavTree('AnalyzerReader_8h_source.html','',''); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma message (&quot;AppCore/AnalyzerReader/AnalyzerReader.h&quot;)</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="AppConfig_2All_8h.html">../../AppConfig/All.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="AppUtils_2All_8h.html">../../AppUtils/All.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="AppESPWrap_2All_8h.html">../../AppESPWrap/All.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_READER)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a026530ba70c4a9427af2d442b35ea070">   19</a></span><span class="preprocessor">#define ANALYZER_READER_LOG_SECTION</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#ad8b83a686165e5b2eb58a4e62b30dbc8">   22</a></span><span class="preprocessor">#define ANALYZER_READER_COM_EN           1</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/* --- SPI SLAVE CONFIGURATION (Must match Master&#39;s config) --- */</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef ANALYZER_READER_SPI_HOST</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#afc8c4c6b4bc659b098c5c94557187a9f">   28</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_HOST     SPI2_HOST</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef ANALYZER_READER_SPI_SCLK</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    #define ANALYZER_READER_SPI_SCLK     14</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef ANALYZER_READER_SPI_MOSI</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">    #define ANALYZER_READER_SPI_MOSI     13</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef ANALYZER_READER_SPI_MISO</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">    #define ANALYZER_READER_SPI_MISO     12</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#ifndef ANALYZER_READER_SPI_CS</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">    #define ANALYZER_READER_SPI_CS       15</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#ifndef ANALYZER_READER_PIN_READY</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    #define ANALYZER_READER_PIN_READY    2</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#ifndef ANALYZER_READER_RX_SIZE</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a92131e075b27f38bcf2f7160193e4e4c">   53</a></span><span class="preprocessor">    #define ANALYZER_READER_RX_SIZE     (64)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifndef ANALYZER_READER_TX_SIZE</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a334abd46274b63f4d65f7e8419935c7a">   58</a></span><span class="preprocessor">    #define ANALYZER_READER_TX_SIZE     (ANALYZER_MASTER_RX_SIZE)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &quot;<a class="code" href="AnalyzerConfig_8h.html">../__Shared/AnalyzerConfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerReader_8h.html#a40426d8381c3c22e02a890bdd9c94ab8">TaskAnalyzerReader</a>(<span class="keywordtype">void</span> * pv);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerReader_8h.html#aadbb35bf60fa6148e622ced423e0fa16">TaskMonitor</a>(<span class="keywordtype">void</span> * pv);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">/* --- LOGGING MACROS --- */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#ifdef ANALYZER_READER_LOG_SECTION</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a47ec323d9dd9e8b7f10676906eeae687">   72</a></span><span class="preprocessor">    #define AR_LOG_EN           1</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a29b3fa52b47efb699730649d96434129">   73</a></span><span class="preprocessor">    #define AR_ERR_EN           1</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#ad6ea9736c671c8b510161f199349d990">   74</a></span><span class="preprocessor">    #define AR_LOG_ENTRY        1</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a771e6d1a92da9cd52380998e3dd4a6bd">   75</a></span><span class="preprocessor">    #define AR_LOG_EXIT         1</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">    #if (AR_LOG_EN == 1)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">        #define ARLog(...)                 SysLog(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">    #else </span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#aa769f6abda658b8dbf8982ff067b0645">   80</a></span><span class="preprocessor">        #define ARLog(...)</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    #if (AR_ERR_EN == 1)</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">        #define ARErr(...)                 SysErr(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#ae2ea0014a2ad1dbe1f3320de5d4a2419">   86</a></span><span class="preprocessor">        #define ARErr(...)</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    #if (AR_LOG_EXIT == 1)</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">        #define ARExit(...)                SysExit(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#a0a45acbcdc4f4677202fc140974bd446">   92</a></span><span class="preprocessor">        #define ARExit(...)</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    #if (AR_LOG_ENTRY == 1)</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">        #define AREntry(...)               SysEntry(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    #else </span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="AnalyzerReader_8h.html#ad886643138019160071d47cfd9843da9">   98</a></span><span class="preprocessor">        #define AREntry(...)</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span></div>
+<div class="ttc" id="aAnalyzerConfig_8h_html"><div class="ttname"><a href="AnalyzerConfig_8h.html">AnalyzerConfig.h</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_a40426d8381c3c22e02a890bdd9c94ab8"><div class="ttname"><a href="AnalyzerReader_8h.html#a40426d8381c3c22e02a890bdd9c94ab8">TaskAnalyzerReader</a></div><div class="ttdeci">void TaskAnalyzerReader(void *pv)</div><div class="ttdoc">ANALYZER_READER_TX_SIZE.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8c_source.html#l00039">AnalyzerReader.c:39</a></div></div>
+<div class="ttc" id="aAnalyzerReader_8h_html_aadbb35bf60fa6148e622ced423e0fa16"><div class="ttname"><a href="AnalyzerReader_8h.html#aadbb35bf60fa6148e622ced423e0fa16">TaskMonitor</a></div><div class="ttdeci">void TaskMonitor(void *pv)</div><div class="ttdoc">Task to monitor and print status information for the reader.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerReader_8c_source.html#l00018">AnalyzerReader.c:18</a></div></div>
+<div class="ttc" id="aAppConfig_2All_8h_html"><div class="ttname"><a href="AppConfig_2All_8h.html">All.h</a></div></div>
+<div class="ttc" id="aAppESPWrap_2All_8h_html"><div class="ttname"><a href="AppESPWrap_2All_8h.html">All.h</a></div></div>
+<div class="ttc" id="aAppUtils_2All_8h_html"><div class="ttname"><a href="AppUtils_2All_8h.html">All.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

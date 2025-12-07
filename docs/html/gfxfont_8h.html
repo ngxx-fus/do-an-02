@@ -232,7 +232,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="9700,210,9640,251,9639,246,9695,211"/>
 <area shape="rect" href="AnalyzerMaster_8h.html" title=" " alt="" coords="9639,342,9822,387"/>
 <area shape="poly" title=" " alt="" coords="9732,215,9732,344,9729,340,9729,219"/>
-<area shape="rect" href="AppFont_8c.html" title=" " alt="" coords="9768,258,9917,286"/>
+<area shape="rect" href="AppFont_8c.html" title="Implementation of system font definitions." alt="" coords="9768,258,9917,286"/>
 <area shape="poly" title=" " alt="" coords="9762,208,9827,258,9822,257,9760,214"/>
 <area shape="rect" href="LCD32_8c.html" title="Driver Implementation for 320x240 LCD (ILI9341 via P16Com)" alt="" coords="9441,342,9615,387"/>
 <area shape="poly" title=" " alt="" coords="9580,305,9547,344,9545,339,9575,307"/>
@@ -259,16 +259,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:GFXglyph" id="r_GFXglyph"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGFXglyph.html">GFXglyph</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stored PER GLYPH (Character).  <a href="structGFXglyph.html#details">More...</a><br /></td></tr>
 <tr class="memitem:GFXfont" id="r_GFXfont"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGFXfont.html">GFXfont</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stored for FONT AS A WHOLE.  <a href="structGFXfont.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2fbcc74e9fcf029507e016c73c0b3218" id="r_a2fbcc74e9fcf029507e016c73c0b3218"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fbcc74e9fcf029507e016c73c0b3218">PROGMEM</a></td></tr>
+<tr class="memdesc:a2fbcc74e9fcf029507e016c73c0b3218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to support PROGMEM on specific platforms (e.g., AVR), empty for ESP32/STM32.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aab134cdc35ab83c11d153d826a8dfc5d" id="r_aab134cdc35ab83c11d153d826a8dfc5d"><td class="memItemLeft" align="right" valign="top">typedef struct GFXglyph&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab134cdc35ab83c11d153d826a8dfc5d">GFXglyph</a></td></tr>
+<tr class="memdesc:aab134cdc35ab83c11d153d826a8dfc5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stored PER GLYPH (Character).  <br /></td></tr>
 <tr class="memitem:a10c9f3d329292b0d1b19f3d81a4c584e" id="r_a10c9f3d329292b0d1b19f3d81a4c584e"><td class="memItemLeft" align="right" valign="top">typedef struct GFXfont&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10c9f3d329292b0d1b19f3d81a4c584e">GFXfont</a></td></tr>
+<tr class="memdesc:a10c9f3d329292b0d1b19f3d81a4c584e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data stored for FONT AS A WHOLE.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a2fbcc74e9fcf029507e016c73c0b3218" name="a2fbcc74e9fcf029507e016c73c0b3218"></a>
@@ -286,9 +291,11 @@ Typedefs</h2></td></tr>
 <div class="line">  (uint8_t  *)BebasNeue_Bold10pt7bBitmaps,</div>
 <div class="line">  (<a class="code hl_struct" href="structGFXglyph.html">GFXglyph</a> *)BebasNeue_Bold10pt7bGlyphs,</div>
 <div class="line">  0x2E, 0x39, 20 }</div>
-<div class="ttc" id="astructGFXglyph_html"><div class="ttname"><a href="structGFXglyph.html">GFXglyph</a></div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00016">gfxfont.h:16</a></div></div>
+<div class="ttc" id="astructGFXglyph_html"><div class="ttname"><a href="structGFXglyph.html">GFXglyph</a></div><div class="ttdoc">Data stored PER GLYPH (Character).</div><div class="ttdef"><b>Definition</b> <a href="gfxfont_8h_source.html#l00020">gfxfont.h:20</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00014">14</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
+<p>Macro to support PROGMEM on specific platforms (e.g., AVR), empty for ESP32/STM32. </p>
+
+<p class="definition">Definition at line <a class="el" href="gfxfont_8h_source.html#l00016">16</a> of file <a class="el" href="gfxfont_8h_source.html">gfxfont.h</a>.</p>
 
 </div>
 </div>
@@ -305,6 +312,8 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Data stored for FONT AS A WHOLE. </p>
+
 </div>
 </div>
 <a id="aab134cdc35ab83c11d153d826a8dfc5d" name="aab134cdc35ab83c11d153d826a8dfc5d"></a>
@@ -318,6 +327,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Data stored PER GLYPH (Character). </p>
 
 </div>
 </div>

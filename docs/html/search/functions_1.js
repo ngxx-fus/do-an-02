@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['compare_5fint32_0',['compare_int32',['../LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f',1,'LCD32.c']]]
+  ['app_5fmain_0',['app_main',['../Application_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70',1,'Application.c']]],
+  ['appinitialize_1',['AppInitialize',['../Application_8h.html#a81875772de66351e046ffa03726dbcc4',1,'Application.h']]]
 ];

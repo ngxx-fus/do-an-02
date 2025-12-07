@@ -1,0 +1,18 @@
+CompileFlags:
+  Add:
+    - "-Wno-unknown-warning-option"
+    - "-Wno-unused-command-line-argument"
+    
+    - "-D__GLIBC_USE(x)=0"
+    
+    - "-DESP_PLATFORM"
+    
+  Remove:
+    - "-mlongcalls"
+    - "-fno-tree-loop-distribute-patterns"
+    - "-fstrict-volatile-bitfields"
+    
+    - "-fno-shrink-wrap"
+    - "-fno-tree-switch-conversion"
+    - "-fzero-init-padding-bits=all"
+    - "-fno-malloc-dce"

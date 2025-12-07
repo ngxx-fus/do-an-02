@@ -1,0 +1,11 @@
+<map id="_CBuffGetFreeSpace" name="_CBuffGetFreeSpace">
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,57,665,85"/>
+<area shape="rect" id="Node000002" href="$CBuff_8c.html#a3c9d9b092fcad4280d11d8b28625b742" title="Gets the available free space in the buffer." alt="" coords="319,5,464,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="516,53,447,36,447,31,521,53"/>
+<area shape="rect" id="Node000003" href="$CBuff_8c.html#ab7745d3fd025d3aa6a695c5c14b03df5" title="Pushes a single element (or block) to the buffer (Atomic/All&#45;or&#45;Nothing)." alt="" coords="348,57,435,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="494,71,436,74,435,69,499,71"/>
+<area shape="rect" id="Node000004" href="$CBuff_8c.html#af6623ce2a3bb59e98fb99ba41db5ea13" title="Writes an array of data to the circular buffer." alt="" coords="346,109,437,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="521,89,438,114,437,109,516,90"/>
+<area shape="rect" id="Node000005" href="$AnalyzerMaster_8c.html#a42483e26945fa4fb88fdbf0aaeea7ecf" title=" " alt="" coords="5,109,271,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="327,123,271,126,271,121,333,123"/>
+</map>

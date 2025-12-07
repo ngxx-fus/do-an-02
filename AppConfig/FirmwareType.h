@@ -22,7 +22,7 @@ extern "C" {
 #define TYPE_ANALYZER_READER    3
 
 /// @brief Configuration selection
-#define FIRMWARE_TYPE   TYPE_ANALYZER_MASTER
+#define FIRMWARE_TYPE   TYPE_ANALYZER_READER
 
 /// @brief Firmware type enumeration
 typedef enum {

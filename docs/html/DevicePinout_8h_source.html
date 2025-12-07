@@ -130,46 +130,60 @@ $(function(){initNavTree('DevicePinout_8h_source.html','',''); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_RECEIVER)</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) &amp;&amp; \</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    (EN_DRIVER_P16 == ENABLE)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507">   48</a></span><span class="preprocessor">    #define LCD32_DB0       18    </span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">   49</a></span><span class="preprocessor">    #define LCD32_DB1       12</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">   50</a></span><span class="preprocessor">    #define LCD32_DB2       17</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#adf7a03a06529c34ac20f93d20e736b0e">   51</a></span><span class="preprocessor">    #define LCD32_DB3       11</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">   52</a></span><span class="preprocessor">    #define LCD32_DB4       16</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">   53</a></span><span class="preprocessor">    #define LCD32_DB5       10</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aabb4f25721a4eb712b8a7014b250143f">   54</a></span><span class="preprocessor">    #define LCD32_DB6       15</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">   55</a></span><span class="preprocessor">    #define LCD32_DB7       9</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a24c3b713895c807586a1404f0a40dc29">   56</a></span><span class="preprocessor">    #define LCD32_DB8       7</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a13ff3b2b3273b72adba617c58656d101">   57</a></span><span class="preprocessor">    #define LCD32_DB9       3</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a823ab6d619e8f42672471192ba26c42b">   58</a></span><span class="preprocessor">    #define LCD32_DB10      6</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#af40d92c425e867615a7ad20678fbab47">   59</a></span><span class="preprocessor">    #define LCD32_DB11      20</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">   60</a></span><span class="preprocessor">    #define LCD32_DB12      5</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a8b48bf476e1766d463f6465c2ff626e6">   61</a></span><span class="preprocessor">    #define LCD32_DB13      19</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">   62</a></span><span class="preprocessor">    #define LCD32_DB14      4</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">   63</a></span><span class="preprocessor">    #define LCD32_DB15      8</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) &amp;&amp; (EN_DRIVER_P16 == ENABLE)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507">   47</a></span><span class="preprocessor">    #define LCD32_DB0                   18</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a0ba618dcfc48fc528ca0ca4b52a03b87">   48</a></span><span class="preprocessor">    #define LCD32_DB1                   12</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a7ccfa9d6755fa155ec0b784ecc676131">   49</a></span><span class="preprocessor">    #define LCD32_DB2                   17</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#adf7a03a06529c34ac20f93d20e736b0e">   50</a></span><span class="preprocessor">    #define LCD32_DB3                   11</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a0002bd43c07bf3c4d44f5312fac9c0a5">   51</a></span><span class="preprocessor">    #define LCD32_DB4                   16</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a203f3f7cdb0f1c15904a5689b6712b16">   52</a></span><span class="preprocessor">    #define LCD32_DB5                   10</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aabb4f25721a4eb712b8a7014b250143f">   53</a></span><span class="preprocessor">    #define LCD32_DB6                   15</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a3c9a2683c6a4e1d855ac0233ffb9acf4">   54</a></span><span class="preprocessor">    #define LCD32_DB7                   9</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a24c3b713895c807586a1404f0a40dc29">   55</a></span><span class="preprocessor">    #define LCD32_DB8                   7</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a13ff3b2b3273b72adba617c58656d101">   56</a></span><span class="preprocessor">    #define LCD32_DB9                   3</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a823ab6d619e8f42672471192ba26c42b">   57</a></span><span class="preprocessor">    #define LCD32_DB10                  6</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#af40d92c425e867615a7ad20678fbab47">   58</a></span><span class="preprocessor">    #define LCD32_DB11                  20</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a4e2ae1d229ee2b440b6736a9a0791be5">   59</a></span><span class="preprocessor">    #define LCD32_DB12                  5</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a8b48bf476e1766d463f6465c2ff626e6">   60</a></span><span class="preprocessor">    #define LCD32_DB13                  19</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a18493351e8f4ca7bc008e55a4e6dad90">   61</a></span><span class="preprocessor">    #define LCD32_DB14                  4</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a1db5eca57bcab4b3ccdc8f214e4ebbe8">   62</a></span><span class="preprocessor">    #define LCD32_DB15                  8</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2">   66</a></span><span class="preprocessor">    #define LCD32_RST       0</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb">   67</a></span><span class="preprocessor">    #define LCD32_WR        2</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#ac115546f885b68ebb1ddb7f986e768b6">   68</a></span><span class="preprocessor">    #define LCD32_RD        14</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a1b3df9a20cd27485d44dff7dce866b97">   69</a></span><span class="preprocessor">    #define LCD32_RS        21</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">   70</a></span><span class="preprocessor">    #define LCD32_CS        13</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45">   71</a></span><span class="preprocessor">    #define LCD32_BL        1</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#if FIRMWARE_TYPE == TYPE_ANALYZER_READER</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aec68a022888f9f464147a71d440936f2">   65</a></span><span class="preprocessor">    #define LCD32_RST                   0</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#abe6cecfa4bf07577a952657c24d568bb">   66</a></span><span class="preprocessor">    #define LCD32_WR                    2</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#ac115546f885b68ebb1ddb7f986e768b6">   67</a></span><span class="preprocessor">    #define LCD32_RD                    14</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a1b3df9a20cd27485d44dff7dce866b97">   68</a></span><span class="preprocessor">    #define LCD32_RS                    21</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#acbe4f1ffb4b5e05de45e4ca39174b90f">   69</a></span><span class="preprocessor">    #define LCD32_CS                    13</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a613c3e68ffd6c516a67ef22e12e51d45">   70</a></span><span class="preprocessor">    #define LCD32_BL                    1</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) &amp;&amp; (EN_DRIVER_ANALYZER_READER_COM == ENABLE)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a05566e4ade88254707b753f26c00e4ab">   76</a></span><span class="preprocessor">    #define ANALYZER_MASTER_SPI_SCLK    41</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#ab38cad09b5d32785e0fc62813bc3ed84">   77</a></span><span class="preprocessor">    #define ANALYZER_MASTER_SPI_MOSI    39</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a99c45088badafd27b716b757ce7dbe5d">   78</a></span><span class="preprocessor">    #define ANALYZER_MASTER_SPI_MISO    40</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a527d25457f706755ea03de0e107d2927">   79</a></span><span class="preprocessor">    #define ANALYZER_MASTER_SPI_CS      42</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aa9dfabaf10ebac67bf6de5c7c6e3c668">   80</a></span><span class="preprocessor">    #define ANALYZER_READER_PIN_READY   38</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#if (FIRMWARE_TYPE == TYPE_ANALYZER_READER) &amp;&amp; (EN_DRIVER_ANALYZER_MASTER_COM == ENABLE)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aee64a8be816565f3ac8a71d40bd2e03f">   85</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_SCLK     14</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a8dae7b6cf9f2583e3cc54e90d669d732">   86</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_MOSI     13</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#aae5b0d47db01be3480ca97b5a5ac057b">   87</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_MISO     12</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="DevicePinout_8h.html#a4139786f058f8367cc00bae7437c3748">   88</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_CS       15</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    #define ANALYZER_READER_PIN_READY    2</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif </span></div>
 <div class="ttc" id="aComponents_8h_html"><div class="ttname"><a href="Components_8h.html">Components.h</a></div></div>
 <div class="ttc" id="aDevicePinout_8h_html_a48c743e1723f5ab6fc4fea2250013b58"><div class="ttname"><a href="DevicePinout_8h.html#a48c743e1723f5ab6fc4fea2250013b58">Pin_t</a></div><div class="ttdeci">int8_t Pin_t</div><div class="ttdoc">Type of a GPIO.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">DevicePinout.h:19</a></div></div>
 <div class="ttc" id="aDevicePinout_8h_html_ab5e26277aa89760b746909ec30870d68"><div class="ttname"><a href="DevicePinout_8h.html#ab5e26277aa89760b746909ec30870d68">PIN_STATE_e</a></div><div class="ttdeci">PIN_STATE_e</div><div class="ttdoc">States of pin.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DevicePinout.h:22</a></div></div>

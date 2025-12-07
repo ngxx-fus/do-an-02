@@ -1,6 +1,25 @@
 var AnalyzerMaster_8h =
 [
+    [ "AM_ERR_EN", "AnalyzerMaster_8h.html#a9df643489d33af88c94756b9b2741827", null ],
+    [ "AM_LOG_EN", "AnalyzerMaster_8h.html#a47c1cac96f0629b7f7caad2543b83659", null ],
+    [ "AM_LOG_ENTRY", "AnalyzerMaster_8h.html#a81903c949a82c2ed23692949c1fe8912", null ],
+    [ "AM_LOG_EXIT", "AnalyzerMaster_8h.html#a089d2545d79c1a68103b416156b0c50e", null ],
+    [ "AMEntry", "AnalyzerMaster_8h.html#a0860917cd8b1185af74e3a580fddb994", null ],
+    [ "AMErr", "AnalyzerMaster_8h.html#a10df3cf12386ddbbefed9c385c787231", null ],
+    [ "AMExit", "AnalyzerMaster_8h.html#a0d0ed27cadbc7e1cd6e4a22d74aa7bc5", null ],
+    [ "AMLog", "AnalyzerMaster_8h.html#abe3910d6fa048d214705b8b3070f5844", null ],
+    [ "ANALYZER_MASTER_LOG_SECTION", "AnalyzerMaster_8h.html#a6b12f864c2e47ccfbffe64edad68724c", null ],
+    [ "ANALYZER_MASTER_SPI_CONFIG_SECTION", "AnalyzerMaster_8h.html#a16e97ba4a548e54d2a7be338fdfc7bf1", null ],
+    [ "ANALYZER_READER_COM_EN", "AnalyzerMaster_8h.html#ad8b83a686165e5b2eb58a4e62b30dbc8", null ],
+    [ "ANALYZER_READER_SPI_HOST", "AnalyzerMaster_8h.html#afc8c4c6b4bc659b098c5c94557187a9f", null ],
+    [ "HalfWord_t", "AnalyzerMaster_8h.html#ae0c3bcbf40d44e0d65fdbfb842a3e33f", null ],
+    [ "PerformScreenTest", "AnalyzerMaster_8h.html#a5052cb6672ac6039c8c593197822372e", null ],
+    [ "TaskAnalyzerReaderCom", "AnalyzerMaster_8h.html#acf17dd5439a5b032133c7e40e22f51f9", null ],
     [ "TaskScreen", "AnalyzerMaster_8h.html#a0ff6461cec9cf517fc00bf44dc8fed74", null ],
-    [ "TaskSystemMonitor", "AnalyzerMaster_8h.html#ac289155e7346fe7095a1f4f8686b32ae", null ],
+    [ "AnalyzerMasterCBuff", "AnalyzerMaster_8h.html#a114f745156d77d2f53f713c410e3b84f", null ],
+    [ "AnalyzerMasterRx", "AnalyzerMaster_8h.html#a1a236faed471057c270e34775b563edc", null ],
+    [ "AnalyzerMasterRxSize", "AnalyzerMaster_8h.html#abaa55b0f1814b674ca8b68d635db3534", null ],
+    [ "AnalyzerMasterTx", "AnalyzerMaster_8h.html#a0ea372f039684550c02c62278e809bba", null ],
+    [ "AnalyzerMasterTxSize", "AnalyzerMaster_8h.html#aca6279ce813b7bc2056b745372e1a866", null ],
     [ "lcd32", "AnalyzerMaster_8h.html#a45d36e7fc314d332355aeb1fcd47d885", null ]
 ];

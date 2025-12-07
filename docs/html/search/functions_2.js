@@ -1,4 +1,14 @@
 var searchData=
 [
-  ['defaultreturntype2str_0',['DefaultReturnType2Str',['../AppUtils_8c.html#a584a35d76d7ea6f9051f0dae0fc11daa',1,'DefaultReturnType2Str(DefaultRet_t ret):&#160;AppUtils.c'],['../ReturnType_8h.html#a584a35d76d7ea6f9051f0dae0fc11daa',1,'DefaultReturnType2Str(DefaultRet_t ret):&#160;AppUtils.c']]]
+  ['cbuffcreate_0',['CBuffCreate',['../CBuff_8c.html#aafe488551a1413b0e68354fb58967e77',1,'CBuffCreate(CBuffSize_t size):&#160;CBuff.c'],['../CBuff_8h.html#aafe488551a1413b0e68354fb58967e77',1,'CBuffCreate(CBuffSize_t size):&#160;CBuff.c']]],
+  ['cbuffdestroy_1',['CBuffDestroy',['../CBuff_8c.html#a727233ac358981c1d7abc5522e18d454',1,'CBuffDestroy(CBuff_t *cb):&#160;CBuff.c'],['../CBuff_8h.html#a727233ac358981c1d7abc5522e18d454',1,'CBuffDestroy(CBuff_t *cb):&#160;CBuff.c']]],
+  ['cbuffgetdatacount_2',['CBuffGetDataCount',['../CBuff_8c.html#a7dfbb34fdc510d8f61e82725a90d8bdc',1,'CBuffGetDataCount(const CBuff_t *cb):&#160;CBuff.c'],['../CBuff_8h.html#a7dfbb34fdc510d8f61e82725a90d8bdc',1,'CBuffGetDataCount(const CBuff_t *cb):&#160;CBuff.c']]],
+  ['cbuffgetfreecount_3',['CBuffGetFreeCount',['../CBuff_8c.html#a3c9d9b092fcad4280d11d8b28625b742',1,'CBuffGetFreeCount(const CBuff_t *cb):&#160;CBuff.c'],['../CBuff_8h.html#a3c9d9b092fcad4280d11d8b28625b742',1,'CBuffGetFreeCount(const CBuff_t *cb):&#160;CBuff.c']]],
+  ['cbuffinit_4',['CBuffInit',['../CBuff_8c.html#a88eae60edc6c23193c94ce126758ca78',1,'CBuffInit(CBuff_t *cb, void *buffer, CBuffSize_t size):&#160;CBuff.c'],['../CBuff_8h.html#a88eae60edc6c23193c94ce126758ca78',1,'CBuffInit(CBuff_t *cb, void *buffer, CBuffSize_t size):&#160;CBuff.c']]],
+  ['cbuffpop_5',['CBuffPop',['../CBuff_8c.html#a2f54262b387e666ccd3ea91471bba6ea',1,'CBuffPop(CBuff_t *cb, void *data, CBuffSize_t size):&#160;CBuff.c'],['../CBuff_8h.html#a2f54262b387e666ccd3ea91471bba6ea',1,'CBuffPop(CBuff_t *cb, void *data, CBuffSize_t size):&#160;CBuff.c']]],
+  ['cbuffpush_6',['CBuffPush',['../CBuff_8c.html#ab7745d3fd025d3aa6a695c5c14b03df5',1,'CBuffPush(CBuff_t *cb, const void *data, CBuffSize_t size):&#160;CBuff.c'],['../CBuff_8h.html#ab7745d3fd025d3aa6a695c5c14b03df5',1,'CBuffPush(CBuff_t *cb, const void *data, CBuffSize_t size):&#160;CBuff.c']]],
+  ['cbuffread_7',['CBuffRead',['../CBuff_8c.html#afd4e26d0147db1b70d2d869d33468efd',1,'CBuffRead(CBuff_t *cb, void *data, CBuffSize_t bytes):&#160;CBuff.c'],['../CBuff_8h.html#afd4e26d0147db1b70d2d869d33468efd',1,'CBuffRead(CBuff_t *cb, void *data, CBuffSize_t bytes):&#160;CBuff.c']]],
+  ['cbuffreset_8',['CBuffReset',['../CBuff_8c.html#a00e104c3edcbb302fd42edea5184e696',1,'CBuffReset(CBuff_t *cb):&#160;CBuff.c'],['../CBuff_8h.html#a00e104c3edcbb302fd42edea5184e696',1,'CBuffReset(CBuff_t *cb):&#160;CBuff.c']]],
+  ['cbuffwrite_9',['CBuffWrite',['../CBuff_8c.html#af6623ce2a3bb59e98fb99ba41db5ea13',1,'CBuffWrite(CBuff_t *cb, const void *data, CBuffSize_t bytes):&#160;CBuff.c'],['../CBuff_8h.html#af6623ce2a3bb59e98fb99ba41db5ea13',1,'CBuffWrite(CBuff_t *cb, const void *data, CBuffSize_t bytes):&#160;CBuff.c']]],
+  ['compare_5fint32_10',['compare_int32',['../LCD32_8c.html#a83f1227d996fc5dbbda15eef678a549f',1,'LCD32.c']]]
 ];

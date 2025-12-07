@@ -106,29 +106,119 @@ $(function(){initNavTree('AnalyzerMaster_8h_source.html','',''); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="AppUtils_2All_8h.html">../../AppUtils/All.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="AppESPWrap_2All_8h.html">../../AppESPWrap/All.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="AppFonts_2All_8h.html">../../AppFonts/All.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="LCD32_8h.html">../../AppComponents/LCD32/LCD32.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">extern</span> <a class="code hl_struct" href="structLCD32Dev__t.html">LCD32Dev_t</a> * <a class="code hl_variable" href="AnalyzerMaster_8c.html#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>; </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerMaster_8h.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a>(<span class="keywordtype">void</span> * pv);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerMaster_8h.html#ac289155e7346fe7095a1f4f8686b32ae">TaskSystemMonitor</a>(<span class="keywordtype">void</span> * pv);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span></div>
-<div class="ttc" id="aAnalyzerMaster_8c_html_a45d36e7fc314d332355aeb1fcd47d885"><div class="ttname"><a href="AnalyzerMaster_8c.html#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a></div><div class="ttdeci">LCD32Dev_t * lcd32</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00004">AnalyzerMaster.c:4</a></div></div>
-<div class="ttc" id="aAnalyzerMaster_8h_html_a0ff6461cec9cf517fc00bf44dc8fed74"><div class="ttname"><a href="AnalyzerMaster_8h.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a></div><div class="ttdeci">void TaskScreen(void *pv)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00077">AnalyzerMaster.c:77</a></div></div>
-<div class="ttc" id="aAnalyzerMaster_8h_html_ac289155e7346fe7095a1f4f8686b32ae"><div class="ttname"><a href="AnalyzerMaster_8h.html#ac289155e7346fe7095a1f4f8686b32ae">TaskSystemMonitor</a></div><div class="ttdeci">void TaskSystemMonitor(void *pv)</div><div class="ttdoc">Task to periodically log system resource usage (Heap, Stack, etc.)</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00024">AnalyzerMaster.c:24</a></div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="AppComponents_2CBuff_2All_8h.html">../../AppComponents/CBuff/All.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="LCD32_8h.html">../../AppComponents/LCD32/LCD32.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="AnalyzerConfig_8h.html">../__Shared/AnalyzerConfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a6b12f864c2e47ccfbffe64edad68724c">   22</a></span><span class="preprocessor">#define ANALYZER_MASTER_LOG_SECTION</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a16e97ba4a548e54d2a7be338fdfc7bf1">   23</a></span><span class="preprocessor">#define ANALYZER_MASTER_SPI_CONFIG_SECTION</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#ad8b83a686165e5b2eb58a4e62b30dbc8">   26</a></span><span class="preprocessor">#define ANALYZER_READER_COM_EN          1</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifdef ANALYZER_MASTER_SPI_CONFIG_SECTION</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#afc8c4c6b4bc659b098c5c94557187a9f">   31</a></span><span class="preprocessor">    #define ANALYZER_READER_SPI_HOST    SPI2_HOST</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">    #ifndef ANALYZER_READER_SPI_FREQ</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        #define ANALYZER_READER_SPI_FREQ    5000000</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_RX_SIZE</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">        #define ANALYZER_MASTER_RX_SIZE     (2048)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_TX_SIZE</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">        #define ANALYZER_MASTER_TX_SIZE     (64)</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_SPI_SCLK</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">        #define ANALYZER_MASTER_SPI_SCLK    41</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_SPI_MOSI</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">        #define ANALYZER_MASTER_SPI_MOSI    39</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_SPI_MISO</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">        #define ANALYZER_MASTER_SPI_MISO    40</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    #ifndef ANALYZER_MASTER_SPI_CS</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">        #define ANALYZER_MASTER_SPI_CS      42</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    #ifndef ANALYZER_READER_PIN_READY</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">        #define ANALYZER_READER_PIN_READY   38</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#ae0c3bcbf40d44e0d65fdbfb842a3e33f">   73</a></span><span class="keyword">typedef</span> uint16_t <a class="code hl_typedef" href="AnalyzerMaster_8h.html#ae0c3bcbf40d44e0d65fdbfb842a3e33f">HalfWord_t</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">extern</span> <a class="code hl_struct" href="structLCD32Dev__t.html">LCD32Dev_t</a> *     <a class="code hl_variable" href="AnalyzerMaster_8c.html#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">extern</span> <span class="keyword">const</span> uint32_t   <a class="code hl_variable" href="AnalyzerMaster_8c.html#abaa55b0f1814b674ca8b68d635db3534">AnalyzerMasterRxSize</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">extern</span> <span class="keyword">const</span> uint32_t   <a class="code hl_variable" href="AnalyzerMaster_8c.html#aca6279ce813b7bc2056b745372e1a866">AnalyzerMasterTxSize</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">extern</span> uint16_t *       <a class="code hl_variable" href="AnalyzerMaster_8c.html#a1a236faed471057c270e34775b563edc">AnalyzerMasterRx</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">extern</span> uint16_t *       <a class="code hl_variable" href="AnalyzerMaster_8c.html#a0ea372f039684550c02c62278e809bba">AnalyzerMasterTx</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">extern</span> <a class="code hl_struct" href="structCBuff__t.html">CBuff_t</a> *        <a class="code hl_variable" href="AnalyzerMaster_8c.html#a114f745156d77d2f53f713c410e3b84f">AnalyzerMasterCBuff</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerMaster_8h.html#a5052cb6672ac6039c8c593197822372e">PerformScreenTest</a>(<a class="code hl_struct" href="structLCD32Dev__t.html">LCD32Dev_t</a> * <a class="code hl_variable" href="AnalyzerMaster_8c.html#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerMaster_8h.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a>(<span class="keywordtype">void</span> * pv);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzerMaster_8h.html#acf17dd5439a5b032133c7e40e22f51f9">TaskAnalyzerReaderCom</a>(<span class="keywordtype">void</span> * pv);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#ifdef ANALYZER_MASTER_LOG_SECTION</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a47c1cac96f0629b7f7caad2543b83659">  102</a></span><span class="preprocessor">    #define AM_LOG_EN       1</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a9df643489d33af88c94756b9b2741827">  103</a></span><span class="preprocessor">    #define AM_ERR_EN       1</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a81903c949a82c2ed23692949c1fe8912">  104</a></span><span class="preprocessor">    #define AM_LOG_ENTRY    1</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a089d2545d79c1a68103b416156b0c50e">  105</a></span><span class="preprocessor">    #define AM_LOG_EXIT     1</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">    #if (AM_LOG_EN == 1)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">        #define AMLog(...)      SysLog(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">    #else </span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#abe3910d6fa048d214705b8b3070f5844">  110</a></span><span class="preprocessor">        #define AMLog(...)</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">    #if (AM_ERR_EN == 1)</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">        #define AMErr(...)      SysErr(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a10df3cf12386ddbbefed9c385c787231">  116</a></span><span class="preprocessor">        #define AMErr(...)</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    #if (AM_LOG_EXIT == 1)</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">        #define AMExit(...)     SysExit(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a0d0ed27cadbc7e1cd6e4a22d74aa7bc5">  122</a></span><span class="preprocessor">        #define AMExit(...)</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">    #if (AM_LOG_ENTRY == 1)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">        #define AMEntry(...)    SysEntry(__VA_ARGS__)</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">    #else </span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="AnalyzerMaster_8h.html#a0860917cd8b1185af74e3a580fddb994">  128</a></span><span class="preprocessor">        #define AMEntry(...)</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    #endif </span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif </span></div>
+<div class="ttc" id="aAnalyzerConfig_8h_html"><div class="ttname"><a href="AnalyzerConfig_8h.html">AnalyzerConfig.h</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a0ea372f039684550c02c62278e809bba"><div class="ttname"><a href="AnalyzerMaster_8c.html#a0ea372f039684550c02c62278e809bba">AnalyzerMasterTx</a></div><div class="ttdeci">uint16_t * AnalyzerMasterTx</div><div class="ttdoc">Pointer to the TX data buffer.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00016">AnalyzerMaster.c:16</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a114f745156d77d2f53f713c410e3b84f"><div class="ttname"><a href="AnalyzerMaster_8c.html#a114f745156d77d2f53f713c410e3b84f">AnalyzerMasterCBuff</a></div><div class="ttdeci">CBuff_t * AnalyzerMasterCBuff</div><div class="ttdoc">CBuff for RX.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00018">AnalyzerMaster.c:18</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a1a236faed471057c270e34775b563edc"><div class="ttname"><a href="AnalyzerMaster_8c.html#a1a236faed471057c270e34775b563edc">AnalyzerMasterRx</a></div><div class="ttdeci">uint16_t * AnalyzerMasterRx</div><div class="ttdoc">Pointer to the RX data buffer.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00014">AnalyzerMaster.c:14</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_a45d36e7fc314d332355aeb1fcd47d885"><div class="ttname"><a href="AnalyzerMaster_8c.html#a45d36e7fc314d332355aeb1fcd47d885">lcd32</a></div><div class="ttdeci">LCD32Dev_t * lcd32</div><div class="ttdoc">LCD32.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00020">AnalyzerMaster.c:20</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_abaa55b0f1814b674ca8b68d635db3534"><div class="ttname"><a href="AnalyzerMaster_8c.html#abaa55b0f1814b674ca8b68d635db3534">AnalyzerMasterRxSize</a></div><div class="ttdeci">const uint32_t AnalyzerMasterRxSize</div><div class="ttdoc">Current configured size of the RX buffer.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00010">AnalyzerMaster.c:10</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8c_html_aca6279ce813b7bc2056b745372e1a866"><div class="ttname"><a href="AnalyzerMaster_8c.html#aca6279ce813b7bc2056b745372e1a866">AnalyzerMasterTxSize</a></div><div class="ttdeci">const uint32_t AnalyzerMasterTxSize</div><div class="ttdoc">Current configured size of the TX buffer.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00012">AnalyzerMaster.c:12</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_a0ff6461cec9cf517fc00bf44dc8fed74"><div class="ttname"><a href="AnalyzerMaster_8h.html#a0ff6461cec9cf517fc00bf44dc8fed74">TaskScreen</a></div><div class="ttdeci">void TaskScreen(void *pv)</div><div class="ttdoc">FreeRTOS task for handling LCD screen updates and UI logic.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00242">AnalyzerMaster.c:242</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_a5052cb6672ac6039c8c593197822372e"><div class="ttname"><a href="AnalyzerMaster_8h.html#a5052cb6672ac6039c8c593197822372e">PerformScreenTest</a></div><div class="ttdeci">void PerformScreenTest(LCD32Dev_t *lcd32)</div><div class="ttdoc">Perform a visual test sequence on the LCD screen.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00037">AnalyzerMaster.c:37</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_acf17dd5439a5b032133c7e40e22f51f9"><div class="ttname"><a href="AnalyzerMaster_8h.html#acf17dd5439a5b032133c7e40e22f51f9">TaskAnalyzerReaderCom</a></div><div class="ttdeci">void TaskAnalyzerReaderCom(void *pv)</div><div class="ttdoc">FreeRTOS task to handle SPI communication with the Analyzer Reader device.</div><div class="ttdef"><b>Definition</b> <a href="AnalyzerMaster_8c_source.html#l00300">AnalyzerMaster.c:300</a></div></div>
+<div class="ttc" id="aAnalyzerMaster_8h_html_ae0c3bcbf40d44e0d65fdbfb842a3e33f"><div class="ttname"><a href="AnalyzerMaster_8h.html#ae0c3bcbf40d44e0d65fdbfb842a3e33f">HalfWord_t</a></div><div class="ttdeci">uint16_t HalfWord_t</div><div class="ttdoc">ANALYZER_READER_SPI_FREQ.</div><div class="ttdef"><b>Definition</b> <a href="#l00073">AnalyzerMaster.h:73</a></div></div>
+<div class="ttc" id="aAppComponents_2CBuff_2All_8h_html"><div class="ttname"><a href="AppComponents_2CBuff_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppConfig_2All_8h_html"><div class="ttname"><a href="AppConfig_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppESPWrap_2All_8h_html"><div class="ttname"><a href="AppESPWrap_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppFonts_2All_8h_html"><div class="ttname"><a href="AppFonts_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aAppUtils_2All_8h_html"><div class="ttname"><a href="AppUtils_2All_8h.html">All.h</a></div></div>
 <div class="ttc" id="aLCD32_8h_html"><div class="ttname"><a href="LCD32_8h.html">LCD32.h</a></div><div class="ttdoc">Driver definitions for 320x240 LCD (16-bit Parallel Interface)</div></div>
+<div class="ttc" id="astructCBuff__t_html"><div class="ttname"><a href="structCBuff__t.html">CBuff_t</a></div><div class="ttdoc">Circular buffer handle structure.</div><div class="ttdef"><b>Definition</b> <a href="CBuff_8h_source.html#l00090">CBuff.h:90</a></div></div>
 <div class="ttc" id="astructLCD32Dev__t_html"><div class="ttname"><a href="structLCD32Dev__t.html">LCD32Dev_t</a></div><div class="ttdoc">LCD Device Structure.</div><div class="ttdef"><b>Definition</b> <a href="LCD32_8h_source.html#l00077">LCD32.h:77</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

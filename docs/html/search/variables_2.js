@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['canvas_0',['Canvas',['../structLCD32Dev__t.html#abbdb1d1162921451c0312517874dfe6f',1,'LCD32Dev_t']]],
-  ['chipsel_1',['ChipSel',['../structP16Dev__t.html#ad03d2ec9c1848d1cc9977a28a14d5b01',1,'P16Dev_t']]],
-  ['clrmask_2',['clrMask',['../structP16LutEntry__s.html#a359545b569e919cf056f09719d8e2cd2',1,'P16LutEntry_s']]],
-  ['col_3',['col',['../structLCDPoint__t.html#a8281933fa8e1a91ae6d8f55793e1c9e3',1,'LCDPoint_t']]],
-  ['ctliomask_4',['CtlIOMask',['../structP16Dev__t.html#a4d9dcf30d8e8e33038edf8058a43cd22',1,'P16Dev_t']]],
-  ['ctlpinarr_5',['CtlPinArr',['../structP16Dev__t.html#a121ee60ccaf03d3b97ebf017759fc262',1,'P16Dev_t']]]
+  ['bebasneue_5fbold23pt7bglyphs_0',['BebasNeue_Bold23pt7bGlyphs',['../BebasNeue__Bold23pt7b_8h.html#aacd23dd241def0473362cef483a8aef1',1,'BebasNeue_Bold23pt7b.h']]],
+  ['bitmap_1',['bitmap',['../structGFXfont.html#a867b14d604450addbeaf62ae1e4799a7',1,'GFXfont']]],
+  ['bitmapoffset_2',['bitmapOffset',['../structGFXglyph.html#a24d52036821c10af52a742a1d7fbd9b8',1,'GFXglyph']]],
+  ['body_3',['Body',['../unionSystemFont__t.html#ad54e2dd58cc6b6907925b4a4cda42312',1,'SystemFont_t']]],
+  ['brightlight_4',['BrightLight',['../structLCD32Dev__t.html#abb259d89190837a3df58bca70b96fcf8',1,'LCD32Dev_t']]],
+  ['buffer_5',['buffer',['../structCBuff__t.html#a236298621e8ba8d6aca78cf2ead96eb2',1,'CBuff_t']]]
 ];

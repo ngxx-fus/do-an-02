@@ -75,6 +75,9 @@ void SysMonPrintRuntimeStats(void) {
 
 /// @brief Task to periodically log system resource usage (Heap, Stack, etc.).
 void TaskSystemMonitor(void * pv) {
+    /// Waiting for essential init
+    while(SYSTEM_STAGE < SYSTEM_INIT_N(1)) vTaskDelay(1);
+    /// Start the task
     SysMonEntry("TaskSystemMonitor(%p)", pv);
     
     while(1) {
@@ -97,7 +100,7 @@ void TaskSystemMonitor(void * pv) {
         SysMonPrintTaskList();
         SysMonPrintRuntimeStats();
 
-        DelayMs(2000); // Log every 10 seconds
+        DelayMs(SYS_MON_INTERVAL);
     }
 }
 

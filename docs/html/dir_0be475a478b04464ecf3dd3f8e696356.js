@@ -4,5 +4,6 @@ var dir_0be475a478b04464ecf3dd3f8e696356 =
     [ "AppESPWrap.c", "AppESPWrap_8c.html", "AppESPWrap_8c" ],
     [ "ESPFreeRTOSWrapper.h", "ESPFreeRTOSWrapper_8h.html", "ESPFreeRTOSWrapper_8h" ],
     [ "ESPGPIOWrapper.h", "ESPGPIOWrapper_8h.html", "ESPGPIOWrapper_8h" ],
+    [ "ESPHeapWrapper.h", "ESPHeapWrapper_8h.html", null ],
     [ "ESPLogWrapper.h", "ESPLogWrapper_8h.html", "ESPLogWrapper_8h" ]
 ];

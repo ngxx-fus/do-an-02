@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['efirmwaretype_0',['eFirmwareType',['../FirmwareType_8h.html#a7dcaf5345195b0105f37659ac35bad64',1,'FirmwareType.h']]]
+  ['cbuffstatuspositiveflag_5fe_0',['CBuffStatusPositiveFlag_e',['../CBuff_8h.html#a708aedab82e0559be4370bab0e4b65c9',1,'CBuff.h']]]
 ];

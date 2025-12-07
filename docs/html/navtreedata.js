@@ -52,10 +52,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AnalyzerMaster_8c.html",
-"FreeMono24pt7b_8h.html#a4b552ab3e4ab4b5eb60c89ce9b86792d",
-"LCD32Cmds_8h.html#adc23a239d2b6976d53254ef4fc5d1713",
-"ReturnType_8h.html#a80ebd7de5b86f5bd3141eff8c1f880a6"
+"AnalyzerConfig_8h.html",
+"DevicePinout_8h.html#a788e6821ad3f4878731942d3a0773507",
+"FreeSerif9pt7b_8h.html#a039fea38fbf97c03f9f895930a61ae8d",
+"Loop_8h.html#a73bc0298fafe0975ac0f87cd5af591b4",
+"index.html#autotoc_md11"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

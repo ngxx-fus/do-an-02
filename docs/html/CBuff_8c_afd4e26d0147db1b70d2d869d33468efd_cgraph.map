@@ -1,0 +1,5 @@
+<map id="CBuffRead" name="CBuffRead">
+<area shape="rect" id="Node000001" title="Reads an array of data from the circular buffer." alt="" coords="5,5,95,33"/>
+<area shape="rect" id="Node000002" href="$CBuff_8c.html#a3815341db93620def1bca590216423c2" title=" " alt="" coords="143,5,298,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,17,130,19,125,19,95,22"/>
+</map>

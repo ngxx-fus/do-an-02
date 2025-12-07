@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['xadvance_0',['xAdvance',['../structGFXglyph.html#a9b191040252aa9b5362087d65366bbf2',1,'GFXglyph']]],
-  ['xoffset_1',['xOffset',['../structGFXglyph.html#ab030bd9aeb37509ccc94ae3dcec4de98',1,'GFXglyph']]]
+  ['waitfornotify_0',['WaitForNotify',['../ESPFreeRTOSWrapper_8h.html#a3a57517e112d3d74ef5e3b4035f18a7d',1,'ESPFreeRTOSWrapper.h']]],
+  ['width_1',['Width',['../structLCD32Dev__t.html#a4397cbe9dbf4b9d9cc02990e7199c913',1,'LCD32Dev_t']]],
+  ['width_2',['width',['../structGFXglyph.html#a02bd34fd474af250b230f52cee75a6c1',1,'GFXglyph']]],
+  ['write_3',['Write',['../structP16Dev__t.html#a54ee7aa993ba7f3ee1d086b2e1f6afde',1,'P16Dev_t']]]
 ];

@@ -42,41 +42,52 @@ enum PIN_STATE_e {
     /// Reserved
 #endif 
 
-#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) && \
-    (EN_DRIVER_P16 == ENABLE)
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) && (EN_DRIVER_P16 == ENABLE)
 
-    #define LCD32_DB0       18    
-    #define LCD32_DB1       12
-    #define LCD32_DB2       17
-    #define LCD32_DB3       11
-    #define LCD32_DB4       16
-    #define LCD32_DB5       10
-    #define LCD32_DB6       15
-    #define LCD32_DB7       9
-    #define LCD32_DB8       7
-    #define LCD32_DB9       3
-    #define LCD32_DB10      6
-    #define LCD32_DB11      20
-    #define LCD32_DB12      5
-    #define LCD32_DB13      19
-    #define LCD32_DB14      4
-    #define LCD32_DB15      8
+    #define LCD32_DB0                   18
+    #define LCD32_DB1                   12
+    #define LCD32_DB2                   17
+    #define LCD32_DB3                   11
+    #define LCD32_DB4                   16
+    #define LCD32_DB5                   10
+    #define LCD32_DB6                   15
+    #define LCD32_DB7                   9
+    #define LCD32_DB8                   7
+    #define LCD32_DB9                   3
+    #define LCD32_DB10                  6
+    #define LCD32_DB11                  20
+    #define LCD32_DB12                  5
+    #define LCD32_DB13                  19
+    #define LCD32_DB14                  4
+    #define LCD32_DB15                  8
 
 
-    #define LCD32_RST       0
-    #define LCD32_WR        2
-    #define LCD32_RD        14
-    #define LCD32_RS        21
-    #define LCD32_CS        13
-    #define LCD32_BL        1
+    #define LCD32_RST                   0
+    #define LCD32_WR                    2
+    #define LCD32_RD                    14
+    #define LCD32_RS                    21
+    #define LCD32_CS                    13
+    #define LCD32_BL                    1
+
+#endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) && (EN_DRIVER_P16 == ENABLE)
+
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER) && (EN_DRIVER_ANALYZER_READER_COM == ENABLE)
+
+    #define ANALYZER_MASTER_SPI_SCLK    41
+    #define ANALYZER_MASTER_SPI_MOSI    39
+    #define ANALYZER_MASTER_SPI_MISO    40
+    #define ANALYZER_MASTER_SPI_CS      42
+    #define ANALYZER_READER_PIN_READY   38
 
 #endif
 
-#if FIRMWARE_TYPE == TYPE_ANALYZER_READER
-    /// Reserved
+#if (FIRMWARE_TYPE == TYPE_ANALYZER_READER) && (EN_DRIVER_ANALYZER_MASTER_COM == ENABLE)
+    #define ANALYZER_READER_SPI_SCLK     13
+    #define ANALYZER_READER_SPI_MOSI     15
+    #define ANALYZER_READER_SPI_MISO     12
+    #define ANALYZER_READER_SPI_CS       14
+    #define ANALYZER_READER_PIN_READY    2
 #endif
-
-
 
 #ifdef __cplusplus
 }
