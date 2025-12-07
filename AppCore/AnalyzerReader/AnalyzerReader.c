@@ -15,30 +15,13 @@ static uint16_t* AnalyzerReaderRx = NULL;
 const static uint16_t reader_id = ANALYZER_READER_ID;
 
 /**
- * @brief Task to monitor system resources, like free heap.
- */
-void TaskMonitor(void * pv) {
-    AREntry("TaskMonitor(%p)", pv);
-    uint32_t last_heap = 0;
-    while(1) {
-        // Using the SystemMonitor component functions for consistency
-        uint32_t current_heap = xPortGetFreeHeapSize();
-        if (current_heap != last_heap) {
-            ARLog("[Monitor] Free Heap: %u bytes", current_heap);
-            last_heap = current_heap;
-        }
-        vTaskDelay(pdMS_TO_TICKS(10000)); // Match system monitor interval
-    }
-}
-
-/**
  * @brief Main task to handle SPI slave communication with the Analyzer Master.
  * @details This implementation uses the standard SPI slave driver. The protocol
  *          requires the slave to prepare the response for the *next* transaction
  *          based on the command received in the *current* transaction.
  */
-void TaskAnalyzerReader(void * pv) {
-    AREntry("TaskAnalyzerReader(%p)", pv);
+void TaskAnalyzerMasterCom(void * pv) {
+    AREntry("TaskAnalyzerMasterCom(%p)", pv);
     esp_err_t ret;
 
     /// Static transaction structure to persist configuration across loops.
@@ -118,9 +101,9 @@ void TaskAnalyzerReader(void * pv) {
     #endif
 
     while(1) {
-        ARLog("[TaskAnalyzerReader] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+        ARLog("[TaskAnalyzerMasterCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
                 AnalyzerReaderRx[0], AnalyzerReaderRx[1], AnalyzerReaderRx[2], AnalyzerReaderRx[3]);
-        ARLog("[TaskAnalyzerReader] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+        ARLog("[TaskAnalyzerMasterCom] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
                 AnalyzerReaderTx[0], AnalyzerReaderTx[1], AnalyzerReaderTx[2], AnalyzerReaderTx[3]);
 
         /// Wait for the master to initiate a transaction. This is a blocking call.
@@ -180,7 +163,7 @@ void TaskAnalyzerReader(void * pv) {
     }
 
 cleanup:
-    ARLog("Cleaning up TaskAnalyzerReader...");
+    ARLog("Cleaning up TaskAnalyzerMasterCom...");
     if (AnalyzerReaderTx) {
         heap_caps_free(AnalyzerReaderTx);
         AnalyzerReaderTx = NULL;
@@ -191,7 +174,7 @@ cleanup:
     }
     spi_slave_free(ANALYZER_READER_SPI_HOST);
 
-    ARExit("TaskAnalyzerReader exiting.");
+    ARExit("TaskAnalyzerMasterCom exiting.");
     vTaskDelete(NULL);
 }
 

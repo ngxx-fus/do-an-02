@@ -63,7 +63,7 @@ extern "C" {
 
 
 /// @brief Task to handle communication with the Analyzer Master device over SPI (acting as Slave).
-void TaskAnalyzerReader(void * pv);
+void TaskAnalyzerMasterCom(void * pv);
 
 /// @brief Task to monitor and print status information for the reader.
 void TaskMonitor(void * pv);

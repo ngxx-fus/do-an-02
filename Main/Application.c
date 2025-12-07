@@ -10,7 +10,13 @@ void app_main(void){
     AppInitialize();
     SET_SYSTEM_INIT_N(1);
 
-    INIT_DO_WAIT(vTaskDelay(1));
+    REPN(i, 0x10){
+        if(SYSTEM_STAGE < SYSTEM_INIT_N(i)){
+            DelayMs(100);
+            SET_SYSTEM_INIT_N(i);
+            SysLog("[app_main] Auto move to init state (%X)!", i);
+        }
+    }
     SET_SYSTEM_RUNNING();
     vTaskDelete(NULL);
 }
