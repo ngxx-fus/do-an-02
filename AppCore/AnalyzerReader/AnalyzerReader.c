@@ -128,6 +128,9 @@ void TaskAnalyzerMasterCom(void * pv) {
 
         ARLog("Transferred %d bytes. RX CMD: 0x%04X, ARG: 0x%04X", trans.trans_len / 8, received_cmd, received_arg);
 
+        // esp_fill_random(AnalyzerReaderTx, ANALYZER_READER_TX_SIZE * sizeof(uint16_t));
+
+
         /// Prepare the response for the NEXT transaction in AnalyzerReaderTx.
         /// Since 'trans.tx_buffer' already points to 'AnalyzerReaderTx', 
         /// modifying the buffer content here is sufficient for the next call.
@@ -145,6 +148,13 @@ void TaskAnalyzerMasterCom(void * pv) {
                 ARLog("Master requested test data. Preparing random data.");
                 esp_fill_random(AnalyzerReaderTx, ANALYZER_READER_TX_SIZE * sizeof(uint16_t));
                 AnalyzerReaderTx[0] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[1] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[2] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[3] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[4] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[5] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[6] = ANALYZER_READER_ACK;
+                AnalyzerReaderTx[7] = ANALYZER_READER_ACK;
                 break;
             default:
                 ARLog("Master sent unknown command: 0x%04X", received_cmd);
@@ -152,14 +162,16 @@ void TaskAnalyzerMasterCom(void * pv) {
                 AnalyzerReaderTx[0] = ANALYZER_READER_NACK; // Example error code
                 break;
         }
+
+        /// A small delay is good practice, though strictly speaking slave is driven by master clock.
+        vTaskDelay(pdMS_TO_TICKS(10));
         
         // Signal to the master that we are ready for a command (i.e., the TX buffer is loaded)
         #if (ANALYZER_READER_PIN_READY != -1)
             gpio_set_level(ANALYZER_READER_PIN_READY, 1);
         #endif
 
-        /// A small delay is good practice, though strictly speaking slave is driven by master clock.
-        vTaskDelay(pdMS_TO_TICKS(10));
+        ARLog("\n");
     }
 
 cleanup:

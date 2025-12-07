@@ -19,7 +19,7 @@ extern "C" {
 #define EN_DRIVERLCD                        ENABLE
 #define EN_DRIVER_ANALYZER_READER_COM       ENABLE
 #define EN_DRIVER_ANALYZER_MASTER_COM       ENABLE
-#define EN_TASK_SYSTEM_MONITOR              ENABLE
+#define EN_TASK_SYSTEM_MONITOR              DISABLE
 #define EN_TASK_SCREEN_CONTROL              ENABLE
 
 #ifdef __cplusplus
