@@ -82,14 +82,12 @@ enum PIN_STATE_e {
 #endif
 
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_READER) && (EN_DRIVER_ANALYZER_MASTER_COM == ENABLE)
-    #define ANALYZER_READER_SPI_SCLK     14
-    #define ANALYZER_READER_SPI_MOSI     13
+    #define ANALYZER_READER_SPI_SCLK     13
+    #define ANALYZER_READER_SPI_MOSI     15
     #define ANALYZER_READER_SPI_MISO     12
-    #define ANALYZER_READER_SPI_CS       15
+    #define ANALYZER_READER_SPI_CS       14
     #define ANALYZER_READER_PIN_READY    2
 #endif
-
-
 
 #ifdef __cplusplus
 }

@@ -73,9 +73,9 @@ extern "C" {
 extern LCD32Dev_t *     lcd32; 
 
 /// @brief Current configured size of the RX buffer.
-extern const uint32_t   AnalyzerMasterRxSize;
+extern const HalfWord_t   AnalyzerMasterRxSize;
 /// @brief Current configured size of the TX buffer.
-extern const uint32_t   AnalyzerMasterTxSize;
+extern const HalfWord_t   AnalyzerMasterTxSize;
 /// @brief Pointer to the RX data buffer.
 extern uint16_t *       AnalyzerMasterRx;
 /// @brief Pointer to the TX data buffer.

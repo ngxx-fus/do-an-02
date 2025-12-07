@@ -1,4 +1,11 @@
+#include "AnalyzerMaster.h"
 #include "All.h"
+#include "BitOp.h"
+#include "DevicePinout.h"
+#include "ESPGPIOWrapper.h"
+#include "ReturnType.h"
+#include "freertos/idf_additions.h"
+#include <stdint.h>
 
 #if (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
 
@@ -7,9 +14,9 @@
 #include "driver/spi_master.h"
 
 /// @brief Current configured size of the RX buffer.
-const uint32_t  AnalyzerMasterRxSize = ANALYZER_MASTER_RX_SIZE;
+const HalfWord_t AnalyzerMasterRxSize = ANALYZER_MASTER_RX_SIZE;
 /// @brief Current configured size of the TX buffer.
-const uint32_t  AnalyzerMasterTxSize = ANALYZER_MASTER_TX_SIZE;
+const HalfWord_t AnalyzerMasterTxSize = ANALYZER_MASTER_TX_SIZE;
 /// @brief Pointer to the RX data buffer.
 uint16_t *      AnalyzerMasterRx     = NULL ;
 /// @brief Pointer to the TX data buffer.
@@ -237,6 +244,107 @@ void PerformScreenTest(LCD32Dev_t * lcd32) {
     }
 }
 
+/// static DefaultRet_t WaitForAnalyzerReaderReadyPinLow(int TimeoutMS){
+///     if(!IsValidPin(ANALYZER_READER_PIN_READY)) return STAT_ERR_IO;
+///     int64_t TimeoutUS = 1000L * TimeoutMS;
+///     int64_t EntryTime = esp_timer_get_time();
+///     while(esp_timer_get_time() - EntryTime <= TimeoutUS){
+///         if((IOGet() & Mask64(ANALYZER_READER_PIN_READY)) == 0) return STAT_OKE;
+///         vTaskDelay(1);
+///     }
+///     return STAT_ERR_TIMEOUT;
+/// }
+
+static DefaultRet_t WaitForAnalyzerReaderReadyPinHigh(int TimeoutMS){
+    if(!IsValidPin(ANALYZER_READER_PIN_READY)) return STAT_ERR_IO;
+    int64_t TimeoutUS = 1000L * TimeoutMS;
+    int64_t EntryTime = esp_timer_get_time();
+    while(esp_timer_get_time() - EntryTime <= TimeoutUS){
+        DelayMs(5);
+        if((IOGet() & Mask64(ANALYZER_READER_PIN_READY)) != 0) return STAT_OKE;
+    }
+    return STAT_ERR_TIMEOUT;
+}
+
+
+/// @brief Init SPI, Buffer, ...
+static DefaultRet_t AnalyzerReaderComInit(spi_device_handle_t * AnalyzerMasterSPIHandlePtr){
+    AMEntry("AnalyzerReaderComInit(...)");
+
+    DefaultRet_t ReturnValue = 0;
+    bool AnalyzerMasterSPIReady = false;
+
+    /// Allocate DMA-capable memory for RX/TX buffers.
+    /// Internal RAM (MALLOC_CAP_DMA) is preferred for high-speed SPI transactions.
+    AnalyzerMasterRx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
+    AnalyzerMasterTx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_DMA);
+
+    if (IsNull(AnalyzerMasterRx) || IsNull(AnalyzerMasterTx)) {
+        AMErr("[AnalyzerReaderComInit] Failed to allocate DMA buffers!");
+        goto cleanup;
+    }
+    
+    /// Zero-initialize buffers to prevent sending random garbage.
+    memset(AnalyzerMasterRx, 0, ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t));
+    memset(AnalyzerMasterTx, 0, ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
+
+    AMLog("[AnalyzerReaderComInit] Buffers allocated directly for DMA usage.");
+
+    // --- GPIO Configuration (Ready Pin) ---
+    #if (ANALYZER_READER_PIN_READY != -1)
+        /// Configure the handshake pin as input to detect Slave readiness.
+        IOConfigAsInput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_ENABLE);
+    #endif
+
+    // --- SPI Configuration ---
+    spi_bus_config_t buscfg = {
+        .miso_io_num = ANALYZER_MASTER_SPI_MISO,
+        .mosi_io_num = ANALYZER_MASTER_SPI_MOSI,
+        .sclk_io_num = ANALYZER_MASTER_SPI_SCLK,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t),
+    };
+
+    spi_device_interface_config_t devcfg = {
+        .clock_speed_hz = ANALYZER_READER_SPI_FREQ,
+        .mode = 0,               // SPI mode 0 (CPOL=0, CPHA=0)
+        .spics_io_num = ANALYZER_MASTER_SPI_CS,
+        .queue_size = 7,
+        // --- IMPORTANT: Disable Driver Command/Address Phase ---
+        // We manage the protocol payload manually in the TX buffer.
+        .command_bits = 0,       
+        .address_bits = 0,       
+        .dummy_bits = 0,         
+    };
+
+    /// Initialize the SPI bus with DMA enabled (Auto channel).
+    ReturnValue = spi_bus_initialize(ANALYZER_READER_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    if (ReturnValue != ESP_OK) goto cleanup;
+    AnalyzerMasterSPIReady = true;
+
+    /// Attach the Reader device to the SPI bus.
+    ReturnValue = spi_bus_add_device(ANALYZER_READER_SPI_HOST, &devcfg, &(*AnalyzerMasterSPIHandlePtr));
+    if (ReturnValue != ESP_OK) goto cleanup;
+
+    AMLog("[AnalyzerReaderComInit] SPI Initialized in Raw Buffer Mode.");
+
+
+    AMExit("AnalyzerReaderComInit() : STAT_OKE");
+    return STAT_OKE;
+
+    cleanup:
+    /// Release resources before exiting.
+    if ((*AnalyzerMasterSPIHandlePtr)) spi_bus_remove_device(*AnalyzerMasterSPIHandlePtr);
+    if (AnalyzerMasterSPIReady) spi_bus_free(ANALYZER_READER_SPI_HOST);
+    if (AnalyzerMasterTx) heap_caps_free(AnalyzerMasterTx);
+    if (AnalyzerMasterRx) heap_caps_free(AnalyzerMasterRx);
+
+    ReturnValue = ESPReturnType2DefaultReturnType(ReturnValue);
+    AMExit("AnalyzerReaderComInit() : %s", DefaultReturnType2Str(ReturnValue));
+    return ReturnValue;
+}
+
 #endif /// ANALYZER_MASTER_LOCAL_UTILS
 
 void TaskScreen(void * pv){
@@ -297,343 +405,172 @@ void TaskScreen(void * pv){
     }
 }
 
+/// @brief Task to handle SPI Master communication with the Analyzer Reader.
+///        Implements a manual command-response protocol over Full-Duplex SPI.
+/// @param pv Parameters passed to the task (unused).
 void TaskAnalyzerReaderCom(void * pv) {
-    /// Wait for essential init
+    /// Wait for the system to reach initialization stage 2.
     while(SYSTEM_STAGE < SYSTEM_INIT_N(2)) { vTaskDelay(1); }
 
     AMEntry("TaskAnalyzerReaderCom(%p)", pv);
 
-    esp_err_t ret;
-    spi_device_handle_t spi_handle = NULL;
-    bool spi_bus_initialized = false;
+    spi_device_handle_t AnalyzerMasterSPIHandle;
+    DefaultRet_t ReturnValue = AnalyzerReaderComInit(&AnalyzerMasterSPIHandle);
+    bool AnalyzerMasterSPIReady = (ReturnValue == STAT_OKE) ? true : false;
+    bool AnalyzerReaderIDVerified = false;
 
-    /// Allocate SPI RX buffer
-    AnalyzerMasterRx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_SPIRAM);
-    if(IsNull(AnalyzerMasterRx)){
-        AMErr("[TaskAnalyzerReaderCom] Cannot allocate memory for SPI RX buffer!");
-        goto cleanup;
-    }
-    AMLog("[TaskAnalyzerReaderCom] Allocated %d bytes for RX buffer in PSRAM.", ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t));
+    SYSTEM_STAGE = SYSTEM_RUNNING;
 
-    /// Allocate SPI TX buffer
-    AnalyzerMasterTx = (uint16_t *)heap_caps_malloc(ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t), MALLOC_CAP_SPIRAM);
-    if(IsNull(AnalyzerMasterTx)){
-        AMErr("[TaskAnalyzerReaderCom] Cannot allocate memory for SPI TX buffer!");
-        goto cleanup;
-    }
-    AMLog("[TaskAnalyzerReaderCom] Allocated %d bytes for TX buffer in PSRAM.", ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
+    spi_transaction_t trans;
+   
+    /// Verify Analyzer-Reader-ID loop
+    while((!IS_SYSTEM_STOPPED()) && (!AnalyzerReaderIDVerified)){
+        AMLog("[TaskAnalyzerReaderCom] Try to verify Analyzer-Reader... ");
+        // AMLog("[TaskAnalyzerReaderCom] TX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+              // AnalyzerMasterTx[0], AnalyzerMasterTx[1], AnalyzerMasterTx[2], AnalyzerMasterTx[3]);
+        // AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
+                // AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3]);
 
-    // --- GPIO Configuration ---
-    #if (ANALYZER_READER_PIN_READY != -1)
-        IOConfigAsInput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_ENABLE);
-        AMLog("[TaskAnalyzerReaderCom] Configured READY pin (%d) as input.", ANALYZER_READER_PIN_READY);
-    #else
-        AMLog("[TaskAnalyzerReaderCom] READY pin is disabled, will not wait for signal.");
-    #endif
+        /// 1. Prepare TX Buffer with ID Request Command.
+        /// Protocol: [CMD 16bit] [ADDR 16bit].
+        /// Note: Use __builtin_bswap16 to ensure Big Endian format on the wire.
+        // memset(AnalyzerMasterTx, 0, ANALYZER_MASTER_TX_SIZE * sizeof(HalfWord_t));
+        AnalyzerMasterTx[0] = (AM_CMD_REQ_ID);      // HalfWord 0: CMD
+        AnalyzerMasterTx[1] = (ANALYZER_MASTER_ID); // HalfWord 1: ARG/ADDR
 
-    // --- SPI Configuration ---
-    spi_bus_config_t buscfg = {
-        .miso_io_num = ANALYZER_MASTER_SPI_MISO,
-        .mosi_io_num = ANALYZER_MASTER_SPI_MOSI,
-        .sclk_io_num = ANALYZER_MASTER_SPI_SCLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = ANALYZER_MASTER_RX_SIZE * sizeof(HalfWord_t),
-    };
-
-    spi_device_interface_config_t devcfg = {
-        .clock_speed_hz = ANALYZER_READER_SPI_FREQ,
-        .mode = 0, // SPI mode 0
-        .spics_io_num = ANALYZER_MASTER_SPI_CS,
-        .queue_size = 7,
-        .command_bits = 16, // Protocol: 16-bit command
-        .address_bits = 16, // Protocol: 16-bit argument
-        .flags = SPI_DEVICE_HALFDUPLEX, // Explicitly set half-duplex mode
-    };
-
-    // Initialize the SPI bus
-    ret = spi_bus_initialize(ANALYZER_READER_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
-    if (ret != ESP_OK) {
-        AMErr("[TaskAnalyzerReaderCom] spi_bus_initialize failed: %s", esp_err_to_name(ret));
-        goto cleanup;
-    }
-    spi_bus_initialized = true;
-
-    // Attach the slave device to the SPI bus
-    ret = spi_bus_add_device(ANALYZER_READER_SPI_HOST, &devcfg, &spi_handle);
-    if (ret != ESP_OK) {
-        AMErr("[TaskAnalyzerReaderCom] spi_bus_add_device failed: %s", esp_err_to_name(ret));
-        goto cleanup;
-    }
-
-    AMLog("[TaskAnalyzerReaderCom] SPI Master initialized successfully.");
-
-    bool reader_verified = false;
-
-    while(!IS_SYSTEM_STOPPED()){
-        if (!reader_verified) {
-            AMLog("[TaskAnalyzerReaderCom] Sending ID request to reader...");
-
-            spi_transaction_t id_trans;
-            memset(&id_trans, 0, sizeof(id_trans));
-            id_trans.flags       = SPI_TRANS_USE_RXDATA; // Use internal buffer for small reception
-            id_trans.cmd         = AM_CMD_REQ_ID;
-            id_trans.addr        = ANALYZER_MASTER_ID;
-            id_trans.rxlength    = sizeof(HalfWord_t) * 8; // Expect 1 half-word (16 bits) back
-
-            ret = spi_device_polling_transmit(spi_handle, &id_trans);
-
-            if (ret != ESP_OK) {
-                AMErr("[TaskAnalyzerReaderCom] ID request transaction failed: %s", esp_err_to_name(ret));
-            } else {
-                // SPI data is received MSB first. On a little-endian CPU, we need to swap bytes.
-                uint16_t received_id = SPI_SWAP_DATA_RX(*(uint16_t*)id_trans.rx_data, 16);
-                AMLog("[TaskAnalyzerReaderCom] Received ID: 0x%04X", received_id);
-
-                if (received_id == ANALYZER_READER_ID) {
-                    AMLog("[TaskAnalyzerReaderCom] Reader ID verified successfully!");
-                    reader_verified = true;
-                } else {
-                    AMErr("[TaskAnalyzerReaderCom] Reader ID mismatch! Expected 0x%04X, got 0x%04X.", (uint16_t)ANALYZER_READER_ID, received_id);
-                }
-            }
-
-            // If verification fails, wait and retry in the next loop iteration
-            if (!reader_verified) {
-                DelayMs(2000);
-                continue; // Skip to next loop iteration
-            }
-        }
-
-        // --- If verified, proceed with other commands ---
-        {
-            bool proceed_with_transaction = false;
-            #if (ANALYZER_READER_PIN_READY != -1)
-                AMLog("[TaskAnalyzerReaderCom] Waiting for READY signal...");
-                int64_t start_time = esp_timer_get_time();
-                while(gpio_get_level(ANALYZER_READER_PIN_READY) == 0) {
-                    if ((esp_timer_get_time() - start_time) / 1000 > 2000) { // 2s timeout
-                        AMLog("[TaskAnalyzerReaderCom] Timeout waiting for READY signal. Retrying...");
-                        break;
-                    }
-                    vTaskDelay(pdMS_TO_TICKS(1)); // Yield
-                }
-
-                if (gpio_get_level(ANALYZER_READER_PIN_READY) == 1) {
-                    proceed_with_transaction = true;
-                }
-            #else
-                proceed_with_transaction = true;
-            #endif
-
-            if (proceed_with_transaction) {
-                AMLog("[TaskAnalyzerReaderCom] READY signal detected/bypassed. Requesting test data.");
-
-                const uint16_t data_req_size_hw = 5; // Request 5 half-words
-
-                spi_transaction_t t;
-                memset(&t, 0, sizeof(t));
-                t.cmd        = AM_CMD_REQ_TEST;
-                t.addr       = data_req_size_hw;
-                t.rxlength   = data_req_size_hw * sizeof(HalfWord_t) * 8;
-                t.rx_buffer  = AnalyzerMasterRx;
-
-                ret = spi_device_polling_transmit(spi_handle, &t);
-                if (ret == ESP_OK) {
-                    AMLog("[TaskAnalyzerReaderCom] SPI transaction successful. Read %d bytes.", t.rxlength / 8);
-
-                    // The SPI peripheral transfers data MSB-first. On a little-endian CPU like ESP32,
-                    // we need to swap the bytes of each half-word to get the correct value,
-                    // ensuring consistency with the ID check.
-                    for (int i = 0; i < data_req_size_hw; i++) {
-                        AnalyzerMasterRx[i] = __builtin_bswap16(AnalyzerMasterRx[i]);
-                    }
-
-                    AMLog("[TaskAnalyzerReaderCom] Data sample: 0x%04X 0x%04X 0x%04X 0x%04X 0x%04X",
-                          AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3], AnalyzerMasterRx[4]);
-                } else {
-                    AMErr("[TaskAnalyzerReaderCom] SPI transaction failed: %s", esp_err_to_name(ret));
-                }
-            }
-        }
-        DelayMs(5000); // Wait 5s before next cycle
-    }
-
-cleanup:
-    if (spi_handle) {
-        spi_bus_remove_device(spi_handle);
-    }
-    if (spi_bus_initialized) {
-        spi_bus_free(ANALYZER_READER_SPI_HOST);
-    }
-    if (AnalyzerMasterTx) {
-        heap_caps_free(AnalyzerMasterTx);
-        AnalyzerMasterTx = NULL;
-    }
-    if (AnalyzerMasterRx) {
-        heap_caps_free(AnalyzerMasterRx);
-        AnalyzerMasterRx = NULL;
-    }
-    AMExit("TaskAnalyzerReaderCom() exiting.");
-    vTaskDelete(NULL);
-}
-
-void Deprecated_TaskAnalyzerReaderCom(void * pv) {
-    AMEntry("TaskAnalyzerReaderCom(%p)", pv);
-
-    // --- Constants ---
-    #define ANALYZER_CMD_READ_DATA      0x0A
-    #define READY_WAIT_TIMEOUT_MS       20000
-    #define MAIN_LOOP_DELAY_MS          10000
-
-    // --- Buffer Configuration ---
-    const size_t buffer_size_words = 4096;
-    const size_t buffer_size_bytes = buffer_size_words * sizeof(uint16_t);
-    
-    // This is a temporary linear buffer to receive data from a single SPI transaction.
-    // The data is then copied to the main circular buffer.
-    uint16_t *spi_rx_buffer = NULL;
-    // This is the main circular buffer to store incoming data stream.
-    CBuff_t *data_cbuff = NULL;
-
-    // --- Buffer Allocation ---
-    #if (LCD32_CANVAS_IN_PSRAM_EN == 1)
-        spi_rx_buffer = (uint16_t *)heap_caps_malloc(buffer_size_bytes, MALLOC_CAP_SPIRAM);
-        AMLog("[TaskAnalyzerReaderCom] Allocating %d-byte temporary SPI RX buffer in PSRAM.", buffer_size_bytes);
-    #else
-        spi_rx_buffer = (uint16_t *)malloc(buffer_size_bytes);
-        AMLog("[TaskAnalyzerReaderCom] Allocating %d-byte temporary SPI RX buffer in Internal RAM.", buffer_size_bytes);
-    #endif
-
-    if (IsNull(spi_rx_buffer)) {
-        AMErr("[TaskAnalyzerReaderCom] Failed to allocate SPI buffer.");
-        vTaskDelete(NULL);
-        return;
-    }
-
-    // Create the main circular buffer, preferably in PSRAM.
-    data_cbuff = CBuffCreate(buffer_size_bytes);
-    if (IsNull(data_cbuff)) {
-        AMErr("[TaskAnalyzerReaderCom] Failed to create circular buffer.");
-        heap_caps_free(spi_rx_buffer);
-        vTaskDelete(NULL);
-        return;
-    }
-    AMLog("[TaskAnalyzerReaderCom] Circular buffer created successfully (size: %d bytes).", buffer_size_bytes);
-
-    // --- GPIO Configuration ---
-    // Configure READY pin as input with pull-down, if it's enabled.
-    #if (ANALYZER_READER_PIN_READY != -1)
-        IOConfigAsInput(1ULL << ANALYZER_READER_PIN_READY, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_ENABLE);
-        AMLog("[TaskAnalyzerReaderCom] Configured READY pin (%d) as input.", ANALYZER_READER_PIN_READY);
-    #else
-        AMLog("[TaskAnalyzerReaderCom] READY pin is disabled, will not wait for signal.");
-    #endif
-
-    // --- SPI Configuration ---
-    spi_bus_config_t buscfg = {
-        .miso_io_num = ANALYZER_MASTER_SPI_MISO,
-        .mosi_io_num = ANALYZER_MASTER_SPI_MOSI,
-        .sclk_io_num = ANALYZER_MASTER_SPI_SCLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = buffer_size_bytes,
-    };
-
-    // Note: SPI clock speed should be chosen based on the slave device's capability.
-    // Starting with a safe 10 MHz.
-    spi_device_interface_config_t devcfg = {
-        .clock_speed_hz = 10 * 1000 * 1000,
-        .mode = 0, // SPI mode 0
-        .spics_io_num = ANALYZER_MASTER_SPI_CS,
-        .queue_size = 7, // We want to be able to queue 7 transactions at a time
-        .command_bits = 8, // Use 8-bit command phase
-    };
-
-    spi_device_handle_t spi_handle;
-
-    // Initialize the SPI bus
-    esp_err_t ret = spi_bus_initialize(ANALYZER_READER_SPI_HOST, &buscfg, SPI_DMA_CH_AUTO);
-    if (ret != ESP_OK) {
-        AMErr("[TaskAnalyzerReaderCom] spi_bus_initialize failed: %s", esp_err_to_name(ret));
-        heap_caps_free(spi_rx_buffer);
-        vTaskDelete(NULL);
-        return;
-    }
-
-    // Attach the slave device to the SPI bus
-    ret = spi_bus_add_device(ANALYZER_READER_SPI_HOST, &devcfg, &spi_handle);
-    if (ret != ESP_OK) {
-        AMErr("[TaskAnalyzerReaderCom] spi_bus_add_device failed: %s", esp_err_to_name(ret));
-        spi_bus_free(ANALYZER_READER_SPI_HOST);
-        heap_caps_free(spi_rx_buffer);
-        vTaskDelete(NULL);
-        return;
-    }
-
-    AMLog("[TaskAnalyzerReaderCom] SPI Master initialized successfully.");
-
-    // --- Main Loop ---
-    while(1) {
-        bool proceed_with_transaction = false;
+        /// 2. Configure SPI Transaction.
+        memset(&trans, 0, sizeof(trans));
+        trans.length = 2 * 16;              // Total bits to clock out (32 bits)
+        trans.tx_buffer = AnalyzerMasterTx; // Transmit Command
+        trans.rx_buffer = AnalyzerMasterRx; // Receive (ignore result for this step)
 
         #if (ANALYZER_READER_PIN_READY != -1)
-            // Wait for the slave to be ready (active high)
-            AMLog("[TaskAnalyzerReaderCom] Waiting for READY signal...");
-            int64_t start_time = esp_timer_get_time();
-            while(gpio_get_level(ANALYZER_READER_PIN_READY) == 0) {
-                if ((esp_timer_get_time() - start_time) / 1000 > READY_WAIT_TIMEOUT_MS) {
-                    AMLog("[TaskAnalyzerReaderCom] Timeout waiting for READY signal. Retrying...");
-                    break;
-                }
-                vTaskDelay(pdMS_TO_TICKS(1)); // Yield to other tasks
-            }
-
-            if (gpio_get_level(ANALYZER_READER_PIN_READY) == 1) {
-                proceed_with_transaction = true;
+            /// 3. Wait for Analyzer-Reader ready to start the transaction (HIGH)
+            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
+            if(ReturnValue != STAT_OKE) {
+                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
             }
         #else
-            // If READY pin is disabled, always proceed.
-            proceed_with_transaction = true;
+            DelayMs(10);
         #endif
 
-        if (proceed_with_transaction) {
-            AMLog("[TaskAnalyzerReaderCom] READY signal detected or bypassed. Starting transaction.");
+        /// 4. Execute Transaction 1 (Send Command + Arg: Master ID).
+        /// The Slave receives the command but cannot reply instantly in the same frame.
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
 
-            // A single transaction that sends a command and then reads data.
-            // This is more efficient and ensures CS stays low during the whole process.
-            spi_transaction_t t;
-            memset(&t, 0, sizeof(t));
-            t.cmd = ANALYZER_CMD_READ_DATA;      // Command to send
-            t.length = buffer_size_bytes * 8;    // Total bits to READ
-            t.rx_buffer = spi_rx_buffer;         // Buffer to store received data
+        #if (ANALYZER_READER_PIN_READY != -1)
+            /// 5. Wait for Analyzer-Reader ready to start the transaction (HIGH)
+            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
+            if(ReturnValue != STAT_OKE) {
+                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
+            }
+        #else
+            DelayMs(10);
+        #endif
 
-            ret = spi_device_polling_transmit(spi_handle, &t);
-            if (ret == ESP_OK) {
-                // On success, t.rxlength is the number of bits read.
-                size_t bytes_read = t.rxlength / 8;
-                AMLog("[TaskAnalyzerReaderCom] Command 0x%02X sent, read %d bytes from SPI.", (uint8_t)t.cmd, bytes_read);
-
-                    // --- Phase 3: Store data in Circular Buffer ---
-                    size_t bytes_written = CBuffWrite(data_cbuff, spi_rx_buffer, bytes_read);
-                    if (bytes_written < bytes_read) {
-                        AMErr("[TaskAnalyzerReaderCom] Circular buffer is full! Discarded %d bytes.", bytes_read - bytes_written);
-                    } else {
-                        AMLog("[TaskAnalyzerReaderCom] Wrote %d bytes to circular buffer.", bytes_written);
-                    }
-                    AMLog("[TaskAnalyzerReaderCom] CBuff status: %u / %u bytes used.", CBuffGetDataCount(data_cbuff), data_cbuff->size);
-
-                    AMLog("[TaskAnalyzerReaderCom] Data sample: 0x%04X 0x%04X 0x%04X 0x%04X ...",
-                          spi_rx_buffer[0], spi_rx_buffer[1], spi_rx_buffer[2], spi_rx_buffer[3]);
+        /// 6. Execute Transaction 2 (Read Response).
+        /// Send NOP CMD (0x00) to clock out the response prepared by the Slave.
+        AnalyzerMasterTx[0] = AM_CMD_NOP;   // HalfWord 0: NOP
+        AnalyzerMasterTx[1] = AM_CMD_NOP;   // HalfWord 1: NOP
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans); 
+        AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
+                AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
+                AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
+        if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
+            if (AnalyzerMasterRx[1] == ANALYZER_READER_ID) {
+                AnalyzerReaderIDVerified = true;
+                AMLog("[TaskAnalyzerReaderCom] Reader ID Verified!");
             } else {
-                AMErr("[TaskAnalyzerReaderCom] SPI transaction failed: %s", esp_err_to_name(ret));
+                AMErr("[TaskAnalyzerReaderCom] Received ACK, but wrong expected ID (%04X)! Check the the Analyzer-Reader!", ANALYZER_READER_ID);
+                DelayMs(1000); // Retry after delay on failure
+                continue;
+            }
+        }else if(AnalyzerMasterRx[0] == ANALYZER_READER_NACK){
+            AMErr("[TaskAnalyzerReaderCom] Received NACK! Check the command!");
+            DelayMs(1000); // Retry after delay on failure
+            continue;
+        }else {
+            AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK! Check the the Analyzer-Reader!");
+            DelayMs(1000); // Retry after delay on failure
+            continue;
+        }
+
+    }
+
+    /// Crawl data from Analyzer-Reader loop
+    while (!IS_SYSTEM_STOPPED()) {
+        
+        /// Populate TX buffer manually.
+        // AnalyzerMasterTx[0] = __builtin_bswap16(AM_CMD_REQ_TEST);   // CMD
+        // AnalyzerMasterTx[1] = __builtin_bswap16((HalfWord_t)AnalyzerMasterRxSize);  // ARG
+        AnalyzerMasterTx[0] = (AM_CMD_REQ_TEST);   // CMD
+        AnalyzerMasterTx[1] = (AnalyzerMasterRxSize - 1);  // ARG (-1 frame for ACK/NACK)      
+        
+        memset(&trans, 0, sizeof(trans));
+        trans.length = 32; // Send 2 words (CMD + ARG)
+        trans.tx_buffer = AnalyzerMasterTx;
+        trans.rx_buffer = AnalyzerMasterRx; 
+
+        #if (ANALYZER_READER_PIN_READY != -1)
+            /// Wait for Analyzer-Reader ready to start the transaction (HIGH)
+            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
+            if(ReturnValue != STAT_OKE) {
+                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
+            }
+        #else
+            DelayMs(10);
+        #endif
+
+        /// Transmit request.
+        spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+
+        #if (ANALYZER_READER_PIN_READY != -1)
+            /// Wait for Analyzer-Reader ready to start the transaction (HIGH)
+            ReturnValue = WaitForAnalyzerReaderReadyPinHigh(100);
+            if(ReturnValue != STAT_OKE) {
+                AMLog("[TaskAnalyzerReaderCom] ERR: %s", DefaultReturnType2Str(ReturnValue));
+            }
+        #else
+            DelayMs(10);
+        #endif
+
+
+        /// The Slave has loaded the TX buffer. Master must send Dummy to receive it.
+        // Clear TX buffer (send 0x00s)
+        // memset(AnalyzerMasterTx, 0, req_len * sizeof(HalfWord_t)); 
+        memset(&trans, 0, sizeof(trans));
+        trans.length = (AnalyzerMasterRxSize) * 16;     // Total bits to read (includes ACK/NACK)
+        trans.tx_buffer = AnalyzerMasterTx;             // Send Dummy
+        trans.rx_buffer = AnalyzerMasterRx;             // Receive Data
+
+        ReturnValue = spi_device_polling_transmit(AnalyzerMasterSPIHandle, &trans);
+
+        if (ReturnValue == ESP_OK) {
+            AMLog("[TaskAnalyzerReaderCom] Received %d half-words:", (trans.rxlength >> 4));
+            AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X, 0x%04X,...}",
+                AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3],
+                AnalyzerMasterRx[4], AnalyzerMasterRx[5], AnalyzerMasterRx[6], AnalyzerMasterRx[7]);
+            if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
+                /// Do with the correct data!
+            }else if (AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
+                AMErr("[TaskAnalyzerReaderCom] Received NACK! Check the the command!");
+            }else {
+                AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK! Check the the Analyzer-Reader!");
             }
         }
 
-        // Wait before next cycle
-        vTaskDelay(pdMS_TO_TICKS(MAIN_LOOP_DELAY_MS));
+///    next_loop:
+        DelayMs(1000);
     }
-}
 
+    /// Release resources before exiting.
+    if (AnalyzerMasterSPIHandle)    spi_bus_remove_device(AnalyzerMasterSPIHandle);
+    if (AnalyzerMasterSPIReady)     spi_bus_free(ANALYZER_READER_SPI_HOST);
+    if (AnalyzerMasterTx)           heap_caps_free(AnalyzerMasterTx);
+    if (AnalyzerMasterRx)           heap_caps_free(AnalyzerMasterRx);
+    
+    AMExit("Exiting.");
+    vTaskDelete(NULL);
+}
 
 #endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)

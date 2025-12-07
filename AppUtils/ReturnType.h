@@ -15,7 +15,7 @@ extern "C" {
 #include "stdio.h"
 #include "stdint.h"
 
-#define ESP_ERR_CONVERT_EN  0
+#define ESP_ERR_CONVERT_EN  1
 
 /// Default return type
 typedef int32_t DefaultRet_t;

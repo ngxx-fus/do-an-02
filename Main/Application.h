@@ -22,17 +22,19 @@ extern "C" {
     void AppInitialize(){
         SysEntry("AppInitialize()");
 
-        #if (SYSTEM_MON_EN == 1)
+        #if (EN_TASK_SYSTEM_MONITOR == ENABLE)
             SysLog("[AppInitialize] [+Task] TaskSystemMonitor");
             CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
         #endif
 
-        SysLog("[AppInitialize] [+Task] TaskScreen");
-        CreateTaskCPU1(TaskScreen, "TaskScreen", 4096, NULL, 2, NULL);
+        #if (EN_TASK_SCREEN_CONTROL == ENABLE)
+            SysLog("[AppInitialize] [+Task] TaskScreen");
+            CreateTaskCPU0(TaskScreen, "TaskScreen", 4096, NULL, 2, NULL);
+        #endif /// EN_TASK_SCREEN_CONTROL
 
         #if (ANALYZER_READER_COM_EN == 1)
             SysLog("[AppInitialize] [+Task] TaskAnalyzerReaderCom");
-            CreateTaskCPU0(TaskAnalyzerReaderCom, "TaskAnalyzerReaderCom", 4096, NULL, 3, NULL);
+            CreateTaskCPU1(TaskAnalyzerReaderCom, "TaskAnalyzerReaderCom", 4096, NULL, 3, NULL);
         #endif
 
         SysExit("AppInitialize()");
