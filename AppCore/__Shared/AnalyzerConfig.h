@@ -10,6 +10,15 @@ extern "C" {
 #include <stdint.h>
 #include <stdlib.h>
 
+/// @brief RX buffer size (unit: number of HalfWord_t elements).
+/// @note  Used for receiving data from Reader.
+#define ANALYZER_MASTER_RX_SIZE     (2048)
+/// @brief TX buffer size (unit: number of HalfWord_t elements).
+/// @note  Used for sending commands to Reader.
+#define ANALYZER_MASTER_TX_SIZE     (2048)
+/// @brief SPI freqency for Analyzer-Reader communication (5MHz).
+#define ANALYZER_READER_SPI_FREQ    5000000
+
 /// @brief Identifier for the Master device.
 #define ANALYZER_MASTER_ID          0x32
 
@@ -29,14 +38,10 @@ enum AnalyzerCmds_e {
     AM_CMD_SET_SIZE_RX  = 0x32, /// Config Reader RX buffer size (+ 01 halfword arg, MAX=65535).
 };
 
-/// @brief RX buffer size (unit: number of HalfWord_t elements).
-/// @note  Used for receiving data from Reader.
-#define ANALYZER_MASTER_RX_SIZE     (2048)
-/// @brief TX buffer size (unit: number of HalfWord_t elements).
-/// @note  Used for sending commands to Reader.
-#define ANALYZER_MASTER_TX_SIZE     (2048)
-/// @brief SPI freqency for Analyzer-Reader communication (5MHz).
-#define ANALYZER_READER_SPI_FREQ    5000000
+
+/// @brief Half-Word type for Analyzer-Reader communication.
+typedef uint16_t HalfWord_t;
+
 
 #endif /// (FIRMWARE_TYPE == TYPE_ANALYZER_READER) || ((FIRMWARE_TYPE == TYPE_ANALYZER_MASTER)
 
@@ -45,3 +50,4 @@ enum AnalyzerCmds_e {
 #endif
 
 #endif /// __ANALYZER_COMMANDS_H__
+

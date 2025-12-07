@@ -69,9 +69,6 @@ extern "C" {
 
 #endif /// ANALYZER_MASTER_SPI_CONFIG_SECTION
 
-/// @brief Half-Word type for Analyzer-Reader communication.
-typedef uint16_t HalfWord_t;
-
 /// @brief External reference to the LCD32 device instance.
 extern LCD32Dev_t *     lcd32; 
 
