@@ -61,6 +61,57 @@ extern "C" {
     #define ANALYZER_READER_TX_SIZE     (64)
 #endif /// ANALYZER_READER_TX_SIZE
 
+#if (EN_DRIVER_SPI_TOUCH == ENABLE)
+
+    #ifndef ANALYZER_READER_LCD_T_CS
+        /// @brief GPIO for Touch Screen Chip Select.
+        #define ANALYZER_READER_LCD_T_CS    4
+    #endif
+
+    #ifndef ANALYZER_READER_LCD_CLK
+        /// @brief GPIO for Touch Screen Clock.
+        #define ANALYZER_READER_LCD_CLK     0
+    #endif
+
+    #ifndef ANALYZER_READER_LCD_PEN
+        /// @brief GPIO for Touch Screen Pen Interrupt.
+        #define ANALYZER_READER_LCD_PEN     16
+    #endif
+
+    #ifndef ANALYZER_READER_LCD_F_CS
+        /// @brief GPIO for Touch Screen Flash CS (Disable it if unused).
+        #define ANALYZER_READER_LCD_F_CS    -1
+    #endif
+
+    #ifndef ANALYZER_READER_LCD_MISO
+        /// @brief GPIO for Touch Screen MISO.
+        #define ANALYZER_READER_LCD_MISO    5
+    #endif
+
+    #ifndef ANALYZER_READER_LCD_MOSI
+        /// @brief GPIO for Touch Screen MOSI.
+        #define ANALYZER_READER_LCD_MOSI    17
+    #endif
+
+    #ifndef TOUCH_SPI_HOST
+        /// @brief SPI Host for Touch (Must be different from Slave SPI).
+        /// @note  Slave usually uses SPI2_HOST, so we default to SPI3_HOST.
+        #define TOUCH_SPI_HOST              SPI3_HOST
+    #endif
+
+#endif /// (EN_DRIVER_SPI_TOUCH == ENABLE)
+
+/// @brief Global variable storing the latest X coordinate of touch.
+extern volatile uint16_t ScreenTouchX;
+
+/// @brief Global variable storing the latest Y coordinate of touch.
+extern volatile uint16_t ScreenTouchY;
+
+/// @brief Task to handle Touch Screen SPI communication (Master mode).
+void TaskScreenTouchSPICom(void * pv);
+
+/// @brief Interrupt Service Routine for Pen Touch.
+// void IRAM_ATTR ScreenTouchSPIHandler(void* arg);
 
 /// @brief Task to handle communication with the Analyzer Master device over SPI (acting as Slave).
 void TaskAnalyzerMasterCom(void * pv);

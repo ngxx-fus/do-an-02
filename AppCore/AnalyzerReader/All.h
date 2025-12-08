@@ -11,6 +11,28 @@ extern "C" {
 
 #include "AnalyzerReader.h"
 
+static inline void AnalyzerReaderInit(){
+    SysEntry("AnalyzerReaderInit()");
+
+    #if (SYSTEM_MON_EN == 1)
+        SysLog("[AppInitialize] [+Task] TaskSystemMonitor");
+        CreateTaskCPU0(TaskSystemMonitor, "TaskSystemMonitor", 4096, NULL, 2, NULL);
+    #endif
+
+    #if (ANALYZER_READER_COM_EN == 1)
+        SysLog("[AppInitialize] [+Task] TaskScreenTouchSPICom");
+        CreateTaskCPU1(TaskScreenTouchSPICom, "TaskScreenTouchSPICom(", 4096, NULL, 3, NULL);
+    #endif
+
+    #if (ANALYZER_READER_COM_EN == 1)
+        SysLog("[AppInitialize] [+Task] TaskAnalyzerMasterCom");
+        CreateTaskCPU1(TaskAnalyzerMasterCom, "TaskAnalyzerMasterCom", 4096, NULL, 3, NULL);
+    #endif
+
+    SysExit("AnalyzerReaderInit()"); 
+
+}
+
 #ifdef __cplusplus
 }
 #endif

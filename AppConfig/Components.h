@@ -21,6 +21,7 @@ extern "C" {
 #define EN_DRIVER_ANALYZER_MASTER_COM       ENABLE
 #define EN_TASK_SYSTEM_MONITOR              DISABLE
 #define EN_TASK_SCREEN_CONTROL              ENABLE
+#define EN_DRIVER_SPI_TOUCH                 ENABLE
 
 #ifdef __cplusplus
 }
