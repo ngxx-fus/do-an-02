@@ -46,6 +46,7 @@ enum AnalyzerCmds_e {
     AM_CMD_REQ_STAT     = 0x12, /// Request status from Reader.
     AM_CMD_REQ_MODE     = 0x13, /// Request current read mode.
     AM_CMD_REQ_DATA     = 0x14, /// Request measurement data from Reader.
+    AM_CMD_REQ_TOUCH    = 0x15, /// Request touch (+ 01 stuff/random halfword as arg)
     AM_CMD_SEL_REG      = 0x22, /// Select register/config (+ 01 halfword argument).
     AM_CMD_SET_DATA     = 0x23, /// Send data for config reader (+ n halfword arguments).
     AM_CMD_SET_SIZE_TX  = 0x31, /// Config Reader TX buffer size (+ 01 halfword arg, MAX=65535).
