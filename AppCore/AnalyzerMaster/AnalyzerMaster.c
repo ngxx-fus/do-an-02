@@ -27,6 +27,27 @@ LCD32Dev_t * lcd32 = NULL;
 
 #ifdef ANALYZER_MASTER_LOCAL_UTILS
 
+#define LOG_COM_STATS() \
+    do { \
+        if (__Total > 0) { \
+            uint32_t ack_p = (uint32_t)((100LLU * __ACKs) / __Total); \
+            uint32_t nack_p = (uint32_t)((100LLU * __NACKs) / __Total); \
+            uint32_t other_p = 100 - ack_p - nack_p; \
+            AMLog("[TaskAnalyzerReaderCom] Stats: TotalCalls=%llu | ACK: %u%%, NACK: %u%%, Other: %u%%", __Total, ack_p, nack_p, other_p); \
+        } \
+    } while(0)
+
+/// @brief Metrics for tracking reliable transfer statistics
+typedef struct ReliableTransferMetric_t {
+    uint32_t TotalCalls;        /// TotalCalls number of transfer API calls invoked
+    uint32_t ACKs;              /// Count of ACKs (Successfully confirmed)
+    uint32_t NACKs;             /// Count of NACKs (Rejected by receiver)
+    uint32_t SendFailures;      /// HW/Driver failures (Queue full, Timeout, etc.)
+    uint32_t Unacknowledged;    /// Fire-and-forget transfers (No ACK required)
+} ReliableTransferMetric_t;
+
+static ReliableTransferMetric_t AnalyzerReaderComRTM = {.TotalCalls = 0, .ACKs = 0, .NAKs = 0, .SendFailures = 0};
+
 /// @brief Statically allocated Look-Up Table for the main LCD to save HEAP memory.
 static P16Lut_t lcd_lut;
 /// @brief Recursive Mutex to protect SPI and Buffers
@@ -35,10 +56,10 @@ static SemaphoreHandle_t hAnalyzerComMutex = NULL;
 static spi_device_handle_t AnalyzerMasterSPIHandle;
 static bool AnalyzerReaderIDVerified = false;
 
-// --- PROTOTYPES ---
-static DefaultRet_t WaitForAnalyzerReaderReadyPinHigh(int TimeoutMS);
-static DefaultRet_t WaitForAnalyzerReaderReadyPinLow(int TimeoutMS);
-static DefaultRet_t PerformAnalyzerReaderComViaSPI(spi_device_handle_t *SPIHandlePtr, HalfWord_t * SpecificTxData, HalfWord_t TxHalfWordSize);
+/// @brief  Screen touch X value
+static HalfWord_t ScreenTouchX = 0;
+/// @brief  Screen touch Y value
+static HalfWord_t ScreenTouchY = 0;
 
 /**
  * @brief Helper to generate random coordinates with an out-of-bounds margin.
@@ -419,6 +440,8 @@ void PerformScreenTestWithTouch(LCD32Dev_t * lcd32){
 
 #endif /// ANALYZER_MASTER_LOCAL_UTILS
 
+/// @brief Flush screen every 100ms
+/// @param pv Unused
 void TaskScreenFlush(void * pv){
     while(!IS_SYSTEM_STOPPED()){
         LCD32FlushCanvas(lcd32);
@@ -427,6 +450,8 @@ void TaskScreenFlush(void * pv){
     
 }
 
+/// @brief Render screen
+/// @param pv Unused
 void TaskScreen(void * pv){
     /// Waiting for essential init
     while(SYSTEM_STAGE < SYSTEM_INIT_N(0)) vTaskDelay(1);
@@ -485,30 +510,9 @@ void TaskScreen(void * pv){
     }
 }
 
-/// @brief Task to handle SPI Master communication with the Analyzer Reader.
-void TaskAnalyzerReaderCom(void * pv) {
-    /// Wait for the system to reach initialization stage 2.
-    while(SYSTEM_STAGE < SYSTEM_INIT_N(2)) { vTaskDelay(1); }
 
-    AMEntry("TaskAnalyzerReaderCom(%p)", pv);
-
-    DefaultRet_t ReturnValue = AnalyzerReaderComInit(&AnalyzerMasterSPIHandle);
-    bool AnalyzerMasterSPIReady = (ReturnValue == STAT_OKE) ? true : false;
-
-    static uint64_t __ACKs = 0, __NACKs = 0, __Total = 0;
-
-    #define LOG_COM_STATS() \
-        do { \
-            if (__Total > 0) { \
-                uint32_t ack_p = (uint32_t)((100LLU * __ACKs) / __Total); \
-                uint32_t nack_p = (uint32_t)((100LLU * __NACKs) / __Total); \
-                uint32_t other_p = 100 - ack_p - nack_p; \
-                AMLog("[TaskAnalyzerReaderCom] Stats: Total=%llu | ACK: %u%%, NACK: %u%%, Other: %u%%", __Total, ack_p, nack_p, other_p); \
-            } \
-        } while(0)
-
-    SYSTEM_STAGE = SYSTEM_RUNNING;
-
+static void PerformAnalyzerReaderVerifyID(){
+    DefaultRet_t ReturnValue = 0;
     /// Verify Analyzer-Reader-ID loop
     while((!IS_SYSTEM_STOPPED()) && (!AnalyzerReaderIDVerified)){
         AMLog("\n");
@@ -520,20 +524,24 @@ void TaskAnalyzerReaderCom(void * pv) {
         // --- ATOMIC TRANSACTION ---
         if(AnalyzerAccessLock(portMAX_DELAY)){
             SetAnalyzerMasterTx(ReqID, 2, 0);
-            PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+            ReturnValue = PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+            AnalyzerReaderComRTM.TotalCalls++;
+            (ReturnValue == STAT_OKE) ? (AnalyzerReaderComRTM.Unacknowledged++) : (AnalyzerReaderComRTM.SendFailures++); 
             WaitForAnalyzerReaderReadyPinLow(1000); // Note: Should we release lock here? Assuming safe.
             
             SetAnalyzerMasterTx(NopData, 2, 0);
-            PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+            ReturnValue = PerformAnalyzerReaderComViaSPI(&AnalyzerMasterSPIHandle, NULL, 2);
+            AnalyzerReaderComRTM.TotalCalls++;
+            (ReturnValue == STAT_OKE) ? (AnalyzerReaderComRTM.Unacknowledged++) : (AnalyzerReaderComRTM.SendFailures++); 
             
             AnalyzerAccessUnlock();
         }
 
         AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X,...}", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
         
-        __Total++;
+        AnalyzerReaderComRTM.TotalCalls++;
         if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
-            __ACKs++;
+            AnalyzerReaderComRTM.ACKs++;
             if (AnalyzerMasterRx[1] == ANALYZER_READER_ID) {
                 AnalyzerReaderIDVerified = true;
                 AMLog("[TaskAnalyzerReaderCom] Reader ID Verified!");
@@ -543,7 +551,7 @@ void TaskAnalyzerReaderCom(void * pv) {
                 continue;
             }
         }else if(AnalyzerMasterRx[0] == ANALYZER_READER_NACK){
-            __NACKs++;
+            AnalyzerReaderComRTM.NACKs++;
             AMErr("[TaskAnalyzerReaderCom] Received NACK!");
             DelayMs(1000);
             continue;
@@ -554,6 +562,23 @@ void TaskAnalyzerReaderCom(void * pv) {
         }
         LOG_COM_STATS();
     }
+
+}
+
+/// @brief Task to handle SPI Master communication with the Analyzer Reader.
+/// @param pv Unused
+void TaskAnalyzerReaderCom(void * pv) {
+    /// Wait for the system to reach initialization stage 2.
+    while(SYSTEM_STAGE < SYSTEM_INIT_N(2)) { vTaskDelay(1); }
+
+    AMEntry("TaskAnalyzerReaderCom(%p)", pv);
+
+    DefaultRet_t ReturnValue = AnalyzerReaderComInit(&AnalyzerMasterSPIHandle);
+    bool AnalyzerMasterSPIReady = (ReturnValue == STAT_OKE) ? true : false;
+
+    static uint64_t __ACKs = 0, __NACKs = 0, __Total = 0;
+
+    SYSTEM_STAGE = SYSTEM_RUNNING;
 
     /// Crawl data from Analyzer-Reader loop
     while (!IS_SYSTEM_STOPPED()) {
@@ -574,16 +599,16 @@ void TaskAnalyzerReaderCom(void * pv) {
             AnalyzerAccessUnlock();
         }
 
-        __Total++;
+        AnalyzerReaderComRTM.TotalCalls++;
         if (ReturnValue == ESP_OK) {
             // AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X,...}", AnalyzerMasterRx[0], AnalyzerMasterRx[1]);
 
             if(AnalyzerMasterRx[0] == ANALYZER_READER_ACK){
-                __ACKs++;
+                AnalyzerReaderComRTM.ACKs++;
                 AMLog("[TaskAnalyzerReaderCom] RX = {0x%04X, 0x%04X, 0x%04X, 0x%04X, ...}",
                       AnalyzerMasterRx[0], AnalyzerMasterRx[1], AnalyzerMasterRx[2], AnalyzerMasterRx[3]);
             }else if (AnalyzerMasterRx[0] == ANALYZER_READER_NACK){
-                __NACKs++;
+                AnalyzerReaderComRTM.NACKs++;
                 AMErr("[TaskAnalyzerReaderCom] Received NACK!");
             }else {
                 AMErr("[TaskAnalyzerReaderCom] Not received ACK nor NACK!");
