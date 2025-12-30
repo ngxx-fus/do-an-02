@@ -21,7 +21,7 @@ static inline void AnalyzerReaderInit(){
 
     #if (ANALYZER_READER_COM_EN == 1)
         SysLog("[AppInitialize] [+Task] TaskScreenTouchSPICom");
-        CreateTaskCPU1(TaskScreenTouchSPICom, "TaskScreenTouchSPICom(", 4096, NULL, 3, NULL);
+        CreateTaskCPU1(TaskScreenTouchSPICom, "TaskScreenTouchSPICom", 4096, NULL, 3, NULL);
     #endif
 
     #if (ANALYZER_READER_COM_EN == 1)
@@ -30,7 +30,6 @@ static inline void AnalyzerReaderInit(){
     #endif
 
     SysExit("AnalyzerReaderInit()"); 
-
 }
 
 #ifdef __cplusplus
